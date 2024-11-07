@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="无聊的时候 根据经验\u00a0让自己感受到趣味是最好的事情\n#include &lt;stdio.h&gt; #include &lt;windows.h&gt; #define N 100 //这个程序的关键部分是借鉴了学长展示的 I love U 那一段代码 //所以我个人认为还是没什么实际意义的 //主要是上完课了，光AC题也比较枯燥 //所以写下这个打字机效果巩固巩固学到的知识 //需要说明的我会在下面代码中进行注释 HANDLE hConsole; void gotoxy(int x, int y) { COORD coord; coord.X = x; coord.Y = y; SetConsoleCursorPosition(hConsole, coord); } //这个函数是直接复制的 I love U 那一段函数 int main() { int i,j,k; char *title[9]= {\"简\",\"单\",\"的\",\"书\",\"写\",\"文\",\"字\",\"效\",\"果\"}; //这一段本来可以直接用多个frintf函数来写 //单因为想巩固一下数组的知识，所以用了数组和一段循环语句来实现 //但必须承认我对C语言中的数据类型还是有太多没理解的 //所以也是百度了许多资料 //这个写法貌似用到了“指针”，我 百度一下还是没太理解 //所以只是这么写出来了，但具体的真正含义还是一知半解的 //而且导致编译时下面出现[Warning],但没看出影响运行 //所以我也没改进 ,待掌握更多时再改吧 hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //这一句应该是句柄相关的,不是很懂,也是直接复制的那一段源码 while(1) //这一个while控制无限循环 { gotoxy(15,2); for(i=0; i&lt;9; i=i+1) { printf(\"%s\",title[i]) ; Sleep(150); } //上面那个就是提取一个字一个字的输出了 //不是特别懂,我是基于易语言中提取文本型数组的思路写的 //不知道理解的对不对 Sleep(750); gotoxy(30,3); printf(\"——BoilTask \"); Sleep(1000); printf(\"(欧阳天)\"); Sleep(1000); printf(\" 计算机1504\"); Sleep(1000); j=9; for(k=0; k&lt;3; k++) { for(i = 0; i&lt;9; i ++) { gotoxy(j,7+i); printf(\"*\"); Sleep(N); } j=j+11; } j=53; for(k=0; k&lt;2; k++) { for(i = 0; i&lt;7; i ++) { gotoxy(j,7+i); printf(\"*\"); Sleep(N); } j=j+11; } gotoxy(12,18); Sleep(1000) ; printf(\"猜猜这将形成什么文字？\"); Sleep(2000); for(i=0; i&lt;21; i++) { gotoxy(33-i,18); printf(\"\\b \"); Sleep(N); } //这里的一个字一个字删除用了\\b+空格来实现 //因为没想到好的思路…… //还是对好多东西不理解 gotoxy(11,11); for(i = 0; i&lt;8; i ++) { printf(\"*\"); Sleep(N); } gotoxy(33,7); for(i = 0; i&lt;6; i ++) { printf(\"*\"); Sleep(N); } gotoxy(40,8); printf(\"*\"); for(i = 0; i&lt;2; i ++) { gotoxy(41,9+i); printf(\"*\"); Sleep(N); } gotoxy(40,11); printf(\"*\"); for(i = 0; i&lt;6; i ++) { gotoxy(38-i,12); printf(\"*\"); Sleep(N); } gotoxy(54,14); printf(\"*\"); gotoxy(55,15); for(i = 0; i&lt;8; i ++) { printf(\"*\"); Sleep(N); } gotoxy(63,14); printf(\"*\"); gotoxy(25,20); Sleep(1000) ; printf(\"祝河南理工走向辉煌~\"); //没什么亮点的一句结束语 Sleep(8000); system(\"cls\"); } } //说点题外话 我在学习C语言的过程中 //从小以来计算机是对我来说称之为梦想的东西 //其实想想在很多方面都下过劲 //html flash AE PS Au 等等…… //易语言是其中我研究成果中最靠谱的一个 //因为完成了能拿的出手的一些成品 //现在我仍旧觉得,其实以前学的这些知识并不重要 //关键是学习的方法和学习的态度！ //这也是我想和那些对计算机充满热情的同学们说的 //为了梦想,大家共勉！ 这个貌似是开学之后一段时间写的\u00a0然后正好提到了那个 I❤U 所以一块放上来吧\u00a0注释……嗯……写的还好\u00a0哈哈哈哈\n">
 <title>初识ACM——学习与趣味</title>
@@ -576,7 +576,7 @@ int main() {
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="参考下文配置Protobuf：\nhttps://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows\n所需环境 推荐提前安装以下环境：\nWindows 10 Git Cmake Visual Studio 2019 生成工具 在https://github.com/protocolbuffers/protobuf/releases/latest下载protobuf生成工具。\n文件应形如protoc-$VERSION-win32.zip，解压其中的bin/protoc.exe，放于Dep/protobuf/bin下。\n编译依赖 参考下文编译所需依赖：\nhttps://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md\n在https://github.com/protocolbuffers/protobuf/releases/latest下载protobuf源文件。\n文件应形如 protobuf-cpp-[VERSION].tar.gz。\n解压全部文件到文件夹中，此处以D:\\Protobuf为例。\n打开cmake-gui，选择source code文件夹为D:\\Protobuf\\cmake，build the binaries文件夹为目标文件夹，此处以D:\\Protobuf-build为例。\n点击Configure，选择Visual Studio 2019。\n取消配置中的所有勾选。\n留意CMAKE_INSTALL_PREFIX值，此值为之后运行安装后目标文件存放位置。此处以D:/Protobuf-install为例。\n点击Generate生成解决方案，之后Open Project打开解决方案。\n选择MinSizeRel与x64，之后生成解决方案。\n右键INSTALL，选择生成，目标文件会被生成在前面所配置文件夹中。\n复制D:/Protobuf-install/include到项目/protobuf/include。\n复制D:/Protobuf-install/lib到项目/protobuf/lib。\n配置项目 在Visual Studio的项目中，参考如下方法配置Protobuf。\n配置头文件引用 右键项目属性，点击C/C++，在附加包含目录之中，填入protobuf头文件目录，如：\\protobuf\\include。\n配置静态链接 右键项目属性，点击链接器，在附加库目录之中，填入protobuf依赖文件目录，如：\\protobuf\\lib。\n展开链接器一栏，选择输入，在附加依赖项之中，填入protobuf依赖文件名，如libprotobuf.lib与libprotobuf-lite.lib。\n">
 <title>Windows下C&#43;&#43;版本Protobuf使用方法</title>
@@ -477,7 +477,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async

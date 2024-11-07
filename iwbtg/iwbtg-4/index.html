@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 有人说：“程序员总难免开始于A+B。” 说了这么多，我们还是停留在“定量”阶段。前面说过，黑盒测试应该是根据系统给的输入数据来进行输出数据的比较。那么，如何获取输入数据呢？ 在stdio.h中，与格式化输出printf()相对的，有格式化输入scanf()。 对比一下两者的标准格式。 printf(格式化文本,参数1,参数2,……); 其中格式化文本控制了输出的格式，在其中可以使用如\"%d\"这样的格式说明来替换后面的参数，第几个%d便可以指定使参数几替换它。 这样说有点绕…… 例如：printf(\"%d\",1);&nbsp;的输出结果便是 1 如果参数是个变量，比如提前建立一个整型的变量a=5(int a = 5 ;)。 那么：printf(\"%d\",a); 的输出结果便是 5 #include&lt;stdio.h&gt; int main() { int a=5; printf(\"%d\\n\",a); return 0; } 同理，对于scanf()函数。 scanf(格式化文本,参数1,参数2,……); 格式化文本代表输入的格式，参数1、2……代表变量的地址。 -.-好 什么叫地址？暂且理解为门牌号吧。 同样的建立一个整型的变量a，然后从键盘读取一个数赋值给他。 scanf(\"%d\",&a); 好，&是什么意思？ &a也就是取a变量的地址，这句话的意思就是从键盘读取一个数存储到a的地址。那么很显然，a变量的值也就变成了从键盘读取的值。 #include&lt;stdio.h&gt; int main() { int a; scanf(\"%d\",&a); printf(\"%d\\n\",a); return 0; } ">
 <title>【愿成其身】[4]从A&#43;B谈起 – 一切的开端</title>
@@ -551,7 +551,7 @@ int main() {
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async

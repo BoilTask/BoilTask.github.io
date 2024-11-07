@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="当时遇见的5个数求最值的问题\u00a0鉴于当时并不会排序\u00a0发现这个问题可以不用排序而是直接寻找就行了\u00a0真的很庆幸啊！\n#include&lt;stdio.h&gt; int main() { int n,m[5],min,max; for(n=0;n&lt;5;n++) scanf(\"%d\",&m[n]); max=min=m[1]; for(n=0;n&lt;5;n++) { if(m[n]&gt;=max) max=m[n]; if(m[n]&lt;=min) min=m[n]; } printf(\"%d %d\",min,max); return 0; } 呃……虽然好像现在来看……你懂得~\n">
 <title>初识ACM——幸好不用排序</title>
@@ -450,7 +450,7 @@ return 0;
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async

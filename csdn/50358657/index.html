@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="何家欢学长为吸引同学们兴趣\u00a0展示了一个C语言程序如下：\n#include&lt;stdio.h&gt; #include &lt;stdlib.h&gt; int main() { int a,n; printf(\"1.关机\\n\"); printf(\"2.崩溃！\\n\"); printf(\"\\t——BoilTask\\n\"); printf(\"你的选择:\"); scanf(\"%d\",&a); if(a==1) system(\"shutdown -s -t 120\"); else if (a==2) { for(n=0; n&lt;10; n++) system(\"start\"); } else { printf(\"你输入的格式有错误哦~\"); }; return 0; } 然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\u00a0(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n#include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; int main() { int a,n=0; printf(\"1.真关机\\n\"); printf(\"2.真崩溃！\\n\"); printf(\"\\t——BoilTask\\n\"); printf(\"你的选择:\"); scanf(\"%d\",&a); if(a==1) system(\"shutdown -p\"); else if (a==2) { while(n&lt;1) system(\"start\"); } else { printf(\"你输入的格式有错误哦~\"); }; return 0; } 话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
 <title>初识ACM——伪病毒与真崩溃</title>
@@ -473,7 +473,7 @@ int main() {
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async

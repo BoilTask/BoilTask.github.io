@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-cn" dir="ltr">
+<html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。 修饰变量 const int a;，表示变量不可被改变。 修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。 const int *p = &a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &a; //不可以用*p改变a的值 printf(\"a = %d \\n\", a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(\"a = %d \\n\", a); int b = 11; p = &b; printf(\"b = %d \\n\", *p); int *q = &a; *q = 20; //可以用*q改变a的值 printf(\"a = %d \\n\", a); a = 30; //给a赋值也可以修改a的值 printf(\"a = %d \\n\", a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。 ">
 <title>C&#43;&#43;中const关键字用法总结</title>
@@ -604,7 +604,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-cn"
+    data-lang="zh-CN"
     data-loading="lazy"
     crossorigin="anonymous"
     async
