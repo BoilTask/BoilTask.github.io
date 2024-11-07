@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on BoilTask&#39;s Blog</title>
+        <link>https://boiltask.com/page/</link>
+        <description>Recent content in Pages on BoilTask&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Wed, 18 Sep 2019 06:45:39 +0000</lastBuildDate><atom:link href="https://boiltask.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>友情链接</title>
+        <link>https://boiltask.com/links/</link>
+        <pubDate>Wed, 18 Sep 2019 06:45:39 +0000</pubDate>
+        
+        <guid>https://boiltask.com/links/</guid>
+        <description>&lt;p&gt;需要互换友链的小伙伴可以在下方留言，备注名称与链接~&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>文章归档</title>
+        <link>https://boiltask.com/archives/</link>
+        <pubDate>Wed, 18 Sep 2019 03:54:47 +0000</pubDate>
+        
+        <guid>https://boiltask.com/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://boiltask.com/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://boiltask.com/search/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

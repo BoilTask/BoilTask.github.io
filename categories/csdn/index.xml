@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CSDN on BoilTask&#39;s Blog</title>
+        <link>https://boiltask.com/categories/csdn/</link>
+        <description>Recent content in CSDN on BoilTask&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Fri, 29 Jan 2016 15:47:13 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/csdn/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>📌第一篇正式文章 随便聊聊吧</title>
+        <link>https://boiltask.com/csdn/49905797/</link>
+        <pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/49905797/</guid>
+        <description>&lt;p&gt;似乎自从空间开始流传开来，博客这一事物就有着被淘汰的趋势，似乎只有些专业人士愿意坚持这一交流形式……&lt;/p&gt;
+&lt;p&gt;不管怎么说，博客还是有它的优点与可取之处了，比如我非常喜欢的这个代码标注功能，太赞了……&lt;/p&gt;
+&lt;p style=&#34;text-align:center&#34;&gt;
+  想法和目标
+&lt;/p&gt;
+&lt;p style=&#34;text-align:center&#34;&gt;
+  既然博客创建了就不能让它没有什么卵用~
+&lt;/p&gt;
+&lt;p&gt;记录一些学习道路上的所见所想吧，虽然在这里可能并没有什么人来看-_-&lt;/p&gt;
+&lt;p&gt;但也╮(╯_╰)╭无所谓嘛~留给自己的礼物吧 毕竟怀旧并且有旧可怀是件非常爽的事……&lt;/p&gt;
+&lt;p&gt;作为一个个&lt;span style=&#34;background-color:black;color:white;&#34;&gt;探讨技术&lt;/span&gt;的博客~第一篇随便写写代码吧……&lt;/p&gt;
+&lt;p class=&#34;has-text-color has-vivid-cyan-blue-color&#34;&gt;
+  想想那时候小的时候，我还是喜欢这种非正规字体时，我惧于C语言的英语性，也加上爱玩的心态，所以选择了一阵乱学，最有卵用的还是号称中文编程的易语言……于是……
+&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;标签1.标题=“你好世界！我就是不写英文”&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;那时候甚至都没用过 调试输出 这种东西……因为感觉没什么卵用……&lt;/p&gt;
+&lt;p&gt;但……&lt;/p&gt;
+&lt;p style=&#34;text-align:center&#34; class=&#34;has-text-color has-vivid-red-color&#34;&gt;
+  既然选择了计算机专业，化成灰也要随风往前飘！
+&lt;/p&gt;
+&lt;p&gt;这个大一学期开始，才第一次用心看C语言……写下了:&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+main(){
+    printf(&#34;Hello World&#34;);
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;妥协了……于是耐心研究……到现在 我又更喜欢写……&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main(){
+    printf(&#34;Hello World\n&#34;);
+    printf(&#34;我还是喜欢中文！\n&#34;);
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;╮(╯▽╰)╭ 心中要有目标嘛&lt;/p&gt;
+&lt;p&gt;中国计算机要继续努力啊！&lt;/p&gt;
+&lt;p&gt;加油加油！&lt;/p&gt;
+&lt;p&gt;心得和体会 以后慢慢来谈吧~&lt;/p&gt;
+&lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.BoilTask.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>【吐槽】天赋不够 咖啡来凑</title>
+        <link>https://boiltask.com/csdn/50609642/</link>
+        <pubDate>Fri, 29 Jan 2016 15:47:13 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50609642/</guid>
+        <description>&lt;p&gt;关于题目~&lt;br&gt;
+嗯……吐槽二字致敬宇神&lt;br&gt;
+然后…咖啡二字 本来想写汗水，结果发现似乎写代码的也流不了多少汗吧，所以换个词语~(虽然咖啡也没大喝的说)&lt;/p&gt;
+&lt;p&gt;刚看了几期最强大脑，还是因为郭魏撕逼大战引起的，这个节目似乎以前也听说过，不过因为高中也没什么时间看，所以没大关注，这次来看其实从节目内容来说，其实设计的还是挺不错的，不过因为其它一些原因搞得乱乱哒。&lt;/p&gt;
+&lt;p&gt;不过这也承认了-.-我白天确实又颓废了，虽然按照设想我现在应该是两耳不闻窗外事的，不过我想我要承认现实了，这么些年，确实已经把我的热血磨灭的差不多了。或许有段时期我确实是有些天赋的(真是到现在也不愿完全承认我没天赋啊)，不过现在来说，我确实注定无法成为世界顶尖了。&lt;/p&gt;
+&lt;p&gt;《最强大脑》这种节目展示的，其实到最后总要面对的，是人与人的天赋确实有一定差异，更何况有天赋也要挖掘啊(还是不愿承认-.-)。自小我自以为是一个挺傲的人，对于失败，或者不如别人的地方，总是想要找出各种理由。小时候看这些挑战，是想着我这方面没什么天赋但不见得其它地方没天赋，更何况那还是因为我没有练过。那现在彻底18了，也没办法在这方面骗自己了，就大脑来说，我自认为还是属于一般的。&lt;/p&gt;
+&lt;p&gt;再加上，十多年的人生经历与生活环境，注定我的感性思考还是非常丰富的，文艺风确实会干扰我在很多地方的决定，理性的东西终究没有完全占领我的大脑。这点从到现在都有的排版强迫症什么的都可以看出来，日常生活中也是挺容易感动的一个人，对情感的捕捉也是很敏感。这明显与我心目中的牛逼程序员不符，虽说技术牛逼不一定就是完美，但能力确实是应该被钦佩的东西。嗯……刚删掉了一个最，毕竟还有其它很多也值得钦佩。&lt;/p&gt;
+&lt;p&gt;没办法了，无法成为世界上最牛逼的程序员，或许也开创不了一个新高度，但我同样还是热爱这一行业，这是我坚信不疑的。所以，这条道路，在下还是要走，毕竟每一个行业，有标竿，也注定要有基石，我会努力缩短与标杆的差距，嗯……删掉一个努力成为标杆。&lt;/p&gt;
+&lt;p&gt;天赋不够，咖啡来凑呗。在下自认天赋现在已经肯定不是顶尖的，估计再过段时间连中等偏上都骗不了自己，要被证实最多一般。但是，为了能做出点什么，也是要在内心告诫自己啊。&lt;/p&gt;
+&lt;p&gt;很简单的道理，如果这几年努力了，我今后的日子还有继续努力的机会，如果这几年颓废了，可能今后连努力的机会都没有，能做什么呢？网管？修电脑的？或许最好的结果，真做了一名不起眼的写代码的。到那时候，可能真的想努力都没机会了，没时间了，没精力了。写下这篇文章，若是以后努力了，可以拿来解解闷，要是颓废了，也可以看看来回味从前啊。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>写在正式写博客之前——博客的意义</title>
+        <link>https://boiltask.com/csdn/50358873/</link>
+        <pubDate>Sat, 19 Dec 2015 08:47:04 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358873/</guid>
+        <description>&lt;p&gt;终于想明白了博客的意义 &lt;br&gt;
+嗯……至少 &lt;br&gt;
+帮忙记录下自己AC的总题目数啊~ &lt;br&gt;
+算是个计数器吧 &lt;br&gt;
+没事还能吐吐槽 回忆回忆&lt;/p&gt;
+&lt;p&gt;本分类下的题目时间都比较早 &lt;br&gt;
+可能写的描述文字就少点了&lt;/p&gt;
+&lt;p&gt;以后尽量写代码和写博客放在一起吧~&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——活泼的精灵</title>
+        <link>https://boiltask.com/csdn/50358847/</link>
+        <pubDate>Sat, 19 Dec 2015 08:40:54 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358847/</guid>
+        <description>&lt;p&gt;程序的魅力也体现在解决问题的方式往往有很多 &lt;br&gt;
+下面这个手机短号已经做了好多遍了…… &lt;br&gt;
+估计以后整理时还要再写一遍……&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+    int n;
+    int i;
+    char m[12];
+    scanf(&#34;%d&#34;,&amp;n);
+    while(n--)
+    {
+        scanf(&#34;%s&#34;,m);
+        printf(&#34;6%s\n&#34;,m+6);
+
+    }
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这便是计算机的精彩~不是吗？&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——这是程序的世界</title>
+        <link>https://boiltask.com/csdn/50358835/</link>
+        <pubDate>Sat, 19 Dec 2015 08:37:15 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358835/</guid>
+        <description>&lt;p&gt;最经典的例子&lt;/p&gt;
+&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
+  &lt;p&gt;
+    &lt;code class=&#34;prettyprint&#34; &gt;0&amp;lt;a&amp;lt;100&lt;/code&gt;&lt;br /&gt;便需要写成&lt;br /&gt;&lt;code&gt;0&amp;lt;a&amp;&amp;a&amp;lt;100&lt;/code&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这便是要求思维的转换与用法的规范 &lt;br&gt;
+每一个地方都有它的规则&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+    int n;
+    while(scanf(&#34;%d&#34;,&amp;n)!=EOF)
+    {
+    if(n&amp;lt;=100&amp;&amp;n&amp;gt;=0)
+        {
+        if(n&amp;lt;60)
+        printf(&#34;E\n&#34;);
+        if(n&amp;gt;=60&amp;&amp;n&amp;lt;70)
+        printf(&#34;D\n&#34;);
+        if(n&amp;gt;=70&amp;&amp;n&amp;lt;80)
+        printf(&#34;C\n&#34;);
+        if(n&amp;gt;=80&amp;&amp;n&amp;lt;90)
+        printf(&#34;B\n&#34;);
+        if(n&amp;gt;=90&amp;&amp;n&amp;lt;=100)
+        printf(&#34;A\n&#34;);
+        }
+    else
+        {
+        printf(&#34;Score is error!\n&#34;);
+        }
+
+    }
+return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;话说现在看这样的题……这题也出？-.-&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——崭露头角</title>
+        <link>https://boiltask.com/csdn/50358816/</link>
+        <pubDate>Sat, 19 Dec 2015 08:31:12 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358816/</guid>
+        <description>&lt;p&gt;在写代码时被一学长看见在南阳OJ上做题 &lt;br&gt;
+于是被夸了两句~当时心情好激动哦 &lt;br&gt;
+于是摸到了求绝对值的题秒写代码！&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+    double n;
+    while(scanf(&#34;%lf&#34;,&amp;n)!=EOF)
+    if(n&amp;gt;0)
+    {
+    printf(&#34;%.2lf\n&#34;,n);
+    }
+    else
+    {
+    printf(&#34;%.2lf\n&#34;,n=-n)  ;
+    }
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;话说我起这个题目就放这个代码合适吗…… &lt;br&gt;
+-.-&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——渐入佳境</title>
+        <link>https://boiltask.com/csdn/50358804/</link>
+        <pubDate>Sat, 19 Dec 2015 08:28:02 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358804/</guid>
+        <description>&lt;p&gt;渐渐的…… &lt;br&gt;
+我也能写出来一些当时看很复杂的代码了…… &lt;br&gt;
+这是一个奇偶数分离的程序&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+    int i,k,n;
+    scanf(&#34;%d&#34;,&amp;i);
+    int a[i] ;
+    for(k=0;k&amp;lt;i;k++)
+        {
+        scanf(&#34;%d&#34;,&amp;a[k]);
+        }
+    for(k=0;k&amp;lt;i;k++)
+        {
+            for(n=1;n&amp;lt;=a[k];n++)
+                {
+                if(n%2==1)
+                printf(&#34;%d &#34;,n);
+                }
+            printf(&#34;\n&#34;);
+            for(n=1;n&amp;lt;=a[k];n++)
+                {
+                if(n%2==0)
+                printf(&#34;%d &#34;,n);
+                }
+                printf(&#34;\n\n&#34;);
+        }   
+
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;虽然现在看能改进的地方挺多的 &lt;br&gt;
+但是…当时看…已经很不错了好吧 ！&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——幸好不用排序</title>
+        <link>https://boiltask.com/csdn/50358795/</link>
+        <pubDate>Sat, 19 Dec 2015 08:26:55 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358795/</guid>
+        <description>&lt;p&gt;当时遇见的5个数求最值的问题 &lt;br&gt;
+鉴于当时并不会排序 &lt;br&gt;
+发现这个问题可以不用排序而是直接寻找就行了 &lt;br&gt;
+真的很庆幸啊！&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+int main()
+{
+int n,m[5],min,max;
+for(n=0;n&amp;lt;5;n++)
+scanf(&#34;%d&#34;,&amp;m[n]);
+max=min=m[1];
+for(n=0;n&amp;lt;5;n++)
+{   if(m[n]&amp;gt;=max)
+    max=m[n];
+    if(m[n]&amp;lt;=min)
+    min=m[n];
+}
+printf(&#34;%d %d&#34;,min,max);
+return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;呃……虽然好像现在来看……你懂得~&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——中文的信仰</title>
+        <link>https://boiltask.com/csdn/50358781/</link>
+        <pubDate>Sat, 19 Dec 2015 08:23:45 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358781/</guid>
+        <description>&lt;p&gt;为了探究for循环的用法 &lt;br&gt;
+需要编写一个求前n项和的程序 &lt;br&gt;
+在完成基本的程序之后 &lt;br&gt;
+我又写出了下面这个鬼……&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+//求前n项和 
+int main()
+{int shouxiang,qianjixiang,he;
+shouxiang=1; 
+he=0;
+for (qianjixiang=1;qianjixiang&amp;lt;=3;qianjixiang++)
+    {he=shouxiang+he;
+    shouxiang=shouxiang*2; } 
+    printf(&#34;%d&#34;,he);
+ } &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;-.-完全没问题的代码 &lt;br&gt;
+虽然这个强的怨念似乎毫无意义啊……&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——九九乘法表</title>
+        <link>https://boiltask.com/csdn/50358768/</link>
+        <pubDate>Sat, 19 Dec 2015 08:19:28 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358768/</guid>
+        <description>&lt;p&gt;当时最大的感觉就是…… &lt;br&gt;
+九九乘法表只需要这么少的代码就能打出来？&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include &amp;lt;stdio.h&amp;gt;
+int main(){
+    int i,j,n;
+    for(i=1;i&amp;lt;=9;i++){
+        // 将下面的for循环注释掉，就输出左下三角形
+      //  for(n=1; n&amp;lt;=9-i; n++)
+        //    printf(&#34;        &#34;);
+
+        for(j=1;j&amp;lt;=i;j++)
+            printf(&#34;%d*%d=%2d  &#34;,i,j,i*j);
+
+        printf(&#34;\n&#34;);
+    }
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;后来据说九九乘法表是刘可学长的入ACM的题&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——这都是啥-.-</title>
+        <link>https://boiltask.com/csdn/50358750/</link>
+        <pubDate>Sat, 19 Dec 2015 08:17:23 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358750/</guid>
+        <description>&lt;p&gt;学长讲解输出及数据类型 &lt;br&gt;
+代码是这样的：&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include &amp;lt;cstdio&amp;gt;
+int main (){
+    char c;
+    char d;
+    int a = 1234;
+    float f = 3.141592653589;
+    double x = 0.12345678987654321;
+    c = &amp;#039;\x41&amp;#039;;//十六进制 
+    d = &amp;#039;\101&amp;#039;;//八进制 
+    printf(&#34;a = %d\n&#34;, a);
+    printf(&#34;a = %6d\n&#34;, a);
+    printf(&#34;a = %2d\n&#34;, a); 
+    printf(&#34;a = %-6d--\n&#34;, a);
+    printf(&#34;a = %06d\n&#34;, a);
+    printf(&#34;a = %02d\n&#34;, a);
+    printf(&#34;f = %f\n&#34;, f);
+    printf(&#34;f = %6.4f\n&#34;, f);
+    printf(&#34;x = %lf\n&#34;, x);
+    printf(&#34;x = %18.16lf\n&#34;, x);
+    printf(&#34;c = %c\n&#34;, c);
+    printf(&#34;c = %d\n&#34;, c);
+    printf(&#34;c = %x\n&#34;, c);
+    printf(&#34;d = %c\n&#34;, d);
+    printf(&#34;d = %d\n&#34;, d);
+    printf(&#34;d = %x\n&#34;, d);
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我的内心是崩溃的-.- &lt;br&gt;
+但现在看看其实还好 也是开始向C语言探索迈步&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——学习与趣味</title>
+        <link>https://boiltask.com/csdn/50358715/</link>
+        <pubDate>Sat, 19 Dec 2015 08:12:46 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358715/</guid>
+        <description>&lt;p&gt;无聊的时候 根据经验 &lt;br&gt;
+让自己感受到趣味是最好的事情&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt;
+#define N 100
+//这个程序的关键部分是借鉴了学长展示的 I love U 那一段代码
+//所以我个人认为还是没什么实际意义的
+//主要是上完课了，光AC题也比较枯燥
+//所以写下这个打字机效果巩固巩固学到的知识
+//需要说明的我会在下面代码中进行注释
+HANDLE hConsole;
+void gotoxy(int x, int y) {
+    COORD coord;
+    coord.X = x;
+    coord.Y = y;
+    SetConsoleCursorPosition(hConsole, coord);
+}           //这个函数是直接复制的 I love U 那一段函数
+int main() {
+    int i,j,k;
+    char *title[9]= {&#34;简&#34;,&#34;单&#34;,&#34;的&#34;,&#34;书&#34;,&#34;写&#34;,&#34;文&#34;,&#34;字&#34;,&#34;效&#34;,&#34;果&#34;};
+    //这一段本来可以直接用多个frintf函数来写
+    //单因为想巩固一下数组的知识，所以用了数组和一段循环语句来实现
+    //但必须承认我对C语言中的数据类型还是有太多没理解的
+    //所以也是百度了许多资料
+    //这个写法貌似用到了“指针”，我 百度一下还是没太理解
+    //所以只是这么写出来了，但具体的真正含义还是一知半解的
+    //而且导致编译时下面出现[Warning],但没看出影响运行
+    //所以我也没改进 ,待掌握更多时再改吧
+    hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    //这一句应该是句柄相关的,不是很懂,也是直接复制的那一段源码
+    while(1)
+        //这一个while控制无限循环
+    {
+        gotoxy(15,2);
+        for(i=0; i&amp;lt;9; i=i+1) {
+            printf(&#34;%s&#34;,title[i]) ;
+            Sleep(150);
+        }
+        //上面那个就是提取一个字一个字的输出了
+        //不是特别懂,我是基于易语言中提取文本型数组的思路写的
+        //不知道理解的对不对
+        Sleep(750);
+        gotoxy(30,3);
+        printf(&#34;——BoilTask &#34;);
+        Sleep(1000);
+        printf(&#34;(欧阳天)&#34;);
+        Sleep(1000);
+        printf(&#34; 计算机1504&#34;);
+        Sleep(1000);
+
+        j=9;
+        for(k=0; k&amp;lt;3; k++) {
+            for(i = 0; i&amp;lt;9; i ++) {
+                gotoxy(j,7+i);
+                printf(&#34;*&#34;);
+                Sleep(N);
+            }
+            j=j+11;
+        }
+        j=53;
+        for(k=0; k&amp;lt;2; k++) {
+            for(i = 0; i&amp;lt;7; i ++) {
+                gotoxy(j,7+i);
+                printf(&#34;*&#34;);
+                Sleep(N);
+            }
+            j=j+11;
+        }
+        gotoxy(12,18);
+        Sleep(1000) ;
+        printf(&#34;猜猜这将形成什么文字？&#34;);
+        Sleep(2000);
+        for(i=0; i&amp;lt;21; i++) {
+            gotoxy(33-i,18);
+            printf(&#34;\b &#34;);
+            Sleep(N);
+        }
+        //这里的一个字一个字删除用了\b+空格来实现
+        //因为没想到好的思路……
+        //还是对好多东西不理解
+        gotoxy(11,11);
+        for(i = 0; i&amp;lt;8; i ++)
+
+        {
+            printf(&#34;*&#34;);
+            Sleep(N);
+
+        }
+        gotoxy(33,7);
+        for(i = 0; i&amp;lt;6; i ++)
+
+        {
+            printf(&#34;*&#34;);
+            Sleep(N);
+
+        }
+        gotoxy(40,8);
+        printf(&#34;*&#34;);
+        for(i = 0; i&amp;lt;2; i ++) {
+            gotoxy(41,9+i);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(40,11);
+        printf(&#34;*&#34;);
+        for(i = 0; i&amp;lt;6; i ++)
+
+        {
+            gotoxy(38-i,12);
+            printf(&#34;*&#34;);
+            Sleep(N);
+
+        }
+        gotoxy(54,14);
+        printf(&#34;*&#34;);
+        gotoxy(55,15);
+        for(i = 0; i&amp;lt;8; i ++)
+
+        {
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(63,14);
+        printf(&#34;*&#34;);
+        gotoxy(25,20);
+        Sleep(1000) ;
+        printf(&#34;祝河南理工走向辉煌~&#34;);
+        //没什么亮点的一句结束语
+        Sleep(8000);
+        system(&#34;cls&#34;);
+    }
+
+}
+//说点题外话 我在学习C语言的过程中
+//从小以来计算机是对我来说称之为梦想的东西
+//其实想想在很多方面都下过劲
+//html flash AE PS Au 等等……
+//易语言是其中我研究成果中最靠谱的一个
+//因为完成了能拿的出手的一些成品
+//现在我仍旧觉得,其实以前学的这些知识并不重要
+//关键是学习的方法和学习的态度！
+//这也是我想和那些对计算机充满热情的同学们说的
+//为了梦想,大家共勉！&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个貌似是开学之后一段时间写的 &lt;br&gt;
+然后正好提到了那个 I❤U 所以一块放上来吧 &lt;br&gt;
+注释……嗯……写的还好 &lt;br&gt;
+哈哈哈哈&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——C的love</title>
+        <link>https://boiltask.com/csdn/50358687/</link>
+        <pubDate>Sat, 19 Dec 2015 08:05:06 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358687/</guid>
+        <description>&lt;p&gt;还是学长为了展示C语言的趣味 &lt;br&gt;
+放了一段C语言写的生成 I❤U 效果的程序&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://img-blog.csdn.net/20151219160702256&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;效果图&#34;
+	
+	
+&gt; &lt;/figure&gt;&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt;
+#define N 50
+
+HANDLE hConsole; 
+void gotoxy(int x, int y) 
+{ 
+    COORD coord; 
+    coord.X = x; 
+    coord.Y = y; 
+    SetConsoleCursorPosition(hConsole, coord); 
+} 
+int main()
+{
+    int i,j,k;
+    hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, FOREGROUND_RED|FOREGROUND_BLUE|FOREGROUND_INTENSITY); 
+    for(k=0;k&amp;lt;3;k++)
+    {
+        gotoxy(4,6);
+
+        for(i = 0;i&amp;lt;11;i ++)
+
+        {
+            printf(&#34;*&#34;);
+            Sleep(N);
+
+        }
+
+        for(i = 0;i&amp;lt;12;i++)
+        {
+            gotoxy(9,7+i);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(4,18);
+        for(i = 0;i&amp;lt;11;i ++)
+        {
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(36,10);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(25,10);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(47,10);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(34,8);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(38,8);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(30,7);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(42,7);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(27,8);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(45,8);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(25,11);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(47,11);
+        printf(&#34;*&#34;);
+        Sleep(N);
+        for(i=1,j=1;i&amp;lt;6,j&amp;lt;6;i++,j++)
+        {
+            gotoxy(25+i,11+j);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(32,17);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(34,18);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+
+        for(i=1,j=1;i&amp;lt;6,j&amp;lt;6;i++,j++)
+        {
+            gotoxy(47-i,11+j);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(40,17);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(38,18);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(36,19);
+        printf(&#34;*&#34;); 
+        Sleep(N);
+        for(i=0;i&amp;lt;11;i++)
+        {
+            gotoxy(59,6+i);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(61,17);
+        printf(&#34;*&#34;);
+        Sleep(N);
+        for(i=0;i&amp;lt;11;i++)
+        {
+            gotoxy(63+i,18);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        gotoxy(74,17);
+        printf(&#34;*&#34;);
+        Sleep(N);
+
+        gotoxy(76,16);
+        printf(&#34;*&#34;);
+        Sleep(N);
+        for(i=0;i&amp;lt;10;i++)
+        {
+            gotoxy(76,15-i);
+            printf(&#34;*&#34;);
+            Sleep(N);
+        }
+        system(&#34;cls&#34;);
+    }
+    while(1)
+    {
+        gotoxy(4,6);
+
+        for(i = 0;i&amp;lt;11;i ++)
+
+        {
+            printf(&#34;*&#34;);
+
+
+        }
+
+        for(i = 0;i&amp;lt;12;i++)
+        {
+            gotoxy(9,7+i);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(4,18);
+        for(i = 0;i&amp;lt;11;i ++)
+        {
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(36,10);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(25,10);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(47,10);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(34,8);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(38,8);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(30,7);
+        printf(&#34;*&#34;);
+
+        gotoxy(42,7);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(27,8);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(45,8);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(25,11);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(47,11);
+        printf(&#34;*&#34;);
+
+        for(i=1,j=1;i&amp;lt;6,j&amp;lt;6;i++,j++)
+        {
+            gotoxy(25+i,11+j);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(32,17);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(34,18);
+        printf(&#34;*&#34;);
+
+
+
+        for(i=1,j=1;i&amp;lt;6,j&amp;lt;6;i++,j++)
+        {
+            gotoxy(47-i,11+j);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(40,17);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(38,18);
+        printf(&#34;*&#34;);
+
+
+        gotoxy(36,19);
+        printf(&#34;*&#34;); 
+
+        for(i=0;i&amp;lt;11;i++)
+        {
+            gotoxy(59,6+i);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(61,17);
+        printf(&#34;*&#34;);
+
+        for(i=0;i&amp;lt;11;i++)
+        {
+            gotoxy(63+i,18);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(74,17);
+        printf(&#34;*&#34;);
+        Sleep(100);
+        gotoxy(76,16);
+        printf(&#34;*&#34;);
+
+        for(i=0;i&amp;lt;10;i++)
+        {
+            gotoxy(76,15-i);
+            printf(&#34;*&#34;);
+
+        }
+        gotoxy(25,22);
+        Sleep(1000);
+        system(&#34;cls&#34;);
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;(话说这个代码还是我从网上搜到的……学长又没及时传播) &lt;br&gt;
+话说之后我根据这写了一个屌屌的程序呢~&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——伪病毒与真崩溃</title>
+        <link>https://boiltask.com/csdn/50358657/</link>
+        <pubDate>Sat, 19 Dec 2015 07:57:59 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358657/</guid>
+        <description>&lt;p&gt;何家欢学长为吸引同学们兴趣 &lt;br&gt;
+展示了一个C语言程序如下：&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+int main() {
+    int a,n;
+    printf(&#34;1.关机\n&#34;);
+    printf(&#34;2.崩溃！\n&#34;);
+    printf(&#34;\t——BoilTask\n&#34;);
+    printf(&#34;你的选择:&#34;);
+    scanf(&#34;%d&#34;,&amp;a);
+    if(a==1)
+        system(&#34;shutdown -s -t 120&#34;);
+    else if (a==2) {
+        for(n=0; n&amp;lt;10; n++)
+            system(&#34;start&#34;);
+    } else {
+        printf(&#34;你输入的格式有错误哦~&#34;);
+    };
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦 &lt;br&gt;
+(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)&lt;/p&gt;
+&lt;p&gt;然后坏坏的我写下了一个真的有麻烦的代码……&lt;/p&gt;
+&lt;pre class=&#34;wp-block-code&#34;&gt;&lt;code class=&#34;prettyprint&#34; &gt;#include&amp;lt;stdio.h&amp;gt;
+#include&amp;lt;stdlib.h&amp;gt;
+int main() {
+    int a,n=0;
+    printf(&#34;1.真关机\n&#34;);
+    printf(&#34;2.真崩溃！\n&#34;);
+    printf(&#34;\t——BoilTask\n&#34;);
+    printf(&#34;你的选择:&#34;);
+    scanf(&#34;%d&#34;,&amp;a);
+    if(a==1)
+        system(&#34;shutdown -p&#34;);
+    else if (a==2) {
+        while(n&amp;lt;1)
+            system(&#34;start&#34;);
+    } else {
+        printf(&#34;你输入的格式有错误哦~&#34;);
+    };
+    return 0;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;话说那段时间关机都直接帅帅地运行这个程序来关机-.-&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>初识ACM——2015国庆培训</title>
+        <link>https://boiltask.com/csdn/50358599/</link>
+        <pubDate>Sat, 19 Dec 2015 07:49:17 +0000</pubDate>
+        
+        <guid>https://boiltask.com/csdn/50358599/</guid>
+        <description>&lt;p&gt;(今天来找时间写写播客吧~)&lt;br&gt;
+随着入学及军训期间的对ACM及C语言的了解&lt;br&gt;
+我决定了国庆节假期提前回校两天参加ACM协会举办的C语言基础培训&lt;/p&gt;
+&lt;p&gt;何家欢学长讲何谓语言：&lt;/p&gt;
+&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
+  &lt;p&gt;
+    编程语言 &lt;br /&gt;1.机器语言 &lt;br /&gt;101010101010 &lt;br /&gt;2.编汇语言 &lt;br /&gt;1 add 2 &lt;br /&gt;3.高级语言 &lt;br /&gt;——面向过程—— &lt;br /&gt;C:1+2 &lt;br /&gt;——面向对象—— &lt;br /&gt;C++: &lt;br /&gt;C#: &lt;br /&gt;Java:
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;数据类型：&lt;/p&gt;
+&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
+  &lt;p&gt;
+    Printf &lt;br /&gt; %x 16进制输出 &lt;br /&gt; %d 10进制输出 &lt;br /&gt; %c 字符 &lt;br /&gt; %lf 小数输出 &lt;br /&gt; 0x 16进制 &lt;br /&gt; 08进制 &lt;br /&gt; e-2 10的-2次方 科学计数法 &lt;br /&gt; ‘A’ 单引号里只能有一个字符 &lt;br /&gt; “ab”双引号里可有字符串 &lt;br /&gt; 数组: &lt;br /&gt; A[10] &lt;br /&gt; 一个10个元素的数组 &lt;br /&gt; 其中元素为 A[0]、A[1]~A[9]
+  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开启ACM之路！&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
