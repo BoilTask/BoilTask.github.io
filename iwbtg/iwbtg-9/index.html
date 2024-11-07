@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 本篇文章讲解题目：两数的距离 推荐先独立进行解题尝试，然后再阅读本篇讲解！ 由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right| 相减没什么难度，所以这一题实际上在于求绝对值。 事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。 C语言对于分支结构有两种常用表达： 是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。 if-else的大概结构如下： if(/*条件1*/) { /*语句1*/ } else if(/*条件2*/) { /*语句2*/ } else { /*语句3*/ } if顾名思义，是如果的意思，这段代码的意思也就是： ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r本篇文章讲解题目：两数的距离\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right|\r相减没什么难度，所以这一题实际上在于求绝对值。\r事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。\rC语言对于分支结构有两种常用表达：\r是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。\rif-else的大概结构如下：\rif(/*条件1*/) {\r/*语句1*/\r} else if(/*条件2*/) {\r/*语句2*/\r} else {\r/*语句3*/\r}\rif顾名思义，是如果的意思，这段代码的意思也就是：\r">
 <title>【愿成其身】[9]分支结构 – 程序的魅力</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/iwbtg-9/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【愿成其身】[9]分支结构 – 程序的魅力">
-<meta property='og:description' content=" 本篇文章讲解题目：两数的距离 推荐先独立进行解题尝试，然后再阅读本篇讲解！ 由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right| 相减没什么难度，所以这一题实际上在于求绝对值。 事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。 C语言对于分支结构有两种常用表达： 是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。 if-else的大概结构如下： if(/*条件1*/) { /*语句1*/ } else if(/*条件2*/) { /*语句2*/ } else { /*语句3*/ } if顾名思义，是如果的意思，这段代码的意思也就是： ">
+<meta property='og:description' content="\r本篇文章讲解题目：两数的距离\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right|\r相减没什么难度，所以这一题实际上在于求绝对值。\r事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。\rC语言对于分支结构有两种常用表达：\r是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。\rif-else的大概结构如下：\rif(/*条件1*/) {\r/*语句1*/\r} else if(/*条件2*/) {\r/*语句2*/\r} else {\r/*语句3*/\r}\rif顾名思义，是如果的意思，这段代码的意思也就是：\r">
 <meta property='og:url' content='https://boiltask.com/iwbtg/iwbtg-9/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2016-08-23T16:00:14&#43;00:00'/><meta property='article:modified_time' content='2016-08-23T16:00:14&#43;00:00'/>
 <meta name="twitter:title" content="【愿成其身】[9]分支结构 – 程序的魅力">
-<meta name="twitter:description" content=" 本篇文章讲解题目：两数的距离 推荐先独立进行解题尝试，然后再阅读本篇讲解！ 由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right| 相减没什么难度，所以这一题实际上在于求绝对值。 事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。 C语言对于分支结构有两种常用表达： 是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。 if-else的大概结构如下： if(/*条件1*/) { /*语句1*/ } else if(/*条件2*/) { /*语句2*/ } else { /*语句3*/ } if顾名思义，是如果的意思，这段代码的意思也就是： ">
+<meta name="twitter:description" content="\r本篇文章讲解题目：两数的距离\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r由数学知识得，两点在数轴对应点的距离为\\left| x_{1}-x_{2}\\right|\r相减没什么难度，所以这一题实际上在于求绝对值。\r事实上，这是一个逻辑问题，也就是如果a<0，那么应该输出-a，如果a>0，那么应该输出a，如果a=0，那么应该输出0。\rC语言对于分支结构有两种常用表达：\r是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。\rif-else的大概结构如下：\rif(/*条件1*/) {\r/*语句1*/\r} else if(/*条件2*/) {\r/*语句2*/\r} else {\r/*语句3*/\r}\rif顾名思义，是如果的意思，这段代码的意思也就是：\r">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -70,7 +70,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">BoilTask&#39;s Blog</a></h1>
-            <h2 class="site-description">A game developer and designer, C/C&#43;&#43; | Golang | UnrealEngine | Web</h2>
+            <h2 class="site-description">Game developer and designer, C/C&#43;&#43; | Golang | UE | Web</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -214,7 +214,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E6%84%BF%E6%88%90%E5%85%B6%E8%BA%AB/" >
+            <a href="/categories/iwbtg/" >
                 愿成其身
             </a>
         
@@ -245,7 +245,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Aug 23, 2016</time>
+                <time class="article-time--published">2016-08-23 16:00:14</time>
             </div>
         
 
@@ -360,7 +360,7 @@
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>该内容采用 CC BY-NC-SA 4.0 许可协议。</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -372,7 +372,7 @@
 
 
         <span>
-            最后更新于 Aug 23, 2016 16:00 UTC
+            最后更新于 2016-08-23 16:00:14
         </span>
     </section></footer>
 
@@ -542,13 +542,14 @@
     <section class="copyright">
         &copy; 
         
-            2020 - 
+            2013 - 
         
         2024 BoilTask&#39;s Blog
     </section>
     
     <section class="powerby">
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">豫ICP备15024677号-1</a> <br />
+        
+            <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>

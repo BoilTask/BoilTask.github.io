@@ -15,7 +15,7 @@
         <description>&lt;p&gt;参考下文配置&lt;code class=&#34;prettyprint&#34; &gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;所需环境&#34;&gt;所需环境
+&lt;h4 id=&#34;所需环境&#34;&gt;&lt;a href=&#34;#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所需环境
 &lt;/h4&gt;&lt;p&gt;推荐提前安装以下环境：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows 10&lt;/li&gt;
@@ -23,11 +23,11 @@
 &lt;li&gt;Cmake&lt;/li&gt;
 &lt;li&gt;Visual Studio 2019&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;生成工具&#34;&gt;生成工具
+&lt;h4 id=&#34;生成工具&#34;&gt;&lt;a href=&#34;#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;生成工具
 &lt;/h4&gt;&lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;&lt;/a&gt;下载&lt;code class=&#34;prettyprint&#34; &gt;protobuf&lt;/code&gt;生成工具。&lt;/p&gt;
 &lt;p&gt;文件应形如&lt;code class=&#34;prettyprint&#34; &gt;protoc-$VERSION-win32.zip&lt;/code&gt;，解压其中的&lt;code&gt;bin/protoc.exe&lt;/code&gt;，放于&lt;code&gt;Dep/protobuf/bin&lt;/code&gt;下。&lt;/p&gt;
-&lt;h4 id=&#34;编译依赖&#34;&gt;编译依赖
+&lt;h4 id=&#34;编译依赖&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编译依赖
 &lt;/h4&gt;&lt;p&gt;参考下文编译所需依赖：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
@@ -44,11 +44,11 @@
 &lt;p&gt;右键&lt;code class=&#34;prettyprint&#34; &gt;INSTALL&lt;/code&gt;，选择生成，目标文件会被生成在前面所配置文件夹中。&lt;/p&gt;
 &lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/include&lt;/code&gt;到项目&lt;code&gt;/protobuf/include&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/lib&lt;/code&gt;到项目&lt;code&gt;/protobuf/lib&lt;/code&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;配置项目&#34;&gt;配置项目
+&lt;h4 id=&#34;配置项目&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置项目
 &lt;/h4&gt;&lt;p&gt;在&lt;code class=&#34;prettyprint&#34; &gt;Visual Studio&lt;/code&gt;的项目中，参考如下方法配置&lt;code&gt;Protobuf&lt;/code&gt;。&lt;/p&gt;
-&lt;h5 id=&#34;配置头文件引用&#34;&gt;配置头文件引用
+&lt;h5 id=&#34;配置头文件引用&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置头文件引用
 &lt;/h5&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
-&lt;h5 id=&#34;配置静态链接&#34;&gt;配置静态链接
+&lt;h5 id=&#34;配置静态链接&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置静态链接
 &lt;/h5&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;展开&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;
 </description>

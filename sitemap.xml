@@ -6,13 +6,19 @@
     <lastmod>2015-11-18T05:21:05+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/</loc>
-    <lastmod>2020-07-18T17:39:54+00:00</lastmod>
+    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/categories/</loc>
-    <lastmod>2020-07-18T17:39:54+00:00</lastmod>
+    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/post/</loc>
-    <lastmod>2020-07-18T17:39:54+00:00</lastmod>
+    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/categories/qzone/</loc>
+    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/qzone/1728044081/</loc>
+    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/tags/protobuf/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
@@ -23,7 +29,7 @@
     <loc>https://boiltask.com/knowledge/cppprotobuf/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</loc>
+    <loc>https://boiltask.com/categories/knowledge/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/knowledge/cppstatic/</loc>
@@ -35,10 +41,10 @@
     <loc>https://boiltask.com/record/202003081/</loc>
     <lastmod>2020-03-07T17:17:48+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/%E4%BA%BA%E7%94%9F%E8%AE%B0%E5%BD%95/</loc>
+    <loc>https://boiltask.com/categories/record/</loc>
     <lastmod>2020-03-07T17:17:48+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://boiltask.com/categories/notes/</loc>
     <lastmod>2019-11-14T11:00:24+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/notes/100principles2/</loc>
@@ -56,7 +62,7 @@
     <loc>https://boiltask.com/material/tool/</loc>
     <lastmod>2019-09-21T16:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/</loc>
+    <loc>https://boiltask.com/categories/material/</loc>
     <lastmod>2019-09-21T16:17:00+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/material/201909212/</loc>
@@ -74,9 +80,6 @@
     <loc>https://boiltask.com/archives/</loc>
     <lastmod>2019-09-18T03:54:47+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/qq%E7%A9%BA%E9%97%B4/</loc>
-    <lastmod>2018-05-07T04:33:53+00:00</lastmod>
-  </url><url>
     <loc>https://boiltask.com/qzone/1525667602/</loc>
     <lastmod>2018-05-07T04:33:53+00:00</lastmod>
   </url><url>
@@ -92,7 +95,7 @@
     <loc>https://boiltask.com/iwbtg/iwbtg-15/</loc>
     <lastmod>2016-08-29T16:00:57+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/%E6%84%BF%E6%88%90%E5%85%B6%E8%BA%AB/</loc>
+    <loc>https://boiltask.com/categories/iwbtg/</loc>
     <lastmod>2016-08-29T16:00:57+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/iwbtg/iwbtg-14/</loc>

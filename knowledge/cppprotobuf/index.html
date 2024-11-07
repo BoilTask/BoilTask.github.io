@@ -70,7 +70,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">BoilTask&#39;s Blog</a></h1>
-            <h2 class="site-description">A game developer and designer, C/C&#43;&#43; | Golang | UnrealEngine | Web</h2>
+            <h2 class="site-description">Game developer and designer, C/C&#43;&#43; | Golang | UE | Web</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -256,7 +256,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/" >
+            <a href="/categories/knowledge/" >
                 知识汇总
             </a>
         
@@ -287,7 +287,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Jul 18, 2020</time>
+                <time class="article-time--published">2020-07-18 17:39:54</time>
             </div>
         
 
@@ -320,7 +320,7 @@
     <p>参考下文配置<code class="prettyprint" >Protobuf</code>：</p>
 <p><a href="https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows" target="_blank" rel="noreferrer noopener"><a class="link" href="https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows"  target="_blank" rel="noopener"
     >https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows</a></a></p>
-<h4 id="所需环境">所需环境
+<h4 id="所需环境"><a href="#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83" class="header-anchor"></a>所需环境
 </h4><p>推荐提前安装以下环境：</p>
 <ul>
 <li>Windows 10</li>
@@ -328,11 +328,11 @@
 <li>Cmake</li>
 <li>Visual Studio 2019</li>
 </ul>
-<h4 id="生成工具">生成工具
+<h4 id="生成工具"><a href="#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7" class="header-anchor"></a>生成工具
 </h4><p>在<a href="https://github.com/protocolbuffers/protobuf/releases/latest" target="_blank" rel="noreferrer noopener"><a class="link" href="https://github.com/protocolbuffers/protobuf/releases/latest"  target="_blank" rel="noopener"
     >https://github.com/protocolbuffers/protobuf/releases/latest</a></a>下载<code class="prettyprint" >protobuf</code>生成工具。</p>
 <p>文件应形如<code class="prettyprint" >protoc-$VERSION-win32.zip</code>，解压其中的<code>bin/protoc.exe</code>，放于<code>Dep/protobuf/bin</code>下。</p>
-<h4 id="编译依赖">编译依赖
+<h4 id="编译依赖"><a href="#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96" class="header-anchor"></a>编译依赖
 </h4><p>参考下文编译所需依赖：</p>
 <p><a href="https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md" target="_blank" rel="noreferrer noopener"><a class="link" href="https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md"  target="_blank" rel="noopener"
     >https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md</a></a></p>
@@ -349,11 +349,11 @@
 <p>右键<code class="prettyprint" >INSTALL</code>，选择生成，目标文件会被生成在前面所配置文件夹中。</p>
 <p>复制<code class="prettyprint" >D:/Protobuf-install/include</code>到项目<code>/protobuf/include</code>。</p>
 <p>复制<code class="prettyprint" >D:/Protobuf-install/lib</code>到项目<code>/protobuf/lib</code>。</p>
-<h4 id="配置项目">配置项目
+<h4 id="配置项目"><a href="#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae" class="header-anchor"></a>配置项目
 </h4><p>在<code class="prettyprint" >Visual Studio</code>的项目中，参考如下方法配置<code>Protobuf</code>。</p>
-<h5 id="配置头文件引用">配置头文件引用
+<h5 id="配置头文件引用"><a href="#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8" class="header-anchor"></a>配置头文件引用
 </h5><p>右键项目属性，点击<code class="prettyprint" >C/C++</code>，在<code>附加包含目录</code>之中，填入<code>protobuf</code>头文件目录，如：<code>\protobuf\include</code>。</p>
-<h5 id="配置静态链接">配置静态链接
+<h5 id="配置静态链接"><a href="#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5" class="header-anchor"></a>配置静态链接
 </h5><p>右键项目属性，点击<code class="prettyprint" >链接器</code>，在<code>附加库目录</code>之中，填入<code>protobuf</code>依赖文件目录，如：<code>\protobuf\lib</code>。</p>
 <p>展开<code class="prettyprint" >链接器</code>一栏，选择<code>输入</code>，在<code>附加依赖项</code>之中，填入<code>protobuf</code>依赖文件名，如<code>libprotobuf.lib</code>与<code>libprotobuf-lite.lib</code>。</p>
 
@@ -379,7 +379,7 @@
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>该内容采用 CC BY-NC-SA 4.0 许可协议。</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -391,7 +391,7 @@
 
 
         <span>
-            最后更新于 Jul 18, 2020 17:39 UTC
+            最后更新于 2020-07-18 17:39:54
         </span>
     </section></footer>
 
@@ -522,13 +522,14 @@
     <section class="copyright">
         &copy; 
         
-            2020 - 
+            2013 - 
         
         2024 BoilTask&#39;s Blog
     </section>
     
     <section class="powerby">
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">豫ICP备15024677号-1</a> <br />
+        
+            <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>

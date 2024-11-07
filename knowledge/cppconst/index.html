@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。 修饰变量 const int a;，表示变量不可被改变。 修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。 const int *p = &a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &a; //不可以用*p改变a的值 printf(\"a = %d \\n\", a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(\"a = %d \\n\", a); int b = 11; p = &b; printf(\"b = %d \\n\", *p); int *q = &a; *q = 20; //可以用*q改变a的值 printf(\"a = %d \\n\", a); a = 30; //给a赋值也可以修改a的值 printf(\"a = %d \\n\", a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include&lt;iostream&gt;\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r&gt;a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
 <title>C&#43;&#43;中const关键字用法总结</title>
 
 <link rel='canonical' href='https://boiltask.com/knowledge/cppconst/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="C++中const关键字用法总结">
-<meta property='og:description' content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。 修饰变量 const int a;，表示变量不可被改变。 修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。 const int *p = &a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &a; //不可以用*p改变a的值 printf(\"a = %d \\n\", a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(\"a = %d \\n\", a); int b = 11; p = &b; printf(\"b = %d \\n\", *p); int *q = &a; *q = 20; //可以用*q改变a的值 printf(\"a = %d \\n\", a); a = 30; //给a赋值也可以修改a的值 printf(\"a = %d \\n\", a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。 ">
+<meta property='og:description' content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include&lt;iostream&gt;\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r&gt;a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
 <meta property='og:url' content='https://boiltask.com/knowledge/cppconst/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-03-23T05:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-23T05:00:00&#43;00:00'/>
 <meta name="twitter:title" content="C++中const关键字用法总结">
-<meta name="twitter:description" content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。 修饰变量 const int a;，表示变量不可被改变。 修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。 const int *p = &a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &a; //不可以用*p改变a的值 printf(\"a = %d \\n\", a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(\"a = %d \\n\", a); int b = 11; p = &b; printf(\"b = %d \\n\", *p); int *q = &a; *q = 20; //可以用*q改变a的值 printf(\"a = %d \\n\", a); a = 30; //给a赋值也可以修改a的值 printf(\"a = %d \\n\", a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。 ">
+<meta name="twitter:description" content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include&lt;iostream&gt;\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r&gt;a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -70,7 +70,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">BoilTask&#39;s Blog</a></h1>
-            <h2 class="site-description">A game developer and designer, C/C&#43;&#43; | Golang | UnrealEngine | Web</h2>
+            <h2 class="site-description">Game developer and designer, C/C&#43;&#43; | Golang | UE | Web</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -214,7 +214,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/" >
+            <a href="/categories/knowledge/" >
                 知识汇总
             </a>
         
@@ -245,7 +245,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 23, 2020</time>
+                <time class="article-time--published">2020-03-23 05:00:00</time>
             </div>
         
 
@@ -506,7 +506,7 @@
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>该内容采用 CC BY-NC-SA 4.0 许可协议。</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -518,7 +518,7 @@
 
 
         <span>
-            最后更新于 Mar 23, 2020 05:00 UTC
+            最后更新于 2020-03-23 05:00:00
         </span>
     </section></footer>
 
@@ -649,13 +649,14 @@
     <section class="copyright">
         &copy; 
         
-            2020 - 
+            2013 - 
         
         2024 BoilTask&#39;s Blog
     </section>
     
     <section class="powerby">
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">豫ICP备15024677号-1</a> <br />
+        
+            <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>

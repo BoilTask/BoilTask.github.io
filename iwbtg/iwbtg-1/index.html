@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。” 看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。 然而，正文却依旧不能继续，有一点非常重要。 “语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。 但我相信，在ACM都能学好，其它领域怎么会学不好呢？ 所以人工重要的事情重复三遍。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。 而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。 #include&lt;stdio.h&gt; int main() { printf(\"I wanna be the guy!\"); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。 第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。 ">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\r看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\r然而，正文却依旧不能继续，有一点非常重要。\r“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\r但我相信，在ACM都能学好，其它领域怎么会学不好呢？\r所以人工重要的事情重复三遍。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\r而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"I wanna be the guy!\");\rreturn 0;\r}\r这段简单的代码展示了C的一些基础结构，下面逐句分析。\r第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\r">
 <title>【愿成其身】[1]工欲善其事，必先利其器</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/iwbtg-1/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【愿成其身】[1]工欲善其事，必先利其器">
-<meta property='og:description' content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。” 看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。 然而，正文却依旧不能继续，有一点非常重要。 “语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。 但我相信，在ACM都能学好，其它领域怎么会学不好呢？ 所以人工重要的事情重复三遍。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。 而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。 #include&lt;stdio.h&gt; int main() { printf(\"I wanna be the guy!\"); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。 第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。 ">
+<meta property='og:description' content="\r子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\r看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\r然而，正文却依旧不能继续，有一点非常重要。\r“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\r但我相信，在ACM都能学好，其它领域怎么会学不好呢？\r所以人工重要的事情重复三遍。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\r而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"I wanna be the guy!\");\rreturn 0;\r}\r这段简单的代码展示了C的一些基础结构，下面逐句分析。\r第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\r">
 <meta property='og:url' content='https://boiltask.com/iwbtg/iwbtg-1/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2016-08-15T16:00:19&#43;00:00'/><meta property='article:modified_time' content='2016-08-15T16:00:19&#43;00:00'/>
 <meta name="twitter:title" content="【愿成其身】[1]工欲善其事，必先利其器">
-<meta name="twitter:description" content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。” 看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。 然而，正文却依旧不能继续，有一点非常重要。 “语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。 但我相信，在ACM都能学好，其它领域怎么会学不好呢？ 所以人工重要的事情重复三遍。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。 我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。 而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。 #include&lt;stdio.h&gt; int main() { printf(\"I wanna be the guy!\"); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。 第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。 ">
+<meta name="twitter:description" content="\r子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\r看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\r然而，正文却依旧不能继续，有一点非常重要。\r“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\r但我相信，在ACM都能学好，其它领域怎么会学不好呢？\r所以人工重要的事情重复三遍。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\r我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\r而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"I wanna be the guy!\");\rreturn 0;\r}\r这段简单的代码展示了C的一些基础结构，下面逐句分析。\r第一行“#include”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include<>”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\r">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -70,7 +70,7 @@
         
         <div class="site-meta">
             <h1 class="site-name"><a href="/">BoilTask&#39;s Blog</a></h1>
-            <h2 class="site-description">A game developer and designer, C/C&#43;&#43; | Golang | UnrealEngine | Web</h2>
+            <h2 class="site-description">Game developer and designer, C/C&#43;&#43; | Golang | UE | Web</h2>
         </div>
     </header><ol class="menu-social">
             
@@ -214,7 +214,7 @@
     
     <header class="article-category">
         
-            <a href="/categories/%E6%84%BF%E6%88%90%E5%85%B6%E8%BA%AB/" >
+            <a href="/categories/iwbtg/" >
                 愿成其身
             </a>
         
@@ -245,7 +245,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Aug 15, 2016</time>
+                <time class="article-time--published">2016-08-15 16:00:19</time>
             </div>
         
 
@@ -479,7 +479,7 @@ int main() {
 
 
 
-        <span>Licensed under CC BY-NC-SA 4.0</span>
+        <span>该内容采用 CC BY-NC-SA 4.0 许可协议。</span>
     </section>
     <section class="article-lastmod">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -491,7 +491,7 @@ int main() {
 
 
         <span>
-            最后更新于 Aug 15, 2016 16:00 UTC
+            最后更新于 2016-08-15 16:00:19
         </span>
     </section></footer>
 
@@ -661,13 +661,14 @@ int main() {
     <section class="copyright">
         &copy; 
         
-            2020 - 
+            2013 - 
         
         2024 BoilTask&#39;s Blog
     </section>
     
     <section class="powerby">
-        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">豫ICP备15024677号-1</a> <br />
+        
+            <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
         主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>

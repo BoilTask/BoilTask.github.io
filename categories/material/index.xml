@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>学习资料 on BoilTask&#39;s Blog</title>
+        <link>https://boiltask.com/categories/material/</link>
+        <description>Recent content in 学习资料 on BoilTask&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-CN</language>
+        <lastBuildDate>Sat, 21 Sep 2019 16:17:00 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/material/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>学习工作常用软件汇总</title>
+        <link>https://boiltask.com/material/tool/</link>
+        <pubDate>Sat, 21 Sep 2019 16:17:00 +0000</pubDate>
+        
+        <guid>https://boiltask.com/material/tool/</guid>
+        <description>&lt;h3 id=&#34;记录&#34;&gt;&lt;a href=&#34;#%e8%ae%b0%e5%bd%95&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;记录
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;有道云笔记&lt;/li&gt;
+&lt;li&gt;Microsoft Todo&lt;/li&gt;
+&lt;li&gt;Sticky Notes&lt;/li&gt;
+&lt;li&gt;OneNote&lt;/li&gt;
+&lt;li&gt;WordPress&lt;/li&gt;
+&lt;li&gt;Typora&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;图像&#34;&gt;&lt;a href=&#34;#%e5%9b%be%e5%83%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;图像
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Snipaste&lt;/li&gt;
+&lt;li&gt;树洞OCR&lt;/li&gt;
+&lt;li&gt;ScreenToGif&lt;/li&gt;
+&lt;li&gt;Captura&lt;/li&gt;
+&lt;li&gt;OBS Studio&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;快捷&#34;&gt;&lt;a href=&#34;#%e5%bf%ab%e6%8d%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;快捷
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Quicker&lt;/li&gt;
+&lt;li&gt;Everything&lt;/li&gt;
+&lt;li&gt;Wox&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;读书&#34;&gt;&lt;a href=&#34;#%e8%af%bb%e4%b9%a6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;读书
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Calibre&lt;/li&gt;
+&lt;li&gt;NeatReader&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其它&#34;&gt;&lt;a href=&#34;#%e5%85%b6%e5%ae%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;其它
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;ShadowsocksR&lt;/li&gt;
+&lt;li&gt;PanDownload&lt;/li&gt;
+&lt;li&gt;MacTray&lt;/li&gt;
+&lt;li&gt;Scrcpy&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>游戏制作学习资料汇总</title>
+        <link>https://boiltask.com/material/201909212/</link>
+        <pubDate>Sat, 21 Sep 2019 05:30:02 +0000</pubDate>
+        
+        <guid>https://boiltask.com/material/201909212/</guid>
+        <description>&lt;h3 id=&#34;美术&#34;&gt;&lt;a href=&#34;#%e7%be%8e%e6%9c%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;美术
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/pixelart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;教你画像素画：每一个像素都有意义&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/c_187975189&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;虚幻4渲染编程：在虚幻4中学习图形编程&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设计&#34;&gt;&lt;a href=&#34;#%e8%ae%be%e8%ae%a1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;设计
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://zhuanlan.zhihu.com/game-design&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;笔记：游戏设计&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;社区&#34;&gt;&lt;a href=&#34;#%e7%a4%be%e5%8c%ba&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;社区
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://rpg.blue&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Project1（66RPG）&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
