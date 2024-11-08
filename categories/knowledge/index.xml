@@ -6,29 +6,67 @@
         <description>Recent content in 知识汇总 on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 18 Jul 2020 17:39:54 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/knowledge/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 08 Nov 2024 13:06:06 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/knowledge/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hogo中Giscus配置</title>
+        <link>https://boiltask.com/knowledge/hugo-giscus/</link>
+        <pubDate>Fri, 08 Nov 2024 13:06:06 +0800</pubDate>
+        
+        <guid>https://boiltask.com/knowledge/hugo-giscus/</guid>
+        <description>&lt;p&gt;在给博客配置评论区的时候，遇见了一些问题，记录一些。&lt;/p&gt;
+&lt;h2 id=&#34;为何选择giscus&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bd%95%e9%80%89%e6%8b%a9giscus&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为何选择Giscus
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Stack&lt;/code&gt;这个主题默认的评论区是&lt;code&gt;Disqus&lt;/code&gt;，但是&lt;code&gt;Disqus&lt;/code&gt;是个国外的服务，而且需要收费，因此没有使用。&lt;/p&gt;
+&lt;p&gt;同时，主题也支持了其他常见的评论区配置。我首先选择了之前经常注意到的&lt;code&gt;Gitalk&lt;/code&gt;，使用&lt;code&gt;Github&lt;/code&gt;的&lt;code&gt;Issue&lt;/code&gt;来作为评论区的方式当时让人眼前一亮。&lt;/p&gt;
+&lt;p&gt;不过配置的时候遇见了一些权限问题，发现&lt;code&gt;Gitalk&lt;/code&gt;的权限有些不合理，评论者需要把自己的账号授权给博主来评论，理论上来说博主会获得一些不该有的登陆者的权限。
+而且由于跨域问题，还需要找个处理跨域的代理，这又增添了一些隐私问题以及配置成本。&lt;/p&gt;
+&lt;p&gt;最后选择了&lt;code&gt;Giscus&lt;/code&gt;，它使用自己的&lt;code&gt;App&lt;/code&gt;来作为权限拥有者，作为一个第三方，使用着只需要授权给这个应用即可完成&lt;code&gt;Github&lt;/code&gt;的授权。&lt;/p&gt;
+&lt;p&gt;同时使用起来也更方便和灵活。&lt;/p&gt;
+&lt;h2 id=&#34;配置方式&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e6%96%b9%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置方式
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;在&lt;code&gt;Github&lt;/code&gt;中安装&lt;a class=&#34;link&#34; href=&#34;https://github.com/apps/giscus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Giscus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;将仓库授权给应用
+&lt;ol&gt;
+&lt;li&gt;在&lt;a class=&#34;link&#34; href=&#34;https://github.com/settings/installations&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Applications&lt;/a&gt;中找到&lt;code&gt;Giscus&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;Repository access&lt;/code&gt;中选择所存放评论的仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;前往&lt;a class=&#34;link&#34; href=&#34;https://giscus.app/zh-CN&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Giscus&lt;/a&gt;的官网继续完成配置
+&lt;ol&gt;
+&lt;li&gt;选择一个&lt;code&gt;语言&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;仓库&lt;/code&gt;中输入所授权的仓库，如：&lt;code&gt;BoilTask/BoilTask.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;根据后续的配置描述选择自己所要的配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;启用 giscus&lt;/code&gt;一项中查看所需要的配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;可以在需要的地方填写上生成的配置即可。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Windows下C&#43;&#43;版本Protobuf使用方法</title>
-        <link>https://boiltask.com/knowledge/cppprotobuf/</link>
+        <link>https://boiltask.com/knowledge/cpp-protobuf/</link>
         <pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate>
         
-        <guid>https://boiltask.com/knowledge/cppprotobuf/</guid>
+        <guid>https://boiltask.com/knowledge/cpp-protobuf/</guid>
         <description>&lt;p&gt;参考下文配置&lt;code class=&#34;prettyprint&#34; &gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;所需环境&#34;&gt;&lt;a href=&#34;#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所需环境
-&lt;/h4&gt;&lt;p&gt;推荐提前安装以下环境：&lt;/p&gt;
+&lt;h2 id=&#34;所需环境&#34;&gt;&lt;a href=&#34;#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所需环境
+&lt;/h2&gt;&lt;p&gt;推荐提前安装以下环境：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Windows 10&lt;/li&gt;
 &lt;li&gt;Git&lt;/li&gt;
 &lt;li&gt;Cmake&lt;/li&gt;
 &lt;li&gt;Visual Studio 2019&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;生成工具&#34;&gt;&lt;a href=&#34;#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;生成工具
-&lt;/h4&gt;&lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;h2 id=&#34;生成工具&#34;&gt;&lt;a href=&#34;#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;生成工具
+&lt;/h2&gt;&lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;&lt;/a&gt;下载&lt;code class=&#34;prettyprint&#34; &gt;protobuf&lt;/code&gt;生成工具。&lt;/p&gt;
 &lt;p&gt;文件应形如&lt;code class=&#34;prettyprint&#34; &gt;protoc-$VERSION-win32.zip&lt;/code&gt;，解压其中的&lt;code&gt;bin/protoc.exe&lt;/code&gt;，放于&lt;code&gt;Dep/protobuf/bin&lt;/code&gt;下。&lt;/p&gt;
-&lt;h4 id=&#34;编译依赖&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编译依赖
-&lt;/h4&gt;&lt;p&gt;参考下文编译所需依赖：&lt;/p&gt;
+&lt;h2 id=&#34;编译依赖&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编译依赖
+&lt;/h2&gt;&lt;p&gt;参考下文编译所需依赖：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -44,21 +82,21 @@
 &lt;p&gt;右键&lt;code class=&#34;prettyprint&#34; &gt;INSTALL&lt;/code&gt;，选择生成，目标文件会被生成在前面所配置文件夹中。&lt;/p&gt;
 &lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/include&lt;/code&gt;到项目&lt;code&gt;/protobuf/include&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/lib&lt;/code&gt;到项目&lt;code&gt;/protobuf/lib&lt;/code&gt;。&lt;/p&gt;
-&lt;h4 id=&#34;配置项目&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置项目
-&lt;/h4&gt;&lt;p&gt;在&lt;code class=&#34;prettyprint&#34; &gt;Visual Studio&lt;/code&gt;的项目中，参考如下方法配置&lt;code&gt;Protobuf&lt;/code&gt;。&lt;/p&gt;
-&lt;h5 id=&#34;配置头文件引用&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置头文件引用
-&lt;/h5&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
-&lt;h5 id=&#34;配置静态链接&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置静态链接
-&lt;/h5&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;配置项目&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置项目
+&lt;/h2&gt;&lt;p&gt;在&lt;code class=&#34;prettyprint&#34; &gt;Visual Studio&lt;/code&gt;的项目中，参考如下方法配置&lt;code&gt;Protobuf&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;配置头文件引用&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置头文件引用
+&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;配置静态链接&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置静态链接
+&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;展开&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>C&#43;&#43;中static关键字用法总结</title>
-        <link>https://boiltask.com/knowledge/cppstatic/</link>
+        <link>https://boiltask.com/knowledge/cpp-static/</link>
         <pubDate>Mon, 23 Mar 2020 05:30:15 +0000</pubDate>
         
-        <guid>https://boiltask.com/knowledge/cppstatic/</guid>
+        <guid>https://boiltask.com/knowledge/cpp-static/</guid>
         <description>&lt;div class=&#34;wp-block-jetpack-markdown&#34;&gt;
   &lt;h3&gt;
     修饰普通变量
@@ -72,11 +110,11 @@
   &lt;p&gt;
     &lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。
   &lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;#include &amp;lt;iostream&amp;gt;
+  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;#include &lt;iostream&gt;
 using namespace std;
 void staticLocalVar() {
     static int a = 0;  // 运行期时初始化一次, 下次再调用时, 不进行初始化工作
-    cout &amp;lt;&amp;lt; &#34;a=&#34; &amp;lt;&amp;lt; a &amp;lt;&amp;lt; endl;
+    cout &lt;&lt; &#34;a=&#34; &lt;&lt; a &lt;&lt; endl;
     ++a;
 }
 int main() {
@@ -125,10 +163,10 @@ int main() {
         </item>
         <item>
         <title>C&#43;&#43;中const关键字用法总结</title>
-        <link>https://boiltask.com/knowledge/cppconst/</link>
+        <link>https://boiltask.com/knowledge/cpp-const/</link>
         <pubDate>Mon, 23 Mar 2020 05:00:00 +0000</pubDate>
         
-        <guid>https://boiltask.com/knowledge/cppconst/</guid>
+        <guid>https://boiltask.com/knowledge/cpp-const/</guid>
         <description>&lt;div class=&#34;wp-block-jetpack-markdown&#34;&gt;
   &lt;blockquote&gt;
     &lt;p&gt;
@@ -153,7 +191,7 @@ int main() {
   &lt;p&gt;
     &lt;code class=&#34;prettyprint&#34; &gt;*p&lt;/code&gt;不可变，&lt;code&gt;*p&lt;/code&gt;是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容，所以&lt;code&gt;*p&lt;/code&gt;不可变也就是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容不可变。&lt;code&gt;p&lt;/code&gt;是可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元（变量）是可变的，但是&lt;code&gt;p&lt;/code&gt;指向谁，谁的值就不可变。
   &lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&amp;lt;iostream&amp;gt;
+  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
   using namespace std;
   int main(){
   	int a = 10;
@@ -176,7 +214,7 @@ int main() {
   	return 0;
   }
   
-  &amp;gt;a = 10 
+  &gt;a = 10 
   a = 40 
   b = 11
   a = 20
@@ -188,7 +226,7 @@ int main() {
 &lt;p&gt;
   &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;修饰&lt;code&gt;p&lt;/code&gt;，指针&lt;code&gt;p&lt;/code&gt;是不可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元不可变。&lt;code&gt;p&lt;/code&gt;的指向不可变，&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容可以变。
 &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&amp;lt;iostream&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
   using namespace std;
   int main(){
   	int a = 10;
@@ -208,7 +246,7 @@ int main() {
   	return 0;
   }
   
-  &amp;gt;a = 10 
+  &gt;a = 10 
   a = 20
   b = 11
   a = 11
@@ -219,7 +257,7 @@ int main() {
 &lt;p&gt;
   &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;修饰了&lt;code&gt;*p&lt;/code&gt;和&lt;code&gt;p&lt;/code&gt;，所以&lt;code&gt;p&lt;/code&gt;指向的内存单元和&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容都不可变。
 &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&amp;lt;iostream&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
   using namespace std;
   int main(){
   	int a = 10;
@@ -236,7 +274,7 @@ int main() {
   	return 0;
   }
   
-  &amp;gt;a = 10 
+  &gt;a = 10 
   a = 10
   b = 11
 &lt;/code&gt;&lt;/pre&gt;
@@ -246,7 +284,7 @@ int main() {
 &lt;p&gt;
   指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；
 &lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&amp;lt;iostream&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
   using namespace std;
   int main(){
   	int a = 10;
@@ -282,7 +320,7 @@ int main() {
   	return 0;
   }
   
-  &amp;gt;a = 10 
+  &gt;a = 10 
   a = 20
   &amp;rm = 3
   b = 5
@@ -320,7 +358,7 @@ int main() {
     &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;对象可以调用&lt;code&gt;const&lt;/code&gt;成员函数，不能调用非&lt;code&gt;const&lt;/code&gt;修饰的函数。
   &lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include &amp;lt;iostream&amp;gt;
+&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include &lt;iostream&gt;
   using namespace std;
   class Test {
      public:
@@ -332,12 +370,12 @@ int main() {
   };
   int main() {
       Test test(2);
-      cout &amp;lt;&amp;lt; test.getA() &amp;lt;&amp;lt; endl;
-      cout &amp;lt;&amp;lt; test.getAc() &amp;lt;&amp;lt; endl;
+      cout &lt;&lt; test.getA() &lt;&lt; endl;
+      cout &lt;&lt; test.getAc() &lt;&lt; endl;
       return 0;
   }
   
-  &amp;gt;2
+  &gt;2
   2
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;

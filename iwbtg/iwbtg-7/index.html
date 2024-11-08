@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/iwbtg-7/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【愿成其身】[7]整数的魅力 – 数字的最后一位">
+<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="【愿成其身】[7]整数的魅力 – 数字的最后一位">
 <meta property='og:description' content="\r本篇文章讲解题目：最后一位\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r在C语言中，除了加减乘除运算之外，还有一个较为常用的运算，取余\"%\"。\r5 \\% 2 = 1 由数学知识得，一个整数对10取余即可得到最后一位数字。\r12345 \\% 10 = 5\n这一题便可使用这一种方法轻松得出答案。\r从上一篇文章中学到，这里如果计算A×B的话，依旧应该使用long long，然后对结果进行取余运算即可。\rprintf(\"%d\\n\",(A*B)%10);\r因为最后一位数字肯定是int范围内的数字，所以可以直接以int型输出。\r对于这一题来说还有一种避免使用long long的方法。\r我们想到，对于乘法，其结果的最后一位只取决于A和B的最后一位，所以我们可以先分别求出A与B的最后一位，然后求出最后一位相乘的最后一位。\r这种把\\left( A\\times B\\right) \\% 10转变为\\left[ \\left( A\\% 10 \\right) \\times \\left( B\\% 10 \\right) \\right] \\% 10的思维，对于ACM来说很重要，因为通过各种转化，我们可以突破题目的一些数据限制，从而得到正确答案。\r思考，若题目的数据范围是0 \\leq a,b \\leq 10^{18}，那么我们便不能使用第一种方法，而使用后一种方法便可以轻松得到正确答案。\r">
 <meta property='og:url' content='https://boiltask.com/iwbtg/iwbtg-7/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>

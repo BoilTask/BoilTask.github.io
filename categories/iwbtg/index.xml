@@ -133,7 +133,7 @@
   &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;background-color:#FFFFFF;&#34;&gt; &lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
 &lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;	int i;
-	for(i=0; i&amp;lt;n; i++) {
+	for(i=0; i&lt;n; i++) {
 		/*循环语句*/
 	}&lt;/pre&gt;
 &lt;p style=&#34;color:#000000;text-indent:2em;&#34;&gt;
@@ -143,7 +143,7 @@
   &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;但是如果我们在循环中用到了i，比如我们想让奇数次时执行某一语句，偶数时执行另一语句，就可以写为：&lt;/span&gt;
 &lt;/p&gt;
 &lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;	int i;
-	for(i=0; i&amp;lt;n; i++) {
+	for(i=0; i&lt;n; i++) {
 		if(i%2==0) {
 			/*偶数时操作*/
 		} else {
@@ -157,7 +157,7 @@
   &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;上边代码就等同于：&lt;/span&gt;
 &lt;/p&gt;
 &lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;	int i=0;
-	while(i&amp;lt;n) {
+	while(i&lt;n) {
 		if(i%2==0) {
 			/*偶数时操作*/
 		} else {
@@ -317,7 +317,7 @@
 &lt;p style=&#34;text-indent:2em;text-align:left;&#34;&gt;
   &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;测试代码：&lt;/span&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int T=10;
 	while(T--) {
@@ -393,7 +393,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int a,b;
 	scanf(&#34;%d %d&#34;,&amp;a,&amp;b);
@@ -465,7 +465,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int a,b;
 	scanf(&#34;%d %d&#34;,&amp;a,&amp;b);
@@ -540,7 +540,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;/p&gt; 
-  &lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+  &lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	printf(&#34;%d\n&#34;,&#39;A&#39;);
 	printf(&#34;%d\n&#34;,&#39;B&#39;);
@@ -566,7 +566,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	char c;
 	scanf(&#34;%c&#34;,&amp;c);
@@ -624,7 +624,7 @@ int main() {
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
   &lt;span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;&#34;&gt; &lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;printf(&#34;%s\n&#34;,a&amp;gt;b?&#34;A&#34;:&#34;B&#34;);&lt;/pre&gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;printf(&#34;%s\n&#34;,a&gt;b?&#34;A&#34;:&#34;B&#34;);&lt;/pre&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;具体的如何运用，还是需要自己在实践中多多尝试。&lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
@@ -754,7 +754,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int A,B;
 	scanf(&#34;%d %d&#34;,&amp;A,&amp;B);
@@ -920,7 +920,7 @@ int main() {
 &lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;line-height:27px;&#34;&gt; &lt;/span&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int A,B;
 	scanf(&#34;%d %d&#34;,&amp;A,&amp;B);
@@ -1056,7 +1056,8 @@ int main() {
   &lt;/p&gt; 
   &lt;blockquote&gt;
     &lt;p&gt;
-      &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;“凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。”&amp;nbsp;&lt;/span&gt;
+      &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;“凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。”
+&lt;/span&gt;
     &lt;/p&gt;
   &lt;/blockquote&gt;
   &lt;blockquote style=&#34;text-align:right;&#34;&gt;
@@ -1162,7 +1163,8 @@ int main() {
   &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;这样说有点绕……&lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;例如：&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;printf(&#34;%d&#34;,1);&amp;nbsp;&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;的输出结果便是 1&lt;/span&gt;
+  &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;例如：&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;printf(&#34;%d&#34;,1);
+&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;的输出结果便是 1&lt;/span&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;如果参数是个变量，&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:27px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;比如提前建立一个整型的变量a=5(int a = 5 ;)。&lt;/span&gt;
@@ -1177,7 +1179,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int a=5;
 	printf(&#34;%d\n&#34;,a);
@@ -1216,7 +1218,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	int a;
 	scanf(&#34;%d&#34;,&amp;a);
@@ -1295,7 +1297,7 @@ int main() {
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:27px;&#34;&gt; &lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	printf(&#34;`1234567890-=&#34;);
 	printf(&#34;~!@#$%^&amp;*()_+&#34;);
@@ -1304,7 +1306,7 @@ int main() {
 	printf(&#34;asdfghjkl; &#39;&#34;);
 	printf(&#34;ASDFGHJKL:&#34;&#34;);
 	printf(&#34;zxcvbnm,./&#34;);
-	printf(&#34;ZXCVBNM&amp;lt;&amp;gt;?&#34;);
+	printf(&#34;ZXCVBNM&lt;&gt;?&#34;);
 	return 0;
 }&lt;/pre&gt;
 &lt;p style=&#34;text-indent:2em;&#34;&gt;
@@ -1422,7 +1424,7 @@ int main() {
 &lt;/p&gt;
 &lt;p style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;text-indent:2em;&#34;&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
+&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&lt;stdio.h&gt;
 int main() {
 	printf(&#34;I wanna be the guy!&#34;); 
 	return 0;
@@ -1441,7 +1443,8 @@ int main() {
   &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;具体结果是什么意思&lt;/span&gt;&lt;span style=&#34;line-height:1.5;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;-.-自己探索吧。&lt;/span&gt;
 &lt;/p&gt;
 &lt;p style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;text-indent:2em;&#34;&gt;
-  &lt;a href=&#34;http://oj.boiltask.com/JudgeOnline/faqs.cn.php&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;span style=&#34;color:#003399;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;PIPAKACAoj&amp;nbsp;FAQ&lt;/span&gt;&lt;/a&gt;
+  &lt;a href=&#34;http://oj.boiltask.com/JudgeOnline/faqs.cn.php&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;span style=&#34;color:#003399;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;PIPAKACAoj
+FAQ&lt;/span&gt;&lt;/a&gt;
 &lt;/p&gt;
 &lt;p style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;text-indent:2em;&#34;&gt;
   &lt;a href=&#34;http://acm.hdu.edu.cn/faq.php?lang=chs&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;span style=&#34;color:#003399;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;杭州电子科技大学(hdoj)FAQ&lt;/span&gt;&lt;/a&gt;
@@ -1458,13 +1461,13 @@ int main() {
         </item>
         <item>
         <title>【愿成其身】[1]工欲善其事，必先利其器</title>
-        <link>https://boiltask.com/iwbtg/iwbtg-1/</link>
+        <link>https://boiltask.com/iwbtg/1/</link>
         <pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate>
         
-        <guid>https://boiltask.com/iwbtg/iwbtg-1/</guid>
-        <description>&lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;&#34;&gt;&lt;span style=&#34;color:#333333;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;line-height:24px;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;子曰：“&lt;/span&gt;&lt;span style=&#34;color:#FFFFFF;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;background-color:#E53333;&#34;&gt;工欲善其事，必先利其器&lt;/span&gt;&lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
+        <guid>https://boiltask.com/iwbtg/1/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;子曰：“&lt;code&gt;工欲善其事，必先利其器&lt;/code&gt;。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p style=&#34;text-align:center;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-size:18px;&#34;&gt;&lt;span style=&#34;color:#333333;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;line-height:24px;background-color:#FFFFFF;&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i2.wp.com/img2.niushe.com/upload/201304/19/14-22-31-71-26144.jpg?resize=300%2C205&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;205&#34; title=&#34;&#34; align=&#34;&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;br /&gt; &lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
@@ -1480,18 +1483,10 @@ int main() {
 &lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;但我相信，在ACM都能学好，其它领域怎么会学不好呢？&lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
-&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;所以人工重要的事情重复三遍。&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具&lt;/span&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#003399;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
+&lt;p&gt;所以人工重要的事情重复三遍。&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color:#003399;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color:#003399;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&#34;color:#003399;background-color:#FFFFFF;&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;font-family:&#39;Microsoft YaHei&#39;;color:#000000;background-color:#FFFFFF;&#34;&gt;我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。&lt;/span&gt;&lt;/span&gt;
@@ -1499,12 +1494,23 @@ int main() {
 &lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
   &lt;span&gt;&lt;span style=&#34;font-size:18px;line-height:24px;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;而作为一门实用性的学科，我主张还是“&lt;/span&gt;&lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;line-height:24px;color:#000000;background-color:#FFFFFF;&#34;&gt;学以致用，以用促学&lt;/span&gt;&lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;”，所以先来看一篇“文章”。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
-&lt;pre class=&#34;prettyprint lang-cpp&#34;&gt;#include&amp;lt;stdio.h&amp;gt;
-int main() {
-	printf(&#34;I wanna be the guy!&#34;);
-	return 0;
-}&lt;/pre&gt;
-&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I wanna be the guy!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-size:18px;line-height:24px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;background-color:#FFFFFF;&#34;&gt;&lt;span style=&#34;color:#000000;font-size:18px;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-family:&#39;Microsoft YaHei&#39;;font-size:18px;line-height:24px;color:#000000;background-color:#FFFFFF;&#34;&gt;这段简单的代码展示了C的一些基础结构，下面逐句分析。&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;/p&gt;
 &lt;p style=&#34;text-align:left;text-indent:2em;&#34;&gt;
@@ -1653,25 +1659,28 @@ int main() {
         </item>
         <item>
         <title>【愿成其身】I wanna be the guy</title>
-        <link>https://boiltask.com/iwbtg/iwbtg/</link>
+        <link>https://boiltask.com/iwbtg/0/</link>
         <pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate>
         
-        <guid>https://boiltask.com/iwbtg/iwbtg/</guid>
-        <description>&lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;I wanna be the guy - 愿成其身&amp;nbsp;&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-align:center;&#34;&gt;
-  &lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/photo.hanyu.iciba.com/upload/encyclopedia_2/d9/b7/bk_d9b739bf406f29b4beec65ce2cbe897d_z8mqr6.jpg?resize=300%2C225&#34; alt=&#34;&#34; width=&#34;300&#34; height=&#34;225&#34; title=&#34;&#34; align=&#34;&#34; data-recalc-dims=&#34;1&#34; /&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;昨天想写文章时突然想起来了这个游戏，原因却不是清楚太多……想了想，大概是这个标榜难度巨高无比游戏的背景也是个励志故事吧，所以当人物一次次的死亡时，你就会心生敬佩(虽然应该是敬佩那些能把这游戏死上一万次来通关的人)。&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;其实ACM大概也是这个道理，虽然明知道一路上布满坎坷，明知道自己也许坚持不到关底，但自己也愿意去尝试一下。我很遗憾直到去年的今天都还不知道ACM是什么东东，虽然从小就标榜喜欢计算机，但却也是因为种种原因而胡乱摸索不得要领。所以，当大一时进入这个大门，人生中第一次有一群人愿意和你交流这些你喜欢的，表演真正的技术，内心才会产生出一丝激动。&lt;/span&gt;
-&lt;/p&gt;
-&lt;p style=&#34;text-indent:2em;&#34;&gt;
-  &lt;span style=&#34;font-size:18px;line-height:27px;color:#000000;font-family:&#39;Microsoft YaHei&#39;;&#34;&gt;爱上ACM，大抵也就是如此。&lt;/span&gt;
-&lt;/p&gt;
+        <guid>https://boiltask.com/iwbtg/0/</guid>
+        <description>&lt;p&gt;I wanna be the guy - 愿成其身&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/0/img.png&#34;
+	width=&#34;640&#34;
+	height=&#34;331&#34;
+	srcset=&#34;https://boiltask.com/iwbtg/0/img_hu12650617882906433718.png 480w, https://boiltask.com/iwbtg/0/img_hu11342895865770276574.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;img.png&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;464px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;昨天想写文章时突然想起来了这个游戏，原因却不是清楚太多……想了想，大概是这个标榜难度巨高无比游戏的背景也是个励志故事吧，所以当人物一次次的死亡时，你就会心生敬佩(虽然应该是敬佩那些能把这游戏死上一万次来通关的人)。&lt;/p&gt;
+&lt;p&gt;其实ACM大概也是这个道理，虽然明知道一路上布满坎坷，明知道自己也许坚持不到关底，但自己也愿意去尝试一下。我很遗憾直到去年的今天都还不知道ACM是什么东东，虽然从小就标榜喜欢计算机，但却也是因为种种原因而胡乱摸索不得要领。所以，当大一时进入这个大门，人生中第一次有一群人愿意和你交流这些你喜欢的，表演真正的技术，内心才会产生出一丝激动。&lt;/p&gt;
+&lt;p&gt;爱上ACM，大抵也就是如此。&lt;/p&gt;
 &lt;p style=&#34;text-align:center;text-indent:2em;&#34;&gt;
   &lt;span style=&#34;font-size:18px;line-height:27px;&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i2.wp.com/acm.shu.edu.cn/icpc_logo.png?resize=250%2C250&#34; alt=&#34;&#34; width=&#34;250&#34; height=&#34;250&#34; title=&#34;&#34; align=&#34;&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/span&gt;
 &lt;/p&gt;
@@ -1719,32 +1728,41 @@ int main() {
         </item>
         <item>
         <title>【愿成其身】导读目录</title>
-        <link>https://boiltask.com/iwbtg/selected/</link>
+        <link>https://boiltask.com/iwbtg/introduction/</link>
         <pubDate>Sat, 13 Aug 2016 16:00:25 +0000</pubDate>
         
-        <guid>https://boiltask.com/iwbtg/selected/</guid>
-        <description>&lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-family: &#39;Microsoft YaHei&#39;; font-size: 18px; line-height: 27px;&#34;&gt;&lt;span style=&#34;color: #000000; font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;img loading=&#34;lazy&#34; class=&#34;alignnone size-full wp-image-259&#34; src=&#34;https://i0.wp.com/didapipa.com/wp-content/uploads/2019/09/QQ图片20080119182308.png?resize=140%2C140&amp;#038;ssl=1&#34; alt=&#34;&#34; width=&#34;140&#34; height=&#34;140&#34; data-recalc-dims=&#34;1&#34; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;/p&gt;
+        <guid>https://boiltask.com/iwbtg/introduction/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;本系列文章中涉及到的图片与链接因为年久可能出现失效，有需要可联系作者交流。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/introduction/image.png&#34;
+	width=&#34;140&#34;
+	height=&#34;140&#34;
+	srcset=&#34;https://boiltask.com/iwbtg/introduction/image_hu9106273026834457887.png 480w, https://boiltask.com/iwbtg/introduction/image_hu4069004644941277617.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;100&#34;
+		data-flex-basis=&#34;240px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-family: &#39;Microsoft YaHei&#39;; font-size: 18px; line-height: 27px;&#34;&gt;&lt;span style=&#34;color: #000000; font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;=====入门导读&lt;/span&gt;&lt;span style=&#34;font-family: &#39;Microsoft YaHei&#39;; font-size: 18px; line-height: 27px; color: #000000;&#34;&gt;=====&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  ====入门导读=====
 &lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;; color: #000000;&#34;&gt;电子科技大学CDOJ：&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;; color: #000000;&#34;&gt;【Step-By-Step】&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;a href=&#34;http://old.codeoj.cn/acmstep.html&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;span style=&#34;color: #003399; font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://acm.uestc.edu.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://acm.uestc.edu.cn/&lt;/a&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px; line-height: 27px; font-family: &#39;Microsoft YaHei&#39;; color: #000000;&#34;&gt;南阳理工学院NYOJ：&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px; line-height: 27px; font-family: &#39;Microsoft YaHei&#39;; color: #000000;&#34;&gt;【进阶计划】&lt;/span&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;span style=&#34;font-size: 18px;&#34;&gt;&lt;a href=&#34;http://www.51mxd.cn/step.php.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34;&gt;&lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;; color: #003399;&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;http://acm.nyist.net/JudgeOnline/step.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://acm.nyist.net/JudgeOnline/step.php&lt;/a&gt;&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;电子科技大学CDOJ：&lt;/p&gt;
+&lt;p&gt;【Step-By-Step】&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://acm.uestc.edu.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://acm.uestc.edu.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;南阳理工学院NYOJ：&lt;/p&gt;
+&lt;p&gt;【进阶计划】&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://acm.nyist.net/JudgeOnline/step.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://acm.nyist.net/JudgeOnline/step.php&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&#34;text-align: center;&#34;&gt;
-  &lt;span style=&#34;font-size: 18px;&#34;&gt;&lt;span style=&#34;font-size: 18px; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;&lt;span style=&#34;font-family: &#39;Microsoft YaHei&#39;; font-size: 18px; line-height: 27px;&#34;&gt;&lt;span style=&#34;font-size: 18px; color: #000000; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;=====&lt;/span&gt;&lt;span style=&#34;font-size: 18px; color: #000000; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;愿成其身&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;font-family: &#39;Microsoft YaHei&#39;; font-size: 18px; line-height: 27px; color: #000000;&#34;&gt;=====&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+  ====cs=====
 &lt;/p&gt;
+x
 &lt;p style=&#34;text-align: left;&#34;&gt;
   &lt;p&gt;
     &lt;span style=&#34;font-size: 18px; color: #000000; font-family: &#39;Microsoft YaHei&#39;;&#34;&gt;【前言】&lt;/span&gt;

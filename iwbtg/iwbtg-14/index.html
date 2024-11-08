@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/iwbtg-14/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【愿成其身】[14]for循环 – 另一种表达方法">
+<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="【愿成其身】[14]for循环 – 另一种表达方法">
 <meta property='og:description' content="\r本篇文章讲解题目：大学求和1到n\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r依旧是一道小学题目。\r">
 <meta property='og:url' content='https://boiltask.com/iwbtg/iwbtg-14/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
@@ -325,7 +325,7 @@
   <span style="font-size:18px;font-family:'Microsoft YaHei';"><span style="background-color:#FFFFFF;"> </span></span>
 </p>
 <pre class="prettyprint lang-cpp">	int i;
-	for(i=0; i&lt;n; i++) {
+	for(i=0; i<n; i++) {
 		/*循环语句*/
 	}</pre>
 <p style="color:#000000;text-indent:2em;">
@@ -335,7 +335,7 @@
   <span style="color:#000000;font-size:18px;font-family:'Microsoft YaHei';">但是如果我们在循环中用到了i，比如我们想让奇数次时执行某一语句，偶数时执行另一语句，就可以写为：</span>
 </p>
 <pre class="prettyprint lang-cpp">	int i;
-	for(i=0; i&lt;n; i++) {
+	for(i=0; i<n; i++) {
 		if(i%2==0) {
 			/*偶数时操作*/
 		} else {
@@ -349,7 +349,7 @@
   <span style="color:#000000;font-size:18px;font-family:'Microsoft YaHei';">上边代码就等同于：</span>
 </p>
 <pre class="prettyprint lang-cpp">	int i=0;
-	while(i&lt;n) {
+	while(i<n) {
 		if(i%2==0) {
 			/*偶数时操作*/
 		} else {

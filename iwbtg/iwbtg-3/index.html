@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM&lt;&gt;?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM<>?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
 <title>【愿成其身】[3]转义字符 – 格式化输出</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/iwbtg-3/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="【愿成其身】[3]转义字符 – 格式化输出">
-<meta property='og:description' content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM&lt;&gt;?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
+<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="【愿成其身】[3]转义字符 – 格式化输出">
+<meta property='og:description' content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM<>?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
 <meta property='og:url' content='https://boiltask.com/iwbtg/iwbtg-3/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2016-08-17T16:00:52&#43;00:00'/><meta property='article:modified_time' content='2016-08-17T16:00:52&#43;00:00'/>
 <meta name="twitter:title" content="【愿成其身】[3]转义字符 – 格式化输出">
-<meta name="twitter:description" content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include&lt;stdio.h&gt;\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM&lt;&gt;?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
+<meta name="twitter:description" content="\r本篇文章讲解题目：打印键盘\r推荐先独立进行解题尝试，然后再阅读本篇讲解！\r题目要求按照顺序输出键盘上的字符。\r这一道题并非难题，然而确实好多人都容易被坑到。\r其中的原因就是涉及到了转义字符的知识，所以当输出 \\ 和 \" 时，如果不注意的话便容易出现问题。\r错误代码示例：\r#include\rint main() {\rprintf(\"`1234567890-=\");\rprintf(\"~!@#$%^&*()_+\");\rprintf(\"qwertyuiop[]\\\");\rprintf(\"QWERTYUIOP {}|\");\rprintf(\"asdfghjkl; '\");\rprintf(\"ASDFGHJKL:\"\");\rprintf(\"zxcvbnm,./\");\rprintf(\"ZXCVBNM<>?\");\rreturn 0;\r}\r这段代码编译会发现报错。\r为什么呢？\r在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。\r因此如果直接输出\\，便会把它与后边字符加在一起理解为转义字符，如果想输出\\则可表示为\\\\。\n同理如果直接打\"，则会认为是提前把\"\"结束了，如果想输出字符\"，则需要表示为\\\"。\r所以按照这个表进行改动。\r这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。\r而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。\r现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \\n 。\r所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \\n 即可。\r">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -303,7 +303,7 @@
 <p style="text-indent:2em;">
   <span style="font-family:'Microsoft YaHei';"><span style="font-size:18px;line-height:27px;"> </span></span>
 </p>
-<pre class="prettyprint lang-cpp">#include&lt;stdio.h&gt;
+<pre class="prettyprint lang-cpp">#include<stdio.h>
 int main() {
 	printf("`1234567890-=");
 	printf("~!@#$%^&*()_+");
@@ -312,7 +312,7 @@ int main() {
 	printf("asdfghjkl; '");
 	printf("ASDFGHJKL:"");
 	printf("zxcvbnm,./");
-	printf("ZXCVBNM&lt;&gt;?");
+	printf("ZXCVBNM<>?");
 	return 0;
 }</pre>
 <p style="text-indent:2em;">

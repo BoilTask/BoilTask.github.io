@@ -6,13 +6,25 @@
     <lastmod>2015-11-18T05:21:05+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/</loc>
-    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+    <lastmod>2024-11-08T13:06:06+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/categories/</loc>
-    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+    <lastmod>2024-11-08T13:06:06+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/hugo-giscus/</loc>
+    <lastmod>2024-11-08T13:06:06+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/post/</loc>
-    <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+    <lastmod>2024-11-08T13:06:06+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/categories/knowledge/</loc>
+    <lastmod>2024-11-08T13:06:06+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/categories/record/</loc>
+    <lastmod>2024-11-08T12:46:38+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/record/202411081/</loc>
+    <lastmod>2024-11-08T12:46:38+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/categories/qzone/</loc>
     <lastmod>2024-10-04T20:20:00+08:00</lastmod>
@@ -26,46 +38,40 @@
     <loc>https://boiltask.com/tags/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/knowledge/cppprotobuf/</loc>
+    <loc>https://boiltask.com/knowledge/cpp-protobuf/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/knowledge/</loc>
-    <lastmod>2020-07-18T17:39:54+00:00</lastmod>
-  </url><url>
-    <loc>https://boiltask.com/knowledge/cppstatic/</loc>
+    <loc>https://boiltask.com/knowledge/cpp-static/</loc>
     <lastmod>2020-03-23T05:30:15+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/knowledge/cppconst/</loc>
+    <loc>https://boiltask.com/knowledge/cpp-const/</loc>
     <lastmod>2020-03-23T05:00:00+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/record/202003081/</loc>
     <lastmod>2020-03-07T17:17:48+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/record/</loc>
-    <lastmod>2020-03-07T17:17:48+00:00</lastmod>
-  </url><url>
     <loc>https://boiltask.com/categories/notes/</loc>
     <lastmod>2019-11-14T11:00:24+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/notes/100principles2/</loc>
+    <loc>https://boiltask.com/notes/100principles-2/</loc>
     <lastmod>2019-11-14T11:00:24+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/notes/coreconcept/</loc>
     <lastmod>2019-11-11T13:43:08+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/notes/100principles1/</loc>
+    <loc>https://boiltask.com/notes/100principles-1/</loc>
     <lastmod>2019-11-09T15:50:57+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/record/201910151/</loc>
     <lastmod>2019-10-15T10:12:26+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/material/tool/</loc>
-    <lastmod>2019-09-21T16:17:00+00:00</lastmod>
-  </url><url>
     <loc>https://boiltask.com/categories/material/</loc>
     <lastmod>2019-09-21T16:17:00+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/material/201909212/</loc>
+    <loc>https://boiltask.com/material/20190922/</loc>
+    <lastmod>2019-09-21T16:17:00+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/material/20190921/</loc>
     <lastmod>2019-09-21T05:30:02+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/record/201909211/</loc>
@@ -137,13 +143,16 @@
     <loc>https://boiltask.com/iwbtg/iwbtg-2/</loc>
     <lastmod>2016-08-16T16:00:51+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/iwbtg/iwbtg-1/</loc>
+    <loc>https://boiltask.com/iwbtg/1/</loc>
     <lastmod>2016-08-15T16:00:19+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/iwbtg/iwbtg/</loc>
+    <loc>https://boiltask.com/tags/c/c&#43;&#43;/</loc>
+    <lastmod>2016-08-15T16:00:19+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/iwbtg/0/</loc>
     <lastmod>2016-08-14T16:00:19+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/iwbtg/selected/</loc>
+    <loc>https://boiltask.com/iwbtg/introduction/</loc>
     <lastmod>2016-08-13T16:00:25+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/csdn/50609642/</loc>
@@ -152,7 +161,7 @@
     <loc>https://boiltask.com/categories/csdn/</loc>
     <lastmod>2016-01-29T15:47:13+00:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/qzone/1440083241-2/</loc>
+    <loc>https://boiltask.com/qzone/1450893451/</loc>
     <lastmod>2015-12-23T17:57:45+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/qzone/1450603741/</loc>
@@ -190,6 +199,9 @@
   </url><url>
     <loc>https://boiltask.com/csdn/50358687/</loc>
     <lastmod>2015-12-19T08:05:06+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/tags/acm/</loc>
+    <lastmod>2015-12-19T07:57:59+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/csdn/50358657/</loc>
     <lastmod>2015-12-19T07:57:59+00:00</lastmod>

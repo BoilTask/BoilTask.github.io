@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="当时遇见的5个数求最值的问题\u00a0鉴于当时并不会排序\u00a0发现这个问题可以不用排序而是直接寻找就行了\u00a0真的很庆幸啊！\n#include&lt;stdio.h&gt;\rint main()\r{\rint n,m[5],min,max;\rfor(n=0;n&lt;5;n++)\rscanf(\"%d\",&m[n]);\rmax=min=m[1];\rfor(n=0;n&lt;5;n++)\r{ if(m[n]&gt;=max)\rmax=m[n];\rif(m[n]&lt;=min)\rmin=m[n];\r}\rprintf(\"%d %d\",min,max);\rreturn 0;\r}\r呃……虽然好像现在来看……你懂得~\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="当时遇见的5个数求最值的问题\n鉴于当时并不会排序\n发现这个问题可以不用排序而是直接寻找就行了\n真的很庆幸啊！\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt; int main() { int n,m[5],min,max; for(n=0;n&lt;5;n++) scanf(&#34;%d&#34;,&amp;m[n]); max=min=m[1]; for(n=0;n&lt;5;n++) { if(m[n]&gt;=max) max=m[n]; if(m[n]&lt;=min) min=m[n]; } printf(&#34;%d %d&#34;,min,max); return 0; } 呃……虽然好像现在来看……你懂得~\n">
 <title>初识ACM——幸好不用排序</title>
 
 <link rel='canonical' href='https://boiltask.com/csdn/50358795/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="初识ACM——幸好不用排序">
-<meta property='og:description' content="当时遇见的5个数求最值的问题\u00a0鉴于当时并不会排序\u00a0发现这个问题可以不用排序而是直接寻找就行了\u00a0真的很庆幸啊！\n#include&lt;stdio.h&gt;\rint main()\r{\rint n,m[5],min,max;\rfor(n=0;n&lt;5;n++)\rscanf(\"%d\",&m[n]);\rmax=min=m[1];\rfor(n=0;n&lt;5;n++)\r{ if(m[n]&gt;=max)\rmax=m[n];\rif(m[n]&lt;=min)\rmin=m[n];\r}\rprintf(\"%d %d\",min,max);\rreturn 0;\r}\r呃……虽然好像现在来看……你懂得~\n">
+<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="初识ACM——幸好不用排序">
+<meta property='og:description' content="当时遇见的5个数求最值的问题\n鉴于当时并不会排序\n发现这个问题可以不用排序而是直接寻找就行了\n真的很庆幸啊！\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt; int main() { int n,m[5],min,max; for(n=0;n&lt;5;n++) scanf(&#34;%d&#34;,&amp;m[n]); max=min=m[1]; for(n=0;n&lt;5;n++) { if(m[n]&gt;=max) max=m[n]; if(m[n]&lt;=min) min=m[n]; } printf(&#34;%d %d&#34;,min,max); return 0; } 呃……虽然好像现在来看……你懂得~\n">
 <meta property='og:url' content='https://boiltask.com/csdn/50358795/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2015-12-19T08:26:55&#43;00:00'/><meta property='article:modified_time' content='2015-12-19T08:26:55&#43;00:00'/>
 <meta name="twitter:title" content="初识ACM——幸好不用排序">
-<meta name="twitter:description" content="当时遇见的5个数求最值的问题\u00a0鉴于当时并不会排序\u00a0发现这个问题可以不用排序而是直接寻找就行了\u00a0真的很庆幸啊！\n#include&lt;stdio.h&gt;\rint main()\r{\rint n,m[5],min,max;\rfor(n=0;n&lt;5;n++)\rscanf(\"%d\",&m[n]);\rmax=min=m[1];\rfor(n=0;n&lt;5;n++)\r{ if(m[n]&gt;=max)\rmax=m[n];\rif(m[n]&lt;=min)\rmin=m[n];\r}\rprintf(\"%d %d\",min,max);\rreturn 0;\r}\r呃……虽然好像现在来看……你懂得~\n">
+<meta name="twitter:description" content="当时遇见的5个数求最值的问题\n鉴于当时并不会排序\n发现这个问题可以不用排序而是直接寻找就行了\n真的很庆幸啊！\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt; int main() { int n,m[5],min,max; for(n=0;n&lt;5;n++) scanf(&#34;%d&#34;,&amp;m[n]); max=min=m[1]; for(n=0;n&lt;5;n++) { if(m[n]&gt;=max) max=m[n]; if(m[n]&lt;=min) min=m[n]; } printf(&#34;%d %d&#34;,min,max); return 0; } 呃……虽然好像现在来看……你懂得~\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -275,27 +275,49 @@
     <section class="article-content">
     
     
-    <p>当时遇见的5个数求最值的问题 <br>
-鉴于当时并不会排序 <br>
-发现这个问题可以不用排序而是直接寻找就行了 <br>
-真的很庆幸啊！</p>
-<pre class="wp-block-code"><code class="prettyprint" >#include&lt;stdio.h&gt;
-int main()
-{
-int n,m[5],min,max;
-for(n=0;n&lt;5;n++)
-scanf("%d",&m[n]);
-max=min=m[1];
-for(n=0;n&lt;5;n++)
-{   if(m[n]&gt;=max)
-    max=m[n];
-    if(m[n]&lt;=min)
-    min=m[n];
-}
-printf("%d %d",min,max);
-return 0;
-}</code></pre>
-<p>呃……虽然好像现在来看……你懂得~</p>
+    <p>当时遇见的5个数求最值的问题</p>
+<p>鉴于当时并不会排序</p>
+<p>发现这个问题可以不用排序而是直接寻找就行了</p>
+<p>真的很庆幸啊！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#include&lt;stdio.h&gt;
+</span></span><span class="line"><span class="cl">int main()
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">int n,m[5],min,max;
+</span></span><span class="line"><span class="cl">for(n=0;n&lt;5;n++)
+</span></span><span class="line"><span class="cl">scanf(&#34;%d&#34;,&amp;m[n]);
+</span></span><span class="line"><span class="cl">max=min=m[1];
+</span></span><span class="line"><span class="cl">for(n=0;n&lt;5;n++)
+</span></span><span class="line"><span class="cl">{   if(m[n]&gt;=max)
+</span></span><span class="line"><span class="cl">    max=m[n];
+</span></span><span class="line"><span class="cl">    if(m[n]&lt;=min)
+</span></span><span class="line"><span class="cl">    min=m[n];
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">printf(&#34;%d %d&#34;,min,max);
+</span></span><span class="line"><span class="cl">return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呃……虽然好像现在来看……你懂得~</p>
 
 </section>
 

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="何家欢学长为吸引同学们兴趣\u00a0展示了一个C语言程序如下：\n#include&lt;stdio.h&gt;\r#include &lt;stdlib.h&gt;\rint main() {\rint a,n;\rprintf(\"1.关机\\n\");\rprintf(\"2.崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -s -t 120\");\relse if (a==2) {\rfor(n=0; n&lt;10; n++)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\u00a0(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n#include&lt;stdio.h&gt;\r#include&lt;stdlib.h&gt;\rint main() {\rint a,n=0;\rprintf(\"1.真关机\\n\");\rprintf(\"2.真崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -p\");\relse if (a==2) {\rwhile(n&lt;1)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="何家欢学长为吸引同学们兴趣\n展示了一个C语言程序如下：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; int main() { int a,n; printf(&#34;1.关机\\n&#34;); printf(&#34;2.崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -s -t 120&#34;); else if (a==2) { for(n=0; n&lt;10; n++) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\n(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; int main() { int a,n=0; printf(&#34;1.真关机\\n&#34;); printf(&#34;2.真崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -p&#34;); else if (a==2) { while(n&lt;1) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
 <title>初识ACM——伪病毒与真崩溃</title>
 
 <link rel='canonical' href='https://boiltask.com/csdn/50358657/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="初识ACM——伪病毒与真崩溃">
-<meta property='og:description' content="何家欢学长为吸引同学们兴趣\u00a0展示了一个C语言程序如下：\n#include&lt;stdio.h&gt;\r#include &lt;stdlib.h&gt;\rint main() {\rint a,n;\rprintf(\"1.关机\\n\");\rprintf(\"2.崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -s -t 120\");\relse if (a==2) {\rfor(n=0; n&lt;10; n++)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\u00a0(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n#include&lt;stdio.h&gt;\r#include&lt;stdlib.h&gt;\rint main() {\rint a,n=0;\rprintf(\"1.真关机\\n\");\rprintf(\"2.真崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -p\");\relse if (a==2) {\rwhile(n&lt;1)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
+<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="初识ACM——伪病毒与真崩溃">
+<meta property='og:description' content="何家欢学长为吸引同学们兴趣\n展示了一个C语言程序如下：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; int main() { int a,n; printf(&#34;1.关机\\n&#34;); printf(&#34;2.崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -s -t 120&#34;); else if (a==2) { for(n=0; n&lt;10; n++) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\n(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; int main() { int a,n=0; printf(&#34;1.真关机\\n&#34;); printf(&#34;2.真崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -p&#34;); else if (a==2) { while(n&lt;1) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
 <meta property='og:url' content='https://boiltask.com/csdn/50358657/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2015-12-19T07:57:59&#43;00:00'/><meta property='article:modified_time' content='2015-12-19T07:57:59&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='ACM' /><meta property='article:published_time' content='2015-12-19T07:57:59&#43;00:00'/><meta property='article:modified_time' content='2015-12-19T07:57:59&#43;00:00'/>
 <meta name="twitter:title" content="初识ACM——伪病毒与真崩溃">
-<meta name="twitter:description" content="何家欢学长为吸引同学们兴趣\u00a0展示了一个C语言程序如下：\n#include&lt;stdio.h&gt;\r#include &lt;stdlib.h&gt;\rint main() {\rint a,n;\rprintf(\"1.关机\\n\");\rprintf(\"2.崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -s -t 120\");\relse if (a==2) {\rfor(n=0; n&lt;10; n++)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\u00a0(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n#include&lt;stdio.h&gt;\r#include&lt;stdlib.h&gt;\rint main() {\rint a,n=0;\rprintf(\"1.真关机\\n\");\rprintf(\"2.真崩溃！\\n\");\rprintf(\"\\t——BoilTask\\n\");\rprintf(\"你的选择:\");\rscanf(\"%d\",&a);\rif(a==1)\rsystem(\"shutdown -p\");\relse if (a==2) {\rwhile(n&lt;1)\rsystem(\"start\");\r} else {\rprintf(\"你输入的格式有错误哦~\");\r};\rreturn 0;\r}\r话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
+<meta name="twitter:description" content="何家欢学长为吸引同学们兴趣\n展示了一个C语言程序如下：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; int main() { int a,n; printf(&#34;1.关机\\n&#34;); printf(&#34;2.崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -s -t 120&#34;); else if (a==2) { for(n=0; n&lt;10; n++) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\n(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; int main() { int a,n=0; printf(&#34;1.真关机\\n&#34;); printf(&#34;2.真崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -p&#34;); else if (a==2) { while(n&lt;1) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -275,56 +275,112 @@
     <section class="article-content">
     
     
-    <p>何家欢学长为吸引同学们兴趣 <br>
-展示了一个C语言程序如下：</p>
-<pre class="wp-block-code"><code class="prettyprint" >#include&lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-int main() {
-    int a,n;
-    printf("1.关机\n");
-    printf("2.崩溃！\n");
-    printf("\t——BoilTask\n");
-    printf("你的选择:");
-    scanf("%d",&a);
-    if(a==1)
-        system("shutdown -s -t 120");
-    else if (a==2) {
-        for(n=0; n&lt;10; n++)
-            system("start");
-    } else {
-        printf("你输入的格式有错误哦~");
-    };
-    return 0;
-}</code></pre>
-<p>然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦 <br>
-(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)</p>
+    <p>何家欢学长为吸引同学们兴趣</p>
+<p>展示了一个C语言程序如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="n">n</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;1.关机</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;2.崩溃！</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\t</span><span class="s">——BoilTask</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;你的选择:&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">system</span><span class="p">(</span><span class="s">&#34;shutdown -s -t 120&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">n</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">n</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">system</span><span class="p">(</span><span class="s">&#34;start&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;你输入的格式有错误哦~&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">};</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦</p>
+<p>(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)</p>
 <p>然后坏坏的我写下了一个真的有麻烦的代码……</p>
-<pre class="wp-block-code"><code class="prettyprint" >#include&lt;stdio.h&gt;
-#include&lt;stdlib.h&gt;
-int main() {
-    int a,n=0;
-    printf("1.真关机\n");
-    printf("2.真崩溃！\n");
-    printf("\t——BoilTask\n");
-    printf("你的选择:");
-    scanf("%d",&a);
-    if(a==1)
-        system("shutdown -p");
-    else if (a==2) {
-        while(n&lt;1)
-            system("start");
-    } else {
-        printf("你输入的格式有错误哦~");
-    };
-    return 0;
-}</code></pre>
-<p>话说那段时间关机都直接帅帅地运行这个程序来关机-.-</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">#include&lt;stdio.h&gt;
+</span></span><span class="line"><span class="cl">#include&lt;stdlib.h&gt;
+</span></span><span class="line"><span class="cl">int main() {
+</span></span><span class="line"><span class="cl">    int a,n=0;
+</span></span><span class="line"><span class="cl">    printf(&#34;1.真关机\n&#34;);
+</span></span><span class="line"><span class="cl">    printf(&#34;2.真崩溃！\n&#34;);
+</span></span><span class="line"><span class="cl">    printf(&#34;\t——BoilTask\n&#34;);
+</span></span><span class="line"><span class="cl">    printf(&#34;你的选择:&#34;);
+</span></span><span class="line"><span class="cl">    scanf(&#34;%d&#34;,&amp;a);
+</span></span><span class="line"><span class="cl">    if(a==1)
+</span></span><span class="line"><span class="cl">        system(&#34;shutdown -p&#34;);
+</span></span><span class="line"><span class="cl">    else if (a==2) {
+</span></span><span class="line"><span class="cl">        while(n&lt;1)
+</span></span><span class="line"><span class="cl">            system(&#34;start&#34;);
+</span></span><span class="line"><span class="cl">    } else {
+</span></span><span class="line"><span class="cl">        printf(&#34;你输入的格式有错误哦~&#34;);
+</span></span><span class="line"><span class="cl">    };
+</span></span><span class="line"><span class="cl">    return 0;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>话说那段时间关机都直接帅帅地运行这个程序来关机-.-</p>
 
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/acm/">ACM</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -391,6 +447,19 @@ int main() {
             
                 
 <article class="">
+    <a href="/csdn/50358599/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">初识ACM——2015国庆培训</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/csdn/50609642/">
         
         
@@ -436,19 +505,6 @@ int main() {
 
         <div class="article-details">
             <h2 class="article-title">初识ACM——这是程序的世界</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/csdn/50358816/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">初识ACM——崭露头角</h2>
         </div>
     </a>
 </article>

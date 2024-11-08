@@ -6,7 +6,41 @@
         <description>Recent content in 人生记录 on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 07 Mar 2020 17:17:48 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/record/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 08 Nov 2024 12:46:38 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/record/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>又双叒叕一次重新梳理了一下博客</title>
+        <link>https://boiltask.com/record/202411081/</link>
+        <pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate>
+        
+        <guid>https://boiltask.com/record/202411081/</guid>
+        <description>&lt;p&gt;最近在整理之前写的事件系统：&lt;a class=&#34;link&#34; href=&#34;https://www.fab.com//listings/6123e637-9d30-4378-a897-057ca6b4e848&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DidaEvent&lt;/a&gt;，为此创建了一个&lt;a class=&#34;link&#34; href=&#34;https://event.didapipa.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;文档&lt;/a&gt;网站。 使用了&lt;code&gt;Hugo&lt;/code&gt;来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code&gt;WordPress&lt;/code&gt;迁移到&lt;code&gt;Hugo&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;为什么要迁移&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%bf%81%e7%a7%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么要迁移
+&lt;/h2&gt;&lt;p&gt;本身其实对静态建站方案是比较排斥的，一是和传统的直接在线编辑的方式比没有那么直观，二来有服务器的方案感觉也更加灵活。&lt;/p&gt;
+&lt;p&gt;但是自己维护服务器的成本相对还是比较高的，虽然使用了&lt;code&gt;WordPress&lt;/code&gt;，但本身我对&lt;code&gt;PHP&lt;/code&gt;的发展也不太看好，而且相对来说也过于重了。&lt;/p&gt;
+&lt;p&gt;经过过去的经验，服务器往往由于续费、维护等原因需要迁移，这就导致每次博客都需要重新折腾一番。让写作这件事情也变得成本更高，也很难坚持下来。&lt;/p&gt;
+&lt;p&gt;因此使用类似于&lt;code&gt;Hugo&lt;/code&gt;之类的静态建站方案就突显出了优势，一是有免费的托管方案，二来直接&lt;code&gt;Markdown&lt;/code&gt;的写作方式，也能更灵活的运用起来手头的工具。&lt;/p&gt;
+&lt;p&gt;而且真需要一些特殊的模块，其实也可以自己自定义一些空间和页面，因此应该也可以符合目前的需求。&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择hugo&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9hugo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么选择Hugo
+&lt;/h2&gt;&lt;p&gt;备选的静态网站生成器有很多，比如&lt;code&gt;Jekyll&lt;/code&gt;、&lt;code&gt;Hexo&lt;/code&gt;等等，为什么选择&lt;code&gt;Hugo&lt;/code&gt;呢？&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Hexo&lt;/code&gt;是用的&lt;code&gt;Node.js&lt;/code&gt;，生成速度较慢，因此不再考虑了。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Jekyll&lt;/code&gt;具有Github的官方支持，可以直接在&lt;code&gt;Github&lt;/code&gt;上部署。但是尝试了一个&lt;code&gt;Jekyll&lt;/code&gt;的主题，感觉太复杂了。
+而且其实我是希望数据源与最后生成的文件分开的，这样也方便管理。&lt;/p&gt;
+&lt;p&gt;最后选择了&lt;code&gt;Hugo&lt;/code&gt;，一是有合适的主题，二来生成速度快，三来使用的&lt;code&gt;Golang&lt;/code&gt;语言也是我比较看好的一种语言。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;DidaEvent&lt;/code&gt;的文档使用的主题是&lt;a class=&#34;link&#34; href=&#34;https://github.com/thuliteio/doks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Doks&lt;/a&gt;，博客使用的主题是&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Stack&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;迁移过程&#34;&gt;&lt;a href=&#34;#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;迁移过程
+&lt;/h2&gt;&lt;p&gt;简单的部署好框架后，感觉整体还是比较满意的。&lt;/p&gt;
+&lt;p&gt;剩下的就是需要迁移原先&lt;code&gt;WordPress&lt;/code&gt;的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class=&#34;link&#34; href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;wordpress-to-hugo-exporter&lt;/a&gt;。
+经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p&gt;
+&lt;p&gt;不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p&gt;
+&lt;h2 id=&#34;评论区配置&#34;&gt;&lt;a href=&#34;#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;评论区配置
+&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/knowledge/hugo-giscus/&#34; &gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>从大学到工作 – 我的2019总结</title>
         <link>https://boiltask.com/record/202003081/</link>
         <pubDate>Sat, 07 Mar 2020 17:17:48 +0000</pubDate>
@@ -61,8 +95,21 @@
         <pubDate>Tue, 15 Oct 2019 10:12:26 +0000</pubDate>
         
         <guid>https://boiltask.com/record/201910151/</guid>
-        <description>&lt;p&gt;阿里云发来了一条续费通知……&lt;figure class=&#34;wp-block-image&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; width=&#34;1338&#34; height=&#34;120&#34; src=&#34;https://i1.wp.com/didapipa.com/wp-content/uploads/2019/10/image.png?fit=1024%2C92&amp;ssl=1&#34; alt=&#34;主机信息&#34; class=&#34;wp-image-444&#34; srcset=&#34;https://i2.wp.com/didapipa.com/wp-content/uploads/2019/10/image.png?w=1338 1338w, https://i2.wp.com/didapipa.com/wp-content/uploads/2019/10/image.png?resize=300%2C27 300w, https://i2.wp.com/didapipa.com/wp-content/uploads/2019/10/image.png?resize=768%2C69 768w, https://i2.wp.com/didapipa.com/wp-content/uploads/2019/10/image.png?resize=1024%2C92 1024w&#34; sizes=&#34;(max-width: 1000px) 100vw, 1000px&#34; /&gt; &lt;/figure&gt;&lt;/p&gt;
+        <description>&lt;p&gt;阿里云发来了一条续费通知……&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://boiltask.com/record/201910151/image.png&#34;
+	width=&#34;1024&#34;
+	height=&#34;92&#34;
+	srcset=&#34;https://boiltask.com/record/201910151/image_hu2020927776719436560.png 480w, https://boiltask.com/record/201910151/image_hu7403557872829511759.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;主机信息&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1113&#34;
+		data-flex-basis=&#34;2671px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;这一个应该是ECS里跟了我最久的一台主机了吧，主要运行了酷Q机器人相关的服务。&lt;/p&gt;
 &lt;p&gt;在网络编程课程设计和Java课程设计里面，用过他当做运行Java的服务器。这么久的日子了，人生第一个可以称得上作品的项目，QQ机器人也跟随了这么久。随着已经很长时间没有进行维护了，但是一直半死不活地运行着，后边也写了HPU小助手这种小工具。&lt;/p&gt;
 &lt;p&gt;那么……说声再见吧，有缘江湖不散~&lt;/p&gt;
@@ -75,7 +122,7 @@
         
         <guid>https://boiltask.com/record/201909211/</guid>
         <description>&lt;p&gt;前几天看到有个回答，关于程序员提升过程的说法。&lt;/p&gt;
-&lt;hr class=&#34;wp-block-separator is-style-default&#34; /&gt;
+&lt;blockquote&gt;
 &lt;p&gt;学习编程，开发软件，过程大抵如下：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;看书，看视频，看博客，听课等等&lt;/li&gt;
@@ -91,12 +138,12 @@
 &lt;li&gt;负责一个小项目，设计，拆分，分派任务&lt;/li&gt;
 &lt;li&gt;做较大的软件系统的架构设计&lt;/li&gt;
 &lt;/ol&gt;
-&lt;blockquote class=&#34;wp-block-quote&#34;&gt;
-  &lt;p&gt;
-    作者：安晓辉&lt;br /&gt;链接：https://www.zhihu.com/question/297309123/answer/537836889&lt;br /&gt;来源：知乎&lt;br /&gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-  &lt;/p&gt;
+&lt;p&gt;作者：安晓辉&lt;/p&gt;
+&lt;p&gt;链接：https://www.zhihu.com/question/297309123/answer/537836889&lt;/p&gt;
+&lt;p&gt;来源：知乎&lt;/p&gt;
+&lt;p&gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;hr class=&#34;wp-block-separator&#34; /&gt;
+&lt;hr&gt;
 &lt;p&gt;想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。&lt;/p&gt;
 &lt;p&gt;想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。&lt;/p&gt;
 &lt;p&gt;如今，也算是梦想成真了一部分。&lt;/p&gt;
