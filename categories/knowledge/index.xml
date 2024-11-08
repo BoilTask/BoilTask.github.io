@@ -50,9 +50,9 @@
         <pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate>
         
         <guid>https://boiltask.com/knowledge/cpp-protobuf/</guid>
-        <description>&lt;p&gt;参考下文配置&lt;code class=&#34;prettyprint&#34; &gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;参考下文配置&lt;code&gt;Protobuf&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation&amp;mdash;windows&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;所需环境&#34;&gt;&lt;a href=&#34;#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;所需环境
 &lt;/h2&gt;&lt;p&gt;推荐提前安装以下环境：&lt;/p&gt;
 &lt;ul&gt;
@@ -62,33 +62,33 @@
 &lt;li&gt;Visual Studio 2019&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;生成工具&#34;&gt;&lt;a href=&#34;#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;生成工具
-&lt;/h2&gt;&lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;&lt;/a&gt;下载&lt;code class=&#34;prettyprint&#34; &gt;protobuf&lt;/code&gt;生成工具。&lt;/p&gt;
-&lt;p&gt;文件应形如&lt;code class=&#34;prettyprint&#34; &gt;protoc-$VERSION-win32.zip&lt;/code&gt;，解压其中的&lt;code&gt;bin/protoc.exe&lt;/code&gt;，放于&lt;code&gt;Dep/protobuf/bin&lt;/code&gt;下。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;下载&lt;code&gt;protobuf&lt;/code&gt;生成工具。&lt;/p&gt;
+&lt;p&gt;文件应形如&lt;code&gt;protoc-$VERSION-win32.zip&lt;/code&gt;，解压其中的&lt;code&gt;bin/protoc.exe&lt;/code&gt;，放于&lt;code&gt;Dep/protobuf/bin&lt;/code&gt;下。&lt;/p&gt;
 &lt;h2 id=&#34;编译依赖&#34;&gt;&lt;a href=&#34;#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;编译依赖
 &lt;/h2&gt;&lt;p&gt;参考下文编译所需依赖：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34; target=&#34;_blank&#34; rel=&#34;noreferrer noopener&#34;&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;&lt;/a&gt;下载&lt;code class=&#34;prettyprint&#34; &gt;protobuf&lt;/code&gt;源文件。&lt;/p&gt;
-&lt;p&gt;文件应形如 &lt;code class=&#34;prettyprint&#34; &gt;protobuf-cpp-[VERSION].tar.gz&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;解压全部文件到文件夹中，此处以&lt;code class=&#34;prettyprint&#34; &gt;D:\Protobuf&lt;/code&gt;为例。&lt;/p&gt;
-&lt;p&gt;打开&lt;code class=&#34;prettyprint&#34; &gt;cmake-gui&lt;/code&gt;，选择&lt;code&gt;source code&lt;/code&gt;文件夹为&lt;code&gt;D:\Protobuf\cmake&lt;/code&gt;，&lt;code&gt;build the binaries&lt;/code&gt;文件夹为目标文件夹，此处以&lt;code&gt;D:\Protobuf-build&lt;/code&gt;为例。&lt;/p&gt;
-&lt;p&gt;点击&lt;code class=&#34;prettyprint&#34; &gt;Configure&lt;/code&gt;，选择&lt;code&gt;Visual Studio 2019&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;a class=&#34;link&#34; href=&#34;https://github.com/protocolbuffers/protobuf/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a&gt;下载&lt;code&gt;protobuf&lt;/code&gt;源文件。&lt;/p&gt;
+&lt;p&gt;文件应形如 &lt;code&gt;protobuf-cpp-[VERSION].tar.gz&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;解压全部文件到文件夹中，此处以&lt;code&gt;D:\Protobuf&lt;/code&gt;为例。&lt;/p&gt;
+&lt;p&gt;打开&lt;code&gt;cmake-gui&lt;/code&gt;，选择&lt;code&gt;source code&lt;/code&gt;文件夹为&lt;code&gt;D:\Protobuf\cmake&lt;/code&gt;，&lt;code&gt;build the binaries&lt;/code&gt;文件夹为目标文件夹，此处以&lt;code&gt;D:\Protobuf-build&lt;/code&gt;为例。&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Configure&lt;/code&gt;，选择&lt;code&gt;Visual Studio 2019&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;取消配置中的所有勾选。&lt;/p&gt;
-&lt;p&gt;留意&lt;code class=&#34;prettyprint&#34; &gt;CMAKE_INSTALL_PREFIX&lt;/code&gt;值，此值为之后运行安装后目标文件存放位置。此处以&lt;code&gt;D:/Protobuf-install&lt;/code&gt;为例。&lt;/p&gt;
-&lt;p&gt;点击&lt;code class=&#34;prettyprint&#34; &gt;Generate&lt;/code&gt;生成解决方案，之后&lt;code&gt;Open Project&lt;/code&gt;打开解决方案。&lt;/p&gt;
-&lt;p&gt;选择&lt;code class=&#34;prettyprint&#34; &gt;MinSizeRel&lt;/code&gt;与&lt;code&gt;x64&lt;/code&gt;，之后生成解决方案。&lt;/p&gt;
-&lt;p&gt;右键&lt;code class=&#34;prettyprint&#34; &gt;INSTALL&lt;/code&gt;，选择生成，目标文件会被生成在前面所配置文件夹中。&lt;/p&gt;
-&lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/include&lt;/code&gt;到项目&lt;code&gt;/protobuf/include&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;复制&lt;code class=&#34;prettyprint&#34; &gt;D:/Protobuf-install/lib&lt;/code&gt;到项目&lt;code&gt;/protobuf/lib&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;留意&lt;code&gt;CMAKE_INSTALL_PREFIX&lt;/code&gt;值，此值为之后运行安装后目标文件存放位置。此处以&lt;code&gt;D:/Protobuf-install&lt;/code&gt;为例。&lt;/p&gt;
+&lt;p&gt;点击&lt;code&gt;Generate&lt;/code&gt;生成解决方案，之后&lt;code&gt;Open Project&lt;/code&gt;打开解决方案。&lt;/p&gt;
+&lt;p&gt;选择&lt;code&gt;MinSizeRel&lt;/code&gt;与&lt;code&gt;x64&lt;/code&gt;，之后生成解决方案。&lt;/p&gt;
+&lt;p&gt;右键&lt;code&gt;INSTALL&lt;/code&gt;，选择生成，目标文件会被生成在前面所配置文件夹中。&lt;/p&gt;
+&lt;p&gt;复制&lt;code&gt;D:/Protobuf-install/include&lt;/code&gt;到项目&lt;code&gt;/protobuf/include&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;复制&lt;code&gt;D:/Protobuf-install/lib&lt;/code&gt;到项目&lt;code&gt;/protobuf/lib&lt;/code&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;配置项目&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置项目
-&lt;/h2&gt;&lt;p&gt;在&lt;code class=&#34;prettyprint&#34; &gt;Visual Studio&lt;/code&gt;的项目中，参考如下方法配置&lt;code&gt;Protobuf&lt;/code&gt;。&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;在&lt;code&gt;Visual Studio&lt;/code&gt;的项目中，参考如下方法配置&lt;code&gt;Protobuf&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;配置头文件引用&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置头文件引用
-&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code&gt;C/C++&lt;/code&gt;，在&lt;code&gt;附加包含目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;头文件目录，如：&lt;code&gt;\protobuf\include&lt;/code&gt;。&lt;/p&gt;
 &lt;h3 id=&#34;配置静态链接&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置静态链接
-&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;展开&lt;code class=&#34;prettyprint&#34; &gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;右键项目属性，点击&lt;code&gt;链接器&lt;/code&gt;，在&lt;code&gt;附加库目录&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件目录，如：&lt;code&gt;\protobuf\lib&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;展开&lt;code&gt;链接器&lt;/code&gt;一栏，选择&lt;code&gt;输入&lt;/code&gt;，在&lt;code&gt;附加依赖项&lt;/code&gt;之中，填入&lt;code&gt;protobuf&lt;/code&gt;依赖文件名，如&lt;code&gt;libprotobuf.lib&lt;/code&gt;与&lt;code&gt;libprotobuf-lite.lib&lt;/code&gt;。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -97,69 +97,52 @@
         <pubDate>Mon, 23 Mar 2020 05:30:15 +0000</pubDate>
         
         <guid>https://boiltask.com/knowledge/cpp-static/</guid>
-        <description>&lt;div class=&#34;wp-block-jetpack-markdown&#34;&gt;
-  &lt;h3&gt;
-    修饰普通变量
-  &lt;/h3&gt;
-  &lt;p&gt;
-    修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。
-  &lt;/p&gt;
-  &lt;p&gt;
-    普通变量，当程序执行到它的定义处时，为其在栈上分配空间，在函数执行结束时被释放掉。使用&lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;修饰变量，可以使得函数中的值保存至下一次调用。
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。
-  &lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;#include &lt;iostream&gt;
-using namespace std;
-void staticLocalVar() {
-    static int a = 0;  // 运行期时初始化一次, 下次再调用时, 不进行初始化工作
-    cout &lt;&lt; &#34;a=&#34; &lt;&lt; a &lt;&lt; endl;
-    ++a;
-}
-int main() {
-    staticLocalVar();  // 第一次调用, 输出a=0
-    staticLocalVar();  // 第二次调用, 记忆了第一次退出时的值, 输出a=1
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;
-  修饰普通函数
-&lt;/h3&gt;
-&lt;p&gt;
-  表明函数的作用范围，仅在定义该函数的文件内才能使用。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为&lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;。
-&lt;/p&gt;
-&lt;h3&gt;
-  修饰成员变量
-&lt;/h3&gt;
-&lt;p&gt;
-  修饰成员变量使所有的对象只保存一个该变量，而且不需要生成对象就可以访问该成员。
-&lt;/p&gt;
-&lt;p&gt;
-  C++中需要一个数据对象为整个类服务，可将其定义为静态数据。
-&lt;/p&gt;
-&lt;p&gt;
-  比如一个类的所有对象都要调用的值，设为&lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;后只需要修改这个值，就能使得所有对象都可以使用新值。
-&lt;/p&gt;
-&lt;h3&gt;
-  修饰成员函数
-&lt;/h3&gt;
-&lt;p&gt;
-  修饰成员函数使得不需要生成对象就可以访问该函数，但是在&lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;函数内不能访问非静态成员。
-&lt;/p&gt;
-&lt;p&gt;
-  由于&lt;code class=&#34;prettyprint&#34; &gt;static&lt;/code&gt;修饰的类成员属于类，不属于对象，因此&lt;code&gt;static&lt;/code&gt;类成员函数没有&lt;code&gt;this&lt;/code&gt;指针。
-&lt;/p&gt;
-&lt;h3&gt;
-  static与const
-&lt;/h3&gt;
-&lt;p&gt;
-  &lt;code class=&#34;prettyprint&#34; &gt;static const&lt;/code&gt;等价于&lt;code&gt;const static&lt;/code&gt;，修饰成员变量把二者结合起来理解。
-&lt;/p&gt;
-&lt;p&gt;
-  不可以同时用&lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;和&lt;code&gt;static&lt;/code&gt;修饰成员函数，二者的含义矛盾。
-&lt;/p&gt;
-&lt;/div&gt;</description>
+        <description>&lt;h2 id=&#34;修饰普通变量&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%99%ae%e9%80%9a%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰普通变量
+&lt;/h2&gt;&lt;p&gt;修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。&lt;/p&gt;
+&lt;p&gt;普通变量，当程序执行到它的定义处时，为其在栈上分配空间，在函数执行结束时被释放掉。使用&lt;code&gt;static&lt;/code&gt;修饰变量，可以使得函数中的值保存至下一次调用。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;static&lt;/code&gt;修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c++&#34; data-lang=&#34;c++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;staticLocalVar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// 运行期时初始化一次, 下次再调用时, 不进行初始化工作
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;a=&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;staticLocalVar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// 第一次调用, 输出a=0
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;staticLocalVar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;// 第二次调用, 记忆了第一次退出时的值, 输出a=1
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;修饰普通函数&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%99%ae%e9%80%9a%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰普通函数
+&lt;/h2&gt;&lt;p&gt;表明函数的作用范围，仅在定义该函数的文件内才能使用。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为&lt;code&gt;static&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;修饰成员变量&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%88%90%e5%91%98%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰成员变量
+&lt;/h2&gt;&lt;p&gt;修饰成员变量使所有的对象只保存一个该变量，而且不需要生成对象就可以访问该成员。&lt;/p&gt;
+&lt;p&gt;C++中需要一个数据对象为整个类服务，可将其定义为静态数据。&lt;/p&gt;
+&lt;p&gt;比如一个类的所有对象都要调用的值，设为&lt;code&gt;static&lt;/code&gt;后只需要修改这个值，就能使得所有对象都可以使用新值。&lt;/p&gt;
+&lt;h2 id=&#34;修饰成员函数&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰成员函数
+&lt;/h2&gt;&lt;p&gt;修饰成员函数使得不需要生成对象就可以访问该函数，但是在&lt;code&gt;static&lt;/code&gt;函数内不能访问非静态成员。&lt;/p&gt;
+&lt;h2 id=&#34;static与const&#34;&gt;&lt;a href=&#34;#static%e4%b8%8econst&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;static与const
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;static const&lt;/code&gt;等价于&lt;code&gt;const static&lt;/code&gt;，修饰成员变量把二者结合起来理解。&lt;/p&gt;
+&lt;p&gt;不可以同时用&lt;code&gt;const&lt;/code&gt;和&lt;code&gt;static&lt;/code&gt;修饰成员函数，二者的含义矛盾。&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>C&#43;&#43;中const关键字用法总结</title>
@@ -167,221 +150,338 @@ int main() {
         <pubDate>Mon, 23 Mar 2020 05:00:00 +0000</pubDate>
         
         <guid>https://boiltask.com/knowledge/cpp-const/</guid>
-        <description>&lt;div class=&#34;wp-block-jetpack-markdown&#34;&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;
-      当用&lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;进行修饰时，根据&lt;code&gt;const&lt;/code&gt;位置的不同有三种不同效果。 判断的标准是：&lt;code&gt;const&lt;/code&gt;修饰谁，谁（在&lt;code&gt;const&lt;/code&gt;后面）的内容就是不可变的。
-    &lt;/p&gt;
-  &lt;/blockquote&gt;
-  &lt;h3&gt;
-    修饰变量
-  &lt;/h3&gt;
-  &lt;p&gt;
-    &lt;code class=&#34;prettyprint&#34; &gt;const int a;&lt;/code&gt;，表示变量不可被改变。
-  &lt;/p&gt;
-  &lt;h3&gt;
-    修饰指针
-  &lt;/h3&gt;
-  &lt;p&gt;
-    分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。
-  &lt;/p&gt;
-  &lt;h4&gt;
-    const int *p = &amp;a;
-  &lt;/h4&gt;
-  &lt;p&gt;
-    &lt;code class=&#34;prettyprint&#34; &gt;*p&lt;/code&gt;不可变，&lt;code&gt;*p&lt;/code&gt;是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容，所以&lt;code&gt;*p&lt;/code&gt;不可变也就是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容不可变。&lt;code&gt;p&lt;/code&gt;是可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元（变量）是可变的，但是&lt;code&gt;p&lt;/code&gt;指向谁，谁的值就不可变。
-  &lt;/p&gt;
-  &lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	const int *p = &amp;a; //不可以用*p改变a的值
-  	printf(&#34;a = %d \n&#34;, a);
-  	//*p = 20; //语法错误，*p不可被修改
-  	a = 40; //可以直接赋值进行修改
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  	int b = 11;
-  	p = &amp;b;
-  	printf(&#34;b = %d \n&#34;, *p);
-  
-  
-  	int *q = &amp;a;
-  	*q = 20; //可以用*q改变a的值
-  	printf(&#34;a = %d \n&#34;, a);
-  	a = 30; //给a赋值也可以修改a的值
-  	printf(&#34;a = %d \n&#34;, a);
-  	return 0;
-  }
-  
-  &gt;a = 10 
-  a = 40 
-  b = 11
-  a = 20
-  a = 30
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;
-  int* const p = &amp;a;
-&lt;/h4&gt;
-&lt;p&gt;
-  &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;修饰&lt;code&gt;p&lt;/code&gt;，指针&lt;code&gt;p&lt;/code&gt;是不可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元不可变。&lt;code&gt;p&lt;/code&gt;的指向不可变，&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容可以变。
-&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	int* const p = &amp;a; //p的指向不可变
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  	*p = 20; //可以修改p指向的内存单元的内容
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  	int b = 11;
-  	//p = &amp;b; //语法错误
-  	printf(&#34;b = %d \n&#34;, b);
-  
-  	*p = b; //修改了a的值
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  	return 0;
-  }
-  
-  &gt;a = 10 
-  a = 20
-  b = 11
-  a = 11
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;
-  const int* const p = &amp;a;
-&lt;/h4&gt;
-&lt;p&gt;
-  &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;修饰了&lt;code&gt;*p&lt;/code&gt;和&lt;code&gt;p&lt;/code&gt;，所以&lt;code&gt;p&lt;/code&gt;指向的内存单元和&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容都不可变。
-&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	const int* const p = &amp;a; //const修饰了p和*p
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  	//*p = 20; //不可修改p指向的内存单元的内容
-  	printf(&#34;a = %d \n&#34;, *p);
-  
-  	int b = 11;
-  	//p = &amp;b; //不可修改p的指向
-  	printf(&#34;b = %d \n&#34;, b);
-  
-  	return 0;
-  }
-  
-  &gt;a = 10 
-  a = 10
-  b = 11
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;
-  修饰引用
-&lt;/h3&gt;
-&lt;p&gt;
-  指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；
-&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include&lt;iostream&gt;
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	int &amp;r = a; //定义了a的引用r
-  	printf(&#34;a = %d \n&#34;, r);
-  	r = 20; //也修改了a的值
-  	printf(&#34;a = %d \n&#34;, a);
-  
-  
-  	//int &amp;rm = 3; //语法错误，引用不可直接绑定常量
-  	const int &amp;rm = 3;
-  	printf(&#34;&amp;rm = %d \n&#34;, rm); //常量可以绑定const引用
-  	/* 编译器分配内存空间，把rm放在符号表中
-  	int temp = 3;
-  	const int &amp;rm = temp;
-  	*/
-  
-  	int b = 5;
-  	const int &amp;rb = b;
-  	printf(&#34;b = %d \n&#34;, rb);
-  
-  	//rb = 6; //const修饰引用不可更改
-  
-  	double p = 3.1415;
-  	//int &amp;rp = p; //引用类型需与绑定类型相同
-  	const int &amp;rp = p; //可以绑定到const引用上
-  	printf(&#34;&amp;rp = %d \n&#34;, rp); //常量可以绑定const引用
-  	/*
-  	double p = 3.1415;
-  	int temp = p;
-  	const int &amp;rp = temp;
-  	*/
-  	return 0;
-  }
-  
-  &gt;a = 10 
-  a = 20
-  &amp;rm = 3
-  b = 5
-  &amp;rp = 3
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;
-  &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;引用的目的,禁止通过修改引用值来改变被引用的对象。
-&lt;/p&gt;
-&lt;p&gt;
-  没有const reference，因为引用本身就是 const pointer。
-&lt;/p&gt;
+        <description>&lt;blockquote&gt;
+&lt;p&gt;当用&lt;code&gt;const&lt;/code&gt;进行修饰时，根据&lt;code&gt;const&lt;/code&gt;位置的不同有三种不同效果。&lt;/p&gt;
+&lt;p&gt;判断的标准是：&lt;code&gt;const&lt;/code&gt;修饰谁，谁（在&lt;code&gt;const&lt;/code&gt;后面）的内容就是不可变的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;修饰变量&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e5%8f%98%e9%87%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰变量
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;const int a;&lt;/code&gt;，表示变量不可被改变。&lt;/p&gt;
+&lt;h2 id=&#34;修饰指针&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%8c%87%e9%92%88&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰指针
+&lt;/h2&gt;&lt;p&gt;分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。&lt;/p&gt;
+&lt;h3 id=&#34;const-int-p--a&#34;&gt;&lt;a href=&#34;#const-int-p--a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;const int *p = &amp;amp;a;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;*p&lt;/code&gt;不可变，&lt;code&gt;*p&lt;/code&gt;是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容，所以&lt;code&gt;*p&lt;/code&gt;不可变也就是&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容不可变。&lt;code&gt;p&lt;/code&gt;是可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元（变量）是可变的，但是&lt;code&gt;p&lt;/code&gt;指向谁，谁的值就不可变。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//不可以用*p改变a的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//*p = 20; //语法错误，*p不可被修改
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//可以直接赋值进行修改
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;b = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;q&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//可以用*q改变a的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//给a赋值也可以修改a的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;int-const-p--a&#34;&gt;&lt;a href=&#34;#int-const-p--a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;int* const p = &amp;amp;a;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;修饰&lt;code&gt;p&lt;/code&gt;，指针&lt;code&gt;p&lt;/code&gt;是不可变的，即&lt;code&gt;p&lt;/code&gt;指向的内存单元不可变。&lt;code&gt;p&lt;/code&gt;的指向不可变，&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容可以变。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//p的指向不可变
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//可以修改p指向的内存单元的内容
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//p = &amp;amp;b; //语法错误
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;b = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//修改了a的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;const-int-const-p--a&#34;&gt;&lt;a href=&#34;#const-int-const-p--a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;const int* const p = &amp;amp;a;
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;修饰了&lt;code&gt;*p&lt;/code&gt;和&lt;code&gt;p&lt;/code&gt;，所以&lt;code&gt;p&lt;/code&gt;指向的内存单元和&lt;code&gt;p&lt;/code&gt;指向的内存单元的内容都不可变。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//const修饰了p和*p
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//*p = 20; //不可修改p指向的内存单元的内容
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//p = &amp;amp;b; //不可修改p的指向
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;b = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;11&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;修饰引用&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e5%bc%95%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰引用
+&lt;/h2&gt;&lt;p&gt;指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&amp;lt;iostream&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(){&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//定义了a的引用r
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;r&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//也修改了a的值
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;a = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//int &amp;amp;rm = 3; //语法错误，引用不可直接绑定常量
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;amp;rm = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//常量可以绑定const引用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;cm&#34;&gt;/* 编译器分配内存空间，把rm放在符号表中
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    int temp = 3;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    const int &amp;amp;rm = temp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rb&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;b = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rb&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//rb = 6; //const修饰引用不可更改
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;3.1415&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;//int &amp;amp;rp = p; //引用类型需与绑定类型相同
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//可以绑定到const引用上
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;n&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;amp;rp = %d &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rp&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//常量可以绑定const引用
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;cm&#34;&gt;/*
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    double p = 3.1415;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    int temp = p;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    const int &amp;amp;rp = temp;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;    */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;rp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;const&lt;/code&gt;引用的目的,禁止通过修改引用值来改变被引用的对象。&lt;/p&gt;
+&lt;p&gt;没有const reference，因为引用本身就是 const pointer。&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;
-      普通引用相当于&lt;code class=&#34;prettyprint&#34; &gt;int* const e&lt;/code&gt;
-    &lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;
-      &lt;code class=&#34;prettyprint&#34; &gt;const int &amp;e&lt;/code&gt;相当于&lt;code&gt;const int* const e&lt;/code&gt;
-    &lt;/p&gt;
-  &lt;/li&gt;
+&lt;li&gt;普通引用相当于&lt;code&gt;int* const e&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const int &amp;amp;e&lt;/code&gt;相当于&lt;code&gt;const int* const e&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;
-  修饰成员函数
-&lt;/h3&gt;
-&lt;p&gt;
-  说明该成员函数内不能修改成员变量。
-&lt;/p&gt;
+&lt;h2 id=&#34;修饰成员函数&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e9%a5%b0%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修饰成员函数
+&lt;/h2&gt;&lt;p&gt;说明该成员函数内不能修改成员变量。&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;
-    有&lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;修饰的成员函数，对数据成员只能读取，没有&lt;code&gt;const&lt;/code&gt;修饰的成员函数，对数据成员可读可写。
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;code class=&#34;prettyprint&#34; &gt;const&lt;/code&gt;对象可以调用&lt;code&gt;const&lt;/code&gt;成员函数，不能调用非&lt;code&gt;const&lt;/code&gt;修饰的函数。
-  &lt;/li&gt;
+&lt;li&gt;有&lt;code&gt;const&lt;/code&gt;修饰的成员函数，对数据成员只能读取，没有&lt;code&gt;const&lt;/code&gt;修饰的成员函数，对数据成员可读可写。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;const&lt;/code&gt;对象可以调用&lt;code&gt;const&lt;/code&gt;成员函数，不能调用非&lt;code&gt;const&lt;/code&gt;修饰的函数。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;prettyprint&#34;  class=&#34;language-Cpp&#34;&gt;  #include &lt;iostream&gt;
-  using namespace std;
-  class Test {
-     public:
-      Test(int v) : a(v) {}
-      int getA() { return a; }
-      int getAc() const { return a; }
-  
-      int a;
-  };
-  int main() {
-      Test test(2);
-      cout &lt;&lt; test.getA() &lt;&lt; endl;
-      cout &lt;&lt; test.getAc() &lt;&lt; endl;
-      return 0;
-  }
-  
-  &gt;2
-  2
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;
-  相当于，C++对类的成员函数数中的&lt;code class=&#34;prettyprint&#34; &gt;this&lt;/code&gt;指针做了隐藏。本质上，&lt;code&gt;const&lt;/code&gt;修饰的是被隐藏的&lt;code&gt;this&lt;/code&gt;指针所指向的内存空间，修饰的是&lt;code&gt;this&lt;/code&gt;指针（&lt;code&gt;const Class *this&lt;/code&gt;）。
-&lt;/p&gt;
-&lt;/div&gt;</description>
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt; &lt;span class=&#34;cpf&#34;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;using&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;namespace&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;std&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Test&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;getAc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;Test&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getA&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;cout&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;getAc&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;endl&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;相当于，C++对类的成员函数数中的&lt;code&gt;this&lt;/code&gt;指针做了隐藏。本质上，&lt;code&gt;const&lt;/code&gt;修饰的是被隐藏的&lt;code&gt;this&lt;/code&gt;指针所指向的内存空间，修饰的是&lt;code&gt;this&lt;/code&gt;指针（&lt;code&gt;const Class *this&lt;/code&gt;）。&lt;/p&gt;
+</description>
         </item>
         
     </channel>

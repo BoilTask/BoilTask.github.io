@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r>a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。\n判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\n修饰变量 const int a;，表示变量不可被改变。\n修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\nconst int *p = &amp;a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &amp;a; //不可以用*p改变a的值 printf(&#34;a = %d \\n&#34;, a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(&#34;a = %d \\n&#34;, a); int b = 11; p = &amp;b; printf(&#34;b = %d \\n&#34;, *p); int *q = &amp;a; *q = 20; //可以用*q改变a的值 printf(&#34;a = %d \\n&#34;, a); a = 30; //给a赋值也可以修改a的值 printf(&#34;a = %d \\n&#34;, a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &amp;a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\n">
 <title>C&#43;&#43;中const关键字用法总结</title>
 
 <link rel='canonical' href='https://boiltask.com/knowledge/cpp-const/'>
 
-<link rel="stylesheet" href="/scss/style.min.362b85ad38596a2dd8832c0c1054a513827e9abeff2764b8ef81a378cd4c0e1a.css"><meta property='og:title' content="C++中const关键字用法总结">
-<meta property='og:description' content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r>a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="C++中const关键字用法总结">
+<meta property='og:description' content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。\n判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\n修饰变量 const int a;，表示变量不可被改变。\n修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\nconst int *p = &amp;a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &amp;a; //不可以用*p改变a的值 printf(&#34;a = %d \\n&#34;, a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(&#34;a = %d \\n&#34;, a); int b = 11; p = &amp;b; printf(&#34;b = %d \\n&#34;, *p); int *q = &amp;a; *q = 20; //可以用*q改变a的值 printf(&#34;a = %d \\n&#34;, a); a = 30; //给a赋值也可以修改a的值 printf(&#34;a = %d \\n&#34;, a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &amp;a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\n">
 <meta property='og:url' content='https://boiltask.com/knowledge/cpp-const/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2020-03-23T05:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-03-23T05:00:00&#43;00:00'/>
 <meta name="twitter:title" content="C++中const关键字用法总结">
-<meta name="twitter:description" content="\r当用const进行修饰时，根据const位置的不同有三种不同效果。 判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\r修饰变量\rconst int a;，表示变量不可被改变。\r修饰指针\r分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\rconst int *p = &a;\r*p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\r#include\rusing namespace std;\rint main(){\rint a = 10;\rconst int *p = &a; //不可以用*p改变a的值\rprintf(\"a = %d \\n\", a);\r//*p = 20; //语法错误，*p不可被修改\ra = 40; //可以直接赋值进行修改\rprintf(\"a = %d \\n\", a);\rint b = 11;\rp = &b;\rprintf(\"b = %d \\n\", *p);\rint *q = &a;\r*q = 20; //可以用*q改变a的值\rprintf(\"a = %d \\n\", a);\ra = 30; //给a赋值也可以修改a的值\rprintf(\"a = %d \\n\", a);\rreturn 0;\r}\r>a = 10 a = 40 b = 11\ra = 20\ra = 30\rint* const p = &a;\rconst修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\r">
+<meta name="twitter:description" content=" 当用const进行修饰时，根据const位置的不同有三种不同效果。\n判断的标准是：const修饰谁，谁（在const后面）的内容就是不可变的。\n修饰变量 const int a;，表示变量不可被改变。\n修饰指针 分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。\nconst int *p = &amp;a; *p不可变，*p是p指向的内存单元的内容，所以*p不可变也就是p指向的内存单元的内容不可变。p是可变的，即p指向的内存单元（变量）是可变的，但是p指向谁，谁的值就不可变。\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 #include&lt;iostream&gt; using namespace std; int main(){ int a = 10; const int *p = &amp;a; //不可以用*p改变a的值 printf(&#34;a = %d \\n&#34;, a); //*p = 20; //语法错误，*p不可被修改 a = 40; //可以直接赋值进行修改 printf(&#34;a = %d \\n&#34;, a); int b = 11; p = &amp;b; printf(&#34;b = %d \\n&#34;, *p); int *q = &amp;a; *q = 20; //可以用*q改变a的值 printf(&#34;a = %d \\n&#34;, a); a = 30; //给a赋值也可以修改a的值 printf(&#34;a = %d \\n&#34;, a); return 0; } &gt;a = 10 a = 40 b = 11 a = 20 a = 30 int* const p = &amp;a; const修饰p，指针p是不可变的，即p指向的内存单元不可变。p的指向不可变，p指向的内存单元的内容可以变。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -204,7 +204,47 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#修饰变量">修饰变量</a></li>
+    <li><a href="#修饰指针">修饰指针</a>
+      <ol>
+        <li><a href="#const-int-p--a">const int *p = &amp;a;</a></li>
+        <li><a href="#int-const-p--a">int* const p = &amp;a;</a></li>
+        <li><a href="#const-int-const-p--a">const int* const p = &amp;a;</a></li>
+      </ol>
+    </li>
+    <li><a href="#修饰引用">修饰引用</a></li>
+    <li><a href="#修饰成员函数">修饰成员函数</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -275,221 +315,338 @@
     <section class="article-content">
     
     
-    <div class="wp-block-jetpack-markdown">
-  <blockquote>
-    <p>
-      当用<code class="prettyprint" >const</code>进行修饰时，根据<code>const</code>位置的不同有三种不同效果。 判断的标准是：<code>const</code>修饰谁，谁（在<code>const</code>后面）的内容就是不可变的。
-    </p>
-  </blockquote>
-  <h3>
-    修饰变量
-  </h3>
-  <p>
-    <code class="prettyprint" >const int a;</code>，表示变量不可被改变。
-  </p>
-  <h3>
-    修饰指针
-  </h3>
-  <p>
-    分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。
-  </p>
-  <h4>
-    const int *p = &a;
-  </h4>
-  <p>
-    <code class="prettyprint" >*p</code>不可变，<code>*p</code>是<code>p</code>指向的内存单元的内容，所以<code>*p</code>不可变也就是<code>p</code>指向的内存单元的内容不可变。<code>p</code>是可变的，即<code>p</code>指向的内存单元（变量）是可变的，但是<code>p</code>指向谁，谁的值就不可变。
-  </p>
-  <pre><code class="prettyprint"  class="language-Cpp">  #include<iostream>
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	const int *p = &a; //不可以用*p改变a的值
-  	printf("a = %d \n", a);
-  	//*p = 20; //语法错误，*p不可被修改
-  	a = 40; //可以直接赋值进行修改
-  	printf("a = %d \n", a);
-  
-  	int b = 11;
-  	p = &b;
-  	printf("b = %d \n", *p);
-  
-  
-  	int *q = &a;
-  	*q = 20; //可以用*q改变a的值
-  	printf("a = %d \n", a);
-  	a = 30; //给a赋值也可以修改a的值
-  	printf("a = %d \n", a);
-  	return 0;
-  }
-  
-  >a = 10 
-  a = 40 
-  b = 11
-  a = 20
-  a = 30
-</code></pre>
-<h4>
-  int* const p = &a;
-</h4>
-<p>
-  <code class="prettyprint" >const</code>修饰<code>p</code>，指针<code>p</code>是不可变的，即<code>p</code>指向的内存单元不可变。<code>p</code>的指向不可变，<code>p</code>指向的内存单元的内容可以变。
-</p>
-<pre><code class="prettyprint"  class="language-Cpp">  #include<iostream>
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	int* const p = &a; //p的指向不可变
-  	printf("a = %d \n", a);
-  
-  	*p = 20; //可以修改p指向的内存单元的内容
-  	printf("a = %d \n", a);
-  
-  	int b = 11;
-  	//p = &b; //语法错误
-  	printf("b = %d \n", b);
-  
-  	*p = b; //修改了a的值
-  	printf("a = %d \n", a);
-  
-  	return 0;
-  }
-  
-  >a = 10 
-  a = 20
-  b = 11
-  a = 11
-</code></pre>
-<h4>
-  const int* const p = &a;
-</h4>
-<p>
-  <code class="prettyprint" >const</code>修饰了<code>*p</code>和<code>p</code>，所以<code>p</code>指向的内存单元和<code>p</code>指向的内存单元的内容都不可变。
-</p>
-<pre><code class="prettyprint"  class="language-Cpp">  #include<iostream>
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	const int* const p = &a; //const修饰了p和*p
-  	printf("a = %d \n", a);
-  
-  	//*p = 20; //不可修改p指向的内存单元的内容
-  	printf("a = %d \n", *p);
-  
-  	int b = 11;
-  	//p = &b; //不可修改p的指向
-  	printf("b = %d \n", b);
-  
-  	return 0;
-  }
-  
-  >a = 10 
-  a = 10
-  b = 11
-</code></pre>
-<h3>
-  修饰引用
-</h3>
-<p>
-  指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；
-</p>
-<pre><code class="prettyprint"  class="language-Cpp">  #include<iostream>
-  using namespace std;
-  int main(){
-  	int a = 10;
-  	int &r = a; //定义了a的引用r
-  	printf("a = %d \n", r);
-  	r = 20; //也修改了a的值
-  	printf("a = %d \n", a);
-  
-  
-  	//int &rm = 3; //语法错误，引用不可直接绑定常量
-  	const int &rm = 3;
-  	printf("&rm = %d \n", rm); //常量可以绑定const引用
-  	/* 编译器分配内存空间，把rm放在符号表中
-  	int temp = 3;
-  	const int &rm = temp;
-  	*/
-  
-  	int b = 5;
-  	const int &rb = b;
-  	printf("b = %d \n", rb);
-  
-  	//rb = 6; //const修饰引用不可更改
-  
-  	double p = 3.1415;
-  	//int &rp = p; //引用类型需与绑定类型相同
-  	const int &rp = p; //可以绑定到const引用上
-  	printf("&rp = %d \n", rp); //常量可以绑定const引用
-  	/*
-  	double p = 3.1415;
-  	int temp = p;
-  	const int &rp = temp;
-  	*/
-  	return 0;
-  }
-  
-  >a = 10 
-  a = 20
-  &rm = 3
-  b = 5
-  &rp = 3
-</code></pre>
-<p>
-  <code class="prettyprint" >const</code>引用的目的,禁止通过修改引用值来改变被引用的对象。
-</p>
-<p>
-  没有const reference，因为引用本身就是 const pointer。
-</p>
-<ul>
-  <li>
-    <p>
-      普通引用相当于<code class="prettyprint" >int* const e</code>
-    </p>
-  </li>
-  <li>
-    <p>
-      <code class="prettyprint" >const int &e</code>相当于<code>const int* const e</code>
-    </p>
-  </li>
-</ul>
-<h3>
-  修饰成员函数
-</h3>
-<p>
-  说明该成员函数内不能修改成员变量。
-</p>
-<ul>
-  <li>
-    有<code class="prettyprint" >const</code>修饰的成员函数，对数据成员只能读取，没有<code>const</code>修饰的成员函数，对数据成员可读可写。
-  </li>
-  <li>
-    <code class="prettyprint" >const</code>对象可以调用<code>const</code>成员函数，不能调用非<code>const</code>修饰的函数。
-  </li>
-</ul>
-<pre><code class="prettyprint"  class="language-Cpp">  #include <iostream>
-  using namespace std;
-  class Test {
-     public:
-      Test(int v) : a(v) {}
-      int getA() { return a; }
-      int getAc() const { return a; }
-  
-      int a;
-  };
-  int main() {
-      Test test(2);
-      cout << test.getA() << endl;
-      cout << test.getAc() << endl;
-      return 0;
-  }
-  
-  >2
-  2
-</code></pre>
-<p>
-  相当于，C++对类的成员函数数中的<code class="prettyprint" >this</code>指针做了隐藏。本质上，<code>const</code>修饰的是被隐藏的<code>this</code>指针所指向的内存空间，修饰的是<code>this</code>指针（<code>const Class *this</code>）。
-</p>
+    <blockquote>
+<p>当用<code>const</code>进行修饰时，根据<code>const</code>位置的不同有三种不同效果。</p>
+<p>判断的标准是：<code>const</code>修饰谁，谁（在<code>const</code>后面）的内容就是不可变的。</p>
+</blockquote>
+<h2 id="修饰变量"><a href="#%e4%bf%ae%e9%a5%b0%e5%8f%98%e9%87%8f" class="header-anchor"></a>修饰变量
+</h2><p><code>const int a;</code>，表示变量不可被改变。</p>
+<h2 id="修饰指针"><a href="#%e4%bf%ae%e9%a5%b0%e6%8c%87%e9%92%88" class="header-anchor"></a>修饰指针
+</h2><p>分为指向常量的指针（pointer to const）和自身是常量的指针（常量指针，const pointer）。</p>
+<h3 id="const-int-p--a"><a href="#const-int-p--a" class="header-anchor"></a>const int *p = &amp;a;
+</h3><p><code>*p</code>不可变，<code>*p</code>是<code>p</code>指向的内存单元的内容，所以<code>*p</code>不可变也就是<code>p</code>指向的内存单元的内容不可变。<code>p</code>是可变的，即<code>p</code>指向的内存单元（变量）是可变的，但是<code>p</code>指向谁，谁的值就不可变。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span> <span class="c1">//不可以用*p改变a的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//*p = 20; //语法错误，*p不可被修改
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">a</span> <span class="o">=</span> <span class="mi">40</span><span class="p">;</span> <span class="c1">//可以直接赋值进行修改
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;b = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">q</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">//可以用*q改变a的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">a</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span> <span class="c1">//给a赋值也可以修改a的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> 
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">40</span> 
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">30</span>
+</span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="int-const-p--a"><a href="#int-const-p--a" class="header-anchor"></a>int* const p = &amp;a;
+</h3><p><code>const</code>修饰<code>p</code>，指针<code>p</code>是不可变的，即<code>p</code>指向的内存单元不可变。<code>p</code>的指向不可变，<code>p</code>指向的内存单元的内容可以变。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span><span class="o">*</span> <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span> <span class="c1">//p的指向不可变
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">//可以修改p指向的内存单元的内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//p = &amp;b; //语法错误
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;b = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span> <span class="c1">//修改了a的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> 
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="const-int-const-p--a"><a href="#const-int-const-p--a" class="header-anchor"></a>const int* const p = &amp;a;
+</h3><p><code>const</code>修饰了<code>*p</code>和<code>p</code>，所以<code>p</code>指向的内存单元和<code>p</code>指向的内存单元的内容都不可变。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">int</span><span class="o">*</span> <span class="k">const</span> <span class="n">p</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span> <span class="c1">//const修饰了p和*p
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//*p = 20; //不可修改p指向的内存单元的内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">p</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//p = &amp;b; //不可修改p的指向
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;b = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> 
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">11</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="修饰引用"><a href="#%e4%bf%ae%e9%a5%b0%e5%bc%95%e7%94%a8" class="header-anchor"></a>修饰引用
+</h2><p>指向常量的引用（reference to const），用于形参类型，即避免了拷贝，又避免了函数对值的修改；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include&lt;iostream&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="o">&amp;</span><span class="n">r</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span> <span class="c1">//定义了a的引用r
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">r</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span> <span class="c1">//也修改了a的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//int &amp;rm = 3; //语法错误，引用不可直接绑定常量
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">rm</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;&amp;rm = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">rm</span><span class="p">);</span> <span class="c1">//常量可以绑定const引用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/* 编译器分配内存空间，把rm放在符号表中
+</span></span></span><span class="line"><span class="cl"><span class="cm">    int temp = 3;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    const int &amp;rm = temp;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">rb</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;b = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">rb</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//rb = 6; //const修饰引用不可更改
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="kt">double</span> <span class="n">p</span> <span class="o">=</span> <span class="mf">3.1415</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//int &amp;rp = p; //引用类型需与绑定类型相同
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">const</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">rp</span> <span class="o">=</span> <span class="n">p</span><span class="p">;</span> <span class="c1">//可以绑定到const引用上
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;&amp;rp = %d </span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">rp</span><span class="p">);</span> <span class="c1">//常量可以绑定const引用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">    double p = 3.1415;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    int temp = p;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    const int &amp;rp = temp;
+</span></span></span><span class="line"><span class="cl"><span class="cm">    */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> 
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+</span></span><span class="line"><span class="cl"><span class="o">&amp;</span><span class="n">rm</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="o">&amp;</span><span class="n">rp</span> <span class="o">=</span> <span class="mi">3</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>const</code>引用的目的,禁止通过修改引用值来改变被引用的对象。</p>
+<p>没有const reference，因为引用本身就是 const pointer。</p>
+<ul>
+<li>普通引用相当于<code>int* const e</code></li>
+<li><code>const int &amp;e</code>相当于<code>const int* const e</code></li>
+</ul>
+<h2 id="修饰成员函数"><a href="#%e4%bf%ae%e9%a5%b0%e6%88%90%e5%91%98%e5%87%bd%e6%95%b0" class="header-anchor"></a>修饰成员函数
+</h2><p>说明该成员函数内不能修改成员变量。</p>
+<ul>
+<li>有<code>const</code>修饰的成员函数，对数据成员只能读取，没有<code>const</code>修饰的成员函数，对数据成员可读可写。</li>
+<li><code>const</code>对象可以调用<code>const</code>成员函数，不能调用非<code>const</code>修饰的函数。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Test</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">public</span><span class="o">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Test</span><span class="p">(</span><span class="kt">int</span> <span class="n">v</span><span class="p">)</span> <span class="o">:</span> <span class="n">a</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">getA</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="nf">getAc</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span> <span class="k">return</span> <span class="n">a</span><span class="p">;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Test</span> <span class="n">test</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">test</span><span class="p">.</span><span class="n">getA</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">test</span><span class="p">.</span><span class="n">getAc</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>相当于，C++对类的成员函数数中的<code>this</code>指针做了隐藏。本质上，<code>const</code>修饰的是被隐藏的<code>this</code>指针所指向的内存空间，修饰的是<code>this</code>指针（<code>const Class *this</code>）。</p>
+
 </section>
 
 
