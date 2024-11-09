@@ -416,30 +416,26 @@
     
         <link 
                 rel="stylesheet" 
-                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm&#43;ZU03BU6SQNC66uf4l5&#43;"crossorigin="anonymous"
             ><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"crossorigin="anonymous"
                 defer
                 >
             </script><script 
-                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/&#43;rCMvRwr4yROQP43s0Xk"crossorigin="anonymous"
                 defer
                 >
             </script><script>
-    function handleRenderMathInElement() {
-        
+    window.addEventListener("DOMContentLoaded", () => {
         renderMathInElement(document.body, {
             delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false},
-                {left: "\\(", right: "\\)", display: false},
-                {left: "\\[", right: "\\]", display: true}
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
             ],
             ignoredClasses: ["gist"]
-        });
-    }
-    handleRenderMathInElement()
-    window.addEventListener("DOMContentLoaded", handleRenderMathInElement)
+        });})
 </script>
     
 </article>
