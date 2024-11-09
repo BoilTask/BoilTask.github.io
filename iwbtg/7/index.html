@@ -353,16 +353,20 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
                 defer
                 >
             </script><script>
-    window.addEventListener("DOMContentLoaded", () => {
+    function handleRenderMathInElement() {
+        
         renderMathInElement(document.body, {
             delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
             ],
             ignoredClasses: ["gist"]
-        });})
+        });
+    }
+    handleRenderMathInElement()
+    window.addEventListener("DOMContentLoaded", handleRenderMathInElement)
 </script>
     
 </article>

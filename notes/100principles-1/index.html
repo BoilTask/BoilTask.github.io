@@ -486,16 +486,20 @@ $$<p>秘密的重要性，是与其表面上看起来无辜的程度及其完整
                 defer
                 >
             </script><script>
-    window.addEventListener("DOMContentLoaded", () => {
+    function handleRenderMathInElement() {
+        
         renderMathInElement(document.body, {
             delimiters: [
-                { left: "$$", right: "$$", display: true },
-                { left: "$", right: "$", display: false },
-                { left: "\\(", right: "\\)", display: false },
-                { left: "\\[", right: "\\]", display: true }
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false},
+                {left: "\\[", right: "\\]", display: true}
             ],
             ignoredClasses: ["gist"]
-        });})
+        });
+    }
+    handleRenderMathInElement()
+    window.addEventListener("DOMContentLoaded", handleRenderMathInElement)
 </script>
     
 </article>
