@@ -6,7 +6,7 @@
         <description>Recent content on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 09 Nov 2024 12:45:51 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Dec 2024 12:50:53 +0800</lastBuildDate><atom:link href="https://boiltask.com/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>📌第一篇正式文章 随便聊聊吧</title>
         <link>https://boiltask.com/csdn/49905797/</link>
         <pubDate>Wed, 18 Nov 2015 05:21:05 +0000</pubDate>
@@ -80,6 +80,268 @@
 &lt;p&gt;网站的问题也还要继续研究！&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.BoilTask.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;煮梦空间——www.BoilTask.com&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>常用加权随机算法说明与实现</title>
+        <link>https://boiltask.com/knowledge/random-weight/</link>
+        <pubDate>Fri, 13 Dec 2024 12:50:53 +0800</pubDate>
+        
+        <guid>https://boiltask.com/knowledge/random-weight/</guid>
+        <description>&lt;p&gt;A-J&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>虚幻引擎中Actor复制流程</title>
+        <link>https://boiltask.com/ue/actor-replication/</link>
+        <pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate>
+        
+        <guid>https://boiltask.com/ue/actor-replication/</guid>
+        <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://dev.epicgames.com/documentation/zh-cn/unreal-engine/detailed-actor-replication-flow-in-unreal-engine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Detailed Actor Replication Flow&lt;/a&gt;暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;简介&#34;&gt;&lt;a href=&#34;#%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Actor复制&lt;/strong&gt;是一个详细的多步骤过程，其中&lt;strong&gt;网络驱动程序&lt;/strong&gt;（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。&lt;/p&gt;
+&lt;p&gt;大多数Actor的复制是在&lt;a class=&#34;link&#34; href=&#34;https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UNetDriver/ServerReplicateActors&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;UNetDriver::ServerReplicateActors&lt;/code&gt;&lt;/a&gt;函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，&lt;a class=&#34;link&#34; href=&#34;https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UActorChannel/ReplicateActor&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt;&lt;/a&gt; 函数负责处理将特定Actor复制到某一通道的详细操作。&lt;/p&gt;
+&lt;h2 id=&#34;重要属性&#34;&gt;&lt;a href=&#34;#%e9%87%8d%e8%a6%81%e5%b1%9e%e6%80%a7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;重要属性
+&lt;/h2&gt;&lt;p&gt;对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;属性&lt;/th&gt;
+          &lt;th&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::NetUpdateFrequency&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;决定Actor复制的频率。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::PreReplication&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;在任何复制操作发生之前调用。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::bOnlyRelevantToOwner&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;如果该Actor只会复制给其拥有者，则为&lt;code&gt;True&lt;/code&gt;。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::IsRelevancyOwnerFor&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;当&lt;code&gt;bOnlyRelevantToOwner&lt;/code&gt;为&lt;code&gt;True&lt;/code&gt;时，决定Actor的相关性。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::IsNetRelevantFor&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;当&lt;code&gt;bOnlyRelevantToOwner&lt;/code&gt;为&lt;code&gt;False&lt;/code&gt;时，决定Actor的相关性。&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;AActor::NetDormancy&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;决定Actor是处于休眠状态还是激活状态。&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;actor复制流程概述&#34;&gt;&lt;a href=&#34;#actor%e5%a4%8d%e5%88%b6%e6%b5%81%e7%a8%8b%e6%a6%82%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Actor复制流程概述
+&lt;/h2&gt;&lt;p&gt;以下步骤构成了Actor复制过程的高级概述：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。&lt;/li&gt;
+&lt;li&gt;将通过这些检查的Actors添加到一个列表中，准备进行复制。&lt;/li&gt;
+&lt;li&gt;遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。&lt;/li&gt;
+&lt;li&gt;按照优先级对每个连接的Actors进行排序。&lt;/li&gt;
+&lt;li&gt;确定该Actor是否对当前连接相关。&lt;/li&gt;
+&lt;li&gt;将该Actor复制到当前连接。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以下部分将提供上述Actor复制流程概述中每一步的详细描述。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;将actor添加到待复制列表&#34;&gt;&lt;a href=&#34;#%e5%b0%86actor%e6%b7%bb%e5%8a%a0%e5%88%b0%e5%be%85%e5%a4%8d%e5%88%b6%e5%88%97%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将Actor添加到待复制列表
+&lt;/h3&gt;&lt;p&gt;此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 &lt;code&gt;AActor::SetReplicates(true)&lt;/code&gt;）。对于每个正在复制的Actor，&lt;code&gt;NetDriver&lt;/code&gt; 执行以下检查：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断当前Actor是否初始处于休眠状态（&lt;code&gt;ENetDormancy::DORM_Initial&lt;/code&gt;）。
+&lt;ul&gt;
+&lt;li&gt;如果是休眠状态，则跳过该Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;检查当前Actor是否需要更新，具体通过检查 &lt;code&gt;AActor::NetUpdateFrequency&lt;/code&gt; 属性。
+&lt;ul&gt;
+&lt;li&gt;如果不需要更新，则跳过该Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果 &lt;code&gt;AActor::bOnlyRelevantToOwner&lt;/code&gt; 为 &lt;code&gt;true&lt;/code&gt;，则检查该Actor的拥有连接的相关性，通过调用 &lt;code&gt;AActor::IsRelevancyOwnerFor&lt;/code&gt; 来判断。
+&lt;ul&gt;
+&lt;li&gt;如果相关，则将其添加到该连接的“拥有者相关列表”中。&lt;/li&gt;
+&lt;li&gt;在这种情况下，该Actor只会发送给单个连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于通过上述检查的每个Actor，调用 &lt;code&gt;AActor::PreReplication&lt;/code&gt;。在 &lt;code&gt;AActor::PreReplication&lt;/code&gt; 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 &lt;code&gt;DOREPLIFETIME_ACTIVE_OVERRIDE&lt;/code&gt; 宏来控制Actor复制到哪些连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果Actor通过了所有检查，将其添加到待复制列表中。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;遍历每个连接&#34;&gt;&lt;a href=&#34;#%e9%81%8d%e5%8e%86%e6%af%8f%e4%b8%aa%e8%bf%9e%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;遍历每个连接
+&lt;/h3&gt;&lt;p&gt;接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断当前Actor是否处于休眠状态，通过调用 &lt;code&gt;AActor::NetDormancy&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;如果该Actor在此连接下处于休眠状态，则跳过该Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果尚未打开通道：
+&lt;ul&gt;
+&lt;li&gt;判断客户端是否已加载当前Actor所在的关卡。&lt;/li&gt;
+&lt;li&gt;如果该关卡尚未加载，则跳过该Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判断当前Actor是否与该连接相关，通过调用 &lt;code&gt;AActor::IsNetRelevantFor&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;如果Actor与连接不相关，则跳过该Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将所有在连接的“拥有者相关列表”中的Actors添加到此列表中。此时，列表中包含了所有与该连接相关且不处于休眠状态的Actors。然后按照优先级（&lt;code&gt;AActor::GetNetPriority&lt;/code&gt;）对这些Actors进行排序，优先级从高到低排序。排序至关重要，尤其是当考虑复制大量Actor时，需要确保优先复制高优先级的Actor。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;遍历排序后的actor列表&#34;&gt;&lt;a href=&#34;#%e9%81%8d%e5%8e%86%e6%8e%92%e5%ba%8f%e5%90%8e%e7%9a%84actor%e5%88%97%e8%a1%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;遍历排序后的Actor列表
+&lt;/h3&gt;&lt;p&gt;对于该连接的每个Actor，在排序后的待复制列表中执行以下操作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果连接尚未加载该Actor所在的关卡，则关闭通道（如果存在）并继续。&lt;/li&gt;
+&lt;li&gt;每秒检查一次Actor是否与连接相关，调用 &lt;code&gt;AActor::IsNetRelevantFor&lt;/code&gt;。
+&lt;ul&gt;
+&lt;li&gt;如果在5秒内不相关，则关闭通道。&lt;/li&gt;
+&lt;li&gt;如果相关且没有通道打开，则打开通道。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果此连接在任何时刻变得饱和：
+&lt;ul&gt;
+&lt;li&gt;对于剩余的Actors：
+&lt;ul&gt;
+&lt;li&gt;如果相关时间少于1秒，则强制在下一tick更新。&lt;/li&gt;
+&lt;li&gt;如果相关时间超过1秒，调用 &lt;code&gt;AActor::IsNetRelevantFor&lt;/code&gt; 判断是否在下一tick更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;对于通过所有检查的Actor，通过调用 &lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt; 将Actor复制到连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;控制每次调用时复制的客户端数&#34;&gt;&lt;a href=&#34;#%e6%8e%a7%e5%88%b6%e6%af%8f%e6%ac%a1%e8%b0%83%e7%94%a8%e6%97%b6%e5%a4%8d%e5%88%b6%e7%9a%84%e5%ae%a2%e6%88%b7%e7%ab%af%e6%95%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;控制每次调用时复制的客户端数
+&lt;/h3&gt;&lt;p&gt;你可以通过以下几种方式控制 &lt;code&gt;UNetDriver::ServerReplicateActors&lt;/code&gt; 每次调用时复制的客户端数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;引擎配置和命令行参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启动项目时使用 &lt;code&gt;-limitclientticks&lt;/code&gt; 命令行参数。&lt;/li&gt;
+&lt;li&gt;修改引擎配置中的 &lt;code&gt;NetClientTicksPerSecond&lt;/code&gt; 值（位于 &lt;code&gt;[/Script/Engine.Engine]&lt;/code&gt; 类别）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;命令行参数：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启动项目时使用命令行参数：&lt;code&gt;-limitclientticks -ini:Engine:[/Script/Engine.Engine]:NetClientTicksPerSecond=&amp;lt;VALUE&amp;gt;&lt;/code&gt;，其中 &lt;code&gt;&amp;lt;VALUE&amp;gt;&lt;/code&gt; 是每秒希望使用的客户端ticks数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;控制台变量：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置 &lt;code&gt;net.MaxConnectionsToTickPerServerFrame&lt;/code&gt; 控制台变量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;更多信息请参考 &lt;code&gt;UNetDriver::ServerReplicateActors_PrepConnections&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;将actor复制到连接&#34;&gt;&lt;a href=&#34;#%e5%b0%86actor%e5%a4%8d%e5%88%b6%e5%88%b0%e8%bf%9e%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;将Actor复制到连接
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt; 是复制Actor及其所有组件到连接的主要方法。其流程如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断这是Actor通道打开后的第一次更新。
+&lt;ul&gt;
+&lt;li&gt;如果是第一次更新，则序列化需要的信息（初始位置、旋转等）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;判断当前连接是否拥有该Actor。
+&lt;ul&gt;
+&lt;li&gt;如果没有拥有该Actor，且该Actor的角色为 &lt;code&gt;ENetRole::ROLE_AutonomousProxy&lt;/code&gt;，则降级为 &lt;code&gt;ENetRole::ROLE_SimulatedProxy&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;复制该Actor已更改的属性。&lt;/li&gt;
+&lt;li&gt;复制每个组件已更改的属性。&lt;/li&gt;
+&lt;li&gt;对于任何已删除的组件，发送特殊的删除命令。&lt;/li&gt;
+&lt;li&gt;一旦Actor列表已处理完，或通道已饱和，开始考虑下一个连接，并重复该过程直到所有连接都已更新。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;更多信息&#34;&gt;&lt;a href=&#34;#%e6%9b%b4%e5%a4%9a%e4%bf%a1%e6%81%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;更多信息
+&lt;/h3&gt;&lt;p&gt;有关Actor复制的更多信息，请参考以下头文件中的内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/Engine/Source/Runtime/Engine/Classes/Engine/NetDriver.h&lt;/code&gt;&lt;br&gt;
+关于 &lt;code&gt;UNetDriver::ServerReplicateActors&lt;/code&gt; 的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h&lt;/code&gt;&lt;br&gt;
+关于 &lt;code&gt;AActor&lt;/code&gt; 及其函数和属性的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/Engine/Source/Runtime/Engine/Classes/Engine/ActorChannel.h&lt;/code&gt;&lt;br&gt;
+关于 &lt;code&gt;UActorChannel&lt;/code&gt; 和 &lt;code&gt;UActorChannel::ReplicateActor&lt;/code&gt; 的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h&lt;/code&gt;&lt;br&gt;
+关于 &lt;code&gt;ENetRole&lt;/code&gt; 和 &lt;code&gt;ENetDormancy&lt;/code&gt; 等类型的信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>虚幻引擎中网络相关机制</title>
+        <link>https://boiltask.com/ue/network-start/</link>
+        <pubDate>Mon, 02 Dec 2024 13:13:25 +0800</pubDate>
+        
+        <guid>https://boiltask.com/ue/network-start/</guid>
+        <description>&lt;h2 id=&#34;简介&#34;&gt;&lt;a href=&#34;#%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;简介
+&lt;/h2&gt;&lt;p&gt;想到哪里写到哪里吧，后续有可能再补充。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>虚幻引擎中编辑器下Python的使用</title>
+        <link>https://boiltask.com/ue/editor-python/</link>
+        <pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate>
+        
+        <guid>https://boiltask.com/ue/editor-python/</guid>
+        <description>&lt;h2 id=&#34;功能简介&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简介
+&lt;/h2&gt;&lt;p&gt;参考文档：&lt;a class=&#34;link&#34; href=&#34;https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;使用Python脚本化运行虚幻编辑器&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>虚幻引擎中DataAsset的使用</title>
+        <link>https://boiltask.com/ue/data-asset/</link>
+        <pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate>
+        
+        <guid>https://boiltask.com/ue/data-asset/</guid>
+        <description>&lt;h2 id=&#34;dataasset简介&#34;&gt;&lt;a href=&#34;#dataasset%e7%ae%80%e4%bb%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;DataAsset简介
+&lt;/h2&gt;&lt;p&gt;一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p&gt;
+&lt;p&gt;参考文档：&lt;a class=&#34;link&#34; href=&#34;https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;数据资产&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Lyra的默认场景中关卡选择器的创建</title>
+        <link>https://boiltask.com/lyra/start-map/</link>
+        <pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate>
+        
+        <guid>https://boiltask.com/lyra/start-map/</guid>
+        <description>&lt;p&gt;打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>虚幻引擎中下载Lyra官方示例项目</title>
+        <link>https://boiltask.com/lyra/download/</link>
+        <pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate>
+        
+        <guid>https://boiltask.com/lyra/download/</guid>
+        <description>&lt;p&gt;最近想要细研究一下&lt;code&gt;UE5&lt;/code&gt;的官方示例项目&lt;code&gt;Lyra&lt;/code&gt;，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p&gt;
+&lt;p&gt;时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。&lt;/p&gt;
+&lt;p&gt;Lyra的项目目前可以在Fab中找到：&lt;a class=&#34;link&#34; href=&#34;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在虚幻引擎启动器&lt;code&gt;Epic Games Launcher&lt;/code&gt;中，可以在库找到&lt;code&gt;Lyra&lt;/code&gt;项目，创建项目即可。&lt;/p&gt;
+&lt;p&gt;经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p&gt;
 </description>
         </item>
         <item>

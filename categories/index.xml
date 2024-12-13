@@ -6,12 +6,28 @@
         <description>Recent content in Categories on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Sat, 09 Nov 2024 12:45:51 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 13 Dec 2024 12:50:53 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>知识汇总</title>
         <link>https://boiltask.com/categories/knowledge/</link>
-        <pubDate>Sat, 09 Nov 2024 12:45:51 +0800</pubDate>
+        <pubDate>Fri, 13 Dec 2024 12:50:53 +0800</pubDate>
         
         <guid>https://boiltask.com/categories/knowledge/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>虚幻引擎</title>
+        <link>https://boiltask.com/categories/ue/</link>
+        <pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate>
+        
+        <guid>https://boiltask.com/categories/ue/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Lyra</title>
+        <link>https://boiltask.com/categories/lyra/</link>
+        <pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate>
+        
+        <guid>https://boiltask.com/categories/lyra/</guid>
         <description></description>
         </item>
         <item>
