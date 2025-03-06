@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
 <title>UnrealEngine虚幻引擎编译选项</title>
 
-<link rel='canonical' href='https://boiltask.com/knowledge/ue-build-configuration/'>
+<link rel='canonical' href='https://boiltask.com/knowledge/build-configuration/'>
 
 <link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="UnrealEngine虚幻引擎编译选项">
-<meta property='og:description' content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
-<meta property='og:url' content='https://boiltask.com/knowledge/ue-build-configuration/'>
+<meta property='og:description' content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
+<meta property='og:url' content='https://boiltask.com/knowledge/build-configuration/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-05T12:42:21&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T12:42:21&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2025-03-05T12:42:21&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T12:42:21&#43;08:00'/>
 <meta name="twitter:title" content="UnrealEngine虚幻引擎编译选项">
-<meta name="twitter:description" content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
+<meta name="twitter:description" content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -226,7 +226,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li>
+    <li><a href="#配置参数">配置参数</a>
       <ol>
         <li><a href="#window指定编译sdk">Window指定编译SDK</a></li>
       </ol>
@@ -251,8 +251,8 @@
     
     <header class="article-category">
         
-            <a href="/categories/knowledge/" >
-                知识汇总
+            <a href="/categories/ue/" >
+                虚幻引擎
             </a>
         
     </header>
@@ -260,7 +260,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/knowledge/ue-build-configuration/">UnrealEngine虚幻引擎编译选项</a>
+            <a href="/knowledge/build-configuration/">UnrealEngine虚幻引擎编译选项</a>
         </h2>
     
         
@@ -312,7 +312,8 @@
     <section class="article-content">
     
     
-    <h3 id="window指定编译sdk"><a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor"></a>Window指定编译SDK
+    <h2 id="配置参数"><a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor"></a>配置参数
+</h2><h3 id="window指定编译sdk"><a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor"></a>Window指定编译SDK
 </h3><p>修改<code>Engine/Saved/UnrealBuildTool/BuildConfiguration.xml</code>中的配置，添加<code>MSVC</code>版本号、<code>SDK</code>的版本号。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -342,21 +343,27 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;Configuration</span> <span class="na">xmlns=</span><span class="s">&#34;https://www.unrealengine.com/BuildConfiguration&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">	<span class="nt">&lt;WindowsPlatform&gt;</span>
-</span></span><span class="line"><span class="cl">		<span class="nt">&lt;WindowsSdkVersion&gt;</span>10.0.19041.0<span class="nt">&lt;/WindowsSdkVersion&gt;</span>
-</span></span><span class="line"><span class="cl">	<span class="nt">&lt;/WindowsPlatform&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;WindowsPlatform&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;WindowsSdkVersion&gt;</span>10.0.19041.0<span class="nt">&lt;/WindowsSdkVersion&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/WindowsPlatform&gt;</span>
 </span></span><span class="line"><span class="cl"><span class="nt">&lt;/Configuration&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考文章"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"></a>参考文章
 </h2><p><a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine"  target="_blank" rel="noopener"
-    >Build Configuration</a></p>
+    >Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community</a></p>
 
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/unrealengine/">UnrealEngine</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -368,7 +375,7 @@
 
 
 
-        <span>该内容采用 CC BY-NC-SA 4.0 许可协议。</span>
+        <span><p>该内容采用 CC BY-NC-SA 4.0 许可协议。</p><p>如果对您有帮助或存在意见建议，欢迎在下方评论交流。</p></span>
     </section>
     </footer>
 
@@ -411,12 +418,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/random-weight/">
+    <a href="/ue/actor-replication/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">常用加权随机算法说明与实现</h2>
+            <h2 class="article-title">虚幻引擎中Actor复制流程</h2>
         </div>
     </a>
 </article>
@@ -424,12 +431,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/katex-cloudflare/">
+    <a href="/ue/network-start/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Cloudflare环境下开启Rocket Loader之后Katex失效问题</h2>
+            <h2 class="article-title">虚幻引擎中网络相关机制</h2>
         </div>
     </a>
 </article>
@@ -437,12 +444,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/hugo-giscus/">
+    <a href="/ue/editor-python/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Hogo中Giscus配置</h2>
+            <h2 class="article-title">虚幻引擎中编辑器下Python的使用</h2>
         </div>
     </a>
 </article>
@@ -450,25 +457,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/cpp-protobuf/">
+    <a href="/ue/data-asset/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Windows下C&#43;&#43;版本Protobuf使用方法</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/knowledge/cpp-static/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">C&#43;&#43;中static关键字用法总结</h2>
+            <h2 class="article-title">虚幻引擎中DataAsset的使用</h2>
         </div>
     </a>
 </article>
