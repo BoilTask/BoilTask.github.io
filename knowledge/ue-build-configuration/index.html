@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
-<title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
+<title>UnrealEngine虚幻引擎编译选项</title>
 
-<link rel='canonical' href='https://boiltask.com/knowledge/katex-cloudflare/'>
+<link rel='canonical' href='https://boiltask.com/knowledge/ue-build-configuration/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Cloudflare环境下开启Rocket Loader之后Katex失效问题">
-<meta property='og:description' content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
-<meta property='og:url' content='https://boiltask.com/knowledge/katex-cloudflare/'>
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="UnrealEngine虚幻引擎编译选项">
+<meta property='og:description' content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
+<meta property='og:url' content='https://boiltask.com/knowledge/ue-build-configuration/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-09T12:45:51&#43;08:00'/><meta property='article:modified_time' content='2024-11-09T12:45:51&#43;08:00'/>
-<meta name="twitter:title" content="Cloudflare环境下开启Rocket Loader之后Katex失效问题">
-<meta name="twitter:description" content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-05T12:42:21&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T12:42:21&#43;08:00'/>
+<meta name="twitter:title" content="UnrealEngine虚幻引擎编译选项">
+<meta name="twitter:description" content="Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -204,7 +204,44 @@
     </ol>
 </aside>
 
-    
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li>
+      <ol>
+        <li><a href="#window指定编译sdk">Window指定编译SDK</a></li>
+      </ol>
+    </li>
+    <li><a href="#最终示例">最终示例</a></li>
+    <li><a href="#参考文章">参考文章</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
 
             <main class="main full-width">
     <article class="main-article">
@@ -223,7 +260,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/knowledge/katex-cloudflare/">Cloudflare环境下开启Rocket Loader之后Katex失效问题</a>
+            <a href="/knowledge/ue-build-configuration/">UnrealEngine虚幻引擎编译选项</a>
         </h2>
     
         
@@ -245,7 +282,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024-11-09 12:45:51</time>
+                <time class="article-time--published">2025-03-05 12:42:21</time>
             </div>
         
 
@@ -275,45 +312,45 @@
     <section class="article-content">
     
     
-    <p>在博客部署到线上之后，发现<code>Katex</code>公式无法正常显示，而相同的<code>Html</code>文件在本地环境下是可以正常显示的。</p>
-<p>其中解析的核心代码如下：</p>
+    <h3 id="window指定编译sdk"><a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor"></a>Window指定编译SDK
+</h3><p>修改<code>Engine/Saved/UnrealBuildTool/BuildConfiguration.xml</code>中的配置，添加<code>MSVC</code>版本号、<code>SDK</code>的版本号。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nb">window</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s2">&#34;DOMContentLoaded&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">renderMathInElement</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">,</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">delimiters</span><span class="o">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;$$&#34;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;$$&#34;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;$&#34;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;\\(&#34;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;\\)&#34;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">false</span> <span class="p">},</span>
-</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">left</span><span class="o">:</span> <span class="s2">&#34;\\[&#34;</span><span class="p">,</span> <span class="nx">right</span><span class="o">:</span> <span class="s2">&#34;\\]&#34;</span><span class="p">,</span> <span class="nx">display</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">        <span class="p">],</span>
-</span></span><span class="line"><span class="cl">        <span class="nx">ignoredClasses</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;gist&#34;</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;WindowsPlatform&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;CompilerVersion</span> <span class="nt">&gt;</span>14.40.33807<span class="nt">&lt;/CompilerVersion&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;WindowsSdkVersion&gt;</span>10.0.20348.0<span class="nt">&lt;/WindowsSdkVersion&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/WindowsPlatform&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>通过添加日志发现是<code>DOMContentLoaded</code>事件没有触发。</p>
-<p>但是一直没想到是什么原因，直到留意到了线上版本里<code>&lt;script&gt;</code>标签变成了形如<code>&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;</code>。</p>
-<p>最终回想起来是<code>Cloudflare</code>开启了<code>Rocket Loader</code>。</p>
-<blockquote>
-<p><code>Rocket Loader</code>是<code>Cloudflare</code>的一个功能，用于异步加载<code>JavaScript</code>，以提高页面加载速度。</p>
-</blockquote>
-<p>但是<code>Rocket Loader</code>可能会导致加载顺序变化从而导致某些<code>JavaScript</code>代码无法正常执行。</p>
-<p>暂时关闭了<code>Rocket Loader</code>，问题解决。</p>
-<p>也可以通过在标签里添加<code>data-cfasync=&quot;false&quot;</code>来禁用<code>Rocket Loader</code>，不过考虑还需要修改主题，暂时不做修改了。</p>
+</div><h2 id="最终示例"><a href="#%e6%9c%80%e7%bb%88%e7%a4%ba%e4%be%8b" class="header-anchor"></a>最终示例
+</h2><p>配置文件形如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;Configuration</span> <span class="na">xmlns=</span><span class="s">&#34;https://www.unrealengine.com/BuildConfiguration&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;WindowsPlatform&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="nt">&lt;WindowsSdkVersion&gt;</span>10.0.19041.0<span class="nt">&lt;/WindowsSdkVersion&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">&lt;/WindowsPlatform&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/Configuration&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考文章"><a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor"></a>参考文章
+</h2><p><a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine"  target="_blank" rel="noopener"
+    >Build Configuration</a></p>
 
 </section>
 
@@ -374,12 +411,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/ue-build-configuration/">
+    <a href="/knowledge/random-weight/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">UnrealEngine虚幻引擎编译选项</h2>
+            <h2 class="article-title">常用加权随机算法说明与实现</h2>
         </div>
     </a>
 </article>
@@ -387,12 +424,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/random-weight/">
+    <a href="/knowledge/katex-cloudflare/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">常用加权随机算法说明与实现</h2>
+            <h2 class="article-title">Cloudflare环境下开启Rocket Loader之后Katex失效问题</h2>
         </div>
     </a>
 </article>
