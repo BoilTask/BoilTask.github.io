@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="简介 在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。\n比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。\n性能指标参考：AddressSanitizerPerformanceNumbers · google/sanitizers Wiki\nLinux下DS使用 基本流程 考虑开启 ASan 对流程和性能的影响，一般需要单独部署一些炮灰环境。\n在原有的打包参数之后添加-EnableAsan标识，用来开启ASan相关的编译参数 启动时通过设置环境变量ASAN_OPTIONS来控制ASan的相关配置 在原先的启动参数之后加上-ansimalloc标识 当遇见异常时，检查stderr的输出 可以选择配置log_path来指定异常时的输出文件 堆栈获取 通过指定ASAN_SYMBOLIZER_PATH可以使得输出的信息里自带堆栈，使用了llvm- symbolizer ，性能比起addr2line可以有较高的提升。\n详见：AddressSanitizerCallStack · google/sanitizers Wiki\n会使得输出日志稍微慢几秒，目测可以接受。\n可以使用格式文本设定stack_trace_format：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 // %% - represents a &#39;%&#39; character; // %n - frame number (copy of frame_no); // %p - PC in hex format; // %m - path to module (binary or shared object); // %o - offset in the module in hex format; // %f - function name; // %q - offset in the function in hex format (*if available*); // %s - path to source file; // %l - line in the source file; // %c - column in the source file; // %F - if function is known to be &lt;foo&gt;, prints &#34;in &lt;foo&gt;&#34;, possibly // followed by the offset in this function, but only if source file // is unknown; // %S - prints file/line/column information; // %L - prints location information: file/line/column, if it is known, or // module+offset if it is known, or (&lt;unknown module&gt;) string. // %M - prints module basename and offset, if it is known, or PC. 不过测试下来似乎未取到函数行号，判断是llvm的问题，addr2line就可以。\n">
-<title>虚幻引擎中ASan相关机制</title>
+<title>虚幻引擎中ASan相关机制 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/ue/ue-asan/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中ASan相关机制">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中ASan相关机制 - BoilTask's Blog">
 <meta property='og:description' content="简介 在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。\n比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。\n性能指标参考：AddressSanitizerPerformanceNumbers · google/sanitizers Wiki\nLinux下DS使用 基本流程 考虑开启 ASan 对流程和性能的影响，一般需要单独部署一些炮灰环境。\n在原有的打包参数之后添加-EnableAsan标识，用来开启ASan相关的编译参数 启动时通过设置环境变量ASAN_OPTIONS来控制ASan的相关配置 在原先的启动参数之后加上-ansimalloc标识 当遇见异常时，检查stderr的输出 可以选择配置log_path来指定异常时的输出文件 堆栈获取 通过指定ASAN_SYMBOLIZER_PATH可以使得输出的信息里自带堆栈，使用了llvm- symbolizer ，性能比起addr2line可以有较高的提升。\n详见：AddressSanitizerCallStack · google/sanitizers Wiki\n会使得输出日志稍微慢几秒，目测可以接受。\n可以使用格式文本设定stack_trace_format：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 // %% - represents a &#39;%&#39; character; // %n - frame number (copy of frame_no); // %p - PC in hex format; // %m - path to module (binary or shared object); // %o - offset in the module in hex format; // %f - function name; // %q - offset in the function in hex format (*if available*); // %s - path to source file; // %l - line in the source file; // %c - column in the source file; // %F - if function is known to be &lt;foo&gt;, prints &#34;in &lt;foo&gt;&#34;, possibly // followed by the offset in this function, but only if source file // is unknown; // %S - prints file/line/column information; // %L - prints location information: file/line/column, if it is known, or // module+offset if it is known, or (&lt;unknown module&gt;) string. // %M - prints module basename and offset, if it is known, or PC. 不过测试下来似乎未取到函数行号，判断是llvm的问题，addr2line就可以。\n">
 <meta property='og:url' content='https://boiltask.com/ue/ue-asan/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2025-04-03T09:03:48&#43;08:00'/><meta property='article:modified_time' content='2025-04-03T09:03:48&#43;08:00'/>
-<meta name="twitter:title" content="虚幻引擎中ASan相关机制">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unrealengine' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2025-04-03T09:03:48&#43;08:00'/><meta property='article:modified_time' content='2025-04-03T09:03:48&#43;08:00'/>
+<meta name="twitter:title" content="虚幻引擎中ASan相关机制 - BoilTask's Blog">
 <meta name="twitter:description" content="简介 在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。\n比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。\n性能指标参考：AddressSanitizerPerformanceNumbers · google/sanitizers Wiki\nLinux下DS使用 基本流程 考虑开启 ASan 对流程和性能的影响，一般需要单独部署一些炮灰环境。\n在原有的打包参数之后添加-EnableAsan标识，用来开启ASan相关的编译参数 启动时通过设置环境变量ASAN_OPTIONS来控制ASan的相关配置 在原先的启动参数之后加上-ansimalloc标识 当遇见异常时，检查stderr的输出 可以选择配置log_path来指定异常时的输出文件 堆栈获取 通过指定ASAN_SYMBOLIZER_PATH可以使得输出的信息里自带堆栈，使用了llvm- symbolizer ，性能比起addr2line可以有较高的提升。\n详见：AddressSanitizerCallStack · google/sanitizers Wiki\n会使得输出日志稍微慢几秒，目测可以接受。\n可以使用格式文本设定stack_trace_format：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 // %% - represents a &#39;%&#39; character; // %n - frame number (copy of frame_no); // %p - PC in hex format; // %m - path to module (binary or shared object); // %o - offset in the module in hex format; // %f - function name; // %q - offset in the function in hex format (*if available*); // %s - path to source file; // %l - line in the source file; // %c - column in the source file; // %F - if function is known to be &lt;foo&gt;, prints &#34;in &lt;foo&gt;&#34;, possibly // followed by the offset in this function, but only if source file // is unknown; // %S - prints file/line/column information; // %L - prints location information: file/line/column, if it is known, or // module+offset if it is known, or (&lt;unknown module&gt;) string. // %M - prints module basename and offset, if it is known, or PC. 不过测试下来似乎未取到函数行号，判断是llvm的问题，addr2line就可以。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -645,9 +666,9 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
-        
             <a href="/tags/unrealengine/">UnrealEngine</a>
+        
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -946,5 +967,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

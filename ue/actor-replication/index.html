@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" Detailed Actor Replication Flow暂时没有官方翻译，尝试理解顺便翻译一下。\n简介 Actor复制是一个详细的多步骤过程，其中网络驱动程序（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。\n大多数Actor的复制是在UNetDriver::ServerReplicateActors函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，UActorChannel::ReplicateActor 函数负责处理将特定Actor复制到某一通道的详细操作。\n重要属性 对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：\n属性 描述 AActor::NetUpdateFrequency 决定Actor复制的频率。 AActor::PreReplication 在任何复制操作发生之前调用。 AActor::bOnlyRelevantToOwner 如果该Actor只会复制给其拥有者，则为True。 AActor::IsRelevancyOwnerFor 当bOnlyRelevantToOwner为True时，决定Actor的相关性。 AActor::IsNetRelevantFor 当bOnlyRelevantToOwner为False时，决定Actor的相关性。 AActor::NetDormancy 决定Actor是处于休眠状态还是激活状态。 Actor复制流程概述 以下步骤构成了Actor复制过程的高级概述：\n确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。 将通过这些检查的Actors添加到一个列表中，准备进行复制。 遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。 按照优先级对每个连接的Actors进行排序。 确定该Actor是否对当前连接相关。 将该Actor复制到当前连接。 以下部分将提供上述Actor复制流程概述中每一步的详细描述。\n将Actor添加到待复制列表 此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 AActor::SetReplicates(true)）。对于每个正在复制的Actor，NetDriver 执行以下检查：\n判断当前Actor是否初始处于休眠状态（ENetDormancy::DORM_Initial）。 如果是休眠状态，则跳过该Actor。 检查当前Actor是否需要更新，具体通过检查 AActor::NetUpdateFrequency 属性。 如果不需要更新，则跳过该Actor。 如果 AActor::bOnlyRelevantToOwner 为 true，则检查该Actor的拥有连接的相关性，通过调用 AActor::IsRelevancyOwnerFor 来判断。 如果相关，则将其添加到该连接的“拥有者相关列表”中。 在这种情况下，该Actor只会发送给单个连接。 对于通过上述检查的每个Actor，调用 AActor::PreReplication。在 AActor::PreReplication 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 DOREPLIFETIME_ACTIVE_OVERRIDE 宏来控制Actor复制到哪些连接。 如果Actor通过了所有检查，将其添加到待复制列表中。\n遍历每个连接 接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：\n">
-<title>虚幻引擎中Actor复制流程</title>
+<title>虚幻引擎中Actor复制流程 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/ue/actor-replication/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中Actor复制流程">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中Actor复制流程 - BoilTask's Blog">
 <meta property='og:description' content=" Detailed Actor Replication Flow暂时没有官方翻译，尝试理解顺便翻译一下。\n简介 Actor复制是一个详细的多步骤过程，其中网络驱动程序（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。\n大多数Actor的复制是在UNetDriver::ServerReplicateActors函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，UActorChannel::ReplicateActor 函数负责处理将特定Actor复制到某一通道的详细操作。\n重要属性 对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：\n属性 描述 AActor::NetUpdateFrequency 决定Actor复制的频率。 AActor::PreReplication 在任何复制操作发生之前调用。 AActor::bOnlyRelevantToOwner 如果该Actor只会复制给其拥有者，则为True。 AActor::IsRelevancyOwnerFor 当bOnlyRelevantToOwner为True时，决定Actor的相关性。 AActor::IsNetRelevantFor 当bOnlyRelevantToOwner为False时，决定Actor的相关性。 AActor::NetDormancy 决定Actor是处于休眠状态还是激活状态。 Actor复制流程概述 以下步骤构成了Actor复制过程的高级概述：\n确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。 将通过这些检查的Actors添加到一个列表中，准备进行复制。 遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。 按照优先级对每个连接的Actors进行排序。 确定该Actor是否对当前连接相关。 将该Actor复制到当前连接。 以下部分将提供上述Actor复制流程概述中每一步的详细描述。\n将Actor添加到待复制列表 此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 AActor::SetReplicates(true)）。对于每个正在复制的Actor，NetDriver 执行以下检查：\n判断当前Actor是否初始处于休眠状态（ENetDormancy::DORM_Initial）。 如果是休眠状态，则跳过该Actor。 检查当前Actor是否需要更新，具体通过检查 AActor::NetUpdateFrequency 属性。 如果不需要更新，则跳过该Actor。 如果 AActor::bOnlyRelevantToOwner 为 true，则检查该Actor的拥有连接的相关性，通过调用 AActor::IsRelevancyOwnerFor 来判断。 如果相关，则将其添加到该连接的“拥有者相关列表”中。 在这种情况下，该Actor只会发送给单个连接。 对于通过上述检查的每个Actor，调用 AActor::PreReplication。在 AActor::PreReplication 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 DOREPLIFETIME_ACTIVE_OVERRIDE 宏来控制Actor复制到哪些连接。 如果Actor通过了所有检查，将其添加到待复制列表中。\n遍历每个连接 接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：\n">
 <meta property='og:url' content='https://boiltask.com/ue/actor-replication/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2024-12-02T22:17:16&#43;08:00'/><meta property='article:modified_time' content='2024-12-02T22:17:16&#43;08:00'/>
-<meta name="twitter:title" content="虚幻引擎中Actor复制流程">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:tag' content='unrealengine' /><meta property='article:published_time' content='2024-12-02T22:17:16&#43;08:00'/><meta property='article:modified_time' content='2024-12-02T22:17:16&#43;08:00'/>
+<meta name="twitter:title" content="虚幻引擎中Actor复制流程 - BoilTask's Blog">
 <meta name="twitter:description" content=" Detailed Actor Replication Flow暂时没有官方翻译，尝试理解顺便翻译一下。\n简介 Actor复制是一个详细的多步骤过程，其中网络驱动程序（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。\n大多数Actor的复制是在UNetDriver::ServerReplicateActors函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，UActorChannel::ReplicateActor 函数负责处理将特定Actor复制到某一通道的详细操作。\n重要属性 对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：\n属性 描述 AActor::NetUpdateFrequency 决定Actor复制的频率。 AActor::PreReplication 在任何复制操作发生之前调用。 AActor::bOnlyRelevantToOwner 如果该Actor只会复制给其拥有者，则为True。 AActor::IsRelevancyOwnerFor 当bOnlyRelevantToOwner为True时，决定Actor的相关性。 AActor::IsNetRelevantFor 当bOnlyRelevantToOwner为False时，决定Actor的相关性。 AActor::NetDormancy 决定Actor是处于休眠状态还是激活状态。 Actor复制流程概述 以下步骤构成了Actor复制过程的高级概述：\n确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。 将通过这些检查的Actors添加到一个列表中，准备进行复制。 遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。 按照优先级对每个连接的Actors进行排序。 确定该Actor是否对当前连接相关。 将该Actor复制到当前连接。 以下部分将提供上述Actor复制流程概述中每一步的详细描述。\n将Actor添加到待复制列表 此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 AActor::SetReplicates(true)）。对于每个正在复制的Actor，NetDriver 执行以下检查：\n判断当前Actor是否初始处于休眠状态（ENetDormancy::DORM_Initial）。 如果是休眠状态，则跳过该Actor。 检查当前Actor是否需要更新，具体通过检查 AActor::NetUpdateFrequency 属性。 如果不需要更新，则跳过该Actor。 如果 AActor::bOnlyRelevantToOwner 为 true，则检查该Actor的拥有连接的相关性，通过调用 AActor::IsRelevancyOwnerFor 来判断。 如果相关，则将其添加到该连接的“拥有者相关列表”中。 在这种情况下，该Actor只会发送给单个连接。 对于通过上述检查的每个Actor，调用 AActor::PreReplication。在 AActor::PreReplication 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 DOREPLIFETIME_ACTIVE_OVERRIDE 宏来控制Actor复制到哪些连接。 如果Actor通过了所有检查，将其添加到待复制列表中。\n遍历每个连接 接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -344,34 +365,34 @@
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">属性</th>
-          <th style="text-align: left">描述</th>
+          <th>属性</th>
+          <th>描述</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"><code>AActor::NetUpdateFrequency</code></td>
-          <td style="text-align: left">决定Actor复制的频率。</td>
+          <td><code>AActor::NetUpdateFrequency</code></td>
+          <td>决定Actor复制的频率。</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>AActor::PreReplication</code></td>
-          <td style="text-align: left">在任何复制操作发生之前调用。</td>
+          <td><code>AActor::PreReplication</code></td>
+          <td>在任何复制操作发生之前调用。</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>AActor::bOnlyRelevantToOwner</code></td>
-          <td style="text-align: left">如果该Actor只会复制给其拥有者，则为<code>True</code>。</td>
+          <td><code>AActor::bOnlyRelevantToOwner</code></td>
+          <td>如果该Actor只会复制给其拥有者，则为<code>True</code>。</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>AActor::IsRelevancyOwnerFor</code></td>
-          <td style="text-align: left">当<code>bOnlyRelevantToOwner</code>为<code>True</code>时，决定Actor的相关性。</td>
+          <td><code>AActor::IsRelevancyOwnerFor</code></td>
+          <td>当<code>bOnlyRelevantToOwner</code>为<code>True</code>时，决定Actor的相关性。</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>AActor::IsNetRelevantFor</code></td>
-          <td style="text-align: left">当<code>bOnlyRelevantToOwner</code>为<code>False</code>时，决定Actor的相关性。</td>
+          <td><code>AActor::IsNetRelevantFor</code></td>
+          <td>当<code>bOnlyRelevantToOwner</code>为<code>False</code>时，决定Actor的相关性。</td>
       </tr>
       <tr>
-          <td style="text-align: left"><code>AActor::NetDormancy</code></td>
-          <td style="text-align: left">决定Actor是处于休眠状态还是激活状态。</td>
+          <td><code>AActor::NetDormancy</code></td>
+          <td>决定Actor是处于休眠状态还是激活状态。</td>
       </tr>
   </tbody>
 </table></div>
@@ -527,7 +548,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
             <a href="/tags/unrealengine/">UnrealEngine</a>
         
@@ -828,5 +849,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

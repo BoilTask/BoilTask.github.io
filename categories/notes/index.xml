@@ -6,7 +6,24 @@
         <description>Recent content in 读书笔记 on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Thu, 14 Nov 2019 11:00:24 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/notes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Aug 2022 11:21:14 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/notes/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Lua设计与实现</title>
+        <link>https://boiltask.com/notes/lua-design-implement-1/</link>
+        <pubDate>Mon, 01 Aug 2022 11:21:14 +0000</pubDate>
+        
+        <guid>https://boiltask.com/notes/lua-design-implement-1/</guid>
+        <description>&lt;h2 id=&#34;string实现&#34;&gt;&lt;a href=&#34;#string%e5%ae%9e%e7%8e%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;String实现
+&lt;/h2&gt;&lt;h3 id=&#34;思路&#34;&gt;&lt;a href=&#34;#%e6%80%9d%e8%b7%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;思路
+&lt;/h3&gt;&lt;p&gt;使用&lt;code&gt;Hash&lt;/code&gt;方式分配字符串，根据&lt;code&gt;Hash&lt;/code&gt;值获取对应桶，与其存在的元素比对，若都不相同，则在桶中新增元素&lt;/p&gt;
+&lt;p&gt;需要判断的时候根据&lt;code&gt;Hash&lt;/code&gt;值判断&lt;/p&gt;
+&lt;p&gt;❓是否需要再判断桶中所有元素&lt;/p&gt;
+&lt;h3 id=&#34;源码&#34;&gt;&lt;a href=&#34;#%e6%ba%90%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;源码
+&lt;/h3&gt;&lt;p&gt;比对桶中元素时，先对比字符串长度，不同的则认为肯定不相同。&lt;/p&gt;
+&lt;p&gt;最新的实现根据&lt;code&gt;LUAI_MAXSHORTLEN = 40&lt;/code&gt;判断长短字符串，对于短字符串计算&lt;code&gt;Hash&lt;/code&gt;并使用桶机制进行对比，对于长字符串通过随机种子来分配&lt;code&gt;Hash&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;❓长字符串的&lt;code&gt;Hash&lt;/code&gt;冲突如何解决&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>游戏设计的100个原理笔记(2) – 第1篇 游戏创新的一般原理（下）</title>
         <link>https://boiltask.com/notes/100principles-2/</link>
         <pubDate>Thu, 14 Nov 2019 11:00:24 +0000</pubDate>
@@ -32,21 +49,21 @@
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;A╲B&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;坦白&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;抵赖&lt;/th&gt;
+          &lt;th&gt;A╲B&lt;/th&gt;
+          &lt;th&gt;坦白&lt;/th&gt;
+          &lt;th&gt;抵赖&lt;/th&gt;
       &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;坦白&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-8，-8&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;0，-10&lt;/td&gt;
+          &lt;td&gt;坦白&lt;/td&gt;
+          &lt;td&gt;-8，-8&lt;/td&gt;
+          &lt;td&gt;0，-10&lt;/td&gt;
       &lt;/tr&gt;
       &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;抵赖&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-10，0&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;-1，-1&lt;/td&gt;
+          &lt;td&gt;抵赖&lt;/td&gt;
+          &lt;td&gt;-10，0&lt;/td&gt;
+          &lt;td&gt;-1，-1&lt;/td&gt;
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;

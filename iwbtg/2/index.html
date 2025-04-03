@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="你听说过黑盒测试吗？\nOnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。\n所以对于一道程序设计题目，我们以上一篇文章中提到的“I wanna be the guy”为例，介绍一下OJ的基础使用方式。\n在开始之前，先进入一段日常题外话。\n有没有见到过这个提示呢：\n也就是提示少了一个&quot;;&quot;，我们发现C语言中，每一个语句之后都有一个&quot;;&quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。\n少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。\n言归正传(1/1)\n对于一道题，它应该有题目描述、输入描述、输出描述、样例输入、样例输出等几部分。\n题目描述：提供了这道题的背景说明，一般会讲述一个故事来吸引做题者兴趣。\n输入描述：提供了输入数据的格式、范围等信息。\n输出描述：提供了输出所要求的格式，内容等信息。\n示例输入、输出：一般会给几组测试用的数据，也就是程序把示例输入数据输进去，输出结果应该和示例输出相同(SpecialJudge也许不同)。\n提示：包含出题人对这一题的提示。\n就这一题而言，因为是一个简单的示范，所以没有输入数据，直接进行输出即可。\n从上一篇文章中学到，输出语句printf()，在这里就可以使用。\n现在假设你在本地编译器中写好了代码。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 那么接下来，点击“提交”，出现提交页面，只需要把代码复制进去，进行提交即可。\n之后便会进入运行状态页面，我们可以看到程序的评判结果。\n具体结果是什么意思-.-自己探索吧。\n系统帮助 &amp; FAQ\n杭州电子科技大学(hdoj)FAQ\n剩下的就是自己动手，先完成这个简单的题目吧。\n【愿成其身】I wanna be the guy\n">
-<title>【愿成其身】[2]有趣的练习方式 – OnlineJudge</title>
+<title>【愿成其身】[2]有趣的练习方式 – OnlineJudge - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/2/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[2]有趣的练习方式 – OnlineJudge">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[2]有趣的练习方式 – OnlineJudge - BoilTask's Blog">
 <meta property='og:description' content="你听说过黑盒测试吗？\nOnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。\n所以对于一道程序设计题目，我们以上一篇文章中提到的“I wanna be the guy”为例，介绍一下OJ的基础使用方式。\n在开始之前，先进入一段日常题外话。\n有没有见到过这个提示呢：\n也就是提示少了一个&quot;;&quot;，我们发现C语言中，每一个语句之后都有一个&quot;;&quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。\n少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。\n言归正传(1/1)\n对于一道题，它应该有题目描述、输入描述、输出描述、样例输入、样例输出等几部分。\n题目描述：提供了这道题的背景说明，一般会讲述一个故事来吸引做题者兴趣。\n输入描述：提供了输入数据的格式、范围等信息。\n输出描述：提供了输出所要求的格式，内容等信息。\n示例输入、输出：一般会给几组测试用的数据，也就是程序把示例输入数据输进去，输出结果应该和示例输出相同(SpecialJudge也许不同)。\n提示：包含出题人对这一题的提示。\n就这一题而言，因为是一个简单的示范，所以没有输入数据，直接进行输出即可。\n从上一篇文章中学到，输出语句printf()，在这里就可以使用。\n现在假设你在本地编译器中写好了代码。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 那么接下来，点击“提交”，出现提交页面，只需要把代码复制进去，进行提交即可。\n之后便会进入运行状态页面，我们可以看到程序的评判结果。\n具体结果是什么意思-.-自己探索吧。\n系统帮助 &amp; FAQ\n杭州电子科技大学(hdoj)FAQ\n剩下的就是自己动手，先完成这个简单的题目吧。\n【愿成其身】I wanna be the guy\n">
 <meta property='og:url' content='https://boiltask.com/iwbtg/2/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2016-08-16T16:00:51&#43;00:00'/><meta property='article:modified_time' content='2016-08-16T16:00:51&#43;00:00'/>
-<meta name="twitter:title" content="【愿成其身】[2]有趣的练习方式 – OnlineJudge">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2016-08-16T16:00:51&#43;00:00'/><meta property='article:modified_time' content='2016-08-16T16:00:51&#43;00:00'/>
+<meta name="twitter:title" content="【愿成其身】[2]有趣的练习方式 – OnlineJudge - BoilTask's Blog">
 <meta name="twitter:description" content="你听说过黑盒测试吗？\nOnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。\n所以对于一道程序设计题目，我们以上一篇文章中提到的“I wanna be the guy”为例，介绍一下OJ的基础使用方式。\n在开始之前，先进入一段日常题外话。\n有没有见到过这个提示呢：\n也就是提示少了一个&quot;;&quot;，我们发现C语言中，每一个语句之后都有一个&quot;;&quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。\n少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。\n言归正传(1/1)\n对于一道题，它应该有题目描述、输入描述、输出描述、样例输入、样例输出等几部分。\n题目描述：提供了这道题的背景说明，一般会讲述一个故事来吸引做题者兴趣。\n输入描述：提供了输入数据的格式、范围等信息。\n输出描述：提供了输出所要求的格式，内容等信息。\n示例输入、输出：一般会给几组测试用的数据，也就是程序把示例输入数据输进去，输出结果应该和示例输出相同(SpecialJudge也许不同)。\n提示：包含出题人对这一题的提示。\n就这一题而言，因为是一个简单的示范，所以没有输入数据，直接进行输出即可。\n从上一篇文章中学到，输出语句printf()，在这里就可以使用。\n现在假设你在本地编译器中写好了代码。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 那么接下来，点击“提交”，出现提交页面，只需要把代码复制进去，进行提交即可。\n之后便会进入运行状态页面，我们可以看到程序的评判结果。\n具体结果是什么意思-.-自己探索吧。\n系统帮助 &amp; FAQ\n杭州电子科技大学(hdoj)FAQ\n剩下的就是自己动手，先完成这个简单的题目吧。\n【愿成其身】I wanna be the guy\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -368,7 +389,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -679,5 +700,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
-<title>UnrealEngine虚幻引擎编译选项</title>
+<title>UnrealEngine虚幻引擎编译选项 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/ue/build-configuration/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="UnrealEngine虚幻引擎编译选项">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="UnrealEngine虚幻引擎编译选项 - BoilTask's Blog">
 <meta property='og:description' content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
 <meta property='og:url' content='https://boiltask.com/ue/build-configuration/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2025-03-05T12:42:21&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T12:42:21&#43;08:00'/>
-<meta name="twitter:title" content="UnrealEngine虚幻引擎编译选项">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unrealengine' /><meta property='article:published_time' content='2025-03-05T12:42:21&#43;08:00'/><meta property='article:modified_time' content='2025-03-05T12:42:21&#43;08:00'/>
+<meta name="twitter:title" content="UnrealEngine虚幻引擎编译选项 - BoilTask's Blog">
 <meta name="twitter:description" content="配置参数 Window指定编译SDK 修改Engine/Saved/UnrealBuildTool/BuildConfiguration.xml中的配置，添加MSVC版本号、SDK的版本号。\n1 2 3 4 &lt;WindowsPlatform&gt; &lt;CompilerVersion &gt;14.40.33807&lt;/CompilerVersion&gt; &lt;WindowsSdkVersion&gt;10.0.20348.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; 最终示例 配置文件形如：\n1 2 3 4 5 6 &lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; ?&gt; &lt;Configuration xmlns=&#34;https://www.unrealengine.com/BuildConfiguration&#34;&gt; &lt;WindowsPlatform&gt; &lt;WindowsSdkVersion&gt;10.0.19041.0&lt;/WindowsSdkVersion&gt; &lt;/WindowsPlatform&gt; &lt;/Configuration&gt; 参考文章 Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -472,12 +493,12 @@
             
                 
 <article class="">
-    <a href="/ue/actor-replication/">
+    <a href="/ue/common-console-command/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">虚幻引擎中Actor复制流程</h2>
+            <h2 class="article-title">UE4常用控制台指令</h2>
         </div>
     </a>
 </article>
@@ -485,12 +506,12 @@
             
                 
 <article class="">
-    <a href="/ue/network-start/">
+    <a href="/ue/blueprint-merge/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">虚幻引擎中网络相关机制</h2>
+            <h2 class="article-title">虚幻引擎蓝图合并工具</h2>
         </div>
     </a>
 </article>
@@ -672,5 +693,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

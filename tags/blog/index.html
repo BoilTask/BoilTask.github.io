@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Game developer and designer, C/C++ | Golang | UE | Web">
-<title>Tag: Blog - BoilTask&#39;s Blog</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="一些搭建博客系统过程中的记录">
+<title>Tag: 博客 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/tags/blog/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Tag: Blog - BoilTask's Blog">
-<meta property='og:description' content="Game developer and designer, C/C++ | Golang | UE | Web">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Tag: 博客 - BoilTask's Blog">
+<meta property='og:description' content="一些搭建博客系统过程中的记录">
 <meta property='og:url' content='https://boiltask.com/tags/blog/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-04-03T09:06:12&#43;08:00 '/>
-<meta name="twitter:title" content="Tag: Blog - BoilTask's Blog">
-<meta name="twitter:description" content="Game developer and designer, C/C++ | Golang | UE | Web"><link rel="alternate" type="application/rss&#43;xml" href="https://boiltask.com/tags/blog/index.xml">
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-04-03T21:40:08&#43;08:00 '/>
+<meta name="twitter:title" content="Tag: 博客 - BoilTask's Blog">
+<meta name="twitter:description" content="一些搭建博客系统过程中的记录"><link rel="alternate" type="application/rss&#43;xml" href="https://boiltask.com/tags/blog/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -260,7 +281,7 @@
                     <a href="/archives/#2025">
                         
                             <span class="year">2025</span>
-                            <span class="count">5</span>
+                            <span class="count">8</span>
                         
                     </a> 
                 </div>
@@ -268,20 +289,20 @@
                     <a href="/archives/#2024">
                         
                             <span class="year">2024</span>
-                            <span class="count">11</span>
+                            <span class="count">13</span>
                         
                     </a> 
                 </div>
             <div class="archives-year">
-                    <a href="/archives/#2020">
+                    <a href="/archives/#2023">
                         
-                            <span class="year">2020</span>
-                            <span class="count">4</span>
+                            <span class="year">2023</span>
+                            <span class="count">8</span>
                         
                     </a> 
                 </div>
             <div class="archives-year">
-                    <a href="/archives/#2019">
+                    <a href="/archives/#2022">
                         
                             <span class="year">更多</span>
                         
@@ -322,19 +343,19 @@
                 CSDN
             </a>
         
-            <a href="/categories/ue/" class="font_size_8">
+            <a href="/categories/ue/" class="font_size_13">
                 虚幻引擎
             </a>
         
-            <a href="/categories/knowledge/" class="font_size_6">
+            <a href="/categories/knowledge/" class="font_size_12">
                 知识汇总
             </a>
         
-            <a href="/categories/record/" class="font_size_5">
+            <a href="/categories/record/" class="font_size_9">
                 人生记录
             </a>
         
-            <a href="/categories/notes/" class="font_size_3">
+            <a href="/categories/notes/" class="font_size_4">
                 读书笔记
             </a>
         
@@ -367,20 +388,24 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/tags/c/c&#43;&#43;/" class="font_size_26">
+            <a href="/tags/cpp/" class="font_size_26">
                 C/C&#43;&#43;
             </a>
         
-            <a href="/tags/unrealengine/" class="font_size_10">
+            <a href="/tags/unrealengine/" class="font_size_15">
                 UnrealEngine
+            </a>
+        
+            <a href="/tags/svn/" class="font_size_7">
+                SVN
+            </a>
+        
+            <a href="/tags/blog/" class="font_size_4">
+                博客
             </a>
         
             <a href="/tags/acm/" class="font_size_2">
                 ACM
-            </a>
-        
-            <a href="/tags/blog/" class="font_size_2">
-                Blog
             </a>
         
             <a href="/tags/protobuf/" class="font_size_1">
@@ -408,8 +433,10 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">2 个页面</h3>
-                <h1 class="section-term">Blog</h1>
+                <h3 class="section-count">4 个页面</h3>
+                <h1 class="section-term">博客</h1>
+                
+                    <h2 class="section-description">一些搭建博客系统过程中的记录</h2>
                 
             </div>
         </div>
@@ -418,11 +445,33 @@
     <section class="article-list--compact">
         
             <article>
+    <a href="/record/try-obsidian/">
+        <div class="article-details">
+            <h2 class="article-title">尝试Obsidian与Hugo结合</h2>
+            <footer class="article-time">
+                <time datetime='2025-04-03T21:40:08&#43;08:00'>2025-04-03 21:40:08</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
     <a href="/record/hugo-pangu/">
         <div class="article-details">
             <h2 class="article-title">给HUGO博客引入pangu.js</h2>
             <footer class="article-time">
                 <time datetime='2025-04-03T09:06:12&#43;08:00'>2025-04-03 09:06:12</time>
+            </footer>
+        </div>
+    </a>
+</article>
+        
+            <article>
+    <a href="/knowledge/katex-cloudflare/">
+        <div class="article-details">
+            <h2 class="article-title">Cloudflare环境下开启Rocket Loader之后Katex失效问题</h2>
+            <footer class="article-time">
+                <time datetime='2024-11-09T12:45:51&#43;08:00'>2024-11-09 12:45:51</time>
             </footer>
         </div>
     </a>
@@ -478,5 +527,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

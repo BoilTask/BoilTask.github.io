@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。\n― 清·俞樾, 《群经平议·周官二》 0000|0000|0000|0000\r上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。\n首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&quot;0&quot;&ldquo;1&rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。\n原理就讲这么多，再往深层次的讲就跑题了。-.- 事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。\n了解了各种数据类型，我们也知道格式化输入输出函数。\n那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。\n后面还是以例题来从使用出发讲解各个常用的类型。\n参考文章：\nC语言基本数据类型简介 - onedime\nC语言基本数据类型详解 - woods2001的专栏\n">
-<title>【愿成其身】[5]数据类型 – 装数据的盒子</title>
+<title>【愿成其身】[5]数据类型 – 装数据的盒子 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/5/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[5]数据类型 – 装数据的盒子">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[5]数据类型 – 装数据的盒子 - BoilTask's Blog">
 <meta property='og:description' content=" 凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。\n― 清·俞樾, 《群经平议·周官二》 0000|0000|0000|0000\r上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。\n首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&quot;0&quot;&ldquo;1&rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。\n原理就讲这么多，再往深层次的讲就跑题了。-.- 事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。\n了解了各种数据类型，我们也知道格式化输入输出函数。\n那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。\n后面还是以例题来从使用出发讲解各个常用的类型。\n参考文章：\nC语言基本数据类型简介 - onedime\nC语言基本数据类型详解 - woods2001的专栏\n">
 <meta property='og:url' content='https://boiltask.com/iwbtg/5/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2016-08-19T16:00:49&#43;00:00'/><meta property='article:modified_time' content='2016-08-19T16:00:49&#43;00:00'/>
-<meta name="twitter:title" content="【愿成其身】[5]数据类型 – 装数据的盒子">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2016-08-19T16:00:49&#43;00:00'/><meta property='article:modified_time' content='2016-08-19T16:00:49&#43;00:00'/>
+<meta name="twitter:title" content="【愿成其身】[5]数据类型 – 装数据的盒子 - BoilTask's Blog">
 <meta name="twitter:description" content=" 凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。\n― 清·俞樾, 《群经平议·周官二》 0000|0000|0000|0000\r上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。\n首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&quot;0&quot;&ldquo;1&rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。\n原理就讲这么多，再往深层次的讲就跑题了。-.- 事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。\n了解了各种数据类型，我们也知道格式化输入输出函数。\n那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。\n后面还是以例题来从使用出发讲解各个常用的类型。\n参考文章：\nC语言基本数据类型简介 - onedime\nC语言基本数据类型详解 - woods2001的专栏\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -315,7 +336,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -626,5 +647,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

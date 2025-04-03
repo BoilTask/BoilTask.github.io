@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Game developer and designer, C/C++ | Golang | UE | Web">
-<title>Posts</title>
+<title>Posts - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/post/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Posts">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Posts - BoilTask's Blog">
 <meta property='og:description' content="Game developer and designer, C/C++ | Golang | UE | Web">
 <meta property='og:url' content='https://boiltask.com/post/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-04-03T09:06:12&#43;08:00 '/>
-<meta name="twitter:title" content="Posts">
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2025-04-03T21:40:08&#43;08:00 '/>
+<meta name="twitter:title" content="Posts - BoilTask's Blog">
 <meta name="twitter:description" content="Game developer and designer, C/C++ | Golang | UE | Web"><link rel="alternate" type="application/rss&#43;xml" href="https://boiltask.com/post/index.xml">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -260,7 +281,7 @@
                     <a href="/archives/#2025">
                         
                             <span class="year">2025</span>
-                            <span class="count">5</span>
+                            <span class="count">8</span>
                         
                     </a> 
                 </div>
@@ -268,20 +289,20 @@
                     <a href="/archives/#2024">
                         
                             <span class="year">2024</span>
-                            <span class="count">11</span>
+                            <span class="count">13</span>
                         
                     </a> 
                 </div>
             <div class="archives-year">
-                    <a href="/archives/#2020">
+                    <a href="/archives/#2023">
                         
-                            <span class="year">2020</span>
-                            <span class="count">4</span>
+                            <span class="year">2023</span>
+                            <span class="count">8</span>
                         
                     </a> 
                 </div>
             <div class="archives-year">
-                    <a href="/archives/#2019">
+                    <a href="/archives/#2022">
                         
                             <span class="year">更多</span>
                         
@@ -322,19 +343,19 @@
                 CSDN
             </a>
         
-            <a href="/categories/ue/" class="font_size_8">
+            <a href="/categories/ue/" class="font_size_13">
                 虚幻引擎
             </a>
         
-            <a href="/categories/knowledge/" class="font_size_6">
+            <a href="/categories/knowledge/" class="font_size_12">
                 知识汇总
             </a>
         
-            <a href="/categories/record/" class="font_size_5">
+            <a href="/categories/record/" class="font_size_9">
                 人生记录
             </a>
         
-            <a href="/categories/notes/" class="font_size_3">
+            <a href="/categories/notes/" class="font_size_4">
                 读书笔记
             </a>
         
@@ -367,20 +388,24 @@
 
     <div class="tagCloud-tags">
         
-            <a href="/tags/c/c&#43;&#43;/" class="font_size_26">
+            <a href="/tags/cpp/" class="font_size_26">
                 C/C&#43;&#43;
             </a>
         
-            <a href="/tags/unrealengine/" class="font_size_10">
+            <a href="/tags/unrealengine/" class="font_size_15">
                 UnrealEngine
+            </a>
+        
+            <a href="/tags/svn/" class="font_size_7">
+                SVN
+            </a>
+        
+            <a href="/tags/blog/" class="font_size_4">
+                博客
             </a>
         
             <a href="/tags/acm/" class="font_size_2">
                 ACM
-            </a>
-        
-            <a href="/tags/blog/" class="font_size_2">
-                Blog
             </a>
         
             <a href="/tags/protobuf/" class="font_size_1">
@@ -408,7 +433,7 @@
 
         <div class="section-card">
             <div class="section-details">
-                <h3 class="section-count">83 个页面</h3>
+                <h3 class="section-count">99 个页面</h3>
                 <h1 class="section-term">Posts</h1>
                 
             </div>
@@ -418,110 +443,110 @@
     <section class="article-list--compact">
         
             <article>
-    <a href="/csdn/50358750/">
+    <a href="/iwbtg/3/">
         <div class="article-details">
-            <h2 class="article-title">初识ACM——这都是啥-.-</h2>
+            <h2 class="article-title">【愿成其身】[3]转义字符 – 格式化输出</h2>
             <footer class="article-time">
-                <time datetime='2015-12-19T08:17:23Z'>2015-12-19 08:17:23</time>
+                <time datetime='2016-08-17T16:00:52Z'>2016-08-17 16:00:52</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/csdn/50358715/">
+    <a href="/iwbtg/2/">
         <div class="article-details">
-            <h2 class="article-title">初识ACM——学习与趣味</h2>
+            <h2 class="article-title">【愿成其身】[2]有趣的练习方式 – OnlineJudge</h2>
             <footer class="article-time">
-                <time datetime='2015-12-19T08:12:46Z'>2015-12-19 08:12:46</time>
+                <time datetime='2016-08-16T16:00:51Z'>2016-08-16 16:00:51</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/csdn/50358687/">
+    <a href="/iwbtg/1/">
         <div class="article-details">
-            <h2 class="article-title">初识ACM——C的love</h2>
+            <h2 class="article-title">【愿成其身】[1]工欲善其事，必先利其器</h2>
             <footer class="article-time">
-                <time datetime='2015-12-19T08:05:06Z'>2015-12-19 08:05:06</time>
+                <time datetime='2016-08-15T16:00:19Z'>2016-08-15 16:00:19</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/csdn/50358657/">
+    <a href="/iwbtg/0/">
         <div class="article-details">
-            <h2 class="article-title">初识ACM——伪病毒与真崩溃</h2>
+            <h2 class="article-title">【愿成其身】I wanna be the guy</h2>
             <footer class="article-time">
-                <time datetime='2015-12-19T07:57:59Z'>2015-12-19 07:57:59</time>
+                <time datetime='2016-08-14T16:00:19Z'>2016-08-14 16:00:19</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/csdn/50358599/">
+    <a href="/iwbtg/introduction/">
         <div class="article-details">
-            <h2 class="article-title">初识ACM——2015国庆培训</h2>
+            <h2 class="article-title">【愿成其身】导读目录</h2>
             <footer class="article-time">
-                <time datetime='2015-12-19T07:49:17Z'>2015-12-19 07:49:17</time>
+                <time datetime='2016-08-13T16:00:25Z'>2016-08-13 16:00:25</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/qzone/1440083241/">
+    <a href="/csdn/50609642/">
         <div class="article-details">
-            <h2 class="article-title">关于未来——致亲爱的兄弟姐妹们</h2>
+            <h2 class="article-title">【吐槽】天赋不够 咖啡来凑</h2>
             <footer class="article-time">
-                <time datetime='2015-08-20T15:07:49Z'>2015-08-20 15:07:49</time>
+                <time datetime='2016-01-29T15:47:13Z'>2016-01-29 15:47:13</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/qzone/1431275688/">
+    <a href="/qzone/1450893451/">
         <div class="article-details">
-            <h2 class="article-title">〖教学向〗论如何从网络入手追求煮任</h2>
+            <h2 class="article-title">18岁的那些事——关于爱情</h2>
             <footer class="article-time">
-                <time datetime='2015-05-10T16:34:57Z'>2015-05-10 16:34:57</time>
+                <time datetime='2015-12-23T17:57:45Z'>2015-12-23 17:57:45</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/qzone/1428591846/">
+    <a href="/qzone/1450603741/">
         <div class="article-details">
-            <h2 class="article-title">今生•缘</h2>
+            <h2 class="article-title">【震惊哭】竟然决定用日志水了</h2>
             <footer class="article-time">
-                <time datetime='2015-04-09T15:04:51Z'>2015-04-09 15:04:51</time>
+                <time datetime='2015-12-20T09:29:19Z'>2015-12-20 09:29:19</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/qzone/1428512997/">
+    <a href="/csdn/50358873/">
         <div class="article-details">
-            <h2 class="article-title">夏日•寒</h2>
+            <h2 class="article-title">写在正式写博客之前——博客的意义</h2>
             <footer class="article-time">
-                <time datetime='2015-04-08T17:09:26Z'>2015-04-08 17:09:26</time>
+                <time datetime='2015-12-19T08:47:04Z'>2015-12-19 08:47:04</time>
             </footer>
         </div>
     </a>
 </article>
         
             <article>
-    <a href="/qzone/1423142922/">
+    <a href="/csdn/50358847/">
         <div class="article-details">
-            <h2 class="article-title">一篇43分的作文</h2>
+            <h2 class="article-title">初识ACM——活泼的精灵</h2>
             <footer class="article-time">
-                <time datetime='2015-02-05T13:28:49Z'>2015-02-05 13:28:49</time>
+                <time datetime='2015-12-19T08:40:54Z'>2015-12-19 08:40:54</time>
             </footer>
         </div>
     </a>
@@ -569,7 +594,14 @@
                 
             
             
-                    <a class='page-link' href='/post/page/9/'>9</a>
+                    
+                        
+                        <span class='page-link dots'>&hellip;</span>
+                    
+                
+            
+            
+                    <a class='page-link' href='/post/page/10/'>10</a>
                 
             
     </nav>
@@ -612,5 +644,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

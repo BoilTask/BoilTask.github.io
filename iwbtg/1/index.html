@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\n看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\n然而，正文却依旧不能继续，有一点非常重要。\n“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\n而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。\n第一行“#include&lt;stdio.h&gt;”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include&lt;&gt;”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\n什么叫函数？-.-||\n数学里的函数见过吧……$f(x)=x+1$ 这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。\n同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。\n言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)\n那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。\n那你想写……那么它的参数形如“int argc,char *argv[]”……\n这都是啥啥啥……\n-.-所以我不是很想提前说这么多的嘛，你先默认把它理解为空好了。\n这样参数的问题也解决了，怎么控制返回值具体是什么呢。看一看main函数括号里面，以小学英语水平，可以明显发现一个单词“return - 返回”，那么就是翻译为返回0。\n-0是啥？\n-整数嘛。\n-所以是什么类型？\n-整型嘛。\n-所以返回值类型怎么写？\n-int嘛。\nC语言就是这么简单。 -.-\n">
-<title>【愿成其身】[1]工欲善其事，必先利其器</title>
+<title>【愿成其身】[1]工欲善其事，必先利其器 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/1/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[1]工欲善其事，必先利其器">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[1]工欲善其事，必先利其器 - BoilTask's Blog">
 <meta property='og:description' content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\n看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\n然而，正文却依旧不能继续，有一点非常重要。\n“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\n而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。\n第一行“#include&lt;stdio.h&gt;”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include&lt;&gt;”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\n什么叫函数？-.-||\n数学里的函数见过吧……$f(x)=x+1$ 这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。\n同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。\n言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)\n那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。\n那你想写……那么它的参数形如“int argc,char *argv[]”……\n这都是啥啥啥……\n-.-所以我不是很想提前说这么多的嘛，你先默认把它理解为空好了。\n这样参数的问题也解决了，怎么控制返回值具体是什么呢。看一看main函数括号里面，以小学英语水平，可以明显发现一个单词“return - 返回”，那么就是翻译为返回0。\n-0是啥？\n-整数嘛。\n-所以是什么类型？\n-整型嘛。\n-所以返回值类型怎么写？\n-int嘛。\nC语言就是这么简单。 -.-\n">
 <meta property='og:url' content='https://boiltask.com/iwbtg/1/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2016-08-15T16:00:19&#43;00:00'/><meta property='article:modified_time' content='2016-08-15T16:00:19&#43;00:00'/>
-<meta name="twitter:title" content="【愿成其身】[1]工欲善其事，必先利其器">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2016-08-15T16:00:19&#43;00:00'/><meta property='article:modified_time' content='2016-08-15T16:00:19&#43;00:00'/>
+<meta name="twitter:title" content="【愿成其身】[1]工欲善其事，必先利其器 - BoilTask's Blog">
 <meta name="twitter:description" content=" 子曰：“工欲善其事，必先利其器。居是邦也，事其大夫之贤者，友其士之仁者。”\n看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。\n然而，正文却依旧不能继续，有一点非常重要。\n“语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n但我相信，在ACM都能学好，其它领域怎么会学不好呢？\n所以人工重要的事情重复三遍。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。\n我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。\n而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。\n1 2 3 4 5 #include&lt;stdio.h&gt; int main() { printf(&#34;I wanna be the guy!&#34;); return 0; } 这段简单的代码展示了C的一些基础结构，下面逐句分析。\n第一行“#include&lt;stdio.h&gt;”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include&lt;&gt;”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。\n按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。\n什么叫函数？-.-||\n数学里的函数见过吧……$f(x)=x+1$ 这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。\n同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。\n言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)\n那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。\n那你想写……那么它的参数形如“int argc,char *argv[]”……\n这都是啥啥啥……\n-.-所以我不是很想提前说这么多的嘛，你先默认把它理解为空好了。\n这样参数的问题也解决了，怎么控制返回值具体是什么呢。看一看main函数括号里面，以小学英语水平，可以明显发现一个单词“return - 返回”，那么就是翻译为返回0。\n-0是啥？\n-整数嘛。\n-所以是什么类型？\n-整型嘛。\n-所以返回值类型怎么写？\n-int嘛。\nC语言就是这么简单。 -.-\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -411,7 +432,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -722,5 +743,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

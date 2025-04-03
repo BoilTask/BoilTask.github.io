@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="功能简述 蓝图因为是二进制文件，所以没办法使用svn自带的版本对比工具来比较变更。\n为了解决蓝图对比的问题，UE4提供了一个工具用以展示两个蓝图的区别。\n可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：引擎内置版本控制工具\n本文描述的是如何从外部调用引擎的对比工具。\n工具使用 直接使用可以在cmd命令提示符窗口输入如下命令：\n1 引擎路径\\Engine\\Binaries\\Win64\\UE4Editor.exe 项目路径\\Meta.uproject -diff 文件1路径 文件2路径 完整示例如下：\n1 D:\\MetaEngine\\Engine\\Binaries\\Win64\\UE4Editor.exe D:\\Meta\\Meta.uproject -diff D:\\Meta\\Content\\Test1.uasset D:\\Meta\\Content\\Test2.uasset 原理是运行引擎时传入-diff参数开启对比窗口，同时传入所需的项目路径与文件路径。\n结合SVN 结合svn的自定义对比工具功能，可以实现双击版本打开对比工具。\n右键项目svn根目录，选择设置（中文版同理）。\n英文版 中文版 在对比工具页签下选择高级选项（中文版同理）。\n英文版 中文版 在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条.uasset文件设置。\n英文版 中文版 输入指定命令行即可。\n">
+<title>虚幻引擎蓝图对比工具 - BoilTask&#39;s Blog</title>
+
+<link rel='canonical' href='https://boiltask.com/ue/blueprint-diff/'>
+
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎蓝图对比工具 - BoilTask's Blog">
+<meta property='og:description' content="功能简述 蓝图因为是二进制文件，所以没办法使用svn自带的版本对比工具来比较变更。\n为了解决蓝图对比的问题，UE4提供了一个工具用以展示两个蓝图的区别。\n可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：引擎内置版本控制工具\n本文描述的是如何从外部调用引擎的对比工具。\n工具使用 直接使用可以在cmd命令提示符窗口输入如下命令：\n1 引擎路径\\Engine\\Binaries\\Win64\\UE4Editor.exe 项目路径\\Meta.uproject -diff 文件1路径 文件2路径 完整示例如下：\n1 D:\\MetaEngine\\Engine\\Binaries\\Win64\\UE4Editor.exe D:\\Meta\\Meta.uproject -diff D:\\Meta\\Content\\Test1.uasset D:\\Meta\\Content\\Test2.uasset 原理是运行引擎时传入-diff参数开启对比窗口，同时传入所需的项目路径与文件路径。\n结合SVN 结合svn的自定义对比工具功能，可以实现双击版本打开对比工具。\n右键项目svn根目录，选择设置（中文版同理）。\n英文版 中文版 在对比工具页签下选择高级选项（中文版同理）。\n英文版 中文版 在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条.uasset文件设置。\n英文版 中文版 输入指定命令行即可。\n">
+<meta property='og:url' content='https://boiltask.com/ue/blueprint-diff/'>
+<meta property='og:site_name' content='BoilTask&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='unrealengine' /><meta property='article:tag' content='svn' /><meta property='article:published_time' content='2023-03-13T18:50:21&#43;08:00'/><meta property='article:modified_time' content='2023-03-13T18:50:21&#43;08:00'/>
+<meta name="twitter:title" content="虚幻引擎蓝图对比工具 - BoilTask's Blog">
+<meta name="twitter:description" content="功能简述 蓝图因为是二进制文件，所以没办法使用svn自带的版本对比工具来比较变更。\n为了解决蓝图对比的问题，UE4提供了一个工具用以展示两个蓝图的区别。\n可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：引擎内置版本控制工具\n本文描述的是如何从外部调用引擎的对比工具。\n工具使用 直接使用可以在cmd命令提示符窗口输入如下命令：\n1 引擎路径\\Engine\\Binaries\\Win64\\UE4Editor.exe 项目路径\\Meta.uproject -diff 文件1路径 文件2路径 完整示例如下：\n1 D:\\MetaEngine\\Engine\\Binaries\\Win64\\UE4Editor.exe D:\\Meta\\Meta.uproject -diff D:\\Meta\\Content\\Test1.uasset D:\\Meta\\Content\\Test2.uasset 原理是运行引擎时传入-diff参数开启对比窗口，同时传入所需的项目路径与文件路径。\n结合SVN 结合svn的自定义对比工具功能，可以实现双击版本打开对比工具。\n右键项目svn根目录，选择设置（中文版同理）。\n英文版 中文版 在对比工具页签下选择高级选项（中文版同理）。\n英文版 中文版 在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条.uasset文件设置。\n英文版 中文版 输入指定命令行即可。\n">
+    <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+     
+    .main-container {
+        display: none;
+    }
+</style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
+<script type="module">
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/images/avatar_hu13561554564015271184.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">BoilTask&#39;s Blog</a></h1>
+            <h2 class="site-description">Game developer and designer, C/C&#43;&#43; | Golang | UE | Web</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/BoilTask'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>文章归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友情链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#功能简述">功能简述</a></li>
+    <li><a href="#工具使用">工具使用</a></li>
+    <li><a href="#结合svn">结合SVN</a></li>
+    <li><a href="#对比效果">对比效果</a></li>
+    <li><a href="#注意事项">注意事项</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ue/" >
+                虚幻引擎
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/ue/blueprint-diff/">虚幻引擎蓝图对比工具</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2023-03-13 18:50:21</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="功能简述"><a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor"></a>功能简述
+</h2><p>蓝图因为是二进制文件，所以没办法使用<code>svn</code>自带的版本对比工具来比较变更。</p>
+<p>为了解决蓝图对比的问题，<code>UE4</code>提供了一个工具用以展示两个蓝图的区别。</p>
+<p>可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：<a class="link" href="/ue/source-control-tool" >引擎内置版本控制工具</a></p>
+<p>本文描述的是如何从外部调用引擎的对比工具。</p>
+<h2 id="工具使用"><a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor"></a>工具使用
+</h2><p>直接使用可以在<code>cmd</code>命令提示符窗口输入如下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">引擎路径<span class="se">\E</span>ngine<span class="se">\B</span>inaries<span class="se">\W</span>in64<span class="se">\U</span>E4Editor.exe 项目路径<span class="se">\M</span>eta.uproject -diff 文件1路径 文件2路径
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>完整示例如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">D:<span class="se">\M</span>etaEngine<span class="se">\E</span>ngine<span class="se">\B</span>inaries<span class="se">\W</span>in64<span class="se">\U</span>E4Editor.exe D:<span class="se">\M</span>eta<span class="se">\M</span>eta.uproject -diff D:<span class="se">\M</span>eta<span class="se">\C</span>ontent<span class="se">\T</span>est1.uasset D:<span class="se">\M</span>eta<span class="se">\C</span>ontent<span class="se">\T</span>est2.uasset
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>原理是运行引擎时传入<code>-diff</code>参数开启对比窗口，同时传入所需的项目路径与文件路径。</p>
+<h2 id="结合svn"><a href="#%e7%bb%93%e5%90%88svn" class="header-anchor"></a>结合SVN
+</h2><p>结合<code>svn</code>的自定义对比工具功能，可以实现双击版本打开对比工具。</p>
+<p>右键项目<code>svn</code>根目录，选择设置（中文版同理）。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><img src="/ue/blueprint-diff/image-1-1.png"
+	width="529"
+	height="671"
+	srcset="/ue/blueprint-diff/image-1-1_hu931231083575383090.png 480w, /ue/blueprint-diff/image-1-1_hu8413650250640421566.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="78"
+		data-flex-basis="189px"
+	
+></th>
+          <th><img src="/ue/blueprint-diff/image-1-2.png"
+	width="531"
+	height="670"
+	srcset="/ue/blueprint-diff/image-1-2_hu8306830521440157681.png 480w, /ue/blueprint-diff/image-1-2_hu16558079487976017727.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="79"
+		data-flex-basis="190px"
+	
+></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>英文版</td>
+          <td>中文版</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>在对比工具页签下选择高级选项（中文版同理）。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><img src="/ue/blueprint-diff/image-2-1.png"
+	width="787"
+	height="548"
+	srcset="/ue/blueprint-diff/image-2-1_hu6339352627954773920.png 480w, /ue/blueprint-diff/image-2-1_hu10151811338044199093.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="143"
+		data-flex-basis="344px"
+	
+></th>
+          <th><img src="/ue/blueprint-diff/image-2-2.png"
+	width="773"
+	height="541"
+	srcset="/ue/blueprint-diff/image-2-2_hu2978232850679557358.png 480w, /ue/blueprint-diff/image-2-2_hu2189535122315424647.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="142"
+		data-flex-basis="342px"
+	
+></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>英文版</td>
+          <td>中文版</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条<code>.uasset</code>文件设置。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><img src="/ue/blueprint-diff/image-3-1.png"
+	width="560"
+	height="439"
+	srcset="/ue/blueprint-diff/image-3-1_hu4389140594183622692.png 480w, /ue/blueprint-diff/image-3-1_hu16494318166475559831.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="306px"
+	
+></th>
+          <th><img src="/ue/blueprint-diff/image-3-2.png"
+	width="560"
+	height="439"
+	srcset="/ue/blueprint-diff/image-3-2_hu6070286475696118969.png 480w, /ue/blueprint-diff/image-3-2_hu9829776246806890933.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="127"
+		data-flex-basis="306px"
+	
+></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>英文版</td>
+          <td>中文版</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>输入指定命令行即可。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><img src="/ue/blueprint-diff/image-4-1.png"
+	width="777"
+	height="180"
+	srcset="/ue/blueprint-diff/image-4-1_hu16880563065039948167.png 480w, /ue/blueprint-diff/image-4-1_hu12904495106932811181.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="431"
+		data-flex-basis="1036px"
+	
+></th>
+          <th><img src="/ue/blueprint-diff/image-4-2.png"
+	width="777"
+	height="180"
+	srcset="/ue/blueprint-diff/image-4-2_hu135614488466320865.png 480w, /ue/blueprint-diff/image-4-2_hu1553581432799812078.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="431"
+		data-flex-basis="1036px"
+	
+></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>英文版</td>
+          <td>中文版</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>扩展名输入：<code>.uasset</code></p>
+<p>命令行完整示例如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-Bash" data-lang="Bash"><span class="line"><span class="cl">D:<span class="se">\M</span>etaEngine<span class="se">\E</span>ngine<span class="se">\B</span>inaries<span class="se">\W</span>in64<span class="se">\U</span>E4Editor.exe D:<span class="se">\M</span>eta<span class="se">\M</span>eta.uproject -diff %base %mine
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>其中<code>D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe</code>为引擎可执行文件，<code>D:\Meta\Meta.uproject</code>为项目文件，<code>%base</code>会被转义为<code>svn</code>文件，<code>%mine</code>会被转义为当前文件。</p>
+<h2 id="对比效果"><a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor"></a>对比效果
+</h2><p><img src="/ue/blueprint-diff/image-5.png"
+	width="1010"
+	height="834"
+	srcset="/ue/blueprint-diff/image-5_hu13773989210434351733.png 480w, /ue/blueprint-diff/image-5_hu6386327262215898314.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="121"
+		data-flex-basis="290px"
+	
+></p>
+<h2 id="注意事项"><a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor"></a>注意事项
+</h2><p>由于引擎问题，部分格式的蓝图可能不被支持。</p>
+<p>打开对比工具的过程较为缓慢，请耐心等待。在此过程中不能关闭<code>svn</code>版本历史窗口，以免目标临时文件被清除从而对比失败。</p>
+<p>此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。</p>
+<p>期待<code>UnrealEngine</code>能更为完善！</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/unrealengine/">UnrealEngine</a>
+        
+            <a href="/tags/svn/">SVN</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span><p>该内容采用 CC BY-NC-SA 4.0 许可协议。</p><p>如果对您有帮助或存在意见建议，欢迎在下方评论交流。</p></span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm&#43;ZU03BU6SQNC66uf4l5&#43;"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/&#43;rCMvRwr4yROQP43s0Xk"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/ue/blueprint-merge/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎蓝图合并工具</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/source-control-tool/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">引擎内置版本控制工具</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/ue-asan/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中ASan相关机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/network-role/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中网络角色Role相关概念</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/character-movement/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中角色移动相关机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="BoilTask/BoilTask.github.io"
+    data-repo-id="MDEwOlJlcG9zaXRvcnkyODQ5Njk2MTU="
+    data-category="Announcements"
+    data-category-id="DIC_kwDOEPxKj84CkD1t"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2013 - 
+        
+        2025 BoilTask&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+    </body>
+</html>

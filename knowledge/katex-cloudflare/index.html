@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
-<title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title>
+<title>Cloudflare环境下开启Rocket Loader之后Katex失效问题 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/knowledge/katex-cloudflare/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Cloudflare环境下开启Rocket Loader之后Katex失效问题">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="Cloudflare环境下开启Rocket Loader之后Katex失效问题 - BoilTask's Blog">
 <meta property='og:description' content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
 <meta property='og:url' content='https://boiltask.com/knowledge/katex-cloudflare/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-09T12:45:51&#43;08:00'/><meta property='article:modified_time' content='2024-11-09T12:45:51&#43;08:00'/>
-<meta name="twitter:title" content="Cloudflare环境下开启Rocket Loader之后Katex失效问题">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2024-11-09T12:45:51&#43;08:00'/><meta property='article:modified_time' content='2024-11-09T12:45:51&#43;08:00'/>
+<meta name="twitter:title" content="Cloudflare环境下开启Rocket Loader之后Katex失效问题 - BoilTask's Blog">
 <meta name="twitter:description" content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -333,6 +354,12 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/blog/">博客</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -415,12 +442,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/cpp-protobuf/">
+    <a href="/knowledge/svn-revert/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Windows下C&#43;&#43;版本Protobuf使用方法</h2>
+            <h2 class="article-title">SVN回退操作</h2>
         </div>
     </a>
 </article>
@@ -428,12 +455,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/cpp-static/">
+    <a href="/knowledge/svn-merge/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C&#43;&#43;中static关键字用法总结</h2>
+            <h2 class="article-title">SVN合并操作</h2>
         </div>
     </a>
 </article>
@@ -441,12 +468,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/cpp-const/">
+    <a href="/knowledge/svn-switch-branch/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">C&#43;&#43;中const关键字用法总结</h2>
+            <h2 class="article-title">SVN切分支</h2>
         </div>
     </a>
 </article>
@@ -628,5 +655,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

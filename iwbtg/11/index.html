@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本篇文章讲解题目：比较字符\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。\n数字还可以使用二进制转换，而字符怎么办……\n为了解决这一问题，在C语言里，字符是被存储为数字的，其可像数字一样参与运算。\n我们可以使用类似于下面的代码来查看代表字符的数字是多少：\n1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt; int main() { printf(&#34;%d\\n&#34;,&#39;A&#39;); printf(&#34;%d\\n&#34;,&#39;B&#39;); printf(&#34;%d\\n&#34;,&#39;C&#39;); printf(&#34;%d\\n&#34;,&#39;a&#39;); printf(&#34;%d\\n&#34;,&#39;b&#39;); printf(&#34;%d\\n&#34;,&#39;c&#39;); return 0; } 所以这一题便可以方便的进行比较。\n字符的类型为char，格式化输入输出使用%c。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { char c; scanf(&#34;%c&#34;,&amp;c); printf(&#34;%c\\n&#34;,c); return 0; } 需要注意的是，小写字母ASCII值是大于大写字母ASCII值的，而题目定义为小写字母小于大写字母，所以对于这种情况应该特殊判断。\n">
-<title>【愿成其身】[11]字符的本质 – ASCII的作用</title>
+<title>【愿成其身】[11]字符的本质 – ASCII的作用 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/11/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[11]字符的本质 – ASCII的作用">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[11]字符的本质 – ASCII的作用 - BoilTask's Blog">
 <meta property='og:description' content="本篇文章讲解题目：比较字符\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。\n数字还可以使用二进制转换，而字符怎么办……\n为了解决这一问题，在C语言里，字符是被存储为数字的，其可像数字一样参与运算。\n我们可以使用类似于下面的代码来查看代表字符的数字是多少：\n1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt; int main() { printf(&#34;%d\\n&#34;,&#39;A&#39;); printf(&#34;%d\\n&#34;,&#39;B&#39;); printf(&#34;%d\\n&#34;,&#39;C&#39;); printf(&#34;%d\\n&#34;,&#39;a&#39;); printf(&#34;%d\\n&#34;,&#39;b&#39;); printf(&#34;%d\\n&#34;,&#39;c&#39;); return 0; } 所以这一题便可以方便的进行比较。\n字符的类型为char，格式化输入输出使用%c。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { char c; scanf(&#34;%c&#34;,&amp;c); printf(&#34;%c\\n&#34;,c); return 0; } 需要注意的是，小写字母ASCII值是大于大写字母ASCII值的，而题目定义为小写字母小于大写字母，所以对于这种情况应该特殊判断。\n">
 <meta property='og:url' content='https://boiltask.com/iwbtg/11/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2016-08-25T16:00:15&#43;00:00'/><meta property='article:modified_time' content='2016-08-25T16:00:15&#43;00:00'/>
-<meta name="twitter:title" content="【愿成其身】[11]字符的本质 – ASCII的作用">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2016-08-25T16:00:15&#43;00:00'/><meta property='article:modified_time' content='2016-08-25T16:00:15&#43;00:00'/>
+<meta name="twitter:title" content="【愿成其身】[11]字符的本质 – ASCII的作用 - BoilTask's Blog">
 <meta name="twitter:description" content="本篇文章讲解题目：比较字符\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。\n数字还可以使用二进制转换，而字符怎么办……\n为了解决这一问题，在C语言里，字符是被存储为数字的，其可像数字一样参与运算。\n我们可以使用类似于下面的代码来查看代表字符的数字是多少：\n1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt; int main() { printf(&#34;%d\\n&#34;,&#39;A&#39;); printf(&#34;%d\\n&#34;,&#39;B&#39;); printf(&#34;%d\\n&#34;,&#39;C&#39;); printf(&#34;%d\\n&#34;,&#39;a&#39;); printf(&#34;%d\\n&#34;,&#39;b&#39;); printf(&#34;%d\\n&#34;,&#39;c&#39;); return 0; } 所以这一题便可以方便的进行比较。\n字符的类型为char，格式化输入输出使用%c。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { char c; scanf(&#34;%c&#34;,&amp;c); printf(&#34;%c\\n&#34;,c); return 0; } 需要注意的是，小写字母ASCII值是大于大写字母ASCII值的，而题目定义为小写字母小于大写字母，所以对于这种情况应该特殊判断。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -353,7 +374,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -664,5 +685,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

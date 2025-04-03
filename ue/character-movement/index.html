@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="简介 本文主要用于整理虚幻引擎中移动相关的机制。\n内容可能摘录自各个文章、论坛、文档等，仅用作记录。\n基础简介 移动是一个非常重要并且较为复杂的模块，UnrealEngine对于移动的实现使用了组合模式，在描述Actor的移动时，含义是具有移动组件的Actor可以移动。\n移动组件的基类为UMovementComponent，提供基本的移动功能，有多个不同功能的子类，一些子类移动组件专门用于服务一种特殊的Actor，比如通常代表玩家的ACharacter，对应的移动组件UCharacterMovementComponent。\nActor虽然代表在World中的一个实体，但是本身是没有位置概念的。Actor的位置由其具有的USceneComponent赋予。因此移动的本质，就是改变Actor上的某个USceneComponent的位置，通常指的是Actor的RootComponent。\nUMovementComponent上有个属性UpdatedComponent，就是用于设置移动组件所修改的USceneComponent。暴露给蓝图有个参数bAutoRegisterUpdatedComponent，如果设置为true，则会在组件初始化时，读取Owner的RootComponent，调用SetUpdatedComponent设置UpdatedComponent。\n移动流程 网络同步下的角色移动至少需要考虑以下几个方面：\n玩家客户端操作无延迟 需要直接响应移动输入并上报给服务器 位置以服务器为准 防止外挂 同步到的移动需要表现丝滑 不可能每帧都收到位置更新，需要适当进行插值 自主实现 先思考如果自己实现的情况下可能会怎么做。\n本地接收到输入之后，在本地先操作移动，同时把移动的操作发送给服务器 可能包含的信息是：当前位置、目标位置等 服务器接收到移动的操作，在服务器上执行移动，并把玩家位移的信息同步给所有客户端 信息同样包含：当前位置、目标位置、速度等 其他客户端收到了移动的信息后，修改角色的移动目标，根据插值调整角色位置 引擎实现 虚幻引擎网络同步情况下的移动流程与此类似，大概为：\n每一帧执行TickComponent时，计算这一帧的加速度和转向，之后对于主控的Character，调用ReplicateMoveToServer把移动同步给服务器\nReplicateMoveToServer会把移动保存到列表，然后执行PerformMovement在本地预执行移动操作。\n然后会调用ServerMove把移动同步给服务器，告知移动的参数、客户端自己移动的位置，以及时间戳\nServerMove在服务器上执行，根据客户端声明的位置，与服务器的位置做对比，如果差异过大，则调用ClientAdjustPosition在主控端校正位置\n客户端如果收到ClientAdjustPosition，会把客户端角色位置设置为服务器上的位置，并把bUpdatePosition标记为true，这将会影响到后续的移动更新\n当客户端再次调用TickComponent时，如果存在bUpdatePosition，则会调用ClientUpdatePositionAfterServerUpdate来重演在服务器上调整移动之后发生的所有移动。\n在引擎源码CharacterMovementComponent.h中可以找到对移动同步流程的描述：\nHere&rsquo;s how player movement prediction, replication and correction works in network games:\nEvery tick, the TickComponent() function is called. It figures out the acceleration and rotation change for the frame, and then calls PerformMovement() (for locally controlled Characters), or ReplicateMoveToServer() (if it&rsquo;s a network client).\n">
-<title>虚幻引擎中角色移动相关机制</title>
+<title>虚幻引擎中角色移动相关机制 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/ue/character-movement/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中角色移动相关机制">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中角色移动相关机制 - BoilTask's Blog">
 <meta property='og:description' content="简介 本文主要用于整理虚幻引擎中移动相关的机制。\n内容可能摘录自各个文章、论坛、文档等，仅用作记录。\n基础简介 移动是一个非常重要并且较为复杂的模块，UnrealEngine对于移动的实现使用了组合模式，在描述Actor的移动时，含义是具有移动组件的Actor可以移动。\n移动组件的基类为UMovementComponent，提供基本的移动功能，有多个不同功能的子类，一些子类移动组件专门用于服务一种特殊的Actor，比如通常代表玩家的ACharacter，对应的移动组件UCharacterMovementComponent。\nActor虽然代表在World中的一个实体，但是本身是没有位置概念的。Actor的位置由其具有的USceneComponent赋予。因此移动的本质，就是改变Actor上的某个USceneComponent的位置，通常指的是Actor的RootComponent。\nUMovementComponent上有个属性UpdatedComponent，就是用于设置移动组件所修改的USceneComponent。暴露给蓝图有个参数bAutoRegisterUpdatedComponent，如果设置为true，则会在组件初始化时，读取Owner的RootComponent，调用SetUpdatedComponent设置UpdatedComponent。\n移动流程 网络同步下的角色移动至少需要考虑以下几个方面：\n玩家客户端操作无延迟 需要直接响应移动输入并上报给服务器 位置以服务器为准 防止外挂 同步到的移动需要表现丝滑 不可能每帧都收到位置更新，需要适当进行插值 自主实现 先思考如果自己实现的情况下可能会怎么做。\n本地接收到输入之后，在本地先操作移动，同时把移动的操作发送给服务器 可能包含的信息是：当前位置、目标位置等 服务器接收到移动的操作，在服务器上执行移动，并把玩家位移的信息同步给所有客户端 信息同样包含：当前位置、目标位置、速度等 其他客户端收到了移动的信息后，修改角色的移动目标，根据插值调整角色位置 引擎实现 虚幻引擎网络同步情况下的移动流程与此类似，大概为：\n每一帧执行TickComponent时，计算这一帧的加速度和转向，之后对于主控的Character，调用ReplicateMoveToServer把移动同步给服务器\nReplicateMoveToServer会把移动保存到列表，然后执行PerformMovement在本地预执行移动操作。\n然后会调用ServerMove把移动同步给服务器，告知移动的参数、客户端自己移动的位置，以及时间戳\nServerMove在服务器上执行，根据客户端声明的位置，与服务器的位置做对比，如果差异过大，则调用ClientAdjustPosition在主控端校正位置\n客户端如果收到ClientAdjustPosition，会把客户端角色位置设置为服务器上的位置，并把bUpdatePosition标记为true，这将会影响到后续的移动更新\n当客户端再次调用TickComponent时，如果存在bUpdatePosition，则会调用ClientUpdatePositionAfterServerUpdate来重演在服务器上调整移动之后发生的所有移动。\n在引擎源码CharacterMovementComponent.h中可以找到对移动同步流程的描述：\nHere&rsquo;s how player movement prediction, replication and correction works in network games:\nEvery tick, the TickComponent() function is called. It figures out the acceleration and rotation change for the frame, and then calls PerformMovement() (for locally controlled Characters), or ReplicateMoveToServer() (if it&rsquo;s a network client).\n">
 <meta property='og:url' content='https://boiltask.com/ue/character-movement/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2025-04-02T12:54:31&#43;08:00'/><meta property='article:modified_time' content='2025-04-02T12:54:31&#43;08:00'/>
-<meta name="twitter:title" content="虚幻引擎中角色移动相关机制">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:tag' content='unrealengine' /><meta property='article:published_time' content='2025-04-02T12:54:31&#43;08:00'/><meta property='article:modified_time' content='2025-04-02T12:54:31&#43;08:00'/>
+<meta name="twitter:title" content="虚幻引擎中角色移动相关机制 - BoilTask's Blog">
 <meta name="twitter:description" content="简介 本文主要用于整理虚幻引擎中移动相关的机制。\n内容可能摘录自各个文章、论坛、文档等，仅用作记录。\n基础简介 移动是一个非常重要并且较为复杂的模块，UnrealEngine对于移动的实现使用了组合模式，在描述Actor的移动时，含义是具有移动组件的Actor可以移动。\n移动组件的基类为UMovementComponent，提供基本的移动功能，有多个不同功能的子类，一些子类移动组件专门用于服务一种特殊的Actor，比如通常代表玩家的ACharacter，对应的移动组件UCharacterMovementComponent。\nActor虽然代表在World中的一个实体，但是本身是没有位置概念的。Actor的位置由其具有的USceneComponent赋予。因此移动的本质，就是改变Actor上的某个USceneComponent的位置，通常指的是Actor的RootComponent。\nUMovementComponent上有个属性UpdatedComponent，就是用于设置移动组件所修改的USceneComponent。暴露给蓝图有个参数bAutoRegisterUpdatedComponent，如果设置为true，则会在组件初始化时，读取Owner的RootComponent，调用SetUpdatedComponent设置UpdatedComponent。\n移动流程 网络同步下的角色移动至少需要考虑以下几个方面：\n玩家客户端操作无延迟 需要直接响应移动输入并上报给服务器 位置以服务器为准 防止外挂 同步到的移动需要表现丝滑 不可能每帧都收到位置更新，需要适当进行插值 自主实现 先思考如果自己实现的情况下可能会怎么做。\n本地接收到输入之后，在本地先操作移动，同时把移动的操作发送给服务器 可能包含的信息是：当前位置、目标位置等 服务器接收到移动的操作，在服务器上执行移动，并把玩家位移的信息同步给所有客户端 信息同样包含：当前位置、目标位置、速度等 其他客户端收到了移动的信息后，修改角色的移动目标，根据插值调整角色位置 引擎实现 虚幻引擎网络同步情况下的移动流程与此类似，大概为：\n每一帧执行TickComponent时，计算这一帧的加速度和转向，之后对于主控的Character，调用ReplicateMoveToServer把移动同步给服务器\nReplicateMoveToServer会把移动保存到列表，然后执行PerformMovement在本地预执行移动操作。\n然后会调用ServerMove把移动同步给服务器，告知移动的参数、客户端自己移动的位置，以及时间戳\nServerMove在服务器上执行，根据客户端声明的位置，与服务器的位置做对比，如果差异过大，则调用ClientAdjustPosition在主控端校正位置\n客户端如果收到ClientAdjustPosition，会把客户端角色位置设置为服务器上的位置，并把bUpdatePosition标记为true，这将会影响到后续的移动更新\n当客户端再次调用TickComponent时，如果存在bUpdatePosition，则会调用ClientUpdatePositionAfterServerUpdate来重演在服务器上调整移动之后发生的所有移动。\n在引擎源码CharacterMovementComponent.h中可以找到对移动同步流程的描述：\nHere&rsquo;s how player movement prediction, replication and correction works in network games:\nEvery tick, the TickComponent() function is called. It figures out the acceleration and rotation change for the frame, and then calls PerformMovement() (for locally controlled Characters), or ReplicateMoveToServer() (if it&rsquo;s a network client).\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -253,6 +274,7 @@
     <li><a href="#server同步移动给客户端">Server同步移动给客户端</a>
       <ol>
         <li><a href="#actor基本同步方案">Actor基本同步方案</a></li>
+        <li><a href="#character移动同步">Character移动同步</a></li>
       </ol>
     </li>
     <li><a href="#关键概念">关键概念</a>
@@ -444,6 +466,10 @@ move list which occurred after the timestamp of the move the server was adjustin
 <h2 id="server同步移动给客户端"><a href="#server%e5%90%8c%e6%ad%a5%e7%a7%bb%e5%8a%a8%e7%bb%99%e5%ae%a2%e6%88%b7%e7%ab%af" class="header-anchor"></a>Server同步移动给客户端
 </h2><h3 id="actor基本同步方案"><a href="#actor%e5%9f%ba%e6%9c%ac%e5%90%8c%e6%ad%a5%e6%96%b9%e6%a1%88" class="header-anchor"></a>Actor基本同步方案
 </h3><p>Actor自身就支持移动同步，打开ReplicateMovement开关后，当Actor的RootComponent位置、朝向等数据发生变化时，就会把数据同步给Simulate客户端。</p>
+<p>当Simulate的客户端收到同步之后，会简单的设置自己的位置和朝向。移动数据的同步有间隔，因此这种实现会导致Actor发生闪现。</p>
+<h3 id="character移动同步"><a href="#character%e7%a7%bb%e5%8a%a8%e5%90%8c%e6%ad%a5" class="header-anchor"></a>Character移动同步
+</h3><p>针对Actor基本同步模式的不足，CharacterMovementComponent针对性的做了表现平滑处理，让Simulate角色移动尽可能平滑自然。</p>
+<p>Character主要有两个组件，Capsule和Mesh，Capsule是Chara</p>
 <h2 id="关键概念"><a href="#%e5%85%b3%e9%94%ae%e6%a6%82%e5%bf%b5" class="header-anchor"></a>关键概念
 </h2><h3 id="ucharactermovement"><a href="#ucharactermovement" class="header-anchor"></a>UCharacterMovement
 </h3><p>角色移动组件是最为复杂的一个子类，需要重点进行分析。</p>
@@ -465,50 +491,50 @@ move list which occurred after the timestamp of the move the server was adjustin
 <div class="table-wrapper"><table>
   <thead>
       <tr>
-          <th style="text-align: left">属性</th>
-          <th style="text-align: left">描述</th>
+          <th>属性</th>
+          <th>描述</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">TimeStamp</td>
-          <td style="text-align: left">这次移动发生的时间</td>
+          <td>TimeStamp</td>
+          <td>这次移动发生的时间</td>
       </tr>
       <tr>
-          <td style="text-align: left">DeltaTime</td>
-          <td style="text-align: left">这次移动使用的时间</td>
+          <td>DeltaTime</td>
+          <td>这次移动使用的时间</td>
       </tr>
       <tr>
-          <td style="text-align: left">CustomTimeDilation</td>
-          <td style="text-align: left">时间膨胀系数，可以用于快进和慢放</td>
+          <td>CustomTimeDilation</td>
+          <td>时间膨胀系数，可以用于快进和慢放</td>
       </tr>
       <tr>
-          <td style="text-align: left">StartPackedMovementMode</td>
-          <td style="text-align: left">移动发生前的MovementMode</td>
+          <td>StartPackedMovementMode</td>
+          <td>移动发生前的MovementMode</td>
       </tr>
       <tr>
-          <td style="text-align: left">StartLocation</td>
-          <td style="text-align: left">移动发生前的位置</td>
+          <td>StartLocation</td>
+          <td>移动发生前的位置</td>
       </tr>
       <tr>
-          <td style="text-align: left">StartVelocity</td>
-          <td style="text-align: left">移动发生前的速度</td>
+          <td>StartVelocity</td>
+          <td>移动发生前的速度</td>
       </tr>
       <tr>
-          <td style="text-align: left">EndPackedMovementMode</td>
-          <td style="text-align: left">移动发生后的MovementMode</td>
+          <td>EndPackedMovementMode</td>
+          <td>移动发生后的MovementMode</td>
       </tr>
       <tr>
-          <td style="text-align: left">SavedLocation</td>
-          <td style="text-align: left">移动发生后的位置</td>
+          <td>SavedLocation</td>
+          <td>移动发生后的位置</td>
       </tr>
       <tr>
-          <td style="text-align: left">SavedVelocity</td>
-          <td style="text-align: left">移动发生后的速度</td>
+          <td>SavedVelocity</td>
+          <td>移动发生后的速度</td>
       </tr>
       <tr>
-          <td style="text-align: left">Acceleration</td>
-          <td style="text-align: left">移动所用加速度</td>
+          <td>Acceleration</td>
+          <td>移动所用加速度</td>
       </tr>
   </tbody>
 </table></div>
@@ -560,7 +586,7 @@ move list which occurred after the timestamp of the move the server was adjustin
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
             <a href="/tags/unrealengine/">UnrealEngine</a>
         
@@ -861,10 +887,48 @@ move list which occurred after the timestamp of the move the server was adjustin
 </script>
 
 <script type="module">
-  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
-  mermaid.initialize({ startOnLoad: true });
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs";
+
+    mermaid.initialize({startOnLoad: true});
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

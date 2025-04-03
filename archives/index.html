@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="">
-<title>文章归档</title>
+<title>文章归档 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/archives/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="文章归档">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="文章归档 - BoilTask's Blog">
 <meta property='og:description' content="">
 <meta property='og:url' content='https://boiltask.com/archives/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2019-09-18T03:54:47&#43;00:00'/><meta property='article:modified_time' content='2019-09-18T03:54:47&#43;00:00'/>
-<meta name="twitter:title" content="文章归档">
+<meta name="twitter:title" content="文章归档 - BoilTask's Blog">
 <meta name="twitter:description" content="">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -354,6 +375,17 @@
         <div class="article-list--compact">
             
                 <article>
+    <a href="/record/try-obsidian/">
+        <div class="article-details">
+            <h2 class="article-title">尝试Obsidian与Hugo结合</h2>
+            <footer class="article-time">
+                <time datetime='2025-04-03T21:40:08&#43;08:00'>2025-04-03 21:40:08</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
     <a href="/record/hugo-pangu/">
         <div class="article-details">
             <h2 class="article-title">给HUGO博客引入pangu.js</h2>
@@ -403,6 +435,28 @@
             <h2 class="article-title">UnrealEngine虚幻引擎编译选项</h2>
             <footer class="article-time">
                 <time datetime='2025-03-05T12:42:21&#43;08:00'>2025-03-05 12:42:21</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/ue/common-console-command/">
+        <div class="article-details">
+            <h2 class="article-title">UE4常用控制台指令</h2>
+            <footer class="article-time">
+                <time datetime='2025-02-26T11:44:41&#43;08:00'>2025-02-26 11:44:41</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/ue/blueprint-merge/">
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎蓝图合并工具</h2>
+            <footer class="article-time">
+                <time datetime='2025-02-24T11:57:11&#43;08:00'>2025-02-24 11:57:11</time>
             </footer>
         </div>
     </a>
@@ -527,11 +581,178 @@
 </article>
             
                 <article>
+    <a href="/record/talk-about-server/">
+        <div class="article-details">
+            <h2 class="article-title">谈谈对服务器的认识</h2>
+            <footer class="article-time">
+                <time datetime='2024-10-24T18:12:31&#43;08:00'>2024-10-24 18:12:31</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/record/knowledge-tree/">
+        <div class="article-details">
+            <h2 class="article-title">人生知识树</h2>
+            <footer class="article-time">
+                <time datetime='2024-10-09T17:25:11&#43;08:00'>2024-10-09 17:25:11</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
     <a href="/qzone/1728044081/">
         <div class="article-details">
             <h2 class="article-title">悼念亲爱的爷爷</h2>
             <footer class="article-time">
                 <time datetime='2024-10-04T20:20:00&#43;08:00'>2024-10-04 20:20:00</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+    
+    <div class="archives-group" id="2023">
+        <h2 class="archives-date section-title"><a href="/archives/#2023">2023</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/knowledge/svn-revert/">
+        <div class="article-details">
+            <h2 class="article-title">SVN回退操作</h2>
+            <footer class="article-time">
+                <time datetime='2023-10-09T10:41:32&#43;08:00'>2023-10-09 10:41:32</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/ue/find-module-reference/">
+        <div class="article-details">
+            <h2 class="article-title">查找Module被谁引入</h2>
+            <footer class="article-time">
+                <time datetime='2023-08-02T12:13:26&#43;08:00'>2023-08-02 12:13:26</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/knowledge/svn-merge/">
+        <div class="article-details">
+            <h2 class="article-title">SVN合并操作</h2>
+            <footer class="article-time">
+                <time datetime='2023-05-29T21:44:15&#43;08:00'>2023-05-29 21:44:15</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/knowledge/svn-switch-branch/">
+        <div class="article-details">
+            <h2 class="article-title">SVN切分支</h2>
+            <footer class="article-time">
+                <time datetime='2023-03-13T23:14:21&#43;08:00'>2023-03-13 23:14:21</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/knowledge/svn-lock/">
+        <div class="article-details">
+            <h2 class="article-title">SVN锁定操作</h2>
+            <footer class="article-time">
+                <time datetime='2023-03-13T19:35:21&#43;08:00'>2023-03-13 19:35:21</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/ue/source-control-tool/">
+        <div class="article-details">
+            <h2 class="article-title">引擎内置版本控制工具</h2>
+            <footer class="article-time">
+                <time datetime='2023-03-13T19:33:24&#43;08:00'>2023-03-13 19:33:24</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/ue/blueprint-diff/">
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎蓝图对比工具</h2>
+            <footer class="article-time">
+                <time datetime='2023-03-13T18:50:21&#43;08:00'>2023-03-13 18:50:21</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/knowledge/git-modify/">
+        <div class="article-details">
+            <h2 class="article-title">强制修改Git记录中提交者</h2>
+            <footer class="article-time">
+                <time datetime='2023-02-16T19:02:13Z'>2023-02-16 19:02:13</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+    
+    <div class="archives-group" id="2022">
+        <h2 class="archives-date section-title"><a href="/archives/#2022">2022</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/record/summary-2021/">
+        <div class="article-details">
+            <h2 class="article-title">2021总结</h2>
+            <footer class="article-time">
+                <time datetime='2022-11-03T09:06:12&#43;08:00'>2022-11-03 09:06:12</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+                <article>
+    <a href="/notes/lua-design-implement-1/">
+        <div class="article-details">
+            <h2 class="article-title">Lua设计与实现</h2>
+            <footer class="article-time">
+                <time datetime='2022-08-01T11:21:14Z'>2022-08-01 11:21:14</time>
+            </footer>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+    
+    
+    <div class="archives-group" id="2021">
+        <h2 class="archives-date section-title"><a href="/archives/#2021">2021</a></h2>
+        <div class="article-list--compact">
+            
+                <article>
+    <a href="/knowledge/client-style-guide/">
+        <div class="article-details">
+            <h2 class="article-title">客户端编程规范</h2>
+            <footer class="article-time">
+                <time datetime='2021-05-10T21:34:36&#43;08:00'>2021-05-10 21:34:36</time>
             </footer>
         </div>
     </a>
@@ -1372,5 +1593,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="本篇文章讲解题目：小学求和1到n\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n注意观察这道题与上一个求和的差别。\n首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。\n我们只需要读取一个变量T记录组数，然后使用语句：\n1 2 3 while(T--) { } 在大括号里写程序即可。\n这道题给的范围为$0 &lt; n &lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次\n评测机一秒大概可运行$10 ^ 7 \\sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的\n(推荐先自己查阅时间复杂度相关资料)\n事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。\n当然，还需要注意数据范围的问题。\n再次举这一题的例子也是想再次说明思维的重要性。\n一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。\n">
-<title>【愿成其身】[15]思维的优化 – 数学的魅力</title>
+<title>【愿成其身】[15]思维的优化 – 数学的魅力 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/iwbtg/15/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[15]思维的优化 – 数学的魅力">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="【愿成其身】[15]思维的优化 – 数学的魅力 - BoilTask's Blog">
 <meta property='og:description' content="本篇文章讲解题目：小学求和1到n\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n注意观察这道题与上一个求和的差别。\n首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。\n我们只需要读取一个变量T记录组数，然后使用语句：\n1 2 3 while(T--) { } 在大括号里写程序即可。\n这道题给的范围为$0 &lt; n &lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次\n评测机一秒大概可运行$10 ^ 7 \\sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的\n(推荐先自己查阅时间复杂度相关资料)\n事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。\n当然，还需要注意数据范围的问题。\n再次举这一题的例子也是想再次说明思维的重要性。\n一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。\n">
 <meta property='og:url' content='https://boiltask.com/iwbtg/15/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:published_time' content='2016-08-29T16:00:57&#43;00:00'/><meta property='article:modified_time' content='2016-08-29T16:00:57&#43;00:00'/>
-<meta name="twitter:title" content="【愿成其身】[15]思维的优化 – 数学的魅力">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:published_time' content='2016-08-29T16:00:57&#43;00:00'/><meta property='article:modified_time' content='2016-08-29T16:00:57&#43;00:00'/>
+<meta name="twitter:title" content="【愿成其身】[15]思维的优化 – 数学的魅力 - BoilTask's Blog">
 <meta name="twitter:description" content="本篇文章讲解题目：小学求和1到n\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n注意观察这道题与上一个求和的差别。\n首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。\n我们只需要读取一个变量T记录组数，然后使用语句：\n1 2 3 while(T--) { } 在大括号里写程序即可。\n这道题给的范围为$0 &lt; n &lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次\n评测机一秒大概可运行$10 ^ 7 \\sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的\n(推荐先自己查阅时间复杂度相关资料)\n事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。\n当然，还需要注意数据范围的问题。\n再次举这一题的例子也是想再次说明思维的重要性。\n一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -326,7 +347,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
     </section>
 
@@ -637,5 +658,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>

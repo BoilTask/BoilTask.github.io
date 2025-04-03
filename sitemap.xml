@@ -6,27 +6,30 @@
     <lastmod>2015-11-18T05:21:05+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
-  </url><url>
-    <loc>https://boiltask.com/tags/blog/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/categories/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/post/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/tags/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/tags/blog/</loc>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/record/try-obsidian/</loc>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/categories/record/</loc>
+    <lastmod>2025-04-03T21:40:08+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/record/hugo-pangu/</loc>
     <lastmod>2025-04-03T09:06:12+08:00</lastmod>
   </url><url>
-    <loc>https://boiltask.com/categories/record/</loc>
-    <lastmod>2025-04-03T09:06:12+08:00</lastmod>
-  </url><url>
-    <loc>https://boiltask.com/tags/c/c&#43;&#43;/</loc>
+    <loc>https://boiltask.com/tags/cpp/</loc>
     <lastmod>2025-04-03T09:03:48+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/tags/unrealengine/</loc>
@@ -46,6 +49,15 @@
   </url><url>
     <loc>https://boiltask.com/ue/build-configuration/</loc>
     <lastmod>2025-03-05T12:42:21+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/ue/common-console-command/</loc>
+    <lastmod>2025-02-26T11:44:41+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/tags/svn/</loc>
+    <lastmod>2025-02-24T11:57:11+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/ue/blueprint-merge/</loc>
+    <lastmod>2025-02-24T11:57:11+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/knowledge/random-weight/</loc>
     <lastmod>2024-12-13T12:50:53+08:00</lastmod>
@@ -86,11 +98,53 @@
     <loc>https://boiltask.com/record/202411081/</loc>
     <lastmod>2024-11-08T12:46:38+08:00</lastmod>
   </url><url>
+    <loc>https://boiltask.com/record/talk-about-server/</loc>
+    <lastmod>2024-10-24T18:12:31+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/record/knowledge-tree/</loc>
+    <lastmod>2024-10-09T17:25:11+08:00</lastmod>
+  </url><url>
     <loc>https://boiltask.com/categories/qzone/</loc>
     <lastmod>2024-10-04T20:20:00+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/qzone/1728044081/</loc>
     <lastmod>2024-10-04T20:20:00+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/svn-revert/</loc>
+    <lastmod>2023-10-09T10:41:32+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/ue/find-module-reference/</loc>
+    <lastmod>2023-08-02T12:13:26+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/svn-merge/</loc>
+    <lastmod>2023-05-29T21:44:15+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/svn-switch-branch/</loc>
+    <lastmod>2023-03-13T23:14:21+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/svn-lock/</loc>
+    <lastmod>2023-03-13T19:35:21+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/ue/source-control-tool/</loc>
+    <lastmod>2023-03-13T19:33:24+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/ue/blueprint-diff/</loc>
+    <lastmod>2023-03-13T18:50:21+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/git-modify/</loc>
+    <lastmod>2023-02-16T19:02:13+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/record/summary-2021/</loc>
+    <lastmod>2022-11-03T09:06:12+08:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/notes/lua-design-implement-1/</loc>
+    <lastmod>2022-08-01T11:21:14+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/categories/notes/</loc>
+    <lastmod>2022-08-01T11:21:14+00:00</lastmod>
+  </url><url>
+    <loc>https://boiltask.com/knowledge/client-style-guide/</loc>
+    <lastmod>2021-05-10T21:34:36+08:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/tags/protobuf/</loc>
     <lastmod>2020-07-18T17:39:54+00:00</lastmod>
@@ -106,9 +160,6 @@
   </url><url>
     <loc>https://boiltask.com/record/202003081/</loc>
     <lastmod>2020-03-07T17:17:48+00:00</lastmod>
-  </url><url>
-    <loc>https://boiltask.com/categories/notes/</loc>
-    <lastmod>2019-11-14T11:00:24+00:00</lastmod>
   </url><url>
     <loc>https://boiltask.com/notes/100principles-2/</loc>
     <lastmod>2019-11-14T11:00:24+00:00</lastmod>

@@ -2,30 +2,51 @@
 <html lang="zh-CN" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="简介 在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。\n通过这两个属性，可以明确地知道：\n谁拥有Actor的主控权 Actor是否被复制 复制模式 首先一件要确定的事，就是谁拥有特定 actor 的主控权。要确定当前运行的引擎实例是否有主控者，需要查看 Role 属性是否为 ROLE_Authority。如果是，就表明这个运行中的 虚幻引擎 实例负责掌管此 actor（决定其是否被复制）。\n如果 Role 是 ROLE_Authority，RemoteRole 是 ROLE_SimulatedProxy 或 ROLE_AutonomousProxy，就说明这个引擎实例负责将此 actor 复制到远程连接。\n简单来说：\n对于单机模式，Actor的Role与RemoteRole很显然都是ROLE_Authority。\n对于网络模型下，Role代表本地对于Actor的角色，RemoteRole代表对端对于Actor的角色。\n下面将重点描述多人游戏时的相关机制。\n属性类型 ROLE_Authority 代表最高权限，通常是服务器持有的状态。\n如果客户端本地生成的一个不同步的Actor，其Role有可能也为ROLE_Authority，因为此时这个客户端对这个Actor具有绝对的权限。\nROLE_SimulatedProxy 被动模拟角色，由服务器控制，客户端仅接受同步数据。\n比如对于客户端A视角下的另一个角色，它的Role就有可能是ROLE_SimulatedProxy。\nROLE_AutonomousProxy 主控端角色，通常代表由客户端直接控制，服务器接收控制的输入来同步其状态。\n比如对于客户端A视角下的自身角色，它的Role就有可能是ROLE_AutonomousProxy，接收输入之后发给服务器更新其状态。\nRemoteRole与Role的区别 RemoteRole与Role对应，代表对端对Actor的角色定义，是Role的另一个视角。\n当Actor在服务器为ROLE_Authority，他在服务器上的RemoteRole为ROLE_SimulatedProxy，对应的客户端的Role为ROLE_SimulatedProxy，RemoteRole为ROLE_Authority。\n对于不同的数值观察者，它们的 Role 和 RemoteRole 值可能发生对调。\n注意这个可能的描述\n比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。\n角色组合 常见Role与RemoteRole的组合 本地Role 远程RemoteRole 场景说明 ROLE_Authority ROLE_SimulatedProxy 服务器视角，控制Actor，客户端仅接收同步数据（如NPC）。 ROLE_SimulatedProxy ROLE_Authority 客户端视角，客户端接收服务器同步的Actor（如静态场景物体）。 ROLE_AutonomousProxy ROLE_SimulatedProxy 客户端视角，客户端控制Actor，服务器同步其状态（如玩家角色）。 区分SimulatedProxy与AutonomousProxy 参考官方文档的描述，由于Actor的同步具有间隔，为了弥补这个缺陷，客户端在模拟时采取两种策略：\nROLE_SimulatedProxy通常直接根据服务器同步的信息进行模拟。\nROLE_AutonomousProxy通常会考虑客户端自身的输入，通过这部分输入来补足信息，而非只通过服务器的信息推算。\n参考文档 虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community ">
-<title>虚幻引擎中网络角色Role相关概念</title>
+<title>虚幻引擎中网络角色Role相关概念 - BoilTask&#39;s Blog</title>
 
 <link rel='canonical' href='https://boiltask.com/ue/network-role/'>
 
-<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中网络角色Role相关概念">
+<link rel="stylesheet" href="/scss/style.min.c48666a9bed7a90461589c11f316181f3cdd1fabaedaabc770d00b1c7a1d5d7e.css"><meta property='og:title' content="虚幻引擎中网络角色Role相关概念 - BoilTask's Blog">
 <meta property='og:description' content="简介 在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。\n通过这两个属性，可以明确地知道：\n谁拥有Actor的主控权 Actor是否被复制 复制模式 首先一件要确定的事，就是谁拥有特定 actor 的主控权。要确定当前运行的引擎实例是否有主控者，需要查看 Role 属性是否为 ROLE_Authority。如果是，就表明这个运行中的 虚幻引擎 实例负责掌管此 actor（决定其是否被复制）。\n如果 Role 是 ROLE_Authority，RemoteRole 是 ROLE_SimulatedProxy 或 ROLE_AutonomousProxy，就说明这个引擎实例负责将此 actor 复制到远程连接。\n简单来说：\n对于单机模式，Actor的Role与RemoteRole很显然都是ROLE_Authority。\n对于网络模型下，Role代表本地对于Actor的角色，RemoteRole代表对端对于Actor的角色。\n下面将重点描述多人游戏时的相关机制。\n属性类型 ROLE_Authority 代表最高权限，通常是服务器持有的状态。\n如果客户端本地生成的一个不同步的Actor，其Role有可能也为ROLE_Authority，因为此时这个客户端对这个Actor具有绝对的权限。\nROLE_SimulatedProxy 被动模拟角色，由服务器控制，客户端仅接受同步数据。\n比如对于客户端A视角下的另一个角色，它的Role就有可能是ROLE_SimulatedProxy。\nROLE_AutonomousProxy 主控端角色，通常代表由客户端直接控制，服务器接收控制的输入来同步其状态。\n比如对于客户端A视角下的自身角色，它的Role就有可能是ROLE_AutonomousProxy，接收输入之后发给服务器更新其状态。\nRemoteRole与Role的区别 RemoteRole与Role对应，代表对端对Actor的角色定义，是Role的另一个视角。\n当Actor在服务器为ROLE_Authority，他在服务器上的RemoteRole为ROLE_SimulatedProxy，对应的客户端的Role为ROLE_SimulatedProxy，RemoteRole为ROLE_Authority。\n对于不同的数值观察者，它们的 Role 和 RemoteRole 值可能发生对调。\n注意这个可能的描述\n比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。\n角色组合 常见Role与RemoteRole的组合 本地Role 远程RemoteRole 场景说明 ROLE_Authority ROLE_SimulatedProxy 服务器视角，控制Actor，客户端仅接收同步数据（如NPC）。 ROLE_SimulatedProxy ROLE_Authority 客户端视角，客户端接收服务器同步的Actor（如静态场景物体）。 ROLE_AutonomousProxy ROLE_SimulatedProxy 客户端视角，客户端控制Actor，服务器同步其状态（如玩家角色）。 区分SimulatedProxy与AutonomousProxy 参考官方文档的描述，由于Actor的同步具有间隔，为了弥补这个缺陷，客户端在模拟时采取两种策略：\nROLE_SimulatedProxy通常直接根据服务器同步的信息进行模拟。\nROLE_AutonomousProxy通常会考虑客户端自身的输入，通过这部分输入来补足信息，而非只通过服务器的信息推算。\n参考文档 虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community ">
 <meta property='og:url' content='https://boiltask.com/ue/network-role/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C/C&#43;&#43;' /><meta property='article:tag' content='UnrealEngine' /><meta property='article:published_time' content='2025-04-02T13:17:46&#43;08:00'/><meta property='article:modified_time' content='2025-04-02T13:17:46&#43;08:00'/>
-<meta name="twitter:title" content="虚幻引擎中网络角色Role相关概念">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='cpp' /><meta property='article:tag' content='unrealengine' /><meta property='article:published_time' content='2025-04-02T13:17:46&#43;08:00'/><meta property='article:modified_time' content='2025-04-02T13:17:46&#43;08:00'/>
+<meta name="twitter:title" content="虚幻引擎中网络角色Role相关概念 - BoilTask's Blog">
 <meta name="twitter:description" content="简介 在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。\n通过这两个属性，可以明确地知道：\n谁拥有Actor的主控权 Actor是否被复制 复制模式 首先一件要确定的事，就是谁拥有特定 actor 的主控权。要确定当前运行的引擎实例是否有主控者，需要查看 Role 属性是否为 ROLE_Authority。如果是，就表明这个运行中的 虚幻引擎 实例负责掌管此 actor（决定其是否被复制）。\n如果 Role 是 ROLE_Authority，RemoteRole 是 ROLE_SimulatedProxy 或 ROLE_AutonomousProxy，就说明这个引擎实例负责将此 actor 复制到远程连接。\n简单来说：\n对于单机模式，Actor的Role与RemoteRole很显然都是ROLE_Authority。\n对于网络模型下，Role代表本地对于Actor的角色，RemoteRole代表对端对于Actor的角色。\n下面将重点描述多人游戏时的相关机制。\n属性类型 ROLE_Authority 代表最高权限，通常是服务器持有的状态。\n如果客户端本地生成的一个不同步的Actor，其Role有可能也为ROLE_Authority，因为此时这个客户端对这个Actor具有绝对的权限。\nROLE_SimulatedProxy 被动模拟角色，由服务器控制，客户端仅接受同步数据。\n比如对于客户端A视角下的另一个角色，它的Role就有可能是ROLE_SimulatedProxy。\nROLE_AutonomousProxy 主控端角色，通常代表由客户端直接控制，服务器接收控制的输入来同步其状态。\n比如对于客户端A视角下的自身角色，它的Role就有可能是ROLE_AutonomousProxy，接收输入之后发给服务器更新其状态。\nRemoteRole与Role的区别 RemoteRole与Role对应，代表对端对Actor的角色定义，是Role的另一个视角。\n当Actor在服务器为ROLE_Authority，他在服务器上的RemoteRole为ROLE_SimulatedProxy，对应的客户端的Role为ROLE_SimulatedProxy，RemoteRole为ROLE_Authority。\n对于不同的数值观察者，它们的 Role 和 RemoteRole 值可能发生对调。\n注意这个可能的描述\n比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。\n角色组合 常见Role与RemoteRole的组合 本地Role 远程RemoteRole 场景说明 ROLE_Authority ROLE_SimulatedProxy 服务器视角，控制Actor，客户端仅接收同步数据（如NPC）。 ROLE_SimulatedProxy ROLE_Authority 客户端视角，客户端接收服务器同步的Actor（如静态场景物体）。 ROLE_AutonomousProxy ROLE_SimulatedProxy 客户端视角，客户端控制Actor，服务器同步其状态（如玩家角色）。 区分SimulatedProxy与AutonomousProxy 参考官方文档的描述，由于Actor的同步具有间隔，为了弥补这个缺陷，客户端在模拟时采取两种策略：\nROLE_SimulatedProxy通常直接根据服务器同步的信息进行模拟。\nROLE_AutonomousProxy通常会考虑客户端自身的输入，通过这部分输入来补足信息，而非只通过服务器的信息推算。\n参考文档 虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community ">
     <link rel="shortcut icon" href="/favicon.ico" />
 <style>
-   
-  body {
-    visibility: hidden;
-  }
+     
+    .main-container {
+        display: none;
+    }
 </style>
+
+<script>
+    let isShouldLoad = true;
+    setTimeout(() => {
+        if (isShouldLoad) {
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'flex';
+            }
+        }
+    }, 200); 
+</script>
+
 <script type="module">
-  import pangu from 'https://jspm.dev/pangu';
-  document.addEventListener('DOMContentLoaded', () => {
-    pangu.spacingPage();
-    document.body.style.visibility = 'visible';
-  });
+    import pangu from 'https://jspm.dev/pangu';
+    document.addEventListener('DOMContentLoaded', () => {
+        isShouldLoad = false
+        pangu.spacingPage();
+        const elements = document.getElementsByClassName("main-container")
+        for (let i = 0; i < elements.length; i++) {
+            elements[i].style.display = 'flex';
+        }
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay) {
+            loadingOverlay.style.display = 'none';
+        }
+    });
 </script>
 
     </head>
@@ -413,7 +434,7 @@
     
     <section class="article-tags">
         
-            <a href="/tags/c/c&#43;&#43;/">C/C&#43;&#43;</a>
+            <a href="/tags/cpp/">C/C&#43;&#43;</a>
         
             <a href="/tags/unrealengine/">UnrealEngine</a>
         
@@ -714,5 +735,42 @@
 </script>
 
 
+<div id="loadingOverlay">
+    <div class="loader"></div>
+    <p>加载中...</p>
+</div>
+<style>
+    #loadingOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        z-index: 9999;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #3498db;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
     </body>
 </html>
