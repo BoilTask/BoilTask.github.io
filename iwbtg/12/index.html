@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[12]从交换输出谈起 – 黑盒的漏洞">
 <meta name="twitter:description" content="本篇文章讲解题目：交换输出\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n这也是一道经典问题，今天就从它谈起。\n$a \\rightleftharpoons b$\n首先分析题目，下面这种写法肯定是错的。\n1 2 3 4 5 6 7 8 9 #include&lt;stdio.h&gt; int main() { int a,b; scanf(&#34;%d %d&#34;,&amp;a,&amp;b); a=b; b=a; printf(&#34;%d %d\\n&#34;,a,b); return 0; } 因为在a=b的时候，a的值已经被替换成b了。\n这个时候我们想，若把a的值提前记录下来便可以了。\n也就是int t=a;a=b;b=t;\n事实上，还有一种更为酷炫的不借助其它变量的写法如下。\n1 2 3 a+=b; b=a-b; a=a-b; 也就是直接把b的值存在a里面，然后a-b便是a的值——赋值给b，然后此时a-b便是b的值——赋值给a。\n同样按照这种思路，有依靠于二进制运算的更为酷炫的写法：\n1 2 3 a^=b; b^=a; a^=b; 因为对计算机来说二进制更为快速，所以这种写法也是更省时间的。\n下面还有一个最终版本。\n在前面说过，黑盒测试是给输入数据然后比较输出数据是否一样，而这一道问题的输出是a和b交换值之后输出a和b的值。\n那么我们便可以提交如下代码：\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { int a,b; scanf(&#34;%d %d&#34;,&amp;a,&amp;b); printf(&#34;%d %d\\n&#34;,b,a); return 0; } 同样是符合题意的一种代码。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -430,7 +443,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -440,6 +454,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -536,7 +551,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -590,7 +605,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -691,6 +706,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

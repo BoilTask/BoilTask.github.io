@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="游戏制作学习资料汇总">
 <meta name="twitter:description" content="美术 教你画像素画：每一个像素都有意义\n虚幻4渲染编程：在虚幻4中学习图形编程\n设计 笔记：游戏设计\n社区 [Project1（66RPG）]（https://rpg.blue）\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -366,7 +379,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -376,6 +390,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -420,7 +435,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -474,7 +489,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -575,6 +590,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

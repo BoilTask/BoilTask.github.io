@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="Hogo中Giscus配置">
 <meta name="twitter:description" content="在给博客配置评论区的时候，遇见了一些问题，记录一些。\n为何选择Giscus Stack这个主题默认的评论区是Disqus，但是Disqus是个国外的服务，而且需要收费，因此没有使用。\n同时，主题也支持了其他常见的评论区配置。我首先选择了之前经常注意到的Gitalk，使用Github的Issue来作为评论区的方式当时让人眼前一亮。\n不过配置的时候遇见了一些权限问题，发现Gitalk的权限有些不合理，评论者需要把自己的账号授权给博主来评论，理论上来说博主会获得一些不该有的登陆者的权限。 而且由于跨域问题，还需要找个处理跨域的代理，这又增添了一些隐私问题以及配置成本。\n最后选择了Giscus，它使用自己的App来作为权限拥有者，作为一个第三方，使用着只需要授权给这个应用即可完成Github的授权。\n同时使用起来也更方便和灵活。\n配置方式 在Github中安装Giscus 将仓库授权给应用 在Applications中找到Giscus 在Repository access中选择所存放评论的仓库 前往Giscus的官网继续完成配置 选择一个语言 在仓库中输入所授权的仓库，如：BoilTask/BoilTask.github.io 根据后续的配置描述选择自己所要的配置 在启用 giscus一项中查看所需要的配置 可以在需要的地方填写上生成的配置即可。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -373,7 +386,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -383,6 +397,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -479,7 +494,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -533,7 +548,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -634,6 +649,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="虚幻引擎中下载Lyra官方示例项目">
 <meta name="twitter:description" content="最近想要细研究一下UE5的官方示例项目Lyra，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。\n时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。\nLyra的项目目前可以在Fab中找到：https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0\n在虚幻引擎启动器Epic Games Launcher中，可以在库找到Lyra项目，创建项目即可。\n经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -325,7 +338,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -335,6 +349,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -362,51 +377,51 @@
             
                 
 <article class="">
+    <a href="/ue/ue-asan/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中ASan相关机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/network-role/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中网络角色Role相关概念</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/character-movement/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中角色移动相关机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
     <a href="/ue/actor-replication/">
         
         
 
         <div class="article-details">
             <h2 class="article-title">虚幻引擎中Actor复制流程</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/ue/network-start/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">虚幻引擎中网络相关机制</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/ue/editor-python/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">虚幻引擎中编辑器下Python的使用</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/ue/data-asset/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">虚幻引擎中DataAsset的使用</h2>
         </div>
     </a>
 </article>
@@ -431,7 +446,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -485,7 +500,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -586,6 +601,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

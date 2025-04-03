@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="程序员之路">
 <meta name="twitter:description" content="前几天看到有个回答，关于程序员提升过程的说法。\n学习编程，开发软件，过程大抵如下：\n看书，看视频，看博客，听课等等 对着书敲代码 脱离书自己敲代码 自己实现一些小DEMO 进项目看代码 在别人指点下写代码 自己独立在别人搭建好框架内填写代码 自己独立负责别人设计好的模块的实现 自己独立负责一个软件模块的设计和实现 负责较大软件模块，拆分模块，分子任务给他人 负责一个小项目，设计，拆分，分派任务 做较大的软件系统的架构设计 作者：安晓辉\n链接：https://www.zhihu.com/question/297309123/answer/537836889\n来源：知乎\n著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。\n想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。\n想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。\n如今，也算是梦想成真了一部分。\n未来，还需要继续努力呀~\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -350,7 +363,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -360,6 +374,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -371,6 +386,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/record/hugo-pangu/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">给HUGO博客引入pangu.js</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -430,7 +458,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -484,7 +512,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -585,6 +613,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

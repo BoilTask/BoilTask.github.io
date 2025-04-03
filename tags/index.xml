@@ -6,20 +6,28 @@
         <description>Recent content in Tags on BoilTask&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-CN</language>
-        <lastBuildDate>Wed, 05 Mar 2025 12:42:21 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>UnrealEngine</title>
-        <link>https://boiltask.com/tags/unrealengine/</link>
-        <pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate>
+        <lastBuildDate>Thu, 03 Apr 2025 09:06:12 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Blog</title>
+        <link>https://boiltask.com/tags/blog/</link>
+        <pubDate>Thu, 03 Apr 2025 09:06:12 +0800</pubDate>
         
-        <guid>https://boiltask.com/tags/unrealengine/</guid>
+        <guid>https://boiltask.com/tags/blog/</guid>
         <description></description>
         </item>
         <item>
         <title>C/C&#43;&#43;</title>
         <link>https://boiltask.com/tags/c/c&#43;&#43;/</link>
-        <pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate>
+        <pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate>
         
         <guid>https://boiltask.com/tags/c/c&#43;&#43;/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>UnrealEngine</title>
+        <link>https://boiltask.com/tags/unrealengine/</link>
+        <pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate>
+        
+        <guid>https://boiltask.com/tags/unrealengine/</guid>
         <description></description>
         </item>
         <item>

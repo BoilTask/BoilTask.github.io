@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="虚幻引擎中Actor复制流程">
 <meta name="twitter:description" content=" Detailed Actor Replication Flow暂时没有官方翻译，尝试理解顺便翻译一下。\n简介 Actor复制是一个详细的多步骤过程，其中网络驱动程序（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。\n大多数Actor的复制是在UNetDriver::ServerReplicateActors函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，UActorChannel::ReplicateActor 函数负责处理将特定Actor复制到某一通道的详细操作。\n重要属性 对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：\n属性 描述 AActor::NetUpdateFrequency 决定Actor复制的频率。 AActor::PreReplication 在任何复制操作发生之前调用。 AActor::bOnlyRelevantToOwner 如果该Actor只会复制给其拥有者，则为True。 AActor::IsRelevancyOwnerFor 当bOnlyRelevantToOwner为True时，决定Actor的相关性。 AActor::IsNetRelevantFor 当bOnlyRelevantToOwner为False时，决定Actor的相关性。 AActor::NetDormancy 决定Actor是处于休眠状态还是激活状态。 Actor复制流程概述 以下步骤构成了Actor复制过程的高级概述：\n确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。 将通过这些检查的Actors添加到一个列表中，准备进行复制。 遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。 按照优先级对每个连接的Actors进行排序。 确定该Actor是否对当前连接相关。 将该Actor复制到当前连接。 以下部分将提供上述Actor复制流程概述中每一步的详细描述。\n将Actor添加到待复制列表 此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 AActor::SetReplicates(true)）。对于每个正在复制的Actor，NetDriver 执行以下检查：\n判断当前Actor是否初始处于休眠状态（ENetDormancy::DORM_Initial）。 如果是休眠状态，则跳过该Actor。 检查当前Actor是否需要更新，具体通过检查 AActor::NetUpdateFrequency 属性。 如果不需要更新，则跳过该Actor。 如果 AActor::bOnlyRelevantToOwner 为 true，则检查该Actor的拥有连接的相关性，通过调用 AActor::IsRelevancyOwnerFor 来判断。 如果相关，则将其添加到该连接的“拥有者相关列表”中。 在这种情况下，该Actor只会发送给单个连接。 对于通过上述检查的每个Actor，调用 AActor::PreReplication。在 AActor::PreReplication 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 DOREPLIFETIME_ACTIVE_OVERRIDE 宏来控制Actor复制到哪些连接。 如果Actor通过了所有检查，将其添加到待复制列表中。\n遍历每个连接 接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -550,7 +563,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -560,6 +574,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -571,6 +586,45 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/ue/ue-asan/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中ASan相关机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/network-role/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中网络角色Role相关概念</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/ue/character-movement/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">虚幻引擎中角色移动相关机制</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -598,45 +652,6 @@
 </article>
 
             
-                
-<article class="">
-    <a href="/ue/data-asset/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">虚幻引擎中DataAsset的使用</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/ue/build-configuration/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">UnrealEngine虚幻引擎编译选项</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="">
-    <a href="/lyra/start-map/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Lyra的默认场景中关卡选择器的创建</h2>
-        </div>
-    </a>
-</article>
-
-            
         </div>
     </div>
 </aside>
@@ -656,7 +671,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -710,7 +725,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -811,6 +826,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

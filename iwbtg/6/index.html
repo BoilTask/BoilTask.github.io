@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[6]A×B的学问 – 较大数的处理">
 <meta name="twitter:description" content="本篇文章讲解题目：愿成其身A×B\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n对于这一题，因为C语言中用&quot;*&ldquo;号来表示乘法，所以我们很容易写出以下代码。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { int A,B; scanf(&#34;%d %d&#34;,&amp;A,&amp;B); printf(&#34;%d\\n&#34;,A*B); return 0; } 提交发现wrong answer答案错误。\n分析题目数据范围：$-10^9&lt;a,b&lt;10^9$。\n我们知道int类型在电脑中的范围是$-2^{32}\\leq int \\leq2^{32}-1$。\n大概约为2147483648～2147483647(PS：可以自己想办法求求看哦~)\n而很显然a,b是在int范围内的，那么为什么会出现答案错误呢……\n计算A×B的范围是$-10^{18}&lt;a,b&lt;10^{18}$。\n超出了int范围了！\n我们可以试着输入测试数据：\n100000000 100000000\n上述程序输出了错误答案……\n怎么解决呢？\n有一种比int类型范围更大的数据类型long long(__int64)类型。\n写成两种形式是因为C语言的标准不同，导致不同的编译器版本可能有不一样的规定，具体使用哪一种类型，需要查看OJ的FAQ，一般都会特别说明(此题所使用的OJ采取long long)。\nlong long的范围大概为$-2^{64}\\leq long long \\leq 2^{64}-1$。\n使用时与int类似，声明写为：\n1 long long a; 代表声明一个名称为a的long long型变量。\n在格式化输入输出函数里，正如%d代表int型，我们用%lld代表long long型(%I64d代表__int64型)。\n所以此题即可使用long long解决。\n因为若非必要，应该优先使用int型，所以若感觉此题可用int读取a,b，则也可进行解题。\n但输出时需要注意！\n如果写作\n1 printf(&#34;%lld\\n&#34;,a*b); 测试发现依旧会出现错误，因为编译器计算时，a与b都是int型，则a*b就会以int型计算，这样写只不过是把这个int型以long long型输出。\n而实际上，在a*b时就已经超过int型了，所以会出现错误答案，这就属于中间结果溢出。\n那么应该怎么写呢？\n我们可以使用类型转换写为：\n1 printf(&#34;%lld\\n&#34;,(long long)a*b); 此语句表示把a转换为long long类型，然后与b进行乘法运算，并且结果以long long型输出。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -410,7 +423,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -420,6 +434,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -516,7 +531,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -570,7 +585,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -671,6 +686,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

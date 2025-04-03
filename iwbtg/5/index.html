@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[5]数据类型 – 装数据的盒子">
 <meta name="twitter:description" content=" 凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。\n― 清·俞樾, 《群经平议·周官二》 0000|0000|0000|0000\r上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。\n首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&quot;0&quot;&ldquo;1&rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。\n原理就讲这么多，再往深层次的讲就跑题了。-.- 事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。\n了解了各种数据类型，我们也知道格式化输入输出函数。\n那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。\n后面还是以例题来从使用出发讲解各个常用的类型。\n参考文章：\nC语言基本数据类型简介 - onedime\nC语言基本数据类型详解 - woods2001的专栏\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -348,7 +361,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -358,6 +372,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -454,7 +469,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -508,7 +523,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -609,6 +624,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

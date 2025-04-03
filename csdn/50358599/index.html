@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="初识ACM——2015国庆培训">
 <meta name="twitter:description" content="(今天来找时间写写播客吧~)\n随着入学及军训期间的对ACM及C语言的了解\n我决定了国庆节假期提前回校两天参加ACM协会举办的C语言基础培训\n何家欢学长讲何谓语言：\n编程语言\n1.机器语言\n101010101010\n2.编汇语言\n1 add 2\n3.高级语言\n——面向过程——\nC\n——面向对象——\nC++\nC#\nJava\n数据类型：\nPrintf\n%x 16进制输出\n%d 10进制输出\n%c 字符\n%lf 小数输出\n0x 16进制\n08进制\ne-2 10的-2次方 科学计数法\n‘A’ 单引号里只能有一个字符\n“ab”双引号里可有字符串\n数组:\nA[10]\n一个10个元素的数组\n其中元素为 A[0]、A[1]~A[9]\n开启ACM之路！\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -365,7 +378,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -375,6 +389,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -471,7 +486,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -525,7 +540,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -626,6 +641,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

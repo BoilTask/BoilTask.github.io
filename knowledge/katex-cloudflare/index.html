@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="Cloudflare环境下开启Rocket Loader之后Katex失效问题">
 <meta name="twitter:description" content="在博客部署到线上之后，发现Katex公式无法正常显示，而相同的Html文件在本地环境下是可以正常显示的。\n其中解析的核心代码如下：\n1 2 3 4 5 6 7 8 9 10 11 window.addEventListener(&#34;DOMContentLoaded&#34;, () =&gt; { renderMathInElement(document.body, { delimiters: [ { left: &#34;$$&#34;, right: &#34;$$&#34;, display: true }, { left: &#34;$&#34;, right: &#34;$&#34;, display: false }, { left: &#34;\\\\(&#34;, right: &#34;\\\\)&#34;, display: false }, { left: &#34;\\\\[&#34;, right: &#34;\\\\]&#34;, display: true } ], ignoredClasses: [&#34;gist&#34;] }); }) 通过添加日志发现是DOMContentLoaded事件没有触发。\n但是一直没想到是什么原因，直到留意到了线上版本里&lt;script&gt;标签变成了形如&lt;script type=&quot;d6a94c0af8a975daac5bee56-text/javascript&quot;&gt;。\n最终回想起来是Cloudflare开启了Rocket Loader。\nRocket Loader是Cloudflare的一个功能，用于异步加载JavaScript，以提高页面加载速度。\n但是Rocket Loader可能会导致加载顺序变化从而导致某些JavaScript代码无法正常执行。\n暂时关闭了Rocket Loader，问题解决。\n也可以通过在标签里添加data-cfasync=&quot;false&quot;来禁用Rocket Loader，不过考虑还需要修改主题，暂时不做修改了。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -350,7 +363,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -360,6 +374,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -456,7 +471,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -510,7 +525,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -611,6 +626,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

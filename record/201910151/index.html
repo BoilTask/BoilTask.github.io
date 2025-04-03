@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="又一台跟了好久的主机到期了">
 <meta name="twitter:description" content="阿里云发来了一条续费通知……\n这一个应该是ECS里跟了我最久的一台主机了吧，主要运行了酷Q机器人相关的服务。\n在网络编程课程设计和Java课程设计里面，用过他当做运行Java的服务器。这么久的日子了，人生第一个可以称得上作品的项目，QQ机器人也跟随了这么久。随着已经很长时间没有进行维护了，但是一直半死不活地运行着，后边也写了HPU小助手这种小工具。\n那么……说声再见吧，有缘江湖不散~\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -341,7 +354,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -351,6 +365,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -362,6 +377,19 @@
     <h2 class="section-title">相关文章</h2>
     <div class="related-content">
         <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/record/hugo-pangu/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">给HUGO博客引入pangu.js</h2>
+        </div>
+    </a>
+</article>
+
             
                 
 <article class="">
@@ -421,7 +449,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -475,7 +503,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -576,6 +604,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

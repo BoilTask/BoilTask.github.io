@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="代码之髓：编程语言核心概念笔记">
 <meta name="twitter:description" content="第1章 如何深入高效地学习语言 在比较中学习多种语言时，一些知识能理解得更深刻。所谓语言不同，规则不同。\n知道了语言设计者为解决何种问题而创造了这种语言，以及这种语言经历过怎么样的历史变迁后，慢慢地就能理解为什么需要有这种功能了。\n了解了语言的历史，我们往往更能加深所学。\n第2章 程序设计语言诞生史 优秀的程序员具有三大美德： 懒惰、急躁和傲慢（Laziness, Impatience and Hubris）。\n“急躁”的意思是，程序员忍受不了程序执行的低效。\n“傲慢”的意思是，程序员容不得对错误不管不顾。\n“懒惰”的意思是，一项为了减少总能量支出，而不遗余力地努力的素质。\n程序设计语言是为了给人们带来便捷，但是何为便捷，语言不同，便捷的含义也各不相同。\n语言只是工具，要看通过使用它自己能做出多大成果，应当根据自己的实际情况选择好的工具。\n第3章 语法的诞生 语言设计者制定的规则就是语法。\n第4章 程序的流程控制 在提倡规则让读写程序更轻松的时代潮流中，结构化程序设计应运而生。\n第5章 函数 函数，即把代码的一部分视作有机整体，然后切分出来并为之命名的程序设计机制。\n把相同的操作封装在一起的好处不仅仅在于使程序更简短，也在于能使阅读程序的人无需反复读取相同内容的源代码。从冗长的程序中切分出反复使用的代码将其封装成一个整体，程序就更容易理解了。\n第6章 错误处理 程序在执行过程中也有可能出错，出错时如何处理（错误处理）很重要。错误处理的方法大体可分为两种：使用返回值和使用异常（异常处理）。\n为了提高软件的品质通过检查代码来确认程序员期待的程序行为，这一测评方法也是基于同样的想法。\n发生错误应该停止操作立刻报告，这一设计思想被称为错误优先（fail first）。\n第7章 名字和作用域 给内容或位置取个易于理解的名字，并用该名字来指示它们会更加方便。\n作用域是编写易于理解的代码的有力工具，很多地方都应用了这一概念。\n第8章 类型 类型是人们给数据附加的一种追加数据。\n需要有表示这个值为何种类型的额外的信息，这就是类型。\n第9章 容器和字符串 在不同的语言中，容器的名称不同，性质各异。\n根据容器的使用目的、使用方式和操作类型的不同，最适宜的容器类型也会相应地变化。\n这个地球不是单靠程序员运转的，现实中还有很多不依赖于程序实现方式的解决方案。\n第10章 并发处理 为了实现便利的并发处理，出现了进程和线程的概念。\n执行处理用的线路（CPU）只有一个，在人们察觉不到的极短间隔内交替进行多项处理，尽管在某一瞬间实际只进行一项处理，但人们会觉得似乎有多项处理在同时进行。\n在合适的节点自发进行交替，利用这种方法实现的多任务（并发处理）称为协作式多任务模式。有一个问题，有可能某个处理一直找不到合适的节点进行任务切换从而持续地进行，导致其他处理无法等到执行的机会。\n隔一定时间就进行交替，任务管理器在一定时间后强制中断现在正在进行的处理，以便允许其他程序执行。\n并行执行的两个处理之间出现竞态条件必须同时满足以下三个条件。\n两个处理共享变量 至少一个处理会对变量进行修改 一个处理未完成之前另一个处理有可能介入进来 人们在共享→非共享→共享、协调→非协调→协调、硬件→软件→硬件这样两种对立观念中左右摇摆，不单看片面而是兼顾两面，在平衡中灵活运用或许才是最为重要的。\n第11章 对象与类 在不同语言中，同一个用语的含义可能会有很大差别。\n在 C++ 语言里，类被定义为是“用户可自定义的类型”。\n类的存在只不过是因为人们觉得有了它编写程序会更方便些，而约定的一种事项。\nC++ 语言和 Java 语言的类具有以下几个作用：\n整合体的生成器 可行操作的功能说明 代码再利用的单位 第12章 继承与代码再利用 继承的实现策略大体可以分为三种。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -494,7 +507,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -504,6 +518,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -561,7 +576,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -615,7 +630,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -716,6 +731,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

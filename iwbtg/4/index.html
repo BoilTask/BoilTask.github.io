@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[4]从A+B谈起 – 一切的开端">
 <meta name="twitter:description" content="有人说：“程序员总难免开始于A+B。”\n说了这么多，我们还是停留在“定量”阶段。前面说过，黑盒测试应该是根据系统给的输入数据来进行输出数据的比较。那么，如何获取输入数据呢？\n在stdio.h中，与格式化输出printf()相对的，有格式化输入scanf()。\n对比一下两者的标准格式。\nprintf(格式化文本,参数1,参数2,……);\n其中格式化文本控制了输出的格式，在其中可以使用如&quot;%d&quot;这样的格式说明来替换后面的参数，第几个%d便可以指定使参数几替换它。\n这样说有点绕……\n例如：printf(&quot;%d&quot;,1); 的输出结果便是 1\n如果参数是个变量，比如提前建立一个整型的变量a=5(int a = 5 ;)。\n那么：printf(&quot;%d&quot;,a); 的输出结果便是 5\n1 2 3 4 5 6 #include&lt;stdio.h&gt; int main() { int a=5; printf(&#34;%d\\n&#34;,a); return 0; } 同理，对于scanf()函数。\nscanf(格式化文本,参数1,参数2,……);\n格式化文本代表输入的格式，参数1、2……代表变量的地址。\n-.-好 什么叫地址？暂且理解为门牌号吧。\n同样的建立一个整型的变量a，然后从键盘读取一个数赋值给他。\nscanf(&quot;%d&quot;,&amp;a);\n好，&amp;是什么意思？\n&amp;a也就是取a变量的地址，这句话的意思就是从键盘读取一个数存储到a的地址。那么很显然，a变量的值也就变成了从键盘读取的值。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { int a; scanf(&#34;%d&#34;,&amp;a); printf(&#34;%d\\n&#34;,a); return 0; } PS：试一试从键盘输入1234567890987654321会出现什么结果，思考为什么。\n了解了如何读取数据，就可以尝试完成这道A+B问题了。\n每个OJ都要有A+B\n同样的，还是请先尝试之后再继续阅读。\n对于这一题……\n没什么说的-.-科科\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -395,7 +408,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -405,6 +419,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -501,7 +516,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -555,7 +570,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -656,6 +671,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

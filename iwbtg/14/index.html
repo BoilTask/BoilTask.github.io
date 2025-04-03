@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[14]for循环 – 另一种表达方法">
 <meta name="twitter:description" content="本篇文章讲解题目：大学求和1到n\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n依旧是一道小学题目。\n本篇文章有过激言论，请谨慎阅读。\n这一题一般常用做初讲for循环的例题，而这道题也确实很合适，因为这标志着思考问题解决方案的可行性，由优先思考数学方法转变为思考时间复杂度。\n而有争议的地方，便是for循环的写法。\n首先是基本结构如下：\n1 2 3 for(/*起始语句*/; /*判断语句*/; /*修正语句*/) { /*循环语句*/ } 同样画出它的流程图：\n(参考文章《for,(do-)while的循环体执行》)\nfor循环比while好在它能清晰的操作循环变量，比如下面代码：\n1 2 3 4 int i; for(i=0; i&lt;n; i++) { /*循环语句*/ } 这便是让循环语句循环n次的写法，同样的操作可写为while(n&ndash;)。\n但是如果我们在循环中用到了i，比如我们想让奇数次时执行某一语句，偶数时执行另一语句，就可以写为：\n1 2 3 4 5 6 7 8 int i; for(i=0; i&lt;n; i++) { if(i%2==0) { /*偶数时操作*/ } else { /*奇数时操作*/ } } 所以具体什么时候该用哪种循环，取决于哪一种可以使代码简洁、写起来方便，可以进行互相转换。\n上边代码就等同于：\n1 2 3 4 5 6 7 8 9 int i=0; while(i&lt;n) { if(i%2==0) { /*偶数时操作*/ } else { /*奇数时操作*/ } i++; } 而至于for循环有争议的地方，便是for循环中的i=0。\n在C++中，我们可以在循环的初始语句里写成：for(int i=0; i&lt;n; i++)，也就是把定义变量放在循环内部，这样的话变量作用范围就仅限于这个循环里面。如此做，可以防止循环与循环之间的干扰，特别是需要函数互相调用时，防止变量因为已被占用而发生错误。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -445,7 +458,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -455,6 +469,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -551,7 +566,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -605,7 +620,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -706,6 +721,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="C++中static关键字用法总结">
 <meta name="twitter:description" content="修饰普通变量 修改变量的存储区域和生命周期，使变量存储在静态区，在 main 函数运行前就分配了空间，如果有初始值就用初始值初始化它，如果没有初始值系统用默认值初始化它。\n普通变量，当程序执行到它的定义处时，为其在栈上分配空间，在函数执行结束时被释放掉。使用static修饰变量，可以使得函数中的值保存至下一次调用。\nstatic修饰的静态局部变量只执行初始化一次，而且延长了局部变量的生命周期，直到程序运行结束以后才释放。\n1 2 3 4 5 6 7 8 9 10 11 12 #include &lt;iostream&gt; using namespace std; void staticLocalVar() { static int a = 0; // 运行期时初始化一次, 下次再调用时, 不进行初始化工作 cout &lt;&lt; &#34;a=&#34; &lt;&lt; a &lt;&lt; endl; ++a; } int main() { staticLocalVar(); // 第一次调用, 输出a=0 staticLocalVar(); // 第二次调用, 记忆了第一次退出时的值, 输出a=1 return 0; } 修饰普通函数 表明函数的作用范围，仅在定义该函数的文件内才能使用。在多人开发项目时，为了防止与他人命名空间里的函数重名，可以将函数定位为static。\n修饰成员变量 修饰成员变量使所有的对象只保存一个该变量，而且不需要生成对象就可以访问该成员。\nC++中需要一个数据对象为整个类服务，可将其定义为静态数据。\n比如一个类的所有对象都要调用的值，设为static后只需要修改这个值，就能使得所有对象都可以使用新值。\n修饰成员函数 修饰成员函数使得不需要生成对象就可以访问该函数，但是在static函数内不能访问非静态成员。\nstatic与const static const等价于const static，修饰成员变量把二者结合起来理解。\n不可以同时用const和static修饰成员函数，二者的含义矛盾。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -330,7 +343,7 @@
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-c++" data-lang="c++"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+<pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="nf">staticLocalVar</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">static</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  <span class="c1">// 运行期时初始化一次, 下次再调用时, 不进行初始化工作
@@ -403,7 +416,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -413,6 +427,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -509,7 +524,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -563,7 +578,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -664,6 +679,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】导读目录">
 <meta name="twitter:description" content=" 本系列文章中涉及到的图片与链接因为年久可能出现失效，有需要可联系作者交流。\n====入门导读===== 电子科技大学CDOJ：\n【Step-By-Step】\nhttps://acm.uestc.edu.cn/\n南阳理工学院NYOJ：\n【进阶计划】\nhttp://acm.nyist.net/JudgeOnline/step.php\n====愿成其身===== 【前言】 I wanna be the guy\n【入门】 工欲善其事，必先利其器\n有趣的练习方式 – OnlineJudge\n转义字符 – 格式化输出\n从A+B谈起 – 一切的开端\n数据类型 – 装数据的盒子\nA×B的学问 – 较大数的处理\n整数的魅力 – 数字的最后一位\n实数的运用 – 整数化作的实数\n分支结构 – 程序的魅力\n问号表达式 – 酷炫的利器\n字符的本质 – ASCII的作用\n从交换输出谈起 – 黑盒的漏洞\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -427,7 +440,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -437,6 +451,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -533,7 +548,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -587,7 +602,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -688,6 +703,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[8]实数的运用 – 整数化作的实数">
 <meta name="twitter:description" content="本篇文章讲解题目：愿成其身A÷B\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n我们知道C语言中用&quot;/&ldquo;来表示相除，整数的除法是采用的舍尾的方式。\n$5 \\div 2 = 2 \\ldots \\ldots 1$\n$5 / 2 = 2$\n所以对于这一题来说，题目要求输出A÷B的结果并保留到整数位。\n如果写成A/B，A,B都是整数的话，那么会得出结果的整数部分，小数部分会被舍弃，而这一题应该四舍五入。\n所以如下面代码是错误的。\n1 2 3 4 5 6 7 #include&lt;stdio.h&gt; int main() { int A,B; scanf(&#34;%d %d&#34;,&amp;A,&amp;B); printf(&#34;%d\\n&#34;,A/B); return 0; } 为了表示小数，我们可以使用double(float因为精度问题一般不使用)。\n提到了精度问题，请百度double的注意事项，应重点关注double的表示范围与计算误差。\n在这里暂时不对这一问题进行深入研究。\n声明一个double型变量依旧类似。\n1 double a; 在格式化输入输出里用%lf表示(有些标准对于有些情况使用%f，但一般统一写作%lf)。\n那么如何表示精确到整数呢？\n我们可以使用printf(&rdquo;%.lf\\n&quot;,a);\n可以注意到在%与lf中间加了一个点，这个便表示四舍五入到整数输出。\n这也是格式化输出的一种运用，在后面会再细讲。\n类似的还有：\nprintf(&quot;%.2lf\\n&quot;,a); 四舍五入到小数点后两位数字输出。\nprintf(&quot;%.3lf\\n&quot;,a); 四舍五入到小数点后三位数字输出。\n等等……\n还有一点需要注意：\n此题的的输入数据描述，由两个整数变为了两个数。\n所以输入数据有可能为小数，这个时候便不可以用整数来读取。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -386,7 +399,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -396,6 +410,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -492,7 +507,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -546,7 +561,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -647,6 +662,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

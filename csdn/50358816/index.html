@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="初识ACM——崭露头角">
 <meta name="twitter:description" content="在写代码时被一学长看见在南阳OJ上做题\n于是被夸了两句~当时心情好激动哦\n于是摸到了求绝对值的题秒写代码！\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 #include&lt;stdio.h&gt; int main() { double n; while(scanf(&#34;%lf&#34;,&amp;n)!=EOF) if(n&gt;0) { printf(&#34;%.2lf\\n&#34;,n); } else { printf(&#34;%.2lf\\n&#34;,n=-n) ; } return 0; } 话说我起这个题目就放这个代码合适吗……\n-.-\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -364,7 +377,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -374,6 +388,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -470,7 +485,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -524,7 +539,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -625,6 +640,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

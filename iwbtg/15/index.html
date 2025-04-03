@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[15]思维的优化 – 数学的魅力">
 <meta name="twitter:description" content="本篇文章讲解题目：小学求和1到n\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n注意观察这道题与上一个求和的差别。\n首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。\n我们只需要读取一个变量T记录组数，然后使用语句：\n1 2 3 while(T--) { } 在大括号里写程序即可。\n这道题给的范围为$0 &lt; n &lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次\n评测机一秒大概可运行$10 ^ 7 \\sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的\n(推荐先自己查阅时间复杂度相关资料)\n事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。\n当然，还需要注意数据范围的问题。\n再次举这一题的例子也是想再次说明思维的重要性。\n一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -359,7 +372,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -369,6 +383,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -465,7 +480,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -519,7 +534,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -620,6 +635,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

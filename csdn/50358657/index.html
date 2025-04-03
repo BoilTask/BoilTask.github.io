@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="初识ACM——伪病毒与真崩溃">
 <meta name="twitter:description" content="何家欢学长为吸引同学们兴趣\n展示了一个C语言程序如下：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include &lt;stdio.h&gt; #include &lt;stdlib.h&gt; int main() { int a,n; printf(&#34;1.关机\\n&#34;); printf(&#34;2.崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -s -t 120&#34;); else if (a==2) { for(n=0; n&lt;10; n++) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 然后提示如果把关机或者崩溃的参数修改便会给用户带来麻烦\n(这个代码是我自己根据效果写的……学长才不会没节操的传播呢)\n然后坏坏的我写下了一个真的有麻烦的代码……\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt; #include&lt;stdlib.h&gt; int main() { int a,n=0; printf(&#34;1.真关机\\n&#34;); printf(&#34;2.真崩溃！\\n&#34;); printf(&#34;\\t——BoilTask\\n&#34;); printf(&#34;你的选择:&#34;); scanf(&#34;%d&#34;,&amp;a); if(a==1) system(&#34;shutdown -p&#34;); else if (a==2) { while(n&lt;1) system(&#34;start&#34;); } else { printf(&#34;你输入的格式有错误哦~&#34;); }; return 0; } 话说那段时间关机都直接帅帅地运行这个程序来关机-.-\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -423,7 +436,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -433,6 +447,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -529,7 +544,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -583,7 +598,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -684,6 +699,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

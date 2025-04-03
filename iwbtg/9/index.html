@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[9]分支结构 – 程序的魅力">
 <meta name="twitter:description" content="本篇文章讲解题目：两数的距离\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n由数学知识得，两点在数轴对应点的距离为$\\left| x_{1}-x_{2}\\right|$。\n相减没什么难度，所以这一题实际上在于求绝对值。\n事实上，这是一个逻辑问题，也就是如果a&lt;0，那么应该输出-a，如果a&gt;0，那么应该输出a，如果a=0，那么应该输出0。\nC语言对于分支结构有两种常用表达：\n是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。\nif-else的大概结构如下：\n1 2 3 4 5 6 7 if(/*条件1*/) { /*语句1*/ } else if(/*条件2*/) { /*语句2*/ } else { /*语句3*/ } if顾名思义，是如果的意思，这段代码的意思也就是：\n如果条件1成立执行语句1；如果条件2成立执行语句2；否则执行语句3。\n若条件下只有一条语句，则大括号可以省略。\n若一个条件下有多条语句，则大括号不可省略(因为如果省略，编译器便把它当成只有一条语句在该条件下)。\n所以这道题的代码就很好写了。\n数据范围很小，用int型就足够了，然后就是进行判断求解。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -368,7 +381,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -378,6 +392,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -474,7 +489,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -528,7 +543,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -629,6 +644,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

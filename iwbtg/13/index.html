@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[13]循环结构 – 计算机的神奇">
 <meta name="twitter:description" content="本篇文章讲解题目：蜗牛爬树\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n一道小学数学题，但对于计算机来说，却是直接模拟这一过程更为简洁。\n很明显的一个思路是，对高度不断模拟上升下落的这一过程，然后统计次数，直到高度达到树的高度。\n简单的画一个流程图：\n分析可以发现，这里的循环是由一个条件控制的。如果满足某一条件则一直循环，否则退出循环。\n在C语言里，这种形式可以使用while语句表达，其基本形式为：\n1 2 3 while(/*条件*/) { /*语句*/ } 可以发现与if语句形式类似，也是很好理解，若满足条件，则不断执行语句，每次执行之后判断条件是否成立，然后选择继续执行或者跳出循环。\n有了上面的基础知识，我们再来思考这道题，发现上面的程序流程图对于一些情况是没有考虑到的。\n首先是Impossible不可能的情况，下降比上升的幅度还大，那么很显然是不可能的。但是有一种却要排除在外，也就是第一天白天就能够爬到树顶的情况，那么应该输出1。 考虑到如果白天就爬到，那么晚上就不用掉落，很显然我们在白天爬完之后应该判断，是否已经到了树顶，如果到了，那么就不需要晚上掉落这一部分了。 加上这些考虑，我们改进流程图如下： 有了这些思考，AC还是件难事吗-.-。\n嗯……似乎还有些问题。\n首先是对于输出不可能判定的条件有两个，在C语言里我们使用两个&amp;号，也就是“&amp;&amp;”来表示并且，而用“||”来表示或者。这个条件就可以写为n&lt;h&amp;&amp;n≤m。\n再来是循环内的判断，如何终止循环呢？我们可以使用continue与break来控制循环。\ncontinue的作用是跳过continue下面的部分直接回到循环条件那里判断是否需要进行下一次循环。\nbreak的作用就是直接跳出循环。\n测试代码：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt; int main() { int T=10; while(T--) { /* if(T==5) continue; */ /* if(T==5) break; */ printf(&#34;%d\\n&#34;,T); } return 0; } 这里还顺带写了while的一种常见用法while(T&ndash;)，可先自己理解理解其中含义，在后面输入输出系列中会详细说明。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -442,7 +455,8 @@
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -452,6 +466,7 @@
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -548,7 +563,7 @@
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -602,7 +617,7 @@
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -703,6 +718,7 @@
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>

@@ -14,6 +14,19 @@
 <meta name="twitter:title" content="【愿成其身】[7]整数的魅力 – 数字的最后一位">
 <meta name="twitter:description" content="本篇文章讲解题目：最后一位\n推荐先独立进行解题尝试，然后再阅读本篇讲解！\n在C语言中，除了加减乘除运算之外，还有一个较为常用的运算，取余&quot;%&quot;。\n$$5 \\% 2 = 1$$由数学知识得，一个整数对10取余即可得到最后一位数字。\n$$12345 \\% 10 = 5$$这一题便可使用这一种方法轻松得出答案。\n从上一篇文章中学到，这里如果计算A×B的话，依旧应该使用long long，然后对结果进行取余运算即可。\n1 printf(&#34;%d\\n&#34;,(A*B)%10); 因为最后一位数字肯定是int范围内的数字，所以可以直接以int型输出。\n对于这一题来说还有一种避免使用long long的方法。\n我们想到，对于乘法，其结果的最后一位只取决于A和B的最后一位，所以我们可以先分别求出A与B的最后一位，然后求出最后一位相乘的最后一位。\n这种把$\\left( A\\times B\\right) \\% 10$转变为$\\left[ \\left( A\\% 10 \\right) \\times \\left( B\\% 10 \\right) \\right] \\% 10$的思维，对于ACM来说很重要，因为通过各种转化，我们可以突破题目的一些数据限制，从而得到正确答案。\n思考，若题目的数据范围是$0 \\leq a,b \\leq 10^{18}$，那么我们便不能使用第一种方法，而使用后一种方法便可以轻松得到正确答案。\n这才是这一题的意义！\n">
     <link rel="shortcut icon" href="/favicon.ico" />
+<style>
+   
+  body {
+    visibility: hidden;
+  }
+</style>
+<script type="module">
+  import pangu from 'https://jspm.dev/pangu';
+  document.addEventListener('DOMContentLoaded', () => {
+    pangu.spacingPage();
+    document.body.style.visibility = 'visible';
+  });
+</script>
 
     </head>
     <body class="
@@ -354,7 +367,8 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
                 >
             </script><script>
     window.addEventListener("DOMContentLoaded", () => {
-        renderMathInElement(document.body, {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "$", right: "$", display: false },
@@ -364,6 +378,7 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
             ignoredClasses: ["gist"]
         });})
 </script>
+
     
 </article>
 
@@ -460,7 +475,7 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
     data-emit-metadata="0"
     data-input-position="top"
     data-theme="light"
-    data-lang="zh-CN"
+    data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
@@ -514,7 +529,7 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
         
             <a href='https://beian.miit.gov.cn/' target='_blank' rel='noopener'>豫ICP备15024677号-1</a> <br/>
         使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
-        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.29.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
     </section>
 </footer>
 
@@ -615,6 +630,7 @@ $$12345 \% 10 = 5$$<p>这一题便可使用这一种方法轻松得出答案。<
         document.head.appendChild(customFont);
     }());
 </script>
+
 
     </body>
 </html>
