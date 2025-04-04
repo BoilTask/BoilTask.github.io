@@ -1,420 +1,335 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>人生记录 on BoilTask&#39;s Blog</title>
-        <link>https://boiltask.com/categories/record/</link>
-        <description>Recent content in 人生记录 on BoilTask&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-CN</language>
-        <lastBuildDate>Thu, 03 Apr 2025 21:40:08 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/record/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>尝试Obsidian与Hugo结合</title>
-        <link>https://boiltask.com/record/try-obsidian/</link>
-        <pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/try-obsidian/</guid>
-        <description>&lt;p&gt;之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p&gt;
-&lt;p&gt;之前一直觉得Obsidian作为一个本地存档的笔记软件，功能也没有Notion强大，还需要自己处理同步等问题，应该是没什么优势。&lt;/p&gt;
-&lt;p&gt;不过上次折腾起来Hugo之后，越发感觉笔记这种东西，还是返璞归真比较适合我，要不太容易忙于折腾样式、排版什么的问题而分心。到最后发现，除了设计好的模板，其实真正的内容没有多少。&lt;/p&gt;
-&lt;p&gt;下载下来Obsidian之后，发现他和Hugo的工作流意外的搭。使用Obsidian来管理工作区，比用专注编码的IDE要更适合文档类的整理工作。虽然这样以来又有些浪费“重金”买的Typora，不过总算也是能物尽其用吧。&lt;/p&gt;
-&lt;p&gt;说起来作为Typora刚出付费方案就首发入手的用户，好像自从买了就没大用过……反倒是之前免费的时候，还拿来写过一些东西。&lt;/p&gt;
-&lt;p&gt;使用Obsidian打开Hugo的文件夹，正常在&lt;code&gt;content&lt;/code&gt;路径写内容，然后把一些不需要上传到博客上的文章，还有一些Hugo不支持的文章放在单独的文件夹中即可。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>给Hugo博客引入pangu.js</title>
-        <link>https://boiltask.com/record/hugo-pangu/</link>
-        <pubDate>Thu, 03 Apr 2025 09:06:12 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/hugo-pangu/</guid>
-        <description>&lt;p&gt;之前经常纠结中英文混排时的排版问题，因此引入了&lt;code&gt;pangu.js&lt;/code&gt;来优化排版效果。&lt;/p&gt;
-&lt;p&gt;官方仓库：&lt;a class=&#34;link&#34; href=&#34;https://github.com/vinta/pangu.js&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;vinta/pangu.js: Paranoid text spacing in JavaScript&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;调用&lt;code&gt;pangu.autoSpacingPage()&lt;/code&gt;即可将页面转换为美化之后的结果。&lt;/p&gt;
-&lt;p&gt;由于&lt;code&gt;JS&lt;/code&gt;的加载与处理需要时间，直接这么写的话，体验上是用户会先看到处理前的页面，然后短暂停留后刷新为新内容，这就导致体验上很奇怪。&lt;/p&gt;
-&lt;p&gt;解决思路的话，可以考虑先隐藏页面，等&lt;code&gt;DOM&lt;/code&gt;加载完，先进行&lt;code&gt;pangu.js&lt;/code&gt;的处理，完毕后再重新显示页面。&lt;/p&gt;
-&lt;p&gt;为了避免第一次加载较久，还可以加一个Loading效果。&lt;/p&gt;
-&lt;p&gt;需要注意&lt;code&gt;autoSpacingPage&lt;/code&gt;函数会异步处理，可以改为阻塞版本的&lt;code&gt;spacingPage&lt;/code&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;参考代码&#34;&gt;&lt;a href=&#34;#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;参考代码
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;loadingOverlay&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;loader&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;加载中...&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;#&lt;/span&gt;&lt;span class=&#34;nn&#34;&gt;loadingOverlay&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;position&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;fixed&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;left&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;background&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;rgba&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;255&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.9&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;z-index&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;9999&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;justify-content&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;align-items&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;center&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;flex-direction&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;column&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;loader&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;border&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;solid&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#f3f3f3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;border-top&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;solid&lt;/span&gt; &lt;span class=&#34;mh&#34;&gt;#3498db&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;border-radius&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;width&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;height&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;60&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;px&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;animation&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;spin&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;linear&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;infinite&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;keyframes&lt;/span&gt; &lt;span class=&#34;nt&#34;&gt;spin&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;rotate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nt&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;transform&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;rotate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;360&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;deg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c&#34;&gt;/* 初始隐藏页面内容，避免显示未经处理的文本 */&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nc&#34;&gt;main-container&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;display&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;none&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;isShouldLoad&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nx&#34;&gt;setTimeout&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;isShouldLoad&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;loadingOverlay&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                &lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;display&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;flex&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;200&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 0.2秒如果还没有加载完成就开启Loading  
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;module&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kr&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;pangu&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://jspm.dev/pangu&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;addEventListener&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;DOMContentLoaded&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;isShouldLoad&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;false&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nx&#34;&gt;pangu&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;spacingPage&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;elements&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementsByClassName&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;main-container&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;let&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;elements&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;length&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;elements&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;].&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;display&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;flex&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;kr&#34;&gt;const&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;document&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;getElementById&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;loadingOverlay&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;nx&#34;&gt;loadingOverlay&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;display&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;});&lt;/span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;script&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>又双叒叕一次重新梳理了一下博客</title>
-        <link>https://boiltask.com/record/202411081/</link>
-        <pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/202411081/</guid>
-        <description>&lt;p&gt;最近在整理之前写的事件系统：&lt;a class=&#34;link&#34; href=&#34;https://www.fab.com/zh-cn/listings/a3991470-a7b9-474d-8038-289dad0b0497&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;DidaEvent&lt;/a&gt;，为此创建了一个&lt;a class=&#34;link&#34; href=&#34;https://event.didapipa.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;文档&lt;/a&gt;网站。 使用了&lt;code&gt;Hugo&lt;/code&gt;来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code&gt;WordPress&lt;/code&gt;迁移到&lt;code&gt;Hugo&lt;/code&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;为什么要迁移&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%bf%81%e7%a7%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么要迁移
-&lt;/h2&gt;&lt;p&gt;本身其实对静态建站方案是比较排斥的，一是和传统的直接在线编辑的方式比没有那么直观，二来有服务器的方案感觉也更加灵活。&lt;/p&gt;
-&lt;p&gt;但是自己维护服务器的成本相对还是比较高的，虽然使用了&lt;code&gt;WordPress&lt;/code&gt;，但本身我对&lt;code&gt;PHP&lt;/code&gt;的发展也不太看好，而且相对来说也过于重了。&lt;/p&gt;
-&lt;p&gt;经过过去的经验，服务器往往由于续费、维护等原因需要迁移，这就导致每次博客都需要重新折腾一番。让写作这件事情也变得成本更高，也很难坚持下来。&lt;/p&gt;
-&lt;p&gt;因此使用类似于&lt;code&gt;Hugo&lt;/code&gt;之类的静态建站方案就突显出了优势，一是有免费的托管方案，二来直接&lt;code&gt;Markdown&lt;/code&gt;的写作方式，也能更灵活的运用起来手头的工具。&lt;/p&gt;
-&lt;p&gt;而且真需要一些特殊的模块，其实也可以自己自定义一些空间和页面，因此应该也可以符合目前的需求。&lt;/p&gt;
-&lt;h2 id=&#34;为什么选择hugo&#34;&gt;&lt;a href=&#34;#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9hugo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;为什么选择Hugo
-&lt;/h2&gt;&lt;p&gt;备选的静态网站生成器有很多，比如&lt;code&gt;Jekyll&lt;/code&gt;、&lt;code&gt;Hexo&lt;/code&gt;等等，为什么选择&lt;code&gt;Hugo&lt;/code&gt;呢？&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Hexo&lt;/code&gt;是用的&lt;code&gt;Node.js&lt;/code&gt;，生成速度较慢，因此不再考虑了。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Jekyll&lt;/code&gt;具有Github的官方支持，可以直接在&lt;code&gt;Github&lt;/code&gt;上部署。但是尝试了一个&lt;code&gt;Jekyll&lt;/code&gt;的主题，感觉太复杂了。
-而且其实我是希望数据源与最后生成的文件分开的，这样也方便管理。&lt;/p&gt;
-&lt;p&gt;最后选择了&lt;code&gt;Hugo&lt;/code&gt;，一是有合适的主题，二来生成速度快，三来使用的&lt;code&gt;Golang&lt;/code&gt;语言也是我比较看好的一种语言。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DidaEvent&lt;/code&gt;的文档使用的主题是&lt;a class=&#34;link&#34; href=&#34;https://github.com/thuliteio/doks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Doks&lt;/a&gt;，博客使用的主题是&lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Stack&lt;/a&gt;。&lt;/p&gt;
-&lt;h2 id=&#34;迁移过程&#34;&gt;&lt;a href=&#34;#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;迁移过程
-&lt;/h2&gt;&lt;p&gt;简单的部署好框架后，感觉整体还是比较满意的。&lt;/p&gt;
-&lt;p&gt;剩下的就是需要迁移原先&lt;code&gt;WordPress&lt;/code&gt;的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class=&#34;link&#34; href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;wordpress-to-hugo-exporter&lt;/a&gt;。
-经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p&gt;
-&lt;p&gt;不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p&gt;
-&lt;h2 id=&#34;评论区配置&#34;&gt;&lt;a href=&#34;#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;评论区配置
-&lt;/h2&gt;&lt;p&gt;评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/knowledge/hugo-giscus/&#34; &gt;Hogo中Giscus配置&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>谈谈对服务器的认识</title>
-        <link>https://boiltask.com/record/talk-about-server/</link>
-        <pubDate>Thu, 24 Oct 2024 18:12:31 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/talk-about-server/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;一个写一半的文章，有缘后补。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一个客户端程序，图像感弱，一心想做服务器。&lt;/p&gt;
-&lt;p&gt;心路历程：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;多线程
-&lt;ul&gt;
-&lt;li&gt;意义&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;网络
-&lt;ul&gt;
-&lt;li&gt;Socket如何编写&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;如何部署
-&lt;ul&gt;
-&lt;li&gt;单机承载&lt;/li&gt;
-&lt;li&gt;分布式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;可扩展性
-&lt;ul&gt;
-&lt;li&gt;先实现基础功能→随着需求演变扩展（承载力、鲁棒性等）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        </item>
-        <item>
-        <title>人生知识树</title>
-        <link>https://boiltask.com/record/knowledge-tree/</link>
-        <pubDate>Wed, 09 Oct 2024 17:25:11 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/knowledge-tree/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;随着灵感逐步更新，主要用于记录一下感觉这辈子应该学的东西……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;思维导图&#34;&gt;&lt;a href=&#34;#%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;思维导图
-&lt;/h2&gt;&lt;pre class=&#34;mermaid&#34;&gt;
-  mindmap
-  root((知识树))
-    TEMP
-    编程语言
-      C++
-	      Boost
-		      asio
-		      system
-	      gdb
-      Python
-      Java
-      TypeScript
-      Golang
-      Lua
-    服务器
-	    分布式架构
-	    数据库
-		    Mongo
-		    Redis
-&lt;/pre&gt;
-
-</description>
-        </item>
-        <item>
-        <title>2021总结</title>
-        <link>https://boiltask.com/record/summary-2021/</link>
-        <pubDate>Thu, 03 Nov 2022 09:06:12 +0800</pubDate>
-        
-        <guid>https://boiltask.com/record/summary-2021/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;本文是若干年后补的，也不清楚是什么时候创建的了。&lt;/p&gt;
-&lt;p&gt;现在看看这个鸽了的文章，也别有一番感觉，所以补个档。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;上一次好像还是2019总结，复盘一下为啥2020没想到写总结呢。可能整个2020仿佛都沉浸在疫情和项目中，中间穿插了7月入职一周年的时候说要为以后做准备了，然后好像也就没发生什么大事了。毕竟2019年总结也是鸽到了3月份才写，2021年总结这甚至鸽到了年终……&lt;/p&gt;
-&lt;p&gt;其实很少设置各种隐藏，也基本不会去删除一些记录，让愿意了解我的人了解我，也是种挺好的事情。&lt;/p&gt;
-&lt;p&gt;翻了翻记录，说要写总结是3月，结果又鸽到了7月底。&lt;/p&gt;
-&lt;p&gt;20250403：嗯……一鸽又是好多年。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>从大学到工作 – 我的2019总结</title>
-        <link>https://boiltask.com/record/202003081/</link>
-        <pubDate>Sat, 07 Mar 2020 17:17:48 +0000</pubDate>
-        
-        <guid>https://boiltask.com/record/202003081/</guid>
-        <description>&lt;p&gt;今天是2020年3月8日的0点，拖了小半年的2019总结，终于在2020年都已经过去四分之一的时候开始动笔了。说起总结2019，其实在去年国庆左右的时候就已经开始计划了，零零散散写了些东西。本来计划元旦认真总结一下的，结果一拖又拖了好久。但，再不总结恐怕就再也没有兴致了，所以还是来动笔吧。&lt;/p&gt;
-&lt;p&gt;2020年对大多数人来说都是一个不平常的年份，而2019年对我来说，比之更有过之而无不及。从这一年中零零散散，短至一句话，长至一篇文的随笔之中，也能感受到这一年来的心路历程。虽然可能很多东西已经想不到当时的背景，没办法完全记录下来当时的所想了，但是总还能给历史留下点见证。&lt;/p&gt;
-&lt;p&gt;2019的故事，自然从元旦开始说起。2019年1月1日，离开了租住了半年的房子，一时间突然特别伤感。回忆起2019，伴随着考研、实习、过年、毕设、求职、入职、进京等一系列的故事。考研的失败对我来说是个不太愿意聊起的事情，这个故事掺杂了很多话题。&lt;/p&gt;
-&lt;p&gt;1月2号，是踏上去郑州实习的日子。虽然不喜欢智游的安排，但是不得不说，在智游的几周，我学到了我想要学习的知识。作为酝酿毕业设计良久的我，自然希望能够系统的学习一下前端的知识。在智游的学习，虽然浅显，但是确实给了我入门很大的帮助。后面能够顺利的驾驭Vue等框架，也有很多这段经历的功劳。&lt;/p&gt;
-&lt;p&gt;顺嘴说一句，确实想再试试智游楼下的竹筒饭了。&lt;/p&gt;
-&lt;p&gt;学着学着，过年了，2019年的春节其实倒也没什么说的。只不过伴随着考研成绩的出炉，给了人生道路又一个抉择。其实在人生的大方向上，从幼儿园到到目前为止还基本没怎么变过。幼儿园到小学五年级之间喜爱美术等艺术性的领域，小学五年级到初三喜欢小说剧本等文艺性的领域。这其中，又掺杂着对计算机魅力的向往。再往后，突然发现电子游戏这一行业，完美契合一路以来的心路历程。既满足了对计算机的向往，又满足了对文学性艺术性的追求。&lt;/p&gt;
-&lt;p&gt;所以，不挺好的吗。&lt;/p&gt;
-&lt;p&gt;然后，开学了。在得知没办法在智游继续学习前端知识之后，自然不准备在智游熬时间了。于是待了一天之后选择了回学校，准备毕业设计和求职。&lt;/p&gt;
-&lt;p&gt;我现在对学弟学妹们说没有什么追求的话，毕业设计随便做做就好了。那么，对于我来说，为什么想这么认真地准备一下毕设呢。首先，自然是来源于大一以来对OJ系统的好气。再来，正如我那天写下的。可能，这是我最后一次花这么久的精力去做一个网站。&lt;/p&gt;
-&lt;p&gt;人的一生，是要学会舍得的。我自认在这方面做得并不好，尝尝不舍得扔垃圾，考研资源这么久过去了也没舍得删除。但是在人生的选择上，既然百分百选择了游戏行业，那么其他领域可能注定不会有太大成就了。毕竟，我自认综合天赋不高。&lt;/p&gt;
-&lt;p&gt;事实证明CodeOJ项目，足够给我的大学生活画上一个不一定完美但完整的句号。从起初的项目构思，到理论验证，实际开发，测试与维护。一段段的心路历程，回忆起来都是难忘的。&lt;/p&gt;
-&lt;p&gt;犹记得在清明节之前，我甚至没决定好后台采用什么技术。还是假期去南京的火车上，抱着Ipad找相关资料，决定了使用PHP框架PhalApi来做后台服务器。&lt;/p&gt;
-&lt;p&gt;说起来Ipad虽然没给考研带来太多帮助，但确实给毕设和后面的学习提供了很大的帮助。&lt;/p&gt;
-&lt;p&gt;前端的Ivew框架来源于最早寻找好看的前端模板时，发现了一套易用、美观还组件丰富的UI框架。包括Vue也是当时维护HPUACM官网时，自己研究了一下简单的用法。&lt;/p&gt;
-&lt;p&gt;整个开发过程吧，也算体会了一下简单的全栈工程师的感觉。回忆起来，也是一种乐趣。每天晚上搞个通宵，特别是当时前期晚上还断电，于是又研究怎么延长一波晚上的工作时间。唉，那种不用考虑其他事情，一心只需要把自己喜欢的东西做完的机会，恐怕是不多了。&lt;/p&gt;
-&lt;p&gt;到了毕设后期临近毕业，又开始研究了一下小程序。也是赞叹微信能做出一个这么简单易用的平台，也对互联网环境起着引领的作用。包括我自己，也对基于微信小程序的小游戏很看好。依托于微信的用户量，一个小型精品很容易在朋友圈之间流行开来。&lt;/p&gt;
-&lt;p&gt;再然后，三方协议的催促，开始尝试投一波简历。虽然四月份网易的笔试通过，面试一塌糊涂的经历给了一定的心理负担。但是最终好歹还算顺利拿到了Offer。&lt;/p&gt;
-&lt;p&gt;所以，工作的事情也不用愁了。&lt;/p&gt;
-&lt;p&gt;那么，毕业吧。&lt;/p&gt;
-&lt;p&gt;毕业照拍的还算难忘，与同学们共同生活了四年。大学四年时间，人生最美好的时光之一。很幸运，能和这群人一起度过。&lt;/p&gt;
-&lt;p&gt;再然后，东西打包收拾回家。过了一周，启程前往北京。&lt;/p&gt;
-&lt;p&gt;北京这个城市给我的体验一直不太好，并没有给我向往的感觉。但是，进了北京，却依旧能感受到这个城市的魅力。看着以往一二十年，只能在电视网络上知晓的建筑，在自己的眼前飘过。那种感觉，还是别有一番滋味。&lt;/p&gt;
-&lt;p&gt;入职，前一个月迷迷糊糊地度过了。好在老大与项目组大佬们的帮助下，慢慢熟悉了整个的工作流程。改改BUG，问问问题，也就度过了又一两个月。到了临近国庆节，开始接到了工作以来的第一个新功能。&lt;/p&gt;
-&lt;p&gt;密藏宝箱系统，整个制作来说不算特别困难，但也确实在很多点上有所卡顿。所以，国庆节注定是要加个小班了。但是，当完成的时候，内心的喜悦自然也是不用提的。不管怎么说，这也是自己进入游戏行业的里程碑事件。&lt;/p&gt;
-&lt;p&gt;再往后，机器人的修改，NPC的修改，慢慢地能感受到自己的提升，也继续沉醉着游戏行业的魅力。&lt;/p&gt;
-&lt;p&gt;所以，2019大抵也就是这样了。&lt;/p&gt;
-&lt;p&gt;说他特殊吧，确实挺特殊的。正如2015年那样。2015衔接了高考与大学，2019衔接了大学与工作。说起来是挺分裂的两种感受，高考之前的紧张与迷茫，大学之后的自由与梦想；毕业之前的懵懂与无措，工作之后的憧憬与拼搏。&lt;/p&gt;
-&lt;p&gt;但是说他普通吧，好像也很普通。只是一个年份，发生大事随便写写几千字也足以记录了。况且，比起2020的广泛性特殊来说，2019好像也算不得什么。这么想，晚点写总结，可能和早点写的感受确实不会完全一样。不好说孰是孰非吧，但感觉下次这种东西还是尽量早些写吧，毕竟晚点有啥事想补充大不了再说呗。&lt;/p&gt;
-&lt;p&gt;这半年个人文件夹数据大小增加缓慢，也确实是没产出什么自创性的东西了。也许，后面有机会要继续进行适度的创作。毕竟灵感这种东西，不经常挖掘真的会越来越枯竭的。&lt;/p&gt;
-&lt;p&gt;国庆节假期的时候，站在天安门广场上，就有一种很特殊的情绪。那一瞬间，你就感觉前几天还是世界焦点的地方，此时此刻就在你的面前。仿佛这一瞬间，你自己就变成了世界的焦点。但愿，有朝一日能给这个世界留下一笔属于我的记忆。&lt;/p&gt;
-&lt;p&gt;剩下的，就是零零星星根据留下的只言片语再说几句了。唉，真的是可惜很多脑子里的东西没办法全部写下来。&lt;/p&gt;
-&lt;p&gt;很多事情不是技术可以搞定的。比如BiliBili的弹幕功能，做出来可能很容易，但是培养一个弹幕社区与文化，却需要更多的努力。正是我认为游戏行业，不单单是技术引领的。技术的发展，给了游戏设计者更多的发挥空间。但对于同时代的玩家来说，只需要使用此时代已有的技术，就足以让其快乐了。这个，也是游戏制作者需要正视的一个问题。一个游戏是否好玩，有的时候并不在于技术是否高端，而要看技术是否完美解决了设计者的需求。&lt;/p&gt;
-&lt;p&gt;世界上的很多事情应该都不是纯粹的技术问题，可惜我自己是没什么头脑的，只能自己尝试去努力创造自己的价值。&lt;/p&gt;
-&lt;p&gt;现在还年轻，还能有打小怪兽的梦，所以就还挺开心的。想想很多人，可能不知不觉间就忘记了自己在追寻什么。或者说，变得更为“佛系”，无所谓未来追寻什么。我是感觉，能有一个努力的目标，并且这个目标对于世界来说是有正向价值的，就挺好的。&lt;/p&gt;
-&lt;p&gt;六岁那年，在门口小摊位抽个次奖，一毛钱一次。然后第一次里面什么都没有，第二次的时候抽到了一个飞镖，三个角的那种，还能调整角度。很高兴，然后绑了一个绳子每天甩着玩。这段故事应该之前也说过，一些奇思妙想也是从小就根深蒂固地。包括目前，也能零零星星想起来小时候的一些想法，还有思考时候的一些状态和场景。虽然从目前的眼光来看，很多想法可能并没有参考价值，设置随便用系统地方法去设计都要更好一些。但有想法这件事情本身，就足够我难忘一辈子了。&lt;/p&gt;
-&lt;p&gt;作为游戏制作者，只要人家肯玩就应该谢谢人家，至少在玩的时候，玩家此时是比起那些知名作品更愿意在你身上花费时间的。所以要珍惜每个愿意尝试了解你的玩家，尽量不要亲手毁掉这一份信任。这，也是我在此愿意许下的承诺。&lt;/p&gt;
-&lt;p&gt;有的时候，确实感觉到了自己的平庸。不光是生理上的，而且是教育等各方面的平庸。但是，好在游戏行业并不一定是个非要争第一的行业。就好像去年玩过一段时间的《家国梦》，虽然卸载很久不玩了，之后可能也不会再去下载。但玩的那段时间，确实给了我快乐和一定的思索。&lt;/p&gt;
-&lt;p&gt;所以，努力提高自身综合素质。尽量能给大家带来一些快乐和情感，我想我的人生价值也就实现了。当然，在这个过程中能让自身和在乎我的人以及我在乎的人幸福，那就再好不过了。&lt;/p&gt;
-&lt;p&gt;想说的时候可以说，不想说的时候可以不说。这，也就是日志的魅力了。2019就总结到这吧，2020年再见了。&lt;/p&gt;
-&lt;p&gt;我有预感，2020年也同样是一个值得总结的一年。&lt;/p&gt;
-&lt;p&gt;也许这一年之后，可以加大日志的频率。没事写写的话，若干年之后再看一定是别样的感受。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>又一台跟了好久的主机到期了</title>
-        <link>https://boiltask.com/record/201910151/</link>
-        <pubDate>Tue, 15 Oct 2019 10:12:26 +0000</pubDate>
-        
-        <guid>https://boiltask.com/record/201910151/</guid>
-        <description>&lt;p&gt;阿里云发来了一条续费通知……&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/record/201910151/image.png&#34;
-	width=&#34;1024&#34;
-	height=&#34;92&#34;
-	srcset=&#34;https://boiltask.com/record/201910151/image_hu2020927776719436560.png 480w, https://boiltask.com/record/201910151/image_hu7403557872829511759.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;主机信息&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;1113&#34;
-		data-flex-basis=&#34;2671px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;这一个应该是ECS里跟了我最久的一台主机了吧，主要运行了酷Q机器人相关的服务。&lt;/p&gt;
-&lt;p&gt;在网络编程课程设计和Java课程设计里面，用过他当做运行Java的服务器。这么久的日子了，人生第一个可以称得上作品的项目，QQ机器人也跟随了这么久。随着已经很长时间没有进行维护了，但是一直半死不活地运行着，后边也写了HPU小助手这种小工具。&lt;/p&gt;
-&lt;p&gt;那么……说声再见吧，有缘江湖不散~&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>程序员之路</title>
-        <link>https://boiltask.com/record/201909211/</link>
-        <pubDate>Sat, 21 Sep 2019 05:00:34 +0000</pubDate>
-        
-        <guid>https://boiltask.com/record/201909211/</guid>
-        <description>&lt;p&gt;前几天看到有个回答，关于程序员提升过程的说法。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;学习编程，开发软件，过程大抵如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;看书，看视频，看博客，听课等等&lt;/li&gt;
-&lt;li&gt;对着书敲代码&lt;/li&gt;
-&lt;li&gt;脱离书自己敲代码&lt;/li&gt;
-&lt;li&gt;自己实现一些小DEMO&lt;/li&gt;
-&lt;li&gt;进项目看代码&lt;/li&gt;
-&lt;li&gt;在别人指点下写代码&lt;/li&gt;
-&lt;li&gt;自己独立在别人搭建好框架内填写代码&lt;/li&gt;
-&lt;li&gt;自己独立负责别人设计好的模块的实现&lt;/li&gt;
-&lt;li&gt;自己独立负责一个软件模块的设计和实现&lt;/li&gt;
-&lt;li&gt;负责较大软件模块，拆分模块，分子任务给他人&lt;/li&gt;
-&lt;li&gt;负责一个小项目，设计，拆分，分派任务&lt;/li&gt;
-&lt;li&gt;做较大的软件系统的架构设计&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;作者：安晓辉&lt;/p&gt;
-&lt;p&gt;链接：https://www.zhihu.com/question/297309123/answer/537836889&lt;/p&gt;
-&lt;p&gt;来源：知乎&lt;/p&gt;
-&lt;p&gt;著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。&lt;/p&gt;
-&lt;p&gt;想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。&lt;/p&gt;
-&lt;p&gt;如今，也算是梦想成真了一部分。&lt;/p&gt;
-&lt;p&gt;未来，还需要继续努力呀~&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>人生记录 on BoilTask's Blog</title><link>https://boiltask.com/categories/record/</link><description>Recent content in 人生记录 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Apr 2025 03:21:08 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/record/index.xml" rel="self" type="application/rss+xml"/><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p>突然想开个新坑，要不&lt;code>fork&lt;/code>一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>hugo-theme-stack&lt;/a>自己魔改一下？&lt;/p>
+&lt;p>可能也就是说说……&lt;/p>
+&lt;p>不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p>
+&lt;p>参考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"
+>GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>尝试Obsidian与Hugo结合</title><link>https://boiltask.com/record/try-obsidian/</link><pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate><guid>https://boiltask.com/record/try-obsidian/</guid><description>&lt;p>之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p>
+&lt;p>之前一直觉得Obsidian作为一个本地存档的笔记软件，功能也没有Notion强大，还需要自己处理同步等问题，应该是没什么优势。&lt;/p>
+&lt;p>不过上次折腾起来Hugo之后，越发感觉笔记这种东西，还是返璞归真比较适合我，要不太容易忙于折腾样式、排版什么的问题而分心。到最后发现，除了设计好的模板，其实真正的内容没有多少。&lt;/p>
+&lt;p>下载下来Obsidian之后，发现他和Hugo的工作流意外的搭。使用Obsidian来管理工作区，比用专注编码的IDE要更适合文档类的整理工作。虽然这样以来又有些浪费“重金”买的Typora，不过总算也是能物尽其用吧。&lt;/p>
+&lt;p>说起来作为Typora刚出付费方案就首发入手的用户，好像自从买了就没大用过……反倒是之前免费的时候，还拿来写过一些东西。&lt;/p>
+&lt;p>使用Obsidian打开Hugo的文件夹，正常在&lt;code>content&lt;/code>路径写内容，然后把一些不需要上传到博客上的文章，还有一些Hugo不支持的文章放在单独的文件夹中即可。&lt;/p></description></item><item><title>给Hugo博客引入pangu.js</title><link>https://boiltask.com/record/hugo-pangu/</link><pubDate>Thu, 03 Apr 2025 09:06:12 +0800</pubDate><guid>https://boiltask.com/record/hugo-pangu/</guid><description>&lt;p>之前经常纠结中英文混排时的排版问题，因此引入了&lt;code>pangu.js&lt;/code>来优化排版效果。&lt;/p>
+&lt;p>官方仓库：&lt;a class="link" href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener"
+>vinta/pangu.js: Paranoid text spacing in JavaScript&lt;/a>&lt;/p>
+&lt;p>调用&lt;code>pangu.autoSpacingPage()&lt;/code>即可将页面转换为美化之后的结果。&lt;/p>
+&lt;p>由于&lt;code>JS&lt;/code>的加载与处理需要时间，直接这么写的话，体验上是用户会先看到处理前的页面，然后短暂停留后刷新为新内容，这就导致体验上很奇怪。&lt;/p>
+&lt;p>解决思路的话，可以考虑先隐藏页面，等&lt;code>DOM&lt;/code>加载完，先进行&lt;code>pangu.js&lt;/code>的处理，完毕后再重新显示页面。&lt;/p>
+&lt;p>为了避免第一次加载较久，还可以加一个Loading效果。&lt;/p>
+&lt;p>需要注意&lt;code>autoSpacingPage&lt;/code>函数会异步处理，可以改为阻塞版本的&lt;code>spacingPage&lt;/code>。&lt;/p>
+&lt;h2 id="参考代码">&lt;a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-anchor">&lt;/a>参考代码
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loadingOverlay&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loader&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>加载中...&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">#&lt;/span>&lt;span class="nn">loadingOverlay&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">fixed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">z-index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">9999&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">flex-direction&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">column&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nc">loader&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#f3f3f3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#3498db&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">spin&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">linear&lt;/span> &lt;span class="kc">infinite&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">@&lt;/span>&lt;span class="k">keyframes&lt;/span> &lt;span class="nt">spin&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">0&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">100&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">360&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">/* 初始隐藏页面内容，避免显示未经处理的文本 */&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">main-container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">isShouldLoad&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isShouldLoad&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">loadingOverlay&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;loadingOverlay&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;flex&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0.2秒如果还没有加载完成就开启Loading
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">import&lt;/span> &lt;span class="nx">pangu&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;https://jspm.dev/pangu&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;DOMContentLoaded&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">isShouldLoad&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">pangu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">spacingPage&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;main-container&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">elements&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">elements&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;flex&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">loadingOverlay&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;loadingOverlay&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;none&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>又双叒叕一次重新梳理了一下博客</title><link>https://boiltask.com/record/202411081/</link><pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate><guid>https://boiltask.com/record/202411081/</guid><description>&lt;p>最近在整理之前写的事件系统：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/a3991470-a7b9-474d-8038-289dad0b0497" target="_blank" rel="noopener"
+>DidaEvent&lt;/a>，为此创建了一个&lt;a class="link" href="https://event.didapipa.com/" target="_blank" rel="noopener"
+>文档&lt;/a>网站。 使用了&lt;code>Hugo&lt;/code>来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code>WordPress&lt;/code>迁移到&lt;code>Hugo&lt;/code>。&lt;/p>
+&lt;h2 id="为什么要迁移">&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%bf%81%e7%a7%bb" class="header-anchor">&lt;/a>为什么要迁移
+&lt;/h2>&lt;p>本身其实对静态建站方案是比较排斥的，一是和传统的直接在线编辑的方式比没有那么直观，二来有服务器的方案感觉也更加灵活。&lt;/p>
+&lt;p>但是自己维护服务器的成本相对还是比较高的，虽然使用了&lt;code>WordPress&lt;/code>，但本身我对&lt;code>PHP&lt;/code>的发展也不太看好，而且相对来说也过于重了。&lt;/p>
+&lt;p>经过过去的经验，服务器往往由于续费、维护等原因需要迁移，这就导致每次博客都需要重新折腾一番。让写作这件事情也变得成本更高，也很难坚持下来。&lt;/p>
+&lt;p>因此使用类似于&lt;code>Hugo&lt;/code>之类的静态建站方案就突显出了优势，一是有免费的托管方案，二来直接&lt;code>Markdown&lt;/code>的写作方式，也能更灵活的运用起来手头的工具。&lt;/p>
+&lt;p>而且真需要一些特殊的模块，其实也可以自己自定义一些空间和页面，因此应该也可以符合目前的需求。&lt;/p>
+&lt;h2 id="为什么选择hugo">&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9hugo" class="header-anchor">&lt;/a>为什么选择Hugo
+&lt;/h2>&lt;p>备选的静态网站生成器有很多，比如&lt;code>Jekyll&lt;/code>、&lt;code>Hexo&lt;/code>等等，为什么选择&lt;code>Hugo&lt;/code>呢？&lt;/p>
+&lt;p>&lt;code>Hexo&lt;/code>是用的&lt;code>Node.js&lt;/code>，生成速度较慢，因此不再考虑了。&lt;/p>
+&lt;p>&lt;code>Jekyll&lt;/code>具有Github的官方支持，可以直接在&lt;code>Github&lt;/code>上部署。但是尝试了一个&lt;code>Jekyll&lt;/code>的主题，感觉太复杂了。
+而且其实我是希望数据源与最后生成的文件分开的，这样也方便管理。&lt;/p>
+&lt;p>最后选择了&lt;code>Hugo&lt;/code>，一是有合适的主题，二来生成速度快，三来使用的&lt;code>Golang&lt;/code>语言也是我比较看好的一种语言。&lt;/p>
+&lt;p>&lt;code>DidaEvent&lt;/code>的文档使用的主题是&lt;a class="link" href="https://github.com/thuliteio/doks" target="_blank" rel="noopener"
+>Doks&lt;/a>，博客使用的主题是&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>Stack&lt;/a>。&lt;/p>
+&lt;h2 id="迁移过程">&lt;a href="#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b" class="header-anchor">&lt;/a>迁移过程
+&lt;/h2>&lt;p>简单的部署好框架后，感觉整体还是比较满意的。&lt;/p>
+&lt;p>剩下的就是需要迁移原先&lt;code>WordPress&lt;/code>的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class="link" href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter" target="_blank" rel="noopener"
+>wordpress-to-hugo-exporter&lt;/a>。
+经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p>
+&lt;p>不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p>
+&lt;h2 id="评论区配置">&lt;a href="#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>评论区配置
+&lt;/h2>&lt;p>评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/knowledge/hugo-giscus/" >Hogo中Giscus配置&lt;/a>&lt;/p></description></item><item><title>谈谈对服务器的认识</title><link>https://boiltask.com/record/talk-about-server/</link><pubDate>Thu, 24 Oct 2024 18:12:31 +0800</pubDate><guid>https://boiltask.com/record/talk-about-server/</guid><description>&lt;blockquote>
+&lt;p>一个写一半的文章，有缘后补。&lt;/p>
+&lt;/blockquote>
+&lt;p>一个客户端程序，图像感弱，一心想做服务器。&lt;/p>
+&lt;p>心路历程：&lt;/p>
+&lt;ul>
+&lt;li>多线程
+&lt;ul>
+&lt;li>意义&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>网络
+&lt;ul>
+&lt;li>Socket如何编写&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如何部署
+&lt;ul>
+&lt;li>单机承载&lt;/li>
+&lt;li>分布式&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>可扩展性
+&lt;ul>
+&lt;li>先实现基础功能→随着需求演变扩展（承载力、鲁棒性等）&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>人生知识树</title><link>https://boiltask.com/record/knowledge-tree/</link><pubDate>Wed, 09 Oct 2024 17:25:11 +0800</pubDate><guid>https://boiltask.com/record/knowledge-tree/</guid><description>&lt;blockquote>
+&lt;p>随着灵感逐步更新，主要用于记录一下感觉这辈子应该学的东西……&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="思维导图">&lt;a href="#%e6%80%9d%e7%bb%b4%e5%af%bc%e5%9b%be" class="header-anchor">&lt;/a>思维导图
+&lt;/h2>&lt;pre class="mermaid">
+mindmap
+root((知识树))
+TEMP
+编程语言
+C++
+Boost
+asio
+system
+gdb
+Python
+Java
+TypeScript
+Golang
+Lua
+服务器
+分布式架构
+数据库
+Mongo
+Redis
+&lt;/pre></description></item><item><title>2021总结</title><link>https://boiltask.com/record/summary-2021/</link><pubDate>Thu, 03 Nov 2022 09:06:12 +0800</pubDate><guid>https://boiltask.com/record/summary-2021/</guid><description>&lt;blockquote>
+&lt;p>本文是若干年后补的，也不清楚是什么时候创建的了。&lt;/p>
+&lt;p>现在看看这个鸽了的文章，也别有一番感觉，所以补个档。&lt;/p>
+&lt;/blockquote>
+&lt;p>上一次好像还是2019总结，复盘一下为啥2020没想到写总结呢。可能整个2020仿佛都沉浸在疫情和项目中，中间穿插了7月入职一周年的时候说要为以后做准备了，然后好像也就没发生什么大事了。毕竟2019年总结也是鸽到了3月份才写，2021年总结这甚至鸽到了年终……&lt;/p>
+&lt;p>其实很少设置各种隐藏，也基本不会去删除一些记录，让愿意了解我的人了解我，也是种挺好的事情。&lt;/p>
+&lt;p>翻了翻记录，说要写总结是3月，结果又鸽到了7月底。&lt;/p>
+&lt;p>20250403：嗯……一鸽又是好多年。&lt;/p></description></item><item><title>从大学到工作 – 我的2019总结</title><link>https://boiltask.com/record/202003081/</link><pubDate>Sat, 07 Mar 2020 17:17:48 +0000</pubDate><guid>https://boiltask.com/record/202003081/</guid><description>&lt;p>今天是2020年3月8日的0点，拖了小半年的2019总结，终于在2020年都已经过去四分之一的时候开始动笔了。说起总结2019，其实在去年国庆左右的时候就已经开始计划了，零零散散写了些东西。本来计划元旦认真总结一下的，结果一拖又拖了好久。但，再不总结恐怕就再也没有兴致了，所以还是来动笔吧。&lt;/p>
+&lt;p>2020年对大多数人来说都是一个不平常的年份，而2019年对我来说，比之更有过之而无不及。从这一年中零零散散，短至一句话，长至一篇文的随笔之中，也能感受到这一年来的心路历程。虽然可能很多东西已经想不到当时的背景，没办法完全记录下来当时的所想了，但是总还能给历史留下点见证。&lt;/p>
+&lt;p>2019的故事，自然从元旦开始说起。2019年1月1日，离开了租住了半年的房子，一时间突然特别伤感。回忆起2019，伴随着考研、实习、过年、毕设、求职、入职、进京等一系列的故事。考研的失败对我来说是个不太愿意聊起的事情，这个故事掺杂了很多话题。&lt;/p>
+&lt;p>1月2号，是踏上去郑州实习的日子。虽然不喜欢智游的安排，但是不得不说，在智游的几周，我学到了我想要学习的知识。作为酝酿毕业设计良久的我，自然希望能够系统的学习一下前端的知识。在智游的学习，虽然浅显，但是确实给了我入门很大的帮助。后面能够顺利的驾驭Vue等框架，也有很多这段经历的功劳。&lt;/p>
+&lt;p>顺嘴说一句，确实想再试试智游楼下的竹筒饭了。&lt;/p>
+&lt;p>学着学着，过年了，2019年的春节其实倒也没什么说的。只不过伴随着考研成绩的出炉，给了人生道路又一个抉择。其实在人生的大方向上，从幼儿园到到目前为止还基本没怎么变过。幼儿园到小学五年级之间喜爱美术等艺术性的领域，小学五年级到初三喜欢小说剧本等文艺性的领域。这其中，又掺杂着对计算机魅力的向往。再往后，突然发现电子游戏这一行业，完美契合一路以来的心路历程。既满足了对计算机的向往，又满足了对文学性艺术性的追求。&lt;/p>
+&lt;p>所以，不挺好的吗。&lt;/p>
+&lt;p>然后，开学了。在得知没办法在智游继续学习前端知识之后，自然不准备在智游熬时间了。于是待了一天之后选择了回学校，准备毕业设计和求职。&lt;/p>
+&lt;p>我现在对学弟学妹们说没有什么追求的话，毕业设计随便做做就好了。那么，对于我来说，为什么想这么认真地准备一下毕设呢。首先，自然是来源于大一以来对OJ系统的好气。再来，正如我那天写下的。可能，这是我最后一次花这么久的精力去做一个网站。&lt;/p>
+&lt;p>人的一生，是要学会舍得的。我自认在这方面做得并不好，尝尝不舍得扔垃圾，考研资源这么久过去了也没舍得删除。但是在人生的选择上，既然百分百选择了游戏行业，那么其他领域可能注定不会有太大成就了。毕竟，我自认综合天赋不高。&lt;/p>
+&lt;p>事实证明CodeOJ项目，足够给我的大学生活画上一个不一定完美但完整的句号。从起初的项目构思，到理论验证，实际开发，测试与维护。一段段的心路历程，回忆起来都是难忘的。&lt;/p>
+&lt;p>犹记得在清明节之前，我甚至没决定好后台采用什么技术。还是假期去南京的火车上，抱着Ipad找相关资料，决定了使用PHP框架PhalApi来做后台服务器。&lt;/p>
+&lt;p>说起来Ipad虽然没给考研带来太多帮助，但确实给毕设和后面的学习提供了很大的帮助。&lt;/p>
+&lt;p>前端的Ivew框架来源于最早寻找好看的前端模板时，发现了一套易用、美观还组件丰富的UI框架。包括Vue也是当时维护HPUACM官网时，自己研究了一下简单的用法。&lt;/p>
+&lt;p>整个开发过程吧，也算体会了一下简单的全栈工程师的感觉。回忆起来，也是一种乐趣。每天晚上搞个通宵，特别是当时前期晚上还断电，于是又研究怎么延长一波晚上的工作时间。唉，那种不用考虑其他事情，一心只需要把自己喜欢的东西做完的机会，恐怕是不多了。&lt;/p>
+&lt;p>到了毕设后期临近毕业，又开始研究了一下小程序。也是赞叹微信能做出一个这么简单易用的平台，也对互联网环境起着引领的作用。包括我自己，也对基于微信小程序的小游戏很看好。依托于微信的用户量，一个小型精品很容易在朋友圈之间流行开来。&lt;/p>
+&lt;p>再然后，三方协议的催促，开始尝试投一波简历。虽然四月份网易的笔试通过，面试一塌糊涂的经历给了一定的心理负担。但是最终好歹还算顺利拿到了Offer。&lt;/p>
+&lt;p>所以，工作的事情也不用愁了。&lt;/p>
+&lt;p>那么，毕业吧。&lt;/p>
+&lt;p>毕业照拍的还算难忘，与同学们共同生活了四年。大学四年时间，人生最美好的时光之一。很幸运，能和这群人一起度过。&lt;/p>
+&lt;p>再然后，东西打包收拾回家。过了一周，启程前往北京。&lt;/p>
+&lt;p>北京这个城市给我的体验一直不太好，并没有给我向往的感觉。但是，进了北京，却依旧能感受到这个城市的魅力。看着以往一二十年，只能在电视网络上知晓的建筑，在自己的眼前飘过。那种感觉，还是别有一番滋味。&lt;/p>
+&lt;p>入职，前一个月迷迷糊糊地度过了。好在老大与项目组大佬们的帮助下，慢慢熟悉了整个的工作流程。改改BUG，问问问题，也就度过了又一两个月。到了临近国庆节，开始接到了工作以来的第一个新功能。&lt;/p>
+&lt;p>密藏宝箱系统，整个制作来说不算特别困难，但也确实在很多点上有所卡顿。所以，国庆节注定是要加个小班了。但是，当完成的时候，内心的喜悦自然也是不用提的。不管怎么说，这也是自己进入游戏行业的里程碑事件。&lt;/p>
+&lt;p>再往后，机器人的修改，NPC的修改，慢慢地能感受到自己的提升，也继续沉醉着游戏行业的魅力。&lt;/p>
+&lt;p>所以，2019大抵也就是这样了。&lt;/p>
+&lt;p>说他特殊吧，确实挺特殊的。正如2015年那样。2015衔接了高考与大学，2019衔接了大学与工作。说起来是挺分裂的两种感受，高考之前的紧张与迷茫，大学之后的自由与梦想；毕业之前的懵懂与无措，工作之后的憧憬与拼搏。&lt;/p>
+&lt;p>但是说他普通吧，好像也很普通。只是一个年份，发生大事随便写写几千字也足以记录了。况且，比起2020的广泛性特殊来说，2019好像也算不得什么。这么想，晚点写总结，可能和早点写的感受确实不会完全一样。不好说孰是孰非吧，但感觉下次这种东西还是尽量早些写吧，毕竟晚点有啥事想补充大不了再说呗。&lt;/p>
+&lt;p>这半年个人文件夹数据大小增加缓慢，也确实是没产出什么自创性的东西了。也许，后面有机会要继续进行适度的创作。毕竟灵感这种东西，不经常挖掘真的会越来越枯竭的。&lt;/p>
+&lt;p>国庆节假期的时候，站在天安门广场上，就有一种很特殊的情绪。那一瞬间，你就感觉前几天还是世界焦点的地方，此时此刻就在你的面前。仿佛这一瞬间，你自己就变成了世界的焦点。但愿，有朝一日能给这个世界留下一笔属于我的记忆。&lt;/p>
+&lt;p>剩下的，就是零零星星根据留下的只言片语再说几句了。唉，真的是可惜很多脑子里的东西没办法全部写下来。&lt;/p>
+&lt;p>很多事情不是技术可以搞定的。比如BiliBili的弹幕功能，做出来可能很容易，但是培养一个弹幕社区与文化，却需要更多的努力。正是我认为游戏行业，不单单是技术引领的。技术的发展，给了游戏设计者更多的发挥空间。但对于同时代的玩家来说，只需要使用此时代已有的技术，就足以让其快乐了。这个，也是游戏制作者需要正视的一个问题。一个游戏是否好玩，有的时候并不在于技术是否高端，而要看技术是否完美解决了设计者的需求。&lt;/p>
+&lt;p>世界上的很多事情应该都不是纯粹的技术问题，可惜我自己是没什么头脑的，只能自己尝试去努力创造自己的价值。&lt;/p>
+&lt;p>现在还年轻，还能有打小怪兽的梦，所以就还挺开心的。想想很多人，可能不知不觉间就忘记了自己在追寻什么。或者说，变得更为“佛系”，无所谓未来追寻什么。我是感觉，能有一个努力的目标，并且这个目标对于世界来说是有正向价值的，就挺好的。&lt;/p>
+&lt;p>六岁那年，在门口小摊位抽个次奖，一毛钱一次。然后第一次里面什么都没有，第二次的时候抽到了一个飞镖，三个角的那种，还能调整角度。很高兴，然后绑了一个绳子每天甩着玩。这段故事应该之前也说过，一些奇思妙想也是从小就根深蒂固地。包括目前，也能零零星星想起来小时候的一些想法，还有思考时候的一些状态和场景。虽然从目前的眼光来看，很多想法可能并没有参考价值，设置随便用系统地方法去设计都要更好一些。但有想法这件事情本身，就足够我难忘一辈子了。&lt;/p>
+&lt;p>作为游戏制作者，只要人家肯玩就应该谢谢人家，至少在玩的时候，玩家此时是比起那些知名作品更愿意在你身上花费时间的。所以要珍惜每个愿意尝试了解你的玩家，尽量不要亲手毁掉这一份信任。这，也是我在此愿意许下的承诺。&lt;/p>
+&lt;p>有的时候，确实感觉到了自己的平庸。不光是生理上的，而且是教育等各方面的平庸。但是，好在游戏行业并不一定是个非要争第一的行业。就好像去年玩过一段时间的《家国梦》，虽然卸载很久不玩了，之后可能也不会再去下载。但玩的那段时间，确实给了我快乐和一定的思索。&lt;/p>
+&lt;p>所以，努力提高自身综合素质。尽量能给大家带来一些快乐和情感，我想我的人生价值也就实现了。当然，在这个过程中能让自身和在乎我的人以及我在乎的人幸福，那就再好不过了。&lt;/p>
+&lt;p>想说的时候可以说，不想说的时候可以不说。这，也就是日志的魅力了。2019就总结到这吧，2020年再见了。&lt;/p>
+&lt;p>我有预感，2020年也同样是一个值得总结的一年。&lt;/p>
+&lt;p>也许这一年之后，可以加大日志的频率。没事写写的话，若干年之后再看一定是别样的感受。&lt;/p></description></item><item><title>又一台跟了好久的主机到期了</title><link>https://boiltask.com/record/201910151/</link><pubDate>Tue, 15 Oct 2019 10:12:26 +0000</pubDate><guid>https://boiltask.com/record/201910151/</guid><description>&lt;p>阿里云发来了一条续费通知……&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/record/201910151/image.png"
+width="1024"
+height="92"
+srcset="https://boiltask.com/record/201910151/image_hu2020927776719436560.png 480w, https://boiltask.com/record/201910151/image_hu7403557872829511759.png 1024w"
+loading="lazy"
+alt="主机信息"
+class="gallery-image"
+data-flex-grow="1113"
+data-flex-basis="2671px"
+>&lt;/p>
+&lt;p>这一个应该是ECS里跟了我最久的一台主机了吧，主要运行了酷Q机器人相关的服务。&lt;/p>
+&lt;p>在网络编程课程设计和Java课程设计里面，用过他当做运行Java的服务器。这么久的日子了，人生第一个可以称得上作品的项目，QQ机器人也跟随了这么久。随着已经很长时间没有进行维护了，但是一直半死不活地运行着，后边也写了HPU小助手这种小工具。&lt;/p>
+&lt;p>那么……说声再见吧，有缘江湖不散~&lt;/p></description></item><item><title>程序员之路</title><link>https://boiltask.com/record/201909211/</link><pubDate>Sat, 21 Sep 2019 05:00:34 +0000</pubDate><guid>https://boiltask.com/record/201909211/</guid><description>&lt;p>前几天看到有个回答，关于程序员提升过程的说法。&lt;/p>
+&lt;blockquote>
+&lt;p>学习编程，开发软件，过程大抵如下：&lt;/p>
+&lt;ol>
+&lt;li>看书，看视频，看博客，听课等等&lt;/li>
+&lt;li>对着书敲代码&lt;/li>
+&lt;li>脱离书自己敲代码&lt;/li>
+&lt;li>自己实现一些小DEMO&lt;/li>
+&lt;li>进项目看代码&lt;/li>
+&lt;li>在别人指点下写代码&lt;/li>
+&lt;li>自己独立在别人搭建好框架内填写代码&lt;/li>
+&lt;li>自己独立负责别人设计好的模块的实现&lt;/li>
+&lt;li>自己独立负责一个软件模块的设计和实现&lt;/li>
+&lt;li>负责较大软件模块，拆分模块，分子任务给他人&lt;/li>
+&lt;li>负责一个小项目，设计，拆分，分派任务&lt;/li>
+&lt;li>做较大的软件系统的架构设计&lt;/li>
+&lt;/ol>
+&lt;p>作者：安晓辉&lt;/p>
+&lt;p>链接：https://www.zhihu.com/question/297309123/answer/537836889&lt;/p>
+&lt;p>来源：知乎&lt;/p>
+&lt;p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。&lt;/p>
+&lt;p>想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。&lt;/p>
+&lt;p>如今，也算是梦想成真了一部分。&lt;/p>
+&lt;p>未来，还需要继续努力呀~&lt;/p></description></item></channel></rss>

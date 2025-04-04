@@ -1,1231 +1,1018 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>愿成其身 on BoilTask&#39;s Blog</title>
-        <link>https://boiltask.com/categories/iwbtg/</link>
-        <description>Recent content in 愿成其身 on BoilTask&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-CN</language>
-        <lastBuildDate>Mon, 29 Aug 2016 16:00:57 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/iwbtg/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>【愿成其身】[15]思维的优化 – 数学的魅力</title>
-        <link>https://boiltask.com/iwbtg/15/</link>
-        <pubDate>Mon, 29 Aug 2016 16:00:57 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/15/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1143&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;小学求和1到n&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;注意观察这道题与上一个求和的差别。&lt;/p&gt;
-&lt;p&gt;首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。&lt;/p&gt;
-&lt;p&gt;我们只需要读取一个变量T记录组数，然后使用语句：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在大括号里写程序即可。&lt;/p&gt;
-&lt;p&gt;这道题给的范围为$0 &amp;lt; n &amp;lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;评测机一秒大概可运行$10 ^ 7 \sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的&lt;/p&gt;
-&lt;p&gt;(推荐先自己查阅时间复杂度相关资料)&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。&lt;/p&gt;
-&lt;p&gt;当然，还需要注意数据范围的问题。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;再次举这一题的例子也是想再次说明思维的重要性。&lt;/p&gt;
-&lt;p&gt;一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[14]for循环 – 另一种表达方法</title>
-        <link>https://boiltask.com/iwbtg/14/</link>
-        <pubDate>Sun, 28 Aug 2016 16:00:46 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/14/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1142&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;大学求和1到n&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;依旧是一道小学题目。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;本篇文章有过激言论，请谨慎阅读。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;这一题一般常用做初讲for循环的例题，而这道题也确实很合适，因为这标志着思考问题解决方案的可行性，由优先思考数学方法转变为思考时间复杂度。&lt;/p&gt;
-&lt;p&gt;而有争议的地方，便是for循环的写法。&lt;/p&gt;
-&lt;p&gt;首先是基本结构如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*起始语句*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/*判断语句*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;cm&#34;&gt;/*修正语句*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*循环语句*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;同样画出它的流程图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;TODO&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;(参考文章《for,(do-)while的循环体执行》)&lt;/p&gt;
-&lt;p&gt;for循环比while好在它能清晰的操作循环变量，比如下面代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*循环语句*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这便是让循环语句循环n次的写法，同样的操作可写为while(n&amp;ndash;)。&lt;/p&gt;
-&lt;p&gt;但是如果我们在循环中用到了i，比如我们想让奇数次时执行某一语句，偶数时执行另一语句，就可以写为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*偶数时操作*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*奇数时操作*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;所以具体什么时候该用哪种循环，取决于哪一种可以使代码简洁、写起来方便，可以进行互相转换。&lt;/p&gt;
-&lt;p&gt;上边代码就等同于：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*偶数时操作*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*奇数时操作*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;而至于for循环有争议的地方，便是for循环中的i=0。&lt;/p&gt;
-&lt;p&gt;在C++中，我们可以在循环的初始语句里写成：for(int i=0; i&amp;lt;n; i++)，也就是把定义变量放在循环内部，这样的话变量作用范围就仅限于这个循环里面。如此做，可以防止循环与循环之间的干扰，特别是需要函数互相调用时，防止变量因为已被占用而发生错误。&lt;/p&gt;
-&lt;p&gt;(关于变量的作用范围，可参考我之前写过的一些文章《for循环中的定义变量》《关于for循环中定义变量的后续讨论》)&lt;/p&gt;
-&lt;p&gt;然而，&lt;span class=&#34;dida-font-red&#34;&gt;在标准C中不允许这么写&lt;/span&gt;，可以尝试把代码保存为.c和.cpp来查看编译区别。&lt;/p&gt;
-&lt;p&gt;所以如果需要使用在for中定义变量的形式，提交时需要选C++，事实上我认为最好以后默认选C++。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;这不是C语言课……&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;这不是C语言课……&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;这不是C语言课……&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;所以我认为，只要自己在使用时清楚地认识到哪部分是C++特有的，那么我们大可放心使用C++。毕竟我依旧认为，我们不应该在语言层面纠结太长时间。&lt;/p&gt;
-&lt;p&gt;这些问题需要在今后的学习过程中自己体会与抉择，这里不多说了……&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;注意事项：&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;多条循环语句不要忘了加大括号！&lt;/p&gt;
-&lt;p&gt;不要忘了加大括号！&lt;/p&gt;
-&lt;p&gt;加大括号！&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;剩下的就没有什么了，在掌握了循环之后，已经可以开始尝试一些入门级水题了。&lt;/p&gt;
-&lt;p&gt;这条路，长且艰……&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[13]循环结构 – 计算机的神奇</title>
-        <link>https://boiltask.com/iwbtg/13/</link>
-        <pubDate>Sat, 27 Aug 2016 16:00:42 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/13/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1141&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;蜗牛爬树&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;一道小学数学题，但对于计算机来说，却是直接模拟这一过程更为简洁。&lt;/p&gt;
-&lt;p&gt;很明显的一个思路是，对高度不断模拟上升下落的这一过程，然后统计次数，直到高度达到树的高度。&lt;/p&gt;
-&lt;p&gt;简单的画一个流程图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;TODO 流程图&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;分析可以发现，这里的循环是由一个条件控制的。如果满足某一条件则一直循环，否则退出循环。&lt;/p&gt;
-&lt;p&gt;在C语言里，这种形式可以使用while语句表达，其基本形式为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*条件*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;cm&#34;&gt;/*语句*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;可以发现与if语句形式类似，也是很好理解，若满足条件，则不断执行语句，每次执行之后判断条件是否成立，然后选择继续执行或者跳出循环。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;有了上面的基础知识，我们再来思考这道题，发现上面的程序流程图对于一些情况是没有考虑到的。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先是Impossible不可能的情况，下降比上升的幅度还大，那么很显然是不可能的。但是有一种却要排除在外，也就是第一天白天就能够爬到树顶的情况，那么应该输出1。&lt;/li&gt;
-&lt;li&gt;考虑到如果白天就爬到，那么晚上就不用掉落，很显然我们在白天爬完之后应该判断，是否已经到了树顶，如果到了，那么就不需要晚上掉落这一部分了。
-加上这些考虑，我们改进流程图如下：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;TODO 流程图&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;有了这些思考，AC还是件难事吗-.-。&lt;/p&gt;
-&lt;p&gt;嗯……似乎还有些问题。&lt;/p&gt;
-&lt;p&gt;首先是对于输出不可能判定的条件有两个，在C语言里我们使用两个&amp;amp;号，也就是“&amp;amp;&amp;amp;”来表示并且，而用“||”来表示或者。这个条件就可以写为n&amp;lt;h&amp;amp;&amp;amp;n≤m。&lt;/p&gt;
-&lt;p&gt;再来是循环内的判断，如何终止循环呢？我们可以使用continue与break来控制循环。&lt;/p&gt;
-&lt;p&gt;continue的作用是跳过continue下面的部分直接回到循环条件那里判断是否需要进行下一次循环。&lt;/p&gt;
-&lt;p&gt;break的作用就是直接跳出循环。&lt;/p&gt;
-&lt;p&gt;测试代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;        if(T==5)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;            continue;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;        */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;cm&#34;&gt;/*
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;        if(T==5)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;            break;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cm&#34;&gt;        */&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这里还顺带写了while的一种常见用法while(T&amp;ndash;)，可先自己理解理解其中含义，在后面输入输出系列中会详细说明。&lt;/p&gt;
-&lt;p&gt;写到这里，这一题就算告一段落了。&lt;/p&gt;
-&lt;p&gt;事实上，while还有一种变形，do-while，其基本形式为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*语句*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*条件*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;也就是判断循环条件是否成立之前，先执行一次循环体，这在解决一些问题的时候很方便。&lt;/p&gt;
-&lt;p&gt;也许你可以自己尝试画出它的流程图呀~&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[12]从交换输出谈起 – 黑盒的漏洞</title>
-        <link>https://boiltask.com/iwbtg/12/</link>
-        <pubDate>Fri, 26 Aug 2016 16:00:45 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/12/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1140&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;交换输出&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这也是一道经典问题，今天就从它谈起。&lt;/p&gt;
-&lt;p&gt;$a \rightleftharpoons b$&lt;/p&gt;
-&lt;p&gt;首先分析题目，下面这种写法肯定是错的。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因为在a=b的时候，a的值已经被替换成b了。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这个时候我们想，若把a的值提前记录下来便可以了。&lt;/p&gt;
-&lt;p&gt;也就是int t=a;a=b;b=t;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;事实上，还有一种更为酷炫的不借助其它变量的写法如下。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;也就是直接把b的值存在a里面，然后a-b便是a的值——赋值给b，然后此时a-b便是b的值——赋值给a。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;同样按照这种思路，有依靠于二进制运算的更为酷炫的写法：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;^=&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因为对计算机来说二进制更为快速，所以这种写法也是更省时间的。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;下面还有一个最终版本。&lt;/p&gt;
-&lt;p&gt;在前面说过，黑盒测试是给输入数据然后比较输出数据是否一样，而这一道问题的输出是a和b交换值之后输出a和b的值。&lt;/p&gt;
-&lt;p&gt;那么我们便可以提交如下代码：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;同样是符合题意的一种代码。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;在分析这道题的过程中。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;首先，根据最简单的题意我们写出了一份代码。&lt;/li&gt;
-&lt;li&gt;然后，根据数学知识做出了优化(所用空间减少)。&lt;/li&gt;
-&lt;li&gt;之后，根据同样地思想用二进制优化了计算过程(所用时间减少)。&lt;/li&gt;
-&lt;li&gt;最后，依照黑盒测试的特点写出了最简代码。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;当然，对于这一题来说，即使是最初的代码所用的时间与空间也是非常少的，所以优化对这一题来说也许没必要。&lt;/p&gt;
-&lt;p&gt;但是这种思想是我们应该学习的，正是在这种优化中，自身的编码能力及思考问题的能力会有显著的提高。&lt;/p&gt;
-&lt;p&gt;而实际比赛中，我们也可以根据题意，在符合要求的前提下，选取那个最容易想出且容易写成的方案来实现。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[11]字符的本质 – ASCII的作用</title>
-        <link>https://boiltask.com/iwbtg/11/</link>
-        <pubDate>Thu, 25 Aug 2016 16:00:15 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/11/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1139&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;比较字符&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。&lt;/p&gt;
-&lt;p&gt;数字还可以使用二进制转换，而字符怎么办……&lt;/p&gt;
-&lt;p&gt;为了解决这一问题，在C语言里，字符是被存储为数字的，其可像数字一样参与运算。&lt;/p&gt;
-&lt;p&gt;我们可以使用类似于下面的代码来查看代表字符的数字是多少：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;sc&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;所以这一题便可以方便的进行比较。&lt;/p&gt;
-&lt;p&gt;字符的类型为char，格式化输入输出使用%c。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;char&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%c&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;需要注意的是，小写字母ASCII值是大于大写字母ASCII值的，而题目定义为小写字母小于大写字母，所以对于这种情况应该特殊判断。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[10]问号表达式 – 酷炫的利器</title>
-        <link>https://boiltask.com/iwbtg/10/</link>
-        <pubDate>Wed, 24 Aug 2016 16:00:02 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/10/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;君甚屌,令堂可知？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;p&gt;第十篇文章，能看到这里，说明已经基本上踏入了这道大门。虽然路还很长，但是已经走在了路上。&lt;/p&gt;
-&lt;p&gt;所以这一篇文章讲一个虽然不影响解题，但是熟练运用会让代码看起来很酷炫的小知识点：问号表达式。&lt;/p&gt;
-&lt;p&gt;其基本形式如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*条件*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*语句1*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*语句2*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;当条件1成立的时候，表达式的值取决于语句1，否则取决于语句2。&lt;/p&gt;
-&lt;p&gt;例子：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%s&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;?&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;具体的如何运用，还是需要自己在实践中多多尝试。&lt;/p&gt;
-&lt;p&gt;如果能运用的非常自如，那么说明对程序的结构把握的很好，也有利于进一步的学(zhuang)习(bi)。&lt;/p&gt;
-&lt;p&gt;练习题：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1138&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;三个数的最值&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[9]分支结构 – 程序的魅力</title>
-        <link>https://boiltask.com/iwbtg/9/</link>
-        <pubDate>Tue, 23 Aug 2016 16:00:14 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/9/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1137&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;两数的距离&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;由数学知识得，两点在数轴对应点的距离为$\left| x_{1}-x_{2}\right|$。&lt;/p&gt;
-&lt;p&gt;相减没什么难度，所以这一题实际上在于求绝对值。&lt;/p&gt;
-&lt;p&gt;事实上，这是一个逻辑问题，也就是如果a&amp;lt;0，那么应该输出-a，如果a&amp;gt;0，那么应该输出a，如果a=0，那么应该输出0。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;C语言对于分支结构有两种常用表达：&lt;/p&gt;
-&lt;p&gt;是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;if-else的大概结构如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*条件1*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*语句1*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;cm&#34;&gt;/*条件2*/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*语句2*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;cm&#34;&gt;/*语句3*/&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;if顾名思义，是如果的意思，这段代码的意思也就是：&lt;/p&gt;
-&lt;p&gt;如果条件1成立执行语句1；如果条件2成立执行语句2；否则执行语句3。&lt;/p&gt;
-&lt;p&gt;若条件下只有一条语句，则大括号可以省略。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;若一个条件下有多条语句，则大括号不可省略(因为如果省略，编译器便把它当成只有一条语句在该条件下)。&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;所以这道题的代码就很好写了。&lt;/p&gt;
-&lt;p&gt;数据范围很小，用int型就足够了，然后就是进行判断求解。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[8]实数的运用 – 整数化作的实数</title>
-        <link>https://boiltask.com/iwbtg/8/</link>
-        <pubDate>Mon, 22 Aug 2016 16:00:47 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/8/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1136&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;愿成其身A÷B&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我们知道C语言中用&amp;quot;/&amp;ldquo;来表示相除，整数的除法是采用的舍尾的方式。&lt;/p&gt;
-&lt;p&gt;$5 \div 2 = 2 \ldots \ldots 1$&lt;/p&gt;
-&lt;p&gt;$5 / 2 = 2$&lt;/p&gt;
-&lt;p&gt;所以对于这一题来说，题目要求输出A÷B的结果并保留到整数位。&lt;/p&gt;
-&lt;p&gt;如果写成A/B，A,B都是整数的话，那么会得出结果的整数部分，小数部分会被舍弃，而这一题应该四舍五入。&lt;/p&gt;
-&lt;p&gt;所以如下面代码是错误的。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;为了表示小数，我们可以使用double(float因为精度问题一般不使用)。&lt;/p&gt;
-&lt;p&gt;提到了精度问题，请&lt;span class=&#34;dida-font-red&#34;&gt;百度double的注意事项&lt;/span&gt;，应重点关注double的表示范围与计算误差。&lt;/p&gt;
-&lt;p&gt;在这里暂时不对这一问题进行深入研究。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;声明一个double型变量依旧类似。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;double&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;在格式化输入输出里用%lf表示(有些标准对于有些情况使用%f，但一般统一写作%lf)。&lt;/p&gt;
-&lt;p&gt;那么如何表示精确到整数呢？&lt;/p&gt;
-&lt;p&gt;我们可以使用printf(&amp;rdquo;%.lf\n&amp;quot;,a);&lt;/p&gt;
-&lt;p&gt;可以注意到在%与lf中间加了一个点，这个便表示四舍五入到整数输出。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这也是格式化输出的一种运用，在后面会再细讲。&lt;/p&gt;
-&lt;p&gt;类似的还有：&lt;/p&gt;
-&lt;p&gt;printf(&amp;quot;%.2lf\n&amp;quot;,a); 四舍五入到小数点后两位数字输出。&lt;/p&gt;
-&lt;p&gt;printf(&amp;quot;%.3lf\n&amp;quot;,a); 四舍五入到小数点后三位数字输出。&lt;/p&gt;
-&lt;p&gt;等等……&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;还有一点需要注意：&lt;/p&gt;
-&lt;p&gt;此题的的输入数据描述，由两个整数变为了两个数。&lt;/p&gt;
-&lt;p&gt;所以输入数据有可能为小数，这个时候便不可以用整数来读取。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[7]整数的魅力 – 数字的最后一位</title>
-        <link>https://boiltask.com/iwbtg/7/</link>
-        <pubDate>Sun, 21 Aug 2016 16:00:32 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/7/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1135&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;最后一位&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;在C语言中，除了加减乘除运算之外，还有一个较为常用的运算，取余&amp;quot;%&amp;quot;。&lt;/p&gt;
-$$5 \% 2 = 1$$&lt;p&gt;由数学知识得，一个整数对10取余即可得到最后一位数字。&lt;/p&gt;
-$$12345 \% 10 = 5$$&lt;p&gt;这一题便可使用这一种方法轻松得出答案。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;从上一篇文章中学到，这里如果计算A×B的话，依旧应该使用long long，然后对结果进行取余运算即可。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;因为最后一位数字肯定是int范围内的数字，所以可以直接以int型输出。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;对于这一题来说还有一种避免使用long long的方法。&lt;/p&gt;
-&lt;p&gt;我们想到，对于乘法，其结果的最后一位只取决于A和B的最后一位，所以我们可以先分别求出A与B的最后一位，然后求出最后一位相乘的最后一位。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这种把$\left( A\times B\right) \% 10$转变为$\left[ \left( A\% 10 \right) \times \left( B\% 10 \right) \right] \% 10$的思维，对于&lt;code&gt;ACM&lt;/code&gt;来说很重要，因为通过各种转化，我们可以突破题目的一些数据限制，从而得到正确答案。&lt;/p&gt;
-&lt;p&gt;思考，若题目的数据范围是$0 \leq a,b \leq 10^{18}$，那么我们便不能使用第一种方法，而使用后一种方法便可以轻松得到正确答案。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;这才是这一题的意义！&lt;/span&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[6]A×B的学问 – 较大数的处理</title>
-        <link>https://boiltask.com/iwbtg/6/</link>
-        <pubDate>Sat, 20 Aug 2016 16:00:01 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/6/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1134&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;愿成其身A×B&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;对于这一题，因为C语言中用&amp;quot;*&amp;ldquo;号来表示乘法，所以我们很容易写出以下代码。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d %d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;B&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;提交发现wrong answer答案错误。&lt;/p&gt;
-&lt;p&gt;分析题目数据范围：$-10^9&amp;lt;a,b&amp;lt;10^9$。&lt;/p&gt;
-&lt;p&gt;我们知道int类型在电脑中的范围是$-2^{32}\leq int \leq2^{32}-1$。&lt;/p&gt;
-&lt;p&gt;大概约为2147483648～2147483647(PS：可以自己想办法求求看哦~)&lt;/p&gt;
-&lt;p&gt;而很显然a,b是在int范围内的，那么为什么会出现答案错误呢……&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;计算A×B的范围是$-10^{18}&amp;lt;a,b&amp;lt;10^{18}$。&lt;/p&gt;
-&lt;p&gt;超出了int范围了！&lt;/p&gt;
-&lt;p&gt;我们可以试着输入测试数据：&lt;/p&gt;
-&lt;p&gt;100000000 100000000&lt;/p&gt;
-&lt;p&gt;上述程序输出了错误答案……&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;怎么解决呢？&lt;/p&gt;
-&lt;p&gt;有一种比int类型范围更大的数据类型long long(__int64)类型。&lt;/p&gt;
-&lt;p&gt;写成两种形式是因为C语言的标准不同，导致不同的编译器版本可能有不一样的规定，具体使用哪一种类型，需要查看OJ的FAQ，一般都会特别说明(此题所使用的OJ采取long long)。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;long long的范围大概为$-2^{64}\leq long long \leq 2^{64}-1$。&lt;/p&gt;
-&lt;p&gt;使用时与int类似，声明写为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;代表声明一个名称为a的long long型变量。&lt;/p&gt;
-&lt;p&gt;在格式化输入输出函数里，正如%d代表int型，我们用%lld代表long long型(%I64d代表__int64型)。&lt;/p&gt;
-&lt;p&gt;所以此题即可使用long long解决。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;因为若非必要，应该优先使用int型，所以若感觉此题可用int读取a,b，则也可进行解题。&lt;/p&gt;
-&lt;p&gt;但输出时需要注意！&lt;/p&gt;
-&lt;p&gt;如果写作&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%lld&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;测试发现依旧会出现错误，因为编译器计算时，a与b都是int型，则a*b就会以int型计算，这样写只不过是把这个int型以long long型输出。&lt;/p&gt;
-&lt;p&gt;而实际上，在a*b时就已经超过int型了，所以会出现错误答案，这就属于中间结果溢出。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;那么应该怎么写呢？&lt;/p&gt;
-&lt;p&gt;我们可以使用类型转换写为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%lld&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,(&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;long&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;此语句表示把a转换为long long类型，然后与b进行乘法运算，并且结果以long long型输出。&lt;/p&gt;
-&lt;p&gt;long long型与int相乘，会把int型先转换为long long型，然后变成两个long long型相乘，从而得到正确结果。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[5]数据类型 – 装数据的盒子</title>
-        <link>https://boiltask.com/iwbtg/5/</link>
-        <pubDate>Fri, 19 Aug 2016 16:00:49 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/5/</guid>
-        <description>&lt;blockquote&gt;
-    &lt;p&gt;凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;清·俞樾, &lt;/span&gt;&lt;cite&gt;《群经平议·周官二》&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;
-&lt;p style=&#34;text-align:center;&#34;&gt;
-    0000|0000|0000|0000
-&lt;/p&gt;
-&lt;p&gt;上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。&lt;/p&gt;
-&lt;p&gt;首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&amp;quot;0&amp;quot;&amp;ldquo;1&amp;rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。&lt;/p&gt;
-&lt;p&gt;原理就讲这么多，再往深层次的讲就跑题了。-.-
-事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;了解了各种数据类型，我们也知道格式化输入输出函数。&lt;/p&gt;
-&lt;p&gt;那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。&lt;/p&gt;
-&lt;p&gt;后面还是以例题来从使用出发讲解各个常用的类型。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;参考文章：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.cnblogs.com/onedime/archive/2012/11/21/2780149.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;C语言基本数据类型简介 - onedime&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://blog.csdn.net/woods2001/article/details/6532761&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;C语言基本数据类型详解 - woods2001的专栏&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[4]从A&#43;B谈起 – 一切的开端</title>
-        <link>https://boiltask.com/iwbtg/4/</link>
-        <pubDate>Thu, 18 Aug 2016 16:00:36 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/4/</guid>
-        <description>&lt;p&gt;有人说：“程序员总难免开始于&lt;span class=&#34;dida-font-red&#34;&gt;A+B&lt;/span&gt;。”&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;说了这么多，我们还是停留在“定量”阶段。前面说过，黑盒测试应该是根据系统给的输入数据来进行输出数据的比较。那么，如何获取输入数据呢？&lt;/p&gt;
-&lt;p&gt;在stdio.h中，与格式化输出printf()相对的，有格式化输入scanf()。&lt;/p&gt;
-&lt;p&gt;对比一下两者的标准格式。&lt;/p&gt;
-&lt;p&gt;printf(格式化文本,参数1,参数2,……);&lt;/p&gt;
-&lt;p&gt;其中格式化文本控制了输出的格式，在其中可以使用如&amp;quot;%d&amp;quot;这样的格式说明来替换后面的参数，第几个%d便可以指定使参数几替换它。&lt;/p&gt;
-&lt;p&gt;这样说有点绕……&lt;/p&gt;
-&lt;p&gt;例如：printf(&amp;quot;%d&amp;quot;,1); 的输出结果便是 1&lt;/p&gt;
-&lt;p&gt;如果参数是个变量，比如提前建立一个整型的变量a=5(int a = 5 ;)。&lt;/p&gt;
-&lt;p&gt;那么：printf(&amp;quot;%d&amp;quot;,a); 的输出结果便是 5&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;同理，对于scanf()函数。&lt;/p&gt;
-&lt;p&gt;scanf(格式化文本,参数1,参数2,……);&lt;/p&gt;
-&lt;p&gt;格式化文本代表输入的格式，参数1、2……代表变量的地址。&lt;/p&gt;
-&lt;p&gt;-.-好 什么叫地址？暂且理解为门牌号吧。&lt;/p&gt;
-&lt;p&gt;同样的建立一个整型的变量a，然后从键盘读取一个数赋值给他。&lt;/p&gt;
-&lt;p&gt;scanf(&amp;quot;%d&amp;quot;,&amp;amp;a);&lt;/p&gt;
-&lt;p&gt;好，&amp;amp;是什么意思？&lt;/p&gt;
-&lt;p&gt;&amp;amp;a也就是取a变量的地址，这句话的意思就是从键盘读取一个数存储到a的地址。那么很显然，a变量的值也就变成了从键盘读取的值。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;scanf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\n&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;PS：试一试从键盘输入1234567890987654321会出现什么结果，思考为什么。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;了解了如何读取数据，就可以尝试完成这道A+B问题了。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://oj.boiltask.com/JudgeOnline/problem.php?id=1040&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;每个OJ都要有A+B&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;同样的，还是&lt;span class=&#34;dida-font-red&#34;&gt;请先尝试之后再继续阅读&lt;/span&gt;。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;对于这一题……&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;没什么说的-.-科科&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span class=&#34;dida-font-hidden&#34;&gt;&lt;/span&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[3]转义字符 – 格式化输出</title>
-        <link>https://boiltask.com/iwbtg/3/</link>
-        <pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/3/</guid>
-        <description>&lt;p&gt;本篇文章讲解题目：&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1132&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;打印键盘&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;题目要求按照顺序输出键盘上的字符。&lt;/p&gt;
-&lt;p&gt;这一道题并非难题，然而确实好多人都容易被坑到。&lt;/p&gt;
-&lt;p&gt;其中的原因就是涉及到了转义字符的知识，所以当输出 \ 和 &amp;quot; 时，如果不注意的话便容易出现问题。&lt;/p&gt;
-&lt;p&gt;错误代码示例：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;`1234567890-=&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;~!@#$%^&amp;amp;*()_+&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;qwertyuiop[]&lt;/span&gt;&lt;span class=&#34;se&#34;&gt;\&amp;#34;&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;QWERTYUIOP {}|&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;asdfghjkl; &amp;#39;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ASDFGHJKL:&amp;#34;&amp;#34;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;zxcvbnm,./&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;ZXCVBNM&amp;lt;&amp;gt;?&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这段代码编译会发现报错。&lt;/p&gt;
-&lt;p&gt;为什么呢？&lt;/p&gt;
-&lt;p&gt;在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/3/img.png&#34;
-	width=&#34;460&#34;
-	height=&#34;444&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/3/img_hu12971400185616522044.png 480w, https://boiltask.com/iwbtg/3/img_hu14966784061498255270.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;img.png&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;103&#34;
-		data-flex-basis=&#34;248px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;因此如果直接输出\，便会把它与后边字符加在一起理解为转义字符，如果想输出\则可表示为\。&lt;/p&gt;
-&lt;p&gt;同理如果直接打&amp;quot;，则会认为是提前把&amp;quot;&amp;ldquo;结束了，如果想输出字符&amp;rdquo;，则需要表示为&amp;quot;。&lt;/p&gt;
-&lt;p&gt;所以按照这个表进行改动。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。&lt;/p&gt;
-&lt;p&gt;而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。&lt;/p&gt;
-&lt;p&gt;现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \n 。&lt;/p&gt;
-&lt;p&gt;所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \n 即可。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[2]有趣的练习方式 – OnlineJudge</title>
-        <link>https://boiltask.com/iwbtg/2/</link>
-        <pubDate>Tue, 16 Aug 2016 16:00:51 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/2/</guid>
-        <description>&lt;p&gt;你听说过黑盒测试吗？&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/2/img.png&#34;
-	width=&#34;300&#34;
-	height=&#34;225&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/2/img_hu5781083412363413425.png 480w, https://boiltask.com/iwbtg/2/img_hu2074016451412375258.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;133&#34;
-		data-flex-basis=&#34;320px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;OnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。&lt;/p&gt;
-&lt;p&gt;所以对于一道程序设计题目，我们以上一篇文章中提到的“I wanna be the guy”为例，介绍一下OJ的基础使用方式。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;在开始之前，先进入一段日常题外话。&lt;/p&gt;
-&lt;p&gt;有没有见到过这个提示呢：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/2/img_1.png&#34;
-	width=&#34;412&#34;
-	height=&#34;53&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/2/img_1_hu9715507066329589569.png 480w, https://boiltask.com/iwbtg/2/img_1_hu4504652180749053707.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;777&#34;
-		data-flex-basis=&#34;1865px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;也就是提示少了一个&amp;quot;;&amp;quot;，我们发现C语言中，每一个语句之后都有一个&amp;quot;;&amp;quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。&lt;/p&gt;
-&lt;p&gt;少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;言归正传(1/1)&lt;/p&gt;
-&lt;p&gt;对于一道题，它应该有题目描述、输入描述、输出描述、样例输入、样例输出等几部分。&lt;/p&gt;
-&lt;p&gt;题目描述：提供了这道题的背景说明，一般会讲述一个故事来吸引做题者兴趣。&lt;/p&gt;
-&lt;p&gt;输入描述：提供了输入数据的格式、范围等信息。&lt;/p&gt;
-&lt;p&gt;输出描述：提供了输出所要求的格式，内容等信息。&lt;/p&gt;
-&lt;p&gt;示例输入、输出：一般会给几组测试用的数据，也就是程序把示例输入数据输进去，输出结果应该和示例输出相同(SpecialJudge也许不同)。&lt;/p&gt;
-&lt;p&gt;提示：包含出题人对这一题的提示。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;就这一题而言，因为是一个简单的示范，所以没有输入数据，直接进行输出即可。&lt;/p&gt;
-&lt;p&gt;从上一篇文章中学到，输出语句printf()，在这里就可以使用。&lt;/p&gt;
-&lt;p&gt;现在假设你在本地编译器中写好了代码。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I wanna be the guy!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;那么接下来，点击“提交”，出现提交页面，只需要把代码复制进去，进行提交即可。&lt;/p&gt;
-&lt;p&gt;之后便会进入运行状态页面，我们可以看到程序的评判结果。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;具体结果是什么意思-.-自己探索吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/blog/2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;系统帮助 &amp;amp; FAQ&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://acm.hdu.edu.cn/faq.php?lang=chs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;杭州电子科技大学(hdoj)FAQ&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;剩下的就是自己动手，先完成这个简单的题目吧。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1131&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】[1]工欲善其事，必先利其器</title>
-        <link>https://boiltask.com/iwbtg/1/</link>
-        <pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/1/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;子曰：“&lt;code&gt;工欲善其事，必先利其器&lt;/code&gt;。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/1/img.png&#34;
-	width=&#34;517&#34;
-	height=&#34;304&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/1/img_hu9382037299945081971.png 480w, https://boiltask.com/iwbtg/1/img_hu15865853162357565758.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;170&#34;
-		data-flex-basis=&#34;408px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。&lt;/p&gt;
-&lt;p&gt;然而，正文却依旧不能继续，有一点非常重要。&lt;/p&gt;
-&lt;p&gt;“&lt;span class=&#34;dida-font-blue&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。&lt;/p&gt;
-&lt;p&gt;但我相信，在ACM都能学好，其它领域怎么会学不好呢？&lt;/p&gt;
-&lt;p&gt;所以人工重要的事情重复三遍。&lt;/p&gt;
-&lt;p&gt;但我相信，在ACM都能学好，其它领域怎么会学不好呢？&lt;/p&gt;
-&lt;p&gt;所以人工重要的事情重复三遍。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-blue&#34;&gt;语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。&lt;/p&gt;
-&lt;p&gt;而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C&#34; data-lang=&#34;C&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#include&lt;/span&gt;&lt;span class=&#34;cpf&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span class=&#34;cp&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nf&#34;&gt;printf&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;I wanna be the guy!&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这段简单的代码展示了C的一些基础结构，下面逐句分析。&lt;/p&gt;
-&lt;p&gt;第一行“#include&amp;lt;stdio.h&amp;gt;”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include&amp;lt;&amp;gt;”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。&lt;/p&gt;
-&lt;p&gt;按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。&lt;/p&gt;
-&lt;p&gt;什么叫函数？-.-||&lt;/p&gt;
-&lt;p&gt;数学里的函数见过吧……$f(x)=x+1$
-这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。&lt;/p&gt;
-&lt;p&gt;同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/1/img_1.png&#34;
-	width=&#34;388&#34;
-	height=&#34;300&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/1/img_1_hu12498498310464818052.png 480w, https://boiltask.com/iwbtg/1/img_1_hu5965839331247665373.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;129&#34;
-		data-flex-basis=&#34;310px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)&lt;/p&gt;
-&lt;p&gt;那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。&lt;/p&gt;
-&lt;p&gt;那你想写……那么它的参数形如“int argc,char *argv[]”……&lt;/p&gt;
-&lt;p&gt;这都是啥啥啥……&lt;/p&gt;
-&lt;p&gt;-.-所以我不是很想提前说这么多的嘛，你先默认把它理解为空好了。&lt;/p&gt;
-&lt;p&gt;这样参数的问题也解决了，怎么控制返回值具体是什么呢。看一看main函数括号里面，以小学英语水平，可以明显发现一个单词“return - 返回”，那么就是翻译为返回0。&lt;/p&gt;
-&lt;p&gt;-0是啥？&lt;/p&gt;
-&lt;p&gt;-整数嘛。&lt;/p&gt;
-&lt;p&gt;-所以是什么类型？&lt;/p&gt;
-&lt;p&gt;-整型嘛。&lt;/p&gt;
-&lt;p&gt;-所以返回值类型怎么写？&lt;/p&gt;
-&lt;p&gt;-int嘛。&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;dida-font-red&#34;&gt;C语言就是这么简单&lt;/span&gt;。 -.-&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/1/img_2.png&#34;
-	width=&#34;300&#34;
-	height=&#34;218&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/1/img_2_hu1000692578309232230.png 480w, https://boiltask.com/iwbtg/1/img_2_hu2526000857806289299.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;img_2.png&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;137&#34;
-		data-flex-basis=&#34;330px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;接下来就只剩下最后一句话了“printf(&amp;ldquo;I wanna be the guy!&amp;quot;)”，很明显也是printf()与“I wanna be the guy!”组合。上面学习了函数的基本结构，那么这个printf后面也是有个括号，它与函数有没有关系。很显然我这么说了，它必然是有的。&lt;/p&gt;
-&lt;p&gt;按照刚才的理解，括号里面的&amp;quot;I wanna be the guy!&amp;ldquo;也就是它的参数了，那么这个函数有什么用呢。&lt;/p&gt;
-&lt;p&gt;print-f继续按照小学英语理解，明显和印刷、打印有关系，所以这个函数也是就把它的参数“I wanna be the guy!”“打印”到屏幕上，这叫格式化输出。当然，具体怎么用，还需要进一步学习。&lt;/p&gt;
-&lt;p&gt;我们知道，你如果想要用一个函数，你应该先把这个函数定义好。&lt;/p&gt;
-&lt;p&gt;还是比如你输入x，想让函数返回给你x+1，那么这个函数就应该定义成$f(x)=x+1$。
-可以这个printf在哪里定义的呢，为什么写上这一句话，计算机就知道把它的参数打印到屏幕上。这个时候我们再来看程序开头的那一句“#include&amp;lt;stdio.h&amp;gt;”，突然意识到了什么.jpg。&lt;/p&gt;
-&lt;p&gt;没错，这个被叫做头文件的东西就包含了C语言一些默认的“标准库”，需要的时候只需要先声明你想要用哪些头文件，然后在你的程序里就可以调用它的函数啦(当然不只是函数，还有其他的一些东西)。&lt;/p&gt;
-&lt;p&gt;声明方法就是#include&amp;lt;头文件名&amp;gt;。&lt;/p&gt;
-&lt;p&gt;stdio.h就是包含了标准输入输出的一个头文件，也是常用到作为模板的一个头文件。&lt;/p&gt;
-&lt;p&gt;更多的头文件在后面接触到的时候会继续说。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;下面就可以再来重新看一下这个代码了，很显然，这个程序可以完成把“I wanna be the guy!”这句话输出到屏幕的这个任务。&lt;/p&gt;
-&lt;p&gt;-.-好，问题来了，怎么运行。&lt;/p&gt;
-&lt;p&gt;这一部分我不是很想详细说，毕竟我感觉讲太详细是件不负责任的事情，因为剥夺了自己探索的乐趣。&lt;/p&gt;
-&lt;p&gt;所以这里只提供一个下载链接，其余的……&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.xiazaiba.com/html/3836.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Dev-C++(C++开发工具)V5.11.0中文免费版(不可调试)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.cr173.com/soft/21025.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Dev C++ V5.9.2 绿色中文版(可调试)&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;接下来，怎么知道自己的程序标不标准，怎么训练自己的编程能力。&lt;/p&gt;
-&lt;p&gt;这里涉及到ACM常用的一个训练工具，OnlineJudge。&lt;/p&gt;
-&lt;p&gt;下面是这一个程序的题目，在题解里会详细介绍OJ的用法：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://oj.didapipa.com/problem/1131&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;【愿成其身】I wanna be the guy&lt;/a&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】I wanna be the guy</title>
-        <link>https://boiltask.com/iwbtg/0/</link>
-        <pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/0/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;I wanna be the guy - 愿成其身&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/0/img.png&#34;
-	width=&#34;640&#34;
-	height=&#34;331&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/0/img_hu12650617882906433718.png 480w, https://boiltask.com/iwbtg/0/img_hu11342895865770276574.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;193&#34;
-		data-flex-basis=&#34;464px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;昨天想写文章时突然想起来了这个游戏，原因却不是清楚太多……想了想，大概是这个标榜难度巨高无比游戏的背景也是个励志故事吧，所以当人物一次次的死亡时，你就会心生敬佩(虽然应该是敬佩那些能把这游戏死上一万次来通关的人)。&lt;/p&gt;
-&lt;p&gt;其实ACM大概也是这个道理，虽然明知道一路上布满坎坷，明知道自己也许坚持不到关底，但自己也愿意去尝试一下。我很遗憾直到去年的今天都还不知道ACM是什么东东，虽然从小就标榜喜欢计算机，但却也是因为种种原因而胡乱摸索不得要领。所以，当大一时进入这个大门，人生中第一次有一群人愿意和你交流这些你喜欢的，表演真正的技术，内心才会产生出一丝激动。&lt;/p&gt;
-&lt;p&gt;爱上ACM，大抵也就是如此。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/0/img_1.png&#34;
-	width=&#34;369&#34;
-	height=&#34;300&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/0/img_1_hu3674992306865918077.png 480w, https://boiltask.com/iwbtg/0/img_1_hu15787663488799800362.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;ICPC&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;123&#34;
-		data-flex-basis=&#34;295px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;我以为在有一个教师老爸的前提下，在有一个万般告诫我不要当老师的老爸的前提下，在自己自认为对当老师完全不感兴趣的前提下，自己应该是对教东西不感什么兴趣的。然而慢慢发现，自己虽然对当老师不怎么感兴趣，但是对于能把自己所知道的知识讲给别人这件事，我确实还是很痴迷的。&lt;/p&gt;
-&lt;p&gt;这也就是我想写这个系列的原因。&lt;/p&gt;
-&lt;p&gt;与此同时，我感觉到自己也需要有所提高，所以写下这篇前言，也算是告诫自己吧。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;这个系列的文章，我的定位是作为一个餐后读物，特别是在已经看了很多专业性书之后来看，也许会更有感觉一些。强调的是“共鸣”，而非教学，所以大可把它当做一篇“ACM——我刚开始就是这么想的”。&lt;/p&gt;
-&lt;p&gt;如果在看的时候偶然发现，“哎呀，我也是这么认为的。”，那么也算是我的荣幸了。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/introduction/&#34; &gt;点此查看本系列导读目录&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PS：&lt;/p&gt;
-&lt;p&gt;因为文章内可能大量使用Katex渲染数学公式，所以请使用新版浏览器阅读。&lt;/p&gt;
-&lt;p&gt;如果遇到加载失效，请刷新页面重试。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>【愿成其身】导读目录</title>
-        <link>https://boiltask.com/iwbtg/introduction/</link>
-        <pubDate>Sat, 13 Aug 2016 16:00:25 +0000</pubDate>
-        
-        <guid>https://boiltask.com/iwbtg/introduction/</guid>
-        <description>&lt;blockquote&gt;
-&lt;p&gt;本系列文章中涉及到的图片与链接因为年久可能出现失效，有需要可联系作者交流。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/iwbtg/introduction/image.png&#34;
-	width=&#34;140&#34;
-	height=&#34;140&#34;
-	srcset=&#34;https://boiltask.com/iwbtg/introduction/image_hu9106273026834457887.png 480w, https://boiltask.com/iwbtg/introduction/image_hu4069004644941277617.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;240px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;入门导读&#34;&gt;&lt;a href=&#34;#%e5%85%a5%e9%97%a8%e5%af%bc%e8%af%bb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;====入门导读=====
-&lt;/h2&gt;&lt;p&gt;电子科技大学CDOJ：&lt;/p&gt;
-&lt;p&gt;【Step-By-Step】&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://acm.uestc.edu.cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://acm.uestc.edu.cn/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;南阳理工学院NYOJ：&lt;/p&gt;
-&lt;p&gt;【进阶计划】&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://acm.nyist.net/JudgeOnline/step.php&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;http://acm.nyist.net/JudgeOnline/step.php&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&#34;愿成其身&#34;&gt;&lt;a href=&#34;#%e6%84%bf%e6%88%90%e5%85%b6%e8%ba%ab&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;====愿成其身=====
-&lt;/h2&gt;&lt;h3 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;【前言】
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/0/&#34; &gt;I wanna be the guy&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&#34;入门&#34;&gt;&lt;a href=&#34;#%e5%85%a5%e9%97%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;【入门】
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/1/&#34; &gt;工欲善其事，必先利其器&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/2/&#34; &gt;有趣的练习方式 – OnlineJudge&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/3/&#34; &gt;转义字符 – 格式化输出&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/4/&#34; &gt;从A+B谈起 – 一切的开端&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/5/&#34; &gt;数据类型 – 装数据的盒子&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/6/&#34; &gt;A×B的学问 – 较大数的处理&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/7/&#34; &gt;整数的魅力 – 数字的最后一位&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/8/&#34; &gt;实数的运用 – 整数化作的实数&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/9/&#34; &gt;分支结构 – 程序的魅力&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/10/&#34; &gt;问号表达式 – 酷炫的利器&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/11/&#34; &gt;字符的本质 – ASCII的作用&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/12/&#34; &gt;从交换输出谈起 – 黑盒的漏洞&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/13/&#34; &gt;循环结构 – 计算机的神奇&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/14/&#34; &gt;for循环 – 另一种表达方法&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/iwbtg/15/&#34; &gt;思维的优化 – 数学的魅力&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;未完待续……&lt;/p&gt;
-&lt;h2 id=&#34;ps&#34;&gt;&lt;a href=&#34;#ps&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;PS
-&lt;/h2&gt;&lt;p&gt;因为文章内可能大量使用&lt;code&gt;Katex&lt;/code&gt;渲染数学公式，所以请使用新版浏览器阅读。&lt;/p&gt;
-&lt;p&gt;如果遇到加载失效，请刷新页面重试。&lt;/p&gt;
-&lt;p&gt;公式显示测试&lt;/p&gt;
-&lt;p&gt;这是公式f(x)=x+1 : $f \left( x \right) = x + 1$&lt;/p&gt;
-&lt;p&gt;如果显示不全请刷新页面或者更换浏览器&lt;/p&gt;
-&lt;h2 id=&#34;若无意外-三日一更&#34;&gt;&lt;a href=&#34;#%e8%8b%a5%e6%97%a0%e6%84%8f%e5%a4%96-%e4%b8%89%e6%97%a5%e4%b8%80%e6%9b%b4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;=====若无意外-三日一更=====
-&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;很显然，大概有很大的意外……&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;可使用&lt;code&gt;rss&lt;/code&gt;阅读器订阅&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;rss&lt;/code&gt;订阅地址如下&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/categories/iwbtg/index.xml&#34; &gt;/categories/iwbtg/index.xml&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;推荐使用&lt;a class=&#34;link&#34; href=&#34;%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb&#34; &gt;一览阅读&lt;/a&gt;订阅&lt;/del&gt;&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>愿成其身 on BoilTask's Blog</title><link>https://boiltask.com/categories/iwbtg/</link><description>Recent content in 愿成其身 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 29 Aug 2016 16:00:57 +0000</lastBuildDate><atom:link href="https://boiltask.com/categories/iwbtg/index.xml" rel="self" type="application/rss+xml"/><item><title>【愿成其身】[15]思维的优化 – 数学的魅力</title><link>https://boiltask.com/iwbtg/15/</link><pubDate>Mon, 29 Aug 2016 16:00:57 +0000</pubDate><guid>https://boiltask.com/iwbtg/15/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1143" target="_blank" rel="noopener"
+>小学求和1到n&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>注意观察这道题与上一个求和的差别。&lt;/p>
+&lt;p>首先从一组数据变为了多组数据，但这一点在学习了循环之后应该已经不再是问题了。&lt;/p>
+&lt;p>我们只需要读取一个变量T记录组数，然后使用语句：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在大括号里写程序即可。&lt;/p>
+&lt;p>这道题给的范围为$0 &amp;lt; n &amp;lt; 10 ^ 9$，所以如果依旧使用for的话循环最大要进行$10^9$次&lt;/p>
+&lt;hr>
+&lt;p>评测机一秒大概可运行$10 ^ 7 \sim 10 ^ 8 $次 ，所以O(n)的复杂度是不行的&lt;/p>
+&lt;p>(推荐先自己查阅时间复杂度相关资料)&lt;/p>
+&lt;hr>
+&lt;p>事实上，如果让小学生来解，这便是一道很简单的等差数列求和，所以可用求和公式直接算出答案。&lt;/p>
+&lt;p>当然，还需要注意数据范围的问题。&lt;/p>
+&lt;hr>
+&lt;p>再次举这一题的例子也是想再次说明思维的重要性。&lt;/p>
+&lt;p>一道题随着题目描述的不同，解答方式也许有着差异，所以不要局限于某一种解法，多加尝试才能处变不惊。&lt;/p></description></item><item><title>【愿成其身】[14]for循环 – 另一种表达方法</title><link>https://boiltask.com/iwbtg/14/</link><pubDate>Sun, 28 Aug 2016 16:00:46 +0000</pubDate><guid>https://boiltask.com/iwbtg/14/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1142" target="_blank" rel="noopener"
+>大学求和1到n&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>依旧是一道小学题目。&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">本篇文章有过激言论，请谨慎阅读。&lt;/span>&lt;/p>
+&lt;p>这一题一般常用做初讲for循环的例题，而这道题也确实很合适，因为这标志着思考问题解决方案的可行性，由优先思考数学方法转变为思考时间复杂度。&lt;/p>
+&lt;p>而有争议的地方，便是for循环的写法。&lt;/p>
+&lt;p>首先是基本结构如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*起始语句*/&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/*判断语句*/&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="cm">/*修正语句*/&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*循环语句*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同样画出它的流程图：&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/"
+loading="lazy"
+alt="TODO"
+>&lt;/p>
+&lt;p>(参考文章《for,(do-)while的循环体执行》)&lt;/p>
+&lt;p>for循环比while好在它能清晰的操作循环变量，比如下面代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*循环语句*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这便是让循环语句循环n次的写法，同样的操作可写为while(n&amp;ndash;)。&lt;/p>
+&lt;p>但是如果我们在循环中用到了i，比如我们想让奇数次时执行某一语句，偶数时执行另一语句，就可以写为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*偶数时操作*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*奇数时操作*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>所以具体什么时候该用哪种循环，取决于哪一种可以使代码简洁、写起来方便，可以进行互相转换。&lt;/p>
+&lt;p>上边代码就等同于：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*偶数时操作*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*奇数时操作*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>而至于for循环有争议的地方，便是for循环中的i=0。&lt;/p>
+&lt;p>在C++中，我们可以在循环的初始语句里写成：for(int i=0; i&amp;lt;n; i++)，也就是把定义变量放在循环内部，这样的话变量作用范围就仅限于这个循环里面。如此做，可以防止循环与循环之间的干扰，特别是需要函数互相调用时，防止变量因为已被占用而发生错误。&lt;/p>
+&lt;p>(关于变量的作用范围，可参考我之前写过的一些文章《for循环中的定义变量》《关于for循环中定义变量的后续讨论》)&lt;/p>
+&lt;p>然而，&lt;span class="dida-font-red">在标准C中不允许这么写&lt;/span>，可以尝试把代码保存为.c和.cpp来查看编译区别。&lt;/p>
+&lt;p>所以如果需要使用在for中定义变量的形式，提交时需要选C++，事实上我认为最好以后默认选C++。&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">这不是C语言课……&lt;/span>&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">这不是C语言课……&lt;/span>&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">这不是C语言课……&lt;/span>&lt;/p>
+&lt;p>所以我认为，只要自己在使用时清楚地认识到哪部分是C++特有的，那么我们大可放心使用C++。毕竟我依旧认为，我们不应该在语言层面纠结太长时间。&lt;/p>
+&lt;p>这些问题需要在今后的学习过程中自己体会与抉择，这里不多说了……&lt;/p>
+&lt;hr>
+&lt;p>&lt;span class="dida-font-red">注意事项：&lt;/span>&lt;/p>
+&lt;p>多条循环语句不要忘了加大括号！&lt;/p>
+&lt;p>不要忘了加大括号！&lt;/p>
+&lt;p>加大括号！&lt;/p>
+&lt;hr>
+&lt;p>剩下的就没有什么了，在掌握了循环之后，已经可以开始尝试一些入门级水题了。&lt;/p>
+&lt;p>这条路，长且艰……&lt;/p></description></item><item><title>【愿成其身】[13]循环结构 – 计算机的神奇</title><link>https://boiltask.com/iwbtg/13/</link><pubDate>Sat, 27 Aug 2016 16:00:42 +0000</pubDate><guid>https://boiltask.com/iwbtg/13/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1141" target="_blank" rel="noopener"
+>蜗牛爬树&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>一道小学数学题，但对于计算机来说，却是直接模拟这一过程更为简洁。&lt;/p>
+&lt;p>很明显的一个思路是，对高度不断模拟上升下落的这一过程，然后统计次数，直到高度达到树的高度。&lt;/p>
+&lt;p>简单的画一个流程图：&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/"
+loading="lazy"
+alt="TODO 流程图"
+>&lt;/p>
+&lt;hr>
+&lt;p>分析可以发现，这里的循环是由一个条件控制的。如果满足某一条件则一直循环，否则退出循环。&lt;/p>
+&lt;p>在C语言里，这种形式可以使用while语句表达，其基本形式为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*条件*/&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*语句*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以发现与if语句形式类似，也是很好理解，若满足条件，则不断执行语句，每次执行之后判断条件是否成立，然后选择继续执行或者跳出循环。&lt;/p>
+&lt;hr>
+&lt;p>有了上面的基础知识，我们再来思考这道题，发现上面的程序流程图对于一些情况是没有考虑到的。&lt;/p>
+&lt;ul>
+&lt;li>首先是Impossible不可能的情况，下降比上升的幅度还大，那么很显然是不可能的。但是有一种却要排除在外，也就是第一天白天就能够爬到树顶的情况，那么应该输出1。&lt;/li>
+&lt;li>考虑到如果白天就爬到，那么晚上就不用掉落，很显然我们在白天爬完之后应该判断，是否已经到了树顶，如果到了，那么就不需要晚上掉落这一部分了。
+加上这些考虑，我们改进流程图如下：&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://boiltask.com/"
+loading="lazy"
+alt="TODO 流程图"
+>&lt;/p>
+&lt;hr>
+&lt;p>有了这些思考，AC还是件难事吗-.-。&lt;/p>
+&lt;p>嗯……似乎还有些问题。&lt;/p>
+&lt;p>首先是对于输出不可能判定的条件有两个，在C语言里我们使用两个&amp;amp;号，也就是“&amp;amp;&amp;amp;”来表示并且，而用“||”来表示或者。这个条件就可以写为n&amp;lt;h&amp;amp;&amp;amp;n≤m。&lt;/p>
+&lt;p>再来是循环内的判断，如何终止循环呢？我们可以使用continue与break来控制循环。&lt;/p>
+&lt;p>continue的作用是跳过continue下面的部分直接回到循环条件那里判断是否需要进行下一次循环。&lt;/p>
+&lt;p>break的作用就是直接跳出循环。&lt;/p>
+&lt;p>测试代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> if(T==5)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> continue;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> if(T==5)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> break;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cm"> */&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里还顺带写了while的一种常见用法while(T&amp;ndash;)，可先自己理解理解其中含义，在后面输入输出系列中会详细说明。&lt;/p>
+&lt;p>写到这里，这一题就算告一段落了。&lt;/p>
+&lt;p>事实上，while还有一种变形，do-while，其基本形式为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">do&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*语句*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*条件*/&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也就是判断循环条件是否成立之前，先执行一次循环体，这在解决一些问题的时候很方便。&lt;/p>
+&lt;p>也许你可以自己尝试画出它的流程图呀~&lt;/p></description></item><item><title>【愿成其身】[12]从交换输出谈起 – 黑盒的漏洞</title><link>https://boiltask.com/iwbtg/12/</link><pubDate>Fri, 26 Aug 2016 16:00:45 +0000</pubDate><guid>https://boiltask.com/iwbtg/12/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1140" target="_blank" rel="noopener"
+>交换输出&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>这也是一道经典问题，今天就从它谈起。&lt;/p>
+&lt;p>$a \rightleftharpoons b$&lt;/p>
+&lt;p>首先分析题目，下面这种写法肯定是错的。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因为在a=b的时候，a的值已经被替换成b了。&lt;/p>
+&lt;hr>
+&lt;p>这个时候我们想，若把a的值提前记录下来便可以了。&lt;/p>
+&lt;p>也就是int t=a;a=b;b=t;&lt;/p>
+&lt;hr>
+&lt;p>事实上，还有一种更为酷炫的不借助其它变量的写法如下。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也就是直接把b的值存在a里面，然后a-b便是a的值——赋值给b，然后此时a-b便是b的值——赋值给a。&lt;/p>
+&lt;hr>
+&lt;p>同样按照这种思路，有依靠于二进制运算的更为酷炫的写法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">^=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">b&lt;/span>&lt;span class="o">^=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span>&lt;span class="o">^=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因为对计算机来说二进制更为快速，所以这种写法也是更省时间的。&lt;/p>
+&lt;hr>
+&lt;p>下面还有一个最终版本。&lt;/p>
+&lt;p>在前面说过，黑盒测试是给输入数据然后比较输出数据是否一样，而这一道问题的输出是a和b交换值之后输出a和b的值。&lt;/p>
+&lt;p>那么我们便可以提交如下代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同样是符合题意的一种代码。&lt;/p>
+&lt;hr>
+&lt;p>在分析这道题的过程中。&lt;/p>
+&lt;ol>
+&lt;li>首先，根据最简单的题意我们写出了一份代码。&lt;/li>
+&lt;li>然后，根据数学知识做出了优化(所用空间减少)。&lt;/li>
+&lt;li>之后，根据同样地思想用二进制优化了计算过程(所用时间减少)。&lt;/li>
+&lt;li>最后，依照黑盒测试的特点写出了最简代码。&lt;/li>
+&lt;/ol>
+&lt;p>当然，对于这一题来说，即使是最初的代码所用的时间与空间也是非常少的，所以优化对这一题来说也许没必要。&lt;/p>
+&lt;p>但是这种思想是我们应该学习的，正是在这种优化中，自身的编码能力及思考问题的能力会有显著的提高。&lt;/p>
+&lt;p>而实际比赛中，我们也可以根据题意，在符合要求的前提下，选取那个最容易想出且容易写成的方案来实现。&lt;/p></description></item><item><title>【愿成其身】[11]字符的本质 – ASCII的作用</title><link>https://boiltask.com/iwbtg/11/</link><pubDate>Thu, 25 Aug 2016 16:00:15 +0000</pubDate><guid>https://boiltask.com/iwbtg/11/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1139" target="_blank" rel="noopener"
+>比较字符&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>细想之下，计算机能储存字符是一件非常了不起的事情，毕竟它不同于数字。&lt;/p>
+&lt;p>数字还可以使用二进制转换，而字符怎么办……&lt;/p>
+&lt;p>为了解决这一问题，在C语言里，字符是被存储为数字的，其可像数字一样参与运算。&lt;/p>
+&lt;p>我们可以使用类似于下面的代码来查看代表字符的数字是多少：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;A&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;B&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;C&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;b&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="sc">&amp;#39;c&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>所以这一题便可以方便的进行比较。&lt;/p>
+&lt;p>字符的类型为char，格式化输入输出使用%c。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>需要注意的是，小写字母ASCII值是大于大写字母ASCII值的，而题目定义为小写字母小于大写字母，所以对于这种情况应该特殊判断。&lt;/p></description></item><item><title>【愿成其身】[10]问号表达式 – 酷炫的利器</title><link>https://boiltask.com/iwbtg/10/</link><pubDate>Wed, 24 Aug 2016 16:00:02 +0000</pubDate><guid>https://boiltask.com/iwbtg/10/</guid><description>&lt;blockquote>
+&lt;p>君甚屌,令堂可知？&lt;/p>
+&lt;/blockquote>
+&lt;hr>
+&lt;p>第十篇文章，能看到这里，说明已经基本上踏入了这道大门。虽然路还很长，但是已经走在了路上。&lt;/p>
+&lt;p>所以这一篇文章讲一个虽然不影响解题，但是熟练运用会让代码看起来很酷炫的小知识点：问号表达式。&lt;/p>
+&lt;p>其基本形式如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="cm">/*条件*/&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*语句1*/&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*语句2*/&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当条件1成立的时候，表达式的值取决于语句1，否则取决于语句2。&lt;/p>
+&lt;p>例子：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;A&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;B&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>具体的如何运用，还是需要自己在实践中多多尝试。&lt;/p>
+&lt;p>如果能运用的非常自如，那么说明对程序的结构把握的很好，也有利于进一步的学(zhuang)习(bi)。&lt;/p>
+&lt;p>练习题：&lt;/p>
+&lt;p>&lt;a class="link" href="http://oj.didapipa.com/problem/1138" target="_blank" rel="noopener"
+>三个数的最值&lt;/a>&lt;/p></description></item><item><title>【愿成其身】[9]分支结构 – 程序的魅力</title><link>https://boiltask.com/iwbtg/9/</link><pubDate>Tue, 23 Aug 2016 16:00:14 +0000</pubDate><guid>https://boiltask.com/iwbtg/9/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1137" target="_blank" rel="noopener"
+>两数的距离&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>由数学知识得，两点在数轴对应点的距离为$\left| x_{1}-x_{2}\right|$。&lt;/p>
+&lt;p>相减没什么难度，所以这一题实际上在于求绝对值。&lt;/p>
+&lt;p>事实上，这是一个逻辑问题，也就是如果a&amp;lt;0，那么应该输出-a，如果a&amp;gt;0，那么应该输出a，如果a=0，那么应该输出0。&lt;/p>
+&lt;hr>
+&lt;p>C语言对于分支结构有两种常用表达：&lt;/p>
+&lt;p>是if-else、switch，其中前者因为便于理解而更为常用，今后也将重点使用if-else，switch在可以方便使用时再讲解，可以自行百度。&lt;/p>
+&lt;hr>
+&lt;p>if-else的大概结构如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*条件1*/&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*语句1*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="cm">/*条件2*/&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*语句2*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="cm">/*语句3*/&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>if顾名思义，是如果的意思，这段代码的意思也就是：&lt;/p>
+&lt;p>如果条件1成立执行语句1；如果条件2成立执行语句2；否则执行语句3。&lt;/p>
+&lt;p>若条件下只有一条语句，则大括号可以省略。&lt;/p>
+&lt;p>&lt;span class="dida-font-red">若一个条件下有多条语句，则大括号不可省略(因为如果省略，编译器便把它当成只有一条语句在该条件下)。&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>所以这道题的代码就很好写了。&lt;/p>
+&lt;p>数据范围很小，用int型就足够了，然后就是进行判断求解。&lt;/p></description></item><item><title>【愿成其身】[8]实数的运用 – 整数化作的实数</title><link>https://boiltask.com/iwbtg/8/</link><pubDate>Mon, 22 Aug 2016 16:00:47 +0000</pubDate><guid>https://boiltask.com/iwbtg/8/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1136" target="_blank" rel="noopener"
+>愿成其身A÷B&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>我们知道C语言中用&amp;quot;/&amp;ldquo;来表示相除，整数的除法是采用的舍尾的方式。&lt;/p>
+&lt;p>$5 \div 2 = 2 \ldots \ldots 1$&lt;/p>
+&lt;p>$5 / 2 = 2$&lt;/p>
+&lt;p>所以对于这一题来说，题目要求输出A÷B的结果并保留到整数位。&lt;/p>
+&lt;p>如果写成A/B，A,B都是整数的话，那么会得出结果的整数部分，小数部分会被舍弃，而这一题应该四舍五入。&lt;/p>
+&lt;p>所以如下面代码是错误的。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>为了表示小数，我们可以使用double(float因为精度问题一般不使用)。&lt;/p>
+&lt;p>提到了精度问题，请&lt;span class="dida-font-red">百度double的注意事项&lt;/span>，应重点关注double的表示范围与计算误差。&lt;/p>
+&lt;p>在这里暂时不对这一问题进行深入研究。&lt;/p>
+&lt;hr>
+&lt;p>声明一个double型变量依旧类似。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">double&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在格式化输入输出里用%lf表示(有些标准对于有些情况使用%f，但一般统一写作%lf)。&lt;/p>
+&lt;p>那么如何表示精确到整数呢？&lt;/p>
+&lt;p>我们可以使用printf(&amp;rdquo;%.lf\n&amp;quot;,a);&lt;/p>
+&lt;p>可以注意到在%与lf中间加了一个点，这个便表示四舍五入到整数输出。&lt;/p>
+&lt;hr>
+&lt;p>这也是格式化输出的一种运用，在后面会再细讲。&lt;/p>
+&lt;p>类似的还有：&lt;/p>
+&lt;p>printf(&amp;quot;%.2lf\n&amp;quot;,a); 四舍五入到小数点后两位数字输出。&lt;/p>
+&lt;p>printf(&amp;quot;%.3lf\n&amp;quot;,a); 四舍五入到小数点后三位数字输出。&lt;/p>
+&lt;p>等等……&lt;/p>
+&lt;hr>
+&lt;p>还有一点需要注意：&lt;/p>
+&lt;p>此题的的输入数据描述，由两个整数变为了两个数。&lt;/p>
+&lt;p>所以输入数据有可能为小数，这个时候便不可以用整数来读取。&lt;/p></description></item><item><title>【愿成其身】[7]整数的魅力 – 数字的最后一位</title><link>https://boiltask.com/iwbtg/7/</link><pubDate>Sun, 21 Aug 2016 16:00:32 +0000</pubDate><guid>https://boiltask.com/iwbtg/7/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1135" target="_blank" rel="noopener"
+>最后一位&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>在C语言中，除了加减乘除运算之外，还有一个较为常用的运算，取余&amp;quot;%&amp;quot;。&lt;/p>
+$$5 \% 2 = 1$$&lt;p>由数学知识得，一个整数对10取余即可得到最后一位数字。&lt;/p>
+$$12345 \% 10 = 5$$&lt;p>这一题便可使用这一种方法轻松得出答案。&lt;/p>
+&lt;hr>
+&lt;p>从上一篇文章中学到，这里如果计算A×B的话，依旧应该使用long long，然后对结果进行取余运算即可。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>因为最后一位数字肯定是int范围内的数字，所以可以直接以int型输出。&lt;/p>
+&lt;hr>
+&lt;p>对于这一题来说还有一种避免使用long long的方法。&lt;/p>
+&lt;p>我们想到，对于乘法，其结果的最后一位只取决于A和B的最后一位，所以我们可以先分别求出A与B的最后一位，然后求出最后一位相乘的最后一位。&lt;/p>
+&lt;hr>
+&lt;p>这种把$\left( A\times B\right) \% 10$转变为$\left[ \left( A\% 10 \right) \times \left( B\% 10 \right) \right] \% 10$的思维，对于&lt;code>ACM&lt;/code>来说很重要，因为通过各种转化，我们可以突破题目的一些数据限制，从而得到正确答案。&lt;/p>
+&lt;p>思考，若题目的数据范围是$0 \leq a,b \leq 10^{18}$，那么我们便不能使用第一种方法，而使用后一种方法便可以轻松得到正确答案。&lt;/p>
+&lt;p>&lt;span class="dida-font-red">这才是这一题的意义！&lt;/span>&lt;/p></description></item><item><title>【愿成其身】[6]A×B的学问 – 较大数的处理</title><link>https://boiltask.com/iwbtg/6/</link><pubDate>Sat, 20 Aug 2016 16:00:01 +0000</pubDate><guid>https://boiltask.com/iwbtg/6/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1134" target="_blank" rel="noopener"
+>愿成其身A×B&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>对于这一题，因为C语言中用&amp;quot;*&amp;ldquo;号来表示乘法，所以我们很容易写出以下代码。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>提交发现wrong answer答案错误。&lt;/p>
+&lt;p>分析题目数据范围：$-10^9&amp;lt;a,b&amp;lt;10^9$。&lt;/p>
+&lt;p>我们知道int类型在电脑中的范围是$-2^{32}\leq int \leq2^{32}-1$。&lt;/p>
+&lt;p>大概约为2147483648～2147483647(PS：可以自己想办法求求看哦~)&lt;/p>
+&lt;p>而很显然a,b是在int范围内的，那么为什么会出现答案错误呢……&lt;/p>
+&lt;hr>
+&lt;p>计算A×B的范围是$-10^{18}&amp;lt;a,b&amp;lt;10^{18}$。&lt;/p>
+&lt;p>超出了int范围了！&lt;/p>
+&lt;p>我们可以试着输入测试数据：&lt;/p>
+&lt;p>100000000 100000000&lt;/p>
+&lt;p>上述程序输出了错误答案……&lt;/p>
+&lt;hr>
+&lt;p>怎么解决呢？&lt;/p>
+&lt;p>有一种比int类型范围更大的数据类型long long(__int64)类型。&lt;/p>
+&lt;p>写成两种形式是因为C语言的标准不同，导致不同的编译器版本可能有不一样的规定，具体使用哪一种类型，需要查看OJ的FAQ，一般都会特别说明(此题所使用的OJ采取long long)。&lt;/p>
+&lt;hr>
+&lt;p>long long的范围大概为$-2^{64}\leq long long \leq 2^{64}-1$。&lt;/p>
+&lt;p>使用时与int类似，声明写为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">long&lt;/span> &lt;span class="kt">long&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>代表声明一个名称为a的long long型变量。&lt;/p>
+&lt;p>在格式化输入输出函数里，正如%d代表int型，我们用%lld代表long long型(%I64d代表__int64型)。&lt;/p>
+&lt;p>所以此题即可使用long long解决。&lt;/p>
+&lt;hr>
+&lt;p>因为若非必要，应该优先使用int型，所以若感觉此题可用int读取a,b，则也可进行解题。&lt;/p>
+&lt;p>但输出时需要注意！&lt;/p>
+&lt;p>如果写作&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lld&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>测试发现依旧会出现错误，因为编译器计算时，a与b都是int型，则a*b就会以int型计算，这样写只不过是把这个int型以long long型输出。&lt;/p>
+&lt;p>而实际上，在a*b时就已经超过int型了，所以会出现错误答案，这就属于中间结果溢出。&lt;/p>
+&lt;hr>
+&lt;p>那么应该怎么写呢？&lt;/p>
+&lt;p>我们可以使用类型转换写为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lld&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="kt">long&lt;/span> &lt;span class="kt">long&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>此语句表示把a转换为long long类型，然后与b进行乘法运算，并且结果以long long型输出。&lt;/p>
+&lt;p>long long型与int相乘，会把int型先转换为long long型，然后变成两个long long型相乘，从而得到正确结果。&lt;/p></description></item><item><title>【愿成其身】[5]数据类型 – 装数据的盒子</title><link>https://boiltask.com/iwbtg/5/</link><pubDate>Fri, 19 Aug 2016 16:00:49 +0000</pubDate><guid>https://boiltask.com/iwbtg/5/</guid><description>&lt;blockquote>
+&lt;p>凡邦之有疾病者，疕疡者造焉，则使医分而治之，是亦不自医也。&lt;/p>&lt;span class="cite">&lt;span>― &lt;/span>&lt;span>清·俞樾, &lt;/span>&lt;cite>《群经平议·周官二》&lt;/cite>&lt;/span>&lt;/blockquote>
+&lt;div style="text-align:center">&lt;p>0000|0000|0000|0000&lt;/p>&lt;/div>
+&lt;p>上次提到了C语言中的数据类型，这部分应该是比较难讲有趣的，为了防止沦落成为教学文章，只好强行引用了一句“分而治之”。事实上，我认为这也能很好地理解数据在计算机中的存储。&lt;/p>
+&lt;p>首先我们应该知道，计算机是不知道怎么存储数据的，所有数据在内部都会表示成二进制&amp;quot;0&amp;quot;&amp;ldquo;1&amp;rdquo;。所以C语言中的数据结构，也便是给这些数据一个划分，比如4个一组(0000~1111[0,15])，8个一组(00000000~11111111[0,255])。这也方便理解为什么可以“自定义类型”。&lt;/p>
+&lt;p>原理就讲这么多，再往深层次的讲就跑题了。-.-
+事实上，这种知识也没办法投机取巧，只能在学习中进行记忆。所以我认为一个比较高效的方式就是：“用到哪里学哪里”，这就要求自己多找机会去用，否则的话便容易跟不上进度。&lt;/p>
+&lt;hr>
+&lt;p>了解了各种数据类型，我们也知道格式化输入输出函数。&lt;/p>
+&lt;p>那么在格式化输入输出函数中的参数便可以随心所欲的使用了，比如%d代表int型，%c代表char型等。&lt;/p>
+&lt;p>后面还是以例题来从使用出发讲解各个常用的类型。&lt;/p>
+&lt;hr>
+&lt;p>参考文章：&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.cnblogs.com/onedime/archive/2012/11/21/2780149.html" target="_blank" rel="noopener"
+>C语言基本数据类型简介 - onedime&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://blog.csdn.net/woods2001/article/details/6532761" target="_blank" rel="noopener"
+>C语言基本数据类型详解 - woods2001的专栏&lt;/a>&lt;/p></description></item><item><title>【愿成其身】[4]从A+B谈起 – 一切的开端</title><link>https://boiltask.com/iwbtg/4/</link><pubDate>Thu, 18 Aug 2016 16:00:36 +0000</pubDate><guid>https://boiltask.com/iwbtg/4/</guid><description>&lt;p>有人说：“程序员总难免开始于&lt;span class="dida-font-red">A+B&lt;/span>。”&lt;/p>
+&lt;hr>
+&lt;p>说了这么多，我们还是停留在“定量”阶段。前面说过，黑盒测试应该是根据系统给的输入数据来进行输出数据的比较。那么，如何获取输入数据呢？&lt;/p>
+&lt;p>在stdio.h中，与格式化输出printf()相对的，有格式化输入scanf()。&lt;/p>
+&lt;p>对比一下两者的标准格式。&lt;/p>
+&lt;p>printf(格式化文本,参数1,参数2,……);&lt;/p>
+&lt;p>其中格式化文本控制了输出的格式，在其中可以使用如&amp;quot;%d&amp;quot;这样的格式说明来替换后面的参数，第几个%d便可以指定使参数几替换它。&lt;/p>
+&lt;p>这样说有点绕……&lt;/p>
+&lt;p>例如：printf(&amp;quot;%d&amp;quot;,1); 的输出结果便是 1&lt;/p>
+&lt;p>如果参数是个变量，比如提前建立一个整型的变量a=5(int a = 5 ;)。&lt;/p>
+&lt;p>那么：printf(&amp;quot;%d&amp;quot;,a); 的输出结果便是 5&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>同理，对于scanf()函数。&lt;/p>
+&lt;p>scanf(格式化文本,参数1,参数2,……);&lt;/p>
+&lt;p>格式化文本代表输入的格式，参数1、2……代表变量的地址。&lt;/p>
+&lt;p>-.-好 什么叫地址？暂且理解为门牌号吧。&lt;/p>
+&lt;p>同样的建立一个整型的变量a，然后从键盘读取一个数赋值给他。&lt;/p>
+&lt;p>scanf(&amp;quot;%d&amp;quot;,&amp;amp;a);&lt;/p>
+&lt;p>好，&amp;amp;是什么意思？&lt;/p>
+&lt;p>&amp;amp;a也就是取a变量的地址，这句话的意思就是从键盘读取一个数存储到a的地址。那么很显然，a变量的值也就变成了从键盘读取的值。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>PS：试一试从键盘输入1234567890987654321会出现什么结果，思考为什么。&lt;/p>
+&lt;hr>
+&lt;p>了解了如何读取数据，就可以尝试完成这道A+B问题了。&lt;/p>
+&lt;p>&lt;a class="link" href="http://oj.boiltask.com/JudgeOnline/problem.php?id=1040" target="_blank" rel="noopener"
+>每个OJ都要有A+B&lt;/a>&lt;/p>
+&lt;p>同样的，还是&lt;span class="dida-font-red">请先尝试之后再继续阅读&lt;/span>。&lt;/p>
+&lt;hr>
+&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">对于这一题……&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">没什么说的-.-科科&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p></description></item><item><title>【愿成其身】[3]转义字符 – 格式化输出</title><link>https://boiltask.com/iwbtg/3/</link><pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate><guid>https://boiltask.com/iwbtg/3/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1132" target="_blank" rel="noopener"
+>打印键盘&lt;/a>&lt;/p>
+&lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>题目要求按照顺序输出键盘上的字符。&lt;/p>
+&lt;p>这一道题并非难题，然而确实好多人都容易被坑到。&lt;/p>
+&lt;p>其中的原因就是涉及到了转义字符的知识，所以当输出 \ 和 &amp;quot; 时，如果不注意的话便容易出现问题。&lt;/p>
+&lt;p>错误代码示例：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;`1234567890-=&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;~!@#$%^&amp;amp;*()_+&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;qwertyuiop[]&lt;/span>&lt;span class="se">\&amp;#34;&lt;/span>&lt;span class="s">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;QWERTYUIOP {}|&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;asdfghjkl; &amp;#39;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ASDFGHJKL:&amp;#34;&amp;#34;);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;zxcvbnm,./&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;ZXCVBNM&amp;lt;&amp;gt;?&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这段代码编译会发现报错。&lt;/p>
+&lt;p>为什么呢？&lt;/p>
+&lt;p>在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/3/img.png"
+width="460"
+height="444"
+srcset="https://boiltask.com/iwbtg/3/img_hu12971400185616522044.png 480w, https://boiltask.com/iwbtg/3/img_hu14966784061498255270.png 1024w"
+loading="lazy"
+alt="img.png"
+class="gallery-image"
+data-flex-grow="103"
+data-flex-basis="248px"
+>&lt;/p>
+&lt;p>因此如果直接输出\，便会把它与后边字符加在一起理解为转义字符，如果想输出\则可表示为\。&lt;/p>
+&lt;p>同理如果直接打&amp;quot;，则会认为是提前把&amp;quot;&amp;ldquo;结束了，如果想输出字符&amp;rdquo;，则需要表示为&amp;quot;。&lt;/p>
+&lt;p>所以按照这个表进行改动。&lt;/p>
+&lt;hr>
+&lt;p>这个时候运行发现还是和结果不相同，因为所输出的字符全部在同一行。&lt;/p>
+&lt;p>而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。&lt;/p>
+&lt;p>现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \n 。&lt;/p>
+&lt;p>所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \n 即可。&lt;/p></description></item><item><title>【愿成其身】[2]有趣的练习方式 – OnlineJudge</title><link>https://boiltask.com/iwbtg/2/</link><pubDate>Tue, 16 Aug 2016 16:00:51 +0000</pubDate><guid>https://boiltask.com/iwbtg/2/</guid><description>&lt;p>你听说过黑盒测试吗？&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/2/img.png"
+width="300"
+height="225"
+srcset="https://boiltask.com/iwbtg/2/img_hu5781083412363413425.png 480w, https://boiltask.com/iwbtg/2/img_hu2074016451412375258.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="320px"
+>&lt;/p>
+&lt;p>OnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。&lt;/p>
+&lt;p>所以对于一道程序设计题目，我们以上一篇文章中提到的“I wanna be the guy”为例，介绍一下OJ的基础使用方式。&lt;/p>
+&lt;hr>
+&lt;p>在开始之前，先进入一段日常题外话。&lt;/p>
+&lt;p>有没有见到过这个提示呢：&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/2/img_1.png"
+width="412"
+height="53"
+srcset="https://boiltask.com/iwbtg/2/img_1_hu9715507066329589569.png 480w, https://boiltask.com/iwbtg/2/img_1_hu4504652180749053707.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="777"
+data-flex-basis="1865px"
+>&lt;/p>
+&lt;p>也就是提示少了一个&amp;quot;;&amp;quot;，我们发现C语言中，每一个语句之后都有一个&amp;quot;;&amp;quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。&lt;/p>
+&lt;p>少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。&lt;/p>
+&lt;hr>
+&lt;p>言归正传(1/1)&lt;/p>
+&lt;p>对于一道题，它应该有题目描述、输入描述、输出描述、样例输入、样例输出等几部分。&lt;/p>
+&lt;p>题目描述：提供了这道题的背景说明，一般会讲述一个故事来吸引做题者兴趣。&lt;/p>
+&lt;p>输入描述：提供了输入数据的格式、范围等信息。&lt;/p>
+&lt;p>输出描述：提供了输出所要求的格式，内容等信息。&lt;/p>
+&lt;p>示例输入、输出：一般会给几组测试用的数据，也就是程序把示例输入数据输进去，输出结果应该和示例输出相同(SpecialJudge也许不同)。&lt;/p>
+&lt;p>提示：包含出题人对这一题的提示。&lt;/p>
+&lt;hr>
+&lt;p>就这一题而言，因为是一个简单的示范，所以没有输入数据，直接进行输出即可。&lt;/p>
+&lt;p>从上一篇文章中学到，输出语句printf()，在这里就可以使用。&lt;/p>
+&lt;p>现在假设你在本地编译器中写好了代码。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-c" data-lang="c">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I wanna be the guy!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>那么接下来，点击“提交”，出现提交页面，只需要把代码复制进去，进行提交即可。&lt;/p>
+&lt;p>之后便会进入运行状态页面，我们可以看到程序的评判结果。&lt;/p>
+&lt;hr>
+&lt;p>具体结果是什么意思-.-自己探索吧。&lt;/p>
+&lt;p>&lt;a class="link" href="http://oj.didapipa.com/blog/2" target="_blank" rel="noopener"
+>系统帮助 &amp;amp; FAQ&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://acm.hdu.edu.cn/faq.php?lang=chs" target="_blank" rel="noopener"
+>杭州电子科技大学(hdoj)FAQ&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>剩下的就是自己动手，先完成这个简单的题目吧。&lt;/p>
+&lt;p>&lt;a class="link" href="http://oj.didapipa.com/problem/1131" target="_blank" rel="noopener"
+>【愿成其身】I wanna be the guy&lt;/a>&lt;/p></description></item><item><title>【愿成其身】[1]工欲善其事，必先利其器</title><link>https://boiltask.com/iwbtg/1/</link><pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/iwbtg/1/</guid><description>&lt;blockquote>
+&lt;p>子曰：“&lt;code>工欲善其事，必先利其器&lt;/code>。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/1/img.png"
+width="517"
+height="304"
+srcset="https://boiltask.com/iwbtg/1/img_hu9382037299945081971.png 480w, https://boiltask.com/iwbtg/1/img_hu15865853162357565758.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="408px"
+>&lt;/p>
+&lt;p>看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。&lt;/p>
+&lt;p>然而，正文却依旧不能继续，有一点非常重要。&lt;/p>
+&lt;p>“&lt;span class="dida-font-blue">语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span>”这是刘汝佳《算法竞赛入门经典(第2版)》前言中的一句话。我感觉对于ACM入门者来说非常重要，这也是很多人半途而废的原因之一。可能很多人认为ACM便是研究编程，但是我不得不说，语言入门之后离真正的算法程序还有一段距离。或者说，如果只是为了学习语言，那么ACM可能会让你失望，因为这并不是ACM的本意。甚至于在ACM中的一些常用写法，在做应用项目时可能会进行避免，因为这是两种不同的编程要求。&lt;/p>
+&lt;p>但我相信，在ACM都能学好，其它领域怎么会学不好呢？&lt;/p>
+&lt;p>所以人工重要的事情重复三遍。&lt;/p>
+&lt;p>但我相信，在ACM都能学好，其它领域怎么会学不好呢？&lt;/p>
+&lt;p>所以人工重要的事情重复三遍。&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span>&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span>&lt;/p>
+&lt;p>&lt;span class="dida-font-blue">语言毕竟只是算法竞赛的工具——尽管这个工具非常重要，却不是核心。&lt;/span>&lt;/p>
+&lt;hr>
+&lt;p>我个人对C语言的看法，所谓一门“语言”，它有自己的“语法”与“单词”。我们要做的，就是遵循它的语法，用它提供的单词组合成自己“文章”。&lt;/p>
+&lt;p>而作为一门实用性的学科，我主张还是“学以致用，以用促学”，所以先来看一篇“文章”。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C" data-lang="C">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&lt;/span>&lt;span class="cpf">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span class="cp">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nf">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;I wanna be the guy!&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这段简单的代码展示了C的一些基础结构，下面逐句分析。&lt;/p>
+&lt;p>第一行“#include&amp;lt;stdio.h&amp;gt;”按照我们的语法喜欢，很明显这句话要分成两部分来看“#include&amp;lt;&amp;gt;”和被尖括号括在里面的“stdio.h”。这一句代表声明一个“stdio.h”的头文件，什么叫头文件……继续看下面。&lt;/p>
+&lt;p>按照同样的思路，很显然下面是一个 int main(){ }和被大括号括在里面的一些句子。这里的main被称为主函数，程序的开始便是从main()函数为起点的。&lt;/p>
+&lt;p>什么叫函数？-.-||&lt;/p>
+&lt;p>数学里的函数见过吧……$f(x)=x+1$
+这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。&lt;/p>
+&lt;p>同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/1/img_1.png"
+width="388"
+height="300"
+srcset="https://boiltask.com/iwbtg/1/img_1_hu12498498310464818052.png 480w, https://boiltask.com/iwbtg/1/img_1_hu5965839331247665373.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="129"
+data-flex-basis="310px"
+>&lt;/p>
+&lt;p>言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)&lt;/p>
+&lt;p>那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。&lt;/p>
+&lt;p>那你想写……那么它的参数形如“int argc,char *argv[]”……&lt;/p>
+&lt;p>这都是啥啥啥……&lt;/p>
+&lt;p>-.-所以我不是很想提前说这么多的嘛，你先默认把它理解为空好了。&lt;/p>
+&lt;p>这样参数的问题也解决了，怎么控制返回值具体是什么呢。看一看main函数括号里面，以小学英语水平，可以明显发现一个单词“return - 返回”，那么就是翻译为返回0。&lt;/p>
+&lt;p>-0是啥？&lt;/p>
+&lt;p>-整数嘛。&lt;/p>
+&lt;p>-所以是什么类型？&lt;/p>
+&lt;p>-整型嘛。&lt;/p>
+&lt;p>-所以返回值类型怎么写？&lt;/p>
+&lt;p>-int嘛。&lt;/p>
+&lt;p>&lt;span class="dida-font-red">C语言就是这么简单&lt;/span>。 -.-&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/1/img_2.png"
+width="300"
+height="218"
+srcset="https://boiltask.com/iwbtg/1/img_2_hu1000692578309232230.png 480w, https://boiltask.com/iwbtg/1/img_2_hu2526000857806289299.png 1024w"
+loading="lazy"
+alt="img_2.png"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="330px"
+>&lt;/p>
+&lt;p>接下来就只剩下最后一句话了“printf(&amp;ldquo;I wanna be the guy!&amp;quot;)”，很明显也是printf()与“I wanna be the guy!”组合。上面学习了函数的基本结构，那么这个printf后面也是有个括号，它与函数有没有关系。很显然我这么说了，它必然是有的。&lt;/p>
+&lt;p>按照刚才的理解，括号里面的&amp;quot;I wanna be the guy!&amp;ldquo;也就是它的参数了，那么这个函数有什么用呢。&lt;/p>
+&lt;p>print-f继续按照小学英语理解，明显和印刷、打印有关系，所以这个函数也是就把它的参数“I wanna be the guy!”“打印”到屏幕上，这叫格式化输出。当然，具体怎么用，还需要进一步学习。&lt;/p>
+&lt;p>我们知道，你如果想要用一个函数，你应该先把这个函数定义好。&lt;/p>
+&lt;p>还是比如你输入x，想让函数返回给你x+1，那么这个函数就应该定义成$f(x)=x+1$。
+可以这个printf在哪里定义的呢，为什么写上这一句话，计算机就知道把它的参数打印到屏幕上。这个时候我们再来看程序开头的那一句“#include&amp;lt;stdio.h&amp;gt;”，突然意识到了什么.jpg。&lt;/p>
+&lt;p>没错，这个被叫做头文件的东西就包含了C语言一些默认的“标准库”，需要的时候只需要先声明你想要用哪些头文件，然后在你的程序里就可以调用它的函数啦(当然不只是函数，还有其他的一些东西)。&lt;/p>
+&lt;p>声明方法就是#include&amp;lt;头文件名&amp;gt;。&lt;/p>
+&lt;p>stdio.h就是包含了标准输入输出的一个头文件，也是常用到作为模板的一个头文件。&lt;/p>
+&lt;p>更多的头文件在后面接触到的时候会继续说。&lt;/p>
+&lt;hr>
+&lt;p>下面就可以再来重新看一下这个代码了，很显然，这个程序可以完成把“I wanna be the guy!”这句话输出到屏幕的这个任务。&lt;/p>
+&lt;p>-.-好，问题来了，怎么运行。&lt;/p>
+&lt;p>这一部分我不是很想详细说，毕竟我感觉讲太详细是件不负责任的事情，因为剥夺了自己探索的乐趣。&lt;/p>
+&lt;p>所以这里只提供一个下载链接，其余的……&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.xiazaiba.com/html/3836.html" target="_blank" rel="noopener"
+>Dev-C++(C++开发工具)V5.11.0中文免费版(不可调试)&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="http://www.cr173.com/soft/21025.html" target="_blank" rel="noopener"
+>Dev C++ V5.9.2 绿色中文版(可调试)&lt;/a>&lt;/p>
+&lt;hr>
+&lt;p>接下来，怎么知道自己的程序标不标准，怎么训练自己的编程能力。&lt;/p>
+&lt;p>这里涉及到ACM常用的一个训练工具，OnlineJudge。&lt;/p>
+&lt;p>下面是这一个程序的题目，在题解里会详细介绍OJ的用法：&lt;/p>
+&lt;p>&lt;a class="link" href="http://oj.didapipa.com/problem/1131" target="_blank" rel="noopener"
+>【愿成其身】I wanna be the guy&lt;/a>&lt;/p></description></item><item><title>【愿成其身】I wanna be the guy</title><link>https://boiltask.com/iwbtg/0/</link><pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/iwbtg/0/</guid><description>&lt;blockquote>
+&lt;p>I wanna be the guy - 愿成其身&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/0/img.png"
+width="640"
+height="331"
+srcset="https://boiltask.com/iwbtg/0/img_hu12650617882906433718.png 480w, https://boiltask.com/iwbtg/0/img_hu11342895865770276574.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="193"
+data-flex-basis="464px"
+>&lt;/p>
+&lt;p>昨天想写文章时突然想起来了这个游戏，原因却不是清楚太多……想了想，大概是这个标榜难度巨高无比游戏的背景也是个励志故事吧，所以当人物一次次的死亡时，你就会心生敬佩(虽然应该是敬佩那些能把这游戏死上一万次来通关的人)。&lt;/p>
+&lt;p>其实ACM大概也是这个道理，虽然明知道一路上布满坎坷，明知道自己也许坚持不到关底，但自己也愿意去尝试一下。我很遗憾直到去年的今天都还不知道ACM是什么东东，虽然从小就标榜喜欢计算机，但却也是因为种种原因而胡乱摸索不得要领。所以，当大一时进入这个大门，人生中第一次有一群人愿意和你交流这些你喜欢的，表演真正的技术，内心才会产生出一丝激动。&lt;/p>
+&lt;p>爱上ACM，大抵也就是如此。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/0/img_1.png"
+width="369"
+height="300"
+srcset="https://boiltask.com/iwbtg/0/img_1_hu3674992306865918077.png 480w, https://boiltask.com/iwbtg/0/img_1_hu15787663488799800362.png 1024w"
+loading="lazy"
+alt="ICPC"
+class="gallery-image"
+data-flex-grow="123"
+data-flex-basis="295px"
+>&lt;/p>
+&lt;p>我以为在有一个教师老爸的前提下，在有一个万般告诫我不要当老师的老爸的前提下，在自己自认为对当老师完全不感兴趣的前提下，自己应该是对教东西不感什么兴趣的。然而慢慢发现，自己虽然对当老师不怎么感兴趣，但是对于能把自己所知道的知识讲给别人这件事，我确实还是很痴迷的。&lt;/p>
+&lt;p>这也就是我想写这个系列的原因。&lt;/p>
+&lt;p>与此同时，我感觉到自己也需要有所提高，所以写下这篇前言，也算是告诫自己吧。&lt;/p>
+&lt;hr>
+&lt;p>这个系列的文章，我的定位是作为一个餐后读物，特别是在已经看了很多专业性书之后来看，也许会更有感觉一些。强调的是“共鸣”，而非教学，所以大可把它当做一篇“ACM——我刚开始就是这么想的”。&lt;/p>
+&lt;p>如果在看的时候偶然发现，“哎呀，我也是这么认为的。”，那么也算是我的荣幸了。&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/introduction/" >点此查看本系列导读目录&lt;/a>&lt;/p>
+&lt;p>PS：&lt;/p>
+&lt;p>因为文章内可能大量使用Katex渲染数学公式，所以请使用新版浏览器阅读。&lt;/p>
+&lt;p>如果遇到加载失效，请刷新页面重试。&lt;/p></description></item><item><title>【愿成其身】导读目录</title><link>https://boiltask.com/iwbtg/introduction/</link><pubDate>Sat, 13 Aug 2016 16:00:25 +0000</pubDate><guid>https://boiltask.com/iwbtg/introduction/</guid><description>&lt;blockquote>
+&lt;p>本系列文章中涉及到的图片与链接因为年久可能出现失效，有需要可联系作者交流。&lt;/p>
+&lt;/blockquote>
+&lt;p>&lt;img src="https://boiltask.com/iwbtg/introduction/image.png"
+width="140"
+height="140"
+srcset="https://boiltask.com/iwbtg/introduction/image_hu9106273026834457887.png 480w, https://boiltask.com/iwbtg/introduction/image_hu4069004644941277617.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+>&lt;/p>
+&lt;hr>
+&lt;h2 id="入门导读">&lt;a href="#%e5%85%a5%e9%97%a8%e5%af%bc%e8%af%bb" class="header-anchor">&lt;/a>====入门导读=====
+&lt;/h2>&lt;p>电子科技大学CDOJ：&lt;/p>
+&lt;p>【Step-By-Step】&lt;/p>
+&lt;p>&lt;a class="link" href="https://acm.uestc.edu.cn/" target="_blank" rel="noopener"
+>https://acm.uestc.edu.cn/&lt;/a>&lt;/p>
+&lt;p>南阳理工学院NYOJ：&lt;/p>
+&lt;p>【进阶计划】&lt;/p>
+&lt;p>&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/step.php" target="_blank" rel="noopener"
+>http://acm.nyist.net/JudgeOnline/step.php&lt;/a>&lt;/p>
+&lt;h2 id="愿成其身">&lt;a href="#%e6%84%bf%e6%88%90%e5%85%b6%e8%ba%ab" class="header-anchor">&lt;/a>====愿成其身=====
+&lt;/h2>&lt;h3 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>【前言】
+&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/0/" >I wanna be the guy&lt;/a>&lt;/p>
+&lt;h3 id="入门">&lt;a href="#%e5%85%a5%e9%97%a8" class="header-anchor">&lt;/a>【入门】
+&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/1/" >工欲善其事，必先利其器&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/2/" >有趣的练习方式 – OnlineJudge&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/3/" >转义字符 – 格式化输出&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/4/" >从A+B谈起 – 一切的开端&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/5/" >数据类型 – 装数据的盒子&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/6/" >A×B的学问 – 较大数的处理&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/7/" >整数的魅力 – 数字的最后一位&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/8/" >实数的运用 – 整数化作的实数&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/9/" >分支结构 – 程序的魅力&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/10/" >问号表达式 – 酷炫的利器&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/11/" >字符的本质 – ASCII的作用&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/12/" >从交换输出谈起 – 黑盒的漏洞&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/13/" >循环结构 – 计算机的神奇&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/14/" >for循环 – 另一种表达方法&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/15/" >思维的优化 – 数学的魅力&lt;/a>&lt;/p>
+&lt;p>未完待续……&lt;/p>
+&lt;h2 id="ps">&lt;a href="#ps" class="header-anchor">&lt;/a>PS
+&lt;/h2>&lt;p>因为文章内可能大量使用&lt;code>Katex&lt;/code>渲染数学公式，所以请使用新版浏览器阅读。&lt;/p>
+&lt;p>如果遇到加载失效，请刷新页面重试。&lt;/p>
+&lt;p>公式显示测试&lt;/p>
+&lt;p>这是公式f(x)=x+1 : $f \left( x \right) = x + 1$&lt;/p>
+&lt;p>如果显示不全请刷新页面或者更换浏览器&lt;/p>
+&lt;h2 id="若无意外-三日一更">&lt;a href="#%e8%8b%a5%e6%97%a0%e6%84%8f%e5%a4%96-%e4%b8%89%e6%97%a5%e4%b8%80%e6%9b%b4" class="header-anchor">&lt;/a>=====若无意外-三日一更=====
+&lt;/h2>&lt;blockquote>
+&lt;p>很显然，大概有很大的意外……&lt;/p>
+&lt;/blockquote>
+&lt;p>可使用&lt;code>rss&lt;/code>阅读器订阅&lt;/p>
+&lt;p>&lt;code>rss&lt;/code>订阅地址如下&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/categories/iwbtg/index.xml" >/categories/iwbtg/index.xml&lt;/a>&lt;/p>
+&lt;p>&lt;del>推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" >一览阅读&lt;/a>订阅&lt;/del>&lt;/p></description></item></channel></rss>

@@ -1,1219 +1,978 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>SVN on BoilTask&#39;s Blog</title>
-        <link>https://boiltask.com/tags/svn/</link>
-        <description>Recent content in SVN on BoilTask&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>zh-CN</language>
-        <lastBuildDate>Mon, 24 Feb 2025 11:57:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/svn/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>虚幻引擎蓝图合并工具</title>
-        <link>https://boiltask.com/ue/blueprint-merge/</link>
-        <pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate>
-        
-        <guid>https://boiltask.com/ue/blueprint-merge/</guid>
-        <description>&lt;p&gt;UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nl&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;MetaEngine&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Engine&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Binaries&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Win64&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;UE4Editor&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exe&lt;/span&gt; &lt;span class=&#34;nl&#34;&gt;D&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Meta&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Meta&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;uproject&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;theirs&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mine&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;base&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;merged&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-merge/image.png&#34;
-	width=&#34;1920&#34;
-	height=&#34;1040&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-merge/image_hu1737421868806885097.png 480w, https://boiltask.com/ue/blueprint-merge/image_hu268284317994099172.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;184&#34;
-		data-flex-basis=&#34;443px&#34;
-	
-&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>SVN回退操作</title>
-        <link>https://boiltask.com/knowledge/svn-revert/</link>
-        <pubDate>Mon, 09 Oct 2023 10:41:32 +0800</pubDate>
-        
-        <guid>https://boiltask.com/knowledge/svn-revert/</guid>
-        <description>&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;有时候需要还原错误提交，这个时候可以使用Revert命令。&lt;/p&gt;
-&lt;h2 id=&#34;操作说明&#34;&gt;&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;操作说明
-&lt;/h2&gt;&lt;p&gt;在项目根目录上右键选择&lt;code&gt;TortoiseSVN-&amp;gt;Show log&lt;/code&gt;，打开日志窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-1-1.png&#34;
-	width=&#34;513&#34;
-	height=&#34;668&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-1_hu5800090339614270963.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;76&#34;
-		data-flex-basis=&#34;184px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-1-2.png&#34;
-	width=&#34;463&#34;
-	height=&#34;669&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-2_hu3382273434000479264.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;69&#34;
-		data-flex-basis=&#34;166px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;在所需回退的记录上右键选择&lt;code&gt;Revert changes from this revision&lt;/code&gt;，打开确认窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-2-1.png&#34;
-	width=&#34;739&#34;
-	height=&#34;643&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-2-1_hu7913616928023097590.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-1_hu3570810554322645217.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;114&#34;
-		data-flex-basis=&#34;275px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-2-2.png&#34;
-	width=&#34;739&#34;
-	height=&#34;643&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-2-2_hu12423358968747103432.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-2_hu14657691247748881992.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;114&#34;
-		data-flex-basis=&#34;275px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;选择&lt;code&gt;Revert&lt;/code&gt;即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-3-1.png&#34;
-	width=&#34;542&#34;
-	height=&#34;325&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-3-1_hu4042752106934293030.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-1_hu6134221852306643944.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;400px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-revert/image-3-2.png&#34;
-	width=&#34;542&#34;
-	height=&#34;325&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-revert/image-3-2_hu13332711233538001998.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-2_hu3975419756773525122.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;400px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;选项说明&#34;&gt;&lt;a href=&#34;#%e9%80%89%e9%a1%b9%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;选项说明
-&lt;/h2&gt;&lt;p&gt;&lt;code&gt;Revert to this revision&lt;/code&gt;与&lt;code&gt;Revert changes from this revision&lt;/code&gt;的区别：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Revert to this revision&lt;/code&gt;指的是&lt;code&gt;复原到此版本&lt;/code&gt;，也即执行完之后，本地的状态应该是此版本提交后的状态。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Revert changes from this revision&lt;/code&gt;指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>SVN合并操作</title>
-        <link>https://boiltask.com/knowledge/svn-merge/</link>
-        <pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate>
-        
-        <guid>https://boiltask.com/knowledge/svn-merge/</guid>
-        <description>&lt;p&gt;以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
-&lt;p&gt;合并是一个相对的概念，既可以从主干（trunk）合并到分支（branch），也可以从分支（branch）合并到主干（trunk），下文以从主干（trunk）合并到分支（branch）为例。&lt;/p&gt;
-&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;为了保证一个相对稳定的文件版本，开发过程中有时会新建一个分支（branch） ，这样可以可以直接从分支获取资产以提高稳定性。&lt;/p&gt;
-&lt;p&gt;相关操作：&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/knowledge/svn-switch-branch&#34; &gt;SVN切分支&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;在我们提交主干（trunk）后，有时候需要把相同的提交传到分支，这个时候可以直接使用SVN的合并（merge）功能来简化操作。&lt;/p&gt;
-&lt;h2 id=&#34;操作说明&#34;&gt;&lt;a href=&#34;#%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;操作说明
-&lt;/h2&gt;&lt;h3 id=&#34;准备工作&#34;&gt;&lt;a href=&#34;#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;准备工作
-&lt;/h3&gt;&lt;p&gt;需要本地拉取（Checkout）主干目录与分支目录，并尽可能保证干净无多余变化，以降低冲突可能性。&lt;/p&gt;
-&lt;h3 id=&#34;合并操作&#34;&gt;&lt;a href=&#34;#%e5%90%88%e5%b9%b6%e6%93%8d%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;合并操作
-&lt;/h3&gt;&lt;p&gt;在项目根目录上右键选择&lt;code&gt;TortoiseSVN-&amp;gt;Show log&lt;/code&gt;，打开日志窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-1-1.png&#34;
-	width=&#34;513&#34;
-	height=&#34;668&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-1_hu5800090339614270963.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;76&#34;
-		data-flex-basis=&#34;184px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-1-2.png&#34;
-	width=&#34;463&#34;
-	height=&#34;669&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-2_hu3382273434000479264.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;69&#34;
-		data-flex-basis=&#34;166px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;在所需合并的记录上右键选择&lt;code&gt;Merge revision to...&lt;/code&gt;，打开选择目标窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-2-1.png&#34;
-	width=&#34;739&#34;
-	height=&#34;709&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-2-1_hu2448058881704012729.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-1_hu6349847887146610289.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;104&#34;
-		data-flex-basis=&#34;250px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-2-2.png&#34;
-	width=&#34;739&#34;
-	height=&#34;709&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-2-2_hu5936312556644352570.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-2_hu13759128226647644493.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;104&#34;
-		data-flex-basis=&#34;250px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;选择本地分支的根目录，等待完成即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-3.png&#34;
-	width=&#34;960&#34;
-	height=&#34;540&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-3_hu11933152340863840705.png 480w, https://boiltask.com/knowledge/svn-merge/image-3_hu12021038228253536609.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;177&#34;
-		data-flex-basis=&#34;426px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h3 id=&#34;解决冲突&#34;&gt;&lt;a href=&#34;#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;解决冲突
-&lt;/h3&gt;&lt;p&gt;若分支的版本与主干对不上，则SVN会尝试合并，如果失败则会提供如何解决冲突的确认框。&lt;/p&gt;
-&lt;p&gt;如果涉及到多人维护的文件，请充分沟通以减少异常。&lt;/p&gt;
-&lt;p&gt;为了表述清晰，下文把来源文件称之为主干，目标文件称之为分支。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Postpone - 暂不处理，分支会保持冲突状态，相关文件或目录会标红，SVN会创建临时文件需要及时处理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Accept Base - 放弃主干的文件，仍然使用分支的文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Accept incoming - 使用主干的文件，覆盖分支的文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Mark as resolved - 标记为解决，但需要注意此时文件仍处于冲突状态，SVN会删除临时文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-4-1.png&#34;
-	width=&#34;934&#34;
-	height=&#34;736&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-4-1_hu15080479352377242366.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-1_hu12123394260900880120.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;126&#34;
-		data-flex-basis=&#34;304px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-4-2.png&#34;
-	width=&#34;825&#34;
-	height=&#34;644&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-4-2_hu10406064931226753947.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-2_hu4719651788656351657.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;128&#34;
-		data-flex-basis=&#34;307px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;合并成功&#34;&gt;&lt;a href=&#34;#%e5%90%88%e5%b9%b6%e6%88%90%e5%8a%9f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;合并成功
-&lt;/h2&gt;&lt;p&gt;出现下面的提示说明合并成功，此时分支的文件已经被修改，正常提交（commit）即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-5-1.png&#34;
-	width=&#34;934&#34;
-	height=&#34;736&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-5-1_hu16162010147720784187.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-1_hu6663661471441733664.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;126&#34;
-		data-flex-basis=&#34;304px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-merge/image-5-2.png&#34;
-	width=&#34;762&#34;
-	height=&#34;520&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-merge/image-5-2_hu796579267384435703.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-2_hu4171343192513218924.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;146&#34;
-		data-flex-basis=&#34;351px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-        </item>
-        <item>
-        <title>SVN切分支</title>
-        <link>https://boiltask.com/knowledge/svn-switch-branch/</link>
-        <pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate>
-        
-        <guid>https://boiltask.com/knowledge/svn-switch-branch/</guid>
-        <description>&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;有时候需要为了避免开发中的机制造成主干不稳定，我们会拉出来一个新的分支。&lt;/p&gt;
-&lt;p&gt;可以使用&lt;code&gt;Switch&lt;/code&gt;命令将本地目录切换到目标分支。&lt;/p&gt;
-&lt;h2 id=&#34;切换分支&#34;&gt;&lt;a href=&#34;#%e5%88%87%e6%8d%a2%e5%88%86%e6%94%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;切换分支
-&lt;/h2&gt;&lt;p&gt;在项目工程所在文件夹右键选择&lt;code&gt;Switch...&lt;/code&gt;打开分支切换窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png&#34;
-	width=&#34;503&#34;
-	height=&#34;679&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu5935501871532154894.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu18384966433410811196.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;74&#34;
-		data-flex-basis=&#34;177px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png&#34;
-	width=&#34;473&#34;
-	height=&#34;671&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu9041463599554812067.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu10133542670804154133.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;70&#34;
-		data-flex-basis=&#34;169px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;输入目标分支，点击确认，然后等待完成即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png&#34;
-	width=&#34;616&#34;
-	height=&#34;370&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu15041769225168938241.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu10398778729252334580.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;399px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png&#34;
-	width=&#34;616&#34;
-	height=&#34;370&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu16988809227071996878.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu18341031616397604144.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;399px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;单个目录或文件切换分支&#34;&gt;&lt;a href=&#34;#%e5%8d%95%e4%b8%aa%e7%9b%ae%e5%bd%95%e6%88%96%e6%96%87%e4%bb%b6%e5%88%87%e6%8d%a2%e5%88%86%e6%94%af&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;单个目录或文件切换分支
-&lt;/h2&gt;&lt;p&gt;在当前想切换的目录选择switch&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-3.png&#34;
-	width=&#34;614&#34;
-	height=&#34;338&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-3_hu10987723568123480892.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-3_hu26609449577816713.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;181&#34;
-		data-flex-basis=&#34;435px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;找到想要切换到的分支对应的目录点击确定&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-4.png&#34;
-	width=&#34;1375&#34;
-	height=&#34;466&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-4_hu8041458363380810481.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-4_hu13801987268901389218.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;295&#34;
-		data-flex-basis=&#34;708px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;回到这个界面点击ok即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-5.png&#34;
-	width=&#34;616&#34;
-	height=&#34;370&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-switch-branch/image-5_hu2569409130268246945.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-5_hu14511331662190612340.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;166&#34;
-		data-flex-basis=&#34;399px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;注：如单独切换某个目录或文件到指定分支，修改完记得切回原分支&lt;/strong&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>SVN锁定操作</title>
-        <link>https://boiltask.com/knowledge/svn-lock/</link>
-        <pubDate>Mon, 13 Mar 2023 19:35:21 +0800</pubDate>
-        
-        <guid>https://boiltask.com/knowledge/svn-lock/</guid>
-        <description>&lt;p&gt;以下主要以英文版为例，中文版同理选择对应位置选项即可。&lt;/p&gt;
-&lt;p&gt;多图警告，可通过左侧目录跳转所需章节。&lt;/p&gt;
-&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;因为修改某一文件往往需要一段时间，在此期间内如果有人上传了同一文件，如果无法合并就会导致自己提交时产生冲突。&lt;/p&gt;
-&lt;p&gt;为了尽量避免此问题，我们可以在修改前就把文件锁定（&lt;code&gt;Lock&lt;/code&gt;），这样其他人通过正常操作就无法上传。&lt;/p&gt;
-&lt;p&gt;同时如果他也在修改前尝试锁定，就可以得到别人已经锁定本文件的提示，从而也避免了无效工作。&lt;/p&gt;
-&lt;h2 id=&#34;工具使用&#34;&gt;&lt;a href=&#34;#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;工具使用
-&lt;/h2&gt;&lt;h3 id=&#34;锁定文件&#34;&gt;&lt;a href=&#34;#%e9%94%81%e5%ae%9a%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;锁定文件
-&lt;/h3&gt;&lt;p&gt;在所需锁定的文件上右键选择&lt;code&gt;TortoiseSVN-&amp;gt;GetLock...&lt;/code&gt;，弹出确认窗口。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-1-1.png&#34;
-	width=&#34;720&#34;
-	height=&#34;815&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-1-1_hu10613403118535043628.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-1_hu6518781224494017334.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;88&#34;
-		data-flex-basis=&#34;212px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-1-2.png&#34;
-	width=&#34;700&#34;
-	height=&#34;811&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-1-2_hu11167061833332973397.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-2_hu5297745458006572602.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;86&#34;
-		data-flex-basis=&#34;207px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;在窗口里输入锁定原因，点击确认即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-2-1.png&#34;
-	width=&#34;532&#34;
-	height=&#34;571&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-2-1_hu8531832550648001071.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-1_hu11409514016090496122.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;93&#34;
-		data-flex-basis=&#34;223px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-2-2.png&#34;
-	width=&#34;532&#34;
-	height=&#34;571&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-2-2_hu12740665712511142850.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-2_hu4614013570268702220.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;93&#34;
-		data-flex-basis=&#34;223px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;查看锁定&#34;&gt;&lt;a href=&#34;#%e6%9f%a5%e7%9c%8b%e9%94%81%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;查看锁定
-&lt;/h3&gt;&lt;p&gt;如果需要查看一个文件有没有被别人锁定，可以右键选择&lt;code&gt;TortoiseSVN-&amp;gt;Check for modifications&lt;/code&gt;。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-3-1.png&#34;
-	width=&#34;662&#34;
-	height=&#34;785&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-3-1_hu11020575163933948961.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-1_hu18133542715937806061.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;84&#34;
-		data-flex-basis=&#34;202px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-3-2.png&#34;
-	width=&#34;467&#34;
-	height=&#34;682&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-3-2_hu1891260429824521828.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-2_hu8134180997390071011.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;68&#34;
-		data-flex-basis=&#34;164px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;点击&lt;code&gt;Check repository&lt;/code&gt;即可扫描出变更，并通过&lt;code&gt;Lock&lt;/code&gt;一栏查看锁定者。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-4-1.png&#34;
-	width=&#34;1067&#34;
-	height=&#34;539&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-4-1_hu2078220766911598252.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-1_hu5893435162189683820.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;197&#34;
-		data-flex-basis=&#34;475px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-4-2.png&#34;
-	width=&#34;1052&#34;
-	height=&#34;486&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-4-2_hu9452001396821168688.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-2_hu15983604767246758065.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;216&#34;
-		data-flex-basis=&#34;519px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;释放文件&#34;&gt;&lt;a href=&#34;#%e9%87%8a%e6%94%be%e6%96%87%e4%bb%b6&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;释放文件
-&lt;/h3&gt;&lt;h4 id=&#34;手动释放&#34;&gt;&lt;a href=&#34;#%e6%89%8b%e5%8a%a8%e9%87%8a%e6%94%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;手动释放
-&lt;/h4&gt;&lt;p&gt;同理，在所需释放的文件上右键选择&lt;code&gt;TortoiseSVN-&amp;gt;ReleaseLock...&lt;/code&gt;，弹出确认窗口点击确认即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-5-1.png&#34;
-	width=&#34;751&#34;
-	height=&#34;817&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-5-1_hu5099334325101817976.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-1_hu5642565465813555531.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;91&#34;
-		data-flex-basis=&#34;220px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-5-2.png&#34;
-	width=&#34;609&#34;
-	height=&#34;825&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-5-2_hu9117771135428803543.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-2_hu1966502865403730667.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;73&#34;
-		data-flex-basis=&#34;177px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4 id=&#34;自动释放&#34;&gt;&lt;a href=&#34;#%e8%87%aa%e5%8a%a8%e9%87%8a%e6%94%be&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;自动释放
-&lt;/h4&gt;&lt;p&gt;SVN默认会在提交文件时解锁对应文件，如果提交后也不想解锁，可以选择&lt;code&gt;Keep Locks&lt;/code&gt;。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-6-1.png&#34;
-	width=&#34;721&#34;
-	height=&#34;718&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-6-1_hu15927409771865917671.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-1_hu3466397071656374398.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;100&#34;
-		data-flex-basis=&#34;241px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-6-2.png&#34;
-	width=&#34;704&#34;
-	height=&#34;741&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-6-2_hu8657624855487578581.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-2_hu4463349718507782490.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;95&#34;
-		data-flex-basis=&#34;228px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;意外情况&#34;&gt;&lt;a href=&#34;#%e6%84%8f%e5%a4%96%e6%83%85%e5%86%b5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;意外情况
-&lt;/h3&gt;&lt;p&gt;如果锁定时出现了如下提示，则说明已被用户锁定，锁定信息会显示在图示位置（如果锁定者没填则不显示）。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-7-1.png&#34;
-	width=&#34;762&#34;
-	height=&#34;576&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-7-1_hu3035808876713423987.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-1_hu14456454763541704663.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;132&#34;
-		data-flex-basis=&#34;317px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-7-2.png&#34;
-	width=&#34;762&#34;
-	height=&#34;576&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-7-2_hu1440869857335182607.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-2_hu14985938029990149709.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;132&#34;
-		data-flex-basis=&#34;317px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;此时需要和该用户沟通锁定原因，协商处理。&lt;/p&gt;
-&lt;h3 id=&#34;强制锁定&#34;&gt;&lt;a href=&#34;#%e5%bc%ba%e5%88%b6%e9%94%81%e5%ae%9a&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;强制锁定
-&lt;/h3&gt;&lt;p&gt;由于锁标记是存在本地文件夹的，有时候由于换机器等原因锁定未释放，此时需要强制解除锁定。&lt;/p&gt;
-&lt;p&gt;锁定操作勾选&lt;code&gt;Steal the locks&lt;/code&gt;时，会强制无效已锁定状态，把锁定转为此次操作的用户。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果文件由其他用户锁定，应尽量避免使用此操作破坏开发流程。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-8-1.png&#34;
-	width=&#34;532&#34;
-	height=&#34;571&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-8-1_hu9999446847589336692.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-1_hu17502981096254089608.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;93&#34;
-		data-flex-basis=&#34;223px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/knowledge/svn-lock/image-8-2.png&#34;
-	width=&#34;532&#34;
-	height=&#34;571&#34;
-	srcset=&#34;https://boiltask.com/knowledge/svn-lock/image-8-2_hu3855568038762477466.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-2_hu8904183885368462120.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;93&#34;
-		data-flex-basis=&#34;223px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;结合引擎&#34;&gt;&lt;a href=&#34;#%e7%bb%93%e5%90%88%e5%bc%95%e6%93%8e&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;结合引擎
-&lt;/h2&gt;&lt;p&gt;&lt;code&gt;UnrealEngine&lt;/code&gt;提供了内置的版本控制工具，可以快捷的实现一些&lt;code&gt;SVN&lt;/code&gt;操作，可参考&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/ue/source-control-tool&#34; &gt;引擎内置版本控制工具&lt;/a&gt;进行配置。&lt;/p&gt;
-&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;注意事项
-&lt;/h2&gt;&lt;p&gt;由于锁定之后会干扰其他同事操作，因此锁定前需要确认操作的必要性。如果遇见有人询问相关问题，应积极处理。&lt;/p&gt;
-&lt;p&gt;未避免误操作，应不定期查看&lt;code&gt;Release Lock&lt;/code&gt;列表，看看是否有误锁文件。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>引擎内置版本控制工具</title>
-        <link>https://boiltask.com/ue/source-control-tool/</link>
-        <pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate>
-        
-        <guid>https://boiltask.com/ue/source-control-tool/</guid>
-        <description>&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;为了便于多人协作&lt;code&gt;UnrealEngine&lt;/code&gt;提供了一个版本控制工具，可结合&lt;code&gt;SVN&lt;/code&gt;、&lt;code&gt;Git&lt;/code&gt;等工具对蓝图等资产进行版本控制。&lt;/p&gt;
-&lt;h2 id=&#34;工具使用&#34;&gt;&lt;a href=&#34;#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;工具使用
-&lt;/h2&gt;&lt;h3 id=&#34;配置连接&#34;&gt;&lt;a href=&#34;#%e9%85%8d%e7%bd%ae%e8%bf%9e%e6%8e%a5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;配置连接
-&lt;/h3&gt;&lt;p&gt;在引擎的工具栏处有一个&lt;code&gt;Source Control&lt;/code&gt;的选项，选择&lt;code&gt;Connect to Source Control&lt;/code&gt;弹出确认框。
-&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-1.png&#34;
-	width=&#34;433&#34;
-	height=&#34;290&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-1_hu12765942364294099375.png 480w, https://boiltask.com/ue/source-control-tool/image-1_hu17593301496266398636.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;149&#34;
-		data-flex-basis=&#34;358px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;选择&lt;code&gt;Subversion&lt;/code&gt;也即&lt;code&gt;SVN&lt;/code&gt;，展示信息输入框。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-2.png&#34;
-	width=&#34;720&#34;
-	height=&#34;267&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-2_hu12635055628427891836.png 480w, https://boiltask.com/ue/source-control-tool/image-2_hu4676874817897847116.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;269&#34;
-		data-flex-basis=&#34;647px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;按照所需信息输入然后点击&lt;code&gt;Accept Settings&lt;/code&gt;即可。
-&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-3.png&#34;
-	width=&#34;720&#34;
-	height=&#34;274&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-3_hu6796912750367437106.png 480w, https://boiltask.com/ue/source-control-tool/image-3_hu16929476084393832319.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;262&#34;
-		data-flex-basis=&#34;630px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;其中几项含义分别如下：&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;字段&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-          &lt;th&gt;示例&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Provider&lt;/td&gt;
-          &lt;td&gt;使用的版本控制系统&lt;/td&gt;
-          &lt;td&gt;Subversion&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Repository&lt;/td&gt;
-          &lt;td&gt;仓库的链接&lt;/td&gt;
-          &lt;td&gt;http://&lt;em&gt;&lt;strong&gt;.&lt;/strong&gt;&lt;/em&gt;.com/svn/***/&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;User Name&lt;/td&gt;
-          &lt;td&gt;用户名&lt;/td&gt;
-          &lt;td&gt;***&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Labels Directory&lt;/td&gt;
-          &lt;td&gt;仓库子路径，比如主干、某一分支等&lt;/td&gt;
-          &lt;td&gt;trunk&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Password&lt;/td&gt;
-          &lt;td&gt;用户密码&lt;/td&gt;
-          &lt;td&gt;abcdefg123465&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;资产保存&#34;&gt;&lt;a href=&#34;#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;资产保存
-&lt;/h3&gt;&lt;p&gt;链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code&gt;CheckOut&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;此操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/knowledge/svn-lock&#34; &gt;SVN锁定操作&lt;/a&gt;，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-4.png&#34;
-	width=&#34;760&#34;
-	height=&#34;434&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-4_hu4538419662043158090.png 480w, https://boiltask.com/ue/source-control-tool/image-4_hu340917589041919442.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;175&#34;
-		data-flex-basis=&#34;420px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;如果该资产已经被其他人锁定了，那么点&lt;code&gt;CheckOut&lt;/code&gt;时会有如下提示。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-5.png&#34;
-	width=&#34;760&#34;
-	height=&#34;434&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-5_hu10868571854966016212.png 480w, https://boiltask.com/ue/source-control-tool/image-5_hu3354516035096916110.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;175&#34;
-		data-flex-basis=&#34;420px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;如果大家都遵循此操作，则可以大大减少蓝图冲突的可能性。&lt;/p&gt;
-&lt;p&gt;如果不需要锁定蓝图，那么可以点击&lt;code&gt;Make Writable&lt;/code&gt;在不锁定的情况下保存。&lt;/p&gt;
-&lt;h3 id=&#34;资产操作&#34;&gt;&lt;a href=&#34;#%e8%b5%84%e4%ba%a7%e6%93%8d%e4%bd%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;资产操作
-&lt;/h3&gt;&lt;p&gt;链接版本管理后，在资产上右键可以展开版本管理的操作。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-6.png&#34;
-	width=&#34;477&#34;
-	height=&#34;748&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-6_hu7986053261412522013.png 480w, https://boiltask.com/ue/source-control-tool/image-6_hu10285438846323337546.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;63&#34;
-		data-flex-basis=&#34;153px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;其中几项含义分别如下：&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;字段&lt;/th&gt;
-          &lt;th&gt;说明&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;CheckOut&lt;/td&gt;
-          &lt;td&gt;CheckOut资产，对应前文的锁定&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Refresh&lt;/td&gt;
-          &lt;td&gt;刷新资产版本状态，解决有时候更新不及时的问题&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;History&lt;/td&gt;
-          &lt;td&gt;打开资产的版本历史&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td&gt;Diff Against Depot&lt;/td&gt;
-          &lt;td&gt;对比资产与仓库中的最新版本&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;其中最常用的是&lt;code&gt;History&lt;/code&gt;打开资产版本历史。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-7.png&#34;
-	width=&#34;1010&#34;
-	height=&#34;434&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-7_hu15146107333609453175.png 480w, https://boiltask.com/ue/source-control-tool/image-7_hu10850217488743317371.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;232&#34;
-		data-flex-basis=&#34;558px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;可以在版本历史里右键选择对比前一版本或对比本地文件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/source-control-tool/image-8.png&#34;
-	width=&#34;1010&#34;
-	height=&#34;834&#34;
-	srcset=&#34;https://boiltask.com/ue/source-control-tool/image-8_hu13437858516513646347.png 480w, https://boiltask.com/ue/source-control-tool/image-8_hu6008273570751050933.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;121&#34;
-		data-flex-basis=&#34;290px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;注意事项
-&lt;/h2&gt;&lt;p&gt;在资产管理中&lt;code&gt;CheckOut&lt;/code&gt;操作对应&lt;code&gt;SVN&lt;/code&gt;的&lt;code&gt;Lock&lt;/code&gt;操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p&gt;
-&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/knowledge/svn-lock&#34; &gt;SVN锁定操作&lt;/a&gt;前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p&gt;
-&lt;p&gt;连接&lt;code&gt;SVN&lt;/code&gt;后，一些操作会自动对&lt;code&gt;SVN&lt;/code&gt;做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>虚幻引擎蓝图对比工具</title>
-        <link>https://boiltask.com/ue/blueprint-diff/</link>
-        <pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate>
-        
-        <guid>https://boiltask.com/ue/blueprint-diff/</guid>
-        <description>&lt;h2 id=&#34;功能简述&#34;&gt;&lt;a href=&#34;#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;功能简述
-&lt;/h2&gt;&lt;p&gt;蓝图因为是二进制文件，所以没办法使用&lt;code&gt;svn&lt;/code&gt;自带的版本对比工具来比较变更。&lt;/p&gt;
-&lt;p&gt;为了解决蓝图对比的问题，&lt;code&gt;UE4&lt;/code&gt;提供了一个工具用以展示两个蓝图的区别。&lt;/p&gt;
-&lt;p&gt;可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class=&#34;link&#34; href=&#34;https://boiltask.com/ue/source-control-tool&#34; &gt;引擎内置版本控制工具&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;本文描述的是如何从外部调用引擎的对比工具。&lt;/p&gt;
-&lt;h2 id=&#34;工具使用&#34;&gt;&lt;a href=&#34;#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;工具使用
-&lt;/h2&gt;&lt;p&gt;直接使用可以在&lt;code&gt;cmd&lt;/code&gt;命令提示符窗口输入如下命令：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;引擎路径&lt;span class=&#34;se&#34;&gt;\E&lt;/span&gt;ngine&lt;span class=&#34;se&#34;&gt;\B&lt;/span&gt;inaries&lt;span class=&#34;se&#34;&gt;\W&lt;/span&gt;in64&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;E4Editor.exe 项目路径&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta.uproject -diff 文件1路径 文件2路径
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;完整示例如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;etaEngine&lt;span class=&#34;se&#34;&gt;\E&lt;/span&gt;ngine&lt;span class=&#34;se&#34;&gt;\B&lt;/span&gt;inaries&lt;span class=&#34;se&#34;&gt;\W&lt;/span&gt;in64&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta.uproject -diff D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;ontent&lt;span class=&#34;se&#34;&gt;\T&lt;/span&gt;est1.uasset D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta&lt;span class=&#34;se&#34;&gt;\C&lt;/span&gt;ontent&lt;span class=&#34;se&#34;&gt;\T&lt;/span&gt;est2.uasset
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;原理是运行引擎时传入&lt;code&gt;-diff&lt;/code&gt;参数开启对比窗口，同时传入所需的项目路径与文件路径。&lt;/p&gt;
-&lt;h2 id=&#34;结合svn&#34;&gt;&lt;a href=&#34;#%e7%bb%93%e5%90%88svn&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;结合SVN
-&lt;/h2&gt;&lt;p&gt;结合&lt;code&gt;svn&lt;/code&gt;的自定义对比工具功能，可以实现双击版本打开对比工具。&lt;/p&gt;
-&lt;p&gt;右键项目&lt;code&gt;svn&lt;/code&gt;根目录，选择设置（中文版同理）。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-1-1.png&#34;
-	width=&#34;529&#34;
-	height=&#34;671&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-1-1_hu931231083575383090.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-1_hu8413650250640421566.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;78&#34;
-		data-flex-basis=&#34;189px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-1-2.png&#34;
-	width=&#34;531&#34;
-	height=&#34;670&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-1-2_hu8306830521440157681.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-2_hu16558079487976017727.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;79&#34;
-		data-flex-basis=&#34;190px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;在对比工具页签下选择高级选项（中文版同理）。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-2-1.png&#34;
-	width=&#34;787&#34;
-	height=&#34;548&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-2-1_hu6339352627954773920.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-1_hu10151811338044199093.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;143&#34;
-		data-flex-basis=&#34;344px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-2-2.png&#34;
-	width=&#34;773&#34;
-	height=&#34;541&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-2-2_hu2978232850679557358.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-2_hu2189535122315424647.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;142&#34;
-		data-flex-basis=&#34;342px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条&lt;code&gt;.uasset&lt;/code&gt;文件设置。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-3-1.png&#34;
-	width=&#34;560&#34;
-	height=&#34;439&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-3-1_hu4389140594183622692.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-1_hu16494318166475559831.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;127&#34;
-		data-flex-basis=&#34;306px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-3-2.png&#34;
-	width=&#34;560&#34;
-	height=&#34;439&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-3-2_hu6070286475696118969.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-2_hu9829776246806890933.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;127&#34;
-		data-flex-basis=&#34;306px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;输入指定命令行即可。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-4-1.png&#34;
-	width=&#34;777&#34;
-	height=&#34;180&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-4-1_hu16880563065039948167.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-1_hu12904495106932811181.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;431&#34;
-		data-flex-basis=&#34;1036px&#34;
-	
-&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-4-2.png&#34;
-	width=&#34;777&#34;
-	height=&#34;180&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-4-2_hu135614488466320865.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-2_hu1553581432799812078.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;431&#34;
-		data-flex-basis=&#34;1036px&#34;
-	
-&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td&gt;英文版&lt;/td&gt;
-          &lt;td&gt;中文版&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;扩展名输入：&lt;code&gt;.uasset&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;命令行完整示例如下：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Bash&#34; data-lang=&#34;Bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;etaEngine&lt;span class=&#34;se&#34;&gt;\E&lt;/span&gt;ngine&lt;span class=&#34;se&#34;&gt;\B&lt;/span&gt;inaries&lt;span class=&#34;se&#34;&gt;\W&lt;/span&gt;in64&lt;span class=&#34;se&#34;&gt;\U&lt;/span&gt;E4Editor.exe D:&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta&lt;span class=&#34;se&#34;&gt;\M&lt;/span&gt;eta.uproject -diff %base %mine
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;其中&lt;code&gt;D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code&gt;为引擎可执行文件，&lt;code&gt;D:\Meta\Meta.uproject&lt;/code&gt;为项目文件，&lt;code&gt;%base&lt;/code&gt;会被转义为&lt;code&gt;svn&lt;/code&gt;文件，&lt;code&gt;%mine&lt;/code&gt;会被转义为当前文件。&lt;/p&gt;
-&lt;h2 id=&#34;对比效果&#34;&gt;&lt;a href=&#34;#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;对比效果
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://boiltask.com/ue/blueprint-diff/image-5.png&#34;
-	width=&#34;1010&#34;
-	height=&#34;834&#34;
-	srcset=&#34;https://boiltask.com/ue/blueprint-diff/image-5_hu13773989210434351733.png 480w, https://boiltask.com/ue/blueprint-diff/image-5_hu6386327262215898314.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;121&#34;
-		data-flex-basis=&#34;290px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;注意事项&#34;&gt;&lt;a href=&#34;#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;注意事项
-&lt;/h2&gt;&lt;p&gt;由于引擎问题，部分格式的蓝图可能不被支持。&lt;/p&gt;
-&lt;p&gt;打开对比工具的过程较为缓慢，请耐心等待。在此过程中不能关闭&lt;code&gt;svn&lt;/code&gt;版本历史窗口，以免目标临时文件被清除从而对比失败。&lt;/p&gt;
-&lt;p&gt;此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。&lt;/p&gt;
-&lt;p&gt;期待&lt;code&gt;UnrealEngine&lt;/code&gt;能更为完善！&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SVN on BoilTask's Blog</title><link>https://boiltask.com/tags/svn/</link><description>Recent content in SVN on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 24 Feb 2025 11:57:11 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/svn/index.xml" rel="self" type="application/rss+xml"/><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/ue/blueprint-merge/</guid><description>&lt;p>UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">MetaEngine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Engine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Binaries&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Win64&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">UE4Editor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">exe&lt;/span> &lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">uproject&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">diff&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">theirs&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">mine&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">base&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">merged&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://boiltask.com/ue/blueprint-merge/image.png"
+width="1920"
+height="1040"
+srcset="https://boiltask.com/ue/blueprint-merge/image_hu1737421868806885097.png 480w, https://boiltask.com/ue/blueprint-merge/image_hu268284317994099172.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>&lt;/p></description></item><item><title>SVN回退操作</title><link>https://boiltask.com/knowledge/svn-revert/</link><pubDate>Mon, 09 Oct 2023 10:41:32 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-revert/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>有时候需要还原错误提交，这个时候可以使用Revert命令。&lt;/p>
+&lt;h2 id="操作说明">&lt;a href="#%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e" class="header-anchor">&lt;/a>操作说明
+&lt;/h2>&lt;p>在项目根目录上右键选择&lt;code>TortoiseSVN-&amp;gt;Show log&lt;/code>，打开日志窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-1.png"
+width="513"
+height="668"
+srcset="https://boiltask.com/knowledge/svn-revert/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-1_hu5800090339614270963.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="184px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-2.png"
+width="463"
+height="669"
+srcset="https://boiltask.com/knowledge/svn-revert/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-2_hu3382273434000479264.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="69"
+data-flex-basis="166px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在所需回退的记录上右键选择&lt;code>Revert changes from this revision&lt;/code>，打开确认窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-1.png"
+width="739"
+height="643"
+srcset="https://boiltask.com/knowledge/svn-revert/image-2-1_hu7913616928023097590.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-1_hu3570810554322645217.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="114"
+data-flex-basis="275px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-2.png"
+width="739"
+height="643"
+srcset="https://boiltask.com/knowledge/svn-revert/image-2-2_hu12423358968747103432.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-2_hu14657691247748881992.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="114"
+data-flex-basis="275px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>选择&lt;code>Revert&lt;/code>即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-1.png"
+width="542"
+height="325"
+srcset="https://boiltask.com/knowledge/svn-revert/image-3-1_hu4042752106934293030.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-1_hu6134221852306643944.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-2.png"
+width="542"
+height="325"
+srcset="https://boiltask.com/knowledge/svn-revert/image-3-2_hu13332711233538001998.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-2_hu3975419756773525122.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="400px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="选项说明">&lt;a href="#%e9%80%89%e9%a1%b9%e8%af%b4%e6%98%8e" class="header-anchor">&lt;/a>选项说明
+&lt;/h2>&lt;p>&lt;code>Revert to this revision&lt;/code>与&lt;code>Revert changes from this revision&lt;/code>的区别：&lt;/p>
+&lt;p>&lt;code>Revert to this revision&lt;/code>指的是&lt;code>复原到此版本&lt;/code>，也即执行完之后，本地的状态应该是此版本提交后的状态。&lt;/p>
+&lt;p>&lt;code>Revert changes from this revision&lt;/code>指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p></description></item><item><title>SVN合并操作</title><link>https://boiltask.com/knowledge/svn-merge/</link><pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-merge/</guid><description>&lt;p>以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p>
+&lt;p>合并是一个相对的概念，既可以从主干（trunk）合并到分支（branch），也可以从分支（branch）合并到主干（trunk），下文以从主干（trunk）合并到分支（branch）为例。&lt;/p>
+&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>为了保证一个相对稳定的文件版本，开发过程中有时会新建一个分支（branch） ，这样可以可以直接从分支获取资产以提高稳定性。&lt;/p>
+&lt;p>相关操作：&lt;a class="link" href="https://boiltask.com/knowledge/svn-switch-branch" >SVN切分支&lt;/a>&lt;/p>
+&lt;p>在我们提交主干（trunk）后，有时候需要把相同的提交传到分支，这个时候可以直接使用SVN的合并（merge）功能来简化操作。&lt;/p>
+&lt;h2 id="操作说明">&lt;a href="#%e6%93%8d%e4%bd%9c%e8%af%b4%e6%98%8e" class="header-anchor">&lt;/a>操作说明
+&lt;/h2>&lt;h3 id="准备工作">&lt;a href="#%e5%87%86%e5%a4%87%e5%b7%a5%e4%bd%9c" class="header-anchor">&lt;/a>准备工作
+&lt;/h3>&lt;p>需要本地拉取（Checkout）主干目录与分支目录，并尽可能保证干净无多余变化，以降低冲突可能性。&lt;/p>
+&lt;h3 id="合并操作">&lt;a href="#%e5%90%88%e5%b9%b6%e6%93%8d%e4%bd%9c" class="header-anchor">&lt;/a>合并操作
+&lt;/h3>&lt;p>在项目根目录上右键选择&lt;code>TortoiseSVN-&amp;gt;Show log&lt;/code>，打开日志窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-1.png"
+width="513"
+height="668"
+srcset="https://boiltask.com/knowledge/svn-merge/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-1_hu5800090339614270963.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="76"
+data-flex-basis="184px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-2.png"
+width="463"
+height="669"
+srcset="https://boiltask.com/knowledge/svn-merge/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-2_hu3382273434000479264.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="69"
+data-flex-basis="166px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在所需合并的记录上右键选择&lt;code>Merge revision to...&lt;/code>，打开选择目标窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-1.png"
+width="739"
+height="709"
+srcset="https://boiltask.com/knowledge/svn-merge/image-2-1_hu2448058881704012729.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-1_hu6349847887146610289.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="250px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-2.png"
+width="739"
+height="709"
+srcset="https://boiltask.com/knowledge/svn-merge/image-2-2_hu5936312556644352570.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-2_hu13759128226647644493.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="104"
+data-flex-basis="250px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>选择本地分支的根目录，等待完成即可。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-3.png"
+width="960"
+height="540"
+srcset="https://boiltask.com/knowledge/svn-merge/image-3_hu11933152340863840705.png 480w, https://boiltask.com/knowledge/svn-merge/image-3_hu12021038228253536609.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;h3 id="解决冲突">&lt;a href="#%e8%a7%a3%e5%86%b3%e5%86%b2%e7%aa%81" class="header-anchor">&lt;/a>解决冲突
+&lt;/h3>&lt;p>若分支的版本与主干对不上，则SVN会尝试合并，如果失败则会提供如何解决冲突的确认框。&lt;/p>
+&lt;p>如果涉及到多人维护的文件，请充分沟通以减少异常。&lt;/p>
+&lt;p>为了表述清晰，下文把来源文件称之为主干，目标文件称之为分支。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Postpone - 暂不处理，分支会保持冲突状态，相关文件或目录会标红，SVN会创建临时文件需要及时处理&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Accept Base - 放弃主干的文件，仍然使用分支的文件&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Accept incoming - 使用主干的文件，覆盖分支的文件&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Mark as resolved - 标记为解决，但需要注意此时文件仍处于冲突状态，SVN会删除临时文件&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-1.png"
+width="934"
+height="736"
+srcset="https://boiltask.com/knowledge/svn-merge/image-4-1_hu15080479352377242366.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-1_hu12123394260900880120.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-2.png"
+width="825"
+height="644"
+srcset="https://boiltask.com/knowledge/svn-merge/image-4-2_hu10406064931226753947.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-2_hu4719651788656351657.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="307px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="合并成功">&lt;a href="#%e5%90%88%e5%b9%b6%e6%88%90%e5%8a%9f" class="header-anchor">&lt;/a>合并成功
+&lt;/h2>&lt;p>出现下面的提示说明合并成功，此时分支的文件已经被修改，正常提交（commit）即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-1.png"
+width="934"
+height="736"
+srcset="https://boiltask.com/knowledge/svn-merge/image-5-1_hu16162010147720784187.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-1_hu6663661471441733664.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-2.png"
+width="762"
+height="520"
+srcset="https://boiltask.com/knowledge/svn-merge/image-5-2_hu796579267384435703.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-2_hu4171343192513218924.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="146"
+data-flex-basis="351px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>SVN切分支</title><link>https://boiltask.com/knowledge/svn-switch-branch/</link><pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-switch-branch/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>有时候需要为了避免开发中的机制造成主干不稳定，我们会拉出来一个新的分支。&lt;/p>
+&lt;p>可以使用&lt;code>Switch&lt;/code>命令将本地目录切换到目标分支。&lt;/p>
+&lt;h2 id="切换分支">&lt;a href="#%e5%88%87%e6%8d%a2%e5%88%86%e6%94%af" class="header-anchor">&lt;/a>切换分支
+&lt;/h2>&lt;p>在项目工程所在文件夹右键选择&lt;code>Switch...&lt;/code>打开分支切换窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png"
+width="503"
+height="679"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu5935501871532154894.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu18384966433410811196.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="74"
+data-flex-basis="177px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png"
+width="473"
+height="671"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu9041463599554812067.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu10133542670804154133.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="70"
+data-flex-basis="169px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>输入目标分支，点击确认，然后等待完成即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png"
+width="616"
+height="370"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu15041769225168938241.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu10398778729252334580.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="399px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png"
+width="616"
+height="370"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu16988809227071996878.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu18341031616397604144.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="399px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="单个目录或文件切换分支">&lt;a href="#%e5%8d%95%e4%b8%aa%e7%9b%ae%e5%bd%95%e6%88%96%e6%96%87%e4%bb%b6%e5%88%87%e6%8d%a2%e5%88%86%e6%94%af" class="header-anchor">&lt;/a>单个目录或文件切换分支
+&lt;/h2>&lt;p>在当前想切换的目录选择switch&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-3.png"
+width="614"
+height="338"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-3_hu10987723568123480892.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-3_hu26609449577816713.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="181"
+data-flex-basis="435px"
+>&lt;/p>
+&lt;p>找到想要切换到的分支对应的目录点击确定&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-4.png"
+width="1375"
+height="466"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-4_hu8041458363380810481.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-4_hu13801987268901389218.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="295"
+data-flex-basis="708px"
+>&lt;/p>
+&lt;p>回到这个界面点击ok即可&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-5.png"
+width="616"
+height="370"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-5_hu2569409130268246945.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-5_hu14511331662190612340.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="166"
+data-flex-basis="399px"
+>&lt;/p>
+&lt;p>&lt;strong>注：如单独切换某个目录或文件到指定分支，修改完记得切回原分支&lt;/strong>&lt;/p></description></item><item><title>SVN锁定操作</title><link>https://boiltask.com/knowledge/svn-lock/</link><pubDate>Mon, 13 Mar 2023 19:35:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-lock/</guid><description>&lt;p>以下主要以英文版为例，中文版同理选择对应位置选项即可。&lt;/p>
+&lt;p>多图警告，可通过左侧目录跳转所需章节。&lt;/p>
+&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>因为修改某一文件往往需要一段时间，在此期间内如果有人上传了同一文件，如果无法合并就会导致自己提交时产生冲突。&lt;/p>
+&lt;p>为了尽量避免此问题，我们可以在修改前就把文件锁定（&lt;code>Lock&lt;/code>），这样其他人通过正常操作就无法上传。&lt;/p>
+&lt;p>同时如果他也在修改前尝试锁定，就可以得到别人已经锁定本文件的提示，从而也避免了无效工作。&lt;/p>
+&lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
+&lt;/h2>&lt;h3 id="锁定文件">&lt;a href="#%e9%94%81%e5%ae%9a%e6%96%87%e4%bb%b6" class="header-anchor">&lt;/a>锁定文件
+&lt;/h3>&lt;p>在所需锁定的文件上右键选择&lt;code>TortoiseSVN-&amp;gt;GetLock...&lt;/code>，弹出确认窗口。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-1.png"
+width="720"
+height="815"
+srcset="https://boiltask.com/knowledge/svn-lock/image-1-1_hu10613403118535043628.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-1_hu6518781224494017334.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="88"
+data-flex-basis="212px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-2.png"
+width="700"
+height="811"
+srcset="https://boiltask.com/knowledge/svn-lock/image-1-2_hu11167061833332973397.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-2_hu5297745458006572602.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="86"
+data-flex-basis="207px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在窗口里输入锁定原因，点击确认即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-1.png"
+width="532"
+height="571"
+srcset="https://boiltask.com/knowledge/svn-lock/image-2-1_hu8531832550648001071.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-1_hu11409514016090496122.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="223px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-2.png"
+width="532"
+height="571"
+srcset="https://boiltask.com/knowledge/svn-lock/image-2-2_hu12740665712511142850.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-2_hu4614013570268702220.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="223px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="查看锁定">&lt;a href="#%e6%9f%a5%e7%9c%8b%e9%94%81%e5%ae%9a" class="header-anchor">&lt;/a>查看锁定
+&lt;/h3>&lt;p>如果需要查看一个文件有没有被别人锁定，可以右键选择&lt;code>TortoiseSVN-&amp;gt;Check for modifications&lt;/code>。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-1.png"
+width="662"
+height="785"
+srcset="https://boiltask.com/knowledge/svn-lock/image-3-1_hu11020575163933948961.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-1_hu18133542715937806061.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="84"
+data-flex-basis="202px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-2.png"
+width="467"
+height="682"
+srcset="https://boiltask.com/knowledge/svn-lock/image-3-2_hu1891260429824521828.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-2_hu8134180997390071011.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="68"
+data-flex-basis="164px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>点击&lt;code>Check repository&lt;/code>即可扫描出变更，并通过&lt;code>Lock&lt;/code>一栏查看锁定者。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-1.png"
+width="1067"
+height="539"
+srcset="https://boiltask.com/knowledge/svn-lock/image-4-1_hu2078220766911598252.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-1_hu5893435162189683820.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="197"
+data-flex-basis="475px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-2.png"
+width="1052"
+height="486"
+srcset="https://boiltask.com/knowledge/svn-lock/image-4-2_hu9452001396821168688.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-2_hu15983604767246758065.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="216"
+data-flex-basis="519px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="释放文件">&lt;a href="#%e9%87%8a%e6%94%be%e6%96%87%e4%bb%b6" class="header-anchor">&lt;/a>释放文件
+&lt;/h3>&lt;h4 id="手动释放">&lt;a href="#%e6%89%8b%e5%8a%a8%e9%87%8a%e6%94%be" class="header-anchor">&lt;/a>手动释放
+&lt;/h4>&lt;p>同理，在所需释放的文件上右键选择&lt;code>TortoiseSVN-&amp;gt;ReleaseLock...&lt;/code>，弹出确认窗口点击确认即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-1.png"
+width="751"
+height="817"
+srcset="https://boiltask.com/knowledge/svn-lock/image-5-1_hu5099334325101817976.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-1_hu5642565465813555531.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="91"
+data-flex-basis="220px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-2.png"
+width="609"
+height="825"
+srcset="https://boiltask.com/knowledge/svn-lock/image-5-2_hu9117771135428803543.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-2_hu1966502865403730667.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="73"
+data-flex-basis="177px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="自动释放">&lt;a href="#%e8%87%aa%e5%8a%a8%e9%87%8a%e6%94%be" class="header-anchor">&lt;/a>自动释放
+&lt;/h4>&lt;p>SVN默认会在提交文件时解锁对应文件，如果提交后也不想解锁，可以选择&lt;code>Keep Locks&lt;/code>。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-1.png"
+width="721"
+height="718"
+srcset="https://boiltask.com/knowledge/svn-lock/image-6-1_hu15927409771865917671.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-1_hu3466397071656374398.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="241px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-2.png"
+width="704"
+height="741"
+srcset="https://boiltask.com/knowledge/svn-lock/image-6-2_hu8657624855487578581.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-2_hu4463349718507782490.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="95"
+data-flex-basis="228px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="意外情况">&lt;a href="#%e6%84%8f%e5%a4%96%e6%83%85%e5%86%b5" class="header-anchor">&lt;/a>意外情况
+&lt;/h3>&lt;p>如果锁定时出现了如下提示，则说明已被用户锁定，锁定信息会显示在图示位置（如果锁定者没填则不显示）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-1.png"
+width="762"
+height="576"
+srcset="https://boiltask.com/knowledge/svn-lock/image-7-1_hu3035808876713423987.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-1_hu14456454763541704663.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="317px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-2.png"
+width="762"
+height="576"
+srcset="https://boiltask.com/knowledge/svn-lock/image-7-2_hu1440869857335182607.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-2_hu14985938029990149709.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="317px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>此时需要和该用户沟通锁定原因，协商处理。&lt;/p>
+&lt;h3 id="强制锁定">&lt;a href="#%e5%bc%ba%e5%88%b6%e9%94%81%e5%ae%9a" class="header-anchor">&lt;/a>强制锁定
+&lt;/h3>&lt;p>由于锁标记是存在本地文件夹的，有时候由于换机器等原因锁定未释放，此时需要强制解除锁定。&lt;/p>
+&lt;p>锁定操作勾选&lt;code>Steal the locks&lt;/code>时，会强制无效已锁定状态，把锁定转为此次操作的用户。&lt;/p>
+&lt;blockquote>
+&lt;p>如果文件由其他用户锁定，应尽量避免使用此操作破坏开发流程。&lt;/p>
+&lt;/blockquote>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-1.png"
+width="532"
+height="571"
+srcset="https://boiltask.com/knowledge/svn-lock/image-8-1_hu9999446847589336692.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-1_hu17502981096254089608.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="223px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-2.png"
+width="532"
+height="571"
+srcset="https://boiltask.com/knowledge/svn-lock/image-8-2_hu3855568038762477466.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-2_hu8904183885368462120.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="93"
+data-flex-basis="223px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="结合引擎">&lt;a href="#%e7%bb%93%e5%90%88%e5%bc%95%e6%93%8e" class="header-anchor">&lt;/a>结合引擎
+&lt;/h2>&lt;p>&lt;code>UnrealEngine&lt;/code>提供了内置的版本控制工具，可以快捷的实现一些&lt;code>SVN&lt;/code>操作，可参考&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" >引擎内置版本控制工具&lt;/a>进行配置。&lt;/p>
+&lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
+&lt;/h2>&lt;p>由于锁定之后会干扰其他同事操作，因此锁定前需要确认操作的必要性。如果遇见有人询问相关问题，应积极处理。&lt;/p>
+&lt;p>未避免误操作，应不定期查看&lt;code>Release Lock&lt;/code>列表，看看是否有误锁文件。&lt;/p></description></item><item><title>引擎内置版本控制工具</title><link>https://boiltask.com/ue/source-control-tool/</link><pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate><guid>https://boiltask.com/ue/source-control-tool/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>为了便于多人协作&lt;code>UnrealEngine&lt;/code>提供了一个版本控制工具，可结合&lt;code>SVN&lt;/code>、&lt;code>Git&lt;/code>等工具对蓝图等资产进行版本控制。&lt;/p>
+&lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
+&lt;/h2>&lt;h3 id="配置连接">&lt;a href="#%e9%85%8d%e7%bd%ae%e8%bf%9e%e6%8e%a5" class="header-anchor">&lt;/a>配置连接
+&lt;/h3>&lt;p>在引擎的工具栏处有一个&lt;code>Source Control&lt;/code>的选项，选择&lt;code>Connect to Source Control&lt;/code>弹出确认框。
+&lt;img src="https://boiltask.com/ue/source-control-tool/image-1.png"
+width="433"
+height="290"
+srcset="https://boiltask.com/ue/source-control-tool/image-1_hu12765942364294099375.png 480w, https://boiltask.com/ue/source-control-tool/image-1_hu17593301496266398636.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="358px"
+>&lt;/p>
+&lt;p>选择&lt;code>Subversion&lt;/code>也即&lt;code>SVN&lt;/code>，展示信息输入框。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-2.png"
+width="720"
+height="267"
+srcset="https://boiltask.com/ue/source-control-tool/image-2_hu12635055628427891836.png 480w, https://boiltask.com/ue/source-control-tool/image-2_hu4676874817897847116.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="269"
+data-flex-basis="647px"
+>&lt;/p>
+&lt;p>按照所需信息输入然后点击&lt;code>Accept Settings&lt;/code>即可。
+&lt;img src="https://boiltask.com/ue/source-control-tool/image-3.png"
+width="720"
+height="274"
+srcset="https://boiltask.com/ue/source-control-tool/image-3_hu6796912750367437106.png 480w, https://boiltask.com/ue/source-control-tool/image-3_hu16929476084393832319.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="262"
+data-flex-basis="630px"
+>&lt;/p>
+&lt;p>其中几项含义分别如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Provider&lt;/td>
+&lt;td>使用的版本控制系统&lt;/td>
+&lt;td>Subversion&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Repository&lt;/td>
+&lt;td>仓库的链接&lt;/td>
+&lt;td>http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User Name&lt;/td>
+&lt;td>用户名&lt;/td>
+&lt;td>***&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Labels Directory&lt;/td>
+&lt;td>仓库子路径，比如主干、某一分支等&lt;/td>
+&lt;td>trunk&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Password&lt;/td>
+&lt;td>用户密码&lt;/td>
+&lt;td>abcdefg123465&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="资产保存">&lt;a href="#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98" class="header-anchor">&lt;/a>资产保存
+&lt;/h3>&lt;p>链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code>CheckOut&lt;/code>。&lt;/p>
+&lt;p>此操作对应&lt;code>SVN&lt;/code>的&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-4.png"
+width="760"
+height="434"
+srcset="https://boiltask.com/ue/source-control-tool/image-4_hu4538419662043158090.png 480w, https://boiltask.com/ue/source-control-tool/image-4_hu340917589041919442.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="420px"
+>&lt;/p>
+&lt;p>如果该资产已经被其他人锁定了，那么点&lt;code>CheckOut&lt;/code>时会有如下提示。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-5.png"
+width="760"
+height="434"
+srcset="https://boiltask.com/ue/source-control-tool/image-5_hu10868571854966016212.png 480w, https://boiltask.com/ue/source-control-tool/image-5_hu3354516035096916110.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="420px"
+>&lt;/p>
+&lt;p>如果大家都遵循此操作，则可以大大减少蓝图冲突的可能性。&lt;/p>
+&lt;p>如果不需要锁定蓝图，那么可以点击&lt;code>Make Writable&lt;/code>在不锁定的情况下保存。&lt;/p>
+&lt;h3 id="资产操作">&lt;a href="#%e8%b5%84%e4%ba%a7%e6%93%8d%e4%bd%9c" class="header-anchor">&lt;/a>资产操作
+&lt;/h3>&lt;p>链接版本管理后，在资产上右键可以展开版本管理的操作。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-6.png"
+width="477"
+height="748"
+srcset="https://boiltask.com/ue/source-control-tool/image-6_hu7986053261412522013.png 480w, https://boiltask.com/ue/source-control-tool/image-6_hu10285438846323337546.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="63"
+data-flex-basis="153px"
+>&lt;/p>
+&lt;p>其中几项含义分别如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>CheckOut&lt;/td>
+&lt;td>CheckOut资产，对应前文的锁定&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Refresh&lt;/td>
+&lt;td>刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>History&lt;/td>
+&lt;td>打开资产的版本历史&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Diff Against Depot&lt;/td>
+&lt;td>对比资产与仓库中的最新版本&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>其中最常用的是&lt;code>History&lt;/code>打开资产版本历史。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-7.png"
+width="1010"
+height="434"
+srcset="https://boiltask.com/ue/source-control-tool/image-7_hu15146107333609453175.png 480w, https://boiltask.com/ue/source-control-tool/image-7_hu10850217488743317371.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="558px"
+>&lt;/p>
+&lt;p>可以在版本历史里右键选择对比前一版本或对比本地文件。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-8.png"
+width="1010"
+height="834"
+srcset="https://boiltask.com/ue/source-control-tool/image-8_hu13437858516513646347.png 480w, https://boiltask.com/ue/source-control-tool/image-8_hu6008273570751050933.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+>&lt;/p>
+&lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
+&lt;/h2>&lt;p>在资产管理中&lt;code>CheckOut&lt;/code>操作对应&lt;code>SVN&lt;/code>的&lt;code>Lock&lt;/code>操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p>
+&lt;p>连接&lt;code>SVN&lt;/code>后，一些操作会自动对&lt;code>SVN&lt;/code>做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p></description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>蓝图因为是二进制文件，所以没办法使用&lt;code>svn&lt;/code>自带的版本对比工具来比较变更。&lt;/p>
+&lt;p>为了解决蓝图对比的问题，&lt;code>UE4&lt;/code>提供了一个工具用以展示两个蓝图的区别。&lt;/p>
+&lt;p>可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" >引擎内置版本控制工具&lt;/a>&lt;/p>
+&lt;p>本文描述的是如何从外部调用引擎的对比工具。&lt;/p>
+&lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
+&lt;/h2>&lt;p>直接使用可以在&lt;code>cmd&lt;/code>命令提示符窗口输入如下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">引擎路径&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe 项目路径&lt;span class="se">\M&lt;/span>eta.uproject -diff 文件1路径 文件2路径
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完整示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">D:&lt;span class="se">\M&lt;/span>etaEngine&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\M&lt;/span>eta.uproject -diff D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\C&lt;/span>ontent&lt;span class="se">\T&lt;/span>est1.uasset D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\C&lt;/span>ontent&lt;span class="se">\T&lt;/span>est2.uasset
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>原理是运行引擎时传入&lt;code>-diff&lt;/code>参数开启对比窗口，同时传入所需的项目路径与文件路径。&lt;/p>
+&lt;h2 id="结合svn">&lt;a href="#%e7%bb%93%e5%90%88svn" class="header-anchor">&lt;/a>结合SVN
+&lt;/h2>&lt;p>结合&lt;code>svn&lt;/code>的自定义对比工具功能，可以实现双击版本打开对比工具。&lt;/p>
+&lt;p>右键项目&lt;code>svn&lt;/code>根目录，选择设置（中文版同理）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-1.png"
+width="529"
+height="671"
+srcset="https://boiltask.com/ue/blueprint-diff/image-1-1_hu931231083575383090.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-1_hu8413650250640421566.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="78"
+data-flex-basis="189px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-2.png"
+width="531"
+height="670"
+srcset="https://boiltask.com/ue/blueprint-diff/image-1-2_hu8306830521440157681.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-2_hu16558079487976017727.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="79"
+data-flex-basis="190px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在对比工具页签下选择高级选项（中文版同理）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-1.png"
+width="787"
+height="548"
+srcset="https://boiltask.com/ue/blueprint-diff/image-2-1_hu6339352627954773920.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-1_hu10151811338044199093.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-2.png"
+width="773"
+height="541"
+srcset="https://boiltask.com/ue/blueprint-diff/image-2-2_hu2978232850679557358.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-2_hu2189535122315424647.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="342px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条&lt;code>.uasset&lt;/code>文件设置。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-1.png"
+width="560"
+height="439"
+srcset="https://boiltask.com/ue/blueprint-diff/image-3-1_hu4389140594183622692.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-1_hu16494318166475559831.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-2.png"
+width="560"
+height="439"
+srcset="https://boiltask.com/ue/blueprint-diff/image-3-2_hu6070286475696118969.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-2_hu9829776246806890933.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>输入指定命令行即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-1.png"
+width="777"
+height="180"
+srcset="https://boiltask.com/ue/blueprint-diff/image-4-1_hu16880563065039948167.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-1_hu12904495106932811181.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="431"
+data-flex-basis="1036px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-2.png"
+width="777"
+height="180"
+srcset="https://boiltask.com/ue/blueprint-diff/image-4-2_hu135614488466320865.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-2_hu1553581432799812078.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="431"
+data-flex-basis="1036px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>扩展名输入：&lt;code>.uasset&lt;/code>&lt;/p>
+&lt;p>命令行完整示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">D:&lt;span class="se">\M&lt;/span>etaEngine&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\M&lt;/span>eta.uproject -diff %base %mine
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中&lt;code>D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code>为引擎可执行文件，&lt;code>D:\Meta\Meta.uproject&lt;/code>为项目文件，&lt;code>%base&lt;/code>会被转义为&lt;code>svn&lt;/code>文件，&lt;code>%mine&lt;/code>会被转义为当前文件。&lt;/p>
+&lt;h2 id="对比效果">&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor">&lt;/a>对比效果
+&lt;/h2>&lt;p>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-5.png"
+width="1010"
+height="834"
+srcset="https://boiltask.com/ue/blueprint-diff/image-5_hu13773989210434351733.png 480w, https://boiltask.com/ue/blueprint-diff/image-5_hu6386327262215898314.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+>&lt;/p>
+&lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
+&lt;/h2>&lt;p>由于引擎问题，部分格式的蓝图可能不被支持。&lt;/p>
+&lt;p>打开对比工具的过程较为缓慢，请耐心等待。在此过程中不能关闭&lt;code>svn&lt;/code>版本历史窗口，以免目标临时文件被清除从而对比失败。&lt;/p>
+&lt;p>此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。&lt;/p>
+&lt;p>期待&lt;code>UnrealEngine&lt;/code>能更为完善！&lt;/p></description></item></channel></rss>
