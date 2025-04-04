@@ -10,7 +10,7 @@
 <meta property='og:description' content="在给博客配置评论区的时候，遇见了一些问题，记录一些。\n为何选择Giscus Stack这个主题默认的评论区是Disqus，但是Disqus是个国外的服务，而且需要收费，因此没有使用。\n同时，主题也支持了其他常见的评论区配置。我首先选择了之前经常注意到的Gitalk，使用Github的Issue来作为评论区的方式当时让人眼前一亮。\n不过配置的时候遇见了一些权限问题，发现Gitalk的权限有些不合理，评论者需要把自己的账号授权给博主来评论，理论上来说博主会获得一些不该有的登陆者的权限。 而且由于跨域问题，还需要找个处理跨域的代理，这又增添了一些隐私问题以及配置成本。\n最后选择了Giscus，它使用自己的App来作为权限拥有者，作为一个第三方，使用着只需要授权给这个应用即可完成Github的授权。\n同时使用起来也更方便和灵活。\n配置方式 在Github中安装Giscus 将仓库授权给应用 在Applications中找到Giscus 在Repository access中选择所存放评论的仓库 前往Giscus的官网继续完成配置 选择一个语言 在仓库中输入所授权的仓库，如：BoilTask/BoilTask.github.io 根据后续的配置描述选择自己所要的配置 在启用 giscus一项中查看所需要的配置 可以在需要的地方填写上生成的配置即可。\n">
 <meta property='og:url' content='https://boiltask.com/knowledge/hugo-giscus/'>
 <meta property='og:site_name' content='BoilTask&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-11-08T13:06:06&#43;08:00'/><meta property='article:modified_time' content='2024-11-08T13:06:06&#43;08:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='blog' /><meta property='article:published_time' content='2024-11-08T13:06:06&#43;08:00'/><meta property='article:modified_time' content='2024-11-08T13:06:06&#43;08:00'/>
 <meta name="twitter:title" content="Hogo中Giscus配置 - BoilTask's Blog">
 <meta name="twitter:description" content="在给博客配置评论区的时候，遇见了一些问题，记录一些。\n为何选择Giscus Stack这个主题默认的评论区是Disqus，但是Disqus是个国外的服务，而且需要收费，因此没有使用。\n同时，主题也支持了其他常见的评论区配置。我首先选择了之前经常注意到的Gitalk，使用Github的Issue来作为评论区的方式当时让人眼前一亮。\n不过配置的时候遇见了一些权限问题，发现Gitalk的权限有些不合理，评论者需要把自己的账号授权给博主来评论，理论上来说博主会获得一些不该有的登陆者的权限。 而且由于跨域问题，还需要找个处理跨域的代理，这又增添了一些隐私问题以及配置成本。\n最后选择了Giscus，它使用自己的App来作为权限拥有者，作为一个第三方，使用着只需要授权给这个应用即可完成Github的授权。\n同时使用起来也更方便和灵活。\n配置方式 在Github中安装Giscus 将仓库授权给应用 在Applications中找到Giscus 在Repository access中选择所存放评论的仓库 前往Giscus的官网继续完成配置 选择一个语言 在仓库中输入所授权的仓库，如：BoilTask/BoilTask.github.io 根据后续的配置描述选择自己所要的配置 在启用 giscus一项中查看所需要的配置 可以在需要的地方填写上生成的配置即可。\n">
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -377,6 +377,12 @@
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/blog/">博客</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -433,12 +439,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/random-weight/">
+    <a href="/knowledge/katex-cloudflare/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">常用加权随机算法说明与实现</h2>
+            <h2 class="article-title">Cloudflare环境下开启Rocket Loader之后Katex失效问题</h2>
         </div>
     </a>
 </article>
@@ -446,12 +452,12 @@
             
                 
 <article class="">
-    <a href="/knowledge/katex-cloudflare/">
+    <a href="/knowledge/random-weight/">
         
         
 
         <div class="article-details">
-            <h2 class="article-title">Cloudflare环境下开启Rocket Loader之后Katex失效问题</h2>
+            <h2 class="article-title">常用加权随机算法说明与实现</h2>
         </div>
     </a>
 </article>
@@ -560,7 +566,7 @@
     <section class="copyright">
         &copy; 
         
-            2013 - 
+            2010 - 
         
         2025 BoilTask&#39;s Blog
     </section>
