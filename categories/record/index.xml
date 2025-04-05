@@ -332,4 +332,157 @@ data-flex-basis="2671px"
 &lt;p>想想经过这么些年，也差不多在6~7之间徘徊了。而下面的评论也说，这个过程又是一个程序员提升过程中的瓶颈。能有所突破，未来便能继续稳步提高。&lt;/p>
 &lt;p>想想人生和程序员有所关联，应该缘起于2006在小学生学习报上看到了跑跑卡丁车的广告。然后2007年在我姑父的带领下解除了泡泡堂，随后家里安装了电脑，又度过了一段难忘的游戏时光。随后，人生梦想就由画家转变成了游戏开发人员 （虽然画画也同样还很喜欢）。&lt;/p>
 &lt;p>如今，也算是梦想成真了一部分。&lt;/p>
-&lt;p>未来，还需要继续努力呀~&lt;/p></description></item></channel></rss>
+&lt;p>未来，还需要继续努力呀~&lt;/p></description></item><item><title>颓废良久了</title><link>https://boiltask.com/record/201602131/</link><pubDate>Sat, 13 Feb 2016 00:17:11 +0800</pubDate><guid>https://boiltask.com/record/201602131/</guid><description>&lt;p>过个年过的还是有点颓废&lt;br>
+而且越看这些越觉得没有数据结构等那些作为基础，强行研究并查集、最小生成树这些也是一路艰辛啊。&lt;br>
+其实本来应该是已经要学的基础知识，不过还是浪费了好多时间啊，想想这部分还是要把重心放在上面，不能心态太功利地去强行理解。&lt;/p>
+&lt;p>然后刚才也是清了清“占个位置”分类的题，突然发觉QQ空间火在了它的“说说”板块，想想，要不以后有必要在CSDN开设一个专门给我这个话唠的“说说”。要不就专门写个博文，然后做个分类，然后想说就编辑一下文章在下面继续说，感觉这个形式不错哎~哈哈哈哈&lt;/p>
+&lt;p>所以中心思想，广涉猎一些基础知识，然后慢慢地填充吧。&lt;/p></description></item><item><title>这是第200篇博文</title><link>https://boiltask.com/record/201602021/</link><pubDate>Tue, 02 Feb 2016 03:11:09 +0800</pubDate><guid>https://boiltask.com/record/201602021/</guid><description>&lt;blockquote>
+&lt;p>20250405：指的是CSDN上的第200篇博文，不太好用，放弃CSDN很久了……&lt;/p>
+&lt;/blockquote>
+&lt;p>据说200是个槛&lt;br>
+先打个点~&lt;br>
+以后想起来了这一篇再来编辑一下&lt;br>
+以此来说说吧~&lt;br>
+哈哈哈哈&lt;br>
+===========2016.02.02-03:10===========&lt;/p></description></item><item><title>算法是一种思维</title><link>https://boiltask.com/record/201601131/</link><pubDate>Wed, 13 Jan 2016 17:50:13 +0800</pubDate><guid>https://boiltask.com/record/201601131/</guid><description>&lt;blockquote>
+&lt;p>算法是一种思维。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="前情提要">&lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="header-anchor">&lt;/a>前情提要
+&lt;/h2>&lt;p>在下这段时间对算法的理解应该要归结于这样一句话&lt;br>
+大胆假设 小心论证嘛&lt;/p>
+&lt;p>起初最早对算法有个概念 是贪心算法&lt;br>
+对贪心算法的表述&lt;br>
+百度百科是这样说的&lt;/p>
+&lt;blockquote>
+&lt;p>贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。&lt;br>
+贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。&lt;/p>
+&lt;/blockquote>
+&lt;p>当时其实对这种说法还是一知半解的(现在好像也是)&lt;br>
+所以对算法到底是什么 一直得不到一个明确的答案&lt;/p>
+&lt;p>在想明白之前&lt;br>
+在下感觉做题的收益有点低&lt;br>
+题目地址: &lt;a class="link" href="https://vjudge.net/contest/103724" target="_blank" rel="noopener"
+>HPU15级个人赛 - Virtual Judge&lt;/a> (hpuacm)&lt;br>
+而这次的个人赛有八道题目&lt;br>
+在下结束之后忘了保存代码了&lt;br>
+而又感觉去网站提交记录找 没必要&lt;br>
+所以对于这些题目的代码&lt;br>
+应该会上传一个重新写的版本&lt;/p>
+&lt;h2 id="八道题目分别是">&lt;a href="#%e5%85%ab%e9%81%93%e9%a2%98%e7%9b%ae%e5%88%86%e5%88%ab%e6%98%af" class="header-anchor">&lt;/a>八道题目分别是:
+&lt;/h2>&lt;p>&lt;img src="https://boiltask.com/record/201601131/image-1.png"
+width="454"
+height="243"
+srcset="https://boiltask.com/record/201601131/image-1_hu14165651076081031719.png 480w, https://boiltask.com/record/201601131/image-1_hu4526142107156098700.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="186"
+data-flex-basis="448px"
+>&lt;/p>
+&lt;p>就不一一截图了&lt;br>
+以后慢慢整理&lt;br>
+这篇文章就是从解题思路上来简单说说&lt;/p>
+&lt;h3 id="problem-a利息计算-">&lt;a href="#problem-a%e5%88%a9%e6%81%af%e8%ae%a1%e7%ae%97-" class="header-anchor">&lt;/a>Problem A 利息计算 :
+&lt;/h3>&lt;p>作为一道纯粹的数学计算题&lt;br>
+一定程度上考察了对数据类型和输入输出的控制&lt;br>
+但是这种题目作为签到题本身&lt;br>
+我觉得更重要的目的是让自己找到感觉&lt;br>
+不至于在接下的答题中慌乱&lt;br>
+而这此次比赛我恰恰犯了这点错误&lt;br>
+对一团数字不加思考就选择先做B题&lt;br>
+然而……&lt;/p>
+&lt;h3 id="problem-b---18岁生日-">&lt;a href="#problem-b---18%e5%b2%81%e7%94%9f%e6%97%a5-" class="header-anchor">&lt;/a>Problem B - 18岁生日 :
+&lt;/h3>&lt;p>在下这次个人赛的噩梦之源&lt;br>
+又是一个关于闰年的问题&lt;br>
+从这一题&lt;br>
+在下第一次知道闰年并不是严格的四年一次&lt;/p>
+&lt;blockquote>
+&lt;p>一个回归年不是365天,而是365天5小时48分46秒,多出的时间就会累积起来,新年就会后移,所以每隔四年就设一个闰年,这一年的二月改为29天.这样,闰年就有366天.但是,这样每一百年又差不多多了一天,所以又规定&amp;quot;百年&amp;quot;不设闰,即&amp;quot;百年24闰&amp;quot;.但百年扣一天闰还是不刚好,于是又规定,公元年数为400倍数者设闰.&lt;/p>
+&lt;/blockquote>
+&lt;p>而我原先一直以为 1900 不是闰年是个数学问题&lt;br>
+也就是1988 1902都是闰年(其实并不是)&lt;br>
+但是经过这次教训也是学习了&lt;/p>
+&lt;p>同时更深层次的&lt;br>
+也是对自己的一个教训&lt;br>
+太过自信了&lt;br>
+也就是过于相信自己是知道出题人的想法的&lt;br>
+(不一定被4整除 被100整除的还要能被400整除)&lt;br>
+本来一般的题目这种想法就够了&lt;br>
+然而这一题我所采用的方法&lt;br>
+恰恰用到了四年一闰这个思想&lt;br>
+(这个想法是错误的)&lt;br>
+具体解法讨论见题解文章&lt;/p>
+&lt;h3 id="problem-c---magic-spheres">&lt;a href="#problem-c---magic-spheres" class="header-anchor">&lt;/a>Problem C - Magic Spheres
+&lt;/h3>&lt;p>这一题也是迷之WA&lt;br>
+各种情况都想不通&lt;br>
+然后发现了一句……&lt;/p>
+&lt;blockquote>
+&lt;p>he needs at least x blue, y violet and z orange spheres.&lt;/p>
+&lt;/blockquote>
+&lt;p>重点是……&lt;/p>
+&lt;blockquote>
+&lt;p>at least&lt;/p>
+&lt;/blockquote>
+&lt;p>也就是上面的数据没必要完全等于下面的&lt;br>
+只要能把上面变化成大于等于下面的就好了&lt;br>
+然而给的两组Yes的数据全部满足&lt;br>
+等于下面的&lt;br>
+所以导致对题目理解错误……&lt;br>
+想想原因&lt;br>
+就是对于这种英文题目&lt;br>
+我一般是对照输入输入猜题目意思&lt;br>
+所以导致了先入为主的思想&lt;br>
+这也是以后面对英文需要警醒的一件事情&lt;/p>
+&lt;h3 id="problem-d---the-best-gift">&lt;a href="#problem-d---the-best-gift" class="header-anchor">&lt;/a>Problem D - The Best Gift
+&lt;/h3>&lt;p>这一题神奇之处在于&lt;br>
+我竟然没用到题目给的m就顺利AC了-.-&lt;/p>
+&lt;h3 id="problem-e---red-and-black">&lt;a href="#problem-e---red-and-black" class="header-anchor">&lt;/a>Problem E - Red and Black
+&lt;/h3>&lt;p>这题是道经典的搜索题&lt;/p>
+&lt;h3 id="problem-f---load-balancing">&lt;a href="#problem-f---load-balancing" class="header-anchor">&lt;/a>Problem F - Load Balancing
+&lt;/h3>&lt;p>负载均衡 序列平衡的一种算法&lt;br>
+当时比赛因为前面用的时间太长了&lt;br>
+导致这一题都没时间看了……&lt;br>
+(主要也是看到别人都WA了好多 就没写)&lt;/p>
+&lt;h3 id="problem-g---the-suspects">&lt;a href="#problem-g---the-suspects" class="header-anchor">&lt;/a>Problem G - The Suspects
+&lt;/h3>&lt;p>按照题意应该是并查集&lt;br>
+不过当时我的第一眼思路是往搜索想的&lt;br>
+最终也是做出来了&lt;/p>
+&lt;h3 id="problem-h---networking">&lt;a href="#problem-h---networking" class="header-anchor">&lt;/a>Problem H - Networking
+&lt;/h3>&lt;p>最小生成树问题&lt;br>
+之前做过类似的了&lt;/p>
+&lt;h2 id="思考">&lt;a href="#%e6%80%9d%e8%80%83" class="header-anchor">&lt;/a>思考
+&lt;/h2>&lt;p>经过这八道题&lt;br>
+其实我在思考到底什么是算法&lt;br>
+如果它只是一种解题方法的话&lt;br>
+我觉得似乎并不恰当&lt;/p>
+&lt;p>比如有些题目 如&lt;br>
+Problem G - The Suspects&lt;br>
+属于简单的并查集&lt;br>
+但如果用搜索却也并不难理解&lt;/p>
+&lt;p>又或者&lt;br>
+Problem E - Red and Black&lt;br>
+属于搜索 但bfs dfs却都可以解答&lt;/p>
+&lt;p>那么 什么是算法&lt;br>
+我认为把算法归结为一种解题思维&lt;br>
+或许更加恰当&lt;/p>
+&lt;p>也就是 不需要把算法看做一种模板 而是一种解题的思路&lt;br>
+区别是什么呢&lt;br>
+我觉得就是判断一道题是像是某某算法的题目&lt;br>
+脑海里第一意识出现的是算法的思想 还是算法的代码框架&lt;/p>
+&lt;p>我觉得更好的情况还是理解算法的本质&lt;br>
+这样无论题目千变万化 总可以找到解题的钥匙&lt;br>
+而不用纠结于它到底符合哪一个模板&lt;/p>
+&lt;p>算法是一种思维&lt;br>
+这便是我现阶段对算法的理解&lt;br>
+先照着这条路走吧&lt;br>
+然后慢慢修正自己的观点&lt;/p>
+&lt;p>更何况&lt;br>
+无论怎样理解&lt;br>
+对一个算法还是要认真学习的&lt;br>
+甚至说更加努力的去学习&lt;br>
+探究其本质的一些东西&lt;/p>
+&lt;p>话说我最近貌似开始养成&lt;br>
+把一篇文章分成几天来写的习惯了-.-&lt;br>
+貌似有时候会影响思路~&lt;br>
+哈哈哈&lt;br>
+尽量还是一口气写完吧~&lt;br>
+适当补充还是可以的&lt;/p></description></item></channel></rss>

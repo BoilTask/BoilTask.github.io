@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>算法竞赛入门经典（第2版） on BoilTask's Blog</title><link>https://boiltask.com/tags/competitive-programming/</link><description>Recent content in 算法竞赛入门经典（第2版） on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 12 Jan 2016 14:32:38 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/competitive-programming/index.xml" rel="self" type="application/rss+xml"/><item><title>算法竞赛入门经典(6) – 关于for循环中定义变量的后续讨论</title><link>https://boiltask.com/notes/competitive-programming/8/</link><pubDate>Tue, 12 Jan 2016 14:32:38 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/8/</guid><description>&lt;p>想想除了看书时之外&lt;br>
+有时也会幸运地有点想法&lt;br>
+所以再开一个类别来记录吧~&lt;br>
+在下希望这个分类下的博文越多越好 -.-&lt;/p>
+&lt;div class="dida-hr">
+&lt;div>中午记录&lt;/div>
+&lt;/div>
+&lt;p>晚上有场个人赛&lt;br>
+感觉略紧张啊……&lt;br>
+万一爆零肿么办 -_-&lt;br>
+感觉晚上还会来编辑一次&lt;br>
+先立个flag&lt;/p>
+&lt;h2 id="关于for循环中定义变量的后续讨论">&lt;a href="#%e5%85%b3%e4%ba%8efor%e5%be%aa%e7%8e%af%e4%b8%ad%e5%ae%9a%e4%b9%89%e5%8f%98%e9%87%8f%e7%9a%84%e5%90%8e%e7%bb%ad%e8%ae%a8%e8%ae%ba" class="header-anchor">&lt;/a>【关于for循环中定义变量的后续讨论】
+&lt;/h2>&lt;p>上次在书中看到了关于for循环中定义的变量问题&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
+&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/6" >【看书】for循环中的定义变量&lt;/a>&lt;/p>
+&lt;p>结合最近的实际体验和一些测试
+在这里再补充说明一些地方&lt;/p>
+&lt;h3 id="forint-i0--in--i的局限性">&lt;a href="#forint-i0--in--i%e7%9a%84%e5%b1%80%e9%99%90%e6%80%a7" class="header-anchor">&lt;/a>&lt;code>for(int i=0 ; i&amp;lt;n ; i++)&lt;/code>的局限性
+&lt;/h3>&lt;p>我之前提到过&lt;/p>
+&lt;blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
+&lt;/blockquote>
+&lt;p>加上自己的习惯 所以这些日子都是
+尽量对于循环变量随用随定义&lt;/p>
+&lt;blockquote>
+&lt;p>PS:易语言 记次循环首(次数,n) 也是这种直接写出来的模式 (不过其实也需要先定义 不过个人养成了让它报错然后再直接定义的坏习惯)&lt;/p>
+&lt;/blockquote>
+&lt;p>但是有时出现了一些问题
+比如印象最深的关于涉及到 循环中 break;
+例如当时有种素数判定方法:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"> for(i=2;i&amp;lt;=sqrt(m);i++)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(m%i==0)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(i&amp;gt;k)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf(&amp;#34;%d 是素数。\n&amp;#34;,m);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf(&amp;#34;%d 不是素数。\n&amp;#34;,m);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>循环for便不能写成&lt;br>
+&lt;code>for(int i=2;i&amp;lt;=sqrt(m);i++)&lt;/code>&lt;br>
+否则跳出循环后是没有 i 这个变量的&lt;br>
+所以如果在for前没有对于 i 定义&lt;br>
+&lt;code>if(i&amp;gt;k)&lt;/code>&lt;br>
+会报错&lt;br>
+而如果定义了&lt;br>
+又相当于没有对 i 赋值&lt;br>
+所以会得到错误结果&lt;/p>
+&lt;p>可见&lt;code>for(int i=0 ; i&amp;lt;n ; i++)&lt;/code>也是不可以滥用的&lt;/p>
+&lt;p>现在对于这种情况我一般是采取&lt;/p>
+&lt;p>对于这种需要 break 然后判断循环变量的&lt;br>
+还是使用在for之前就定义 然后&lt;br>
+for还写成 &lt;code>for(i=0 ; i&amp;lt;n ; i++)&lt;/code>&lt;/p>
+&lt;p>或者使用一个 flag 标记&lt;br>
+比如对于上述判定素数&lt;br>
+可写成:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int flag;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">for(int i=flag=2; i&amp;lt;=sqrt(m); i++) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(m%i==0) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> flag=0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> break;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(flag)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf(&amp;#34;%d 是素数。\n&amp;#34;,m);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> else
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> printf(&amp;#34;%d 不是素数。\n&amp;#34;,m);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样会相对麻烦&lt;br>
+但对于一些情况还是挺方便理解的&lt;br>
+毕竟还是只需要对循环变量随用随定义&lt;br>
+循环前只需要 int flag&lt;br>
+需要注意的是&lt;br>
+flag必须要在循环前定义&lt;br>
+在循环里定义同样是无法在循环结束调用的&lt;br>
+这引出了下一部分的讨论&lt;br>
+也就是对循环体中的定义变量适用范围问题&lt;/p>
+&lt;h3 id="while等花括号中int-i-的使用范围">&lt;a href="#while%e7%ad%89%e8%8a%b1%e6%8b%ac%e5%8f%b7%e4%b8%adint-i-%e7%9a%84%e4%bd%bf%e7%94%a8%e8%8c%83%e5%9b%b4" class="header-anchor">&lt;/a>while等{}花括号中int i 的使用范围
+&lt;/h3>&lt;p>已经知道&lt;br>
+对于自定义函数&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int sum(int a,int b) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int c=a+b;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return c;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>(只是为了说明函数中定义变量的问题)&lt;br>
+(这个函数可以直接写成)&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int sum(int a,int b) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return a+b;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>为了避免强迫症 还是再提一下&lt;/p>
+&lt;p>在其中定义的 变量c&lt;br>
+是无法被其他函数调用的&lt;br>
+(包括 main 函数)&lt;/p>
+&lt;p>而 函数语句被 { } 括起来&lt;/p>
+&lt;p>结合上面的讨论&lt;br>
+有种猜测:&lt;br>
+{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>
+&lt;p>函数的 { } 是这样&lt;br>
+那么再讨论另一个使用花括号 { } 的地方&lt;br>
+while(){&lt;br>
+}&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-1.png"
+width="627"
+height="516"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-1_hu5583421460999654136.png 480w, https://boiltask.com/notes/competitive-programming/8/image-1_hu2459155094525549294.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="291px"
+>&lt;/p>
+&lt;p>事实上发现的确会报错
+可见上述猜测对 while 是成立的&lt;/p>
+&lt;p>想想
+其实还有其它有花括号
+比如
+if(){
+}
+所以再进行一下测试&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-2.png"
+width="624"
+height="497"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-2_hu14261713697285682017.png 480w, https://boiltask.com/notes/competitive-programming/8/image-2_hu13848669271119213262.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="125"
+data-flex-basis="301px"
+>&lt;/p>
+&lt;p>结果证明同样符合猜测&lt;/p>
+&lt;p>所以可以暂且得出结论&lt;/p>
+&lt;blockquote>
+&lt;p>{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="算法是一种思维">&lt;a href="#%e7%ae%97%e6%b3%95%e6%98%af%e4%b8%80%e7%a7%8d%e6%80%9d%e7%bb%b4" class="header-anchor">&lt;/a>算法是一种思维
+&lt;/h2>&lt;p>还有关于算法的一些思考……不过关于这一点
+想想
+“===程序设计灵魂==算法===”
+分类下还没有文章
+所以这一部分写到那里吧~
+哈哈哈哈哈&lt;/p>
+&lt;div class="dida-hr">
+&lt;div>晚上记录&lt;/div>
+&lt;/div>
+&lt;p>&lt;del>所以顺带这一部分如果有的话也新开一篇文章吧-.-&lt;/del>&lt;br>
+这一篇写的有点长了哦&lt;/p>
+&lt;p>算了 还是直接写在这里吧&lt;/p>
+&lt;p>比赛链接:&lt;a class="link" href="https://vjudge.net/contest/103724" target="_blank" rel="noopener"
+>HPU15级个人赛 - Virtual Judge&lt;/a>&lt;/p>
+&lt;p>呃……对于结果不想说话啦&lt;br>
+在下只是还要坚定自己的想法&lt;br>
+以及完善自己的想法&lt;br>
+另外……认真执行自己的想法&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>上次的文章:&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/6" >【看书】for循环中的定义变量&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>算法竞赛入门经典(7) – 二维字符数组</title><link>https://boiltask.com/notes/competitive-programming/7/</link><pubDate>Mon, 11 Jan 2016 20:00:01 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/7/</guid><description>&lt;p>在做【UVa】[227]Puzzle&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>这一题的时候&lt;br>
+对于 char map[5][5] ; 这种形式的变量又做了讨论&lt;br>
+(文章地址:&lt;a class="link" href="https://boiltask.com/oj/uva/227" >【UVa】[227]Puzzle&lt;/a>)&lt;/p>
+&lt;p>也就是对于map[5][5]的理解问题&lt;/p>
+&lt;p>s[5] 可以理解为字符串(字符数组)&lt;br>
+那么 map[5][5]也可以理解为 多行字符串(二维字符数组)&lt;/p>
+&lt;blockquote>
+&lt;p>abc (0)&lt;br>
+def (1)&lt;br>
+ghi (2)&lt;/p>
+&lt;/blockquote>
+&lt;p>map[0]便代表”abc”&lt;br>
+map[1]便代表”def”&lt;br>
+map[2]便代表”ghi”&lt;/p>
+&lt;p>也就是map[n][m]&lt;br>
+n是行号 m是列号&lt;/p>
+&lt;p>map[0][0]==’a’&lt;br>
+map[0][1]==’b’&lt;br>
+map[1][1]==’e’&lt;br>
+map[2][0]==’g’&lt;/p>
+&lt;p>所以对 map[5][5] 赋值可以用&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">char&lt;/span> &lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;del>同理可用于&lt;code>printf(&amp;quot;%s&amp;quot;,map[i]);&lt;/code>&lt;/del>&lt;br>
+经测试不可以！！&lt;br>
+应该是因为printf是遇到’\0’才结束吧&lt;br>
+而且除了第一行之后 后面还跟了乱码符&lt;br>
+使用之后输出结果如下&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/7/image.png"
+width="773"
+height="376"
+srcset="https://boiltask.com/notes/competitive-programming/7/image_hu2624538124768907791.png 480w, https://boiltask.com/notes/competitive-programming/7/image_hu9107071157545445793.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="205"
+data-flex-basis="493px"
+>&lt;/p>
+&lt;p>而使用二重循环配合 &lt;code>putchar(map[i][j]);&lt;/code> &lt;br>
+或者&lt;code>printf(&amp;quot;%c&amp;quot;,map[i][j]);&lt;/code>&lt;br>
+便可以正常输出 代码如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">memset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="k">sizeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// putchar(map[i][j]);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>由此可见&lt;br>
+C语言的魅力还远不止于此啊-.-&lt;br>
+另外再次感叹一下这书习题是给的真好&lt;/p>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;a class="link" href="https://vjudge.net/problem/uva-227" target="_blank" rel="noopener"
+>Puzzle - UVA 227 - Virtual Judge&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>算法竞赛入门经典(6) – for循环中的定义变量</title><link>https://boiltask.com/notes/competitive-programming/6/</link><pubDate>Mon, 04 Jan 2016 17:11:21 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/6/</guid><description>&lt;p>想起了以前的一个知识点&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="err">起始语句&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="err">判断语句&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="err">修正语句&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">循环语句&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>对于for循环我以前的理解是这样的&lt;br>
+执行到for循环时&lt;br>
+先执行一次 起始语句&lt;br>
+然后开始执行循环体(循环语句)&lt;br>
+执行后执行 修正语句&lt;br>
+然后判断 判断语句&lt;br>
+成立则继续执行 循环语句→修正语句→判断语句……&lt;/p>
+&lt;p>但通过P19中的介绍以及实验&lt;br>
+发现似乎还有一些需要注意的地方&lt;/p>
+&lt;p>也就是这种写法:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也就是循环变量i是在for语句时才建立的&lt;br>
+按照之前&lt;/p>
+&lt;blockquote>
+&lt;p>执行到for循环时&lt;br>
+先执行一次 起始语句&lt;/p>
+&lt;/blockquote>
+&lt;p>理解 这个i应该和这种用法:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>是一样的&lt;br>
+但探究之后发现并不一样&lt;/p>
+&lt;p>参考如下语句&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// int i;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>当编译时会报错&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/6/image-1.png"
+width="735"
+height="45"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-1_hu13301496654541681653.png 480w, https://boiltask.com/notes/competitive-programming/6/image-1_hu11318844412561639153.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1633"
+data-flex-basis="3920px"
+>&lt;/p>
+&lt;p>也就是for循环结束之后&lt;br>
+i变得无法调用了&lt;/p>
+&lt;p>而for之前的那条注释语句加上的话&lt;br>
+发现执行结果如下:&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/6/image-2.png"
+width="419"
+height="34"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-2_hu4902711534851247253.png 480w, https://boiltask.com/notes/competitive-programming/6/image-2_hu7313503508144667420.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1232"
+data-flex-basis="2957px"
+>&lt;/p>
+&lt;p>可见循环中的 int i 并没有影响循环外的 int i&lt;br>
+所以可见这个for循环中的i是独立的&lt;/p>
+&lt;p>这样的话 既然独立 那么随用随定义应该是好过直接先定义的&lt;/p>
+&lt;p>以前我在这种的时候是习惯把正常的变量与循环变量分开区分的&lt;br>
+如&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//储存数值的变量
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">//记录循环次数的变量
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>而了解到这一特性之后&lt;br>
+可以轻松地在运用for时再定义这些变量 而不影响其它部分&lt;/p>
+&lt;p>在P19有这样一句话&lt;/p>
+&lt;blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
+&lt;/blockquote>
+&lt;p>我也是深感很有道理啊~&lt;br>
+话说这就是共鸣哎~毕竟每个人的习惯还是不一样的 能和大神的观点一致 还是有点小激动的呢&lt;/p>
+&lt;p>《算法竞赛入门经典(第2版)》P19&lt;/p>
+&lt;p>以上发表于:&lt;br>
+【看书】for循环中的定义变量（2016-01-04 17:11） 11 0&lt;/p>
+&lt;p>20160112 附:
+后续文章:&lt;a class="link" href="https://boiltask.com/notes/competitive-programming/8/" >【看书】关于for循环中定义变量的后续讨论&lt;/a>&lt;/p></description></item><item><title>算法竞赛入门经典(5) – 竖式问题</title><link>https://boiltask.com/notes/competitive-programming/5/</link><pubDate>Mon, 28 Dec 2015 18:04:49 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/5/</guid><description>&lt;p>问题描述：&lt;br>
+找出所有形如abc*de（三位数乘以两位数）的算式，使得在完整的竖式中，所有数字都属于一个特定的数字集合。输入数字集合（相邻数字之间没有空格），输出所有竖式。每个竖式前应有编号，之后应有一个空行。最后输出解的总数。具体格式见样例输出（为了便于观察，竖式中的空格改用小数点显示，但你的程序应该输出空格，而非小数点）。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//样例输入
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="mi">2357&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">//样例输出
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="mf">.775&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">X&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="mf">.33&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-----&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="mf">.2325&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="mf">2325.&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="o">-----&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="mi">25575&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">The&lt;/span> &lt;span class="n">number&lt;/span> &lt;span class="n">of&lt;/span> &lt;span class="n">solutions&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>写上补充一下这个题目所要表达的意思&lt;br>
+同时还是继续考虑用MarkDown编辑器&lt;br>
+怎么来写这种文章&lt;/p>
+&lt;p>这个题目是要求出所有满足&lt;br>
+形如 abc*de 三位数乘以两位数&lt;br>
+并且竖式过程中用到的数&lt;br>
+都在集合”s”中&lt;/p>
+&lt;p>输出这样的竖式及总共有多少&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">count&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="n">buf&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">99&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">abc&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">111&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">abc&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="mi">999&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">abc&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">de&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">de&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="mi">99&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">de&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">abc&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">de&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">abc&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">de&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">abc&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">de&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">buf&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;%d%d%d%d%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">abc&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">de&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">ok&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">buf&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">strchr&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">buf&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="nb">NULL&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="n">ok&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">ok&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&amp;lt;%d&amp;gt;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="n">count&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%5d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">X%4d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">-----&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">%5d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">%4d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">-----&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">%5d&lt;/span>&lt;span class="se">\n\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">abc&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">de&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">z&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;The number of solutions = %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">count&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>《算法竞赛入门经典(第2版)》P41&lt;/p></description></item><item><title>算法竞赛入门经典(4) – 浮点数陷阱</title><link>https://boiltask.com/notes/competitive-programming/4/</link><pubDate>Mon, 28 Dec 2015 17:32:23 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/4/</guid><description>&lt;p>《算法竞赛入门经典(第2版)》&lt;br>
+P36 题目2 下面的程序运行结果是什么？“!=”运算符表示“不相等”。提示：请上机实验，不要凭主观感觉回答。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mf">0.1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.lf&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>运行结果:&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/4/image-1.png"
+width="669"
+height="466"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-1_hu3901320363627406610.png 480w, https://boiltask.com/notes/competitive-programming/4/image-1_hu15574619765055601728.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+>&lt;/p>
+&lt;p>可以发现程序会一直循环下去&lt;br>
+把代码改成如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">20&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="mf">0.1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.lf&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可以发现&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/4/image-2.png"
+width="93"
+height="344"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-2_hu14019000827893656719.png 480w, https://boiltask.com/notes/competitive-programming/4/image-2_hu1341913070082705356.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="27"
+data-flex-basis="64px"
+>&lt;/p>
+&lt;p>c语言中double类型数据计算是有误差的&lt;br>
+也就是说每次加0.1&lt;br>
+可能永远得不到整10&lt;/p>
+&lt;p>所以上述程序会永远循环&lt;/p></description></item><item><title>算法竞赛入门经典(3) – 输出不确定位数的小数</title><link>https://boiltask.com/notes/competitive-programming/3/</link><pubDate>Mon, 28 Dec 2015 16:53:23 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/3/</guid><description>&lt;p>《算法竞赛入门经典》P35 习题2-5&lt;/p>
+&lt;p>分数化小数 (decimal)&lt;/p>
+&lt;p>问题描述：&lt;/p>
+&lt;blockquote>
+&lt;p>输入正整数a，b，c，输出a/b的小数形式，精确到小数点后c位。a,b≤106(10的6次方) ，c≤100。输入包含多组数据，结束标记为a=b=c=0。&lt;/p>
+&lt;p>样例输入：&lt;/p>
+&lt;p>1 6 4&lt;/p>
+&lt;p>0 0 0&lt;/p>
+&lt;p>样例输出：&lt;/p>
+&lt;p>Case 1 : 0.1667&lt;/p>
+&lt;/blockquote>
+&lt;p>又是一种没见过的题&lt;br>
+而且顺便使用一下 HTML版的博文编辑器~&lt;/p>
+&lt;p>当小数的位数定的时候可以写成&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.4lf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这次要输出一个位数不定的小数&lt;/p>
+&lt;p>所以不能这么写&lt;br>
+百度一下发现可以这么写&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.*lf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>所以整个程序可以写成:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">c&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">kase&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lf %lf %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Case %d : %.*lf&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="n">kase&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">c&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如此应该可以符合题意~&lt;br>
+话说……&lt;br>
+有没有这些题的OJ啊……&lt;br>
+一会再去找一找……&lt;/p></description></item><item><title>算法竞赛入门经典(2) – 程序计时器</title><link>https://boiltask.com/notes/competitive-programming/2/</link><pubDate>Sun, 27 Dec 2015 12:33:36 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/2/</guid><description>&lt;p>当感到程序计算过慢时&lt;br>
+可使用“计时器”来查看到底有多慢&lt;/p>
+&lt;p>具体的是一个 time.h 头文件&lt;br>
+从而调用计时函数 clock()&lt;br>
+这个获得的数值除以常数 CLOCK_PER_SEC&lt;br>
+可以得到以秒为单位的数值&lt;/p>
+&lt;p>代码写法&lt;br>
+先调用头文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;time.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>然后在程序结尾写上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;程序用时 = %.2f&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,(&lt;/span>&lt;span class="kt">double&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">clock&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">CLOCKS_PER_SEC&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>但通过这种方式发现程序用时过大&lt;br>
+因为这个计时的起点是以打开程序开始的&lt;br>
+所以会导致用键盘输入的时间也会包括在内&lt;br>
+所以可以用命令行来解决&lt;/p>
+&lt;p>打开 CMD(命令提示符)&lt;/p>
+&lt;p>输入&lt;br>
+cd 文件目录&lt;br>
+来把当前目录转到指定目录&lt;br>
+如：&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/2/image-1.png"
+width="384"
+height="27"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-1_hu7739818440146114759.png 480w, https://boiltask.com/notes/competitive-programming/2/image-1_hu4967084743364995227.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="1422"
+data-flex-basis="3413px"
+>&lt;/p>
+&lt;p>然后输入 echo 输入数据 | 程序名&lt;br>
+如:&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/2/image-2.png"
+width="383"
+height="419"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-2_hu17712528383597893674.png 480w, https://boiltask.com/notes/competitive-programming/2/image-2_hu13641665505146461992.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="91"
+data-flex-basis="219px"
+>&lt;/p>
+&lt;p>abc便是我创建程序的文件名&lt;/p>
+&lt;p>可以得到一些关于输入输出的数据&lt;br>
+从而可以进行分析&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/2/image-3.png"
+width="4208"
+height="885"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-3_hu6584193200986189437.png 480w, https://boiltask.com/notes/competitive-programming/2/image-3_hu11124835707580225885.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="475"
+data-flex-basis="1141px"
+>&lt;/p>
+&lt;p>与书中给的数据还是有不少差别的&lt;br>
+可见我的小电脑计算能力还是可以哒~&lt;br>
+哈哈哈&lt;/p>
+&lt;p>《算法竞赛入门经典》——刘佳汝 P26&lt;/p></description></item><item><title>算法竞赛入门经典(1) – int的范围</title><link>https://boiltask.com/notes/competitive-programming/1/</link><pubDate>Sun, 27 Dec 2015 11:42:51 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/1/</guid><description>&lt;p>越发的感觉刘汝佳的《算法竞赛入门经典》写的很好&lt;br>
+然后勾起了心中的共鸣~&lt;br>
+然后没事就发点读后感吧&lt;br>
+也算是在看书过程中的调节调节&lt;/p>
+&lt;p>哈哈哈~&lt;br>
+先把P16的指出的int范围测出来~&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/1/image-1.png"
+width="677"
+height="493"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-1_hu10459790078482635273.png 480w, https://boiltask.com/notes/competitive-programming/1/image-1_hu14258923634040140884.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="329px"
+>&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/1/image-2.png"
+width="677"
+height="493"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-2_hu16185752309880172002.png 480w, https://boiltask.com/notes/competitive-programming/1/image-2_hu3381249312977169061.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="329px"
+>&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/1/image-3.png"
+width="677"
+height="493"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-3_hu7016452403049956724.png 480w, https://boiltask.com/notes/competitive-programming/1/image-3_hu14997523785418192058.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="329px"
+>&lt;br>
+&lt;img src="https://boiltask.com/notes/competitive-programming/1/image-4.png"
+width="677"
+height="493"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-4_hu3285848752103058701.png 480w, https://boiltask.com/notes/competitive-programming/1/image-4_hu2853459352141282228.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="137"
+data-flex-basis="329px"
+>&lt;/p>
+&lt;p>int ： -2147483647~2147483647&lt;br>
+话说我以前怎么没想到还有必要进行一下这种测试嘞~&lt;/p></description></item></channel></rss>
