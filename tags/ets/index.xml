@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ets on BoilTask's Blog</title><link>https://boiltask.com/tags/ets/</link><description>Recent content in Ets on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Apr 2025 03:21:08 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/ets/index.xml" rel="self" type="application/rss+xml"/><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p>突然想开个新坑，要不&lt;code>fork&lt;/code>一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>hugo-theme-stack&lt;/a>自己魔改一下？&lt;/p>
+&lt;p>可能也就是说说……&lt;/p>
+&lt;p>不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p>
+&lt;p>参考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"
+>GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>

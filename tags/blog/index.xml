@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on BoilTask's Blog</title><link>https://boiltask.com/tags/blog/</link><description>Recent content in 博客 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Apr 2025 03:21:08 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p>突然想开个新坑，要不&lt;code>fork&lt;/code>一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>hugo-theme-stack&lt;/a>自己魔改一下？&lt;/p>
+&lt;p>可能也就是说说……&lt;/p>
+&lt;p>不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p>
+&lt;p>参考：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>GitHub - CaiJimmy/hugo-theme-stack: Card-style Hugo theme designed for bloggers&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/hugo-fixit/FixIt" target="_blank" rel="noopener"
+>GitHub - hugo-fixit/FixIt: 🔧 A clean, elegant but advanced blog theme for Hugo 一个简洁、优雅且高效的 Hugo 主题&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>尝试Obsidian与Hugo结合</title><link>https://boiltask.com/record/try-obsidian/</link><pubDate>Thu, 03 Apr 2025 21:40:08 +0800</pubDate><guid>https://boiltask.com/record/try-obsidian/</guid><description>&lt;p>之前一直是Notion的拥趸，不过随着又有好久不用Notion，又重新起了笔记软件挑选的念头。&lt;/p>
+&lt;p>之前一直觉得Obsidian作为一个本地存档的笔记软件，功能也没有Notion强大，还需要自己处理同步等问题，应该是没什么优势。&lt;/p>
+&lt;p>不过上次折腾起来Hugo之后，越发感觉笔记这种东西，还是返璞归真比较适合我，要不太容易忙于折腾样式、排版什么的问题而分心。到最后发现，除了设计好的模板，其实真正的内容没有多少。&lt;/p>
+&lt;p>下载下来Obsidian之后，发现他和Hugo的工作流意外的搭。使用Obsidian来管理工作区，比用专注编码的IDE要更适合文档类的整理工作。虽然这样以来又有些浪费“重金”买的Typora，不过总算也是能物尽其用吧。&lt;/p>
+&lt;p>说起来作为Typora刚出付费方案就首发入手的用户，好像自从买了就没大用过……反倒是之前免费的时候，还拿来写过一些东西。&lt;/p>
+&lt;p>使用Obsidian打开Hugo的文件夹，正常在&lt;code>content&lt;/code>路径写内容，然后把一些不需要上传到博客上的文章，还有一些Hugo不支持的文章放在单独的文件夹中即可。&lt;/p></description></item><item><title>给Hugo博客引入pangu.js</title><link>https://boiltask.com/record/hugo-pangu/</link><pubDate>Thu, 03 Apr 2025 09:06:12 +0800</pubDate><guid>https://boiltask.com/record/hugo-pangu/</guid><description>&lt;p>之前经常纠结中英文混排时的排版问题，因此引入了&lt;code>pangu.js&lt;/code>来优化排版效果。&lt;/p>
+&lt;p>官方仓库：&lt;a class="link" href="https://github.com/vinta/pangu.js" target="_blank" rel="noopener"
+>vinta/pangu.js: Paranoid text spacing in JavaScript&lt;/a>&lt;/p>
+&lt;p>调用&lt;code>pangu.autoSpacingPage()&lt;/code>即可将页面转换为美化之后的结果。&lt;/p>
+&lt;p>由于&lt;code>JS&lt;/code>的加载与处理需要时间，直接这么写的话，体验上是用户会先看到处理前的页面，然后短暂停留后刷新为新内容，这就导致体验上很奇怪。&lt;/p>
+&lt;p>解决思路的话，可以考虑先隐藏页面，等&lt;code>DOM&lt;/code>加载完，先进行&lt;code>pangu.js&lt;/code>的处理，完毕后再重新显示页面。&lt;/p>
+&lt;p>为了避免第一次加载较久，还可以加一个Loading效果。&lt;/p>
+&lt;p>需要注意&lt;code>autoSpacingPage&lt;/code>函数会异步处理，可以改为阻塞版本的&lt;code>spacingPage&lt;/code>。&lt;/p>
+&lt;h2 id="参考代码">&lt;a href="#%e5%8f%82%e8%80%83%e4%bb%a3%e7%a0%81" class="header-anchor">&lt;/a>参考代码
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;span class="lnt">55
+&lt;/span>&lt;span class="lnt">56
+&lt;/span>&lt;span class="lnt">57
+&lt;/span>&lt;span class="lnt">58
+&lt;/span>&lt;span class="lnt">59
+&lt;/span>&lt;span class="lnt">60
+&lt;/span>&lt;span class="lnt">61
+&lt;/span>&lt;span class="lnt">62
+&lt;/span>&lt;span class="lnt">63
+&lt;/span>&lt;span class="lnt">64
+&lt;/span>&lt;span class="lnt">65
+&lt;/span>&lt;span class="lnt">66
+&lt;/span>&lt;span class="lnt">67
+&lt;/span>&lt;span class="lnt">68
+&lt;/span>&lt;span class="lnt">69
+&lt;/span>&lt;span class="lnt">70
+&lt;/span>&lt;span class="lnt">71
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loadingOverlay&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;loader&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>加载中...&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">#&lt;/span>&lt;span class="nn">loadingOverlay&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">fixed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rgba&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">255&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.9&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">z-index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">9999&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">justify-content&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">align-items&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">center&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">flex-direction&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">column&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nc">loader&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#f3f3f3&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span> &lt;span class="kc">solid&lt;/span> &lt;span class="mh">#3498db&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">50&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">height&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">60&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">animation&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">spin&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">s&lt;/span> &lt;span class="kc">linear&lt;/span> &lt;span class="kc">infinite&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">@&lt;/span>&lt;span class="k">keyframes&lt;/span> &lt;span class="nt">spin&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">0&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">100&lt;/span>&lt;span class="o">%&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">transform&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">rotate&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">360&lt;/span>&lt;span class="kt">deg&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">/* 初始隐藏页面内容，避免显示未经处理的文本 */&lt;/span> &lt;span class="p">.&lt;/span>&lt;span class="nc">main-container&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">isShouldLoad&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">isShouldLoad&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">loadingOverlay&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;loadingOverlay&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;flex&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span> &lt;span class="mi">200&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="c1">// 0.2秒如果还没有加载完成就开启Loading
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;module&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">import&lt;/span> &lt;span class="nx">pangu&lt;/span> &lt;span class="nx">from&lt;/span> &lt;span class="s1">&amp;#39;https://jspm.dev/pangu&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;DOMContentLoaded&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">isShouldLoad&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">pangu&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">spacingPage&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">elements&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementsByClassName&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;main-container&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="kd">let&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="nx">elements&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="nx">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">elements&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nx">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;flex&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">loadingOverlay&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">getElementById&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;loadingOverlay&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">loadingOverlay&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">style&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s1">&amp;#39;none&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title><link>https://boiltask.com/knowledge/katex-cloudflare/</link><pubDate>Sat, 09 Nov 2024 12:45:51 +0800</pubDate><guid>https://boiltask.com/knowledge/katex-cloudflare/</guid><description>&lt;p>在博客部署到线上之后，发现&lt;code>Katex&lt;/code>公式无法正常显示，而相同的&lt;code>Html&lt;/code>文件在本地环境下是可以正常显示的。&lt;/p>
+&lt;p>其中解析的核心代码如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-javascript" data-lang="javascript">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;DOMContentLoaded&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">renderMathInElement&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">document&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">body&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">delimiters&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;$$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;$$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;$&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;\\(&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;\\)&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span> &lt;span class="nx">left&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;\\[&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">right&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;\\]&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">display&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">ignoredClasses&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;gist&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">})&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>通过添加日志发现是&lt;code>DOMContentLoaded&lt;/code>事件没有触发。&lt;/p>
+&lt;p>但是一直没想到是什么原因，直到留意到了线上版本里&lt;code>&amp;lt;script&amp;gt;&lt;/code>标签变成了形如&lt;code>&amp;lt;script type=&amp;quot;d6a94c0af8a975daac5bee56-text/javascript&amp;quot;&amp;gt;&lt;/code>。&lt;/p>
+&lt;p>最终回想起来是&lt;code>Cloudflare&lt;/code>开启了&lt;code>Rocket Loader&lt;/code>。&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>Rocket Loader&lt;/code>是&lt;code>Cloudflare&lt;/code>的一个功能，用于异步加载&lt;code>JavaScript&lt;/code>，以提高页面加载速度。&lt;/p>
+&lt;/blockquote>
+&lt;p>但是&lt;code>Rocket Loader&lt;/code>可能会导致加载顺序变化从而导致某些&lt;code>JavaScript&lt;/code>代码无法正常执行。&lt;/p>
+&lt;p>暂时关闭了&lt;code>Rocket Loader&lt;/code>，问题解决。&lt;/p>
+&lt;p>也可以通过在标签里添加&lt;code>data-cfasync=&amp;quot;false&amp;quot;&lt;/code>来禁用&lt;code>Rocket Loader&lt;/code>，不过考虑还需要修改主题，暂时不做修改了。&lt;/p></description></item><item><title>Hogo中Giscus配置</title><link>https://boiltask.com/knowledge/hugo-giscus/</link><pubDate>Fri, 08 Nov 2024 13:06:06 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-giscus/</guid><description>&lt;p>在给博客配置评论区的时候，遇见了一些问题，记录一些。&lt;/p>
+&lt;h2 id="为何选择giscus">&lt;a href="#%e4%b8%ba%e4%bd%95%e9%80%89%e6%8b%a9giscus" class="header-anchor">&lt;/a>为何选择Giscus
+&lt;/h2>&lt;p>&lt;code>Stack&lt;/code>这个主题默认的评论区是&lt;code>Disqus&lt;/code>，但是&lt;code>Disqus&lt;/code>是个国外的服务，而且需要收费，因此没有使用。&lt;/p>
+&lt;p>同时，主题也支持了其他常见的评论区配置。我首先选择了之前经常注意到的&lt;code>Gitalk&lt;/code>，使用&lt;code>Github&lt;/code>的&lt;code>Issue&lt;/code>来作为评论区的方式当时让人眼前一亮。&lt;/p>
+&lt;p>不过配置的时候遇见了一些权限问题，发现&lt;code>Gitalk&lt;/code>的权限有些不合理，评论者需要把自己的账号授权给博主来评论，理论上来说博主会获得一些不该有的登陆者的权限。
+而且由于跨域问题，还需要找个处理跨域的代理，这又增添了一些隐私问题以及配置成本。&lt;/p>
+&lt;p>最后选择了&lt;code>Giscus&lt;/code>，它使用自己的&lt;code>App&lt;/code>来作为权限拥有者，作为一个第三方，使用着只需要授权给这个应用即可完成&lt;code>Github&lt;/code>的授权。&lt;/p>
+&lt;p>同时使用起来也更方便和灵活。&lt;/p>
+&lt;h2 id="配置方式">&lt;a href="#%e9%85%8d%e7%bd%ae%e6%96%b9%e5%bc%8f" class="header-anchor">&lt;/a>配置方式
+&lt;/h2>&lt;ol>
+&lt;li>在&lt;code>Github&lt;/code>中安装&lt;a class="link" href="https://github.com/apps/giscus" target="_blank" rel="noopener"
+>Giscus&lt;/a>&lt;/li>
+&lt;li>将仓库授权给应用
+&lt;ol>
+&lt;li>在&lt;a class="link" href="https://github.com/settings/installations" target="_blank" rel="noopener"
+>Applications&lt;/a>中找到&lt;code>Giscus&lt;/code>&lt;/li>
+&lt;li>在&lt;code>Repository access&lt;/code>中选择所存放评论的仓库&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>前往&lt;a class="link" href="https://giscus.app/zh-CN" target="_blank" rel="noopener"
+>Giscus&lt;/a>的官网继续完成配置
+&lt;ol>
+&lt;li>选择一个&lt;code>语言&lt;/code>&lt;/li>
+&lt;li>在&lt;code>仓库&lt;/code>中输入所授权的仓库，如：&lt;code>BoilTask/BoilTask.github.io&lt;/code>&lt;/li>
+&lt;li>根据后续的配置描述选择自己所要的配置&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>在&lt;code>启用 giscus&lt;/code>一项中查看所需要的配置&lt;/li>
+&lt;/ol>
+&lt;p>可以在需要的地方填写上生成的配置即可。&lt;/p></description></item><item><title>又双叒叕一次重新梳理了一下博客</title><link>https://boiltask.com/record/202411081/</link><pubDate>Fri, 08 Nov 2024 12:46:38 +0800</pubDate><guid>https://boiltask.com/record/202411081/</guid><description>&lt;p>最近在整理之前写的事件系统：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/a3991470-a7b9-474d-8038-289dad0b0497" target="_blank" rel="noopener"
+>DidaEvent&lt;/a>，为此创建了一个&lt;a class="link" href="https://event.didapipa.com/" target="_blank" rel="noopener"
+>文档&lt;/a>网站。 使用了&lt;code>Hugo&lt;/code>来做了网站生成系统，体验还不错，因此决定把博客也从&lt;code>WordPress&lt;/code>迁移到&lt;code>Hugo&lt;/code>。&lt;/p>
+&lt;h2 id="为什么要迁移">&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e8%a6%81%e8%bf%81%e7%a7%bb" class="header-anchor">&lt;/a>为什么要迁移
+&lt;/h2>&lt;p>本身其实对静态建站方案是比较排斥的，一是和传统的直接在线编辑的方式比没有那么直观，二来有服务器的方案感觉也更加灵活。&lt;/p>
+&lt;p>但是自己维护服务器的成本相对还是比较高的，虽然使用了&lt;code>WordPress&lt;/code>，但本身我对&lt;code>PHP&lt;/code>的发展也不太看好，而且相对来说也过于重了。&lt;/p>
+&lt;p>经过过去的经验，服务器往往由于续费、维护等原因需要迁移，这就导致每次博客都需要重新折腾一番。让写作这件事情也变得成本更高，也很难坚持下来。&lt;/p>
+&lt;p>因此使用类似于&lt;code>Hugo&lt;/code>之类的静态建站方案就突显出了优势，一是有免费的托管方案，二来直接&lt;code>Markdown&lt;/code>的写作方式，也能更灵活的运用起来手头的工具。&lt;/p>
+&lt;p>而且真需要一些特殊的模块，其实也可以自己自定义一些空间和页面，因此应该也可以符合目前的需求。&lt;/p>
+&lt;h2 id="为什么选择hugo">&lt;a href="#%e4%b8%ba%e4%bb%80%e4%b9%88%e9%80%89%e6%8b%a9hugo" class="header-anchor">&lt;/a>为什么选择Hugo
+&lt;/h2>&lt;p>备选的静态网站生成器有很多，比如&lt;code>Jekyll&lt;/code>、&lt;code>Hexo&lt;/code>等等，为什么选择&lt;code>Hugo&lt;/code>呢？&lt;/p>
+&lt;p>&lt;code>Hexo&lt;/code>是用的&lt;code>Node.js&lt;/code>，生成速度较慢，因此不再考虑了。&lt;/p>
+&lt;p>&lt;code>Jekyll&lt;/code>具有Github的官方支持，可以直接在&lt;code>Github&lt;/code>上部署。但是尝试了一个&lt;code>Jekyll&lt;/code>的主题，感觉太复杂了。
+而且其实我是希望数据源与最后生成的文件分开的，这样也方便管理。&lt;/p>
+&lt;p>最后选择了&lt;code>Hugo&lt;/code>，一是有合适的主题，二来生成速度快，三来使用的&lt;code>Golang&lt;/code>语言也是我比较看好的一种语言。&lt;/p>
+&lt;p>&lt;code>DidaEvent&lt;/code>的文档使用的主题是&lt;a class="link" href="https://github.com/thuliteio/doks" target="_blank" rel="noopener"
+>Doks&lt;/a>，博客使用的主题是&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+>Stack&lt;/a>。&lt;/p>
+&lt;h2 id="迁移过程">&lt;a href="#%e8%bf%81%e7%a7%bb%e8%bf%87%e7%a8%8b" class="header-anchor">&lt;/a>迁移过程
+&lt;/h2>&lt;p>简单的部署好框架后，感觉整体还是比较满意的。&lt;/p>
+&lt;p>剩下的就是需要迁移原先&lt;code>WordPress&lt;/code>的文章了，本来都做好一点一点复制的准备了，不过好在发现了一款插件：&lt;a class="link" href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter" target="_blank" rel="noopener"
+>wordpress-to-hugo-exporter&lt;/a>。
+经过插件的导出，得到了一个文章的压缩包，又根据我自己的需求简单调整了一下，一个大体的博客就算搭建完毕了。&lt;/p>
+&lt;p>不过有一些陈年老文章，还有一些图片需要再整理一下，就后续再慢慢翻新吧。&lt;/p>
+&lt;h2 id="评论区配置">&lt;a href="#%e8%af%84%e8%ae%ba%e5%8c%ba%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>评论区配置
+&lt;/h2>&lt;p>评论区配置的时候还是遇见了一些麻烦，详见：&lt;a class="link" href="https://boiltask.com/knowledge/hugo-giscus/" >Hogo中Giscus配置&lt;/a>&lt;/p></description></item></channel></rss>

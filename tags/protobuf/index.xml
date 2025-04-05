@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Protobuf on BoilTask's Blog</title><link>https://boiltask.com/tags/protobuf/</link><description>Recent content in Protobuf on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 18 Jul 2020 17:39:54 +0000</lastBuildDate><atom:link href="https://boiltask.com/tags/protobuf/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows下C++版本Protobuf使用方法</title><link>https://boiltask.com/knowledge/cpp-protobuf/</link><pubDate>Sat, 18 Jul 2020 17:39:54 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-protobuf/</guid><description>&lt;p>参考下文配置&lt;code>Protobuf&lt;/code>：&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation---windows" target="_blank" rel="noopener"
+>https://github.com/protocolbuffers/protobuf/tree/master/src#c-installation&amp;mdash;windows&lt;/a>&lt;/p>
+&lt;h2 id="所需环境">&lt;a href="#%e6%89%80%e9%9c%80%e7%8e%af%e5%a2%83" class="header-anchor">&lt;/a>所需环境
+&lt;/h2>&lt;p>推荐提前安装以下环境：&lt;/p>
+&lt;ul>
+&lt;li>Windows 10&lt;/li>
+&lt;li>Git&lt;/li>
+&lt;li>Cmake&lt;/li>
+&lt;li>Visual Studio 2019&lt;/li>
+&lt;/ul>
+&lt;h2 id="生成工具">&lt;a href="#%e7%94%9f%e6%88%90%e5%b7%a5%e5%85%b7" class="header-anchor">&lt;/a>生成工具
+&lt;/h2>&lt;p>在&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/releases/latest" target="_blank" rel="noopener"
+>https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a>下载&lt;code>protobuf&lt;/code>生成工具。&lt;/p>
+&lt;p>文件应形如&lt;code>protoc-$VERSION-win32.zip&lt;/code>，解压其中的&lt;code>bin/protoc.exe&lt;/code>，放于&lt;code>Dep/protobuf/bin&lt;/code>下。&lt;/p>
+&lt;h2 id="编译依赖">&lt;a href="#%e7%bc%96%e8%af%91%e4%be%9d%e8%b5%96" class="header-anchor">&lt;/a>编译依赖
+&lt;/h2>&lt;p>参考下文编译所需依赖：&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md" target="_blank" rel="noopener"
+>https://github.com/protocolbuffers/protobuf/blob/master/cmake/README.md&lt;/a>&lt;/p>
+&lt;p>在&lt;a class="link" href="https://github.com/protocolbuffers/protobuf/releases/latest" target="_blank" rel="noopener"
+>https://github.com/protocolbuffers/protobuf/releases/latest&lt;/a>下载&lt;code>protobuf&lt;/code>源文件。&lt;/p>
+&lt;p>文件应形如 &lt;code>protobuf-cpp-[VERSION].tar.gz&lt;/code>。&lt;/p>
+&lt;p>解压全部文件到文件夹中，此处以&lt;code>D:\Protobuf&lt;/code>为例。&lt;/p>
+&lt;p>打开&lt;code>cmake-gui&lt;/code>，选择&lt;code>source code&lt;/code>文件夹为&lt;code>D:\Protobuf\cmake&lt;/code>，&lt;code>build the binaries&lt;/code>文件夹为目标文件夹，此处以&lt;code>D:\Protobuf-build&lt;/code>为例。&lt;/p>
+&lt;p>点击&lt;code>Configure&lt;/code>，选择&lt;code>Visual Studio 2019&lt;/code>。&lt;/p>
+&lt;p>取消配置中的所有勾选。&lt;/p>
+&lt;p>留意&lt;code>CMAKE_INSTALL_PREFIX&lt;/code>值，此值为之后运行安装后目标文件存放位置。此处以&lt;code>D:/Protobuf-install&lt;/code>为例。&lt;/p>
+&lt;p>点击&lt;code>Generate&lt;/code>生成解决方案，之后&lt;code>Open Project&lt;/code>打开解决方案。&lt;/p>
+&lt;p>选择&lt;code>MinSizeRel&lt;/code>与&lt;code>x64&lt;/code>，之后生成解决方案。&lt;/p>
+&lt;p>右键&lt;code>INSTALL&lt;/code>，选择生成，目标文件会被生成在前面所配置文件夹中。&lt;/p>
+&lt;p>复制&lt;code>D:/Protobuf-install/include&lt;/code>到项目&lt;code>/protobuf/include&lt;/code>。&lt;/p>
+&lt;p>复制&lt;code>D:/Protobuf-install/lib&lt;/code>到项目&lt;code>/protobuf/lib&lt;/code>。&lt;/p>
+&lt;h2 id="配置项目">&lt;a href="#%e9%85%8d%e7%bd%ae%e9%a1%b9%e7%9b%ae" class="header-anchor">&lt;/a>配置项目
+&lt;/h2>&lt;p>在&lt;code>Visual Studio&lt;/code>的项目中，参考如下方法配置&lt;code>Protobuf&lt;/code>。&lt;/p>
+&lt;h3 id="配置头文件引用">&lt;a href="#%e9%85%8d%e7%bd%ae%e5%a4%b4%e6%96%87%e4%bb%b6%e5%bc%95%e7%94%a8" class="header-anchor">&lt;/a>配置头文件引用
+&lt;/h3>&lt;p>右键项目属性，点击&lt;code>C/C++&lt;/code>，在&lt;code>附加包含目录&lt;/code>之中，填入&lt;code>protobuf&lt;/code>头文件目录，如：&lt;code>\protobuf\include&lt;/code>。&lt;/p>
+&lt;h3 id="配置静态链接">&lt;a href="#%e9%85%8d%e7%bd%ae%e9%9d%99%e6%80%81%e9%93%be%e6%8e%a5" class="header-anchor">&lt;/a>配置静态链接
+&lt;/h3>&lt;p>右键项目属性，点击&lt;code>链接器&lt;/code>，在&lt;code>附加库目录&lt;/code>之中，填入&lt;code>protobuf&lt;/code>依赖文件目录，如：&lt;code>\protobuf\lib&lt;/code>。&lt;/p>
+&lt;p>展开&lt;code>链接器&lt;/code>一栏，选择&lt;code>输入&lt;/code>，在&lt;code>附加依赖项&lt;/code>之中，填入&lt;code>protobuf&lt;/code>依赖文件名，如&lt;code>libprotobuf.lib&lt;/code>与&lt;code>libprotobuf-lite.lib&lt;/code>。&lt;/p></description></item></channel></rss>
