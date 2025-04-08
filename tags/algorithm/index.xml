@@ -79,6 +79,89 @@ w = （3，4，5）&lt;/p>
 但可以通过比较缩小解的范围&lt;/p>
 &lt;p>参考文章:&lt;br>
 《挑战程序设计竞赛》&lt;br>
+百度百科&lt;/p></description></item><item><title>欧几里得——GCD引发的讨论</title><link>https://boiltask.com/knowledge/extended-gcd/</link><pubDate>Thu, 21 Jul 2016 15:08:12 +0800</pubDate><guid>https://boiltask.com/knowledge/extended-gcd/</guid><description>&lt;h2 id="欧几里得算法">&lt;a href="#%e6%ac%a7%e5%87%a0%e9%87%8c%e5%be%97%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>欧几里得算法
+&lt;/h2>&lt;h3 id="任务">&lt;a href="#%e4%bb%bb%e5%8a%a1" class="header-anchor">&lt;/a>任务
+&lt;/h3>&lt;p>求两个数a,b的最大公约数gcd(a,b)&lt;/p>
+&lt;h3 id="说明">&lt;a href="#%e8%af%b4%e6%98%8e" class="header-anchor">&lt;/a>说明
+&lt;/h3>&lt;p>由贝祖定理[若设a,b是整数，则存在整数x,y，使得ax+by=gcd（a,b）]得，gcd(a,b)=(b,a-b),其中a≥b。通过这样不断的迭代，知道b=0，就是原来数对的最大公约数。考虑到只使用减法会超时，我们观察到如果a-b仍然大于b的话，要进行一次同样的操作，就把a减到不足b为止，所以有gcd(a,b)=gcd(b,a mod b)。由此可以在log的时间内求出两个数的gcd。&lt;/p>
+&lt;h3 id="程序">&lt;a href="#%e7%a8%8b%e5%ba%8f" class="header-anchor">&lt;/a>程序
+&lt;/h3>&lt;p>int gcd(int a,int b);&lt;/p>
+&lt;h3 id="复杂度">&lt;a href="#%e5%a4%8d%e6%9d%82%e5%ba%a6" class="header-anchor">&lt;/a>复杂度
+&lt;/h3>&lt;p>O(logN)，其中N和a，b同阶&lt;/p>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>a，b两个整数&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>a，b的最大公约数&lt;/p>
+&lt;h3 id="代码">&lt;a href="#%e4%bb%a3%e7%a0%81" class="header-anchor">&lt;/a>代码
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="o">?&lt;/span> &lt;span class="nl">a&lt;/span> &lt;span class="p">:&lt;/span> &lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">a&lt;/span> &lt;span class="o">%&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="扩展欧几里得">&lt;a href="#%e6%89%a9%e5%b1%95%e6%ac%a7%e5%87%a0%e9%87%8c%e5%be%97" class="header-anchor">&lt;/a>扩展欧几里得
+&lt;/h2>&lt;h3 id="任务-1">&lt;a href="#%e4%bb%bb%e5%8a%a1-1" class="header-anchor">&lt;/a>任务
+&lt;/h3>&lt;p>求出A,B的最大公约数，且求出X,Y满足AX+BY=GCD(A,B)。&lt;/p>
+&lt;h3 id="说明-1">&lt;a href="#%e8%af%b4%e6%98%8e-1" class="header-anchor">&lt;/a>说明
+&lt;/h3>&lt;p>要求X,Y，满足：AX+BY=GCD(A,B)。
+当B=0时，有X=1，Y=0时等式成立。
+当B&amp;gt;0时，在欧几里得算法的基础上，已知：
+GCD(A,B)=GCD(B,A mod B)
+先递归楸树X’,Y’满足：
+BX’+(A mod B)Y’ = GCD(B,A mod B) = GCD(A,B)
+然后可以回推，我们将上式化简得：
+BX’+(A-A/B*B)Y’=GCD(A,B)
+AY’+BX’-(A/B)&lt;em>BY’=GCD(A,B)
+这里除法指整除。把含B的因式提取一个B，可得：
+AY’+B(X’-A/B&lt;/em>Y’)=GCD(A,B)
+故X=Y’，Y=X’-A/B&amp;amp;Y’&lt;/p>
+&lt;h3 id="程序-1">&lt;a href="#%e7%a8%8b%e5%ba%8f-1" class="header-anchor">&lt;/a>程序
+&lt;/h3>&lt;p>int extend_gcd(int a,int b,int &amp;amp;x,int &amp;amp;y);&lt;/p>
+&lt;h3 id="复杂度-1">&lt;a href="#%e5%a4%8d%e6%9d%82%e5%ba%a6-1" class="header-anchor">&lt;/a>复杂度
+&lt;/h3>&lt;p>O(logN)，其中N和a，b同阶&lt;/p>
+&lt;h3 id="输入-1">&lt;a href="#%e8%be%93%e5%85%a5-1" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>a，b两个整数
+&amp;amp;x,&amp;amp;y引用，ax+by=GCD(a,b)的一组解&lt;/p>
+&lt;h3 id="输出-1">&lt;a href="#%e8%be%93%e5%87%ba-1" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>a，b的最大公约数
+调用后x，y满足方程ax+by=GCD(a,b)。&lt;/p>
+&lt;h3 id="代码-1">&lt;a href="#%e4%bb%a3%e7%a0%81-1" class="header-anchor">&lt;/a>代码
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">int extend_gcd(int a,int b,int &amp;amp;x,int &amp;amp;y) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if(b==0) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x=1;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y=0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return a;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } else {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> int r=extend_gcd(b,a%b,y,x);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y-=x*(a/b);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return r;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
+&lt;/h2>&lt;p>ACM国际大学生程序设计竞赛：算法与实现
 百度百科&lt;/p></description></item><item><title>二分图——集合中匹配另一集合中数个</title><link>https://boiltask.com/knowledge/bipartite-graph/</link><pubDate>Fri, 01 Apr 2016 07:07:18 +0800</pubDate><guid>https://boiltask.com/knowledge/bipartite-graph/</guid><description>&lt;p>问题示例:&lt;br>
 N台计算机K个任务，各个计算机可以处理的任务种类不同，最多能处理多少任务&lt;br>
 过山车每个女生只愿与某几个男生相邻，求最多能安排几对&lt;/p>

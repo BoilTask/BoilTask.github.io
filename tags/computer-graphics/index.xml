@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机图形学 on BoilTask's Blog</title><link>https://boiltask.com/tags/computer-graphics/</link><description>Recent content in 计算机图形学 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/knowledge/computer-graphics-note/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/knowledge/computer-graphics-note/</guid><description>&lt;blockquote>
+&lt;p>参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="第1章">&lt;a href="#%e7%ac%ac1%e7%ab%a0" class="header-anchor">&lt;/a>第1章
+&lt;/h2>&lt;h3 id="什么是计算机图形学它主要研究内容">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e5%ad%a6%e5%ae%83%e4%b8%bb%e8%a6%81%e7%a0%94%e7%a9%b6%e5%86%85%e5%ae%b9" class="header-anchor">&lt;/a>什么是计算机图形学，它主要研究内容？
+&lt;/h3>&lt;p>计算机图形学是一门研究用计算机将数据转换成图形，并在专用设备上显示和处理的学科，它着重研究图形生成和处理的原理、方法和技术，是一门多学科综合应用的新技术。&lt;/p>
+&lt;p>其涵盖图学理论、应用数学、计算机科学等学科。&lt;/p>
+&lt;p>主要研究内容：&lt;/p>
+&lt;p>围绕：图形处理过程中的软、硬件技术、表示图形和图像的准确性、真实性和实时性。&lt;/p>
+&lt;p>包括：研究内容分为九个方向。&lt;/p>
+&lt;ol>
+&lt;li>基于设备的基本图形生成算法，如直线、圆弧等；&lt;/li>
+&lt;li>图形元素的裁剪和几何变换技术；&lt;/li>
+&lt;li>曲线和曲面的处理技术：插值、拟合、拼接和分解；&lt;/li>
+&lt;li>三维几何造型技术；&lt;/li>
+&lt;li>三维形体的实时显示和图形的并行处理技术；&lt;/li>
+&lt;li>真实感图形生成技术和仿真模拟系统；&lt;/li>
+&lt;li>随机形体或模糊景物的模拟生成技术；&lt;/li>
+&lt;li>虚拟现实环境的生成和控制技术；&lt;/li>
+&lt;li>三维或高维数据场的可视化技术&lt;/li>
+&lt;/ol>
+&lt;h3 id="图形的构成要素和表示方法">&lt;a href="#%e5%9b%be%e5%bd%a2%e7%9a%84%e6%9e%84%e6%88%90%e8%a6%81%e7%b4%a0%e5%92%8c%e8%a1%a8%e7%a4%ba%e6%96%b9%e6%b3%95" class="header-anchor">&lt;/a>图形的构成要素和表示方法？
+&lt;/h3>&lt;ul>
+&lt;li>图形的构成要素
+&lt;ul>
+&lt;li>几何要素：刻画对象的轮廓、形状等；&lt;/li>
+&lt;li>非几何要素：刻画对象的颜色、材质等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>图形的表示方法
+&lt;ul>
+&lt;li>点阵表示：枚举出图形中所有的点, 简称为图像；&lt;/li>
+&lt;li>参数表示：形状参数+属性参数，简称为图形。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="第2章">&lt;a href="#%e7%ac%ac2%e7%ab%a0" class="header-anchor">&lt;/a>第2章
+&lt;/h2>&lt;h3 id="请简要总结图形系统体系结构的三个阶段的任务内容与特点">&lt;a href="#%e8%af%b7%e7%ae%80%e8%a6%81%e6%80%bb%e7%bb%93%e5%9b%be%e5%bd%a2%e7%b3%bb%e7%bb%9f%e4%bd%93%e7%b3%bb%e7%bb%93%e6%9e%84%e7%9a%84%e4%b8%89%e4%b8%aa%e9%98%b6%e6%ae%b5%e7%9a%84%e4%bb%bb%e5%8a%a1%e5%86%85%e5%ae%b9%e4%b8%8e%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>请简要总结图形系统体系结构的三个阶段的任务、内容与特点。
+&lt;/h3>&lt;p>图形学系统体系结构的三个阶段：应用程序阶段、几何处理阶段、像素处理阶段。&lt;/p>
+&lt;p>应用程序阶段：把数据以图元的形式提供给图形硬件，同时也提供用于表面纹理映射的图像或者位图。开发者能够对该阶段发生的情况进行完全控制，可以通过改变实现方法来改变实际性能。在应用程序阶段的末端，将需要绘制的几何体输入到绘制管线的下一阶段。&lt;/p>
+&lt;p>几何处理阶段：以每个顶点为基础对几何图元进行处理，并从三维坐标变换为二维屏幕坐标的过程。几何处理阶段主要负责大部分多边形和顶点操作，可以将这个阶段进行划分为模型与视点变换、光照、投影、裁剪、屏幕影射等几个功能阶段。根据具体的实现，这现阶段可以和管线通道等同也可以不同。几何处理阶段执行的是计算量非常大的任务。&lt;/p>
+&lt;p>像素处理阶段：屏幕对象先是被传送到像素处理器进行光栅化，再对每个像素进行着色，然后，然后再输出到帧缓冲器中，最后输出到显示器。当图元发送并通过光栅阶段之后，从相机视点处看到的东西就可以在屏幕上显示出来，这些图元可以用合适的着色模型进行绘制，如果运用纹理技术，就会显示出纹理效果。不像几何阶段进行的多边形操作，光栅阶段进行的是单个像素操作。对于高性能图形系统来说，光栅阶段必须在硬件中完成。&lt;/p>
+&lt;h3 id="从图形硬件显示原理角度思考并分析如何显示直线">&lt;a href="#%e4%bb%8e%e5%9b%be%e5%bd%a2%e7%a1%ac%e4%bb%b6%e6%98%be%e7%a4%ba%e5%8e%9f%e7%90%86%e8%a7%92%e5%ba%a6%e6%80%9d%e8%80%83%e5%b9%b6%e5%88%86%e6%9e%90%e5%a6%82%e4%bd%95%e6%98%be%e7%a4%ba%e7%9b%b4%e7%ba%bf" class="header-anchor">&lt;/a>从图形硬件显示原理角度，思考并分析如何显示直线？
+&lt;/h3>&lt;p>当电子束扫描到屏幕上某一像素的位置（坐标）时，显示器中的处理器DPU会同时从对应的显示缓冲单元中取出像素值，并以此查找彩色表的地址，从该地址处得到该像素的红、绿、蓝三基色分量，经D/A转换后分别控制三基色电子枪，使屏幕上该像素显示出三基色的混合色。要显示直线只需根据构成直线的方程找出所有符合方程的点，并在屏幕完整显示出由计算机画出的图形。&lt;/p>
+&lt;h3 id="计算机图形系统由哪几部分组成各自实现什么功能">&lt;a href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e7%b3%bb%e7%bb%9f%e7%94%b1%e5%93%aa%e5%87%a0%e9%83%a8%e5%88%86%e7%bb%84%e6%88%90%e5%90%84%e8%87%aa%e5%ae%9e%e7%8e%b0%e4%bb%80%e4%b9%88%e5%8a%9f%e8%83%bd" class="header-anchor">&lt;/a>计算机图形系统由哪几部分组成，各自实现什么功能？
+&lt;/h3>&lt;p>由图形软件和图形硬件组成。硬件设备是计算机图形学存在与发展的物质基础，主要由中央主机（图形显示处理器）、图形输入设备、图形输出设备组成。图形软件又分为图形应用软件、图形支撑软件和图形应用数据结构三部分，并与外部的图形设备接口，三者之间相互联系，互相调用，互相支持，形成图形系统的软件部分。&lt;/p>
+&lt;h3 id="常用的图形输入输出设备有哪些各有何特点">&lt;a href="#%e5%b8%b8%e7%94%a8%e7%9a%84%e5%9b%be%e5%bd%a2%e8%be%93%e5%85%a5%e8%be%93%e5%87%ba%e8%ae%be%e5%a4%87%e6%9c%89%e5%93%aa%e4%ba%9b%e5%90%84%e6%9c%89%e4%bd%95%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>常用的图形输入、输出设备有哪些？各有何特点？
+&lt;/h3>&lt;p>定位设备：实现定位功能，即输入一个点的坐标，包括光笔、数字化仪、鼠标、键盘的数字键等。&lt;/p>
+&lt;p>笔划设备：实现描划功能，输入一系列点的坐标，包括的物理设备和定位设备一致。&lt;/p>
+&lt;p>数值设备：实现定值功能，包括旋钮、数字键、方向键、编程功能键等。&lt;/p>
+&lt;p>选择设备：根据一个正整数得到某一种选择，包括光笔、触摸板、数字化仪、鼠标等。&lt;/p>
+&lt;p>拾取设备：实现拾取功能，即识别一个显示的图形元素，包括各种定位设备、编程功能键、字符串输入设备。&lt;/p>
+&lt;p>字符串设备：实现字符串输入，包括键盘、光笔、声音识别仪等。&lt;/p>
+&lt;p>图形显示设备：液晶显示器等显示图形设备。&lt;/p>
+&lt;p>图形绘制设备：打印机、绘图仪等输出可视化且能长期保存图形的输出设备。&lt;/p>
+&lt;h3 id="图形软件分为几层各个层有什么特点">&lt;a href="#%e5%9b%be%e5%bd%a2%e8%bd%af%e4%bb%b6%e5%88%86%e4%b8%ba%e5%87%a0%e5%b1%82%e5%90%84%e4%b8%aa%e5%b1%82%e6%9c%89%e4%bb%80%e4%b9%88%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>图形软件分为几层？各个层有什么特点？
+&lt;/h3>&lt;p>软件系统由零层图形软件(驱动程序、接口程序)、一层图形软件(基本子程序)、二层图形软件(通用程序)、三层图形软件(应用程序)，零到二级软件称:基本图形软件或支撑软件，三级及以上软件:应用图形软件。&lt;/p>
+&lt;p>图形支撑软件通常可分为如下三个层次，第一层次面向系统，是最底层的软件，又称设备驱动程序，主要解决图形设备与计算机的通信接口等问题，包括一些最基本的输入、输出程序。第二层次既面向系统又面向用户，它建立在设备驱动程序之上，又称为基本子程序，包括图元的生成、设备的管理等各程序模块。第三层次面向用户，在基本子程序的基础上编写，又称功能子程序，其主要任务是建立图形数据结构，定义、修改和输出图形。&lt;/p>
+&lt;h3 id="熟悉光栅扫描显示系统的结构">&lt;a href="#%e7%86%9f%e6%82%89%e5%85%89%e6%a0%85%e6%89%ab%e6%8f%8f%e6%98%be%e7%a4%ba%e7%b3%bb%e7%bb%9f%e7%9a%84%e7%bb%93%e6%9e%84" class="header-anchor">&lt;/a>熟悉光栅扫描显示系统的结构。
+&lt;/h3>&lt;p>光栅扫描显示系统的逻辑组成主要有三部分：显示器、视频控制器和帧缓冲存储器。早期的光栅扫描显示系统经典结构：CPU、系统主存、显示控制器、显示器，帧缓存可在系统主存的任意位置，显示控制器访问帧缓存，以刷新屏幕，但此时显示控制器访问帧缓存均需通过系统总线，故总线成为系统的主要瓶颈。目前常用的：CPU、系统主存-帧缓存、显示控制器、显示器，帧缓存由显示控制器直接访问，它既可以使用系统主存的固定区域，又可以是专用的显示内存，扫描转换的计算量相当大会加重CPU的负担。高级光栅图形系统结构除了帧缓存和显示控制器外，它还包含显示处理器和独立的显示处理器存储器。&lt;/p>
+&lt;h3 id="了解分辨率帧缓存像素像距等常用词语的含义">&lt;a href="#%e4%ba%86%e8%a7%a3%e5%88%86%e8%be%a8%e7%8e%87%e5%b8%a7%e7%bc%93%e5%ad%98%e5%83%8f%e7%b4%a0%e5%83%8f%e8%b7%9d%e7%ad%89%e5%b8%b8%e7%94%a8%e8%af%8d%e8%af%ad%e7%9a%84%e5%90%ab%e4%b9%89" class="header-anchor">&lt;/a>了解分辨率、帧缓存、像素、像距等常用词语的含义。
+&lt;/h3>&lt;p>分辨率：显示屏上像素的总数，分为水平分辨率和垂直分辨率，常用屏幕上像素的数目来表示。分辨率越高，像距离越小，显示字符或图像越清晰。&lt;/p>
+&lt;p>帧缓存：帧缓冲存储器简称帧缓存或显存，它是屏幕所显示画面的一个直接映象，又称为位映射图或光栅。帧缓存是一块连续的计算机存储器，用来存储动态刷新的图形图像信息。帧缓存的每一存储单元对应屏幕上的一个像素，整个帧缓存对应一帧图像。&lt;/p>
+&lt;p>像素：在光栅扫描图形显示器中，屏幕上可以点亮或熄灭的最小单位。&lt;/p>
+&lt;p>像距：像到屏幕的距离。&lt;/p>
+&lt;p>行频、帧频：水平扫描频率为行频。垂直扫描频率为帧频。&lt;/p>
+&lt;p>隔行扫描：先扫偶数行扫描线，再扫奇数行扫描线。&lt;/p>
+&lt;p>显示速度：显示字符、图形、图像的速度。&lt;/p>
+&lt;p>点距：LCD的点距是两个液晶颗粒之间的距离，液晶面板的宽或高除以水平像素数或垂直像素数。&lt;/p>
+&lt;p>刷新率：LCD中每个像素都在一定的信号（电压）下持续不断的发光，直到另一个信号（电压）来到时才会改变发光强度，所以其实LCD不存在刷新率的问题。&lt;/p>
+&lt;p>视角：可视角度。&lt;/p>
+&lt;p>响应时间：响应时间过长将导致画面快速变化时出现残影。&lt;/p>
+&lt;p>亮度：亮度指画面的明亮程度，最大亮度通常由背光源来决定。&lt;/p>
+&lt;p>对比度：指屏幕上同一点最亮时（白色）与最暗时（黑色）的亮度的比值。高对比度意味着有相对较高的亮度和艳丽程度。&lt;/p>
+&lt;h2 id="第3章">&lt;a href="#%e7%ac%ac3%e7%ab%a0" class="header-anchor">&lt;/a>第3章
+&lt;/h2>&lt;h3 id="简述dda算法中点画线法bresenham算法的算法思想">&lt;a href="#%e7%ae%80%e8%bf%b0dda%e7%ae%97%e6%b3%95%e4%b8%ad%e7%82%b9%e7%94%bb%e7%ba%bf%e6%b3%95bresenham%e7%ae%97%e6%b3%95%e7%9a%84%e7%ae%97%e6%b3%95%e6%80%9d%e6%83%b3" class="header-anchor">&lt;/a>简述DDA算法、中点画线法、Bresenham算法的算法思想。
+&lt;/h3>&lt;p>DDA算法称为数值微分画线算法，根据斜率的偏移程度，决定是以x为步进方向还是以y为步进方向，然后在相应的步进方向上，步进向量每次增加一个像素，而另一个相关坐标变量也可根据斜率求出。&lt;/p>
+&lt;p>中点画线法假定直线斜率k在0~1之间，当前像素点为（xp，yp），则下一个像素点有两种可选择点P1（xp+1，yp）或p2（xp+1，yp+1）。若p1与p2的重点（xp+1，yp+0.5）称为M，Q为理想直线与x=xp+1垂线的交点，当M在Q的下方时，则取p2应为下一个像素点，当M在Q的上方时，则应取P1为下一个像素点，其他斜率同理。&lt;/p>
+&lt;p>Bresenham算法过各行、各列像素中心构造一组虚拟网格线，按直线从起点到终点的顺序计算直线各垂直网格线的交点，然后确定该列像素中与此交点最近的像素。可以采用增量计算，使得对于每一列，只要检查一个误差项的符号，就可以确定该列所求的像素。&lt;/p>
+&lt;h3 id="写出bresenham画线算法的过程或画出其流程图">&lt;a href="#%e5%86%99%e5%87%babresenham%e7%94%bb%e7%ba%bf%e7%ae%97%e6%b3%95%e7%9a%84%e8%bf%87%e7%a8%8b%e6%88%96%e7%94%bb%e5%87%ba%e5%85%b6%e6%b5%81%e7%a8%8b%e5%9b%be" class="header-anchor">&lt;/a>写出Bresenham画线算法的过程或画出其流程图。
+&lt;/h3>&lt;ol>
+&lt;li>直线起点赋予动点P(x,y)；&lt;/li>
+&lt;li>求端点坐标差：dx和dy；&lt;/li>
+&lt;li>求出循环总步数N
+&lt;ol>
+&lt;li>起点处的di的值；&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>循环计算中间插值点坐标：
+&lt;ol>
+&lt;li>若当前步数≥N，程序结束。&lt;/li>
+&lt;li>否则：
+&lt;ol>
+&lt;li>显示当前点P；&lt;/li>
+&lt;li>若di大于0，y坐标加1；&lt;/li>
+&lt;li>计算当前的di值；&lt;/li>
+&lt;li>x坐标加1。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="直线的属性有哪些">&lt;a href="#%e7%9b%b4%e7%ba%bf%e7%9a%84%e5%b1%9e%e6%80%a7%e6%9c%89%e5%93%aa%e4%ba%9b" class="header-anchor">&lt;/a>直线的属性有哪些？
+&lt;/h3>&lt;p>直线的属性包括线型、线宽和线的颜色等。&lt;/p>
+&lt;ol>
+&lt;li>线型：线型表示不同的实体形状。&lt;/li>
+&lt;li>线宽：用有宽度的线型表示实体表面的形状和位置。&lt;/li>
+&lt;li>线色：系统颜色，用颜色模型空间定义，如RGB模型等。调用方法，采用专用函数来设定不同的颜色值。图形用色，处理两种颜色，背景色和前景色。背景色，绘制系统背景界面所定义颜色。前景色，绘制图形所需要各种颜色。&lt;/li>
+&lt;/ol>
+&lt;h3 id="圆弧生成的常用算法有哪些">&lt;a href="#%e5%9c%86%e5%bc%a7%e7%94%9f%e6%88%90%e7%9a%84%e5%b8%b8%e7%94%a8%e7%ae%97%e6%b3%95%e6%9c%89%e5%93%aa%e4%ba%9b" class="header-anchor">&lt;/a>圆弧生成的常用算法有哪些？
+&lt;/h3>&lt;p>逐点比较法、中点画圆法、Bresenham算法、角度离散法等。&lt;/p>
+&lt;p>逐点比较法：设定在不同象限中的走步方向，原则使逼近的误差最小且走笔方向和画图的趋势一致，根据误差判别式确定下一个像素。&lt;/p>
+&lt;p>中点画圆法：利用圆的8路对称方法，考虑圆心在原点，半径为R的圆在第一象限内的八分之一圆弧，从点（0, R）到点（R’ , R’ ）顺时针方向确定这段圆弧。假定某点Pi(xi, yi)已经是该圆弧上最接近实际圆弧的点，那么Pi的下一个点只可能是正右方的P1或右下方的P2两者之一。构造判别函数F(x, y）= x2 + y2 – R2，将重点M带入函数，若F(M)&amp;lt;0，M在圆内，此时下一个点取T；若F(M)≥0，M在圆上或圆外，此时下一个点取S，以此类推。&lt;/p>
+&lt;p>Bresenham算法：Bresenham画圆算法适合于生成整圆，用误差量来衡量点选取的逼近程度，它使用8路对称法，只计算出90°~45°内的点，移动方向为+x，-y。设（xi，yi）是扫描到第i步时选定的坐标，下一个被选定的可能是T或S。根据坐标到原点距离的平方与半径的平方之差的的关系可选择T或S继而可生成整圆。&lt;/p>
+&lt;h3 id="圆弧生成算法的误差判别采用哪种模型">&lt;a href="#%e5%9c%86%e5%bc%a7%e7%94%9f%e6%88%90%e7%ae%97%e6%b3%95%e7%9a%84%e8%af%af%e5%b7%ae%e5%88%a4%e5%88%ab%e9%87%87%e7%94%a8%e5%93%aa%e7%a7%8d%e6%a8%a1%e5%9e%8b" class="header-anchor">&lt;/a>圆弧生成算法的误差判别采用哪种模型？
+&lt;/h3>&lt;p>当前点到圆心的距离与半径的平方差值。&lt;/p>
+&lt;h3 id="完整圆弧最快的算法是什么">&lt;a href="#%e5%ae%8c%e6%95%b4%e5%9c%86%e5%bc%a7%e6%9c%80%e5%bf%ab%e7%9a%84%e7%ae%97%e6%b3%95%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>完整圆弧最快的算法是什么？
+&lt;/h3>&lt;p>Bresenham算法。&lt;/p>
+&lt;h3 id="解释逼近插值控制点型值点等名词">&lt;a href="#%e8%a7%a3%e9%87%8a%e9%80%bc%e8%bf%91%e6%8f%92%e5%80%bc%e6%8e%a7%e5%88%b6%e7%82%b9%e5%9e%8b%e5%80%bc%e7%82%b9%e7%ad%89%e5%90%8d%e8%af%8d" class="header-anchor">&lt;/a>解释：逼近、插值、控制点、型值点等名词
+&lt;/h3>&lt;p>逼近：通过建立数学模型，要求构造的曲线在某种意义下最为接近给定的数据点，称为对这些数据点进行逼近，所构造的曲线称为逼近曲线。&lt;/p>
+&lt;p>插值：给定一组有序的数据点Pi(i=0，1，2，……，n)，通过建立数学模型构造一条曲线，使其顺序通过数据点，所构造的曲线称为插值曲线。&lt;/p>
+&lt;p>拟合：插值和逼近方法的统称。&lt;/p>
+&lt;p>型值点: 通过测量或计算得到的曲线上描述曲线几何形状的数据点。&lt;/p>
+&lt;p>控制点: 用来控制或调整曲线形状的形状特殊点，而曲线本身不通过该点。&lt;/p>
+&lt;h3 id="解释名词区域区域填充种子活性边">&lt;a href="#%e8%a7%a3%e9%87%8a%e5%90%8d%e8%af%8d%e5%8c%ba%e5%9f%9f%e5%8c%ba%e5%9f%9f%e5%a1%ab%e5%85%85%e7%a7%8d%e5%ad%90%e6%b4%bb%e6%80%a7%e8%be%b9" class="header-anchor">&lt;/a>解释名词：区域、区域填充、种子、活性边。
+&lt;/h3>&lt;p>区域：一组相邻而且又相连的像素，而且具有相同属性的封闭区域。&lt;/p>
+&lt;p>区域填充：在区域内确定种子，并将这种属性扩展到整个区域的过程。 &lt;/p>
+&lt;p>种子：具有一定填充属性单位的像素或像素组合。&lt;/p>
+&lt;p>活性边：与当前扫描线相交的边界线的边。&lt;/p>
+&lt;h3 id="掌握区域内点的测试方法">&lt;a href="#%e6%8e%8c%e6%8f%a1%e5%8c%ba%e5%9f%9f%e5%86%85%e7%82%b9%e7%9a%84%e6%b5%8b%e8%af%95%e6%96%b9%e6%b3%95" class="header-anchor">&lt;/a>掌握区域内点的测试方法。
+&lt;/h3>&lt;p>射线法：从点P向任意方向发出一条射线，若该射线与多边形交点的个数为奇数，则P位于多边形内；若为偶数，则P位于多边形外部。但需注意射线与多边形边界点交点是顶点时（奇点），需根据极值点（顶点相邻的两边在射线的同侧）和非极值点采用不同方式计算（极值点交点按两个交点计算否则按一个计算）。&lt;/p>
+&lt;p>弧长法：假定多边形是由有向边组成，以被测点为圆心作单位圆，将全部有向边向单位圆作径向投影，计算单位圆上各边投影的代数和。若代数和为0，则被测点在多边形之外；若代数和为2π，则被测点在多边形之内。&lt;/p>
+&lt;p>综合：从起点P发出向右侧的射线，若遇到方向向上的边与射线相交，则计数器加1，遇到方向向下的边与射线相交，计数器减1。当最后的计数器为0时，P点在多边形的外部，但也需注意奇点的处理。&lt;/p>
+&lt;h3 id="能准确区分区域的连通性">&lt;a href="#%e8%83%bd%e5%87%86%e7%a1%ae%e5%8c%ba%e5%88%86%e5%8c%ba%e5%9f%9f%e7%9a%84%e8%bf%9e%e9%80%9a%e6%80%a7" class="header-anchor">&lt;/a>能准确区分区域的连通性。
+&lt;/h3>&lt;p>4连通区域：从区域上的一点出发，通过访问已知点的4邻接点，在不越出区域的前提下，遍历区域内的所有象素点。&lt;/p>
+&lt;p>8连通区域：从区域上的一点出发，通过访问已知点的8邻接点，在不越出区域的前提下，遍历区域内的所有象素点。&lt;/p>
+&lt;h3 id="理解掌握区域扫描线边界连续性">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e5%8c%ba%e5%9f%9f%e6%89%ab%e6%8f%8f%e7%ba%bf%e8%be%b9%e7%95%8c%e8%bf%9e%e7%bb%ad%e6%80%a7" class="header-anchor">&lt;/a>理解掌握区域、扫描线、边界连续性。
+&lt;/h3>&lt;p>具有相同颜色或图案属性的连片像素即区域。对区域中所有像素填充着色的过程称为区域填充。区域的定义有两类：一类是给定顶点序列定义的封闭多边形。第二类区域是由所有已知边界像素包围起来的部分，它是由点阵方式描述的区域。第二类区域又有两种不同的定义：一种是边界定义的区域，另一种是内定义区域。&lt;/p>
+&lt;p>扫描线算法利用区域的连续性、扫描线的连续性、边界连续性，确定水平扫描线与多边形的相交区间，把该区间内的所有像素一次性赋予新的颜色值。&lt;/p>
+&lt;p>边界连续性：把边界的端点按其y坐标排列，y0,y1,…..,yi，yik≥yik+1，0 ≤ k ≤ n-1，交点数相等；同编号的点位于同一条边上。&lt;/p>
+&lt;h3 id="了解掌握扫描线填充算法的原理与步骤">&lt;a href="#%e4%ba%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e6%89%ab%e6%8f%8f%e7%ba%bf%e5%a1%ab%e5%85%85%e7%ae%97%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86%e4%b8%8e%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>了解掌握扫描线填充算法的原理与步骤。
+&lt;/h3>&lt;p>扫描线填充算法充分利用了多边形边界与上下两条相邻扫描线的交点之间的连续性以及同一扫描线上像素之间的连续性。&lt;/p>
+&lt;p>对于每条扫描线，分以下3个步骤：&lt;/p>
+&lt;p>求交点，计算当前扫描线与多边形所有边的交点。&lt;/p>
+&lt;p>排序与配对，把所有交点按x值递增顺序排序，排序后的交点两两配成区间。&lt;/p>
+&lt;p>填色，将各区间内的像素值设置为目标颜色值。&lt;/p>
+&lt;ol>
+&lt;li>把区域边界顶点按Y坐标排序；&lt;/li>
+&lt;li>确定扫描线的区间；&lt;/li>
+&lt;li>构建边界边的活性边表；&lt;/li>
+&lt;li>求交点；&lt;/li>
+&lt;li>交点排序；&lt;/li>
+&lt;li>交点配对；&lt;/li>
+&lt;li>填充颜色&lt;/li>
+&lt;/ol>
+&lt;h3 id="写出dda画线算法的原理">&lt;a href="#%e5%86%99%e5%87%badda%e7%94%bb%e7%ba%bf%e7%ae%97%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86" class="header-anchor">&lt;/a>写出DDA画线算法的原理。
+&lt;/h3>&lt;p>写出DDA画线算法的原理。&lt;/p>
+&lt;h3 id="掌握区域填充算法的分类和扫描线算法的步骤">&lt;a href="#%e6%8e%8c%e6%8f%a1%e5%8c%ba%e5%9f%9f%e5%a1%ab%e5%85%85%e7%ae%97%e6%b3%95%e7%9a%84%e5%88%86%e7%b1%bb%e5%92%8c%e6%89%ab%e6%8f%8f%e7%ba%bf%e7%ae%97%e6%b3%95%e7%9a%84%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>掌握区域填充算法的分类和扫描线算法的步骤。
+&lt;/h3>&lt;p>区域填充算法&lt;/p>
+&lt;ul>
+&lt;li>扫描线填充算法——扫描线顺序
+&lt;ul>
+&lt;li>有序边表算法&lt;/li>
+&lt;li>边填充算法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>种子填充算法——内部一个点出发
+&lt;ul>
+&lt;li>简单种子算法&lt;/li>
+&lt;li>扫描线种子算法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>图案填充算法——填充有结构的图形
+&lt;ul>
+&lt;li>影线填充算法&lt;/li>
+&lt;li>图像填充算法&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="图形系统中常用的字符有几种">&lt;a href="#%e5%9b%be%e5%bd%a2%e7%b3%bb%e7%bb%9f%e4%b8%ad%e5%b8%b8%e7%94%a8%e7%9a%84%e5%ad%97%e7%ac%a6%e6%9c%89%e5%87%a0%e7%a7%8d" class="header-anchor">&lt;/a>图形系统中常用的字符有几种？
+&lt;/h3>&lt;p>字符生成方法有点阵式、矢量式和编码式。&lt;/p>
+&lt;p>常用的字符有：&lt;/p>
+&lt;ol>
+&lt;li>ASCII码&lt;/li>
+&lt;li>汉字字符&lt;/li>
+&lt;li>其它字符&lt;/li>
+&lt;li>其它工程专用符号。&lt;/li>
+&lt;/ol>
+&lt;h3 id="字符的图形表示方法有几种有什么特点">&lt;a href="#%e5%ad%97%e7%ac%a6%e7%9a%84%e5%9b%be%e5%bd%a2%e8%a1%a8%e7%a4%ba%e6%96%b9%e6%b3%95%e6%9c%89%e5%87%a0%e7%a7%8d%e6%9c%89%e4%bb%80%e4%b9%88%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>字符的图形表示方法有几种？有什么特点？
+&lt;/h3>&lt;p>点阵式字符将字符表示为一个矩形点阵，由点阵中点的不同值表达字符的形状。&lt;/p>
+&lt;p>矢量式字符将字符表达为一个点坐标的序列，相邻两点表示一条矢量，字符的形状便由矢量序列刻划。&lt;/p>
+&lt;h2 id="第4章">&lt;a href="#%e7%ac%ac4%e7%ab%a0" class="header-anchor">&lt;/a>第4章
+&lt;/h2>&lt;h3 id="熟记二维变换的基本变换矩阵及其几何特点">&lt;a href="#%e7%86%9f%e8%ae%b0%e4%ba%8c%e7%bb%b4%e5%8f%98%e6%8d%a2%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%8f%98%e6%8d%a2%e7%9f%a9%e9%98%b5%e5%8f%8a%e5%85%b6%e5%87%a0%e4%bd%95%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>熟记二维变换的基本变换矩阵及其几何特点。
+&lt;/h3>&lt;h4 id="平移变换">&lt;a href="#%e5%b9%b3%e7%a7%bb%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>平移变换
+&lt;/h4>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$T=\begin{bmatrix} t_{x} \\ t_{y} \end{bmatrix}$&lt;/p>
+&lt;p>平移方程：$P&amp;rsquo;=P+T$&lt;/p>
+&lt;h4 id="绕坐标原点的旋转变换">&lt;a href="#%e7%bb%95%e5%9d%90%e6%a0%87%e5%8e%9f%e7%82%b9%e7%9a%84%e6%97%8b%e8%bd%ac%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>绕坐标原点的旋转变换
+&lt;/h4>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$R=\begin{bmatrix} \cos \theta &amp;amp; -\sin \theta \\ \sin \theta &amp;amp; \cos \theta \end{bmatrix}$&lt;/p>
+&lt;p>变换方程：$P&amp;rsquo;=R\cdot P$、$\begin{cases}x&amp;rsquo;=x\cos \theta -y\sin \theta \\ y&amp;rsquo;=x\sin \theta -y\cos \theta \end{cases}$&lt;/p>
+&lt;h4 id="以坐标原点为基准点的缩放变换">&lt;a href="#%e4%bb%a5%e5%9d%90%e6%a0%87%e5%8e%9f%e7%82%b9%e4%b8%ba%e5%9f%ba%e5%87%86%e7%82%b9%e7%9a%84%e7%bc%a9%e6%94%be%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>以坐标原点为基准点的缩放变换
+&lt;/h4>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$R=\begin{bmatrix} s_{x} &amp;amp; 0 \\ 0 &amp;amp; s_{y} \end{bmatrix}$&lt;/p>
+&lt;p>变换方程：$P&amp;rsquo;=S\cdot P$&lt;/p>
+&lt;h4 id="反射变换">&lt;a href="#%e5%8f%8d%e5%b0%84%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>反射变换
+&lt;/h4>&lt;p>变换方程：$P&amp;rsquo;=T\cdot P$&lt;/p>
+&lt;h5 id="相对于y轴的反射">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8ey%e8%bd%b4%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>相对于y轴的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="相对于x轴的反射">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8ex%e8%bd%b4%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>相对于x轴的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} -1 &amp;amp; 0 \\ 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="相对于坐标原点的反射">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8e%e5%9d%90%e6%a0%87%e5%8e%9f%e7%82%b9%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>相对于坐标原点的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} -1 &amp;amp; 0 \\ 0 &amp;amp; -1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="相对于任意点的反射">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8e%e4%bb%bb%e6%84%8f%e7%82%b9%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>相对于任意点的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：先平移再旋转再平移&lt;/p>
+&lt;h5 id="关于对角线yx的反射">&lt;a href="#%e5%85%b3%e4%ba%8e%e5%af%b9%e8%a7%92%e7%ba%bfyx%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于对角线y=x的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} 1 &amp;amp; 0 \\ 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于对角线y-x的反射">&lt;a href="#%e5%85%b3%e4%ba%8e%e5%af%b9%e8%a7%92%e7%ba%bfy-x%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于对角线y=-x的反射
+&lt;/h5>&lt;p>先顺时针45°，对于y轴反射，最后逆时针旋转45°。&lt;/p>
+&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} 0 &amp;amp; -1 \\ -1 &amp;amp; 0 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于任意直线ymxb的反射">&lt;a href="#%e5%85%b3%e4%ba%8e%e4%bb%bb%e6%84%8f%e7%9b%b4%e7%ba%bfymxb%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于任意直线y=mx+b的反射
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：平移-旋转-反射变换&lt;/p>
+&lt;h4 id="错切变换">&lt;a href="#%e9%94%99%e5%88%87%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>错切变换
+&lt;/h4>&lt;h5 id="x轴的x方向">&lt;a href="#x%e8%bd%b4%e7%9a%84x%e6%96%b9%e5%90%91" class="header-anchor">&lt;/a>x轴的x方向
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} 1 &amp;amp; sh_{x} \\ 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;p>变换方程：$P&amp;rsquo;=S\cdot P$、$x&amp;rsquo;=x+ sh_{x} \cdot y$、$y&amp;rsquo;=y$&lt;/p>
+&lt;h5 id="y轴的y方向">&lt;a href="#y%e8%bd%b4%e7%9a%84y%e6%96%b9%e5%90%91" class="header-anchor">&lt;/a>y轴的y方向
+&lt;/h5>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$，变换矩阵：$S=\begin{bmatrix} 1 &amp;amp; 0 \\ sh_{y} &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;p>变换方程：$P&amp;rsquo;=S\cdot P$、$x&amp;rsquo;=x$、$y&amp;rsquo;=y+ sh_{y} \cdot x$&lt;/p>
+&lt;h4 id="变换通式">&lt;a href="#%e5%8f%98%e6%8d%a2%e9%80%9a%e5%bc%8f" class="header-anchor">&lt;/a>变换通式
+&lt;/h4>&lt;p>原始点：$P=\begin{bmatrix} x \\ y \end{bmatrix}$，变换点：$P&amp;rsquo;=\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \end{bmatrix}$&lt;/p>
+&lt;p>变换方程：$P&amp;rsquo;=M_{1}\cdot P + M_{2}$&lt;/p>
+&lt;h3 id="齐次坐标的定义是什么">&lt;a href="#%e9%bd%90%e6%ac%a1%e5%9d%90%e6%a0%87%e7%9a%84%e5%ae%9a%e4%b9%89%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>齐次坐标的定义是什么？
+&lt;/h3>&lt;p>用n+1维矢量表示n维矢量的方法，称为齐次坐标表示法，n+1维空间的坐标被称为齐次坐标。&lt;/p>
+&lt;ol>
+&lt;li>将各种变换用阶数统一的矩阵来表示。&lt;/li>
+&lt;li>便于表示无穷远点。&lt;/li>
+&lt;li>齐次坐标变换矩阵是把直线变成直线段，平面变换成平面，多边形变换成多边形，多面体变换成多面体。&lt;/li>
+&lt;li>变换具有统一表示形式的优点，便于变换合成和硬件实现。&lt;/li>
+&lt;/ol>
+&lt;h3 id="掌握二维三维基本变换的齐次坐标形式">&lt;a href="#%e6%8e%8c%e6%8f%a1%e4%ba%8c%e7%bb%b4%e4%b8%89%e7%bb%b4%e5%9f%ba%e6%9c%ac%e5%8f%98%e6%8d%a2%e7%9a%84%e9%bd%90%e6%ac%a1%e5%9d%90%e6%a0%87%e5%bd%a2%e5%bc%8f" class="header-anchor">&lt;/a>掌握二维、三维基本变换的齐次坐标形式。
+&lt;/h3>&lt;h4 id="平移变换-1">&lt;a href="#%e5%b9%b3%e7%a7%bb%e5%8f%98%e6%8d%a2-1" class="header-anchor">&lt;/a>平移变换
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; t_{x} \\ 0 &amp;amp; 1 &amp;amp; t_{y} \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="旋转变换">&lt;a href="#%e6%97%8b%e8%bd%ac%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>旋转变换
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} \cos \theta &amp;amp; -\sin \theta &amp;amp; 0 \\ \sin \theta &amp;amp; \cos \theta &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="缩放变换">&lt;a href="#%e7%bc%a9%e6%94%be%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>缩放变换
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} s_{x} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; s_{y} &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="反射变换-1">&lt;a href="#%e5%8f%8d%e5%b0%84%e5%8f%98%e6%8d%a2-1" class="header-anchor">&lt;/a>反射变换
+&lt;/h4>&lt;h5 id="关于x轴的反射">&lt;a href="#%e5%85%b3%e4%ba%8ex%e8%bd%b4%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于x轴的反射
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; -1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于y轴的反射">&lt;a href="#%e5%85%b3%e4%ba%8ey%e8%bd%b4%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于y轴的反射
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} -1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于原点的反射">&lt;a href="#%e5%85%b3%e4%ba%8e%e5%8e%9f%e7%82%b9%e7%9a%84%e5%8f%8d%e5%b0%84" class="header-anchor">&lt;/a>关于原点的反射
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} -1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; -1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于对角线yx的反射-1">&lt;a href="#%e5%85%b3%e4%ba%8e%e5%af%b9%e8%a7%92%e7%ba%bfyx%e7%9a%84%e5%8f%8d%e5%b0%84-1" class="header-anchor">&lt;/a>关于对角线y=x的反射
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 0 &amp;amp; 1 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于对角线y-x的反射-1">&lt;a href="#%e5%85%b3%e4%ba%8e%e5%af%b9%e8%a7%92%e7%ba%bfy-x%e7%9a%84%e5%8f%8d%e5%b0%84-1" class="header-anchor">&lt;/a>关于对角线y=-x的反射
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 0 &amp;amp; -1 &amp;amp; 0 \\ -1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="错切变换-1">&lt;a href="#%e9%94%99%e5%88%87%e5%8f%98%e6%8d%a2-1" class="header-anchor">&lt;/a>错切变换
+&lt;/h4>&lt;h5 id="相对于线yy_ref的x方向错切">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8e%e7%ba%bfyy_ref%e7%9a%84x%e6%96%b9%e5%90%91%e9%94%99%e5%88%87" class="header-anchor">&lt;/a>相对于线$y=y_{ref}$的x方向错切
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; sh_{x} &amp;amp; -sh_{x}\cdot y_{ref} \\ 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="相对于线xx_ref的y方向错切">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8e%e7%ba%bfxx_ref%e7%9a%84y%e6%96%b9%e5%90%91%e9%94%99%e5%88%87" class="header-anchor">&lt;/a>相对于线$x=x_{ref}$的y方向错切
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 \\ sh_{y} &amp;amp; 1 &amp;amp; -sh_{y}\cdot x_{ref} \\ 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h3 id="熟记三维变换的基本变换矩阵及其几何特点">&lt;a href="#%e7%86%9f%e8%ae%b0%e4%b8%89%e7%bb%b4%e5%8f%98%e6%8d%a2%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%8f%98%e6%8d%a2%e7%9f%a9%e9%98%b5%e5%8f%8a%e5%85%b6%e5%87%a0%e4%bd%95%e7%89%b9%e7%82%b9" class="header-anchor">&lt;/a>熟记三维变换的基本变换矩阵及其几何特点。
+&lt;/h3>&lt;h4 id="平移变换-2">&lt;a href="#%e5%b9%b3%e7%a7%bb%e5%8f%98%e6%8d%a2-2" class="header-anchor">&lt;/a>平移变换
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; t_{x} \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; t_{y} \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; t_{z} \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="相对于原点的缩放变换">&lt;a href="#%e7%9b%b8%e5%af%b9%e4%ba%8e%e5%8e%9f%e7%82%b9%e7%9a%84%e7%bc%a9%e6%94%be%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>相对于原点的缩放变换
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} s_{x} &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; s_{y} &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; s_{z} &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="绕三维坐标轴的旋转变换">&lt;a href="#%e7%bb%95%e4%b8%89%e7%bb%b4%e5%9d%90%e6%a0%87%e8%bd%b4%e7%9a%84%e6%97%8b%e8%bd%ac%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>绕三维坐标轴的旋转变换
+&lt;/h4>&lt;h5 id="绕z轴旋转">&lt;a href="#%e7%bb%95z%e8%bd%b4%e6%97%8b%e8%bd%ac" class="header-anchor">&lt;/a>绕z轴旋转
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} \cos \theta &amp;amp; -\sin \theta &amp;amp; 0 &amp;amp; 0 \\ \sin \theta &amp;amp; \cos \theta &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="绕x轴旋转">&lt;a href="#%e7%bb%95x%e8%bd%b4%e6%97%8b%e8%bd%ac" class="header-anchor">&lt;/a>绕x轴旋转
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \theta &amp;amp; -\sin \theta &amp;amp; 0 \\ 0 &amp;amp; \sin \theta &amp;amp; \cos \theta &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="绕y轴旋转">&lt;a href="#%e7%bb%95y%e8%bd%b4%e6%97%8b%e8%bd%ac" class="header-anchor">&lt;/a>绕y轴旋转
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} \cos \theta &amp;amp; 0 &amp;amp; \sin \theta &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ -\sin \theta &amp;amp; 0 &amp;amp; \cos \theta &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="反射变换-2">&lt;a href="#%e5%8f%8d%e5%b0%84%e5%8f%98%e6%8d%a2-2" class="header-anchor">&lt;/a>反射变换
+&lt;/h4>&lt;h5 id="关于xy平面">&lt;a href="#%e5%85%b3%e4%ba%8exy%e5%b9%b3%e9%9d%a2" class="header-anchor">&lt;/a>关于xy平面
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; -1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于yz平面">&lt;a href="#%e5%85%b3%e4%ba%8eyz%e5%b9%b3%e9%9d%a2" class="header-anchor">&lt;/a>关于yz平面
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} -1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h5 id="关于xz平面">&lt;a href="#%e5%85%b3%e4%ba%8exz%e5%b9%b3%e9%9d%a2" class="header-anchor">&lt;/a>关于xz平面
+&lt;/h5>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; -1 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="错切变换-2">&lt;a href="#%e9%94%99%e5%88%87%e5%8f%98%e6%8d%a2-2" class="header-anchor">&lt;/a>错切变换
+&lt;/h4>&lt;p>z轴&lt;/p>
+&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; sh_{zx} &amp;amp; -sh_{zx} \cdot z_{ref} \\ 0 &amp;amp; 1 &amp;amp; sh_{zy} &amp;amp; -sh_{zy} \cdot z_{ref} \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="变换通式-1">&lt;a href="#%e5%8f%98%e6%8d%a2%e9%80%9a%e5%bc%8f-1" class="header-anchor">&lt;/a>变换通式
+&lt;/h4>&lt;p>$T_{3D}=\begin{bmatrix} a &amp;amp; b &amp;amp; c &amp;amp; l \\ d &amp;amp; e &amp;amp; f &amp;amp; m \\ h &amp;amp; i &amp;amp; j &amp;amp; n \\ p &amp;amp; q &amp;amp; r &amp;amp; s \end{bmatrix}$&lt;/p>
+&lt;p>其中$\begin{bmatrix} a &amp;amp; b &amp;amp; c \\ d &amp;amp; e &amp;amp; f \\ h &amp;amp; i &amp;amp; j \end{bmatrix}$产生比例、旋转、对称、错切等几何变换；$\begin{bmatrix} 1 \\ m \\ n \end{bmatrix}$产生平移变换；$\begin{bmatrix} p &amp;amp; q &amp;amp; r \end{bmatrix}$产生透视变换；$\begin{bmatrix} s \end{bmatrix}$产生整体比例变换。&lt;/p>
+&lt;h3 id="根据图形变化写出二维组合的变换矩阵">&lt;a href="#%e6%a0%b9%e6%8d%ae%e5%9b%be%e5%bd%a2%e5%8f%98%e5%8c%96%e5%86%99%e5%87%ba%e4%ba%8c%e7%bb%b4%e7%bb%84%e5%90%88%e7%9a%84%e5%8f%98%e6%8d%a2%e7%9f%a9%e9%98%b5" class="header-anchor">&lt;/a>根据图形变化，写出二维组合的变换矩阵。
+&lt;/h3>&lt;p>参考试卷变换综合应用题。&lt;/p>
+&lt;h2 id="第5章">&lt;a href="#%e7%ac%ac5%e7%ab%a0" class="header-anchor">&lt;/a>第5章
+&lt;/h2>&lt;h3 id="cohen-sutherland编码裁剪有何缺点liang-barsky参数化裁剪算法如何改进的">&lt;a href="#cohen-sutherland%e7%bc%96%e7%a0%81%e8%a3%81%e5%89%aa%e6%9c%89%e4%bd%95%e7%bc%ba%e7%82%b9liang-barsky%e5%8f%82%e6%95%b0%e5%8c%96%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95%e5%a6%82%e4%bd%95%e6%94%b9%e8%bf%9b%e7%9a%84" class="header-anchor">&lt;/a>Cohen-Sutherland编码裁剪有何缺点？Liang-Barsky参数化裁剪算法如何改进的？
+&lt;/h3>&lt;p>由于采用按位与运算，对程序的实现有特殊的要求，在有些高级语言中不便进行。&lt;/p>
+&lt;p>全部舍弃的判断只适合于那些仅在同一窗口侧的线段，对于跨越了整个区域的线段，就不能一次做出判别而舍弃。&lt;/p>
+&lt;p>Liang-Barsky参数化裁剪算法所需的计算量较小，每修改一次只需要一次除法，在u1及u2确定后，直线与窗口边界的交点只需计算一次。&lt;/p>
+&lt;h3 id="理解掌握坐标系统的5种坐标系的定义">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e5%9d%90%e6%a0%87%e7%b3%bb%e7%bb%9f%e7%9a%845%e7%a7%8d%e5%9d%90%e6%a0%87%e7%b3%bb%e7%9a%84%e5%ae%9a%e4%b9%89" class="header-anchor">&lt;/a>理解掌握坐标系统的5种坐标系的定义。
+&lt;/h3>&lt;h4 id="建模坐标系">&lt;a href="#%e5%bb%ba%e6%a8%a1%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>建模坐标系
+&lt;/h4>&lt;p>建模坐标系是一个局部坐标系，同时也是一个典型的平面直角坐标系，它的出现主要是为了模型构建与变换的方便。&lt;/p>
+&lt;h4 id="世界坐标系">&lt;a href="#%e4%b8%96%e7%95%8c%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>世界坐标系
+&lt;/h4>&lt;p>为了确定每一个对象的位置及其与其他对象的相对位置，就必须抛弃每一个对象的自身坐标系，将其纳入一个统一的坐标系，这个坐标系称为世界坐标系，也称用户坐标系，它是一个全局坐标系。&lt;/p>
+&lt;h4 id="观察坐标系">&lt;a href="#%e8%a7%82%e5%af%9f%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>观察坐标系
+&lt;/h4>&lt;p>当二维图形场景确定后，用户可根据图形显示的要求定义观察区域与观察方向，得到所期望的显示结果，这其实是需要定义视点（或照相机）的位置与方向，完成从观察者角度对整个世界坐标系内的对象进行重新定位和描述，简化后续二维图形在投影面成像的推导和计算。因此，有必要引进观察坐标系。&lt;/p>
+&lt;h4 id="规范化设备坐标系">&lt;a href="#%e8%a7%84%e8%8c%83%e5%8c%96%e8%ae%be%e5%a4%87%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>规范化设备坐标系
+&lt;/h4>&lt;p>为了使观察处理独立于输出设备，我们可以将对象描述转换到一个中间坐标系，这个坐标系既独立于设备，又可容易地转变成设备坐标系。通常将这个中间坐标系称为规范化设备坐标系。&lt;/p>
+&lt;h4 id="设备坐标系">&lt;a href="#%e8%ae%be%e5%a4%87%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>设备坐标系
+&lt;/h4>&lt;p>为了便于输出二维观察结果，设备坐标系用于定义图像空间，也可称为屏幕坐标系或像素坐标系。&lt;/p>
+&lt;h3 id="解释用户域窗口屏幕域和视区的概念">&lt;a href="#%e8%a7%a3%e9%87%8a%e7%94%a8%e6%88%b7%e5%9f%9f%e7%aa%97%e5%8f%a3%e5%b1%8f%e5%b9%95%e5%9f%9f%e5%92%8c%e8%a7%86%e5%8c%ba%e7%9a%84%e6%a6%82%e5%bf%b5" class="header-anchor">&lt;/a>解释用户域、窗口、屏幕域和视区的概念。
+&lt;/h3>&lt;p>用户域：用户空间，用户用来定义和设计对象的实数域，是连续的、无限的。 &lt;/p>
+&lt;p>窗口区：用户把用户域中指定任意的区域输出到屏幕上。 &lt;/p>
+&lt;p>屏幕域：图形设备上用来输出图形的最大区域，它是有限的、不连续的整数域。&lt;/p>
+&lt;p>视图区：屏幕域中定义的显示图形的区域，称为视图区。&lt;/p>
+&lt;h3 id="理解掌握窗口到视区变换方程的矩阵形式">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e7%aa%97%e5%8f%a3%e5%88%b0%e8%a7%86%e5%8c%ba%e5%8f%98%e6%8d%a2%e6%96%b9%e7%a8%8b%e7%9a%84%e7%9f%a9%e9%98%b5%e5%bd%a2%e5%bc%8f" class="header-anchor">&lt;/a>理解掌握窗口到视区变换方程的矩阵形式。
+&lt;/h3>&lt;p>窗口w，视区v：$\begin{bmatrix} x_{v} &amp;amp; y_{v} &amp;amp; 1 \end{bmatrix}=\begin{bmatrix} x_{w} &amp;amp; y_{w} &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} a &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; -c &amp;amp; 0 \\ b &amp;amp; d &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;p>$X_{v}=X_{v1}+\dfrac{X_{v2}-X_{v1}}{X_{w2}-X_{w1}}(X_{w} - X_{w1})$&lt;/p>
+&lt;p>$Y_{v}=Y_{v1}+\dfrac{Y_{v2}-Y_{v1}}{Y_{w2}-Y_{w1}}(Y_{w} - Y_{w1})$&lt;/p>
+&lt;p>若视区大小不变，窗口缩小或放大，会使图形放大或缩小。&lt;/p>
+&lt;p>若窗口大小不变，视区缩小或放大，会使图形跟着缩小或放大。&lt;/p>
+&lt;p>若窗口与视区大小相同时，则图形大小比例不变。&lt;/p>
+&lt;p>若视区与窗口纵横比不同时，则图形会产生伸缩变形。&lt;/p>
+&lt;h3 id="写出直线段编码裁剪算法的原理和步骤">&lt;a href="#%e5%86%99%e5%87%ba%e7%9b%b4%e7%ba%bf%e6%ae%b5%e7%bc%96%e7%a0%81%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86%e5%92%8c%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>写出直线段编码裁剪算法的原理和步骤。
+&lt;/h3>&lt;h4 id="编码裁剪算法">&lt;a href="#%e7%bc%96%e7%a0%81%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>编码裁剪算法
+&lt;/h4>&lt;p>把窗口边界延长分成9个区，每个区用四位二进制数进行编码，根据编码的值或逻辑运算进行位置判断。&lt;/p>
+&lt;ol>
+&lt;li>如果线段两个端点的4位编码全为0，则此线段在窗口内，可直接输出；&lt;/li>
+&lt;li>若线段两端点的编码逻辑与（位乘）不为0，则线段全部在窗口之外，舍弃； &lt;/li>
+&lt;li>除上之外，线段与窗口有交点，求交点。求直线与窗口边界的交点，用交点分割线段，舍弃交点以外部分；以交点为界进一步求交判断，并进行分割；裁剪的次序：按编码值；结束标志：编码值全部为零。&lt;/li>
+&lt;/ol>
+&lt;h4 id="中点分割算法">&lt;a href="#%e4%b8%ad%e7%82%b9%e5%88%86%e5%89%b2%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>中点分割算法
+&lt;/h4>&lt;p>二分法递归搜索方法，看中点是否在区域内并递归计算。&lt;/p>
+&lt;h4 id="矢量梁友栋裁剪算法">&lt;a href="#%e7%9f%a2%e9%87%8f%e6%a2%81%e5%8f%8b%e6%a0%8b%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>矢量(梁友栋)裁剪算法
+&lt;/h4>&lt;p>确定始、终边；求直线与窗边交点；求始边两交点中距离P2最近点，赋予Ps；求终边两交点中距离P1最近点，赋予Pe；输出有效线段PsPe。&lt;/p>
+&lt;h4 id="快速裁剪算法">&lt;a href="#%e5%bf%ab%e9%80%9f%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>快速裁剪算法
+&lt;/h4>&lt;ol>
+&lt;li>判断直线是否完全在窗内&lt;/li>
+&lt;li>端点的X坐标相同，若不成立&lt;/li>
+&lt;li>求P1 P2直线的斜率&lt;/li>
+&lt;li>根据k值计算判别式的值若不大于0&lt;/li>
+&lt;li>求直线和窗口四条边界的交点并单向排序&lt;/li>
+&lt;li>取出中间两点组成窗内线段输出。&lt;/li>
+&lt;/ol>
+&lt;h4 id="排序裁剪算法">&lt;a href="#%e6%8e%92%e5%ba%8f%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>排序裁剪算法
+&lt;/h4>&lt;p>详见参考资料。&lt;/p>
+&lt;h3 id="写出多边形逐边裁剪算法的原理和步骤">&lt;a href="#%e5%86%99%e5%87%ba%e5%a4%9a%e8%be%b9%e5%bd%a2%e9%80%90%e8%be%b9%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95%e7%9a%84%e5%8e%9f%e7%90%86%e5%92%8c%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>写出多边形逐边裁剪算法的原理和步骤。
+&lt;/h3>&lt;p>多边形的裁剪算法分为：逐边裁剪法和双边裁剪法。&lt;/p>
+&lt;h4 id="逐边裁剪法">&lt;a href="#%e9%80%90%e8%be%b9%e8%a3%81%e5%89%aa%e6%b3%95" class="header-anchor">&lt;/a>逐边裁剪法
+&lt;/h4>&lt;ol>
+&lt;li>先把待裁的多边形的顶点组成有序的点列；&lt;/li>
+&lt;li>相邻两点组成边，如P1P2,P3P4,…,PnP1，共N条边；&lt;/li>
+&lt;li>用窗口的四条边依次裁剪多边形的每个边，并求出有效交点。&lt;/li>
+&lt;li>把有效端点连接起来，组成新的多边形。&lt;/li>
+&lt;/ol>
+&lt;h4 id="双边裁剪法">&lt;a href="#%e5%8f%8c%e8%be%b9%e8%a3%81%e5%89%aa%e6%b3%95" class="header-anchor">&lt;/a>双边裁剪法
+&lt;/h4>&lt;ol>
+&lt;li>把多边形顶点按逆时针排成一个有序的点环；&lt;/li>
+&lt;li>按多边形的排序方法把窗口顶点排序；&lt;/li>
+&lt;li>从多边形的任意顶点出发，顺着环方向搜索多边形顶点，位于窗内的顶点和多边形与窗口的有效交点；
+&lt;ol>
+&lt;li>遇到入点时，不改变搜索方向。&lt;/li>
+&lt;li>遇到出点时，改变搜索方向：
+&lt;ol>
+&lt;li>在出点处转弯，转弯方向和顶点排序方向一致；&lt;/li>
+&lt;li>沿窗口有效边方向前进，搜索到该边和多边形的交点，直到遇到新交点时为止。&lt;/li>
+&lt;li>当遇到新交点时，抬笔返回到原来的出点。&lt;/li>
+&lt;li>然后沿原来方向继续搜索。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>到达搜索起点使结束。&lt;/li>
+&lt;/ol>
+&lt;h3 id="某直线端点的编码为0010写出其端点坐标和窗口四条边界的关系">&lt;a href="#%e6%9f%90%e7%9b%b4%e7%ba%bf%e7%ab%af%e7%82%b9%e7%9a%84%e7%bc%96%e7%a0%81%e4%b8%ba0010%e5%86%99%e5%87%ba%e5%85%b6%e7%ab%af%e7%82%b9%e5%9d%90%e6%a0%87%e5%92%8c%e7%aa%97%e5%8f%a3%e5%9b%9b%e6%9d%a1%e8%be%b9%e7%95%8c%e7%9a%84%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>某直线端点的编码为0010，写出其端点坐标和窗口四条边界的关系？
+&lt;/h3>&lt;p>应在最右边中间区，在窗口之外。&lt;/p>
+&lt;h2 id="第6章">&lt;a href="#%e7%ac%ac6%e7%ab%a0" class="header-anchor">&lt;/a>第6章
+&lt;/h2>&lt;h3 id="理解掌握投影的定义分类">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e6%8a%95%e5%bd%b1%e7%9a%84%e5%ae%9a%e4%b9%89%e5%88%86%e7%b1%bb" class="header-anchor">&lt;/a>理解掌握投影的定义、分类。
+&lt;/h3>&lt;p>通常把三维物体变为二维图形表示的过程称为投影变换。&lt;/p>
+&lt;p>根据投影中心与投影平面之间距离的不同，投影可分为平行投影和透视投影。&lt;/p>
+&lt;h3 id="理解掌握三视图形成的变换矩阵">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e4%b8%89%e8%a7%86%e5%9b%be%e5%bd%a2%e6%88%90%e7%9a%84%e5%8f%98%e6%8d%a2%e7%9f%a9%e9%98%b5" class="header-anchor">&lt;/a>理解掌握三视图形成的变换矩阵。
+&lt;/h3>&lt;h4 id="主视图">&lt;a href="#%e4%b8%bb%e8%a7%86%e5%9b%be" class="header-anchor">&lt;/a>主视图
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=T_{v} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} = \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="俯视图">&lt;a href="#%e4%bf%af%e8%a7%86%e5%9b%be" class="header-anchor">&lt;/a>俯视图
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=T_{v} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} = \begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; -1 &amp;amp; 0 &amp;amp; -z_{0} \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h4 id="侧视图">&lt;a href="#%e4%be%a7%e8%a7%86%e5%9b%be" class="header-anchor">&lt;/a>侧视图
+&lt;/h4>&lt;p>$\begin{bmatrix} x&amp;rsquo; \\ y&amp;rsquo; \\ z&amp;rsquo; \\ 1 \end{bmatrix}=T_{v} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix} = \begin{bmatrix} 0 &amp;amp; -1 &amp;amp; 0 &amp;amp; -x_{0} \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix} \cdot \begin{bmatrix} x \\ y \\ z \\ 1 \end{bmatrix}$&lt;/p>
+&lt;h3 id="理解三维观察过程中的坐标形式及其转化">&lt;a href="#%e7%90%86%e8%a7%a3%e4%b8%89%e7%bb%b4%e8%a7%82%e5%af%9f%e8%bf%87%e7%a8%8b%e4%b8%ad%e7%9a%84%e5%9d%90%e6%a0%87%e5%bd%a2%e5%bc%8f%e5%8f%8a%e5%85%b6%e8%bd%ac%e5%8c%96" class="header-anchor">&lt;/a>理解三维观察过程中的坐标形式及其转化。
+&lt;/h3>&lt;p>轴侧图是用平行投影的方法在二维平面上产生同时反映物体长、宽、高三个方向形状的一种立体图。&lt;/p>
+&lt;ol>
+&lt;li>先使形体绕z轴正转α角：&lt;/li>
+&lt;/ol>
+&lt;p>$T_{1}=\begin{bmatrix} \cos \alpha &amp;amp; \sin \alpha &amp;amp; 0 &amp;amp; 0 \\ -\sin \alpha &amp;amp; \cos \alpha &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;ol start="2">
+&lt;li>再使形体绕x轴反转β（β&amp;lt;0）角 ：&lt;/li>
+&lt;/ol>
+&lt;p>$T_{2}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; \cos \beta &amp;amp; \sin \beta &amp;amp; 0 \\ 0 &amp;amp; -\sin \beta &amp;amp; \cos \beta &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;ol start="3">
+&lt;li>使形体向xoz面压缩 ：&lt;/li>
+&lt;/ol>
+&lt;p>$T_{3}=\begin{bmatrix} 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 1 &amp;amp; 0 \\ 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; 1 \end{bmatrix}$&lt;/p>
+&lt;ol start="4">
+&lt;li>轴测图的变换矩阵 ：&lt;/li>
+&lt;/ol>
+&lt;p>$T=T_{1}\cdot T_{2}\cdot T_{3}$&lt;/p>
+&lt;h2 id="第7章">&lt;a href="#%e7%ac%ac7%e7%ab%a0" class="header-anchor">&lt;/a>第7章
+&lt;/h2>&lt;h3 id="什么是实体实体有哪些属性">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%ae%9e%e4%bd%93%e5%ae%9e%e4%bd%93%e6%9c%89%e5%93%aa%e4%ba%9b%e5%b1%9e%e6%80%a7" class="header-anchor">&lt;/a>什么是实体？实体有哪些属性？
+&lt;/h3>&lt;p>空间点的集合，或由封闭表面围成的空间，是非空、有界的封闭的点集。&lt;/p>
+&lt;p>形状不变性：一个实体必须具有不变的形状，形状与实体的位置与方向无关。&lt;/p>
+&lt;p>维度一致性：实体的各个部分均应是三维的，不存在孤点、悬边等。&lt;/p>
+&lt;p>空间有限性：占有有限空间、边界确定且封闭。&lt;/p>
+&lt;p>实体边界的性质：&lt;/p>
+&lt;p>连通性：任意两点之间总存在一条路径。&lt;/p>
+&lt;p>有界性：实体表面将空间分为两部分，其中一部分是有界的。&lt;/p>
+&lt;p>定向性：表面两侧明显定义出属于实体的内侧和外侧。&lt;/p>
+&lt;p>非自交性：实体表面不能自身相交。&lt;/p>
+&lt;p>闭合性：每条边有两个且只有两个点，每条边连接两个或两个以上的面。&lt;/p>
+&lt;h3 id="构成实体基本元素有哪些描述实体的信息哪几部分">&lt;a href="#%e6%9e%84%e6%88%90%e5%ae%9e%e4%bd%93%e5%9f%ba%e6%9c%ac%e5%85%83%e7%b4%a0%e6%9c%89%e5%93%aa%e4%ba%9b%e6%8f%8f%e8%bf%b0%e5%ae%9e%e4%bd%93%e7%9a%84%e4%bf%a1%e6%81%af%e5%93%aa%e5%87%a0%e9%83%a8%e5%88%86" class="header-anchor">&lt;/a>构成实体基本元素有哪些？描述实体的信息哪几部分？
+&lt;/h3>&lt;p>构成实体的基本元素：点、边、环、面、体&lt;/p>
+&lt;p>描述实体的信息：几何信息、拓扑信息&lt;/p>
+&lt;h3 id="欧拉公式是判断实体的条件和公式是什么">&lt;a href="#%e6%ac%a7%e6%8b%89%e5%85%ac%e5%bc%8f%e6%98%af%e5%88%a4%e6%96%ad%e5%ae%9e%e4%bd%93%e7%9a%84%e6%9d%a1%e4%bb%b6%e5%92%8c%e5%85%ac%e5%bc%8f%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>欧拉公式是判断实体的条件和公式是什么？
+&lt;/h3>&lt;p>符合欧拉公式的多面体不一定是实体，欧拉计算公式只是检查实体有效性的必要条件&lt;/p>
+&lt;p>简单多面体：&lt;br>
+V：顶点数，E：边数，F：表面数&lt;/p>
+$$V-E+F=2$$&lt;p>非简单多面体：&lt;br>
+H：多面体表面上孔个数，G：贯穿多面体的孔个数，C：表示独立、不相连的多面体数。&lt;/p>
+$$V–E+F–H=2(C–G)$$&lt;h3 id="实体的表示方法有几种">&lt;a href="#%e5%ae%9e%e4%bd%93%e7%9a%84%e8%a1%a8%e7%a4%ba%e6%96%b9%e6%b3%95%e6%9c%89%e5%87%a0%e7%a7%8d" class="header-anchor">&lt;/a>实体的表示方法有几种？
+&lt;/h3>&lt;ul>
+&lt;li>边界表示&lt;/li>
+&lt;li>扫描表示&lt;/li>
+&lt;li>构造几何实体表示（CSG）&lt;/li>
+&lt;li>空间细分表示&lt;/li>
+&lt;/ul>
+&lt;h3 id="理解参数曲线连续性的数学意义和几何意义">&lt;a href="#%e7%90%86%e8%a7%a3%e5%8f%82%e6%95%b0%e6%9b%b2%e7%ba%bf%e8%bf%9e%e7%bb%ad%e6%80%a7%e7%9a%84%e6%95%b0%e5%ad%a6%e6%84%8f%e4%b9%89%e5%92%8c%e5%87%a0%e4%bd%95%e6%84%8f%e4%b9%89" class="header-anchor">&lt;/a>理解参数曲线连续性的数学意义和几何意义。
+&lt;/h3>&lt;p>工程上所用到的曲线一般要求为平滑曲线，且要按照指定的点序列来生成，这就是样条曲线。样条曲线是由多项式曲线段连接而成的曲线，要求相邻线段的边界处满足特定的连续定条件。&lt;/p>
+&lt;h3 id="掌握h曲线的矩阵形式和调和函数以及端点切矢对曲线形状的影响">&lt;a href="#%e6%8e%8c%e6%8f%a1h%e6%9b%b2%e7%ba%bf%e7%9a%84%e7%9f%a9%e9%98%b5%e5%bd%a2%e5%bc%8f%e5%92%8c%e8%b0%83%e5%92%8c%e5%87%bd%e6%95%b0%e4%bb%a5%e5%8f%8a%e7%ab%af%e7%82%b9%e5%88%87%e7%9f%a2%e5%af%b9%e6%9b%b2%e7%ba%bf%e5%bd%a2%e7%8a%b6%e7%9a%84%e5%bd%b1%e5%93%8d" class="header-anchor">&lt;/a>掌握H曲线的矩阵形式和调和函数以及端点切矢对曲线形状的影响。
+&lt;/h3>&lt;p>矩阵形式：&lt;/p>
+$$Q(t)=\begin{bmatrix} t^{3} &amp; t^{2} &amp; t &amp; 1 \end{bmatrix} \cdot \begin{bmatrix} a \\\ b \\\ c \\\ d \end{bmatrix}(0 \le t \le 1)$$&lt;p>调和函数：&lt;/p>
+$$
+\begin{aligned}
+Fh(t) &amp;= T \cdot Mh \\
+&amp;= \begin{bmatrix} t^3 &amp; t^2 &amp; t &amp; 1 \end{bmatrix} \cdot \begin{bmatrix} 2 &amp; -2 &amp; 1 &amp; 1 \\ -3 &amp; 3 &amp; -2 &amp; -1 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} \\
+&amp;= \begin{bmatrix} Fh1 &amp; Fh2 &amp; Fh3 &amp; Fh4 \end{bmatrix}
+\end{aligned}
+$$&lt;p>切线矢量：&lt;/p>
+&lt;p>切线方向：当其长度不变时，随着切线的角度增加，切线的凸包性也增加。&lt;/p>
+&lt;p>切线大小：曲线两端点的切矢为Q&amp;rsquo;(0)和Q&amp;rsquo;(1)，单位矢量分别为：$E_{0}=\dfrac{Q&amp;rsquo;\left( 0\right) }{\left| Q&amp;rsquo;\left( 0\right) \right| }$、$E_{1}=\dfrac{Q&amp;rsquo;\left( 1\right) }{\left| Q&amp;rsquo;\left( 1\right) \right| }$
+令：︱Q&amp;rsquo;(0)︱=k0，︱Q&amp;rsquo;(1)︱=k1，则：Q&amp;rsquo;(0)= R0=k0E0，Q&amp;rsquo;(1)=R1=k1E1，改变k0 k1值，改变切线长度，切线的凸包性也增加。&lt;/p>
+&lt;h3 id="掌握h曲线段的连续条件和边界条件">&lt;a href="#%e6%8e%8c%e6%8f%a1h%e6%9b%b2%e7%ba%bf%e6%ae%b5%e7%9a%84%e8%bf%9e%e7%bb%ad%e6%9d%a1%e4%bb%b6%e5%92%8c%e8%be%b9%e7%95%8c%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>掌握H曲线段的连续条件和边界条件？
+&lt;/h3>&lt;h4 id="连续条件">&lt;a href="#%e8%bf%9e%e7%bb%ad%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>连续条件
+&lt;/h4>&lt;p>在连接点处，二阶导数连续(一阶导数相等)。&lt;/p>
+&lt;h4 id="边界条件">&lt;a href="#%e8%be%b9%e7%95%8c%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>边界条件
+&lt;/h4>&lt;p>边界条件分为自由端、夹持端、抛物线端和循环端。&lt;/p>
+&lt;p>自由端：根据力学条件，两端点处二阶导数为0。&lt;/p>
+&lt;h3 id="理解掌握特征多边形与b曲线形状和次数的关系">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e7%89%b9%e5%be%81%e5%a4%9a%e8%be%b9%e5%bd%a2%e4%b8%8eb%e6%9b%b2%e7%ba%bf%e5%bd%a2%e7%8a%b6%e5%92%8c%e6%ac%a1%e6%95%b0%e7%9a%84%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>理解掌握特征多边形与B曲线形状和次数的关系。
+&lt;/h3>&lt;p>B曲线是通过一组多边形折线的顶点来定义的。如果折线的顶点固定不变，则由其定义的Bezier曲线是唯一的。在折线的各顶点中，只有第一点和最后一点在曲线上且作为曲线的起始处和终止处，其他的点用于控制曲线的形状及阶次。&lt;/p>
+&lt;h3 id="理解b曲线的性质和端点切矢与边长的关系">&lt;a href="#%e7%90%86%e8%a7%a3b%e6%9b%b2%e7%ba%bf%e7%9a%84%e6%80%a7%e8%b4%a8%e5%92%8c%e7%ab%af%e7%82%b9%e5%88%87%e7%9f%a2%e4%b8%8e%e8%be%b9%e9%95%bf%e7%9a%84%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>理解B曲线的性质和端点切矢与边长的关系。
+&lt;/h3>&lt;h4 id="端点性质">&lt;a href="#%e7%ab%af%e7%82%b9%e6%80%a7%e8%b4%a8" class="header-anchor">&lt;/a>端点性质
+&lt;/h4>&lt;p>Bezier曲线在起点、终点与相应的控制多边形相切，且在起点和终点处的切线方向与控制多边形的第一条边和最后一条边的走向一致。&lt;/p>
+&lt;h4 id="对称性">&lt;a href="#%e5%af%b9%e7%a7%b0%e6%80%a7" class="header-anchor">&lt;/a>对称性
+&lt;/h4>&lt;p>只要保持特征多边形的顶点位置不变，但顺序颠倒，所得新的Beizer曲线形状不变，知识参数变化的方向相反。&lt;/p>
+&lt;h4 id="凸包性">&lt;a href="#%e5%87%b8%e5%8c%85%e6%80%a7" class="header-anchor">&lt;/a>凸包性
+&lt;/h4>&lt;p>Bezier曲线一定落在其控制多边形的凸包中。&lt;/p>
+&lt;h4 id="几何不变性">&lt;a href="#%e5%87%a0%e4%bd%95%e4%b8%8d%e5%8f%98%e6%80%a7" class="header-anchor">&lt;/a>几何不变性
+&lt;/h4>&lt;p>Beizer曲线的形状不随坐标变换而变化，只与各控制顶点的相对位置有关。&lt;/p>
+&lt;p>端点处切线长度等于特征多边形首、末边长的n倍。&lt;/p>
+&lt;p>工程上所使用的曲线次数不大于3。&lt;/p>
+&lt;h3 id="理解掌握b曲线拼接的条件">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1b%e6%9b%b2%e7%ba%bf%e6%8b%bc%e6%8e%a5%e7%9a%84%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>理解掌握B曲线拼接的条件。
+&lt;/h3>&lt;p>在连接处满足C¹和C²连续。&lt;/p>
+&lt;p>掌握Bezier和B样条曲线的矩阵形式。&lt;/p>
+&lt;p>一次Bezier曲线：&lt;/p>
+&lt;p>$Q(t)=\begin{bmatrix} t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} -1 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \end{bmatrix}$&lt;/p>
+&lt;p>二次Bezier曲线：&lt;/p>
+&lt;p>$Q(t)=\begin{bmatrix} t^{2} &amp;amp; t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp;amp; -2 &amp;amp; 1 \\ -2 &amp;amp; 2 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \\ P_{2} \end{bmatrix}$&lt;/p>
+&lt;p>三次Bezier曲线：&lt;/p>
+&lt;p>$Q(t)=\begin{bmatrix} t^{3} &amp;amp; t^{2} &amp;amp; t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} -1 &amp;amp; 3 &amp;amp; -3 &amp;amp; 1 \\ 3 &amp;amp; -6 &amp;amp; 3 &amp;amp; 0 \\ -3 &amp;amp; 3 &amp;amp; 0 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \\ P_{2} \\ P_{3} \end{bmatrix}$&lt;/p>
+&lt;p>一次B样条曲线：&lt;/p>
+&lt;p>$Q_{i,1}(t)=\begin{bmatrix} t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} -1 &amp;amp; 1 \\ 1 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \end{bmatrix}$&lt;/p>
+&lt;p>二次B样条曲线：&lt;/p>
+&lt;p>$Q_{i,2}(t)=\begin{bmatrix} t^{2} &amp;amp; t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} 1 &amp;amp; -2 &amp;amp; 1 \\ -2 &amp;amp; 2 &amp;amp; 0 \\ 1 &amp;amp; 1 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \\ P_{2} \end{bmatrix}$&lt;/p>
+&lt;p>三次B样条曲线：&lt;/p>
+&lt;p>$Q_{i,3}(t)=\begin{bmatrix} t^{3} &amp;amp; t^{2} &amp;amp; t &amp;amp; 1 \end{bmatrix}\begin{bmatrix} -1 &amp;amp; 3 &amp;amp; -3 &amp;amp; 1 \\ 3 &amp;amp; -6 &amp;amp; 3 &amp;amp; 0 \\ -3 &amp;amp; 0 &amp;amp; 3 &amp;amp; 0 \\ 1 &amp;amp; 4 &amp;amp; 1 &amp;amp; 0 \end{bmatrix}\begin{bmatrix} P_{0} \\ P_{1} \\ P_{2} \\ P_{3} \end{bmatrix}$&lt;/p>
+&lt;h3 id="掌握特征多边形与bezier和b样条曲线形状和次数关系">&lt;a href="#%e6%8e%8c%e6%8f%a1%e7%89%b9%e5%be%81%e5%a4%9a%e8%be%b9%e5%bd%a2%e4%b8%8ebezier%e5%92%8cb%e6%a0%b7%e6%9d%a1%e6%9b%b2%e7%ba%bf%e5%bd%a2%e7%8a%b6%e5%92%8c%e6%ac%a1%e6%95%b0%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>掌握特征多边形与Bezier和B样条曲线形状和次数关系。
+&lt;/h3>&lt;p>若给定m+n+1个顶点，则第i段n次等距离分割的B样条曲线函数为&lt;/p>
+$$Q_{i,n}\left( t\right) =\sum ^{n}_{i=0}P_{i+1}F_{l,n}\left( t\right) , l=0,l\dots n, t\in [0,1]$$&lt;h3 id="理解bezier和b样条曲线的性质和端点条件">&lt;a href="#%e7%90%86%e8%a7%a3bezier%e5%92%8cb%e6%a0%b7%e6%9d%a1%e6%9b%b2%e7%ba%bf%e7%9a%84%e6%80%a7%e8%b4%a8%e5%92%8c%e7%ab%af%e7%82%b9%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>理解Bezier和B样条曲线的性质和端点条件。
+&lt;/h3>&lt;p>曲线的首末端点位于首末段的中点。&lt;/p>
+&lt;h3 id="理解掌握bezier曲线拼接的条件">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1bezier%e6%9b%b2%e7%ba%bf%e6%8b%bc%e6%8e%a5%e7%9a%84%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>理解掌握Bezier曲线拼接的条件。
+&lt;/h3>&lt;p>在连接处具有一阶、二阶导数连续。&lt;/p>
+&lt;h3 id="熟练掌握3次b样条曲线段端点的作图方法和几何特性">&lt;a href="#%e7%86%9f%e7%bb%83%e6%8e%8c%e6%8f%a13%e6%ac%a1b%e6%a0%b7%e6%9d%a1%e6%9b%b2%e7%ba%bf%e6%ae%b5%e7%ab%af%e7%82%b9%e7%9a%84%e4%bd%9c%e5%9b%be%e6%96%b9%e6%b3%95%e5%92%8c%e5%87%a0%e4%bd%95%e7%89%b9%e6%80%a7" class="header-anchor">&lt;/a>熟练掌握3次B样条曲线段端点的作图方法和几何特性。
+&lt;/h3>&lt;ol>
+&lt;li>确定型值点Qi (i=1，2，……… ，n)；&lt;/li>
+&lt;li>根据曲线类型，建立反求特征点的矩阵形式；&lt;/li>
+&lt;li>求出多边形的顶点表；&lt;/li>
+&lt;li>根据精度要求确定插值点数，绘制样条曲线。
+&lt;ol>
+&lt;li>
+&lt;p>反向延伸：&lt;br>
+$P_{1} P_{0}$的延长线上取一点$P_{-1}$，使得：
+&lt;/p>
+$$P_{-1} P_{0}= P_{0} P_{1}$$$$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p>
+&lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-1.png"
+width="264"
+height="220"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu18340772105635363912.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu11435206957440172037.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="120"
+data-flex-basis="288px"
+>&lt;br>
+求得：
+&lt;/p>
+$$P_{-1}= 2 P_{0} - P_{1}$$$$P_{4}= 2 P_{3} - P_{2}$$&lt;/li>
+&lt;li>
+&lt;p>重点技术：&lt;br>
+&lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-2.png"
+width="389"
+height="197"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu13699975216508309066.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu16335215033749882580.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="197"
+data-flex-basis="473px"
+>&lt;br>
+在首末端点处采用重合点，使得：
+&lt;/p>
+$$P_{-2}\equiv P_{-1} \equiv P_{0}$$$$P_{n+2}\equiv P_{n+1} \equiv P_{n}$$&lt;p>
+$Q_{-1}$位于$P_{0} P_{1}$的三分之一处。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="理解掌握b样条曲线的局部修改和扩展性质">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1b%e6%a0%b7%e6%9d%a1%e6%9b%b2%e7%ba%bf%e7%9a%84%e5%b1%80%e9%83%a8%e4%bf%ae%e6%94%b9%e5%92%8c%e6%89%a9%e5%b1%95%e6%80%a7%e8%b4%a8" class="header-anchor">&lt;/a>理解掌握B样条曲线的局部修改和扩展性质。
+&lt;/h3>&lt;p>当改变一个控制点的位置，最多影响四个曲线段 。&lt;/p>
+&lt;p>增加一个控制点，增加一段B样条曲线，原有的B样条曲线不受影响，新增曲线段与原曲线在连接处具有一阶、二阶导数连续。&lt;/p>
+&lt;h3 id="理解掌握曲面片的构造条件">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e6%9b%b2%e9%9d%a2%e7%89%87%e7%9a%84%e6%9e%84%e9%80%a0%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>理解掌握曲面片的构造条件
+&lt;/h3>&lt;p>曲线相交构成空间网格，所有交点的集合构成了曲面片。&lt;/p>
+&lt;h3 id="掌握孔斯曲面的矩阵形式和边界条件">&lt;a href="#%e6%8e%8c%e6%8f%a1%e5%ad%94%e6%96%af%e6%9b%b2%e9%9d%a2%e7%9a%84%e7%9f%a9%e9%98%b5%e5%bd%a2%e5%bc%8f%e5%92%8c%e8%be%b9%e7%95%8c%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>掌握孔斯曲面的矩阵形式和边界条件
+&lt;/h3>&lt;p>$C=\begin{bmatrix} P_{00} &amp;amp; P_{01} &amp;amp; P_{00}^{v} &amp;amp; P_{01}^{v} \\ P_{10} &amp;amp; P_{11} &amp;amp; P_{10}^{v} &amp;amp; P_{11}^{v} \\ P_{00}^{u} &amp;amp; P_{10}^{u} &amp;amp; 0 &amp;amp; 0 \\ P_{10}^{u} &amp;amp; P_{11}^{u} &amp;amp; 0 &amp;amp; 0 \end{bmatrix}$&lt;/p>
+&lt;p>四个角点、四条边界、八个切线矢量&lt;/p>
+&lt;h3 id="能写出孔斯曲面边界上任意位置矢量的矩阵形式">&lt;a href="#%e8%83%bd%e5%86%99%e5%87%ba%e5%ad%94%e6%96%af%e6%9b%b2%e9%9d%a2%e8%be%b9%e7%95%8c%e4%b8%8a%e4%bb%bb%e6%84%8f%e4%bd%8d%e7%bd%ae%e7%9f%a2%e9%87%8f%e7%9a%84%e7%9f%a9%e9%98%b5%e5%bd%a2%e5%bc%8f" class="header-anchor">&lt;/a>能写出孔斯曲面边界上任意位置矢量的矩阵形式
+&lt;/h3>&lt;p>参考课本与PPT&lt;/p>
+&lt;h3 id="理解掌握孔斯曲面片拼接的条件">&lt;a href="#%e7%90%86%e8%a7%a3%e6%8e%8c%e6%8f%a1%e5%ad%94%e6%96%af%e6%9b%b2%e9%9d%a2%e7%89%87%e6%8b%bc%e6%8e%a5%e7%9a%84%e6%9d%a1%e4%bb%b6" class="header-anchor">&lt;/a>理解掌握孔斯曲面片拼接的条件
+&lt;/h3>&lt;p>在拼接处C1连续。&lt;/p>
+&lt;p>$P_{10} \equiv Q_{00}$、$P_{11} \equiv Q_{01}$&lt;/p>
+&lt;p>$P_{10}^{w} \equiv Q_{00}^{w}$、$P_{11}^{w} \equiv Q_{01}^{w}$&lt;/p>
+&lt;p>$P_{1j}^{u} \equiv Q_{0j}^{u}$&lt;/p>
+&lt;p>$P_{1j}^{u} \equiv a Q_{0j}^{u}$&lt;/p>
+&lt;h2 id="第8章">&lt;a href="#%e7%ac%ac8%e7%ab%a0" class="header-anchor">&lt;/a>第8章
+&lt;/h2>&lt;h3 id="消隐算法可以分成几类分类原则是什么">&lt;a href="#%e6%b6%88%e9%9a%90%e7%ae%97%e6%b3%95%e5%8f%af%e4%bb%a5%e5%88%86%e6%88%90%e5%87%a0%e7%b1%bb%e5%88%86%e7%b1%bb%e5%8e%9f%e5%88%99%e6%98%af%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>消隐算法可以分成几类？分类原则是什么？
+&lt;/h3>&lt;p>根据消隐对象：线消隐、面消隐&lt;/p>
+&lt;p>根据消隐算法空间：物体空间消隐算法、图像空间消隐算法&lt;/p>
+&lt;p>消隐：消除形体视图中隐藏线（面）的处理过程&lt;/p>
+&lt;p>消隐的基本原则：排序、连贯性&lt;/p>
+&lt;h3 id="外法线消隐算法的基本原理是什么写出其算法步骤">&lt;a href="#%e5%a4%96%e6%b3%95%e7%ba%bf%e6%b6%88%e9%9a%90%e7%ae%97%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86%e6%98%af%e4%bb%80%e4%b9%88%e5%86%99%e5%87%ba%e5%85%b6%e7%ae%97%e6%b3%95%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>外法线消隐算法的基本原理是什么？写出其算法步骤。
+&lt;/h3>&lt;p>根据外法线在投影方向上的方向余弦进行可见性判断。&lt;/p>
+&lt;h4 id="凸多面体">&lt;a href="#%e5%87%b8%e5%a4%9a%e9%9d%a2%e4%bd%93" class="header-anchor">&lt;/a>凸多面体
+&lt;/h4>&lt;ol>
+&lt;li>根据表面的数据结构，取顶点数据，计算表面的外法
+&lt;ul>
+&lt;li>线矢量；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>计算外法线在投影方向上的分量的值;&lt;/li>
+&lt;li>根据分量的值判断表面的可见性；&lt;/li>
+&lt;li>当B&amp;gt;0时，0o≤a &amp;lt;  90o，表面面向观察者可见。&lt;/li>
+&lt;li>若表面可见画出该表面，否则处理下一个表面。&lt;/li>
+&lt;/ol>
+&lt;h4 id="凹多面体">&lt;a href="#%e5%87%b9%e5%a4%9a%e9%9d%a2%e4%bd%93" class="header-anchor">&lt;/a>凹多面体
+&lt;/h4>&lt;ol>
+&lt;li>先求出表面的外法线，计算其投影方向上的方向余弦值cosa；&lt;/li>
+&lt;li>根据方向余弦值，进行可见性判断；&lt;/li>
+&lt;li>对朝前面计算其表面的最大深度值；&lt;/li>
+&lt;li>计算朝前面的盒子角点坐标；&lt;/li>
+&lt;li>取出最大深度值的表面作为当前面；&lt;/li>
+&lt;li>循环计算其他表面和当前表面的遮挡关系。&lt;/li>
+&lt;/ol>
+&lt;h3 id="深度缓存消隐算法的基本原理是什么写出其算法步骤">&lt;a href="#%e6%b7%b1%e5%ba%a6%e7%bc%93%e5%ad%98%e6%b6%88%e9%9a%90%e7%ae%97%e6%b3%95%e7%9a%84%e5%9f%ba%e6%9c%ac%e5%8e%9f%e7%90%86%e6%98%af%e4%bb%80%e4%b9%88%e5%86%99%e5%87%ba%e5%85%b6%e7%ae%97%e6%b3%95%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>深度缓存消隐算法的基本原理是什么？写出其算法步骤。
+&lt;/h3>&lt;p>对于屏幕上的每一个像素，记录位于该像素内最靠近观察者的景物面的深度值，同时相应记录该景物面的颜色(或灰度) 的所有记录值，根据记录的数据输出的图形。&lt;/p>
+&lt;p>开辟内存数组；初始化数组；循环计算每个像素点的深度值。&lt;/p>
+&lt;h3 id="解释外法线朝前面凸多边形">&lt;a href="#%e8%a7%a3%e9%87%8a%e5%a4%96%e6%b3%95%e7%ba%bf%e6%9c%9d%e5%89%8d%e9%9d%a2%e5%87%b8%e5%a4%9a%e8%be%b9%e5%bd%a2" class="header-anchor">&lt;/a>解释外法线、朝前面、凸多边形。
+&lt;/h3>&lt;p>外法线：由形体内部指向外部，或由形体表面指向外部空间的线。&lt;/p>
+&lt;p>朝前面：表示表面法线朝前，该表面可见。&lt;/p>
+&lt;p>背向面：表示表面法线向后，该表面不可见。&lt;/p>
+&lt;p>凸多边形：多边形任意两点连线均位于多边形内部。&lt;/p>
+&lt;h3 id="简述颜色模型能解释rgb模型空间和常用颜色">&lt;a href="#%e7%ae%80%e8%bf%b0%e9%a2%9c%e8%89%b2%e6%a8%a1%e5%9e%8b%e8%83%bd%e8%a7%a3%e9%87%8argb%e6%a8%a1%e5%9e%8b%e7%a9%ba%e9%97%b4%e5%92%8c%e5%b8%b8%e7%94%a8%e9%a2%9c%e8%89%b2" class="header-anchor">&lt;/a>简述颜色模型，能解释RGB模型空间和常用颜色
+&lt;/h3>&lt;p>颜色模型就是指某个三维颜色空间中的一个可见光子集，它包含某个颜色域的所有颜色。在大多数的彩色图形显示设备一般都是使用红、绿、蓝三原色，我们的真实感图形学中的主要的颜色模型也是RGB模型。&lt;/p>
+&lt;h3 id="解释光照模型泛光纯镜面反射光">&lt;a href="#%e8%a7%a3%e9%87%8a%e5%85%89%e7%85%a7%e6%a8%a1%e5%9e%8b%e6%b3%9b%e5%85%89%e7%ba%af%e9%95%9c%e9%9d%a2%e5%8f%8d%e5%b0%84%e5%85%89" class="header-anchor">&lt;/a>解释：光照模型、泛光、纯镜面反射光
+&lt;/h3>&lt;p>光照模型：根据光学物理的有关定律，计算物体表面各点投射到观察着眼中的光线的光亮强度和色彩组成的数学表达式。（在已知物体物理形态和光源性质的条件下，能够计算出场景的光照明效果的数学模型）&lt;/p>
+$$入射光=漫反射光+镜面反射+环境光$$&lt;ul>
+&lt;li>漫反射光：光照射到粗糙、无光泽表面的光现象。
+&lt;ul>
+&lt;li>特点：来源一个方向，向各个方向反射。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>环境光（泛光）：光照射到粗糙、无光泽表面的光现象。（光源间接对物体的影响，是在物体和环境之间多次反射，最终达到平衡时的一种光）    
+&lt;ul>
+&lt;li>特点：来源一个方向，向各个方向反射。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>镜面反射光：光照射非常光滑的物体表面的光现象
+&lt;ul>
+&lt;li>特点：光源来自一个方向，反射光集中在反射方向。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="简述简单光反射模型的组成以及构建步骤">&lt;a href="#%e7%ae%80%e8%bf%b0%e7%ae%80%e5%8d%95%e5%85%89%e5%8f%8d%e5%b0%84%e6%a8%a1%e5%9e%8b%e7%9a%84%e7%bb%84%e6%88%90%e4%bb%a5%e5%8f%8a%e6%9e%84%e5%bb%ba%e6%ad%a5%e9%aa%a4" class="header-anchor">&lt;/a>简述简单光反射模型的组成以及构建步骤。
+&lt;/h3>&lt;p>假设：&lt;/p>
+&lt;ul>
+&lt;li>光源是点光源&lt;/li>
+&lt;li>物体不透明&lt;/li>
+&lt;/ul>
+&lt;p>模拟光照射到物体表面产生的反射现象。&lt;/p>
+$$入射光=漫反射光+镜面反射光+环境光$$&lt;h3 id="简述双线性插值亮度或法线算法的计算过程">&lt;a href="#%e7%ae%80%e8%bf%b0%e5%8f%8c%e7%ba%bf%e6%80%a7%e6%8f%92%e5%80%bc%e4%ba%ae%e5%ba%a6%e6%88%96%e6%b3%95%e7%ba%bf%e7%ae%97%e6%b3%95%e7%9a%84%e8%ae%a1%e7%ae%97%e8%bf%87%e7%a8%8b" class="header-anchor">&lt;/a>简述双线性插值（亮度或法线）算法的计算过程。
+&lt;/h3>&lt;h4 id="亮度插值法">&lt;a href="#%e4%ba%ae%e5%ba%a6%e6%8f%92%e5%80%bc%e6%b3%95" class="header-anchor">&lt;/a>亮度插值法
+&lt;/h4>&lt;ol>
+&lt;li>计算多边形表面的外法线向量；&lt;/li>
+&lt;li>求多边形各顶点的法矢；&lt;/li>
+&lt;li>求各顶点的亮度值；&lt;/li>
+&lt;li>求扫描线与多边形边交点的亮度值；&lt;/li>
+&lt;li>求扫描线上各点的亮度值。&lt;/li>
+&lt;/ol>
+&lt;h4 id="法矢插值法">&lt;a href="#%e6%b3%95%e7%9f%a2%e6%8f%92%e5%80%bc%e6%b3%95" class="header-anchor">&lt;/a>法矢插值法
+&lt;/h4>&lt;ol>
+&lt;li>求根据顶点信息计算各多边形面的外法线向量；&lt;/li>
+&lt;li>求多边形各顶点的法向矢量；&lt;/li>
+&lt;li>求扫描线与多边形边交点的法矢；&lt;/li>
+&lt;li>求扫描线上点的法矢；&lt;/li>
+&lt;li>求扫描线上各点的亮度值。&lt;/li>
+&lt;/ol>
+&lt;h2 id="第9章">&lt;a href="#%e7%ac%ac9%e7%ab%a0" class="header-anchor">&lt;/a>第9章
+&lt;/h2>&lt;h3 id="基本交互技术包括那些技术">&lt;a href="#%e5%9f%ba%e6%9c%ac%e4%ba%a4%e4%ba%92%e6%8a%80%e6%9c%af%e5%8c%85%e6%8b%ac%e9%82%a3%e4%ba%9b%e6%8a%80%e6%9c%af" class="header-anchor">&lt;/a>基本交互技术包括那些技术？
+&lt;/h3>&lt;p>定位、选择、数值输入、文本输出。&lt;/p>
+&lt;h3 id="图形拾取的方式有哪几种">&lt;a href="#%e5%9b%be%e5%bd%a2%e6%8b%be%e5%8f%96%e7%9a%84%e6%96%b9%e5%bc%8f%e6%9c%89%e5%93%aa%e5%87%a0%e7%a7%8d" class="header-anchor">&lt;/a>图形拾取的方式有哪几种？
+&lt;/h3>&lt;p>点拾取、直线段拾取、区域拾取、加速图形拾取。&lt;/p>
+&lt;h3 id="什么是橡皮筋和双缓存技术二者有何关系">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%a9%a1%e7%9a%ae%e7%ad%8b%e5%92%8c%e5%8f%8c%e7%bc%93%e5%ad%98%e6%8a%80%e6%9c%af%e4%ba%8c%e8%80%85%e6%9c%89%e4%bd%95%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>什么是橡皮筋和双缓存技术？二者有何关系？
+&lt;/h3>&lt;p>橡皮筋技术：橡皮筋是指在绘图时跟随光标的直线和曲线，当光标移动时形状随之变化 即动态变化的过程。&lt;/p>
+&lt;p>双缓存技术：在内存中另建一块缓存，当屏幕上图形发生改变时，帧缓存的刷新会在后台执行，在屏幕上看到的只是刷新后并重新绘制后的图形，屏幕变化就会连贯柔和。&lt;/p>
+&lt;h3 id="什么是图元组">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e5%9b%be%e5%85%83%e7%bb%84" class="header-anchor">&lt;/a>什么是图元组？
+&lt;/h3>&lt;p>图元组：将一组相关的图元合并成的组&lt;/p>
+&lt;h3 id="几何约束主要包括哪几种约束">&lt;a href="#%e5%87%a0%e4%bd%95%e7%ba%a6%e6%9d%9f%e4%b8%bb%e8%a6%81%e5%8c%85%e6%8b%ac%e5%93%aa%e5%87%a0%e7%a7%8d%e7%ba%a6%e6%9d%9f" class="header-anchor">&lt;/a>几何约束主要包括哪几种约束？
+&lt;/h3>&lt;p>定位约束、方向约束、规则性约束。&lt;/p>
+&lt;h2 id="名词解释">&lt;a href="#%e5%90%8d%e8%af%8d%e8%a7%a3%e9%87%8a" class="header-anchor">&lt;/a>名词解释  
+&lt;/h2>&lt;h3 id="构造曲线">&lt;a href="#%e6%9e%84%e9%80%a0%e6%9b%b2%e7%ba%bf" class="header-anchor">&lt;/a>构造曲线
+&lt;/h3>&lt;p>给定一组有序的离散点Pi (i=0,1,……，n)，通过这些控制点，可以构造出一条曲线。&lt;/p>
+&lt;h3 id="插值曲线">&lt;a href="#%e6%8f%92%e5%80%bc%e6%9b%b2%e7%ba%bf" class="header-anchor">&lt;/a>插值曲线
+&lt;/h3>&lt;p>通过建立数学模型构造一条曲线，使曲线顺序通过给定的数据点, 所构造的曲线称为插值曲线。&lt;/p>
+&lt;h3 id="型值点">&lt;a href="#%e5%9e%8b%e5%80%bc%e7%82%b9" class="header-anchor">&lt;/a>型值点
+&lt;/h3>&lt;p>在构造曲线时，曲线顺序通过每一个给定点，这些点称为型值点。&lt;/p>
+&lt;h3 id="曲线逼近">&lt;a href="#%e6%9b%b2%e7%ba%bf%e9%80%bc%e8%bf%91" class="header-anchor">&lt;/a>曲线逼近
+&lt;/h3>&lt;p>当用一组给定的离散点，通过建立数学模型，要求构造的曲线在某种意义下最为接近给定的数据点，称为对这些数据点进行逼近，所构造的曲线称为逼近曲线。&lt;/p>
+&lt;h3 id="控制点">&lt;a href="#%e6%8e%a7%e5%88%b6%e7%82%b9" class="header-anchor">&lt;/a>控制点
+&lt;/h3>&lt;p>用来控制或调整曲线形状的形状特殊点，而曲线本身不通过该点。&lt;/p>
+&lt;h3 id="拟合">&lt;a href="#%e6%8b%9f%e5%90%88" class="header-anchor">&lt;/a>拟合
+&lt;/h3>&lt;p>插值和逼近方法的统称。&lt;/p>
+&lt;h3 id="计算机图形学">&lt;a href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e5%ad%a6" class="header-anchor">&lt;/a>计算机图形学
+&lt;/h3>&lt;p>用计算机建立、存储、处理某个对象的模型，并根据模型产生该对象图形输出的有关理论、方法与技术，称为计算机图形学。  &lt;/p>
+&lt;h3 id="计算机图形标准">&lt;a href="#%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e6%a0%87%e5%87%86" class="header-anchor">&lt;/a>计算机图形标准
+&lt;/h3>&lt;p>计算机图形标准是指图形系统及其相关应用程序中各界面之间进行数据传送和通信的接口标准。  &lt;/p>
+&lt;h3 id="图形消隐">&lt;a href="#%e5%9b%be%e5%bd%a2%e6%b6%88%e9%9a%90" class="header-anchor">&lt;/a>图形消隐
+&lt;/h3>&lt;p>计算机为了反映真实的图形，把隐藏的部分从图中消除。  &lt;/p>
+&lt;h3 id="几何变换">&lt;a href="#%e5%87%a0%e4%bd%95%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>几何变换
+&lt;/h3>&lt;p>几何变换的基本方法是把变换矩阵作为一个算子，作用到图形一系列顶点的位置矢量，从而得到这些顶点在几何变换后的新的顶点序列，连接新的顶点序列即可得到变换后的图形。  &lt;/p>
+&lt;h3 id="计算几何">&lt;a href="#%e8%ae%a1%e7%ae%97%e5%87%a0%e4%bd%95" class="header-anchor">&lt;/a>计算几何
+&lt;/h3>&lt;p>计算几何研究几何模型和数据处理的学科，讨论几何形体的计算机表示、分析和综合，研究如何方便灵活、有效地建立几何形体的数学模型以及在计算机中更好地存贮和管理这些模型数据。  &lt;/p>
+&lt;h3 id="裁剪">&lt;a href="#%e8%a3%81%e5%89%aa" class="header-anchor">&lt;/a>裁剪
+&lt;/h3>&lt;p>识别图形在指定区域内和区域外的部分的过程称为裁剪算法，简称裁剪。&lt;/p>
+&lt;h3 id="透视投影">&lt;a href="#%e9%80%8f%e8%a7%86%e6%8a%95%e5%bd%b1" class="header-anchor">&lt;/a>透视投影
+&lt;/h3>&lt;p>空间任意一点的透视投影是投影中心与空间点构成的投影线与投影平面的交点。  &lt;/p>
+&lt;h3 id="投影变换">&lt;a href="#%e6%8a%95%e5%bd%b1%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>投影变换
+&lt;/h3>&lt;p>把三维物体变为二维图形表示的变换称为投影变换。  &lt;/p>
+&lt;h3 id="走样">&lt;a href="#%e8%b5%b0%e6%a0%b7" class="header-anchor">&lt;/a>走样
+&lt;/h3>&lt;p>在光栅显示器上绘制非水平且非垂直的直线或多边形边界时，或多或少会呈现锯齿状。这是由于直线或多边形边界在光栅显示器的对应图形都是由一系列相同亮度的离散像素构成的。这种用离散量表示连续量引起的失真，称为走样（aliasing）。&lt;/p>
+&lt;h3 id="反走样">&lt;a href="#%e5%8f%8d%e8%b5%b0%e6%a0%b7" class="header-anchor">&lt;/a>反走样
+&lt;/h3>&lt;p>用于减少和消除用离散量表示连续量引起的失真效果的技术，称为反走样。  &lt;/p>
+&lt;h3 id="窗口">&lt;a href="#%e7%aa%97%e5%8f%a3" class="header-anchor">&lt;/a>窗口
+&lt;/h3>&lt;p>世界坐标的范围是无限大的。为了使规格化设备坐标上所显示的世界坐标系中的物体有一个合适的范围与大小，必须首先对世界坐标系指定显示范围，它通常是一个矩形，这个矩形被称为窗口。  &lt;/p>
+&lt;h3 id="视区">&lt;a href="#%e8%a7%86%e5%8c%ba" class="header-anchor">&lt;/a>视区
+&lt;/h3>&lt;p>在规格化设备坐标系上也要指定一个矩形区域与窗口对应，显示窗口里的内容，这个矩形被称为视区。  &lt;/p>
+&lt;h3 id="坐标系统">&lt;a href="#%e5%9d%90%e6%a0%87%e7%b3%bb%e7%bb%9f" class="header-anchor">&lt;/a>坐标系统
+&lt;/h3>&lt;p>为了描述、分析、度量几何物体的大小、形状、位置、方向以及相互之间的各种关系使用的参考框架叫做坐标系统。  &lt;/p>
+&lt;h3 id="用户坐标系">&lt;a href="#%e7%94%a8%e6%88%b7%e5%9d%90%e6%a0%87%e7%b3%bb" class="header-anchor">&lt;/a>用户坐标系
+&lt;/h3>&lt;p>用户坐标系用户为处理自已的图形时所采用的坐标系，单位由用户自己决定。 &lt;/p>
+&lt;h3 id="规范化设备坐标系-1">&lt;a href="#%e8%a7%84%e8%8c%83%e5%8c%96%e8%ae%be%e5%a4%87%e5%9d%90%e6%a0%87%e7%b3%bb-1" class="header-anchor">&lt;/a>规范化设备坐标系
+&lt;/h3>&lt;p>将各个设备坐标系中的数据化为统一的数据范围从而得到的设备坐标系。  &lt;/p>
+&lt;h3 id="规格化变换">&lt;a href="#%e8%a7%84%e6%a0%bc%e5%8c%96%e5%8f%98%e6%8d%a2" class="header-anchor">&lt;/a>规格化变换
+&lt;/h3>&lt;p>图形软件根据窗口与视区的一一对应关系，自动实现从世界坐标到规格化设备坐标的转换，这种从窗口到视区的变换，称为规格化变换。&lt;/p>
+&lt;h2 id="算法分析题">&lt;a href="#%e7%ae%97%e6%b3%95%e5%88%86%e6%9e%90%e9%a2%98" class="header-anchor">&lt;/a>算法分析题
+&lt;/h2>&lt;h3 id="数值微分法">&lt;a href="#%e6%95%b0%e5%80%bc%e5%be%ae%e5%88%86%e6%b3%95" class="header-anchor">&lt;/a>数值微分法
+&lt;/h3>&lt;p>DDA算法称为数值微分画线算法，是根据直线的微分方程来画直线。根据斜率的偏移程度，决定是以x为步进方向还是以y为步进方向，然后在相应的步进方向上，步进向量每次增加一个像素，而另一个相关坐标变量也可根据斜率求出。&lt;/p>
+&lt;ol>
+&lt;li>求得根据直线斜率是否大于1求得dm=max(|△x|,|△y|)。&lt;/li>
+&lt;li>求得计长方向另一方向的变化步长。&lt;/li>
+&lt;li>根据计长方向变化为1及求得的另一方向变化步长，循环画点直到计长方向上达到dm结束。&lt;/li>
+&lt;/ol>
+&lt;h3 id="逐点比较法">&lt;a href="#%e9%80%90%e7%82%b9%e6%af%94%e8%be%83%e6%b3%95" class="header-anchor">&lt;/a>逐点比较法
+&lt;/h3>&lt;p>在绘图的过程中，把每画一笔(走一步)都和标准图形进行比较，然后  确定下一步的走向，用步步逼近的方法画出规定图形。&lt;/p>
+&lt;ol>
+&lt;li>设定在不同象限中的走步方向，原则上使逼近的误差最小且使走笔方向和画图的趋势一致。&lt;/li>
+&lt;li>从起点出发开始画线：开始抬笔到起点。&lt;/li>
+&lt;li>偏差计算：计算当前点相对于直线的位置偏差。
+&lt;ul>
+&lt;li>根据偏差判断公式计算。&lt;/li>
+&lt;li>根据递推公式计算。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>终点判断。
+&lt;ul>
+&lt;li>坐标判断：Xm≥Xa，Ym≥Ya&lt;/li>
+&lt;li>走步数控制：即单向步数和总步数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="bresenham算法">&lt;a href="#bresenham%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>Bresenham算法
+&lt;/h3>&lt;p>Bresenham算法是DDA算法的改进，是应用最广泛的直线生成算法，它采用加减与乘2运算（即移位运算来实现）。&lt;/p>
+&lt;p>过各行、各列像素中心构造一组虚拟网格线，按直线从起点到终点的顺序计算直线各垂直网格线的交点，然后确定该列像素中与此交点最近的像素。可以采用增量计算，使得对于每一列，只要检查一个误差项的符号，就可以确定该列所求的像素。&lt;/p>
+&lt;ol>
+&lt;li>直线起点赋予动点P(x,y)；&lt;/li>
+&lt;li>求端点坐标差：dx和dy；&lt;/li>
+&lt;li>求出循环总步数N，起点处的di的值；&lt;/li>
+&lt;li>循环计算中间插值点坐标：&lt;/li>
+&lt;/ol>
+&lt;p>若当前步数≥N，程序结束。否则：&lt;/p>
+&lt;ol>
+&lt;li>显示当前点P；&lt;/li>
+&lt;li>若di大于0，y坐标加1；&lt;/li>
+&lt;li>计算当前的di值；&lt;/li>
+&lt;li>x坐标加1。&lt;/li>
+&lt;/ol>
+&lt;h3 id="中点画线法">&lt;a href="#%e4%b8%ad%e7%82%b9%e7%94%bb%e7%ba%bf%e6%b3%95" class="header-anchor">&lt;/a>中点画线法
+&lt;/h3>&lt;p>中点画线法：假定直线斜率k在0~1之间，当前像素点为（xp，yp），则下一个像素点有两种可选择点P1（xp+1，yp）或p2（xp+1，yp+1）。若p1与p2的重点（xp+1，yp+0.5）称为M，Q为理想直线与x=xp+1垂线的交点，当M在Q的下方时，则取p2应为下一个像素点，当M在Q的上方时，则应取P1为下一个像素点，若M与Q重合，则P1或P2任取一点，其他斜率同理。&lt;/p>
+&lt;p>中点画线法的算法步骤：&lt;/p>
+&lt;ol>
+&lt;li>输入直线段的两个端点P1(x1, y1)和P2(x2, y2)，通过比较保证x1&amp;lt;x2。&lt;/li>
+&lt;li>初始化：dy，dx，d=dy+0.5dx，x=x1，y=y1，画点(x, y)，若-1&amp;lt;k&amp;lt;0，则x=x2，y=y2。&lt;/li>
+&lt;li>循环画点。
+&lt;ul>
+&lt;li>0≤k≤1&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>若x&amp;lt;x2，则执行下列各步，否则算法结束。&lt;/li>
+&lt;li>判断d的符号；若d&amp;lt;0，则(x, y)更新为(x+1, y+1)，d更新为d+a+b；否则(x, y)更新为(x+1, y)，d更新为d+a。&lt;/li>
+&lt;li>画点(x, y)。&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>1&amp;lt;k&amp;lt;0&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>若x&amp;gt;x1，则执行下列各步，否则算法结束。&lt;/li>
+&lt;li>判断d的符号；若d&amp;lt;0，则(x, y)更新为(x-1, y+1)，d更新为d-a+b；否则(x, y)更新为(x-1, y)，d更新为d-a。&lt;/li>
+&lt;li>画点(x, y)。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="简单种子填充算法">&lt;a href="#%e7%ae%80%e5%8d%95%e7%a7%8d%e5%ad%90%e5%a1%ab%e5%85%85%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>简单种子填充算法
+&lt;/h3>&lt;p>假设区域内一点已知，以此为种子。从该点出发，沿着区域连通的方向搜索与种子相邻且位于区域内的点，使其成为新种子，接着继续递归地搜索下去。若相邻的点不在区域内，即达到边界。&lt;/p>
+&lt;ol>
+&lt;li>确定边界和边界的属性；&lt;/li>
+&lt;li>确定区域填充的属性值；&lt;/li>
+&lt;li>测试区域内一点的属性值，判定其是否在填充区域内；且未被填充，&lt;/li>
+&lt;li>若在区域内且和边界的属性值不同，赋予填充属性，以此点为种子；&lt;/li>
+&lt;li>沿四连通(或八连通)方向，测试其它点；&lt;/li>
+&lt;li>每测试一个点都与边界属性比较，若不同，赋予填充属性；&lt;/li>
+&lt;li>若相同，即到达边界，然后转向另一种连通方向；&lt;/li>
+&lt;li>整个点的测试采用循环递归的方式实现。&lt;/li>
+&lt;/ol>
+&lt;h3 id="扫描线种子填充算法">&lt;a href="#%e6%89%ab%e6%8f%8f%e7%ba%bf%e7%a7%8d%e5%ad%90%e5%a1%ab%e5%85%85%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>扫描线种子填充算法
+&lt;/h3>&lt;p>用扫描线从上到下扫描由点线段构成的多段多边形。每根扫描线与多边形各边产生一系列交点。将交点按照x(或y)坐标进行分类，然后成对取出，作为两个端点，用填充颜色画水平直线。&lt;/p>
+&lt;p>当给定种子点时，首先填充种子点所在的扫描线上的位于给定区域的一个区段，然后确定与这一区段相通的上下两条扫描线上位于给定区域内的区段，并依次保存下来。反复这个过程，直到填充结束。&lt;/p>
+&lt;h3 id="扫描线算法">&lt;a href="#%e6%89%ab%e6%8f%8f%e7%ba%bf%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>扫描线算法
+&lt;/h3>&lt;p>利用区域的连续性、扫描线的连续性、边界连续性。&lt;/p>
+&lt;ol>
+&lt;li>把区域边界顶点按Y坐标排序；&lt;/li>
+&lt;li>确定扫描线的区间；&lt;/li>
+&lt;li>构建边界边的活性边表；&lt;/li>
+&lt;li>求交点，计算当前扫描线与多边形所有边的交点；&lt;/li>
+&lt;li>交点排序，把所有交点按x值递增顺序排序；&lt;/li>
+&lt;li>交点配对，排序后的交点两两配对成区间；&lt;/li>
+&lt;li>填充颜色，将各区间内的像素值设置为目标颜色值。&lt;/li>
+&lt;/ol>
+&lt;p>具体算法步骤如下：&lt;/p>
+&lt;ol>
+&lt;li>初始化边表ET：将多边形各条边按照该边的ymin值存放至ymin所对应的ET存储桶中。&lt;/li>
+&lt;li>初始化活动边表AET为空表。&lt;/li>
+&lt;li>将y值设置成为ET中所列的最小y值，即第一个非空存储桶的y值。&lt;/li>
+&lt;li>重复执行以下各步，直至AET和ET都为空：
+&lt;ol>
+&lt;li>当扫描线的y值开始大于或等于ET中某个y桶的值时，将该桶的所有结点加入到AET中（同时要从ET中删去），并将AET中的记录按x值排序。&lt;/li>
+&lt;li>对于扫描线y，在一对交点之间填充所需要的像素值。&lt;/li>
+&lt;li>删去AET中y&amp;gt;ymax的项。&lt;/li>
+&lt;li>更新AET中所有剩余结点的x值，用x+1/m代替x。（当一个结点是在本轮循环中才进入AET时，它记录的x值为xmin。）&lt;/li>
+&lt;li>对AET中的各结点按x值重新排序。&lt;/li>
+&lt;li>y增1后进入下一轮循环。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="直线编码裁剪算法">&lt;a href="#%e7%9b%b4%e7%ba%bf%e7%bc%96%e7%a0%81%e8%a3%81%e5%89%aa%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>直线编码裁剪算法
+&lt;/h3>&lt;p>把窗口边界延长分成9个区，每个区用四位二进制数进行编码，根据编码的值或逻辑运算进行位置判断。&lt;/p>
+&lt;ol>
+&lt;li>端点编码&lt;br>
+排位从左开始：第1位为1,端点在yT上,即y&amp;gt;yT，第2位为1,端点在yB下,即y&amp;lt;yB，第3位为1,端点在xR右,即x&amp;gt;xR，第4位为1,端点在xL左,即x&amp;lt;xL，否则，相应位置为0。&lt;/li>
+&lt;li>根据编码的值或逻辑运算进行位置判断。
+&lt;ol>
+&lt;li>如果线段两个端点的4位编码全为0，则此线段在窗口内，可直接输出；&lt;/li>
+&lt;li>若线段两端点的编码逻辑与（位乘）不为0，则线段全部在窗口之外，舍弃； &lt;/li>
+&lt;li>除上之外，线段与窗口有交点，求交点。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>求交过程
+&lt;ol>
+&lt;li>求直线与窗口边界的交点，用交点分割线段，舍弃交点以外部分&lt;/li>
+&lt;li>以交点为界进一步求交判断，并进行分割&lt;/li>
+&lt;li>剪的次序：按编码值；&lt;/li>
+&lt;li>结束标志：编码值全部为零。&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="外法线消隐算法">&lt;a href="#%e5%a4%96%e6%b3%95%e7%ba%bf%e6%b6%88%e9%9a%90%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>外法线消隐算法
+&lt;/h3>&lt;p>外法线消隐算法：用于平面立体消隐处理&lt;/p>
+&lt;p>任意平面立体消隐算法步骤：&lt;/p>
+&lt;ol>
+&lt;li>先求出表面的外法线，计算其投影方向上的方向余弦值cosa；&lt;/li>
+&lt;li>根据方向余弦值，进行可见性判断：cosa&amp;gt;0 朝前面；cosa≤0朝背面&lt;/li>
+&lt;li>对朝前面计算其表面的最大深度值；&lt;/li>
+&lt;li>计算朝前面的盒子角点坐标；&lt;/li>
+&lt;li>取出最大深度值的表面作为当前面;&lt;/li>
+&lt;li>循环计算其他表面和当前表面的遮挡关系；
+&lt;ol>
+&lt;li>提取表面的每一个边，判断和当前面的关系：完全挡住、完全未被挡住或部分挡住；&lt;/li>
+&lt;li>若完全挡住视为不可见边，做删除或改变线性处理；&lt;/li>
+&lt;li>若完全不被挡住，视为可见边，绘制该边；&lt;/li>
+&lt;li>若部分挡住，利用线段裁剪求出多边形之外的部分线段：可见线段，绘制；&lt;/li>
+&lt;li>对多边形之内的部分线段：不可见线段，作删除或改变线型处理&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="深度缓存消隐算法">&lt;a href="#%e6%b7%b1%e5%ba%a6%e7%bc%93%e5%ad%98%e6%b6%88%e9%9a%90%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>深度缓存消隐算法
+&lt;/h3>&lt;p>深度缓存消隐算法的基本思想是：将投影平面每个像素所对应的所有面片（平面或曲面）的深度进行比较，然后取离视线最近面片的属性值作为该像素的属性值。&lt;/p>
+&lt;p>初始时，深度缓冲器所有单元均设置为最小z值，帧缓冲器各单元均至为背景色，然后逐个处理多边形表中的各面片。每扫描一行，计算该行各像素点(x,y)所对应的深度值z(x,y)，并将深度与深度缓冲器中该像素单元所存储的深度值ZB(x,y)进行比较。&lt;/p>
+&lt;p>若Z&amp;gt;ZB(x,y)，则ZB(x,y)=z，同时将该像素的属性值I(x,y)写入帧缓冲器，即FB(x,y)=i(x,y)；否则不变。&lt;/p></description></item></channel></rss>

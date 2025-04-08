@@ -22,7 +22,7 @@ data-flex-basis="443px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-1.png"
 width="513"
 height="668"
 srcset="https://boiltask.com/knowledge/svn-revert/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-1_hu5800090339614270963.png 1024w"
@@ -31,7 +31,7 @@ class="gallery-image"
 data-flex-grow="76"
 data-flex-basis="184px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-2.png"
 width="463"
 height="669"
 srcset="https://boiltask.com/knowledge/svn-revert/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-2_hu3382273434000479264.png 1024w"
@@ -44,8 +44,8 @@ data-flex-basis="166px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -53,7 +53,7 @@ data-flex-basis="166px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-1.png"
 width="739"
 height="643"
 srcset="https://boiltask.com/knowledge/svn-revert/image-2-1_hu7913616928023097590.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-1_hu3570810554322645217.png 1024w"
@@ -62,7 +62,7 @@ class="gallery-image"
 data-flex-grow="114"
 data-flex-basis="275px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-2.png"
 width="739"
 height="643"
 srcset="https://boiltask.com/knowledge/svn-revert/image-2-2_hu12423358968747103432.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-2_hu14657691247748881992.png 1024w"
@@ -75,8 +75,8 @@ data-flex-basis="275px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -84,7 +84,7 @@ data-flex-basis="275px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-1.png"
 width="542"
 height="325"
 srcset="https://boiltask.com/knowledge/svn-revert/image-3-1_hu4042752106934293030.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-1_hu6134221852306643944.png 1024w"
@@ -93,7 +93,7 @@ class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="400px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-2.png"
 width="542"
 height="325"
 srcset="https://boiltask.com/knowledge/svn-revert/image-3-2_hu13332711233538001998.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-2_hu3975419756773525122.png 1024w"
@@ -106,8 +106,8 @@ data-flex-basis="400px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -128,7 +128,7 @@ data-flex-basis="400px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-1.png"
 width="513"
 height="668"
 srcset="https://boiltask.com/knowledge/svn-merge/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-1_hu5800090339614270963.png 1024w"
@@ -137,7 +137,7 @@ class="gallery-image"
 data-flex-grow="76"
 data-flex-basis="184px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-2.png"
 width="463"
 height="669"
 srcset="https://boiltask.com/knowledge/svn-merge/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-2_hu3382273434000479264.png 1024w"
@@ -150,8 +150,8 @@ data-flex-basis="166px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -159,7 +159,7 @@ data-flex-basis="166px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-1.png"
 width="739"
 height="709"
 srcset="https://boiltask.com/knowledge/svn-merge/image-2-1_hu2448058881704012729.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-1_hu6349847887146610289.png 1024w"
@@ -168,7 +168,7 @@ class="gallery-image"
 data-flex-grow="104"
 data-flex-basis="250px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-2.png"
 width="739"
 height="709"
 srcset="https://boiltask.com/knowledge/svn-merge/image-2-2_hu5936312556644352570.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-2_hu13759128226647644493.png 1024w"
@@ -181,8 +181,8 @@ data-flex-basis="250px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -217,7 +217,7 @@ data-flex-basis="426px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-1.png"
 width="934"
 height="736"
 srcset="https://boiltask.com/knowledge/svn-merge/image-4-1_hu15080479352377242366.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-1_hu12123394260900880120.png 1024w"
@@ -226,7 +226,7 @@ class="gallery-image"
 data-flex-grow="126"
 data-flex-basis="304px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-2.png"
 width="825"
 height="644"
 srcset="https://boiltask.com/knowledge/svn-merge/image-4-2_hu10406064931226753947.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-2_hu4719651788656351657.png 1024w"
@@ -239,8 +239,8 @@ data-flex-basis="307px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -249,7 +249,7 @@ data-flex-basis="307px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-1.png"
 width="934"
 height="736"
 srcset="https://boiltask.com/knowledge/svn-merge/image-5-1_hu16162010147720784187.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-1_hu6663661471441733664.png 1024w"
@@ -258,7 +258,7 @@ class="gallery-image"
 data-flex-grow="126"
 data-flex-basis="304px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-2.png"
 width="762"
 height="520"
 srcset="https://boiltask.com/knowledge/svn-merge/image-5-2_hu796579267384435703.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-2_hu4171343192513218924.png 1024w"
@@ -271,8 +271,8 @@ data-flex-basis="351px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>SVN切分支</title><link>https://boiltask.com/knowledge/svn-switch-branch/</link><pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-switch-branch/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
@@ -283,7 +283,7 @@ data-flex-basis="351px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png"
 width="503"
 height="679"
 srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu5935501871532154894.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu18384966433410811196.png 1024w"
@@ -292,7 +292,7 @@ class="gallery-image"
 data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png"
 width="473"
 height="671"
 srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu9041463599554812067.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu10133542670804154133.png 1024w"
@@ -305,8 +305,8 @@ data-flex-basis="169px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -314,7 +314,7 @@ data-flex-basis="169px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png"
 width="616"
 height="370"
 srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu15041769225168938241.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu10398778729252334580.png 1024w"
@@ -323,7 +323,7 @@ class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="399px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png"
 width="616"
 height="370"
 srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu16988809227071996878.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu18341031616397604144.png 1024w"
@@ -336,8 +336,8 @@ data-flex-basis="399px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -384,7 +384,7 @@ data-flex-basis="399px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-1.png"
 width="720"
 height="815"
 srcset="https://boiltask.com/knowledge/svn-lock/image-1-1_hu10613403118535043628.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-1_hu6518781224494017334.png 1024w"
@@ -393,7 +393,7 @@ class="gallery-image"
 data-flex-grow="88"
 data-flex-basis="212px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-2.png"
 width="700"
 height="811"
 srcset="https://boiltask.com/knowledge/svn-lock/image-1-2_hu11167061833332973397.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-2_hu5297745458006572602.png 1024w"
@@ -406,8 +406,8 @@ data-flex-basis="207px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -415,7 +415,7 @@ data-flex-basis="207px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-1.png"
 width="532"
 height="571"
 srcset="https://boiltask.com/knowledge/svn-lock/image-2-1_hu8531832550648001071.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-1_hu11409514016090496122.png 1024w"
@@ -424,7 +424,7 @@ class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="223px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-2.png"
 width="532"
 height="571"
 srcset="https://boiltask.com/knowledge/svn-lock/image-2-2_hu12740665712511142850.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-2_hu4614013570268702220.png 1024w"
@@ -437,8 +437,8 @@ data-flex-basis="223px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -447,7 +447,7 @@ data-flex-basis="223px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-1.png"
 width="662"
 height="785"
 srcset="https://boiltask.com/knowledge/svn-lock/image-3-1_hu11020575163933948961.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-1_hu18133542715937806061.png 1024w"
@@ -456,7 +456,7 @@ class="gallery-image"
 data-flex-grow="84"
 data-flex-basis="202px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-2.png"
 width="467"
 height="682"
 srcset="https://boiltask.com/knowledge/svn-lock/image-3-2_hu1891260429824521828.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-2_hu8134180997390071011.png 1024w"
@@ -469,8 +469,8 @@ data-flex-basis="164px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -478,7 +478,7 @@ data-flex-basis="164px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-1.png"
 width="1067"
 height="539"
 srcset="https://boiltask.com/knowledge/svn-lock/image-4-1_hu2078220766911598252.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-1_hu5893435162189683820.png 1024w"
@@ -487,7 +487,7 @@ class="gallery-image"
 data-flex-grow="197"
 data-flex-basis="475px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-2.png"
 width="1052"
 height="486"
 srcset="https://boiltask.com/knowledge/svn-lock/image-4-2_hu9452001396821168688.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-2_hu15983604767246758065.png 1024w"
@@ -500,8 +500,8 @@ data-flex-basis="519px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -511,7 +511,7 @@ data-flex-basis="519px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-1.png"
 width="751"
 height="817"
 srcset="https://boiltask.com/knowledge/svn-lock/image-5-1_hu5099334325101817976.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-1_hu5642565465813555531.png 1024w"
@@ -520,7 +520,7 @@ class="gallery-image"
 data-flex-grow="91"
 data-flex-basis="220px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-2.png"
 width="609"
 height="825"
 srcset="https://boiltask.com/knowledge/svn-lock/image-5-2_hu9117771135428803543.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-2_hu1966502865403730667.png 1024w"
@@ -533,8 +533,8 @@ data-flex-basis="177px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -543,7 +543,7 @@ data-flex-basis="177px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-1.png"
 width="721"
 height="718"
 srcset="https://boiltask.com/knowledge/svn-lock/image-6-1_hu15927409771865917671.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-1_hu3466397071656374398.png 1024w"
@@ -552,7 +552,7 @@ class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="241px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-2.png"
 width="704"
 height="741"
 srcset="https://boiltask.com/knowledge/svn-lock/image-6-2_hu8657624855487578581.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-2_hu4463349718507782490.png 1024w"
@@ -565,8 +565,8 @@ data-flex-basis="228px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -575,7 +575,7 @@ data-flex-basis="228px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-1.png"
 width="762"
 height="576"
 srcset="https://boiltask.com/knowledge/svn-lock/image-7-1_hu3035808876713423987.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-1_hu14456454763541704663.png 1024w"
@@ -584,7 +584,7 @@ class="gallery-image"
 data-flex-grow="132"
 data-flex-basis="317px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-2.png"
 width="762"
 height="576"
 srcset="https://boiltask.com/knowledge/svn-lock/image-7-2_hu1440869857335182607.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-2_hu14985938029990149709.png 1024w"
@@ -597,8 +597,8 @@ data-flex-basis="317px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -612,7 +612,7 @@ data-flex-basis="317px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-1.png"
 width="532"
 height="571"
 srcset="https://boiltask.com/knowledge/svn-lock/image-8-1_hu9999446847589336692.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-1_hu17502981096254089608.png 1024w"
@@ -621,7 +621,7 @@ class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="223px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-2.png"
 width="532"
 height="571"
 srcset="https://boiltask.com/knowledge/svn-lock/image-8-2_hu3855568038762477466.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-2_hu8904183885368462120.png 1024w"
@@ -634,8 +634,8 @@ data-flex-basis="223px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -681,36 +681,36 @@ data-flex-basis="630px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>字段&lt;/th>
-&lt;th>说明&lt;/th>
-&lt;th>示例&lt;/th>
+&lt;th style="text-align: left">字段&lt;/th>
+&lt;th style="text-align: left">说明&lt;/th>
+&lt;th style="text-align: left">示例&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>Provider&lt;/td>
-&lt;td>使用的版本控制系统&lt;/td>
-&lt;td>Subversion&lt;/td>
+&lt;td style="text-align: left">Provider&lt;/td>
+&lt;td style="text-align: left">使用的版本控制系统&lt;/td>
+&lt;td style="text-align: left">Subversion&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Repository&lt;/td>
-&lt;td>仓库的链接&lt;/td>
-&lt;td>http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
+&lt;td style="text-align: left">Repository&lt;/td>
+&lt;td style="text-align: left">仓库的链接&lt;/td>
+&lt;td style="text-align: left">http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>User Name&lt;/td>
-&lt;td>用户名&lt;/td>
-&lt;td>***&lt;/td>
+&lt;td style="text-align: left">User Name&lt;/td>
+&lt;td style="text-align: left">用户名&lt;/td>
+&lt;td style="text-align: left">***&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Labels Directory&lt;/td>
-&lt;td>仓库子路径，比如主干、某一分支等&lt;/td>
-&lt;td>trunk&lt;/td>
+&lt;td style="text-align: left">Labels Directory&lt;/td>
+&lt;td style="text-align: left">仓库子路径，比如主干、某一分支等&lt;/td>
+&lt;td style="text-align: left">trunk&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Password&lt;/td>
-&lt;td>用户密码&lt;/td>
-&lt;td>abcdefg123465&lt;/td>
+&lt;td style="text-align: left">Password&lt;/td>
+&lt;td style="text-align: left">用户密码&lt;/td>
+&lt;td style="text-align: left">abcdefg123465&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -753,26 +753,26 @@ data-flex-basis="153px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>字段&lt;/th>
-&lt;th>说明&lt;/th>
+&lt;th style="text-align: left">字段&lt;/th>
+&lt;th style="text-align: left">说明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>CheckOut&lt;/td>
-&lt;td>CheckOut资产，对应前文的锁定&lt;/td>
+&lt;td style="text-align: left">CheckOut&lt;/td>
+&lt;td style="text-align: left">CheckOut资产，对应前文的锁定&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Refresh&lt;/td>
-&lt;td>刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
+&lt;td style="text-align: left">Refresh&lt;/td>
+&lt;td style="text-align: left">刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>History&lt;/td>
-&lt;td>打开资产的版本历史&lt;/td>
+&lt;td style="text-align: left">History&lt;/td>
+&lt;td style="text-align: left">打开资产的版本历史&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Diff Against Depot&lt;/td>
-&lt;td>对比资产与仓库中的最新版本&lt;/td>
+&lt;td style="text-align: left">Diff Against Depot&lt;/td>
+&lt;td style="text-align: left">对比资产与仓库中的最新版本&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -830,7 +830,7 @@ data-flex-basis="290px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-1.png"
 width="529"
 height="671"
 srcset="https://boiltask.com/ue/blueprint-diff/image-1-1_hu931231083575383090.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-1_hu8413650250640421566.png 1024w"
@@ -839,7 +839,7 @@ class="gallery-image"
 data-flex-grow="78"
 data-flex-basis="189px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-2.png"
 width="531"
 height="670"
 srcset="https://boiltask.com/ue/blueprint-diff/image-1-2_hu8306830521440157681.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-2_hu16558079487976017727.png 1024w"
@@ -852,8 +852,8 @@ data-flex-basis="190px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -861,7 +861,7 @@ data-flex-basis="190px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-1.png"
 width="787"
 height="548"
 srcset="https://boiltask.com/ue/blueprint-diff/image-2-1_hu6339352627954773920.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-1_hu10151811338044199093.png 1024w"
@@ -870,7 +870,7 @@ class="gallery-image"
 data-flex-grow="143"
 data-flex-basis="344px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-2.png"
 width="773"
 height="541"
 srcset="https://boiltask.com/ue/blueprint-diff/image-2-2_hu2978232850679557358.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-2_hu2189535122315424647.png 1024w"
@@ -883,8 +883,8 @@ data-flex-basis="342px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -892,7 +892,7 @@ data-flex-basis="342px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-1.png"
 width="560"
 height="439"
 srcset="https://boiltask.com/ue/blueprint-diff/image-3-1_hu4389140594183622692.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-1_hu16494318166475559831.png 1024w"
@@ -901,7 +901,7 @@ class="gallery-image"
 data-flex-grow="127"
 data-flex-basis="306px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-2.png"
 width="560"
 height="439"
 srcset="https://boiltask.com/ue/blueprint-diff/image-3-2_hu6070286475696118969.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-2_hu9829776246806890933.png 1024w"
@@ -914,8 +914,8 @@ data-flex-basis="306px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -923,7 +923,7 @@ data-flex-basis="306px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-1.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-1.png"
 width="777"
 height="180"
 srcset="https://boiltask.com/ue/blueprint-diff/image-4-1_hu16880563065039948167.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-1_hu12904495106932811181.png 1024w"
@@ -932,7 +932,7 @@ class="gallery-image"
 data-flex-grow="431"
 data-flex-basis="1036px"
 >&lt;/th>
-&lt;th>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-2.png"
+&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-2.png"
 width="777"
 height="180"
 srcset="https://boiltask.com/ue/blueprint-diff/image-4-2_hu135614488466320865.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-2_hu1553581432799812078.png 1024w"
@@ -945,8 +945,8 @@ data-flex-basis="1036px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>英文版&lt;/td>
-&lt;td>中文版&lt;/td>
+&lt;td style="text-align: left">英文版&lt;/td>
+&lt;td style="text-align: left">中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>

@@ -26,21 +26,21 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>A╲B&lt;/th>
-&lt;th>坦白&lt;/th>
-&lt;th>抵赖&lt;/th>
+&lt;th style="text-align: left">A╲B&lt;/th>
+&lt;th style="text-align: left">坦白&lt;/th>
+&lt;th style="text-align: left">抵赖&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>坦白&lt;/td>
-&lt;td>-8，-8&lt;/td>
-&lt;td>0，-10&lt;/td>
+&lt;td style="text-align: left">坦白&lt;/td>
+&lt;td style="text-align: left">-8，-8&lt;/td>
+&lt;td style="text-align: left">0，-10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>抵赖&lt;/td>
-&lt;td>-10，0&lt;/td>
-&lt;td>-1，-1&lt;/td>
+&lt;td style="text-align: left">抵赖&lt;/td>
+&lt;td style="text-align: left">-10，0&lt;/td>
+&lt;td style="text-align: left">-1，-1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -410,7 +410,7 @@ $$&lt;p>秘密的重要性，是与其表面上看起来无辜的程度及其完
 &lt;p>我们有两种不同的方式来实践MDA。&lt;/p>
 &lt;p>第一种方式，游戏设计师以定义在游戏中想要达到的体验效果作为设计流程的开始，然后确定要达到这样的体验效果玩家需要参与什么样的游戏运行过程，最终再为这样的运行过程设置游戏的机制。&lt;/p>
 &lt;p>第二种方式，玩家反向体验MDA的3个要素并且首先与游戏机制进行互动，这些机制会带来特定的游戏运行，而这又将让玩家产生特定的体验。&lt;/p>
-&lt;p>MDA只是在游戏中达到创造特定情绪反应效果的一个方法，它有它的局限性。&lt;/p></description></item><item><title>算法竞赛入门经典(6) – 关于for循环中定义变量的后续讨论</title><link>https://boiltask.com/notes/competitive-programming/8/</link><pubDate>Tue, 12 Jan 2016 14:32:38 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/8/</guid><description>&lt;p>想想除了看书时之外&lt;br>
+&lt;p>MDA只是在游戏中达到创造特定情绪反应效果的一个方法，它有它的局限性。&lt;/p></description></item><item><title>算法竞赛入门经典(8) – 关于for循环中定义变量的后续讨论</title><link>https://boiltask.com/notes/competitive-programming/8/</link><pubDate>Tue, 12 Jan 2016 14:32:38 +0800</pubDate><guid>https://boiltask.com/notes/competitive-programming/8/</guid><description>&lt;p>想想除了看书时之外&lt;br>
 有时也会幸运地有点想法&lt;br>
 所以再开一个类别来记录吧~&lt;br>
 在下希望这个分类下的博文越多越好 -.-&lt;/p>
