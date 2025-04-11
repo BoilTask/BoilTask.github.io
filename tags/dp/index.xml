@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>动态规划 on BoilTask's Blog</title><link>https://boiltask.com/tags/dp/</link><description>Recent content in 动态规划 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 02 Sep 2016 03:16:15 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/dp/index.xml" rel="self" type="application/rss+xml"/><item><title>【郑轻】[1837]LT说我不服</title><link>https://boiltask.com/oj/zzuli/1837/</link><pubDate>Fri, 02 Sep 2016 03:16:15 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1837/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 LT说我不服
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -105,14 +102,12 @@ LT说我不服
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1837" target="_blank" rel="noopener"
 >【郑轻】[1837]LT说我不服&lt;/a>&lt;/p></description></item><item><title>【SDUT】[2146]最小子序列和</title><link>https://boiltask.com/oj/zzuli/2146/</link><pubDate>Fri, 02 Sep 2016 02:40:05 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/2146/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
-&lt;/div>
-&lt;div style="text-align: right;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://acm.sdut.edu.cn/onlinejudge3/problems/2146' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;a class="dida-open-link-icon" href='https://acm.sdut.edu.cn/onlinejudge3/problems/2146' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
 &lt;/div>
 &lt;/div>
 &lt;div>
@@ -180,45 +175,38 @@ LT说我不服
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote>
-&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>
-&lt;/blockquote>
+&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>&lt;/blockquote>
 &lt;p>背包问题如果没有认真理解的话，第一种思路应该会往贪心的方面思考。&lt;/p>
 &lt;p>比如先以物品贵重程度排序，先选比较贵重的。&lt;br>
 然而对于数据:&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 3&lt;br>
 v = （2，2，3）&lt;br>
-w = （1，2，3）&lt;/p>
-&lt;/blockquote>
+w = （1，2，3）&lt;/p>&lt;/blockquote>
 &lt;p>按照先选贵重物品的策略，会先选择价值为3的那个，并且背包装满了，但是如果我们选取前两个物品，总价值可以达到4。&lt;/p>
 &lt;p>如果按照性价比排序：&lt;br>
 对于数据&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 7&lt;br>
 v = （2，3，4）&lt;br>
-w = （3，4，5）&lt;/p>
-&lt;/blockquote>
+w = （3，4，5）&lt;/p>&lt;/blockquote>
 &lt;p>按这种方法因为2/3 &amp;lt; 3/4 &amp;lt; 4 / 5，我们先选择第三件物品，但是选了它之后别的东西放不下了！总价值是4，但如果我们选择前两件物品可以拿到总价值5。&lt;/p>
 &lt;p>造成这种现象的原因是贪心的原则为：通过每一步的最优解推导出整体的最优解，然而对于背包问题，因为每一步取或者不取的最优解取决于整体，也就是“动态”的。所以，背包问题成为了一个经典的动态规划问题。&lt;/p>
 &lt;p>再看一道部分背包问题&lt;/p>
 &lt;blockquote>
-&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>
-&lt;/blockquote>
+&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>&lt;/blockquote>
 &lt;p>这一题便是贪心问题，因为我们可以一直选性价比高的直到填满，所以是否贪心取决于每种物品是否只取走一部分。&lt;/p>
 &lt;p>而背包问题又衍生出了很多变形，动态规划的方法也不尽相同，所以需要多加练习才能掌握这一题型。&lt;/p>
 &lt;p>参考文章：&lt;br>
 51NOD&lt;br>
 百度知道&lt;br>
 百度文库&lt;/p></description></item><item><title>【杭电】[1466]计算直线的交点数</title><link>https://boiltask.com/oj/hdu/1466/</link><pubDate>Mon, 08 Aug 2016 15:38:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1466/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 计算直线的交点数
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1466 target="_blank">[hdu-1466]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3210787742804115 target="_blank">[3210787742804115]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -285,15 +273,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【郑轻】[1895]985的0-1串难题</title><link>https://boiltask.com/oj/zzuli/1895/</link><pubDate>Wed, 03 Aug 2016 20:09:30 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1895/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的0-1串难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -421,15 +406,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址：&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1895" target="_blank" rel="noopener"
 >[1895]985的0-1串难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1894]985的方格难题</title><link>https://boiltask.com/oj/zzuli/1894/</link><pubDate>Wed, 03 Aug 2016 19:42:27 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1894/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的方格难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -541,15 +523,12 @@ dp[i][j] = -1 表明该位置未被访问，直接暴力转移就可以啦。&lt
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1894" target="_blank" rel="noopener"
 >【郑轻】[1894]985的方格难题&lt;/a>&lt;/p></description></item><item><title>【POJ】[3176]Cow Bowling</title><link>https://boiltask.com/oj/poj/3176/</link><pubDate>Thu, 28 Jul 2016 09:56:15 +0800</pubDate><guid>https://boiltask.com/oj/poj/3176/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Cow Bowling
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-3176 target="_blank">[poj-3176]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3160173745385710 target="_blank">[3160173745385710]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

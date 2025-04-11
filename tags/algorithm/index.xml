@@ -6,30 +6,26 @@
 >加权随机采样 | HCigmoid&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://coolcao.com/2023/07/07/%E5%89%8D%E7%BC%80%E5%92%8C%E5%BA%94%E7%94%A8%E4%B9%8B%E7%94%9F%E6%88%90%E5%8A%A0%E6%9D%83%E9%9A%8F%E6%9C%BA%E6%95%B0/" target="_blank" rel="noopener"
 >前缀和应用之生成加权随机数 | coolcao的小站&lt;/a>&lt;/p></description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote>
-&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>
-&lt;/blockquote>
+&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>&lt;/blockquote>
 &lt;p>背包问题如果没有认真理解的话，第一种思路应该会往贪心的方面思考。&lt;/p>
 &lt;p>比如先以物品贵重程度排序，先选比较贵重的。&lt;br>
 然而对于数据:&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 3&lt;br>
 v = （2，2，3）&lt;br>
-w = （1，2，3）&lt;/p>
-&lt;/blockquote>
+w = （1，2，3）&lt;/p>&lt;/blockquote>
 &lt;p>按照先选贵重物品的策略，会先选择价值为3的那个，并且背包装满了，但是如果我们选取前两个物品，总价值可以达到4。&lt;/p>
 &lt;p>如果按照性价比排序：&lt;br>
 对于数据&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 7&lt;br>
 v = （2，3，4）&lt;br>
-w = （3，4，5）&lt;/p>
-&lt;/blockquote>
+w = （3，4，5）&lt;/p>&lt;/blockquote>
 &lt;p>按这种方法因为2/3 &amp;lt; 3/4 &amp;lt; 4 / 5，我们先选择第三件物品，但是选了它之后别的东西放不下了！总价值是4，但如果我们选择前两件物品可以拿到总价值5。&lt;/p>
 &lt;p>造成这种现象的原因是贪心的原则为：通过每一步的最优解推导出整体的最优解，然而对于背包问题，因为每一步取或者不取的最优解取决于整体，也就是“动态”的。所以，背包问题成为了一个经典的动态规划问题。&lt;/p>
 &lt;p>再看一道部分背包问题&lt;/p>
 &lt;blockquote>
-&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>
-&lt;/blockquote>
+&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>&lt;/blockquote>
 &lt;p>这一题便是贪心问题，因为我们可以一直选性价比高的直到填满，所以是否贪心取决于每种物品是否只取走一部分。&lt;/p>
 &lt;p>而背包问题又衍生出了很多变形，动态规划的方法也不尽相同，所以需要多加练习才能掌握这一题型。&lt;/p>
 &lt;p>参考文章：&lt;br>
@@ -174,8 +170,7 @@ N台计算机K个任务，各个计算机可以处理的任务种类不同，最
 &lt;a class="link" href="http://blog.csdn.net/dark_scope/article/details/8880547" target="_blank" rel="noopener"
 >趣写算法系列之–匈牙利算法&lt;/a>&lt;/p></description></item><item><title>欧拉函数——小于n的数中与n互质数的数目</title><link>https://boiltask.com/knowledge/eulers-totient-function/</link><pubDate>Sat, 26 Mar 2016 08:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/eulers-totient-function/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;blockquote>
-&lt;p>在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p>
-&lt;/blockquote>
+&lt;p>在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p>&lt;/blockquote>
 &lt;h2 id="性质">&lt;a href="#%e6%80%a7%e8%b4%a8" class="header-anchor">&lt;/a>性质
 &lt;/h2>&lt;p>$\varphi \left( x\right) =x\left( 1-\dfrac{1}{p_{1}}\right) \left( 1-\dfrac{1}{p_{2}}\right) \ldots \left( 1-\dfrac{1}{p_{n}}\right)$&lt;/p>
 &lt;p>若n是质数p的k次幂&lt;/p>
@@ -279,8 +274,7 @@ n 个不同元素的一个错排可由下述两个步骤完成：&lt;br>
 2、 k 号元素不排第 1 个位置，这时可将第 1 个位置“看成”第 k 个位置(也就是说本来准备放到k位置为元素，可以放到1位置中),于是形成（包括 k 号元素在内的） n - 1 个元素的“错排”，有 f(n - 1) 种方法。据加法原理，完成第二步共有 f(n - 2)+f(n - 1) 种方法。&lt;br>
 根据乘法原理， n 个不同元素的错排种数&lt;br>
 f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
-证毕。&lt;/p>
-&lt;/blockquote></description></item><item><title>最小生成树——所有点成树有最小总权和</title><link>https://boiltask.com/knowledge/minimum-spanning-tree/</link><pubDate>Sat, 20 Feb 2016 00:16:16 +0800</pubDate><guid>https://boiltask.com/knowledge/minimum-spanning-tree/</guid><description>&lt;h2 id="问题介绍">&lt;a href="#%e9%97%ae%e9%a2%98%e4%bb%8b%e7%bb%8d" class="header-anchor">&lt;/a>问题介绍
+证毕。&lt;/p>&lt;/blockquote></description></item><item><title>最小生成树——所有点成树有最小总权和</title><link>https://boiltask.com/knowledge/minimum-spanning-tree/</link><pubDate>Sat, 20 Feb 2016 00:16:16 +0800</pubDate><guid>https://boiltask.com/knowledge/minimum-spanning-tree/</guid><description>&lt;h2 id="问题介绍">&lt;a href="#%e9%97%ae%e9%a2%98%e4%bb%8b%e7%bb%8d" class="header-anchor">&lt;/a>问题介绍
 &lt;/h2>&lt;p>一个无向图，如果某个子图中任意两个定点都互相连通并且是一棵树，那么这棵树就叫做生成树。如果边上有权值，那么使得边权和最小的生成树叫做最小生成树。&lt;/p>
 &lt;h2 id="常用算法">&lt;a href="#%e5%b8%b8%e7%94%a8%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>常用算法
 &lt;/h2>&lt;h3 id="prim算法">&lt;a href="#prim%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>Prim算法
@@ -303,16 +297,14 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 >【坐在马桶上看算法】算法7：Dijkstra最短路算法&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>我们发现dis[3]=12，dis[2]+e[2][3]=1+9=10，dis[3]&amp;gt;dis[2]+e[2][3]，因此dis[3]要更新为10。这个过程有个专业术语叫做“松弛”。即1号顶点到3号顶点的路程即dis[3]，通过2-&amp;gt;3这条边松弛成功。这便是Dijkstra算法的主要思想：通过“边”来松弛1号顶点到其余各个顶点的路程。&lt;br>
-每次找到离源点（上面例子的源点就是1号顶点）最近的一个顶点，然后以该顶点为中心进行扩展，最终得到源点到其余所有点的最短路径。&lt;/p>
-&lt;/blockquote>
+每次找到离源点（上面例子的源点就是1号顶点）最近的一个顶点，然后以该顶点为中心进行扩展，最终得到源点到其余所有点的最短路径。&lt;/p>&lt;/blockquote>
 &lt;h2 id="任意两点间的最短路问题">&lt;a href="#%e4%bb%bb%e6%84%8f%e4%b8%a4%e7%82%b9%e9%97%b4%e7%9a%84%e6%9c%80%e7%9f%ad%e8%b7%af%e9%97%ae%e9%a2%98" class="header-anchor">&lt;/a>任意两点间的最短路问题
 &lt;/h2>&lt;p>求解所有两点间的最短路的问题&lt;/p>
 &lt;h3 id="floyd-warshall算法">&lt;a href="#floyd-warshall%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>Floyd-Warshall算法
 &lt;/h3>&lt;p>&lt;a class="link" href="http://ahalei.blog.51cto.com/4767671/1383613" target="_blank" rel="noopener"
 >坐在马桶上看算法：只有五行的Floyd最短路算法&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>最开始只允许经过1号顶点进行中转，接下来只允许经过1和2号顶点进行中转……允许经过1~n号所有顶点进行中转，求任意两点之间的最短路程。用一句话概括就是：从i号顶点到j号顶点只经过前k号点的最短路程。&lt;/p>
-&lt;/blockquote>
+&lt;p>最开始只允许经过1号顶点进行中转，接下来只允许经过1和2号顶点进行中转……允许经过1~n号所有顶点进行中转，求任意两点之间的最短路程。用一句话概括就是：从i号顶点到j号顶点只经过前k号点的最短路程。&lt;/p>&lt;/blockquote>
 &lt;p>参考文章:&lt;br>
 《挑战程序设计竞赛》&lt;br>
 &lt;a class="link" href="http://developer.51cto.com/art/201403/433874.htm" target="_blank" rel="noopener"
@@ -323,8 +315,7 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 不过这个肯定不会是一次就写好哒~哈哈哈 慢慢补充&lt;/p>
 &lt;h2 id="并查集算法产生的原因意义">&lt;a href="#%e5%b9%b6%e6%9f%a5%e9%9b%86%e7%ae%97%e6%b3%95%e4%ba%a7%e7%94%9f%e7%9a%84%e5%8e%9f%e5%9b%a0%e6%84%8f%e4%b9%89" class="header-anchor">&lt;/a>并查集算法产生的原因(意义)
 &lt;/h2>&lt;blockquote>
-&lt;p>在一些有N个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。这一类问题近几年来反复出现在信息学的国际国内赛题中，其特点是看似并不复杂，但数据量极大，若用正常的数据结构来描述的话，往往在空间上过大，计算机无法承受；即使在空间上勉强通过，运行的时间复杂度也极高，根本就不可能在比赛规定的运行时间（1～3秒）内计算出试题需要的结果，只能用并查集来描述。&lt;/p>
-&lt;/blockquote>
+&lt;p>在一些有N个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。这一类问题近几年来反复出现在信息学的国际国内赛题中，其特点是看似并不复杂，但数据量极大，若用正常的数据结构来描述的话，往往在空间上过大，计算机无法承受；即使在空间上勉强通过，运行的时间复杂度也极高，根本就不可能在比赛规定的运行时间（1～3秒）内计算出试题需要的结果，只能用并查集来描述。&lt;/p>&lt;/blockquote>
 &lt;p>并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。&lt;br>
 也就是对于一些集合之间的相连关系的描述&lt;/p>
 &lt;h2 id="并查集算法的操作能做什么">&lt;a href="#%e5%b9%b6%e6%9f%a5%e9%9b%86%e7%ae%97%e6%b3%95%e7%9a%84%e6%93%8d%e4%bd%9c%e8%83%bd%e5%81%9a%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>并查集算法的操作(能做什么)
@@ -345,8 +336,7 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 &lt;/h2>&lt;p>最简单的例题:&lt;/p>
 &lt;blockquote>
 &lt;p>若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。
-规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。&lt;/p>
-&lt;/blockquote>
+规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。&lt;/p>&lt;/blockquote>
 &lt;p>根据给出的对应关系求出给定两人是否有亲戚关系&lt;br>
 此时便涉及到&lt;br>
 对集合的合并(合并有亲戚关系的集合)&lt;br>
@@ -373,8 +363,7 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 &lt;p>参考资料:&lt;br>
 《挑战程序设计竞赛》&lt;br>
 并查集 - 百度百科&lt;/p></description></item><item><title>算法是一种思维</title><link>https://boiltask.com/record/201601131/</link><pubDate>Wed, 13 Jan 2016 17:50:13 +0800</pubDate><guid>https://boiltask.com/record/201601131/</guid><description>&lt;blockquote>
-&lt;p>算法是一种思维。&lt;/p>
-&lt;/blockquote>
+&lt;p>算法是一种思维。&lt;/p>&lt;/blockquote>
 &lt;h2 id="前情提要">&lt;a href="#%e5%89%8d%e6%83%85%e6%8f%90%e8%a6%81" class="header-anchor">&lt;/a>前情提要
 &lt;/h2>&lt;p>在下这段时间对算法的理解应该要归结于这样一句话&lt;br>
 大胆假设 小心论证嘛&lt;/p>
@@ -383,8 +372,7 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 百度百科是这样说的&lt;/p>
 &lt;blockquote>
 &lt;p>贪心算法（又称贪婪算法）是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的是在某种意义上的局部最优解。&lt;br>
-贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。&lt;/p>
-&lt;/blockquote>
+贪心算法不是对所有问题都能得到整体最优解，关键是贪心策略的选择，选择的贪心策略必须具备无后效性，即某个状态以前的过程不会影响以后的状态，只与当前状态有关。&lt;/p>&lt;/blockquote>
 &lt;p>当时其实对这种说法还是一知半解的(现在好像也是)&lt;br>
 所以对算法到底是什么 一直得不到一个明确的答案&lt;/p>
 &lt;p>在想明白之前&lt;br>
@@ -400,7 +388,7 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 &lt;/h2>&lt;p>&lt;img src="https://boiltask.com/record/201601131/image-1.png"
 width="454"
 height="243"
-srcset="https://boiltask.com/record/201601131/image-1_hu14165651076081031719.png 480w, https://boiltask.com/record/201601131/image-1_hu4526142107156098700.png 1024w"
+srcset="https://boiltask.com/record/201601131/image-1_hu_43bd7bb407e7775c.png 480w, https://boiltask.com/record/201601131/image-1_hu_89eccccb31eeca16.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="186"
@@ -424,8 +412,7 @@ data-flex-basis="448px"
 从这一题&lt;br>
 在下第一次知道闰年并不是严格的四年一次&lt;/p>
 &lt;blockquote>
-&lt;p>一个回归年不是365天,而是365天5小时48分46秒,多出的时间就会累积起来,新年就会后移,所以每隔四年就设一个闰年,这一年的二月改为29天.这样,闰年就有366天.但是,这样每一百年又差不多多了一天,所以又规定&amp;quot;百年&amp;quot;不设闰,即&amp;quot;百年24闰&amp;quot;.但百年扣一天闰还是不刚好,于是又规定,公元年数为400倍数者设闰.&lt;/p>
-&lt;/blockquote>
+&lt;p>一个回归年不是365天,而是365天5小时48分46秒,多出的时间就会累积起来,新年就会后移,所以每隔四年就设一个闰年,这一年的二月改为29天.这样,闰年就有366天.但是,这样每一百年又差不多多了一天,所以又规定&amp;quot;百年&amp;quot;不设闰,即&amp;quot;百年24闰&amp;quot;.但百年扣一天闰还是不刚好,于是又规定,公元年数为400倍数者设闰.&lt;/p>&lt;/blockquote>
 &lt;p>而我原先一直以为 1900 不是闰年是个数学问题&lt;br>
 也就是1988 1902都是闰年(其实并不是)&lt;br>
 但是经过这次教训也是学习了&lt;/p>
@@ -444,12 +431,10 @@ data-flex-basis="448px"
 各种情况都想不通&lt;br>
 然后发现了一句……&lt;/p>
 &lt;blockquote>
-&lt;p>he needs at least x blue, y violet and z orange spheres.&lt;/p>
-&lt;/blockquote>
+&lt;p>he needs at least x blue, y violet and z orange spheres.&lt;/p>&lt;/blockquote>
 &lt;p>重点是……&lt;/p>
 &lt;blockquote>
-&lt;p>at least&lt;/p>
-&lt;/blockquote>
+&lt;p>at least&lt;/p>&lt;/blockquote>
 &lt;p>也就是上面的数据没必要完全等于下面的&lt;br>
 只要能把上面变化成大于等于下面的就好了&lt;br>
 然而给的两组Yes的数据全部满足&lt;br>

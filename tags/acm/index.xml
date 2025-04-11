@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ACM on BoilTask's Blog</title><link>https://boiltask.com/tags/acm/</link><description>Recent content in ACM on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Dec 2015 07:57:59 +0000</lastBuildDate><atom:link href="https://boiltask.com/tags/acm/index.xml" rel="self" type="application/rss+xml"/><item><title>初识ACM——伪病毒与真崩溃</title><link>https://boiltask.com/csdn/50358657/</link><pubDate>Sat, 19 Dec 2015 07:57:59 +0000</pubDate><guid>https://boiltask.com/csdn/50358657/</guid><description>&lt;p>何家欢学长为吸引同学们兴趣&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ACM on BoilTask's Blog</title><link>https://boiltask.com/tags/acm/</link><description>Recent content in ACM on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 19 Dec 2015 07:57:59 +0000</lastBuildDate><atom:link href="https://boiltask.com/tags/acm/index.xml" rel="self" type="application/rss+xml"/><item><title>初识ACM——伪病毒与真崩溃</title><link>https://boiltask.com/record/acm-first-look/2/</link><pubDate>Sat, 19 Dec 2015 07:57:59 +0000</pubDate><guid>https://boiltask.com/record/acm-first-look/2/</guid><description>&lt;p>何家欢学长为吸引同学们兴趣&lt;/p>
 &lt;p>展示了一个C语言程序如下：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -91,7 +91,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>话说那段时间关机都直接帅帅地运行这个程序来关机-.-&lt;/p></description></item><item><title>初识ACM——2015国庆培训</title><link>https://boiltask.com/csdn/50358599/</link><pubDate>Sat, 19 Dec 2015 07:49:17 +0000</pubDate><guid>https://boiltask.com/csdn/50358599/</guid><description>&lt;p>(今天来找时间写写播客吧~)&lt;br>
+&lt;/div>&lt;p>话说那段时间关机都直接帅帅地运行这个程序来关机-.-&lt;/p></description></item><item><title>初识ACM——2015国庆培训</title><link>https://boiltask.com/record/acm-first-look/1/</link><pubDate>Sat, 19 Dec 2015 07:49:17 +0000</pubDate><guid>https://boiltask.com/record/acm-first-look/1/</guid><description>&lt;p>(今天来找时间写写播客吧~)&lt;br>
 随着入学及军训期间的对ACM及C语言的了解&lt;br>
 我决定了国庆节假期提前回校两天参加ACM协会举办的C语言基础培训&lt;/p>
 &lt;p>何家欢学长讲何谓语言：&lt;/p>
@@ -107,8 +107,7 @@
 &lt;p>——面向对象——&lt;/p>
 &lt;p>C++&lt;/p>
 &lt;p>C#&lt;/p>
-&lt;p>Java&lt;/p>
-&lt;/blockquote>
+&lt;p>Java&lt;/p>&lt;/blockquote>
 &lt;p>数据类型：&lt;/p>
 &lt;blockquote>
 &lt;p>Printf&lt;/p>
@@ -124,6 +123,5 @@
 &lt;p>数组:&lt;/p>
 &lt;p>A[10]&lt;/p>
 &lt;p>一个10个元素的数组&lt;/p>
-&lt;p>其中元素为 A[0]、A[1]~A[9]&lt;/p>
-&lt;/blockquote>
+&lt;p>其中元素为 A[0]、A[1]~A[9]&lt;/p>&lt;/blockquote>
 &lt;p>开启ACM之路！&lt;/p></description></item></channel></rss>

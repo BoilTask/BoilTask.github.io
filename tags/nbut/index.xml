@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nbut on BoilTask's Blog</title><link>https://boiltask.com/tags/nbut/</link><description>Recent content in Nbut on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 26 Jul 2016 19:45:40 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/nbut/index.xml" rel="self" type="application/rss+xml"/><item><title>【NBUT】[1651]Red packet</title><link>https://boiltask.com/oj/nbut/1651/</link><pubDate>Tue, 26 Jul 2016 19:45:40 +0800</pubDate><guid>https://boiltask.com/oj/nbut/1651/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>NBUT-OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/nbut/</link><description>Recent content in NBUT-OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 26 Jul 2016 19:45:40 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/nbut/index.xml" rel="self" type="application/rss+xml"/><item><title>【NBUT】[1651]Red packet</title><link>https://boiltask.com/oj/nbut/1651/</link><pubDate>Tue, 26 Jul 2016 19:45:40 +0800</pubDate><guid>https://boiltask.com/oj/nbut/1651/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Red packet
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/nbut-1651 target="_blank">[nbut-1651]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3245386802467867 target="_blank">[3245386802467867]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数论 on BoilTask's Blog</title><link>https://boiltask.com/tags/number-theory/</link><description>Recent content in 数论 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 02 Sep 2016 01:12:58 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/number-theory/index.xml" rel="self" type="application/rss+xml"/><item><title>【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！</title><link>https://boiltask.com/oj/zzuli/1841/</link><pubDate>Fri, 02 Sep 2016 01:12:58 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1841/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 so easy！麻麻再也不用担心我的数学了！
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -99,15 +96,12 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1841" target="_blank" rel="noopener"
 >【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1893]985的数学难题</title><link>https://boiltask.com/oj/zzuli/1893/</link><pubDate>Thu, 04 Aug 2016 00:05:26 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1893/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的数学难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：2 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -286,15 +280,12 @@ cnt[0]~cnt[3]分别为&lt;br>
 &lt;/div>
 &lt;/div>&lt;p>题目地址: &lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1893" target="_blank" rel="noopener"
 >【郑轻】[1893]985的数学难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1902]985的因子对难题</title><link>https://boiltask.com/oj/zzuli/1902/</link><pubDate>Wed, 03 Aug 2016 20:55:51 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1902/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的因子对难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：2 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -429,15 +420,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1902" target="_blank" rel="noopener"
 >【郑轻】[1902]985的因子对难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1898]985的数字难题</title><link>https://boiltask.com/oj/zzuli/1898/</link><pubDate>Wed, 03 Aug 2016 20:32:30 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1898/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的数字难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -537,15 +525,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1898" target="_blank" rel="noopener"
 >【郑轻】[1898]985的数字难题&lt;/a>&lt;/p></description></item><item><title>【POJ】[1061]青蛙的约会</title><link>https://boiltask.com/oj/poj/1061/</link><pubDate>Mon, 01 Aug 2016 23:48:55 +0800</pubDate><guid>https://boiltask.com/oj/poj/1061/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 青蛙的约会
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1061 target="_blank">[poj-1061]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158014367453028 target="_blank">[3158014367453028]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -572,8 +557,7 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p>
 定理二：若gcd(a,b) = 1，则方程ax ≡ c (mod b)在[0, b-1]上有唯一解。&lt;br>
 定理三：若gcd(a,b) = d，则方程ax ≡ c (mod b)在[0, b/d - 1]上有唯一解。&lt;br>
 证明：上述同余方程等价于ax + by = c，如果有解，两边同除以d，就有a/d * x + b/d * y = c/d，即a/d * x ≡ c/d (modb/d)，显然gcd(a/d, b/d) = 1，所以由定理二知道x在[0, b/d - 1]上有唯一解。所以ax + by = c的x在[0, b/d - 1]上有唯一解，即ax ≡ c (mod b)在[0, b/d - 1]上有唯一解。&lt;br>
-如果得到ax ≡ c (mod b)的某一特解X，那么令r = b/gcd(a, b)，可知x在[0, r-1]上有唯一解，所以用x = (x% r + r) % r就可以求出最小非负整数解x了！（X % r可能是负值，此时保持在[-(r-1), 0]内，正值则保持在[0, r-1]内。加上r就保持在[1, 2r - 1]内，所以再模一下r就在[0, r-1]内了）。&lt;/p>
-&lt;/blockquote>
+如果得到ax ≡ c (mod b)的某一特解X，那么令r = b/gcd(a, b)，可知x在[0, r-1]上有唯一解，所以用x = (x% r + r) % r就可以求出最小非负整数解x了！（X % r可能是负值，此时保持在[-(r-1), 0]内，正值则保持在[0, r-1]内。加上r就保持在[1, 2r - 1]内，所以再模一下r就在[0, r-1]内了）。&lt;/p>&lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -634,15 +618,12 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p>
 &lt;/div>
 &lt;/div>&lt;p>推荐文章:&lt;a class="link" href="http://blog.csdn.net/w446506278/article/details/52029604" target="_blank" rel="noopener"
 >POJ 1061 青蛙的约会 - w446506278的博客&lt;/a>&lt;/p></description></item><item><title>【杭电】[1061]Rightmost Digit</title><link>https://boiltask.com/oj/hdu/1061/</link><pubDate>Mon, 25 Jul 2016 15:16:43 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1061/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Rightmost Digit
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1061 target="_blank">[hdu-1061]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3164659737751154 target="_blank">[3164659737751154]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -774,21 +755,52 @@ Rightmost Digit
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>推荐博客:&lt;a class="link" href="http://blog.csdn.net/u014174811/article/details/40821591" target="_blank" rel="noopener"
-> 杭电OJ（HDOJ）1097题：A hard puzzle（数论）&lt;/a>&lt;/p></description></item><item><title>【NYOJ】[144]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj/144/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/144/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
+> 杭电OJ（HDOJ）1097题：A hard puzzle（数论）&lt;/a>&lt;/p></description></item><item><title>【NYOJ】[1143]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj/1143/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1143/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+小珂的苦恼
 &lt;/div>
-&lt;div style="text-align: right;">
-&lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://xcpc.nyist.edu.cn/problem/1143/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div>
-&lt;iframe src='https://xcpc.nyist.edu.cn/problem/1143/description' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：1000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：256 MB&lt;/span>
 &lt;/div>
 &lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>小珂是一名初中生，她现在很苦恼，因为老师布置了一个让她苦恼的作业，你能不能帮助她呢？题目信息如下。&lt;/p>
+&lt;blockquote>
+&lt;p>已知二元一次方程 a&lt;em>x+b&lt;/em>y=n， 判断这个二元一次方程有没有整数解，x,y为未知数，其中a，b，n都为整数且不等于零，同时满足0&amp;lt;a,b,n&amp;lt;2^16-1。&lt;/p>&lt;/blockquote>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一行有一个整数0&amp;lt;n&amp;lt;=1000000表示有 n组测试数据,接下来的每一行有三个整数分别是a,b,n&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>存在整数x和y使得方程有解，输出“Yes”，否则输出“No”&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 4 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 9 7
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">No
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;h3 id="题目来源">&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor">&lt;/a>题目来源
+&lt;/h3>&lt;p>&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"
+>小珂的苦恼 - NYOJ&lt;/a>&lt;/p>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;p>二元一次方程有整数解的条件为&lt;br>
 $n\%gcd(a,b)==0$&lt;/p>

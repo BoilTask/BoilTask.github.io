@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机图形学 on BoilTask's Blog</title><link>https://boiltask.com/tags/computer-graphics/</link><description>Recent content in 计算机图形学 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 30 Apr 2018 00:00:00 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/knowledge/computer-graphics-note/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/knowledge/computer-graphics-note/</guid><description>&lt;blockquote>
-&lt;p>参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p>
-&lt;/blockquote>
+&lt;p>参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p>&lt;/blockquote>
 &lt;h2 id="第1章">&lt;a href="#%e7%ac%ac1%e7%ab%a0" class="header-anchor">&lt;/a>第1章
 &lt;/h2>&lt;h3 id="什么是计算机图形学它主要研究内容">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e5%ad%a6%e5%ae%83%e4%b8%bb%e8%a6%81%e7%a0%94%e7%a9%b6%e5%86%85%e5%ae%b9" class="header-anchor">&lt;/a>什么是计算机图形学，它主要研究内容？
 &lt;/h3>&lt;p>计算机图形学是一门研究用计算机将数据转换成图形，并在专用设备上显示和处理的学科，它着重研究图形生成和处理的原理、方法和技术，是一门多学科综合应用的新技术。&lt;/p>
@@ -490,11 +489,13 @@ $$Q_{i,n}\left( t\right) =\sum ^{n}_{i=0}P_{i+1}F_{l,n}\left( t\right) , l=0,l\d
 &lt;p>反向延伸：&lt;br>
 $P_{1} P_{0}$的延长线上取一点$P_{-1}$，使得：
 &lt;/p>
-$$P_{-1} P_{0}= P_{0} P_{1}$$$$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p>
+$$P_{-1} P_{0}= P_{0} P_{1}$$&lt;p>
+&lt;/p>
+$$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p>
 &lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-1.png"
 width="264"
 height="220"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu18340772105635363912.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu11435206957440172037.png 1024w"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_723872be8ad3b203.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_7f2f4e0a913b2bc8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="120"
@@ -502,13 +503,15 @@ data-flex-basis="288px"
 >&lt;br>
 求得：
 &lt;/p>
-$$P_{-1}= 2 P_{0} - P_{1}$$$$P_{4}= 2 P_{3} - P_{2}$$&lt;/li>
+$$P_{-1}= 2 P_{0} - P_{1}$$&lt;p>
+&lt;/p>
+$$P_{4}= 2 P_{3} - P_{2}$$&lt;/li>
 &lt;li>
 &lt;p>重点技术：&lt;br>
 &lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-2.png"
 width="389"
 height="197"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu13699975216508309066.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu16335215033749882580.png 1024w"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_777ade5774ab3186.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_78e1ad98eaee0999.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="197"
@@ -516,7 +519,9 @@ data-flex-basis="473px"
 >&lt;br>
 在首末端点处采用重合点，使得：
 &lt;/p>
-$$P_{-2}\equiv P_{-1} \equiv P_{0}$$$$P_{n+2}\equiv P_{n+1} \equiv P_{n}$$&lt;p>
+$$P_{-2}\equiv P_{-1} \equiv P_{0}$$&lt;p>
+&lt;/p>
+$$P_{n+2}\equiv P_{n+1} \equiv P_{n}$$&lt;p>
 $Q_{-1}$位于$P_{0} P_{1}$的三分之一处。&lt;/p>
 &lt;/li>
 &lt;/ol>

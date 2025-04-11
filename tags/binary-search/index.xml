@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>二分查找 on BoilTask's Blog</title><link>https://boiltask.com/tags/binary-search/</link><description>Recent content in 二分查找 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Aug 2016 20:09:30 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/binary-search/index.xml" rel="self" type="application/rss+xml"/><item><title>【郑轻】[1895]985的0-1串难题</title><link>https://boiltask.com/oj/zzuli/1895/</link><pubDate>Wed, 03 Aug 2016 20:09:30 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1895/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的0-1串难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -135,15 +132,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址：&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1895" target="_blank" rel="noopener"
 >[1895]985的0-1串难题&lt;/a>&lt;/p></description></item><item><title>【CodeForces】[274A]k-Multiple Free Set</title><link>https://boiltask.com/oj/codeforces/274A/</link><pubDate>Tue, 26 Jul 2016 20:21:52 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/274A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 k-Multiple Free Set
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-274A target="_blank">[codeforces-274A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3228826969142761 target="_blank">[3228826969142761]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -240,15 +234,12 @@ k-Multiple Free Set
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[371C]Hamburgers</title><link>https://boiltask.com/oj/codeforces/371C/</link><pubDate>Tue, 26 Jul 2016 20:17:11 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/371C/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Hamburgers
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-371C target="_blank">[codeforces-371C]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3198482657266742 target="_blank">[3198482657266742]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -368,15 +359,12 @@ Hamburgers
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[348A]Mafia</title><link>https://boiltask.com/oj/codeforces/348A/</link><pubDate>Tue, 26 Jul 2016 20:13:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/348A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Mafia
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-348A target="_blank">[codeforces-348A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3173291955655301 target="_blank">[3173291955655301]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -387,12 +375,10 @@ Mafia
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>N个人参与一个游戏，每一局都必须有一个人出来当监督，剩下N-1个人当玩家，第i个人要求至少自己要当ai次玩家，请问最少要进行多少次游戏。&lt;/p>
-&lt;/blockquote>
+&lt;p>N个人参与一个游戏，每一局都必须有一个人出来当监督，剩下N-1个人当玩家，第i个人要求至少自己要当ai次玩家，请问最少要进行多少次游戏。&lt;/p>&lt;/blockquote>
 &lt;p>根据x次游戏能否打成进行二分查找&lt;/p>
 &lt;blockquote>
-&lt;p>对于答案x的判定，先将每个人的要求加起来得到sum，然后判断x*n-sum，如果这个值大于等于x，说明可行，因为这个值就代表这些人可以提供最多的当监督的次数，只要监督的次数能够达到x次，就说明能够进行x次。&lt;/p>
-&lt;/blockquote>
+&lt;p>对于答案x的判定，先将每个人的要求加起来得到sum，然后判断x*n-sum，如果这个值大于等于x，说明可行，因为这个值就代表这些人可以提供最多的当监督的次数，只要监督的次数能够达到x次，就说明能够进行x次。&lt;/p>&lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -458,15 +444,12 @@ Mafia
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[372A]Counting Kangaroos is Fun</title><link>https://boiltask.com/oj/codeforces/372A/</link><pubDate>Tue, 26 Jul 2016 20:09:14 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/372A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Counting Kangaroos is Fun
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-372A target="_blank">[codeforces-372A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3197712200777545 target="_blank">[3197712200777545]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -477,8 +460,7 @@ Counting Kangaroos is Fun
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>给n个袋鼠以及对应大小，把较小的放到较大的口袋里，判断最后头在外面的松鼠最少多少只&lt;/p>
-&lt;/blockquote>
+&lt;p>给n个袋鼠以及对应大小，把较小的放到较大的口袋里，判断最后头在外面的松鼠最少多少只&lt;/p>&lt;/blockquote>
 &lt;p>能放在里面的条件是 a[i]*2&amp;lt;=a[j] &lt;br>
 先把数组按照从小到大排序&lt;br>
 若想让外面有x个&lt;br>
@@ -556,15 +538,12 @@ Counting Kangaroos is Fun
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[670D2]Magic Powder - 2</title><link>https://boiltask.com/oj/codeforces/670D2/</link><pubDate>Tue, 26 Jul 2016 20:02:07 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/670D2/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Magic Powder - 2
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-670D2 target="_blank">[codeforces-670D2]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3268192100013952 target="_blank">[3268192100013952]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -575,8 +554,7 @@ Magic Powder - 2
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>题目大意：制作一个蛋糕需要n种材料，然后你有k克魔法粉，每克魔法粉可以代替任意一克的材料,ai代表制作一个蛋糕需要第i种材料多少克，bi代表你拥有第i个材料多少克，问做可以做多少个蛋糕。&lt;/p>
-&lt;/blockquote>
+&lt;p>题目大意：制作一个蛋糕需要n种材料，然后你有k克魔法粉，每克魔法粉可以代替任意一克的材料,ai代表制作一个蛋糕需要第i种材料多少克，bi代表你拥有第i个材料多少克，问做可以做多少个蛋糕。&lt;/p>&lt;/blockquote>
 &lt;p>判断能不能做mid个蛋糕&lt;br>
 如果不能则减少mid的范围&lt;br>
 以此二分查找&lt;/p>
@@ -655,15 +633,12 @@ Magic Powder - 2
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[448D]Multiplication Table</title><link>https://boiltask.com/oj/codeforces/448D/</link><pubDate>Tue, 26 Jul 2016 19:57:53 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/448D/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Multiplication Table
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-448D target="_blank">[codeforces-448D]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3192446154889684 target="_blank">[3192446154889684]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -736,15 +711,12 @@ Multiplication Table
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4907]Task schedule</title><link>https://boiltask.com/oj/hdu/4907/</link><pubDate>Tue, 26 Jul 2016 19:50:36 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4907/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Task schedule
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4907 target="_blank">[hdu-4907]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3282568977220872 target="_blank">[3282568977220872]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -851,15 +823,12 @@ Task schedule
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【NBUT】[1651]Red packet</title><link>https://boiltask.com/oj/nbut/1651/</link><pubDate>Tue, 26 Jul 2016 19:45:40 +0800</pubDate><guid>https://boiltask.com/oj/nbut/1651/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Red packet
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/nbut-1651 target="_blank">[nbut-1651]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3245386802467867 target="_blank">[3245386802467867]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -968,15 +937,12 @@ Red packet
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【LightOJ】[1137]Expanding Rods</title><link>https://boiltask.com/oj/lightoj/1137/</link><pubDate>Tue, 26 Jul 2016 18:19:52 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1137/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Expanding Rods
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1137 target="_blank">[lightoj-1137]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3128549381013603 target="_blank">[3128549381013603]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1056,15 +1022,12 @@ $r=\dfrac{h^2+\dfrac{l^2}{4}}{2h}$&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【LightOJ】[1062]Crossed Ladders</title><link>https://boiltask.com/oj/lightoj/1062/</link><pubDate>Tue, 26 Jul 2016 18:04:01 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1062/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Crossed Ladders
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1062 target="_blank">[lightoj-1062]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3125582930135739 target="_blank">[3125582930135739]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1143,15 +1106,12 @@ Crossed Ladders
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4004]The Frog's Games</title><link>https://boiltask.com/oj/hdu/4004/</link><pubDate>Tue, 26 Jul 2016 17:49:39 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4004/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 The Frog&amp;#39;s Games
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4004 target="_blank">[hdu-4004]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3097316427883761 target="_blank">[3097316427883761]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1250,15 +1210,12 @@ mid是否比res大&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2141]Can you find it?</title><link>https://boiltask.com/oj/hdu/2141/</link><pubDate>Tue, 26 Jul 2016 17:44:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2141/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Can you find it?
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2141 target="_blank">[hdu-2141]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3156819803343983 target="_blank">[3156819803343983]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1388,15 +1345,12 @@ A&lt;sub>i&lt;/sub>+B&lt;sub>j&lt;/sub>=X-C&lt;sub>k&lt;/sub>&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1064]Cable master</title><link>https://boiltask.com/oj/poj/1064/</link><pubDate>Tue, 26 Jul 2016 17:36:00 +0800</pubDate><guid>https://boiltask.com/oj/poj/1064/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Cable master
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1064 target="_blank">[poj-1064]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151927532608387 target="_blank">[3151927532608387]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1553,15 +1507,12 @@ Cable master
 &lt;p>参考文章:&lt;br>
 《挑战程序设计竞赛》&lt;br>
 百度百科&lt;/p></description></item><item><title>【杭电】[2199]Can you solve this equation?</title><link>https://boiltask.com/oj/hdu/2199/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2199/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Can you solve this equation?
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2199 target="_blank">[hdu-2199]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3108287869870259 target="_blank">[3108287869870259]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

@@ -26,21 +26,21 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">A╲B&lt;/th>
-&lt;th style="text-align: left">坦白&lt;/th>
-&lt;th style="text-align: left">抵赖&lt;/th>
+&lt;th>A╲B&lt;/th>
+&lt;th>坦白&lt;/th>
+&lt;th>抵赖&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">坦白&lt;/td>
-&lt;td style="text-align: left">-8，-8&lt;/td>
-&lt;td style="text-align: left">0，-10&lt;/td>
+&lt;td>坦白&lt;/td>
+&lt;td>-8，-8&lt;/td>
+&lt;td>0，-10&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">抵赖&lt;/td>
-&lt;td style="text-align: left">-10，0&lt;/td>
-&lt;td style="text-align: left">-1，-1&lt;/td>
+&lt;td>抵赖&lt;/td>
+&lt;td>-10，0&lt;/td>
+&lt;td>-1，-1&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -72,8 +72,7 @@
 &lt;/h2>&lt;p>囚徒困境（Prisoner’s Dilemma）是一个简单的博弈，它解释的是为什么两个博弈者在博弈时会分别作出不是对自己最有利的，却能通过合作达成一个更好结果的选择。&lt;/p>
 &lt;p>博弈可以按照传统方式进行，如单一决策，或重复决策，产生基于过去结果的行为模式。&lt;/p>
 &lt;blockquote>
-&lt;p>如果两个博弈者连续完成了多次囚徒困境的情景，并基于对方之前的行为各自形成了一个对对方的看法，这两人都将开始基于对方的行为来规划自己的策略。连续玩N（N已知）次游戏时，最合理的决定是每一次都背叛对方。然而在实践中，大多数人都不会超理性到能够意识到对他们来说能得到最大利益的做法是：每一次都与对方合作，然后在最后一次背叛对方。假定他们会这么做，这也会让他们推断对方也与他们一样理性，也会做出同样的事情。于是他们在倒数第二轮选择背叛，如此循环往复，回到开头。而如果N是未知的，这个做法就不再是游戏的“占优策略”，而是一个“纳什均衡”。&lt;/p>
-&lt;/blockquote>
+&lt;p>如果两个博弈者连续完成了多次囚徒困境的情景，并基于对方之前的行为各自形成了一个对对方的看法，这两人都将开始基于对方的行为来规划自己的策略。连续玩N（N已知）次游戏时，最合理的决定是每一次都背叛对方。然而在实践中，大多数人都不会超理性到能够意识到对他们来说能得到最大利益的做法是：每一次都与对方合作，然后在最后一次背叛对方。假定他们会这么做，这也会让他们推断对方也与他们一样理性，也会做出同样的事情。于是他们在倒数第二轮选择背叛，如此循环往复，回到开头。而如果N是未知的，这个做法就不再是游戏的“占优策略”，而是一个“纳什均衡”。&lt;/p>&lt;/blockquote>
 &lt;p>罗伯特·阿克塞尔罗德（Robert Axelrod）提出了博弈者的策略要获得成功的4 个必要条件。&lt;/p>
 &lt;ul>
 &lt;li>要友好（Nice）。不要首先背叛（尽可能的合作）。&lt;/li>
@@ -123,13 +122,11 @@
 &lt;p>当老鼠每第X（X是随机的）次按下杠杆时给它奖励；&lt;/p>
 &lt;p>在老鼠每隔N（N是随机的）分钟后第一次按下杠杆时给它奖励。&lt;/p>
 &lt;p>实验结果表明老鼠对几种不同的奖励周期有十分明确的回应方式。有一些奖励周期引起老鼠狂热地一次又一次按下杠杆，以期得到更多食物；有一些则相对温和，造成老鼠按杆的机会相对较少。&lt;/p>
-&lt;p>如果要让老鼠尽可能多按杆，最好的奖励周期是以变化比率的形式，也就是使用随机变化的参数。在给老鼠加强“多按就会多得”印象的同时，又让它们摸不清楚到底按多少下才能得到食物。&lt;/p>
-&lt;/blockquote>
+&lt;p>如果要让老鼠尽可能多按杆，最好的奖励周期是以变化比率的形式，也就是使用随机变化的参数。在给老鼠加强“多按就会多得”印象的同时，又让它们摸不清楚到底按多少下才能得到食物。&lt;/p>&lt;/blockquote>
 &lt;p>玩家与游戏的交互等同于价值，因此，最能引导玩家与游戏产生更多交互的方式就是以随机的周期给用户奖励。采访这些游戏的玩家会发现他们对这个游戏是否“好玩”抱有矛盾的意见，但却承认自己被吸引不停地玩。&lt;/p>
 &lt;p>行为主义理论是可以被当作一个推动玩家参与的妙招的。&lt;/p>
 &lt;blockquote>
-&lt;p>有些孩子被要求每周末修剪草坪。对孩子来说有些院子太大了，而且他们从开头就害怕这个苦差事。在盛夏的日头下推割草机可不是他们爱干的事儿。但是他们随后就发现，这个工作越接近完成就变得越轻松，他们割完一行草的速度更快，他们也越来越为即将到手的5美元兴奋。&lt;/p>
-&lt;/blockquote>
+&lt;p>有些孩子被要求每周末修剪草坪。对孩子来说有些院子太大了，而且他们从开头就害怕这个苦差事。在盛夏的日头下推割草机可不是他们爱干的事儿。但是他们随后就发现，这个工作越接近完成就变得越轻松，他们割完一行草的速度更快，他们也越来越为即将到手的5美元兴奋。&lt;/p>&lt;/blockquote>
 &lt;p>这种现象被称为目标的梯度效应（goal-gradient effect）。&lt;/p>
 &lt;p>如果玩家知道他将马上能得到奖励，他们会更有动力去完成能让他们得到这个奖励的任务。如果你发现你的玩家在游戏中的某一点逐渐失去他们的兴趣，或许这就是向他们展示他们如果继续下去将得到的奖励的最佳时机。&lt;/p>
 &lt;h2 id="原理25-社会关系">&lt;a href="#%e5%8e%9f%e7%90%8625-%e7%a4%be%e4%bc%9a%e5%85%b3%e7%b3%bb" class="header-anchor">&lt;/a>原理25 社会关系
@@ -145,8 +142,7 @@
 &lt;/h2>&lt;p>公地悲剧（Tragedy of the Commons）的含义是，如果一项资源是可供所有人使用的，那么该资源最终一定会被耗尽，而这对所有人都是有害的，长期的损失远大于短期内获取该资源得到的好处。&lt;/p>
 &lt;p>公地悲剧的假定条件是在有限的系统内对资源的使用是增长的。&lt;/p>
 &lt;blockquote>
-&lt;p>广义而言，公地悲剧表达了一个人艰难的选择：努力争取物质利益，并由此导致自己和他人的长期损失——寄希望于短期的物质利益能弥补长期损失——或者为了所有人的利益与大家合作来节约资源，但是这样做的风险是，如果有其他人有更好的个人资源，或者有其他人谎称合作实则过度使用公共资源，这个人就吃亏了。&lt;/p>
-&lt;/blockquote>
+&lt;p>广义而言，公地悲剧表达了一个人艰难的选择：努力争取物质利益，并由此导致自己和他人的长期损失——寄希望于短期的物质利益能弥补长期损失——或者为了所有人的利益与大家合作来节约资源，但是这样做的风险是，如果有其他人有更好的个人资源，或者有其他人谎称合作实则过度使用公共资源，这个人就吃亏了。&lt;/p>&lt;/blockquote>
 &lt;p>在游戏中，玩家的策略或游戏的机制都有可能导致公地悲剧。应该有某种协议（或一些特殊的规则来奖励使用资源较少的玩家）来预防玩家们用完所有可用资源。&lt;/p>
 &lt;p>对于公地悲剧有两种常见的，并且是相反的解决方案，但是它们都不能理想地解决这个问题。&lt;/p>
 &lt;p>资源平等的再分配（共产主义）意味着无法有效利用资源的人依然能得到它，这样有很大一部分被浪费掉或很快被用完。&lt;/p>
@@ -189,8 +185,7 @@
 &lt;h2 id="原理29-志愿者困境">&lt;a href="#%e5%8e%9f%e7%90%8629-%e5%bf%97%e6%84%bf%e8%80%85%e5%9b%b0%e5%a2%83" class="header-anchor">&lt;/a>原理29 志愿者困境
 &lt;/h2>&lt;p>“志愿者困境”（Volunteer’s dilemma）是群体博弈理论中的一个特殊例子，类似于“公地悲剧”。&lt;/p>
 &lt;blockquote>
-&lt;p>在志愿者困境中，一个人面临的选择是，是否牺牲自己的一小部分利益来让群体中的所有人受益，同时这个人自己不能得到任何额外的好处。而如果这个人不牺牲，并且也没有任何一个其他人这么做，则所有人都要面临严重的利益损害。当然，这个选择是，自己牺牲一小部分时间、经历、钱等等，或是承担等着其他人来做的风险。&lt;/p>
-&lt;/blockquote>
+&lt;p>在志愿者困境中，一个人面临的选择是，是否牺牲自己的一小部分利益来让群体中的所有人受益，同时这个人自己不能得到任何额外的好处。而如果这个人不牺牲，并且也没有任何一个其他人这么做，则所有人都要面临严重的利益损害。当然，这个选择是，自己牺牲一小部分时间、经历、钱等等，或是承担等着其他人来做的风险。&lt;/p>&lt;/blockquote>
 &lt;p>这些情况在互联网合作游戏中屡见不鲜。&lt;/p>
 &lt;p>玩家可能会选择不参与一些危险的、但是对团队来说是必须的任务，而是去做更多对自己有好处的任务。他们会假设为了团队的生存和胜利，团队会去承担完成那些危险任务的责任。&lt;/p>
 &lt;p>如果这个策略成功，他们会受到鼓励而继续这样的行为——并且可能会有更多的玩家选择这种对自己来说没有风险的做法——这样也就把越来越多的责任转嫁到了仍然愿意执行危险任务的团队成员身上。显然，如果这个趋势继续下去，整个团队（包括那些搭便车者）都会完蛋。&lt;/p>
@@ -267,7 +262,7 @@
 &lt;p>&lt;img src="https://boiltask.com/notes/coreconcept/image-1.webp"
 width="566"
 height="229"
-srcset="https://boiltask.com/notes/coreconcept/image-1_hu14216102446662213519.webp 480w, https://boiltask.com/notes/coreconcept/image-1_hu17722069547234838070.webp 1024w"
+srcset="https://boiltask.com/notes/coreconcept/image-1_hu_1feb44ceb5c4e49a.webp 480w, https://boiltask.com/notes/coreconcept/image-1_hu_4244ff74daff1169.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="247"
@@ -278,7 +273,7 @@ data-flex-basis="593px"
 &lt;p>&lt;img src="https://boiltask.com/notes/coreconcept/image-2.webp"
 width="566"
 height="343"
-srcset="https://boiltask.com/notes/coreconcept/image-2_hu968163805773560663.webp 480w, https://boiltask.com/notes/coreconcept/image-2_hu14639953505524337755.webp 1024w"
+srcset="https://boiltask.com/notes/coreconcept/image-2_hu_40d6a8e9f688f656.webp 480w, https://boiltask.com/notes/coreconcept/image-2_hu_878722e7d54cf340.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="165"
@@ -315,7 +310,7 @@ data-flex-basis="396px"
 &lt;p>&lt;img src="https://boiltask.com/notes/100principles-1/image-1.webp"
 width="672"
 height="305"
-srcset="https://boiltask.com/notes/100principles-1/image-1_hu7952724811825369541.webp 480w, https://boiltask.com/notes/100principles-1/image-1_hu11820847954810807571.webp 1024w"
+srcset="https://boiltask.com/notes/100principles-1/image-1_hu_add1b1bc4c2bda85.webp 480w, https://boiltask.com/notes/100principles-1/image-1_hu_8888d8db33341dc4.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="220"
@@ -325,7 +320,7 @@ data-flex-basis="528px"
 &lt;p>&lt;img src="https://boiltask.com/notes/100principles-1/image-2.webp"
 width="357"
 height="274"
-srcset="https://boiltask.com/notes/100principles-1/image-2_hu3735832262405441678.webp 480w, https://boiltask.com/notes/100principles-1/image-2_hu18365461058117281446.webp 1024w"
+srcset="https://boiltask.com/notes/100principles-1/image-2_hu_30ae277eff782fcd.webp 480w, https://boiltask.com/notes/100principles-1/image-2_hu_5e4648105efe9b43.webp 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="130"
@@ -430,13 +425,11 @@ $$&lt;p>秘密的重要性，是与其表面上看起来无辜的程度及其完
 &lt;h3 id="forint-i0--in--i的局限性">&lt;a href="#forint-i0--in--i%e7%9a%84%e5%b1%80%e9%99%90%e6%80%a7" class="header-anchor">&lt;/a>&lt;code>for(int i=0 ; i&amp;lt;n ; i++)&lt;/code>的局限性
 &lt;/h3>&lt;p>我之前提到过&lt;/p>
 &lt;blockquote>
-&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
-&lt;/blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>&lt;/blockquote>
 &lt;p>加上自己的习惯 所以这些日子都是
 尽量对于循环变量随用随定义&lt;/p>
 &lt;blockquote>
-&lt;p>PS:易语言 记次循环首(次数,n) 也是这种直接写出来的模式 (不过其实也需要先定义 不过个人养成了让它报错然后再直接定义的坏习惯)&lt;/p>
-&lt;/blockquote>
+&lt;p>PS:易语言 记次循环首(次数,n) 也是这种直接写出来的模式 (不过其实也需要先定义 不过个人养成了让它报错然后再直接定义的坏习惯)&lt;/p>&lt;/blockquote>
 &lt;p>但是有时出现了一些问题
 比如印象最深的关于涉及到 循环中 break;
 例如当时有种素数判定方法:&lt;/p>
@@ -560,7 +553,7 @@ while(){&lt;br>
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-1.png"
 width="627"
 height="516"
-srcset="https://boiltask.com/notes/competitive-programming/8/image-1_hu5583421460999654136.png 480w, https://boiltask.com/notes/competitive-programming/8/image-1_hu2459155094525549294.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-1_hu_a534196d9b8c5a7.png 480w, https://boiltask.com/notes/competitive-programming/8/image-1_hu_69d43885a6fa7262.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="121"
@@ -577,7 +570,7 @@ if(){
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-2.png"
 width="624"
 height="497"
-srcset="https://boiltask.com/notes/competitive-programming/8/image-2_hu14261713697285682017.png 480w, https://boiltask.com/notes/competitive-programming/8/image-2_hu13848669271119213262.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-2_hu_bd002c86fa0d601d.png 480w, https://boiltask.com/notes/competitive-programming/8/image-2_hu_f4950aedfb8225d9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="125"
@@ -586,8 +579,7 @@ data-flex-basis="301px"
 &lt;p>结果证明同样符合猜测&lt;/p>
 &lt;p>所以可以暂且得出结论&lt;/p>
 &lt;blockquote>
-&lt;p>{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>
-&lt;/blockquote>
+&lt;p>{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>&lt;/blockquote>
 &lt;h2 id="算法是一种思维">&lt;a href="#%e7%ae%97%e6%b3%95%e6%98%af%e4%b8%80%e7%a7%8d%e6%80%9d%e7%bb%b4" class="header-anchor">&lt;/a>算法是一种思维
 &lt;/h2>&lt;p>还有关于算法的一些思考……不过关于这一点
 想想
@@ -623,8 +615,7 @@ data-flex-basis="301px"
 &lt;blockquote>
 &lt;p>abc (0)&lt;br>
 def (1)&lt;br>
-ghi (2)&lt;/p>
-&lt;/blockquote>
+ghi (2)&lt;/p>&lt;/blockquote>
 &lt;p>map[0]便代表”abc”&lt;br>
 map[1]便代表”def”&lt;br>
 map[2]便代表”ghi”&lt;/p>
@@ -655,7 +646,7 @@ map[2][0]==’g’&lt;/p>
 &lt;img src="https://boiltask.com/notes/competitive-programming/7/image.png"
 width="773"
 height="376"
-srcset="https://boiltask.com/notes/competitive-programming/7/image_hu2624538124768907791.png 480w, https://boiltask.com/notes/competitive-programming/7/image_hu9107071157545445793.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/7/image_hu_366c13b53be4a8b8.png 480w, https://boiltask.com/notes/competitive-programming/7/image_hu_1faf5d5f1bb5a97e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="205"
@@ -748,8 +739,7 @@ C语言的魅力还远不止于此啊-.-&lt;br>
 按照之前&lt;/p>
 &lt;blockquote>
 &lt;p>执行到for循环时&lt;br>
-先执行一次 起始语句&lt;/p>
-&lt;/blockquote>
+先执行一次 起始语句&lt;/p>&lt;/blockquote>
 &lt;p>理解 这个i应该和这种用法:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -790,7 +780,7 @@ C语言的魅力还远不止于此啊-.-&lt;br>
 &lt;img src="https://boiltask.com/notes/competitive-programming/6/image-1.png"
 width="735"
 height="45"
-srcset="https://boiltask.com/notes/competitive-programming/6/image-1_hu13301496654541681653.png 480w, https://boiltask.com/notes/competitive-programming/6/image-1_hu11318844412561639153.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-1_hu_3a23bf5f5d2e4047.png 480w, https://boiltask.com/notes/competitive-programming/6/image-1_hu_78baaf5a0fef4601.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1633"
@@ -803,7 +793,7 @@ i变得无法调用了&lt;/p>
 &lt;img src="https://boiltask.com/notes/competitive-programming/6/image-2.png"
 width="419"
 height="34"
-srcset="https://boiltask.com/notes/competitive-programming/6/image-2_hu4902711534851247253.png 480w, https://boiltask.com/notes/competitive-programming/6/image-2_hu7313503508144667420.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-2_hu_6c8b6e0062447f15.png 480w, https://boiltask.com/notes/competitive-programming/6/image-2_hu_1db5e3aaaeaf7c8e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1232"
@@ -828,8 +818,7 @@ data-flex-basis="2957px"
 可以轻松地在运用for时再定义这些变量 而不影响其它部分&lt;/p>
 &lt;p>在P19有这样一句话&lt;/p>
 &lt;blockquote>
-&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
-&lt;/blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>&lt;/blockquote>
 &lt;p>我也是深感很有道理啊~&lt;br>
 话说这就是共鸣哎~毕竟每个人的习惯还是不一样的 能和大神的观点一致 还是有点小激动的呢&lt;/p>
 &lt;p>《算法竞赛入门经典(第2版)》P19&lt;/p>
@@ -952,7 +941,7 @@ P36 题目2 下面的程序运行结果是什么？“!=”运算符表示“不
 &lt;img src="https://boiltask.com/notes/competitive-programming/4/image-1.png"
 width="669"
 height="466"
-srcset="https://boiltask.com/notes/competitive-programming/4/image-1_hu3901320363627406610.png 480w, https://boiltask.com/notes/competitive-programming/4/image-1_hu15574619765055601728.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-1_hu_754206b6114b8548.png 480w, https://boiltask.com/notes/competitive-programming/4/image-1_hu_cff1e097ac796bc8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="143"
@@ -984,7 +973,7 @@ data-flex-basis="344px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/4/image-2.png"
 width="93"
 height="344"
-srcset="https://boiltask.com/notes/competitive-programming/4/image-2_hu14019000827893656719.png 480w, https://boiltask.com/notes/competitive-programming/4/image-2_hu1341913070082705356.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-2_hu_69ab63cd63842035.png 480w, https://boiltask.com/notes/competitive-programming/4/image-2_hu_eb4596e756d23b03.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="27"
@@ -1002,8 +991,7 @@ data-flex-basis="64px"
 &lt;p>1 6 4&lt;/p>
 &lt;p>0 0 0&lt;/p>
 &lt;p>样例输出：&lt;/p>
-&lt;p>Case 1 : 0.1667&lt;/p>
-&lt;/blockquote>
+&lt;p>Case 1 : 0.1667&lt;/p>&lt;/blockquote>
 &lt;p>又是一种没见过的题&lt;br>
 而且顺便使用一下 HTML版的博文编辑器~&lt;/p>
 &lt;p>当小数的位数定的时候可以写成&lt;/p>
@@ -1091,7 +1079,7 @@ cd 文件目录&lt;br>
 &lt;img src="https://boiltask.com/notes/competitive-programming/2/image-1.png"
 width="384"
 height="27"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-1_hu7739818440146114759.png 480w, https://boiltask.com/notes/competitive-programming/2/image-1_hu4967084743364995227.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-1_hu_a4cf9ebffb2231d4.png 480w, https://boiltask.com/notes/competitive-programming/2/image-1_hu_a4bf54ff6e8e0fc1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1422"
@@ -1102,7 +1090,7 @@ data-flex-basis="3413px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/2/image-2.png"
 width="383"
 height="419"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-2_hu17712528383597893674.png 480w, https://boiltask.com/notes/competitive-programming/2/image-2_hu13641665505146461992.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-2_hu_574993fa2ed22ea4.png 480w, https://boiltask.com/notes/competitive-programming/2/image-2_hu_8cdb9400d243457a.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="91"
@@ -1114,7 +1102,7 @@ data-flex-basis="219px"
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/2/image-3.png"
 width="4208"
 height="885"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-3_hu6584193200986189437.png 480w, https://boiltask.com/notes/competitive-programming/2/image-3_hu11124835707580225885.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-3_hu_587c27bb9ed0a803.png 480w, https://boiltask.com/notes/competitive-programming/2/image-3_hu_5cba210d1087ece5.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="475"
@@ -1132,7 +1120,7 @@ data-flex-basis="1141px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-1.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-1_hu10459790078482635273.png 480w, https://boiltask.com/notes/competitive-programming/1/image-1_hu14258923634040140884.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-1_hu_53c108ea1df6f8b4.png 480w, https://boiltask.com/notes/competitive-programming/1/image-1_hu_db47aeb0a05d4bbc.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -1141,7 +1129,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-2.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-2_hu16185752309880172002.png 480w, https://boiltask.com/notes/competitive-programming/1/image-2_hu3381249312977169061.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-2_hu_191fb8eda34debb9.png 480w, https://boiltask.com/notes/competitive-programming/1/image-2_hu_cc6e453d76f2f96c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -1150,7 +1138,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-3.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-3_hu7016452403049956724.png 480w, https://boiltask.com/notes/competitive-programming/1/image-3_hu14997523785418192058.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-3_hu_37a60f144d5abece.png 480w, https://boiltask.com/notes/competitive-programming/1/image-3_hu_8f904879115b9f2d.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -1159,7 +1147,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-4.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-4_hu3285848752103058701.png 480w, https://boiltask.com/notes/competitive-programming/1/image-4_hu2853459352141282228.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-4_hu_23bd3b9c2a1ccb8d.png 480w, https://boiltask.com/notes/competitive-programming/1/image-4_hu_835aa833697d21c3.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"

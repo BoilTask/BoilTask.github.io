@@ -1,11 +1,857 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识汇总 on BoilTask's Blog</title><link>https://boiltask.com/categories/knowledge/</link><description>Recent content in 知识汇总 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Apr 2025 12:23:15 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/knowledge/index.xml" rel="self" type="application/rss+xml"/><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p>之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p></description></item><item><title>常用加权随机算法说明与实现</title><link>https://boiltask.com/knowledge/random-weight/</link><pubDate>Fri, 13 Dec 2024 12:50:53 +0800</pubDate><guid>https://boiltask.com/knowledge/random-weight/</guid><description>&lt;p>A-J&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>知识汇总 on BoilTask's Blog</title><link>https://boiltask.com/categories/knowledge/</link><description>Recent content in 知识汇总 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Apr 2025 12:43:51 +0800</lastBuildDate><atom:link href="https://boiltask.com/categories/knowledge/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo文章加密的一种设想</title><link>https://boiltask.com/knowledge/hugo-encryption/</link><pubDate>Wed, 09 Apr 2025 12:43:51 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-encryption/</guid><description>&lt;p>前端在生成index时加密内容，提供一个JS根据输入的密码解密内容，根据得到的解密内容中是否包含指定信息来判断是否解密成功。&lt;/p>
+&lt;p>由于是前端加解密，需要考虑如何选择合适的加密解密算法，使得暴力破解的成本提高。&lt;/p>
+&lt;p>参考zip加密技术，当暴力破解的成本足够高的时候，可以认为内容是安全的。&lt;/p></description></item><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p>之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p></description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/knowledge/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-asan/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。&lt;/p>
+&lt;p>比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。&lt;/p>
+&lt;p>性能指标参考：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerPerformanceNumbers" target="_blank" rel="noopener"
+>AddressSanitizerPerformanceNumbers · google/sanitizers Wiki&lt;/a>&lt;/p>
+&lt;h2 id="linux下ds使用">&lt;a href="#linux%e4%b8%8bds%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>Linux下DS使用
+&lt;/h2>&lt;h3 id="基本流程">&lt;a href="#%e5%9f%ba%e6%9c%ac%e6%b5%81%e7%a8%8b" class="header-anchor">&lt;/a>基本流程
+&lt;/h3>&lt;p>考虑开启 &lt;code>ASan&lt;/code> 对流程和性能的影响，一般需要单独部署一些炮灰环境。&lt;/p>
+&lt;ol>
+&lt;li>在原有的打包参数之后添加&lt;code>-EnableAsan&lt;/code>标识，用来开启&lt;code>ASan&lt;/code>相关的编译参数&lt;/li>
+&lt;li>启动时通过设置环境变量&lt;code>ASAN_OPTIONS&lt;/code>来控制ASan的相关配置&lt;/li>
+&lt;li>在原先的启动参数之后加上&lt;code>-ansimalloc&lt;/code>标识&lt;/li>
+&lt;li>当遇见异常时，检查&lt;code>stderr&lt;/code>的输出&lt;/li>
+&lt;li>可以选择配置&lt;code>log_path&lt;/code>来指定异常时的输出文件&lt;/li>
+&lt;/ol>
+&lt;h3 id="堆栈获取">&lt;a href="#%e5%a0%86%e6%a0%88%e8%8e%b7%e5%8f%96" class="header-anchor">&lt;/a>堆栈获取
+&lt;/h3>&lt;p>通过指定&lt;code>ASAN_SYMBOLIZER_PATH&lt;/code>可以使得输出的信息里自带堆栈，使用了llvm- symbolizer ，性能比起addr2line可以有较高的提升。&lt;/p>
+&lt;p>详见：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerCallStack" target="_blank" rel="noopener"
+>AddressSanitizerCallStack · google/sanitizers Wiki&lt;/a>&lt;/p>
+&lt;p>会使得输出日志稍微慢几秒，目测可以接受。&lt;/p>
+&lt;p>可以使用格式文本设定&lt;code>stack_trace_format&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl"> &lt;span class="c1">// %% - represents a &amp;#39;%&amp;#39; character;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %n - frame number (copy of frame_no);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %p - PC in hex format;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %m - path to module (binary or shared object);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %o - offset in the module in hex format;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %f - function name;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %q - offset in the function in hex format (*if available*);
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %s - path to source file;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %l - line in the source file;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %c - column in the source file;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %F - if function is known to be &amp;lt;foo&amp;gt;, prints &amp;#34;in &amp;lt;foo&amp;gt;&amp;#34;, possibly
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// followed by the offset in this function, but only if source file
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// is unknown;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %S - prints file/line/column information;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %L - prints location information: file/line/column, if it is known, or
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// module+offset if it is known, or (&amp;lt;unknown module&amp;gt;) string.
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="c1">// %M - prints module basename and offset, if it is known, or PC.
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>不过测试下来似乎未取到函数行号，判断是&lt;code>llvm&lt;/code>的问题，&lt;code>addr2line&lt;/code>就可以。&lt;/p>
+&lt;p>&lt;code>windows&lt;/code>下使用&lt;code>llvm-symbolizer.exe&lt;/code>也可以成功取到。&lt;/p>
+&lt;p>同时，测试下来&lt;code>windows&lt;/code>下使用&lt;code>MinGW&lt;/code>版本的&lt;code>addr2line&lt;/code>也可以取到堆栈，但是慢到无法接收。&lt;/p>
+&lt;h3 id="推荐配置">&lt;a href="#%e6%8e%a8%e8%8d%90%e9%85%8d%e7%bd%ae" class="header-anchor">&lt;/a>推荐配置
+&lt;/h3>&lt;p>开启堆栈输出并设置日志路径：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">export&lt;/span> &lt;span class="nv">ASAN_OPTIONS&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;symbolize=1:print_stacktrace=1:log_path=/home/crash/ds-&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">版本&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">-asan-crash.log&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="问题记录">&lt;a href="#%e9%97%ae%e9%a2%98%e8%ae%b0%e5%bd%95" class="header-anchor">&lt;/a>问题记录
+&lt;/h2>&lt;h3 id="开启asan之后加载过慢">&lt;a href="#%e5%bc%80%e5%90%afasan%e4%b9%8b%e5%90%8e%e5%8a%a0%e8%bd%bd%e8%bf%87%e6%85%a2" class="header-anchor">&lt;/a>开启ASan之后加载过慢
+&lt;/h3>&lt;p>需要检查&lt;code>fast_unwind_on_malloc&lt;/code>是否被设置为0，如果&lt;code>fast_unwind_on_malloc&lt;/code>被关闭，则会极大地影响性能。&lt;/p>
+&lt;p>详见：&lt;a class="link" href="https://developer.android.google.cn/ndk/guides/asan?hl=zh-cn#stack-traces" target="_blank" rel="noopener"
+>Address Sanitizer  |  Android NDK  |  Android Developers&lt;/a>&lt;/p>
+&lt;h2 id="堆栈还原">&lt;a href="#%e5%a0%86%e6%a0%88%e8%bf%98%e5%8e%9f" class="header-anchor">&lt;/a>堆栈还原
+&lt;/h2>&lt;p>写了一个&lt;code>golang&lt;/code>的脚本用于快速的分析堆栈：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt"> 10
+&lt;/span>&lt;span class="lnt"> 11
+&lt;/span>&lt;span class="lnt"> 12
+&lt;/span>&lt;span class="lnt"> 13
+&lt;/span>&lt;span class="lnt"> 14
+&lt;/span>&lt;span class="lnt"> 15
+&lt;/span>&lt;span class="lnt"> 16
+&lt;/span>&lt;span class="lnt"> 17
+&lt;/span>&lt;span class="lnt"> 18
+&lt;/span>&lt;span class="lnt"> 19
+&lt;/span>&lt;span class="lnt"> 20
+&lt;/span>&lt;span class="lnt"> 21
+&lt;/span>&lt;span class="lnt"> 22
+&lt;/span>&lt;span class="lnt"> 23
+&lt;/span>&lt;span class="lnt"> 24
+&lt;/span>&lt;span class="lnt"> 25
+&lt;/span>&lt;span class="lnt"> 26
+&lt;/span>&lt;span class="lnt"> 27
+&lt;/span>&lt;span class="lnt"> 28
+&lt;/span>&lt;span class="lnt"> 29
+&lt;/span>&lt;span class="lnt"> 30
+&lt;/span>&lt;span class="lnt"> 31
+&lt;/span>&lt;span class="lnt"> 32
+&lt;/span>&lt;span class="lnt"> 33
+&lt;/span>&lt;span class="lnt"> 34
+&lt;/span>&lt;span class="lnt"> 35
+&lt;/span>&lt;span class="lnt"> 36
+&lt;/span>&lt;span class="lnt"> 37
+&lt;/span>&lt;span class="lnt"> 38
+&lt;/span>&lt;span class="lnt"> 39
+&lt;/span>&lt;span class="lnt"> 40
+&lt;/span>&lt;span class="lnt"> 41
+&lt;/span>&lt;span class="lnt"> 42
+&lt;/span>&lt;span class="lnt"> 43
+&lt;/span>&lt;span class="lnt"> 44
+&lt;/span>&lt;span class="lnt"> 45
+&lt;/span>&lt;span class="lnt"> 46
+&lt;/span>&lt;span class="lnt"> 47
+&lt;/span>&lt;span class="lnt"> 48
+&lt;/span>&lt;span class="lnt"> 49
+&lt;/span>&lt;span class="lnt"> 50
+&lt;/span>&lt;span class="lnt"> 51
+&lt;/span>&lt;span class="lnt"> 52
+&lt;/span>&lt;span class="lnt"> 53
+&lt;/span>&lt;span class="lnt"> 54
+&lt;/span>&lt;span class="lnt"> 55
+&lt;/span>&lt;span class="lnt"> 56
+&lt;/span>&lt;span class="lnt"> 57
+&lt;/span>&lt;span class="lnt"> 58
+&lt;/span>&lt;span class="lnt"> 59
+&lt;/span>&lt;span class="lnt"> 60
+&lt;/span>&lt;span class="lnt"> 61
+&lt;/span>&lt;span class="lnt"> 62
+&lt;/span>&lt;span class="lnt"> 63
+&lt;/span>&lt;span class="lnt"> 64
+&lt;/span>&lt;span class="lnt"> 65
+&lt;/span>&lt;span class="lnt"> 66
+&lt;/span>&lt;span class="lnt"> 67
+&lt;/span>&lt;span class="lnt"> 68
+&lt;/span>&lt;span class="lnt"> 69
+&lt;/span>&lt;span class="lnt"> 70
+&lt;/span>&lt;span class="lnt"> 71
+&lt;/span>&lt;span class="lnt"> 72
+&lt;/span>&lt;span class="lnt"> 73
+&lt;/span>&lt;span class="lnt"> 74
+&lt;/span>&lt;span class="lnt"> 75
+&lt;/span>&lt;span class="lnt"> 76
+&lt;/span>&lt;span class="lnt"> 77
+&lt;/span>&lt;span class="lnt"> 78
+&lt;/span>&lt;span class="lnt"> 79
+&lt;/span>&lt;span class="lnt"> 80
+&lt;/span>&lt;span class="lnt"> 81
+&lt;/span>&lt;span class="lnt"> 82
+&lt;/span>&lt;span class="lnt"> 83
+&lt;/span>&lt;span class="lnt"> 84
+&lt;/span>&lt;span class="lnt"> 85
+&lt;/span>&lt;span class="lnt"> 86
+&lt;/span>&lt;span class="lnt"> 87
+&lt;/span>&lt;span class="lnt"> 88
+&lt;/span>&lt;span class="lnt"> 89
+&lt;/span>&lt;span class="lnt"> 90
+&lt;/span>&lt;span class="lnt"> 91
+&lt;/span>&lt;span class="lnt"> 92
+&lt;/span>&lt;span class="lnt"> 93
+&lt;/span>&lt;span class="lnt"> 94
+&lt;/span>&lt;span class="lnt"> 95
+&lt;/span>&lt;span class="lnt"> 96
+&lt;/span>&lt;span class="lnt"> 97
+&lt;/span>&lt;span class="lnt"> 98
+&lt;/span>&lt;span class="lnt"> 99
+&lt;/span>&lt;span class="lnt">100
+&lt;/span>&lt;span class="lnt">101
+&lt;/span>&lt;span class="lnt">102
+&lt;/span>&lt;span class="lnt">103
+&lt;/span>&lt;span class="lnt">104
+&lt;/span>&lt;span class="lnt">105
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-golang" data-lang="golang">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">package&lt;/span> &lt;span class="nx">main&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;bufio&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;os&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;os/exec&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s">&amp;#34;strings&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">convertStackToAddr2line&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">inputFile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">outputFile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">binaryPath&lt;/span> &lt;span class="kt">string&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kt">error&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">infile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Open&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">inputFile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Errorf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;无法打开输入文件: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">infile&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">File&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">infile&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Close&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;关闭输入文件时出错: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}(&lt;/span>&lt;span class="nx">infile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">outfile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Create&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">outputFile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Errorf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;无法创建输出文件: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">outfile&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">File&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">outfile&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Close&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;关闭输出文件时出错: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}(&lt;/span>&lt;span class="nx">outfile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">scanner&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">bufio&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">NewScanner&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">infile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">writer&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">bufio&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">NewWriter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">outfile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">defer&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">writer&lt;/span> &lt;span class="o">*&lt;/span>&lt;span class="nx">bufio&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Writer&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">writer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Flush&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;刷新输出文件时出错: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}(&lt;/span>&lt;span class="nx">writer&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">scanner&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Scan&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">line&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">TrimSpace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">scanner&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Text&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">HasPrefix&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">line&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;#&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">parts&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fields&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">line&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">var&lt;/span> &lt;span class="nx">address&lt;/span> &lt;span class="kt">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">part&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="k">range&lt;/span> &lt;span class="nx">parts&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">HasPrefix&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">part&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;0x&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">address&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">part&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">address&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="s">&amp;#34;&amp;#34;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">cmd&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">exec&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Command&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;addr2line&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;-e&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">binaryPath&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">address&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">output&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">cmd&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Output&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Stderr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;执行 addr2line 失败: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">continue&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">s&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">strings&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">TrimSpace&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">string&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">output&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="nx">writer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">WriteString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;\n&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">s&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">writer&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">WriteString&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">line&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="s">&amp;#34;\n&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">err&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">line&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">scanner&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Err&lt;/span>&lt;span class="p">();&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Errorf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;读取文件时出错: %v&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;转换完成，结果已保存到 %s\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">outputFile&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">nil&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Args&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="mi">4&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Usage: go run main.go &amp;lt;input_file&amp;gt; &amp;lt;output_file&amp;gt; &amp;lt;binary_path&amp;gt;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">inputFile&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">outputFile&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">binaryPath&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Args&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nf">convertStackToAddr2line&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">inputFile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">outputFile&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">binaryPath&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">_&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">fmt&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Fprintf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">Stderr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;错误: %v\n&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="nx">err&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="kc">nil&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">os&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nf">Exit&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/using-clang-sanitizers-in-unreal-engine-projects" target="_blank" rel="noopener"
+>在虚幻引擎项目中使用Clang检测工具 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://github.com/google/sanitizers" target="_blank" rel="noopener"
+>google/sanitizers: AddressSanitizer, ThreadSanitizer, MemorySanitizer&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://forums.unrealengine.com/t/addresssanitizer-can-output-stacktrace-on-android-debug-buildconfiguration-but-not-development/690919" target="_blank" rel="noopener"
+>AddressSanitizer can output Stacktrace on android debug buildconfiguration but not development? - International - Epic Developer Community Forums&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中网络角色Role相关概念</title><link>https://boiltask.com/knowledge/ue/network-role/</link><pubDate>Wed, 02 Apr 2025 13:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-role/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。&lt;/p>
+&lt;p>通过这两个属性，可以明确地知道：&lt;/p>
+&lt;ul>
+&lt;li>谁拥有Actor的主控权&lt;/li>
+&lt;li>Actor是否被复制&lt;/li>
+&lt;li>复制模式&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>首先一件要确定的事，就是谁拥有特定 actor 的主控权。要确定当前运行的引擎实例是否有主控者，需要查看 Role 属性是否为 &lt;code>ROLE_Authority&lt;/code>。如果是，就表明这个运行中的 &lt;strong>虚幻引擎&lt;/strong> 实例负责掌管此 actor（决定其是否被复制）。&lt;/p>
+&lt;p>如果 Role 是 &lt;code>ROLE_Authority&lt;/code>，RemoteRole 是 &lt;code>ROLE_SimulatedProxy&lt;/code> 或 &lt;code>ROLE_AutonomousProxy&lt;/code>，就说明这个引擎实例负责将此 actor 复制到远程连接。&lt;/p>&lt;/blockquote>
+&lt;p>简单来说：&lt;/p>
+&lt;p>对于单机模式，Actor的Role与RemoteRole很显然都是ROLE_Authority。&lt;/p>
+&lt;p>对于网络模型下，Role代表本地对于Actor的角色，RemoteRole代表对端对于Actor的角色。&lt;/p>
+&lt;p>下面将重点描述多人游戏时的相关机制。&lt;/p>
+&lt;h2 id="属性类型">&lt;a href="#%e5%b1%9e%e6%80%a7%e7%b1%bb%e5%9e%8b" class="header-anchor">&lt;/a>属性类型
+&lt;/h2>&lt;h3 id="role_authority">&lt;a href="#role_authority" class="header-anchor">&lt;/a>ROLE_Authority
+&lt;/h3>&lt;p>代表最高权限，通常是服务器持有的状态。&lt;/p>
+&lt;p>如果客户端本地生成的一个不同步的Actor，其Role有可能也为ROLE_Authority，因为此时这个客户端对这个Actor具有绝对的权限。&lt;/p>
+&lt;h3 id="role_simulatedproxy">&lt;a href="#role_simulatedproxy" class="header-anchor">&lt;/a>ROLE_SimulatedProxy
+&lt;/h3>&lt;p>被动模拟角色，由服务器控制，客户端仅接受同步数据。&lt;/p>
+&lt;p>比如对于客户端A视角下的另一个角色，它的Role就有可能是ROLE_SimulatedProxy。&lt;/p>
+&lt;h3 id="role_autonomousproxy">&lt;a href="#role_autonomousproxy" class="header-anchor">&lt;/a>ROLE_AutonomousProxy
+&lt;/h3>&lt;p>主控端角色，通常代表由客户端直接控制，服务器接收控制的输入来同步其状态。&lt;/p>
+&lt;p>比如对于客户端A视角下的自身角色，它的Role就有可能是ROLE_AutonomousProxy，接收输入之后发给服务器更新其状态。&lt;/p>
+&lt;h2 id="remoterole与role的区别">&lt;a href="#remoterole%e4%b8%8erole%e7%9a%84%e5%8c%ba%e5%88%ab" class="header-anchor">&lt;/a>RemoteRole与Role的区别
+&lt;/h2>&lt;p>RemoteRole与Role对应，代表对端对Actor的角色定义，是Role的另一个视角。&lt;/p>
+&lt;p>当Actor在服务器为ROLE_Authority，他在服务器上的RemoteRole为ROLE_SimulatedProxy，对应的客户端的Role为ROLE_SimulatedProxy，RemoteRole为ROLE_Authority。&lt;/p>
+&lt;p>对于不同的数值观察者，它们的 Role 和 RemoteRole 值&lt;strong>可能&lt;/strong>发生对调。&lt;/p>
+&lt;blockquote>
+&lt;p>注意这个可能的描述&lt;/p>
+&lt;p>比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。&lt;/p>&lt;/blockquote>
+&lt;h2 id="角色组合">&lt;a href="#%e8%a7%92%e8%89%b2%e7%bb%84%e5%90%88" class="header-anchor">&lt;/a>角色组合
+&lt;/h2>&lt;h3 id="常见role与remoterole的组合">&lt;a href="#%e5%b8%b8%e8%a7%81role%e4%b8%8eremoterole%e7%9a%84%e7%bb%84%e5%90%88" class="header-anchor">&lt;/a>常见Role与RemoteRole的组合
+&lt;/h3>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align: center">&lt;strong>本地Role&lt;/strong>&lt;/th>
+&lt;th style="text-align: center">&lt;strong>远程RemoteRole&lt;/strong>&lt;/th>
+&lt;th style="text-align: center">&lt;strong>场景说明&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align: center">ROLE_Authority&lt;/td>
+&lt;td style="text-align: center">ROLE_SimulatedProxy&lt;/td>
+&lt;td style="text-align: center">服务器视角，控制Actor，客户端仅接收同步数据（如NPC）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">ROLE_SimulatedProxy&lt;/td>
+&lt;td style="text-align: center">ROLE_Authority&lt;/td>
+&lt;td style="text-align: center">客户端视角，客户端接收服务器同步的Actor（如静态场景物体）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align: center">ROLE_AutonomousProxy&lt;/td>
+&lt;td style="text-align: center">ROLE_SimulatedProxy&lt;/td>
+&lt;td style="text-align: center">客户端视角，客户端控制Actor，服务器同步其状态（如玩家角色）。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="区分simulatedproxy与autonomousproxy">&lt;a href="#%e5%8c%ba%e5%88%86simulatedproxy%e4%b8%8eautonomousproxy" class="header-anchor">&lt;/a>区分SimulatedProxy与AutonomousProxy
+&lt;/h2>&lt;p>参考官方文档的描述，由于Actor的同步具有间隔，为了弥补这个缺陷，客户端在模拟时采取两种策略：&lt;/p>
+&lt;p>ROLE_SimulatedProxy通常直接根据服务器同步的信息进行模拟。&lt;/p>
+&lt;p>ROLE_AutonomousProxy通常会考虑客户端自身的输入，通过这部分输入来补足信息，而非只通过服务器的信息推算。&lt;/p>
+&lt;h2 id="参考文档">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e6%a1%a3" class="header-anchor">&lt;/a>参考文档
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/actor-role-and-remote-role-in-unreal-engine" target="_blank" rel="noopener"
+>虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中角色移动相关机制</title><link>https://boiltask.com/knowledge/ue/character-movement/</link><pubDate>Wed, 02 Apr 2025 12:54:31 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/character-movement/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>本文主要用于整理虚幻引擎中移动相关的机制。&lt;/p>
+&lt;p>内容可能摘录自各个文章、论坛、文档等，仅用作记录。&lt;/p>
+&lt;h2 id="基础简介">&lt;a href="#%e5%9f%ba%e7%a1%80%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>基础简介
+&lt;/h2>&lt;p>移动是一个非常重要并且较为复杂的模块，&lt;code>UnrealEngine&lt;/code>对于移动的实现使用了组合模式，在描述&lt;code>Actor&lt;/code>的移动时，含义是具有移动组件的&lt;code>Actor&lt;/code>可以移动。&lt;/p>
+&lt;p>移动组件的基类为&lt;code>UMovementComponent&lt;/code>，提供基本的移动功能，有多个不同功能的子类，一些子类移动组件专门用于服务一种特殊的&lt;code>Actor&lt;/code>，比如通常代表玩家的&lt;code>ACharacter&lt;/code>，对应的移动组件&lt;code>UCharacterMovementComponent&lt;/code>。&lt;/p>
+&lt;p>&lt;code>Actor&lt;/code>虽然代表在&lt;code>World&lt;/code>中的一个实体，但是本身是没有位置概念的。&lt;code>Actor&lt;/code>的位置由其具有的&lt;code>USceneComponent&lt;/code>赋予。因此移动的本质，就是改变&lt;code>Actor&lt;/code>上的某个&lt;code>USceneComponent&lt;/code>的位置，通常指的是&lt;code>Actor&lt;/code>的&lt;code>RootComponent&lt;/code>。&lt;/p>
+&lt;p>&lt;code>UMovementComponent&lt;/code>上有个属性&lt;code>UpdatedComponent&lt;/code>，就是用于设置移动组件所修改的&lt;code>USceneComponent&lt;/code>。暴露给蓝图有个参数&lt;code>bAutoRegisterUpdatedComponent&lt;/code>，如果设置为&lt;code>true&lt;/code>，则会在组件初始化时，读取&lt;code>Owner&lt;/code>的&lt;code>RootComponent&lt;/code>，调用&lt;code>SetUpdatedComponent&lt;/code>设置&lt;code>UpdatedComponent&lt;/code>。&lt;/p>
+&lt;h2 id="移动流程">&lt;a href="#%e7%a7%bb%e5%8a%a8%e6%b5%81%e7%a8%8b" class="header-anchor">&lt;/a>移动流程
+&lt;/h2>&lt;p>网络同步下的角色移动至少需要考虑以下几个方面：&lt;/p>
+&lt;ul>
+&lt;li>玩家客户端操作无延迟
+&lt;ul>
+&lt;li>需要直接响应移动输入并上报给服务器&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>位置以服务器为准
+&lt;ul>
+&lt;li>防止外挂&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>同步到的移动需要表现丝滑
+&lt;ul>
+&lt;li>不可能每帧都收到位置更新，需要适当进行插值&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="自主实现">&lt;a href="#%e8%87%aa%e4%b8%bb%e5%ae%9e%e7%8e%b0" class="header-anchor">&lt;/a>自主实现
+&lt;/h3>&lt;p>先思考如果自己实现的情况下可能会怎么做。&lt;/p>
+&lt;ul>
+&lt;li>本地接收到输入之后，在本地先操作移动，同时把移动的操作发送给服务器
+&lt;ul>
+&lt;li>可能包含的信息是：当前位置、目标位置等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>服务器接收到移动的操作，在服务器上执行移动，并把玩家位移的信息同步给所有客户端
+&lt;ul>
+&lt;li>信息同样包含：当前位置、目标位置、速度等&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>其他客户端收到了移动的信息后，修改角色的移动目标，根据插值调整角色位置&lt;/li>
+&lt;/ul>
+&lt;h3 id="引擎实现">&lt;a href="#%e5%bc%95%e6%93%8e%e5%ae%9e%e7%8e%b0" class="header-anchor">&lt;/a>引擎实现
+&lt;/h3>&lt;p>虚幻引擎网络同步情况下的移动流程与此类似，大概为：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>每一帧执行TickComponent时，计算这一帧的加速度和转向，之后对于主控的Character，调用ReplicateMoveToServer把移动同步给服务器&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ReplicateMoveToServer会把移动保存到列表，然后执行PerformMovement在本地预执行移动操作。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>然后会调用ServerMove把移动同步给服务器，告知移动的参数、客户端自己移动的位置，以及时间戳&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>ServerMove在服务器上执行，根据客户端声明的位置，与服务器的位置做对比，如果差异过大，则调用ClientAdjustPosition在主控端校正位置&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>客户端如果收到ClientAdjustPosition，会把客户端角色位置设置为服务器上的位置，并把bUpdatePosition标记为true，这将会影响到后续的移动更新&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>当客户端再次调用TickComponent时，如果存在bUpdatePosition，则会调用ClientUpdatePositionAfterServerUpdate来重演在服务器上调整移动之后发生的所有移动。&lt;/p>
+&lt;blockquote>
+&lt;p>在引擎源码CharacterMovementComponent.h中可以找到对移动同步流程的描述：&lt;/p>
+&lt;p>Here&amp;rsquo;s how player movement prediction, replication and correction works in network games:&lt;/p>
+&lt;p>Every tick, the TickComponent() function is called. It figures out the acceleration and rotation change for the frame,
+and then calls PerformMovement() (for locally controlled Characters), or ReplicateMoveToServer() (if it&amp;rsquo;s a network client).&lt;/p>
+&lt;p>ReplicateMoveToServer() saves the move (in the PendingMove list), calls PerformMovement(), and then replicates the move
+to the server by calling the replicated function ServerMove() - passing the movement parameters, the client&amp;rsquo;s
+resultant position, and a timestamp.&lt;/p>
+&lt;p>ServerMove() is executed on the server. It decodes the movement parameters and causes the appropriate movement
+to occur. It then looks at the resulting position and if enough time has passed since the last response, or the
+position error is significant enough, the server calls ClientAdjustPosition(), a replicated function.&lt;/p>
+&lt;p>ClientAdjustPosition() is executed on the client. The client sets its position to the servers version of position,
+and sets the bUpdatePosition flag to true.&lt;/p>
+&lt;p>When TickComponent() is called on the client again, if bUpdatePosition is true, the client will call
+ClientUpdatePosition() before calling PerformMovement(). ClientUpdatePosition() replays all the moves in the pending
+move list which occurred after the timestamp of the move the server was adjusting.&lt;/p>&lt;/blockquote>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="玩家输入">&lt;a href="#%e7%8e%a9%e5%ae%b6%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>玩家输入
+&lt;/h3>&lt;p>管理玩家输入的也是一个组件&lt;code>UInputComponent&lt;/code>，通常可以调用&lt;code>BindAxis&lt;/code>来注册事件响应。&lt;/p>
+&lt;p>一般最终会调用到&lt;code>UPawnMovementComponent::AddInputVector&lt;/code>来处理移动。&lt;/p>
+&lt;h3 id="主控角色移动">&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor">&lt;/a>主控角色移动
+&lt;/h3>&lt;p>在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p>
+&lt;blockquote>
+&lt;p>详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/p>&lt;/blockquote>
+&lt;p>在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p>
+&lt;p>本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code>TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code>的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p>
+&lt;p>如果服务器认可了一些移动，就可以把这些移动删掉，如果检查不通过，就可以据此执行异常处理。&lt;/p>
+&lt;h3 id="协议选择">&lt;a href="#%e5%8d%8f%e8%ae%ae%e9%80%89%e6%8b%a9" class="header-anchor">&lt;/a>协议选择
+&lt;/h3>&lt;p>在UE中，默认使用UDP作为传输协议，这可以使得数据包尽快送达。&lt;/p>
+&lt;p>UDP不保证可达和有序，但是应用层面可以通过设计来在需要的地方避免这些问题。&lt;/p>
+&lt;h2 id="server同步移动给客户端">&lt;a href="#server%e5%90%8c%e6%ad%a5%e7%a7%bb%e5%8a%a8%e7%bb%99%e5%ae%a2%e6%88%b7%e7%ab%af" class="header-anchor">&lt;/a>Server同步移动给客户端
+&lt;/h2>&lt;h3 id="actor基本同步方案">&lt;a href="#actor%e5%9f%ba%e6%9c%ac%e5%90%8c%e6%ad%a5%e6%96%b9%e6%a1%88" class="header-anchor">&lt;/a>Actor基本同步方案
+&lt;/h3>&lt;p>Actor自身就支持移动同步，打开ReplicateMovement开关后，当Actor的RootComponent位置、朝向等数据发生变化时，就会把数据同步给Simulate客户端。&lt;/p>
+&lt;p>当Simulate的客户端收到同步之后，会简单的设置自己的位置和朝向。移动数据的同步有间隔，因此这种实现会导致Actor发生闪现。&lt;/p>
+&lt;h3 id="character移动同步">&lt;a href="#character%e7%a7%bb%e5%8a%a8%e5%90%8c%e6%ad%a5" class="header-anchor">&lt;/a>Character移动同步
+&lt;/h3>&lt;p>针对Actor基本同步模式的不足，CharacterMovementComponent针对性的做了表现平滑处理，让Simulate角色移动尽可能平滑自然。&lt;/p>
+&lt;p>Character主要有两个组件，Capsule和Mesh，Capsule是Chara&lt;/p>
+&lt;h2 id="关键概念">&lt;a href="#%e5%85%b3%e9%94%ae%e6%a6%82%e5%bf%b5" class="header-anchor">&lt;/a>关键概念
+&lt;/h2>&lt;h3 id="ucharactermovement">&lt;a href="#ucharactermovement" class="header-anchor">&lt;/a>UCharacterMovement
+&lt;/h3>&lt;p>角色移动组件是最为复杂的一个子类，需要重点进行分析。&lt;/p>
+&lt;pre class="mermaid">
+classDiagram
+class UCharacterMovementComponent {
++IRVOAvoidanceInterface
++INetworkPredictionInterface
+}
+UActorComponent &amp;lt;|-- UMovementComponent
+UMovementComponent &amp;lt;|-- UNavMovementComponent
+UNavMovementComponent &amp;lt;|-- UPawnMovementComponent
+UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
+&lt;/pre>
+&lt;h3 id="fsavedmove_character">&lt;a href="#fsavedmove_character" class="header-anchor">&lt;/a>FSavedMove_Character
+&lt;/h3>&lt;p>用于描述玩家的一次移动，可以认为是一次移动的快照。&lt;/p>
+&lt;p>主要属性有：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>TimeStamp&lt;/td>
+&lt;td>这次移动发生的时间&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DeltaTime&lt;/td>
+&lt;td>这次移动使用的时间&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CustomTimeDilation&lt;/td>
+&lt;td>时间膨胀系数，可以用于快进和慢放&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartPackedMovementMode&lt;/td>
+&lt;td>移动发生前的MovementMode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartLocation&lt;/td>
+&lt;td>移动发生前的位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>StartVelocity&lt;/td>
+&lt;td>移动发生前的速度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>EndPackedMovementMode&lt;/td>
+&lt;td>移动发生后的MovementMode&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SavedLocation&lt;/td>
+&lt;td>移动发生后的位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SavedVelocity&lt;/td>
+&lt;td>移动发生后的速度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Acceleration&lt;/td>
+&lt;td>移动所用加速度&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>理论上只要有这些数据，就能复盘整个移动过程，也可用作回放功能。&lt;/p>
+&lt;h3 id="replicatemovetoserver">&lt;a href="#replicatemovetoserver" class="header-anchor">&lt;/a>ReplicateMoveToServer
+&lt;/h3>&lt;p>首先会从SavedMoves里找到最早发生的一个ImportantMove（通过IsImportantMove判断），也就是最新被服务器确认的有显著差异的Move。&lt;/p>
+&lt;p>之后创建一个FSavedMove_Character并初始化。然后执行PerformMovement，对角色计算操作后的属性，设置上相关信息。&lt;/p>
+&lt;p>根据能否被合并，进行处理。&lt;/p>
+&lt;h3 id="延迟发送move">&lt;a href="#%e5%bb%b6%e8%bf%9f%e5%8f%91%e9%80%81move" class="header-anchor">&lt;/a>延迟发送Move
+&lt;/h3>&lt;p>一个Move有可能可以被延迟一会，与后面的Move合并后再发给服务器。因此一个新建的Move被发往服务器前会先判断是否可以延迟发送。&lt;/p>
+&lt;p>首先判断是否开启了NetEnableMoveCombining，如果没开也不会延迟发送。&lt;/p>
+&lt;p>同时还会判断当前的Move是否能被延迟发送，会检查该Move前后MovementMode是否改变，如果改变也需要即使变化。也就是说，如果此次Move没有显著改变，那么则可以延后发送，理论上服务器根据之前的信息推算，结果应该是一样的。&lt;/p>
+&lt;p>然后会计算当前预期的移动更新时间间隔，根据当前网速、玩家数量等信息，在基准值ClientNetSendMoveDeltaTime上做调整，得到最终间隔，如果Tick时还没达到更新间隔，就会延迟发送Move，把它储存在PendingMove中，留着以后处理。&lt;/p>
+&lt;h3 id="callservermove">&lt;a href="#callservermove" class="header-anchor">&lt;/a>CallServerMove
+&lt;/h3>&lt;p>函数接受两个参数，一个是刚创建的Move，另一个是之前获取的ImportantMove（ImportantMove可能为空）。不需要把整个Move都发往服务器，只需要位置、旋转、加速度等关键信息，并且这些信息会经过压缩。&lt;/p>
+&lt;p>压缩的过程简单来说，会尝试牺牲精度，把一些字段合并在一个数据结构中。&lt;/p>
+&lt;p>之后还会调用ServerMoveOld，把ImportantMove中的一些信息发送到服务器，可以简单理解为一种冗余的保险。&lt;/p>
+&lt;p>如果存在PendingMove，说明存在未合并的Move，需要调用ServerMoveDual一次发送两个连续的Move。否则，说明发送间隔较大，或者PendingMove已经被合并，就调用ServerMode发送这个Move。&lt;/p>
+&lt;h3 id="servermoveold">&lt;a href="#servermoveold" class="header-anchor">&lt;/a>ServerMoveOld
+&lt;/h3>&lt;p>ServerMoveOld主要作为一种冗余措施，防止服务器新收到一个移动数据时，因为网络丢包而落后太多，导致移动判断不通过，进而纠正客户端位置。ServerMoveOld可以让服务器使用传递的加速度，粗略的从旧位置快速移动到新位置，不校验移动结果。&lt;/p>
+&lt;blockquote>
+&lt;p>TODO：安全性如何保证？&lt;/p>&lt;/blockquote>
+&lt;h2 id="todo">&lt;a href="#todo" class="header-anchor">&lt;/a>TODO
+&lt;/h2>&lt;ul>
+&lt;li>
+&lt;p>具有物理模拟下的移动&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>移动如何通过RPC发送的&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
+&lt;/h2>&lt;ul>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/114341957" target="_blank" rel="noopener"
+>UE4移动的网络同步 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/664568047" target="_blank" rel="noopener"
+>UE4/UE5 Character Movement Component移动组件网络同步详解 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/650314172" target="_blank" rel="noopener"
+>「Grow by UE」图解角色移动组件 - 知乎&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
+>UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>UnrealEngine虚幻引擎编译选项</title><link>https://boiltask.com/knowledge/ue/build-configuration/</link><pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/build-configuration/</guid><description>&lt;h2 id="配置参数">&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor">&lt;/a>配置参数
+&lt;/h2>&lt;h3 id="window指定编译sdk">&lt;a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor">&lt;/a>Window指定编译SDK
+&lt;/h3>&lt;p>修改&lt;code>Engine/Saved/UnrealBuildTool/BuildConfiguration.xml&lt;/code>中的配置，添加&lt;code>MSVC&lt;/code>版本号、&lt;code>SDK&lt;/code>的版本号。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;WindowsPlatform&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;CompilerVersion&lt;/span> &lt;span class="nt">&amp;gt;&lt;/span>14.40.33807&lt;span class="nt">&amp;lt;/CompilerVersion&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;WindowsSdkVersion&amp;gt;&lt;/span>10.0.20348.0&lt;span class="nt">&amp;lt;/WindowsSdkVersion&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/WindowsPlatform&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="最终示例">&lt;a href="#%e6%9c%80%e7%bb%88%e7%a4%ba%e4%be%8b" class="header-anchor">&lt;/a>最终示例
+&lt;/h2>&lt;p>配置文件形如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34; ?&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;Configuration&lt;/span> &lt;span class="na">xmlns=&lt;/span>&lt;span class="s">&amp;#34;https://www.unrealengine.com/BuildConfiguration&amp;#34;&lt;/span>&lt;span class="nt">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;WindowsPlatform&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;WindowsSdkVersion&amp;gt;&lt;/span>10.0.19041.0&lt;span class="nt">&amp;lt;/WindowsSdkVersion&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;lt;/WindowsPlatform&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nt">&amp;lt;/Configuration&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
+&lt;/h2>&lt;p>&lt;a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine" target="_blank" rel="noopener"
+>Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a>&lt;/p></description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command/</guid><description>&lt;p>在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p>
+&lt;p>下面列出一些常用的控制台指令：&lt;/p>
+&lt;p>stat fps 显示帧率&lt;/p>
+&lt;p>stat unit 显示包括drawcall，游戏逻辑线程，渲染线程，面数等信息（面数信息需要在设置中调整ES3.1才会显示）&lt;/p>
+&lt;p>slomo 0.1 游戏运行下的速度0.1表示运行速度变为正常的十分之一&lt;/p>
+&lt;p>r.showcollision 显示碰撞体&lt;/p>
+&lt;p>t.maxfps 60 设置最大帧率&lt;/p>
+&lt;p>更多控制台指令可以在下面这个网站查询： &lt;a class="link" href="https://digilander.libero.it/ZioYuri78/" target="_blank" rel="noopener"
+>https://digilander.libero.it/ZioYuri78/&lt;/a>&lt;/p></description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p>UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">MetaEngine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Engine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Binaries&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Win64&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">UE4Editor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">exe&lt;/span> &lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">uproject&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">diff&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">theirs&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">mine&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">base&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">merged&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-merge/image.png"
+width="1920"
+height="1040"
+srcset="https://boiltask.com/knowledge/ue/blueprint-merge/image_hu_e3113eff777536f7.png 480w, https://boiltask.com/knowledge/ue/blueprint-merge/image_hu_798e2fc5c72c06e8.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>&lt;/p></description></item><item><title>常用加权随机算法说明与实现</title><link>https://boiltask.com/knowledge/random-weight/</link><pubDate>Fri, 13 Dec 2024 12:50:53 +0800</pubDate><guid>https://boiltask.com/knowledge/random-weight/</guid><description>&lt;p>A-J&lt;/p>
 &lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="https://lotabout.me/2018/Weighted-Random-Sampling/" target="_blank" rel="noopener"
 >加权随机采样 (Weighted Random Sampling) | 三点水&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://guyuecanhui.github.io/2020/12/05/weighted-sample/" target="_blank" rel="noopener"
 >加权随机采样 | HCigmoid&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://coolcao.com/2023/07/07/%E5%89%8D%E7%BC%80%E5%92%8C%E5%BA%94%E7%94%A8%E4%B9%8B%E7%94%9F%E6%88%90%E5%8A%A0%E6%9D%83%E9%9A%8F%E6%9C%BA%E6%95%B0/" target="_blank" rel="noopener"
->前缀和应用之生成加权随机数 | coolcao的小站&lt;/a>&lt;/p></description></item><item><title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title><link>https://boiltask.com/knowledge/katex-cloudflare/</link><pubDate>Sat, 09 Nov 2024 12:45:51 +0800</pubDate><guid>https://boiltask.com/knowledge/katex-cloudflare/</guid><description>&lt;p>在博客部署到线上之后，发现&lt;code>Katex&lt;/code>公式无法正常显示，而相同的&lt;code>Html&lt;/code>文件在本地环境下是可以正常显示的。&lt;/p>
+>前缀和应用之生成加权随机数 | coolcao的小站&lt;/a>&lt;/p></description></item><item><title>虚幻引擎中Actor复制流程</title><link>https://boiltask.com/knowledge/ue/actor-replication/</link><pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/actor-replication/</guid><description>&lt;blockquote>
+&lt;p>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/detailed-actor-replication-flow-in-unreal-engine" target="_blank" rel="noopener"
+>Detailed Actor Replication Flow&lt;/a>暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p>&lt;/blockquote>
+&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>&lt;strong>Actor复制&lt;/strong>是一个详细的多步骤过程，其中&lt;strong>网络驱动程序&lt;/strong>（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。&lt;/p>
+&lt;p>大多数Actor的复制是在&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UNetDriver/ServerReplicateActors" target="_blank" rel="noopener"
+>&lt;code>UNetDriver::ServerReplicateActors&lt;/code>&lt;/a>函数中进行的。 在这个函数中，服务器会首先收集所有被判定对每个客户端相关的Actor，然后将自上次更新以来发生变化的属性发送给每个已连接的客户端。随后，&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UActorChannel/ReplicateActor" target="_blank" rel="noopener"
+>&lt;code>UActorChannel::ReplicateActor&lt;/code>&lt;/a> 函数负责处理将特定Actor复制到某一通道的详细操作。&lt;/p>
+&lt;h2 id="重要属性">&lt;a href="#%e9%87%8d%e8%a6%81%e5%b1%9e%e6%80%a7" class="header-anchor">&lt;/a>重要属性
+&lt;/h2>&lt;p>对于如何更新 actor、调用某些框架回调以及用于确定在当前服务器 tick 期间是否复制 actor 的属性，有一个定义的流程。以下是一些重要的属性：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>AActor::NetUpdateFrequency&lt;/code>&lt;/td>
+&lt;td>决定Actor复制的频率。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AActor::PreReplication&lt;/code>&lt;/td>
+&lt;td>在任何复制操作发生之前调用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AActor::bOnlyRelevantToOwner&lt;/code>&lt;/td>
+&lt;td>如果该Actor只会复制给其拥有者，则为&lt;code>True&lt;/code>。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AActor::IsRelevancyOwnerFor&lt;/code>&lt;/td>
+&lt;td>当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>True&lt;/code>时，决定Actor的相关性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AActor::IsNetRelevantFor&lt;/code>&lt;/td>
+&lt;td>当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>False&lt;/code>时，决定Actor的相关性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>AActor::NetDormancy&lt;/code>&lt;/td>
+&lt;td>决定Actor是处于休眠状态还是激活状态。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="actor复制流程概述">&lt;a href="#actor%e5%a4%8d%e5%88%b6%e6%b5%81%e7%a8%8b%e6%a6%82%e8%bf%b0" class="header-anchor">&lt;/a>Actor复制流程概述
+&lt;/h2>&lt;p>以下步骤构成了Actor复制过程的高级概述：&lt;/p>
+&lt;ol>
+&lt;li>确定需要复制的Actors，并进行检查以确定它们的休眠状态、更新频率以及拥有的连接。&lt;/li>
+&lt;li>将通过这些检查的Actors添加到一个列表中，准备进行复制。&lt;/li>
+&lt;li>遍历每个连接，并根据当前的Actor和连接执行检查。完成此步骤后，得到每个连接需要复制的Actor列表。&lt;/li>
+&lt;li>按照优先级对每个连接的Actors进行排序。&lt;/li>
+&lt;li>确定该Actor是否对当前连接相关。&lt;/li>
+&lt;li>将该Actor复制到当前连接。&lt;/li>
+&lt;/ol>
+&lt;p>以下部分将提供上述Actor复制流程概述中每一步的详细描述。&lt;/p>
+&lt;hr>
+&lt;h3 id="将actor添加到待复制列表">&lt;a href="#%e5%b0%86actor%e6%b7%bb%e5%8a%a0%e5%88%b0%e5%be%85%e5%a4%8d%e5%88%b6%e5%88%97%e8%a1%a8" class="header-anchor">&lt;/a>将Actor添加到待复制列表
+&lt;/h3>&lt;p>此步骤首先检查所有Actors，确定哪些Actors正在进行复制（通过检查是否调用了 &lt;code>AActor::SetReplicates(true)&lt;/code>）。对于每个正在复制的Actor，&lt;code>NetDriver&lt;/code> 执行以下检查：&lt;/p>
+&lt;ul>
+&lt;li>判断当前Actor是否初始处于休眠状态（&lt;code>ENetDormancy::DORM_Initial&lt;/code>）。
+&lt;ul>
+&lt;li>如果是休眠状态，则跳过该Actor。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>检查当前Actor是否需要更新，具体通过检查 &lt;code>AActor::NetUpdateFrequency&lt;/code> 属性。
+&lt;ul>
+&lt;li>如果不需要更新，则跳过该Actor。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如果 &lt;code>AActor::bOnlyRelevantToOwner&lt;/code> 为 &lt;code>true&lt;/code>，则检查该Actor的拥有连接的相关性，通过调用 &lt;code>AActor::IsRelevancyOwnerFor&lt;/code> 来判断。
+&lt;ul>
+&lt;li>如果相关，则将其添加到该连接的“拥有者相关列表”中。&lt;/li>
+&lt;li>在这种情况下，该Actor只会发送给单个连接。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>对于通过上述检查的每个Actor，调用 &lt;code>AActor::PreReplication&lt;/code>。在 &lt;code>AActor::PreReplication&lt;/code> 中，你可以决定是否希望某些属性仅复制到特定连接。可以使用 &lt;code>DOREPLIFETIME_ACTIVE_OVERRIDE&lt;/code> 宏来控制Actor复制到哪些连接。&lt;/li>
+&lt;/ul>
+&lt;p>如果Actor通过了所有检查，将其添加到待复制列表中。&lt;/p>
+&lt;hr>
+&lt;h3 id="遍历每个连接">&lt;a href="#%e9%81%8d%e5%8e%86%e6%af%8f%e4%b8%aa%e8%bf%9e%e6%8e%a5" class="header-anchor">&lt;/a>遍历每个连接
+&lt;/h3>&lt;p>接下来，系统遍历每个连接，并为从前一步骤中获得的待复制Actor列表中的每个Actor执行以下检查和操作：&lt;/p>
+&lt;ul>
+&lt;li>判断当前Actor是否处于休眠状态，通过调用 &lt;code>AActor::NetDormancy&lt;/code>。
+&lt;ul>
+&lt;li>如果该Actor在此连接下处于休眠状态，则跳过该Actor。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如果尚未打开通道：
+&lt;ul>
+&lt;li>判断客户端是否已加载当前Actor所在的关卡。&lt;/li>
+&lt;li>如果该关卡尚未加载，则跳过该Actor。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>判断当前Actor是否与该连接相关，通过调用 &lt;code>AActor::IsNetRelevantFor&lt;/code>。
+&lt;ul>
+&lt;li>如果Actor与连接不相关，则跳过该Actor。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>将所有在连接的“拥有者相关列表”中的Actors添加到此列表中。此时，列表中包含了所有与该连接相关且不处于休眠状态的Actors。然后按照优先级（&lt;code>AActor::GetNetPriority&lt;/code>）对这些Actors进行排序，优先级从高到低排序。排序至关重要，尤其是当考虑复制大量Actor时，需要确保优先复制高优先级的Actor。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="遍历排序后的actor列表">&lt;a href="#%e9%81%8d%e5%8e%86%e6%8e%92%e5%ba%8f%e5%90%8e%e7%9a%84actor%e5%88%97%e8%a1%a8" class="header-anchor">&lt;/a>遍历排序后的Actor列表
+&lt;/h3>&lt;p>对于该连接的每个Actor，在排序后的待复制列表中执行以下操作：&lt;/p>
+&lt;ul>
+&lt;li>如果连接尚未加载该Actor所在的关卡，则关闭通道（如果存在）并继续。&lt;/li>
+&lt;li>每秒检查一次Actor是否与连接相关，调用 &lt;code>AActor::IsNetRelevantFor&lt;/code>。
+&lt;ul>
+&lt;li>如果在5秒内不相关，则关闭通道。&lt;/li>
+&lt;li>如果相关且没有通道打开，则打开通道。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>如果此连接在任何时刻变得饱和：
+&lt;ul>
+&lt;li>对于剩余的Actors：
+&lt;ul>
+&lt;li>如果相关时间少于1秒，则强制在下一tick更新。&lt;/li>
+&lt;li>如果相关时间超过1秒，调用 &lt;code>AActor::IsNetRelevantFor&lt;/code> 判断是否在下一tick更新。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>对于通过所有检查的Actor，通过调用 &lt;code>UActorChannel::ReplicateActor&lt;/code> 将Actor复制到连接。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="控制每次调用时复制的客户端数">&lt;a href="#%e6%8e%a7%e5%88%b6%e6%af%8f%e6%ac%a1%e8%b0%83%e7%94%a8%e6%97%b6%e5%a4%8d%e5%88%b6%e7%9a%84%e5%ae%a2%e6%88%b7%e7%ab%af%e6%95%b0" class="header-anchor">&lt;/a>控制每次调用时复制的客户端数
+&lt;/h3>&lt;p>你可以通过以下几种方式控制 &lt;code>UNetDriver::ServerReplicateActors&lt;/code> 每次调用时复制的客户端数：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>引擎配置和命令行参数：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>启动项目时使用 &lt;code>-limitclientticks&lt;/code> 命令行参数。&lt;/li>
+&lt;li>修改引擎配置中的 &lt;code>NetClientTicksPerSecond&lt;/code> 值（位于 &lt;code>[/Script/Engine.Engine]&lt;/code> 类别）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>命令行参数：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>启动项目时使用命令行参数：&lt;code>-limitclientticks -ini:Engine:[/Script/Engine.Engine]:NetClientTicksPerSecond=&amp;lt;VALUE&amp;gt;&lt;/code>，其中 &lt;code>&amp;lt;VALUE&amp;gt;&lt;/code> 是每秒希望使用的客户端ticks数。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>控制台变量：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>设置 &lt;code>net.MaxConnectionsToTickPerServerFrame&lt;/code> 控制台变量。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>更多信息请参考 &lt;code>UNetDriver::ServerReplicateActors_PrepConnections&lt;/code>。&lt;/p>
+&lt;hr>
+&lt;h3 id="将actor复制到连接">&lt;a href="#%e5%b0%86actor%e5%a4%8d%e5%88%b6%e5%88%b0%e8%bf%9e%e6%8e%a5" class="header-anchor">&lt;/a>将Actor复制到连接
+&lt;/h3>&lt;p>&lt;code>UActorChannel::ReplicateActor&lt;/code> 是复制Actor及其所有组件到连接的主要方法。其流程如下：&lt;/p>
+&lt;ul>
+&lt;li>判断这是Actor通道打开后的第一次更新。
+&lt;ul>
+&lt;li>如果是第一次更新，则序列化需要的信息（初始位置、旋转等）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>判断当前连接是否拥有该Actor。
+&lt;ul>
+&lt;li>如果没有拥有该Actor，且该Actor的角色为 &lt;code>ENetRole::ROLE_AutonomousProxy&lt;/code>，则降级为 &lt;code>ENetRole::ROLE_SimulatedProxy&lt;/code>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>复制该Actor已更改的属性。&lt;/li>
+&lt;li>复制每个组件已更改的属性。&lt;/li>
+&lt;li>对于任何已删除的组件，发送特殊的删除命令。&lt;/li>
+&lt;li>一旦Actor列表已处理完，或通道已饱和，开始考虑下一个连接，并重复该过程直到所有连接都已更新。&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h3 id="更多信息">&lt;a href="#%e6%9b%b4%e5%a4%9a%e4%bf%a1%e6%81%af" class="header-anchor">&lt;/a>更多信息
+&lt;/h3>&lt;p>有关Actor复制的更多信息，请参考以下头文件中的内容：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>/Engine/Source/Runtime/Engine/Classes/Engine/NetDriver.h&lt;/code>&lt;br>
+关于 &lt;code>UNetDriver::ServerReplicateActors&lt;/code> 的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>/Engine/Source/Runtime/Engine/Classes/GameFramework/Actor.h&lt;/code>&lt;br>
+关于 &lt;code>AActor&lt;/code> 及其函数和属性的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>/Engine/Source/Runtime/Engine/Classes/Engine/ActorChannel.h&lt;/code>&lt;br>
+关于 &lt;code>UActorChannel&lt;/code> 和 &lt;code>UActorChannel::ReplicateActor&lt;/code> 的信息。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h&lt;/code>&lt;br>
+关于 &lt;code>ENetRole&lt;/code> 和 &lt;code>ENetDormancy&lt;/code> 等类型的信息。&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中网络相关机制</title><link>https://boiltask.com/knowledge/ue/network-start/</link><pubDate>Mon, 02 Dec 2024 13:13:25 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-start/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/h2>&lt;p>想到哪里写到哪里吧，后续有可能再补充。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://boiltask.com/ue/actor-replication/" >虚幻引擎中Actor复制流程&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/knowledge/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/editor-python/</guid><description>&lt;h2 id="功能简介">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>功能简介
+&lt;/h2>&lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"
+>使用Python脚本化运行虚幻编辑器&lt;/a>&lt;/p></description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介">&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>DataAsset简介
+&lt;/h2>&lt;p>一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p>
+&lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"
+>数据资产&lt;/a>&lt;/p></description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p>打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p></description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p>最近想要细研究一下&lt;code>UE5&lt;/code>的官方示例项目&lt;code>Lyra&lt;/code>，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p>
+&lt;p>时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。&lt;/p>
+&lt;p>Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"
+>https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a>&lt;/p>
+&lt;p>在虚幻引擎启动器&lt;code>Epic Games Launcher&lt;/code>中，可以在库找到&lt;code>Lyra&lt;/code>项目，创建项目即可。&lt;/p>
+&lt;p>经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p></description></item><item><title>Cloudflare环境下开启Rocket Loader之后Katex失效问题</title><link>https://boiltask.com/knowledge/katex-cloudflare/</link><pubDate>Sat, 09 Nov 2024 12:45:51 +0800</pubDate><guid>https://boiltask.com/knowledge/katex-cloudflare/</guid><description>&lt;p>在博客部署到线上之后，发现&lt;code>Katex&lt;/code>公式无法正常显示，而相同的&lt;code>Html&lt;/code>文件在本地环境下是可以正常显示的。&lt;/p>
 &lt;p>其中解析的核心代码如下：&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -39,8 +885,7 @@
 &lt;p>但是一直没想到是什么原因，直到留意到了线上版本里&lt;code>&amp;lt;script&amp;gt;&lt;/code>标签变成了形如&lt;code>&amp;lt;script type=&amp;quot;d6a94c0af8a975daac5bee56-text/javascript&amp;quot;&amp;gt;&lt;/code>。&lt;/p>
 &lt;p>最终回想起来是&lt;code>Cloudflare&lt;/code>开启了&lt;code>Rocket Loader&lt;/code>。&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;code>Rocket Loader&lt;/code>是&lt;code>Cloudflare&lt;/code>的一个功能，用于异步加载&lt;code>JavaScript&lt;/code>，以提高页面加载速度。&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;code>Rocket Loader&lt;/code>是&lt;code>Cloudflare&lt;/code>的一个功能，用于异步加载&lt;code>JavaScript&lt;/code>，以提高页面加载速度。&lt;/p>&lt;/blockquote>
 &lt;p>但是&lt;code>Rocket Loader&lt;/code>可能会导致加载顺序变化从而导致某些&lt;code>JavaScript&lt;/code>代码无法正常执行。&lt;/p>
 &lt;p>暂时关闭了&lt;code>Rocket Loader&lt;/code>，问题解决。&lt;/p>
 &lt;p>也可以通过在标签里添加&lt;code>data-cfasync=&amp;quot;false&amp;quot;&lt;/code>来禁用&lt;code>Rocket Loader&lt;/code>，不过考虑还需要修改主题，暂时不做修改了。&lt;/p></description></item><item><title>Hogo中Giscus配置</title><link>https://boiltask.com/knowledge/hugo-giscus/</link><pubDate>Fri, 08 Nov 2024 13:06:06 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-giscus/</guid><description>&lt;p>在给博客配置评论区的时候，遇见了一些问题，记录一些。&lt;/p>
@@ -79,19 +924,19 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-1.png"
 width="513"
 height="668"
-srcset="https://boiltask.com/knowledge/svn-revert/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-1_hu5800090339614270963.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-1-1_hu_c06b4a89e025a431.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-1_hu_3db985618e04365f.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="76"
 data-flex-basis="184px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-1-2.png"
 width="463"
 height="669"
-srcset="https://boiltask.com/knowledge/svn-revert/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-2_hu3382273434000479264.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-1-2_hu_ea415ee783c09083.png 480w, https://boiltask.com/knowledge/svn-revert/image-1-2_hu_5fa0a61263edc25f.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="69"
@@ -101,8 +946,8 @@ data-flex-basis="166px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -110,19 +955,19 @@ data-flex-basis="166px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-1.png"
 width="739"
 height="643"
-srcset="https://boiltask.com/knowledge/svn-revert/image-2-1_hu7913616928023097590.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-1_hu3570810554322645217.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-2-1_hu_781def1ab0a88aca.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-1_hu_db3518ee296f6d23.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="114"
 data-flex-basis="275px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-2-2.png"
 width="739"
 height="643"
-srcset="https://boiltask.com/knowledge/svn-revert/image-2-2_hu12423358968747103432.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-2_hu14657691247748881992.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-2-2_hu_861c4e9a25b44a1f.png 480w, https://boiltask.com/knowledge/svn-revert/image-2-2_hu_30927d8c00c3df86.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="114"
@@ -132,8 +977,8 @@ data-flex-basis="275px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -141,19 +986,19 @@ data-flex-basis="275px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-1.png"
 width="542"
 height="325"
-srcset="https://boiltask.com/knowledge/svn-revert/image-3-1_hu4042752106934293030.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-1_hu6134221852306643944.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-3-1_hu_6d9d94c2b26a5a34.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-1_hu_5be3bc56113b0ad4.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="400px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-revert/image-3-2.png"
 width="542"
 height="325"
-srcset="https://boiltask.com/knowledge/svn-revert/image-3-2_hu13332711233538001998.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-2_hu3975419756773525122.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-revert/image-3-2_hu_b4aa3d081a22290a.png 480w, https://boiltask.com/knowledge/svn-revert/image-3-2_hu_b3c2552ec0b392b8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
@@ -163,15 +1008,17 @@ data-flex-basis="400px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h2 id="选项说明">&lt;a href="#%e9%80%89%e9%a1%b9%e8%af%b4%e6%98%8e" class="header-anchor">&lt;/a>选项说明
 &lt;/h2>&lt;p>&lt;code>Revert to this revision&lt;/code>与&lt;code>Revert changes from this revision&lt;/code>的区别：&lt;/p>
 &lt;p>&lt;code>Revert to this revision&lt;/code>指的是&lt;code>复原到此版本&lt;/code>，也即执行完之后，本地的状态应该是此版本提交后的状态。&lt;/p>
-&lt;p>&lt;code>Revert changes from this revision&lt;/code>指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p></description></item><item><title>SVN合并操作</title><link>https://boiltask.com/knowledge/svn-merge/</link><pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-merge/</guid><description>&lt;p>以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p>
+&lt;p>&lt;code>Revert changes from this revision&lt;/code>指的是复原此版本的修改，执行完之后应该是此版本提交前的状态。&lt;/p></description></item><item><title>查找Module被谁引入</title><link>https://boiltask.com/knowledge/ue/find-module-reference/</link><pubDate>Wed, 02 Aug 2023 12:13:26 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/find-module-reference/</guid><description>&lt;p>想知道一个Module被谁引入的，可以通过让其报错来查看堆栈。&lt;/p>
+&lt;p>在模块的&lt;code>Build.cs&lt;/code>中第一行加入：&lt;code>throw new Exception()&lt;/code>。&lt;/p>
+&lt;p>编译，查看报错即可。&lt;/p></description></item><item><title>SVN合并操作</title><link>https://boiltask.com/knowledge/svn-merge/</link><pubDate>Mon, 29 May 2023 21:44:15 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-merge/</guid><description>&lt;p>以下以英文版为例，中文版同理选择对应位置选项即可。&lt;/p>
 &lt;p>合并是一个相对的概念，既可以从主干（trunk）合并到分支（branch），也可以从分支（branch）合并到主干（trunk），下文以从主干（trunk）合并到分支（branch）为例。&lt;/p>
 &lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
 &lt;/h2>&lt;p>为了保证一个相对稳定的文件版本，开发过程中有时会新建一个分支（branch） ，这样可以可以直接从分支获取资产以提高稳定性。&lt;/p>
@@ -185,19 +1032,19 @@ data-flex-basis="400px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-1.png"
 width="513"
 height="668"
-srcset="https://boiltask.com/knowledge/svn-merge/image-1-1_hu17010377581922205921.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-1_hu5800090339614270963.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-1-1_hu_c06b4a89e025a431.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-1_hu_3db985618e04365f.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="76"
 data-flex-basis="184px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-1-2.png"
 width="463"
 height="669"
-srcset="https://boiltask.com/knowledge/svn-merge/image-1-2_hu4443800821170185299.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-2_hu3382273434000479264.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-1-2_hu_ea415ee783c09083.png 480w, https://boiltask.com/knowledge/svn-merge/image-1-2_hu_5fa0a61263edc25f.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="69"
@@ -207,8 +1054,8 @@ data-flex-basis="166px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -216,19 +1063,19 @@ data-flex-basis="166px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-1.png"
 width="739"
 height="709"
-srcset="https://boiltask.com/knowledge/svn-merge/image-2-1_hu2448058881704012729.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-1_hu6349847887146610289.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-2-1_hu_9377796264cbc7d8.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-1_hu_e1b35cde783e08da.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="104"
 data-flex-basis="250px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-2-2.png"
 width="739"
 height="709"
-srcset="https://boiltask.com/knowledge/svn-merge/image-2-2_hu5936312556644352570.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-2_hu13759128226647644493.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-2-2_hu_f92bc3f9fb59feb0.png 480w, https://boiltask.com/knowledge/svn-merge/image-2-2_hu_c1928a938838d870.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="104"
@@ -238,8 +1085,8 @@ data-flex-basis="250px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -247,7 +1094,7 @@ data-flex-basis="250px"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-3.png"
 width="960"
 height="540"
-srcset="https://boiltask.com/knowledge/svn-merge/image-3_hu11933152340863840705.png 480w, https://boiltask.com/knowledge/svn-merge/image-3_hu12021038228253536609.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-3_hu_5b2499be642485de.png 480w, https://boiltask.com/knowledge/svn-merge/image-3_hu_7a9775907ead831e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="177"
@@ -274,19 +1121,19 @@ data-flex-basis="426px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-1.png"
 width="934"
 height="736"
-srcset="https://boiltask.com/knowledge/svn-merge/image-4-1_hu15080479352377242366.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-1_hu12123394260900880120.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-4-1_hu_76fb2d71649ce8b1.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-1_hu_2ad4360ddc486ab.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="126"
 data-flex-basis="304px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-4-2.png"
 width="825"
 height="644"
-srcset="https://boiltask.com/knowledge/svn-merge/image-4-2_hu10406064931226753947.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-2_hu4719651788656351657.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-4-2_hu_1e419e5fa7336b08.png 480w, https://boiltask.com/knowledge/svn-merge/image-4-2_hu_fc11a1fb2cc303df.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="128"
@@ -296,8 +1143,8 @@ data-flex-basis="307px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -306,19 +1153,19 @@ data-flex-basis="307px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-1.png"
 width="934"
 height="736"
-srcset="https://boiltask.com/knowledge/svn-merge/image-5-1_hu16162010147720784187.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-1_hu6663661471441733664.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-5-1_hu_88b979335924add6.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-1_hu_ff52b038787c5aaf.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="126"
 data-flex-basis="304px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-merge/image-5-2.png"
 width="762"
 height="520"
-srcset="https://boiltask.com/knowledge/svn-merge/image-5-2_hu796579267384435703.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-2_hu4171343192513218924.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-merge/image-5-2_hu_39b7a98d45a402e5.png 480w, https://boiltask.com/knowledge/svn-merge/image-5-2_hu_a8790e461f4f016d.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="146"
@@ -328,8 +1175,8 @@ data-flex-basis="351px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table></description></item><item><title>SVN切分支</title><link>https://boiltask.com/knowledge/svn-switch-branch/</link><pubDate>Mon, 13 Mar 2023 23:14:21 +0800</pubDate><guid>https://boiltask.com/knowledge/svn-switch-branch/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
@@ -340,19 +1187,19 @@ data-flex-basis="351px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-1.png"
 width="503"
 height="679"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu5935501871532154894.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu18384966433410811196.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu_895c6d443af2028f.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-1_hu_3e49b36d4fd744b1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="74"
 data-flex-basis="177px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-1-2.png"
 width="473"
 height="671"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu9041463599554812067.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu10133542670804154133.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu_af4a6995ff6c40b2.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-1-2_hu_8a070616ba245f89.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="70"
@@ -362,8 +1209,8 @@ data-flex-basis="169px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -371,19 +1218,19 @@ data-flex-basis="169px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-1.png"
 width="616"
 height="370"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu15041769225168938241.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu10398778729252334580.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu_1d044b95d9c170b0.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-1_hu_e205a8eb606605a1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
 data-flex-basis="399px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-2-2.png"
 width="616"
 height="370"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu16988809227071996878.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu18341031616397604144.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu_1dc803535ac24b2f.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-2-2_hu_56da0e2693170a85.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
@@ -393,8 +1240,8 @@ data-flex-basis="399px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -403,7 +1250,7 @@ data-flex-basis="399px"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-3.png"
 width="614"
 height="338"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-3_hu10987723568123480892.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-3_hu26609449577816713.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-3_hu_83ebb57e320cd1a4.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-3_hu_487c49f8d430deb2.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="181"
@@ -413,7 +1260,7 @@ data-flex-basis="435px"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-4.png"
 width="1375"
 height="466"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-4_hu8041458363380810481.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-4_hu13801987268901389218.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-4_hu_d5d66764a7030d4a.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-4_hu_9d7b1d5b486ab0e8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="295"
@@ -423,7 +1270,7 @@ data-flex-basis="708px"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/svn-switch-branch/image-5.png"
 width="616"
 height="370"
-srcset="https://boiltask.com/knowledge/svn-switch-branch/image-5_hu2569409130268246945.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-5_hu14511331662190612340.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-switch-branch/image-5_hu_dc5b77c48cd9c870.png 480w, https://boiltask.com/knowledge/svn-switch-branch/image-5_hu_ee21b5141e9a726.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="166"
@@ -441,19 +1288,19 @@ data-flex-basis="399px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-1.png"
 width="720"
 height="815"
-srcset="https://boiltask.com/knowledge/svn-lock/image-1-1_hu10613403118535043628.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-1_hu6518781224494017334.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-1-1_hu_3d3b3b252ed5a6a5.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-1_hu_2b8dfff4fcdacf9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="88"
 data-flex-basis="212px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-1-2.png"
 width="700"
 height="811"
-srcset="https://boiltask.com/knowledge/svn-lock/image-1-2_hu11167061833332973397.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-2_hu5297745458006572602.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-1-2_hu_2a0abce7aaf18dca.png 480w, https://boiltask.com/knowledge/svn-lock/image-1-2_hu_b1fc115f2da97f12.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="86"
@@ -463,8 +1310,8 @@ data-flex-basis="207px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -472,19 +1319,19 @@ data-flex-basis="207px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-1.png"
 width="532"
 height="571"
-srcset="https://boiltask.com/knowledge/svn-lock/image-2-1_hu8531832550648001071.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-1_hu11409514016090496122.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-2-1_hu_22329ef3f4e73dee.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-1_hu_6ce3b913b3f08191.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="223px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-2-2.png"
 width="532"
 height="571"
-srcset="https://boiltask.com/knowledge/svn-lock/image-2-2_hu12740665712511142850.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-2_hu4614013570268702220.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-2-2_hu_14ae58e85765e082.png 480w, https://boiltask.com/knowledge/svn-lock/image-2-2_hu_f89b39ad6a6851e7.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
@@ -494,8 +1341,8 @@ data-flex-basis="223px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -504,19 +1351,19 @@ data-flex-basis="223px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-1.png"
 width="662"
 height="785"
-srcset="https://boiltask.com/knowledge/svn-lock/image-3-1_hu11020575163933948961.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-1_hu18133542715937806061.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-3-1_hu_1fd929666d1b21a3.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-1_hu_5a3dd637dd81bc35.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="84"
 data-flex-basis="202px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-3-2.png"
 width="467"
 height="682"
-srcset="https://boiltask.com/knowledge/svn-lock/image-3-2_hu1891260429824521828.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-2_hu8134180997390071011.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-3-2_hu_4aa8178a5e0cce9f.png 480w, https://boiltask.com/knowledge/svn-lock/image-3-2_hu_19174ea7a1724a29.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="68"
@@ -526,8 +1373,8 @@ data-flex-basis="164px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -535,19 +1382,19 @@ data-flex-basis="164px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-1.png"
 width="1067"
 height="539"
-srcset="https://boiltask.com/knowledge/svn-lock/image-4-1_hu2078220766911598252.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-1_hu5893435162189683820.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-4-1_hu_36efe2a999285acc.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-1_hu_d1782cd29040a72c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="197"
 data-flex-basis="475px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-4-2.png"
 width="1052"
 height="486"
-srcset="https://boiltask.com/knowledge/svn-lock/image-4-2_hu9452001396821168688.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-2_hu15983604767246758065.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-4-2_hu_d895df581500b934.png 480w, https://boiltask.com/knowledge/svn-lock/image-4-2_hu_1a2144c363c5a076.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="216"
@@ -557,8 +1404,8 @@ data-flex-basis="519px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -568,19 +1415,19 @@ data-flex-basis="519px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-1.png"
 width="751"
 height="817"
-srcset="https://boiltask.com/knowledge/svn-lock/image-5-1_hu5099334325101817976.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-1_hu5642565465813555531.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-5-1_hu_be7fbb42086b1135.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-1_hu_5813c04608b654e6.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="91"
 data-flex-basis="220px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-5-2.png"
 width="609"
 height="825"
-srcset="https://boiltask.com/knowledge/svn-lock/image-5-2_hu9117771135428803543.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-2_hu1966502865403730667.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-5-2_hu_84179b85d3915a7c.png 480w, https://boiltask.com/knowledge/svn-lock/image-5-2_hu_2c8dad597ae62e34.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="73"
@@ -590,8 +1437,8 @@ data-flex-basis="177px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -600,19 +1447,19 @@ data-flex-basis="177px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-1.png"
 width="721"
 height="718"
-srcset="https://boiltask.com/knowledge/svn-lock/image-6-1_hu15927409771865917671.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-1_hu3466397071656374398.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-6-1_hu_f7426a5b383791ec.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-1_hu_d8db4737afe0ff46.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
 data-flex-basis="241px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-6-2.png"
 width="704"
 height="741"
-srcset="https://boiltask.com/knowledge/svn-lock/image-6-2_hu8657624855487578581.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-2_hu4463349718507782490.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-6-2_hu_a7ad3e1d08e86fab.png 480w, https://boiltask.com/knowledge/svn-lock/image-6-2_hu_34a54861d1afc535.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="95"
@@ -622,8 +1469,8 @@ data-flex-basis="228px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -632,19 +1479,19 @@ data-flex-basis="228px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-1.png"
 width="762"
 height="576"
-srcset="https://boiltask.com/knowledge/svn-lock/image-7-1_hu3035808876713423987.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-1_hu14456454763541704663.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-7-1_hu_cf948eb241170f6f.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-1_hu_bda5d6bcb13d7a25.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
 data-flex-basis="317px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-7-2.png"
 width="762"
 height="576"
-srcset="https://boiltask.com/knowledge/svn-lock/image-7-2_hu1440869857335182607.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-2_hu14985938029990149709.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-7-2_hu_e0c67992828a7e14.png 480w, https://boiltask.com/knowledge/svn-lock/image-7-2_hu_6e366314808b8f2.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
@@ -654,8 +1501,8 @@ data-flex-basis="317px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -664,24 +1511,23 @@ data-flex-basis="317px"
 &lt;/h3>&lt;p>由于锁标记是存在本地文件夹的，有时候由于换机器等原因锁定未释放，此时需要强制解除锁定。&lt;/p>
 &lt;p>锁定操作勾选&lt;code>Steal the locks&lt;/code>时，会强制无效已锁定状态，把锁定转为此次操作的用户。&lt;/p>
 &lt;blockquote>
-&lt;p>如果文件由其他用户锁定，应尽量避免使用此操作破坏开发流程。&lt;/p>
-&lt;/blockquote>
+&lt;p>如果文件由其他用户锁定，应尽量避免使用此操作破坏开发流程。&lt;/p>&lt;/blockquote>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-1.png"
 width="532"
 height="571"
-srcset="https://boiltask.com/knowledge/svn-lock/image-8-1_hu9999446847589336692.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-1_hu17502981096254089608.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-8-1_hu_428f1248326eb9dd.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-1_hu_fc5f7b77efd6dc8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
 data-flex-basis="223px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/svn-lock/image-8-2.png"
 width="532"
 height="571"
-srcset="https://boiltask.com/knowledge/svn-lock/image-8-2_hu3855568038762477466.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-2_hu8904183885368462120.png 1024w"
+srcset="https://boiltask.com/knowledge/svn-lock/image-8-2_hu_87630aee963a695e.png 480w, https://boiltask.com/knowledge/svn-lock/image-8-2_hu_16f90a05ddc8494d.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="93"
@@ -691,8 +1537,8 @@ data-flex-basis="223px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -700,7 +1546,339 @@ data-flex-basis="223px"
 &lt;/h2>&lt;p>&lt;code>UnrealEngine&lt;/code>提供了内置的版本控制工具，可以快捷的实现一些&lt;code>SVN&lt;/code>操作，可参考&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" >引擎内置版本控制工具&lt;/a>进行配置。&lt;/p>
 &lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
 &lt;/h2>&lt;p>由于锁定之后会干扰其他同事操作，因此锁定前需要确认操作的必要性。如果遇见有人询问相关问题，应积极处理。&lt;/p>
-&lt;p>未避免误操作，应不定期查看&lt;code>Release Lock&lt;/code>列表，看看是否有误锁文件。&lt;/p></description></item><item><title>强制修改Git记录中提交者</title><link>https://boiltask.com/knowledge/git-modify/</link><pubDate>Thu, 16 Feb 2023 19:02:13 +0000</pubDate><guid>https://boiltask.com/knowledge/git-modify/</guid><description>&lt;p>在自己维护项目的时候，有的时候会因为忘了切换账号而错误标记了提交者。&lt;/p>
+&lt;p>未避免误操作，应不定期查看&lt;code>Release Lock&lt;/code>列表，看看是否有误锁文件。&lt;/p></description></item><item><title>引擎内置版本控制工具</title><link>https://boiltask.com/knowledge/ue/source-control-tool/</link><pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/source-control-tool/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>为了便于多人协作&lt;code>UnrealEngine&lt;/code>提供了一个版本控制工具，可结合&lt;code>SVN&lt;/code>、&lt;code>Git&lt;/code>等工具对蓝图等资产进行版本控制。&lt;/p>
+&lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
+&lt;/h2>&lt;h3 id="配置连接">&lt;a href="#%e9%85%8d%e7%bd%ae%e8%bf%9e%e6%8e%a5" class="header-anchor">&lt;/a>配置连接
+&lt;/h3>&lt;p>在引擎的工具栏处有一个&lt;code>Source Control&lt;/code>的选项，选择&lt;code>Connect to Source Control&lt;/code>弹出确认框。
+&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-1.png"
+width="433"
+height="290"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_253a9c52273077de.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_efe1e3fd85fc70fd.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="149"
+data-flex-basis="358px"
+>&lt;/p>
+&lt;p>选择&lt;code>Subversion&lt;/code>也即&lt;code>SVN&lt;/code>，展示信息输入框。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-2.png"
+width="720"
+height="267"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_7d92eaeeade92e1.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_309f8ecf4fff2e37.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="269"
+data-flex-basis="647px"
+>&lt;/p>
+&lt;p>按照所需信息输入然后点击&lt;code>Accept Settings&lt;/code>即可。
+&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-3.png"
+width="720"
+height="274"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_c2fdbd4b8ea3c3b.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_62fc1eca1dad230.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="262"
+data-flex-basis="630px"
+>&lt;/p>
+&lt;p>其中几项含义分别如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>示例&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Provider&lt;/td>
+&lt;td>使用的版本控制系统&lt;/td>
+&lt;td>Subversion&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Repository&lt;/td>
+&lt;td>仓库的链接&lt;/td>
+&lt;td>http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>User Name&lt;/td>
+&lt;td>用户名&lt;/td>
+&lt;td>***&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Labels Directory&lt;/td>
+&lt;td>仓库子路径，比如主干、某一分支等&lt;/td>
+&lt;td>trunk&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Password&lt;/td>
+&lt;td>用户密码&lt;/td>
+&lt;td>abcdefg123465&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="资产保存">&lt;a href="#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98" class="header-anchor">&lt;/a>资产保存
+&lt;/h3>&lt;p>链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code>CheckOut&lt;/code>。&lt;/p>
+&lt;p>此操作对应&lt;code>SVN&lt;/code>的&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-4.png"
+width="760"
+height="434"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_49e988e335179047.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_b3863dacc44b5c9.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="420px"
+>&lt;/p>
+&lt;p>如果该资产已经被其他人锁定了，那么点&lt;code>CheckOut&lt;/code>时会有如下提示。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-5.png"
+width="760"
+height="434"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_e70716767cb0153e.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_5c24fc909773a367.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="420px"
+>&lt;/p>
+&lt;p>如果大家都遵循此操作，则可以大大减少蓝图冲突的可能性。&lt;/p>
+&lt;p>如果不需要锁定蓝图，那么可以点击&lt;code>Make Writable&lt;/code>在不锁定的情况下保存。&lt;/p>
+&lt;h3 id="资产操作">&lt;a href="#%e8%b5%84%e4%ba%a7%e6%93%8d%e4%bd%9c" class="header-anchor">&lt;/a>资产操作
+&lt;/h3>&lt;p>链接版本管理后，在资产上右键可以展开版本管理的操作。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-6.png"
+width="477"
+height="748"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_5b8d9d97a149e5e2.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_a12daae2e9ccac54.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="63"
+data-flex-basis="153px"
+>&lt;/p>
+&lt;p>其中几项含义分别如下：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>CheckOut&lt;/td>
+&lt;td>CheckOut资产，对应前文的锁定&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Refresh&lt;/td>
+&lt;td>刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>History&lt;/td>
+&lt;td>打开资产的版本历史&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Diff Against Depot&lt;/td>
+&lt;td>对比资产与仓库中的最新版本&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>其中最常用的是&lt;code>History&lt;/code>打开资产版本历史。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-7.png"
+width="1010"
+height="434"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_224429b8fa71ab5d.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_f5af0be37f94f491.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="558px"
+>&lt;/p>
+&lt;p>可以在版本历史里右键选择对比前一版本或对比本地文件。&lt;/p>
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-8.png"
+width="1010"
+height="834"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_ea36e1c0f0281fdc.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_17e33c74c2dcf12.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+>&lt;/p>
+&lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
+&lt;/h2>&lt;p>在资产管理中&lt;code>CheckOut&lt;/code>操作对应&lt;code>SVN&lt;/code>的&lt;code>Lock&lt;/code>操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p>
+&lt;p>连接&lt;code>SVN&lt;/code>后，一些操作会自动对&lt;code>SVN&lt;/code>做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p></description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/knowledge/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;/h2>&lt;p>蓝图因为是二进制文件，所以没办法使用&lt;code>svn&lt;/code>自带的版本对比工具来比较变更。&lt;/p>
+&lt;p>为了解决蓝图对比的问题，&lt;code>UE4&lt;/code>提供了一个工具用以展示两个蓝图的区别。&lt;/p>
+&lt;p>可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" >引擎内置版本控制工具&lt;/a>&lt;/p>
+&lt;p>本文描述的是如何从外部调用引擎的对比工具。&lt;/p>
+&lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
+&lt;/h2>&lt;p>直接使用可以在&lt;code>cmd&lt;/code>命令提示符窗口输入如下命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">引擎路径&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe 项目路径&lt;span class="se">\M&lt;/span>eta.uproject -diff 文件1路径 文件2路径
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完整示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">D:&lt;span class="se">\M&lt;/span>etaEngine&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\M&lt;/span>eta.uproject -diff D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\C&lt;/span>ontent&lt;span class="se">\T&lt;/span>est1.uasset D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\C&lt;/span>ontent&lt;span class="se">\T&lt;/span>est2.uasset
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>原理是运行引擎时传入&lt;code>-diff&lt;/code>参数开启对比窗口，同时传入所需的项目路径与文件路径。&lt;/p>
+&lt;h2 id="结合svn">&lt;a href="#%e7%bb%93%e5%90%88svn" class="header-anchor">&lt;/a>结合SVN
+&lt;/h2>&lt;p>结合&lt;code>svn&lt;/code>的自定义对比工具功能，可以实现双击版本打开对比工具。&lt;/p>
+&lt;p>右键项目&lt;code>svn&lt;/code>根目录，选择设置（中文版同理）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1.png"
+width="529"
+height="671"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1_hu_94e9a3aad52ad4b4.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1_hu_205d0019b349f504.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="78"
+data-flex-basis="189px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2.png"
+width="531"
+height="670"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2_hu_77eb9b52b359905.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2_hu_4005d72fe17ccbea.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="79"
+data-flex-basis="190px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在对比工具页签下选择高级选项（中文版同理）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1.png"
+width="787"
+height="548"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1_hu_ac2685065378ed53.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1_hu_18abed1718ceabb1.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="143"
+data-flex-basis="344px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2.png"
+width="773"
+height="541"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2_hu_b955a59da3c1b85c.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2_hu_12e500b9c2478db.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="142"
+data-flex-basis="342px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在此窗口可以根据不同的文件后缀调用不同的对比工具，因此选择新增一条&lt;code>.uasset&lt;/code>文件设置。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1.png"
+width="560"
+height="439"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1_hu_ed2b93d5a40326ac.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1_hu_a04f208278062446.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2.png"
+width="560"
+height="439"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2_hu_8946e6802265fc31.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2_hu_a88010d5aca36e74.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="127"
+data-flex-basis="306px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>输入指定命令行即可。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1.png"
+width="777"
+height="180"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1_hu_aeb811c03a6ec7a5.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1_hu_a7659ed33b79e9b8.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="431"
+data-flex-basis="1036px"
+>&lt;/th>
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2.png"
+width="777"
+height="180"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2_hu_b316a11745c17a34.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2_hu_171cf7fd8926ecca.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="431"
+data-flex-basis="1036px"
+>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>扩展名输入：&lt;code>.uasset&lt;/code>&lt;/p>
+&lt;p>命令行完整示例如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-Bash" data-lang="Bash">&lt;span class="line">&lt;span class="cl">D:&lt;span class="se">\M&lt;/span>etaEngine&lt;span class="se">\E&lt;/span>ngine&lt;span class="se">\B&lt;/span>inaries&lt;span class="se">\W&lt;/span>in64&lt;span class="se">\U&lt;/span>E4Editor.exe D:&lt;span class="se">\M&lt;/span>eta&lt;span class="se">\M&lt;/span>eta.uproject -diff %base %mine
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中&lt;code>D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code>为引擎可执行文件，&lt;code>D:\Meta\Meta.uproject&lt;/code>为项目文件，&lt;code>%base&lt;/code>会被转义为&lt;code>svn&lt;/code>文件，&lt;code>%mine&lt;/code>会被转义为当前文件。&lt;/p>
+&lt;h2 id="对比效果">&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor">&lt;/a>对比效果
+&lt;/h2>&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-5.png"
+width="1010"
+height="834"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-5_hu_9d78abcb2ba5b04e.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-5_hu_db2ab738b20b88e2.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="290px"
+>&lt;/p>
+&lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
+&lt;/h2>&lt;p>由于引擎问题，部分格式的蓝图可能不被支持。&lt;/p>
+&lt;p>打开对比工具的过程较为缓慢，请耐心等待。在此过程中不能关闭&lt;code>svn&lt;/code>版本历史窗口，以免目标临时文件被清除从而对比失败。&lt;/p>
+&lt;p>此工具不能自动合并蓝图，因此仍需要自己手动合并文件，请谨慎操作避免冲突。&lt;/p>
+&lt;p>期待&lt;code>UnrealEngine&lt;/code>能更为完善！&lt;/p></description></item><item><title>强制修改Git记录中提交者</title><link>https://boiltask.com/knowledge/git-modify/</link><pubDate>Thu, 16 Feb 2023 19:02:13 +0000</pubDate><guid>https://boiltask.com/knowledge/git-modify/</guid><description>&lt;p>在自己维护项目的时候，有的时候会因为忘了切换账号而错误标记了提交者。&lt;/p>
 &lt;p>考虑只有自己在用，&lt;code>force&lt;/code>强制推送也是可以接受的，所以记录一下可以使用工具来强制修改信息。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -784,8 +1962,8 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="s">&amp;#34;fmt&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 返回一个“返回int的函数”
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="kd">func&lt;/span> &lt;span class="nf">fibonacci&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">// 返回一个“返回int的函数”&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">func&lt;/span> &lt;span class="nf">fibonacci&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">a1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">a2&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">1&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kd">func&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="kt">int&lt;/span> &lt;span class="p">{&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">res&lt;/span> &lt;span class="o">:=&lt;/span> &lt;span class="nx">a1&lt;/span>
@@ -853,8 +2031,7 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>客户端编程规范</title><link>https://boiltask.com/knowledge/client-style-guide/</link><pubDate>Mon, 10 May 2021 21:34:36 +0800</pubDate><guid>https://boiltask.com/knowledge/client-style-guide/</guid><description>&lt;blockquote>
-&lt;p>整理一下总结的客户端向的编程规范，尽可能做到有理有据，后续可能还会不定期修订。&lt;/p>
-&lt;/blockquote>
+&lt;p>整理一下总结的客户端向的编程规范，尽可能做到有理有据，后续可能还会不定期修订。&lt;/p>&lt;/blockquote>
 &lt;h2 id="头文件">&lt;a href="#%e5%a4%b4%e6%96%87%e4%bb%b6" class="header-anchor">&lt;/a>头文件
 &lt;/h2>&lt;h3 id="include">&lt;a href="#include" class="header-anchor">&lt;/a>Include
 &lt;/h3>&lt;ul>
@@ -1439,8 +2616,7 @@ target="_blank" rel="noopener"
 &lt;/div>&lt;p>如果调用者错误使用了&lt;code>FString&amp;amp; SaveKey = StarsSaveGame-&amp;gt;OverrideSaveKey&lt;/code>，那么就会错误修改成员变量。&lt;/p>
 &lt;p>如果改成函数的返回则没有这种隐患，会在编译器得到警告：&lt;/p>
 &lt;blockquote>
-&lt;p>Binding r-value to l-value reference is non-standard Microsoft C++ extension&lt;/p>
-&lt;/blockquote>
+&lt;p>Binding r-value to l-value reference is non-standard Microsoft C++ extension&lt;/p>&lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -1957,34 +3133,34 @@ target="_blank" rel="noopener"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;atomic>&lt;/td>
-&lt;td style="text-align: left">应在新代码中使用，在迁移旧代码时也应该使用。原子性（Atomic）将在所有受支持平台上高效推广。 &lt;code>TAtomic&lt;/code> 仅实现了部分功能，Epic后续也不会继续进行维护和改善。&lt;/td>
+&lt;td>&lt;atomic>&lt;/td>
+&lt;td>应在新代码中使用，在迁移旧代码时也应该使用。原子性（Atomic）将在所有受支持平台上高效推广。 &lt;code>TAtomic&lt;/code> 仅实现了部分功能，Epic后续也不会继续进行维护和改善。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&amp;lt;type_traits&amp;gt;&lt;/td>
-&lt;td style="text-align: left">应在旧版UE特性（trait）和标准特性重叠的地方使用。&lt;/td>
+&lt;td>&amp;lt;type_traits&amp;gt;&lt;/td>
+&lt;td>应在旧版UE特性（trait）和标准特性重叠的地方使用。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&amp;lt;initializer_list&amp;gt;&lt;/td>
-&lt;td style="text-align: left">用于支持初始化器（initializer）语法&lt;/td>
+&lt;td>&amp;lt;initializer_list&amp;gt;&lt;/td>
+&lt;td>用于支持初始化器（initializer）语法&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;regex>&lt;/td>
-&lt;td style="text-align: left">正则表达式，UE没有自己的正则表达式方案&lt;/td>
+&lt;td>&lt;regex>&lt;/td>
+&lt;td>正则表达式，UE没有自己的正则表达式方案&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;limits>&lt;/td>
-&lt;td style="text-align: left">&lt;code>std::numeric_limits&lt;/code> 可以完整使用。&lt;/td>
+&lt;td>&lt;limits>&lt;/td>
+&lt;td>&lt;code>std::numeric_limits&lt;/code> 可以完整使用。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;cmath>&lt;/td>
-&lt;td style="text-align: left">这个头文件中只有浮点比较函数可以使用&lt;/td>
+&lt;td>&lt;cmath>&lt;/td>
+&lt;td>这个头文件中只有浮点比较函数可以使用&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -3579,8 +4755,7 @@ target="_blank" rel="noopener"
 &lt;/h2>&lt;p>&lt;code>static const&lt;/code>等价于&lt;code>const static&lt;/code>，修饰成员变量把二者结合起来理解。&lt;/p>
 &lt;p>不可以同时用&lt;code>const&lt;/code>和&lt;code>static&lt;/code>修饰成员函数，二者的含义矛盾。&lt;/p></description></item><item><title>C++中const关键字用法总结</title><link>https://boiltask.com/knowledge/cpp-const/</link><pubDate>Mon, 23 Mar 2020 05:00:00 +0000</pubDate><guid>https://boiltask.com/knowledge/cpp-const/</guid><description>&lt;blockquote>
 &lt;p>当用&lt;code>const&lt;/code>进行修饰时，根据&lt;code>const&lt;/code>位置的不同有三种不同效果。&lt;/p>
-&lt;p>判断的标准是：&lt;code>const&lt;/code>修饰谁，谁（在&lt;code>const&lt;/code>后面）的内容就是不可变的。&lt;/p>
-&lt;/blockquote>
+&lt;p>判断的标准是：&lt;code>const&lt;/code>修饰谁，谁（在&lt;code>const&lt;/code>后面）的内容就是不可变的。&lt;/p>&lt;/blockquote>
 &lt;h2 id="修饰变量">&lt;a href="#%e4%bf%ae%e9%a5%b0%e5%8f%98%e9%87%8f" class="header-anchor">&lt;/a>修饰变量
 &lt;/h2>&lt;p>&lt;code>const int a;&lt;/code>，表示变量不可被改变。&lt;/p>
 &lt;h2 id="修饰指针">&lt;a href="#%e4%bf%ae%e9%a5%b0%e6%8c%87%e9%92%88" class="header-anchor">&lt;/a>修饰指针
@@ -4533,7 +5708,7 @@ loading="lazy"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/cattle-model-technology/image-1.png"
 width="268"
 height="107"
-srcset="https://boiltask.com/knowledge/cattle-model-technology/image-1_hu14757530706512876840.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-1_hu8998981482346148515.png 1024w"
+srcset="https://boiltask.com/knowledge/cattle-model-technology/image-1_hu_14d339ae64cda662.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-1_hu_9e1efb584eec7dca.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="250"
@@ -4546,7 +5721,7 @@ data-flex-basis="601px"
 选取某一区域的点：&lt;img src="https://boiltask.com/knowledge/cattle-model-technology/image-2.png"
 width="192"
 height="50"
-srcset="https://boiltask.com/knowledge/cattle-model-technology/image-2_hu14768562818895723399.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-2_hu15399469386381539127.png 1024w"
+srcset="https://boiltask.com/knowledge/cattle-model-technology/image-2_hu_e4a23eada29aff9.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-2_hu_c172bcf6554e88d3.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="384"
@@ -4556,7 +5731,7 @@ data-flex-basis="921px"
 &lt;p>&lt;img src="https://boiltask.com/knowledge/cattle-model-technology/image-3.png"
 width="1436"
 height="1035"
-srcset="https://boiltask.com/knowledge/cattle-model-technology/image-3_hu224466131234736895.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-3_hu11997710199451502026.png 1024w"
+srcset="https://boiltask.com/knowledge/cattle-model-technology/image-3_hu_cbbfb616187257de.png 480w, https://boiltask.com/knowledge/cattle-model-technology/image-3_hu_622dfca48f6afa42.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="138"
@@ -4847,8 +6022,7 @@ target="_blank" rel="noopener"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>计算机图形学复习笔记</title><link>https://boiltask.com/knowledge/computer-graphics-note/</link><pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate><guid>https://boiltask.com/knowledge/computer-graphics-note/</guid><description>&lt;blockquote>
-&lt;p>参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p>
-&lt;/blockquote>
+&lt;p>参考《计算机图形学基础(OpenGL版)》与网上资料。&lt;/p>&lt;/blockquote>
 &lt;h2 id="第1章">&lt;a href="#%e7%ac%ac1%e7%ab%a0" class="header-anchor">&lt;/a>第1章
 &lt;/h2>&lt;h3 id="什么是计算机图形学它主要研究内容">&lt;a href="#%e4%bb%80%e4%b9%88%e6%98%af%e8%ae%a1%e7%ae%97%e6%9c%ba%e5%9b%be%e5%bd%a2%e5%ad%a6%e5%ae%83%e4%b8%bb%e8%a6%81%e7%a0%94%e7%a9%b6%e5%86%85%e5%ae%b9" class="header-anchor">&lt;/a>什么是计算机图形学，它主要研究内容？
 &lt;/h3>&lt;p>计算机图形学是一门研究用计算机将数据转换成图形，并在专用设备上显示和处理的学科，它着重研究图形生成和处理的原理、方法和技术，是一门多学科综合应用的新技术。&lt;/p>
@@ -5338,11 +6512,13 @@ $$Q_{i,n}\left( t\right) =\sum ^{n}_{i=0}P_{i+1}F_{l,n}\left( t\right) , l=0,l\d
 &lt;p>反向延伸：&lt;br>
 $P_{1} P_{0}$的延长线上取一点$P_{-1}$，使得：
 &lt;/p>
-$$P_{-1} P_{0}= P_{0} P_{1}$$$$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p>
+$$P_{-1} P_{0}= P_{0} P_{1}$$&lt;p>
+&lt;/p>
+$$P_{n} P_{n+1}= P_{n-1}P_{n}$$&lt;p>
 &lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-1.png"
 width="264"
 height="220"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu18340772105635363912.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu11435206957440172037.png 1024w"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_723872be8ad3b203.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-1_hu_7f2f4e0a913b2bc8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="120"
@@ -5350,13 +6526,15 @@ data-flex-basis="288px"
 >&lt;br>
 求得：
 &lt;/p>
-$$P_{-1}= 2 P_{0} - P_{1}$$$$P_{4}= 2 P_{3} - P_{2}$$&lt;/li>
+$$P_{-1}= 2 P_{0} - P_{1}$$&lt;p>
+&lt;/p>
+$$P_{4}= 2 P_{3} - P_{2}$$&lt;/li>
 &lt;li>
 &lt;p>重点技术：&lt;br>
 &lt;img src="https://boiltask.com/knowledge/computer-graphics-note/image-2.png"
 width="389"
 height="197"
-srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu13699975216508309066.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu16335215033749882580.png 1024w"
+srcset="https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_777ade5774ab3186.png 480w, https://boiltask.com/knowledge/computer-graphics-note/image-2_hu_78e1ad98eaee0999.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="197"
@@ -5364,7 +6542,9 @@ data-flex-basis="473px"
 >&lt;br>
 在首末端点处采用重合点，使得：
 &lt;/p>
-$$P_{-2}\equiv P_{-1} \equiv P_{0}$$$$P_{n+2}\equiv P_{n+1} \equiv P_{n}$$&lt;p>
+$$P_{-2}\equiv P_{-1} \equiv P_{0}$$&lt;p>
+&lt;/p>
+$$P_{n+2}\equiv P_{n+1} \equiv P_{n}$$&lt;p>
 $Q_{-1}$位于$P_{0} P_{1}$的三分之一处。&lt;/p>
 &lt;/li>
 &lt;/ol>
@@ -5678,38 +6858,33 @@ $$入射光=漫反射光+镜面反射光+环境光$$&lt;h3 id="简述双线性�
 &lt;/h3>&lt;p>深度缓存消隐算法的基本思想是：将投影平面每个像素所对应的所有面片（平面或曲面）的深度进行比较，然后取离视线最近面片的属性值作为该像素的属性值。&lt;/p>
 &lt;p>初始时，深度缓冲器所有单元均设置为最小z值，帧缓冲器各单元均至为背景色，然后逐个处理多边形表中的各面片。每扫描一行，计算该行各像素点(x,y)所对应的深度值z(x,y)，并将深度与深度缓冲器中该像素单元所存储的深度值ZB(x,y)进行比较。&lt;/p>
 &lt;p>若Z&amp;gt;ZB(x,y)，则ZB(x,y)=z，同时将该像素的属性值I(x,y)写入帧缓冲器，即FB(x,y)=i(x,y)；否则不变。&lt;/p></description></item><item><title>背包——误认为贪心的陷阱</title><link>https://boiltask.com/knowledge/knapsack-problem/</link><pubDate>Tue, 09 Aug 2016 18:14:29 +0800</pubDate><guid>https://boiltask.com/knowledge/knapsack-problem/</guid><description>&lt;blockquote>
-&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>
-&lt;/blockquote>
+&lt;p>有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，每样只能放一个，显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。&lt;/p>&lt;/blockquote>
 &lt;p>背包问题如果没有认真理解的话，第一种思路应该会往贪心的方面思考。&lt;/p>
 &lt;p>比如先以物品贵重程度排序，先选比较贵重的。&lt;br>
 然而对于数据:&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 3&lt;br>
 v = （2，2，3）&lt;br>
-w = （1，2，3）&lt;/p>
-&lt;/blockquote>
+w = （1，2，3）&lt;/p>&lt;/blockquote>
 &lt;p>按照先选贵重物品的策略，会先选择价值为3的那个，并且背包装满了，但是如果我们选取前两个物品，总价值可以达到4。&lt;/p>
 &lt;p>如果按照性价比排序：&lt;br>
 对于数据&lt;/p>
 &lt;blockquote>
 &lt;p>n = 3, m = 7&lt;br>
 v = （2，3，4）&lt;br>
-w = （3，4，5）&lt;/p>
-&lt;/blockquote>
+w = （3，4，5）&lt;/p>&lt;/blockquote>
 &lt;p>按这种方法因为2/3 &amp;lt; 3/4 &amp;lt; 4 / 5，我们先选择第三件物品，但是选了它之后别的东西放不下了！总价值是4，但如果我们选择前两件物品可以拿到总价值5。&lt;/p>
 &lt;p>造成这种现象的原因是贪心的原则为：通过每一步的最优解推导出整体的最优解，然而对于背包问题，因为每一步取或者不取的最优解取决于整体，也就是“动态”的。所以，背包问题成为了一个经典的动态规划问题。&lt;/p>
 &lt;p>再看一道部分背包问题&lt;/p>
 &lt;blockquote>
-&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>
-&lt;/blockquote>
+&lt;p>一个旅行者有一个最多能装m公斤的背包，然后又n重物品，它们的重量和价值分别为w[i],c[i]，问旅行者能获得的最大价值&lt;/p>&lt;/blockquote>
 &lt;p>这一题便是贪心问题，因为我们可以一直选性价比高的直到填满，所以是否贪心取决于每种物品是否只取走一部分。&lt;/p>
 &lt;p>而背包问题又衍生出了很多变形，动态规划的方法也不尽相同，所以需要多加练习才能掌握这一题型。&lt;/p>
 &lt;p>参考文章：&lt;br>
 51NOD&lt;br>
 百度知道&lt;br>
 百度文库&lt;/p></description></item><item><title>邻接表的创建与使用</title><link>https://boiltask.com/knowledge/adjacency-list/</link><pubDate>Tue, 02 Aug 2016 16:51:35 +0800</pubDate><guid>https://boiltask.com/knowledge/adjacency-list/</guid><description>&lt;blockquote>
-&lt;p>邻接表是图论中常用的一种数据结构。&lt;/p>
-&lt;/blockquote>
+&lt;p>邻接表是图论中常用的一种数据结构。&lt;/p>&lt;/blockquote>
 &lt;p>&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"
 >如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a>&lt;/p>
 &lt;p>邻接表与邻接矩阵有相似的作用：用于储存一个图中所有的节点，但是邻接矩阵比较浪费内存，当数据较小时，邻接矩阵还可以计算&lt;/p>
@@ -5718,145 +6893,144 @@ w = （3，4，5）&lt;/p>
 &lt;blockquote>
 &lt;p>1 10
 3 5
-8 9&lt;/p>
-&lt;/blockquote>
+8 9&lt;/p>&lt;/blockquote>
 &lt;p>我们将所给的点标记为1，其余为0
 （1）邻接矩阵（适合小数据点稠密型图）&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">/&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
+&lt;th>/&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -5871,7 +7045,7 @@ w = （3，4，5）&lt;/p>
 &lt;p>&lt;img src="https://boiltask.com/knowledge/adjacency-list/image-1.png"
 width="570"
 height="431"
-srcset="https://boiltask.com/knowledge/adjacency-list/image-1_hu16179051444541284563.png 480w, https://boiltask.com/knowledge/adjacency-list/image-1_hu828923988968045278.png 1024w"
+srcset="https://boiltask.com/knowledge/adjacency-list/image-1_hu_96cf309adb96b40a.png 480w, https://boiltask.com/knowledge/adjacency-list/image-1_hu_5cc952ff654747b5.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
@@ -6104,8 +7278,7 @@ N台计算机K个任务，各个计算机可以处理的任务种类不同，最
 &lt;a class="link" href="http://blog.csdn.net/dark_scope/article/details/8880547" target="_blank" rel="noopener"
 >趣写算法系列之–匈牙利算法&lt;/a>&lt;/p></description></item><item><title>欧拉函数——小于n的数中与n互质数的数目</title><link>https://boiltask.com/knowledge/eulers-totient-function/</link><pubDate>Sat, 26 Mar 2016 08:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/eulers-totient-function/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;blockquote>
-&lt;p>在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p>
-&lt;/blockquote>
+&lt;p>在数论，对正整数n，欧拉函数是小于n的数中与n互质的数的数目。此函数以其首名研究者欧拉命名(Ruler&amp;rsquo;so totient function)，它又称为Euler&amp;rsquo;s totient function、φ函数、欧拉商数等。 例如φ(8)=4，因为1,3,5,7均和8互质。 从欧拉函数引伸出来在环论方面的事实和拉格朗日定理构成了欧拉定理的证明。&lt;/p>&lt;/blockquote>
 &lt;h2 id="性质">&lt;a href="#%e6%80%a7%e8%b4%a8" class="header-anchor">&lt;/a>性质
 &lt;/h2>&lt;p>$\varphi \left( x\right) =x\left( 1-\dfrac{1}{p_{1}}\right) \left( 1-\dfrac{1}{p_{2}}\right) \ldots \left( 1-\dfrac{1}{p_{n}}\right)$&lt;/p>
 &lt;p>若n是质数p的k次幂&lt;/p>
@@ -6209,8 +7382,7 @@ n 个不同元素的一个错排可由下述两个步骤完成：&lt;br>
 2、 k 号元素不排第 1 个位置，这时可将第 1 个位置“看成”第 k 个位置(也就是说本来准备放到k位置为元素，可以放到1位置中),于是形成（包括 k 号元素在内的） n - 1 个元素的“错排”，有 f(n - 1) 种方法。据加法原理，完成第二步共有 f(n - 2)+f(n - 1) 种方法。&lt;br>
 根据乘法原理， n 个不同元素的错排种数&lt;br>
 f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
-证毕。&lt;/p>
-&lt;/blockquote></description></item><item><title>最小生成树——所有点成树有最小总权和</title><link>https://boiltask.com/knowledge/minimum-spanning-tree/</link><pubDate>Sat, 20 Feb 2016 00:16:16 +0800</pubDate><guid>https://boiltask.com/knowledge/minimum-spanning-tree/</guid><description>&lt;h2 id="问题介绍">&lt;a href="#%e9%97%ae%e9%a2%98%e4%bb%8b%e7%bb%8d" class="header-anchor">&lt;/a>问题介绍
+证毕。&lt;/p>&lt;/blockquote></description></item><item><title>最小生成树——所有点成树有最小总权和</title><link>https://boiltask.com/knowledge/minimum-spanning-tree/</link><pubDate>Sat, 20 Feb 2016 00:16:16 +0800</pubDate><guid>https://boiltask.com/knowledge/minimum-spanning-tree/</guid><description>&lt;h2 id="问题介绍">&lt;a href="#%e9%97%ae%e9%a2%98%e4%bb%8b%e7%bb%8d" class="header-anchor">&lt;/a>问题介绍
 &lt;/h2>&lt;p>一个无向图，如果某个子图中任意两个定点都互相连通并且是一棵树，那么这棵树就叫做生成树。如果边上有权值，那么使得边权和最小的生成树叫做最小生成树。&lt;/p>
 &lt;h2 id="常用算法">&lt;a href="#%e5%b8%b8%e7%94%a8%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>常用算法
 &lt;/h2>&lt;h3 id="prim算法">&lt;a href="#prim%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>Prim算法
@@ -6233,16 +7405,14 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 >【坐在马桶上看算法】算法7：Dijkstra最短路算法&lt;/a>&lt;/p>
 &lt;blockquote>
 &lt;p>我们发现dis[3]=12，dis[2]+e[2][3]=1+9=10，dis[3]&amp;gt;dis[2]+e[2][3]，因此dis[3]要更新为10。这个过程有个专业术语叫做“松弛”。即1号顶点到3号顶点的路程即dis[3]，通过2-&amp;gt;3这条边松弛成功。这便是Dijkstra算法的主要思想：通过“边”来松弛1号顶点到其余各个顶点的路程。&lt;br>
-每次找到离源点（上面例子的源点就是1号顶点）最近的一个顶点，然后以该顶点为中心进行扩展，最终得到源点到其余所有点的最短路径。&lt;/p>
-&lt;/blockquote>
+每次找到离源点（上面例子的源点就是1号顶点）最近的一个顶点，然后以该顶点为中心进行扩展，最终得到源点到其余所有点的最短路径。&lt;/p>&lt;/blockquote>
 &lt;h2 id="任意两点间的最短路问题">&lt;a href="#%e4%bb%bb%e6%84%8f%e4%b8%a4%e7%82%b9%e9%97%b4%e7%9a%84%e6%9c%80%e7%9f%ad%e8%b7%af%e9%97%ae%e9%a2%98" class="header-anchor">&lt;/a>任意两点间的最短路问题
 &lt;/h2>&lt;p>求解所有两点间的最短路的问题&lt;/p>
 &lt;h3 id="floyd-warshall算法">&lt;a href="#floyd-warshall%e7%ae%97%e6%b3%95" class="header-anchor">&lt;/a>Floyd-Warshall算法
 &lt;/h3>&lt;p>&lt;a class="link" href="http://ahalei.blog.51cto.com/4767671/1383613" target="_blank" rel="noopener"
 >坐在马桶上看算法：只有五行的Floyd最短路算法&lt;/a>&lt;/p>
 &lt;blockquote>
-&lt;p>最开始只允许经过1号顶点进行中转，接下来只允许经过1和2号顶点进行中转……允许经过1~n号所有顶点进行中转，求任意两点之间的最短路程。用一句话概括就是：从i号顶点到j号顶点只经过前k号点的最短路程。&lt;/p>
-&lt;/blockquote>
+&lt;p>最开始只允许经过1号顶点进行中转，接下来只允许经过1和2号顶点进行中转……允许经过1~n号所有顶点进行中转，求任意两点之间的最短路程。用一句话概括就是：从i号顶点到j号顶点只经过前k号点的最短路程。&lt;/p>&lt;/blockquote>
 &lt;p>参考文章:&lt;br>
 《挑战程序设计竞赛》&lt;br>
 &lt;a class="link" href="http://developer.51cto.com/art/201403/433874.htm" target="_blank" rel="noopener"
@@ -6267,18 +7437,15 @@ f(n) = (n-1)[f(n-2)+f(n-1)] (n&amp;gt;2) 。&lt;br>
 此处是作为 逗号运算符&lt;br>
 关于逗号运算符:&lt;/p>
 &lt;blockquote>
-&lt;p>逗号运算符可以把两个以上（包含两个）的表达式连接成一个表达式，称为逗号表达式。&lt;/p>
-&lt;/blockquote>
+&lt;p>逗号运算符可以把两个以上（包含两个）的表达式连接成一个表达式，称为逗号表达式。&lt;/p>&lt;/blockquote>
 &lt;p>逗号运算符的优先级是所有运算符中级别最低的，通常配合 for 循环使用。&lt;/p>
 &lt;p>所以常用的&lt;code>for(i=0,n=1;i&amp;lt;10;i++)&lt;/code>&lt;br>
 这种，这个i=0,n=1便是逗号表达式&lt;/p>
 &lt;p>对于&lt;code>a + b, c = b, c++&lt;/code>这个式子&lt;/p>
 &lt;blockquote>
-&lt;p>逗号表达式最右边的子表达式的值即为逗号表达式的值。上例中，c++ 的值（c 自增之前的值）即为该表达式的值。&lt;/p>
-&lt;/blockquote>
+&lt;p>逗号表达式最右边的子表达式的值即为逗号表达式的值。上例中，c++ 的值（c 自增之前的值）即为该表达式的值。&lt;/p>&lt;/blockquote>
 &lt;blockquote>
-&lt;p>逗号运算符保证左边的子表达式运算结束后才进行右边的子表达式的运算。也就是说，逗号运算符是一个序列点，其左边所有副作用都结束后，才对其右边的子表达式进行运算。因此，上例中，c 得到 b 的值后，才进行自增运算。&lt;/p>
-&lt;/blockquote>
+&lt;p>逗号运算符保证左边的子表达式运算结束后才进行右边的子表达式的运算。也就是说，逗号运算符是一个序列点，其左边所有副作用都结束后，才对其右边的子表达式进行运算。因此，上例中，c 得到 b 的值后，才进行自增运算。&lt;/p>&lt;/blockquote>
 &lt;p>验证程序:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -6352,8 +7519,7 @@ m&amp;amp;m-1 使得如果最后一位是1&lt;br>
 不过这个肯定不会是一次就写好哒~哈哈哈 慢慢补充&lt;/p>
 &lt;h2 id="并查集算法产生的原因意义">&lt;a href="#%e5%b9%b6%e6%9f%a5%e9%9b%86%e7%ae%97%e6%b3%95%e4%ba%a7%e7%94%9f%e7%9a%84%e5%8e%9f%e5%9b%a0%e6%84%8f%e4%b9%89" class="header-anchor">&lt;/a>并查集算法产生的原因(意义)
 &lt;/h2>&lt;blockquote>
-&lt;p>在一些有N个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。这一类问题近几年来反复出现在信息学的国际国内赛题中，其特点是看似并不复杂，但数据量极大，若用正常的数据结构来描述的话，往往在空间上过大，计算机无法承受；即使在空间上勉强通过，运行的时间复杂度也极高，根本就不可能在比赛规定的运行时间（1～3秒）内计算出试题需要的结果，只能用并查集来描述。&lt;/p>
-&lt;/blockquote>
+&lt;p>在一些有N个元素的集合应用问题中，我们通常是在开始时让每个元素构成一个单元素的集合，然后按一定顺序将属于同一组的元素所在的集合合并，其间要反复查找一个元素在哪个集合中。这一类问题近几年来反复出现在信息学的国际国内赛题中，其特点是看似并不复杂，但数据量极大，若用正常的数据结构来描述的话，往往在空间上过大，计算机无法承受；即使在空间上勉强通过，运行的时间复杂度也极高，根本就不可能在比赛规定的运行时间（1～3秒）内计算出试题需要的结果，只能用并查集来描述。&lt;/p>&lt;/blockquote>
 &lt;p>并查集是一种树型的数据结构，用于处理一些不相交集合（Disjoint Sets）的合并及查询问题。&lt;br>
 也就是对于一些集合之间的相连关系的描述&lt;/p>
 &lt;h2 id="并查集算法的操作能做什么">&lt;a href="#%e5%b9%b6%e6%9f%a5%e9%9b%86%e7%ae%97%e6%b3%95%e7%9a%84%e6%93%8d%e4%bd%9c%e8%83%bd%e5%81%9a%e4%bb%80%e4%b9%88" class="header-anchor">&lt;/a>并查集算法的操作(能做什么)
@@ -6374,8 +7540,7 @@ m&amp;amp;m-1 使得如果最后一位是1&lt;br>
 &lt;/h2>&lt;p>最简单的例题:&lt;/p>
 &lt;blockquote>
 &lt;p>若某个家族人员过于庞大，要判断两个是否是亲戚，确实还很不容易，给出某个亲戚关系图，求任意给出的两个人是否具有亲戚关系。
-规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。&lt;/p>
-&lt;/blockquote>
+规定：x和y是亲戚，y和z是亲戚，那么x和z也是亲戚。如果x,y是亲戚，那么x的亲戚都是y的亲戚，y的亲戚也都是x的亲戚。&lt;/p>&lt;/blockquote>
 &lt;p>根据给出的对应关系求出给定两人是否有亲戚关系&lt;br>
 此时便涉及到&lt;br>
 对集合的合并(合并有亲戚关系的集合)&lt;br>
@@ -6407,8 +7572,7 @@ while与do-while区别&lt;br>
 甚至做题时可以说从来没用过&lt;/p>
 &lt;p>所以对于描述&lt;/p>
 &lt;blockquote>
-&lt;p>do-while的循环体至少会执行一次&lt;/p>
-&lt;/blockquote>
+&lt;p>do-while的循环体至少会执行一次&lt;/p>&lt;/blockquote>
 &lt;p>这句话并没有深刻体会&lt;/p>
 &lt;p>不过引发这个思考的是&lt;br>
 &lt;a class="link" href="https://boiltask.com/oj/nyoj/56" >【NYOJ】[56]阶乘因式分解（一）&lt;/a>&lt;br>

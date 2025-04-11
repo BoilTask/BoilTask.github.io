@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>贪心算法 on BoilTask's Blog</title><link>https://boiltask.com/tags/greedy-algorithm/</link><description>Recent content in 贪心算法 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Aug 2016 09:23:40 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/greedy-algorithm/index.xml" rel="self" type="application/rss+xml"/><item><title>【LightOJ】[1198]Karate Competition</title><link>https://boiltask.com/oj/lightoj/1198/</link><pubDate>Tue, 02 Aug 2016 09:23:40 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1198/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Karate Competition
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1198 target="_blank">[lightoj-1198]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3128193304390688 target="_blank">[3128193304390688]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -102,15 +99,12 @@ Karate Competition
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1052]Tian Ji -- The Horse Racing</title><link>https://boiltask.com/oj/hdu/1052/</link><pubDate>Sat, 23 Jul 2016 18:11:28 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1052/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Tian Ji -- The Horse Racing
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1052 target="_blank">[hdu-1052]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150666324523658 target="_blank">[3150666324523658]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -207,15 +201,12 @@ Tian Ji -- The Horse Racing
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[698A]Vacations</title><link>https://boiltask.com/oj/codeforces/698A/</link><pubDate>Sat, 23 Jul 2016 17:44:41 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/698A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Vacations
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-698A target="_blank">[codeforces-698A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3258458633318374 target="_blank">[3258458633318374]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -283,15 +274,12 @@ Vacations
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[629B]Far Relative’s Problem</title><link>https://boiltask.com/oj/codeforces/629B/</link><pubDate>Sat, 23 Jul 2016 16:45:46 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/629B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Far Relative’s Problem
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-629B target="_blank">[codeforces-629B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3242008783685289 target="_blank">[3242008783685289]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -383,15 +371,12 @@ Far Relative’s Problem
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1328]Radar Installation</title><link>https://boiltask.com/oj/poj/1328/</link><pubDate>Sat, 23 Jul 2016 15:41:26 +0800</pubDate><guid>https://boiltask.com/oj/poj/1328/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Radar Installation
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1328 target="_blank">[poj-1328]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158147394585098 target="_blank">[3158147394585098]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -519,15 +504,12 @@ Radar Installation
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1789]Doing Homework again</title><link>https://boiltask.com/oj/hdu/1789/</link><pubDate>Sat, 23 Jul 2016 10:07:20 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1789/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Doing Homework again
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1789 target="_blank">[hdu-1789]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3203032630771949 target="_blank">[3203032630771949]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -636,15 +618,12 @@ Doing Homework again
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2124]Repair the Wall</title><link>https://boiltask.com/oj/hdu/2124/</link><pubDate>Sat, 23 Jul 2016 09:32:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2124/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Repair the Wall
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2124 target="_blank">[hdu-2124]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3104468706585119 target="_blank">[3104468706585119]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -710,15 +689,12 @@ Repair the Wall
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1009]FatMouse' Trade</title><link>https://boiltask.com/oj/hdu/1009/</link><pubDate>Sat, 23 Jul 2016 08:58:35 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1009/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 FatMouse&amp;#39; Trade
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1009 target="_blank">[hdu-1009]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150270416195812 target="_blank">[3150270416195812]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -802,15 +778,12 @@ FatMouse&amp;#39; Trade
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[597B]Restaurant</title><link>https://boiltask.com/oj/codeforces/597B/</link><pubDate>Thu, 21 Jul 2016 15:59:18 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/597B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Restaurant
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-597B target="_blank">[codeforces-597B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3237958140419432 target="_blank">[3237958140419432]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -889,15 +862,12 @@ Restaurant
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2037]今年暑假不AC</title><link>https://boiltask.com/oj/hdu/2037/</link><pubDate>Mon, 21 Dec 2015 19:10:29 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2037/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 今年暑假不AC
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2037 target="_blank">[hdu-2037]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151813865328070 target="_blank">[3151813865328070]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

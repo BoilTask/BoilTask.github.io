@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>字典树 on BoilTask's Blog</title><link>https://boiltask.com/tags/trie-tree/</link><description>Recent content in 字典树 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 05 Aug 2016 16:36:41 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/trie-tree/index.xml" rel="self" type="application/rss+xml"/><item><title>【杭电】[1251]统计难题</title><link>https://boiltask.com/oj/hdu/1251/</link><pubDate>Fri, 05 Aug 2016 16:36:41 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1251/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 统计难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1251 target="_blank">[hdu-1251]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150964048920354 target="_blank">[3150964048920354]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

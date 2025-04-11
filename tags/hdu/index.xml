@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杭电OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/hdu/</link><description>Recent content in 杭电OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 11 Aug 2016 20:09:55 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/hdu/index.xml" rel="self" type="application/rss+xml"/><item><title>【杭电】[5256]序列变换</title><link>https://boiltask.com/oj/hdu/5256/</link><pubDate>Thu, 11 Aug 2016 20:09:55 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5256/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 序列变换
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5256 target="_blank">[hdu-5256]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3299176657482508 target="_blank">[3299176657482508]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -109,15 +106,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1257]最少拦截系统</title><link>https://boiltask.com/oj/hdu/1257/</link><pubDate>Tue, 09 Aug 2016 17:23:55 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1257/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 最少拦截系统
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1257 target="_blank">[hdu-1257]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3123535222321891 target="_blank">[3123535222321891]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -321,15 +315,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1466]计算直线的交点数</title><link>https://boiltask.com/oj/hdu/1466/</link><pubDate>Mon, 08 Aug 2016 15:38:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1466/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 计算直线的交点数
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1466 target="_blank">[hdu-1466]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3210787742804115 target="_blank">[3210787742804115]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -396,15 +387,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1811]Rank of Tetris</title><link>https://boiltask.com/oj/hdu/1811/</link><pubDate>Sat, 06 Aug 2016 16:36:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1811/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Rank of Tetris
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1811 target="_blank">[hdu-1811]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3106675065054036 target="_blank">[3106675065054036]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -604,15 +592,12 @@ Rank of Tetris
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4857]逃生</title><link>https://boiltask.com/oj/hdu/4857/</link><pubDate>Sat, 06 Aug 2016 11:27:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4857/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 逃生
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4857 target="_blank">[hdu-4857]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3192632012314298 target="_blank">[3192632012314298]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -766,15 +751,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2647]Reward</title><link>https://boiltask.com/oj/hdu/2647/</link><pubDate>Sat, 06 Aug 2016 09:58:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2647/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Reward
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2647 target="_blank">[hdu-2647]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3099759746423843 target="_blank">[3099759746423843]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -908,15 +890,12 @@ Reward
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1285]确定比赛名次</title><link>https://boiltask.com/oj/hdu/1285/</link><pubDate>Fri, 05 Aug 2016 18:08:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1285/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 确定比赛名次
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1285 target="_blank">[hdu-1285]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3122403987687238 target="_blank">[3122403987687238]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1031,15 +1010,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1251]统计难题</title><link>https://boiltask.com/oj/hdu/1251/</link><pubDate>Fri, 05 Aug 2016 16:36:41 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1251/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 统计难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1251 target="_blank">[hdu-1251]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150964048920354 target="_blank">[3150964048920354]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1180,15 +1156,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2196]Computer</title><link>https://boiltask.com/oj/hdu/2196/</link><pubDate>Wed, 03 Aug 2016 10:30:02 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2196/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Computer
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2196 target="_blank">[hdu-2196]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153444422576675 target="_blank">[3153444422576675]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1311,15 +1284,12 @@ Computer
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1383]Labyrinth</title><link>https://boiltask.com/oj/hdu/1383/</link><pubDate>Wed, 03 Aug 2016 09:39:09 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1383/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Labyrinth
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1383 target="_blank">[hdu-1383]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3225955975161902 target="_blank">[3225955975161902]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1431,15 +1401,12 @@ Labyrinth
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5777]domino</title><link>https://boiltask.com/oj/hdu/5777/</link><pubDate>Mon, 01 Aug 2016 18:04:37 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5777/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 domino
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5777 target="_blank">[hdu-5777]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3260602101437425 target="_blank">[3260602101437425]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1520,15 +1487,12 @@ domino
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5776]sum</title><link>https://boiltask.com/oj/hdu/5776/</link><pubDate>Mon, 01 Aug 2016 18:02:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5776/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 sum
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5776 target="_blank">[hdu-5776]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3260613266726679 target="_blank">[3260613266726679]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1607,15 +1571,12 @@ sum
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5326]Work</title><link>https://boiltask.com/oj/hdu/5326/</link><pubDate>Mon, 01 Aug 2016 17:59:19 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5326/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Work
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5326 target="_blank">[hdu-5326]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3291376764281254 target="_blank">[3291376764281254]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1707,15 +1668,12 @@ Work
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4707]Pet</title><link>https://boiltask.com/oj/hdu/4707/</link><pubDate>Mon, 01 Aug 2016 17:56:59 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4707/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Pet
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4707 target="_blank">[hdu-4707]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3174814046439670 target="_blank">[3174814046439670]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1840,15 +1798,12 @@ Pet
 &lt;/div>
 &lt;/div>&lt;p>参考博客:&lt;a class="link" href="http://blog.csdn.net/mengxiang000000/article/details/51253067" target="_blank" rel="noopener"
 >hdu 4707 Pet【带权并查集】 – mengxiang000000&lt;/a>&lt;/p></description></item><item><title>【杭电】[1213]How Many Tables</title><link>https://boiltask.com/oj/hdu/1213/</link><pubDate>Mon, 01 Aug 2016 17:31:22 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1213/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 How Many Tables
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1213 target="_blank">[hdu-1213]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3107206738359983 target="_blank">[3107206738359983]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1942,15 +1897,12 @@ How Many Tables
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2120]Ice_cream's world I</title><link>https://boiltask.com/oj/hdu/2120/</link><pubDate>Mon, 01 Aug 2016 16:31:04 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2120/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Ice_cream&amp;#39;s world I
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2120 target="_blank">[hdu-2120]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3097640482522631 target="_blank">[3097640482522631]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2039,15 +1991,12 @@ Ice_cream&amp;#39;s world I
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1856]More is better</title><link>https://boiltask.com/oj/hdu/1856/</link><pubDate>Mon, 01 Aug 2016 16:13:36 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1856/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 More is better
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1856 target="_blank">[hdu-1856]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158601350563004 target="_blank">[3158601350563004]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2158,15 +2107,12 @@ More is better
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5631]Rikka with Graph</title><link>https://boiltask.com/oj/hdu/5631/</link><pubDate>Mon, 01 Aug 2016 15:55:39 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5631/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Rikka with Graph
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5631 target="_blank">[hdu-5631]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3241978769555317 target="_blank">[3241978769555317]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2290,15 +2236,12 @@ Rikka with Graph
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2612]Find a way</title><link>https://boiltask.com/oj/hdu/2612/</link><pubDate>Sat, 30 Jul 2016 09:22:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2612/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Find a way
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2612 target="_blank">[hdu-2612]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3165225470619637 target="_blank">[3165225470619637]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2458,15 +2401,12 @@ Find a way
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1010]Tempter of the Bone</title><link>https://boiltask.com/oj/hdu/1010/</link><pubDate>Fri, 29 Jul 2016 15:58:48 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1010/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Tempter of the Bone
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1010 target="_blank">[hdu-1010]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150241236417113 target="_blank">[3150241236417113]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2606,15 +2546,12 @@ Tempter of the Bone
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1241]Oil Deposits</title><link>https://boiltask.com/oj/hdu/1241/</link><pubDate>Fri, 29 Jul 2016 12:01:02 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1241/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Oil Deposits
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1241 target="_blank">[hdu-1241]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3165219753788416 target="_blank">[3165219753788416]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2691,15 +2628,12 @@ Oil Deposits
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1312]Red and Black</title><link>https://boiltask.com/oj/hdu/1312/</link><pubDate>Fri, 29 Jul 2016 10:51:50 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1312/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Red and Black
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1312 target="_blank">[hdu-1312]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3164656529174567 target="_blank">[3164656529174567]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2783,15 +2717,12 @@ Red and Black
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2553]N皇后问题</title><link>https://boiltask.com/oj/hdu/2553/</link><pubDate>Fri, 29 Jul 2016 09:15:32 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2553/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 N皇后问题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2553 target="_blank">[hdu-2553]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3203295595393191 target="_blank">[3203295595393191]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2887,15 +2818,12 @@ dfs中记录已经下了多少个棋子&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1181]变形课</title><link>https://boiltask.com/oj/hdu/1181/</link><pubDate>Thu, 28 Jul 2016 11:57:50 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1181/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 变形课
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1181 target="_blank">[hdu-1181]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3126446187477163 target="_blank">[3126446187477163]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -2975,15 +2903,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4907]Task schedule</title><link>https://boiltask.com/oj/hdu/4907/</link><pubDate>Tue, 26 Jul 2016 19:50:36 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4907/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Task schedule
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4907 target="_blank">[hdu-4907]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3282568977220872 target="_blank">[3282568977220872]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3090,15 +3015,12 @@ Task schedule
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4004]The Frog's Games</title><link>https://boiltask.com/oj/hdu/4004/</link><pubDate>Tue, 26 Jul 2016 17:49:39 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4004/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 The Frog&amp;#39;s Games
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4004 target="_blank">[hdu-4004]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3097316427883761 target="_blank">[3097316427883761]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3197,15 +3119,12 @@ mid是否比res大&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2141]Can you find it?</title><link>https://boiltask.com/oj/hdu/2141/</link><pubDate>Tue, 26 Jul 2016 17:44:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2141/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Can you find it?
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2141 target="_blank">[hdu-2141]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3156819803343983 target="_blank">[3156819803343983]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3335,15 +3254,12 @@ A&lt;sub>i&lt;/sub>+B&lt;sub>j&lt;/sub>=X-C&lt;sub>k&lt;/sub>&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1254]推箱子</title><link>https://boiltask.com/oj/hdu/1254/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1254/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 推箱子
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1254 target="_blank">[hdu-1254]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3202140751368552 target="_blank">[3202140751368552]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3357,15 +3273,12 @@ justify-content: space-between;
 想好思路之后勇敢的写吧-.-&lt;/p>
 &lt;p>dfs搜索能不能到&lt;br>
 bfs搜索最短距离&lt;/p></description></item><item><title>【杭电】[2199]Can you solve this equation?</title><link>https://boiltask.com/oj/hdu/2199/</link><pubDate>Tue, 26 Jul 2016 17:01:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2199/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Can you solve this equation?
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2199 target="_blank">[hdu-2199]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3108287869870259 target="_blank">[3108287869870259]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3454,15 +3367,12 @@ Can you solve this equation?
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5363]Key Set</title><link>https://boiltask.com/oj/hdu/5363/</link><pubDate>Mon, 25 Jul 2016 15:49:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5363/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Key Set
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5363 target="_blank">[hdu-5363]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3290484335498603 target="_blank">[3290484335498603]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3526,15 +3436,12 @@ Key Set
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1061]Rightmost Digit</title><link>https://boiltask.com/oj/hdu/1061/</link><pubDate>Mon, 25 Jul 2016 15:16:43 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1061/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Rightmost Digit
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1061 target="_blank">[hdu-1061]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3164659737751154 target="_blank">[3164659737751154]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3667,15 +3574,12 @@ Rightmost Digit
 &lt;/div>
 &lt;/div>&lt;p>推荐博客:&lt;a class="link" href="http://blog.csdn.net/u014174811/article/details/40821591" target="_blank" rel="noopener"
 > 杭电OJ（HDOJ）1097题：A hard puzzle（数论）&lt;/a>&lt;/p></description></item><item><title>【杭电】[5748]Bellovin</title><link>https://boiltask.com/oj/hdu/5748/</link><pubDate>Mon, 25 Jul 2016 08:19:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5748/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Bellovin
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5748 target="_blank">[hdu-5748]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3256955378826910 target="_blank">[3256955378826910]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3753,15 +3657,12 @@ Bellovin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[5747]Aaronson</title><link>https://boiltask.com/oj/hdu/5747/</link><pubDate>Mon, 25 Jul 2016 08:16:40 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5747/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Aaronson
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-5747 target="_blank">[hdu-5747]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3256924025682332 target="_blank">[3256924025682332]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3832,15 +3733,12 @@ Aaronson
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1052]Tian Ji -- The Horse Racing</title><link>https://boiltask.com/oj/hdu/1052/</link><pubDate>Sat, 23 Jul 2016 18:11:28 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1052/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Tian Ji -- The Horse Racing
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1052 target="_blank">[hdu-1052]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150666324523658 target="_blank">[3150666324523658]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -3937,15 +3835,12 @@ Tian Ji -- The Horse Racing
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1789]Doing Homework again</title><link>https://boiltask.com/oj/hdu/1789/</link><pubDate>Sat, 23 Jul 2016 10:07:20 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1789/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Doing Homework again
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1789 target="_blank">[hdu-1789]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3203032630771949 target="_blank">[3203032630771949]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4054,15 +3949,12 @@ Doing Homework again
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2124]Repair the Wall</title><link>https://boiltask.com/oj/hdu/2124/</link><pubDate>Sat, 23 Jul 2016 09:32:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2124/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Repair the Wall
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2124 target="_blank">[hdu-2124]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3104468706585119 target="_blank">[3104468706585119]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4128,15 +4020,12 @@ Repair the Wall
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1009]FatMouse' Trade</title><link>https://boiltask.com/oj/hdu/1009/</link><pubDate>Sat, 23 Jul 2016 08:58:35 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1009/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 FatMouse&amp;#39; Trade
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1009 target="_blank">[hdu-1009]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3150270416195812 target="_blank">[3150270416195812]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4219,16 +4108,458 @@ FatMouse&amp;#39; Trade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
+&lt;/div></description></item><item><title>【杭电】[1997]汉诺塔VII</title><link>https://boiltask.com/oj/hdu/1997/</link><pubDate>Wed, 20 Jul 2016 10:25:43 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1997/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+汉诺塔VII
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/hdu-1997 target="_blank">[hdu-1997]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3122595692095457 target="_blank">[3122595692095457]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3122595692095457 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;blockquote>
+&lt;p>（1）首先判断是不是已经完全放好了或者还没有开始移动，这样就不用考虑是否最优化了，即所有的盘子在C柱上或者所有的盘子在A柱上，这样是合法的，直接输出true。&lt;br>
+（2）【我们考虑盘号最大的盘子第n号盘子，移动方向为A–&amp;gt;C，它只可能在A柱或者C柱上，如果在B柱上我们可以直接返回false–①】；&lt;br>
+如果盘号最大的盘子在A柱上，说明其它盘子正在进行A–&amp;gt;B的操作，所以考虑移动的那个n-1个盘子，然后同样按①判断，只不过，最大盘号变成了n-1，而移动方向变成了A–&amp;gt;B；&lt;br>
+如果盘号最大的盘子在C柱上，说明其它盘子正在进行B–&amp;gt;C的操作，所以考虑移动的那个n-1个盘子，然后同样按①判断，只不过，最大盘号变成了n-1，而移动方向变成了B–&amp;gt;C；&lt;br>
+利用递归按这种方式不断地进行①操作。&lt;/p>&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">100&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">t1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">t2&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">)];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">)][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">f&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">];&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">map&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;true&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;false&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【杭电】[5053]the Sum of Cube</title><link>https://boiltask.com/oj/hdu/5053/</link><pubDate>Wed, 20 Jul 2016 10:21:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu/5053/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+the Sum of Cube
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/hdu-5053 target="_blank">[hdu-5053]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3284834361055368 target="_blank">[3284834361055368]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3284834361055368 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>签到水题&lt;br>
+直接循环计算就好&lt;/p>
+&lt;p>注意数据范围和中间过程溢出&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">kase&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">__int64&lt;/span> &lt;span class="n">sum&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sum&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">__int64&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Case #%d: %I64d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="n">kase&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">sum&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【杭电】[2504]又见GCD</title><link>https://boiltask.com/oj/hdu/2504/</link><pubDate>Wed, 20 Jul 2016 10:18:20 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2504/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+又见GCD
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/hdu-2504 target="_blank">[hdu-2504]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3124371655819235 target="_blank">[3124371655819235]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3124371655819235 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>可以暴力查找&lt;br>
+但是可以根据题意优化&lt;br>
+c一定是b的倍数&lt;br>
+所以每一次可把i+=b&lt;br>
+因为c！=b&lt;br>
+所以初始条件可以把i=b+b&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1000000&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">break&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【杭电】[1722]Cake</title><link>https://boiltask.com/oj/hdu/1722/</link><pubDate>Wed, 20 Jul 2016 10:12:51 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1722/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+Cake
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/hdu-1722 target="_blank">[hdu-1722]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3224237816890421 target="_blank">[3224237816890421]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3224237816890421 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>其实找规律可以想出来&lt;/p>
+&lt;blockquote>
+&lt;p>规律可以这么解释:如果要能把它分为等值的p份或q份,那么我们可以先分为d(最大公约数)=gcd(p,q)份,因为当你分为d份的时候,你可能选择将每份分为p/d份(也就是把整体分为p份),也可以选择将每份分为q/d份(也就是把整体分为p份),这两种选择里,肯定不会有切到相同位置的一刀!所以我们可以得到公式:s=p+q-gcd(p,q);&lt;/p>&lt;/blockquote>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">EOF&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【杭电】[1222]Wolf and Rabbit</title><link>https://boiltask.com/oj/hdu/1222/</link><pubDate>Wed, 20 Jul 2016 10:10:12 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1222/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+Wolf and Rabbit
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/hdu-1222 target="_blank">[hdu-1222]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3157029628831946 target="_blank">[3157029628831946]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3157029628831946 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>因为是个循环的过程&lt;br>
+所以如果两个数最大公约数为1的话&lt;br>
+狼就可以抓到兔子&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">gcd&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;NO&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;YES&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【杭电】[1715]大菲波数</title><link>https://boiltask.com/oj/hdu/1715/</link><pubDate>Mon, 18 Jul 2016 12:02:49 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1715/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;script>
+window.addEventListener('message', function (event) {
+if (!event.data || event.data.type !== 'boiltask-oj-set-height') {
+return;
+}
+const iframes = document.getElementsByClassName('boiltask-oj-hdu-1715');
+for (let i = 0; i &lt; iframes.length; i++) {
+const iframe = iframes[i];
+iframe.style.height = event.data.height + 'px';
+}
+});
+&lt;/script>
+&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a style="margin-left: 10px;" href='https://oj.boiltask.com/problem/hdu-1715' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe class="boiltask-oj-hdu-1715" src='https://oj.boiltask.com/widget/hdu-1715?hidden_title=1' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>大数运算使用字符串模拟&lt;/p>
+&lt;p>在斐波那契数列中是对大数的多次想加&lt;br>
+为了方便编写函数所以可以使用string类型&lt;/p>
+&lt;p>函数完成后只需像正常求数列那样调用即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;iostream&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;cstring&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">string&lt;/span> &lt;span class="n">F&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;1&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;2&amp;#34;&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">string&lt;/span> &lt;span class="nf">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">string&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;0&amp;#34;&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">la&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">lb&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">length&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">la&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">lb&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">la&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">lb&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">la&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">la&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-=&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">la&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">erase&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1002&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">F&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">add&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">F&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="n">F&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">220&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">F&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)]&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2048]神、上帝以及老天爷</title><link>https://boiltask.com/oj/hdu/2048/</link><pubDate>Wed, 02 Mar 2016 22:25:07 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2048/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 神、上帝以及老天爷
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2048 target="_blank">[hdu-2048]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151831946608367 target="_blank">[3151831946608367]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4300,15 +4631,12 @@ a[i]=(i-1)*(a[i-1]+a[i-2])&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.hdu.edu.cn/showproblem.php?pid=2048" target="_blank" rel="noopener"
 >【杭电】[2048]神、上帝以及老天爷&lt;/a>&lt;/p></description></item><item><title>【杭电】[2037]今年暑假不AC</title><link>https://boiltask.com/oj/hdu/2037/</link><pubDate>Mon, 21 Dec 2015 19:10:29 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2037/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 今年暑假不AC
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2037 target="_blank">[hdu-2037]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151813865328070 target="_blank">[3151813865328070]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4496,15 +4824,12 @@ justify-content: space-between;
 &lt;p>在附一个优秀的讲解博文：&lt;br>
 &lt;a class="link" href="http://blog.sina.com.cn/s/blog_6827ac4a0100nyjn.html" target="_blank" rel="noopener"
 >HDU2037 今年暑假不AC 贪心算法&lt;/a>&lt;/p></description></item><item><title>【杭电】[2008]数值统计</title><link>https://boiltask.com/oj/hdu/2008/</link><pubDate>Sun, 20 Dec 2015 12:13:06 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2008/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 数值统计
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2008 target="_blank">[hdu-2008]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215600033426102 target="_blank">[3215600033426102]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4565,15 +4890,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2009]求数列的和</title><link>https://boiltask.com/oj/hdu/2009/</link><pubDate>Sun, 20 Dec 2015 12:09:59 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2009/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 求数列的和
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2009 target="_blank">[hdu-2009]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151983511328772 target="_blank">[3151983511328772]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4627,15 +4949,12 @@ math.h 头文件&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2005]第几天？</title><link>https://boiltask.com/oj/hdu/2005/</link><pubDate>Sun, 20 Dec 2015 12:04:48 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2005/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 第几天？
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2005 target="_blank">[hdu-2005]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215573496248721 target="_blank">[3215573496248721]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4694,15 +5013,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2032]杨辉三角</title><link>https://boiltask.com/oj/hdu/2032/</link><pubDate>Sun, 20 Dec 2015 12:00:49 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2032/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 杨辉三角
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2032 target="_blank">[hdu-2032]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3105071538305260 target="_blank">[3105071538305260]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4821,15 +5137,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>也是有纪念意义的一题啊~&lt;/p></description></item><item><title>【杭电】[2013]蟠桃记</title><link>https://boiltask.com/oj/hdu/2013/</link><pubDate>Sun, 20 Dec 2015 11:53:09 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2013/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 蟠桃记
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2013 target="_blank">[hdu-2013]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3121297035859893 target="_blank">[3121297035859893]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4870,15 +5183,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2033]人见人爱A+B</title><link>https://boiltask.com/oj/hdu/2033/</link><pubDate>Sun, 20 Dec 2015 11:46:21 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2033/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 人见人爱A&amp;#43;B
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2033 target="_blank">[hdu-2033]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3121371330163652 target="_blank">[3121371330163652]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -4947,15 +5257,12 @@ A+B到底能有多少-.-&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2010]水仙花数</title><link>https://boiltask.com/oj/hdu/2010/</link><pubDate>Sun, 20 Dec 2015 11:37:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2010/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 水仙花数
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2010 target="_blank">[hdu-2010]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215602906529989 target="_blank">[3215602906529989]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5025,15 +5332,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2007]平方和与立方和</title><link>https://boiltask.com/oj/hdu/2007/</link><pubDate>Sun, 20 Dec 2015 11:30:37 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2007/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 平方和与立方和
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2007 target="_blank">[hdu-2007]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215605280296043 target="_blank">[3215605280296043]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5098,15 +5402,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1108]最小公倍数</title><link>https://boiltask.com/oj/hdu/1108/</link><pubDate>Sun, 20 Dec 2015 11:25:28 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1108/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 最小公倍数
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1108 target="_blank">[hdu-1108]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3129340845008668 target="_blank">[3129340845008668]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5197,15 +5498,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1097]A hard puzzle</title><link>https://boiltask.com/oj/hdu/1097/</link><pubDate>Sun, 20 Dec 2015 11:19:18 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1097/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A hard puzzle
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1097 target="_blank">[hdu-1097]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158622413313116 target="_blank">[3158622413313116]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5254,15 +5552,12 @@ A hard puzzle
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1096]A+B for Input-Output Practice (VIII)</title><link>https://boiltask.com/oj/hdu/1096/</link><pubDate>Sun, 20 Dec 2015 11:09:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1096/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (VIII)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1096 target="_blank">[hdu-1096]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166555475623715 target="_blank">[3166555475623715]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5313,15 +5608,12 @@ A&amp;#43;B for Input-Output Practice (VIII)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1095]A+B for Input-Output Practice (VII)</title><link>https://boiltask.com/oj/hdu/1095/</link><pubDate>Sun, 20 Dec 2015 11:07:47 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1095/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (VII)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1095 target="_blank">[hdu-1095]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166526833034900 target="_blank">[3166526833034900]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5354,15 +5646,12 @@ A&amp;#43;B for Input-Output Practice (VII)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1094]A+B for Input-Output Practice (VI)</title><link>https://boiltask.com/oj/hdu/1094/</link><pubDate>Sun, 20 Dec 2015 11:05:47 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1094/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (VI)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1094 target="_blank">[hdu-1094]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166532281559113 target="_blank">[3166532281559113]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5405,15 +5694,12 @@ A&amp;#43;B for Input-Output Practice (VI)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1093]A+B for Input-Output Practice (V)</title><link>https://boiltask.com/oj/hdu/1093/</link><pubDate>Sun, 20 Dec 2015 11:03:50 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1093/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (V)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1093 target="_blank">[hdu-1093]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166537394221626 target="_blank">[3166537394221626]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5460,15 +5746,12 @@ A&amp;#43;B for Input-Output Practice (V)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1092]A+B for Input-Output Practice (IV)</title><link>https://boiltask.com/oj/hdu/1092/</link><pubDate>Sun, 20 Dec 2015 11:01:48 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1092/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (IV)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1092 target="_blank">[hdu-1092]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166534252746223 target="_blank">[3166534252746223]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5511,15 +5794,12 @@ A&amp;#43;B for Input-Output Practice (IV)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1091]A+B for Input-Output Practice (III)</title><link>https://boiltask.com/oj/hdu/1091/</link><pubDate>Sun, 20 Dec 2015 10:58:59 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1091/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (III)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1091 target="_blank">[hdu-1091]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166540035964832 target="_blank">[3166540035964832]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5550,15 +5830,12 @@ A&amp;#43;B for Input-Output Practice (III)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1089]A+B for Input-Output Practice (I)</title><link>https://boiltask.com/oj/hdu/1089/</link><pubDate>Sun, 20 Dec 2015 10:53:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1089/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (I)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1089 target="_blank">[hdu-1089]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166507714701510 target="_blank">[3166507714701510]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5595,15 +5872,12 @@ A&amp;#43;B for Input-Output Practice (I)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1090]A+B for Input-Output Practice (II)</title><link>https://boiltask.com/oj/hdu/1090/</link><pubDate>Sun, 20 Dec 2015 10:53:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1090/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 A&amp;#43;B for Input-Output Practice (II)
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1090 target="_blank">[hdu-1090]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166510856241429 target="_blank">[3166510856241429]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5641,15 +5915,12 @@ A&amp;#43;B for Input-Output Practice (II)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2017]字符串统计</title><link>https://boiltask.com/oj/hdu/2017/</link><pubDate>Sun, 20 Dec 2015 10:45:36 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2017/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 字符串统计
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2017 target="_blank">[hdu-2017]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3121320297081359 target="_blank">[3121320297081359]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5709,15 +5980,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2006]求奇数的乘积</title><link>https://boiltask.com/oj/hdu/2006/</link><pubDate>Sat, 19 Dec 2015 17:43:33 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2006/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 求奇数的乘积
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2006 target="_blank">[hdu-2006]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215576369027036 target="_blank">[3215576369027036]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5766,15 +6034,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1001]Sum Problem</title><link>https://boiltask.com/oj/hdu/1001/</link><pubDate>Sat, 19 Dec 2015 17:40:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1001/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Sum Problem
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1001 target="_blank">[hdu-1001]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166558818424174 target="_blank">[3166558818424174]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5809,15 +6074,12 @@ Sum Problem
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2004]成绩转换</title><link>https://boiltask.com/oj/hdu/2004/</link><pubDate>Sat, 19 Dec 2015 17:36:57 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2004/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 成绩转换
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2004 target="_blank">[hdu-2004]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3215578877592386 target="_blank">[3215578877592386]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5893,15 +6155,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2001]计算两点间的距离</title><link>https://boiltask.com/oj/hdu/2001/</link><pubDate>Sat, 19 Dec 2015 17:32:10 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2001/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 计算两点间的距离
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2001 target="_blank">[hdu-2001]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151975822656813 target="_blank">[3151975822656813]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5941,15 +6200,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2002]计算球体积</title><link>https://boiltask.com/oj/hdu/2002/</link><pubDate>Sat, 19 Dec 2015 17:13:30 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2002/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 计算球体积
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2002 target="_blank">[hdu-2002]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151980935638174 target="_blank">[3151980935638174]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -5991,15 +6247,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2003]求绝对值</title><link>https://boiltask.com/oj/hdu/2003/</link><pubDate>Sat, 19 Dec 2015 16:56:23 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2003/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 求绝对值
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2003 target="_blank">[hdu-2003]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3152007540136327 target="_blank">[3152007540136327]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

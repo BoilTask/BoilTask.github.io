@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>北京大学OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/poj/</link><description>Recent content in 北京大学OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 08 Aug 2016 11:39:03 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/poj/index.xml" rel="self" type="application/rss+xml"/><item><title>【POJ】[2367]Genealogical tree</title><link>https://boiltask.com/oj/poj/2367/</link><pubDate>Mon, 08 Aug 2016 11:39:03 +0800</pubDate><guid>https://boiltask.com/oj/poj/2367/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Genealogical tree
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2367 target="_blank">[poj-2367]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153661691732363 target="_blank">[3153661691732363]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -124,15 +121,12 @@ Genealogical tree
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2585]Window Pains</title><link>https://boiltask.com/oj/poj/2585/</link><pubDate>Mon, 08 Aug 2016 10:04:07 +0800</pubDate><guid>https://boiltask.com/oj/poj/2585/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Window Pains
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2585 target="_blank">[poj-2585]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3219815653601074 target="_blank">[3219815653601074]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -255,15 +249,12 @@ Window Pains
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2485]Highways</title><link>https://boiltask.com/oj/poj/2485/</link><pubDate>Wed, 03 Aug 2016 11:48:35 +0800</pubDate><guid>https://boiltask.com/oj/poj/2485/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Highways
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2485 target="_blank">[poj-2485]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3154968811769274 target="_blank">[3154968811769274]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -405,15 +396,12 @@ Highways
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2631]Roads in the North</title><link>https://boiltask.com/oj/poj/2631/</link><pubDate>Wed, 03 Aug 2016 08:59:06 +0800</pubDate><guid>https://boiltask.com/oj/poj/2631/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Roads in the North
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2631 target="_blank">[poj-2631]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153072516177712 target="_blank">[3153072516177712]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -507,15 +495,12 @@ Roads in the North
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1321]棋盘问题</title><link>https://boiltask.com/oj/poj/1321/</link><pubDate>Wed, 03 Aug 2016 08:52:17 +0800</pubDate><guid>https://boiltask.com/oj/poj/1321/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 棋盘问题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1321 target="_blank">[poj-1321]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166263531764621 target="_blank">[3166263531764621]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -618,15 +603,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1985]Cow Marathon</title><link>https://boiltask.com/oj/poj/1985/</link><pubDate>Tue, 02 Aug 2016 17:51:52 +0800</pubDate><guid>https://boiltask.com/oj/poj/1985/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Cow Marathon
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1985 target="_blank">[poj-1985]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3149017016675183 target="_blank">[3149017016675183]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -740,15 +722,12 @@ Cow Marathon
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1061]青蛙的约会</title><link>https://boiltask.com/oj/poj/1061/</link><pubDate>Mon, 01 Aug 2016 23:48:55 +0800</pubDate><guid>https://boiltask.com/oj/poj/1061/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 青蛙的约会
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1061 target="_blank">[poj-1061]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158014367453028 target="_blank">[3158014367453028]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -775,8 +754,7 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p>
 定理二：若gcd(a,b) = 1，则方程ax ≡ c (mod b)在[0, b-1]上有唯一解。&lt;br>
 定理三：若gcd(a,b) = d，则方程ax ≡ c (mod b)在[0, b/d - 1]上有唯一解。&lt;br>
 证明：上述同余方程等价于ax + by = c，如果有解，两边同除以d，就有a/d * x + b/d * y = c/d，即a/d * x ≡ c/d (modb/d)，显然gcd(a/d, b/d) = 1，所以由定理二知道x在[0, b/d - 1]上有唯一解。所以ax + by = c的x在[0, b/d - 1]上有唯一解，即ax ≡ c (mod b)在[0, b/d - 1]上有唯一解。&lt;br>
-如果得到ax ≡ c (mod b)的某一特解X，那么令r = b/gcd(a, b)，可知x在[0, r-1]上有唯一解，所以用x = (x% r + r) % r就可以求出最小非负整数解x了！（X % r可能是负值，此时保持在[-(r-1), 0]内，正值则保持在[0, r-1]内。加上r就保持在[1, 2r - 1]内，所以再模一下r就在[0, r-1]内了）。&lt;/p>
-&lt;/blockquote>
+如果得到ax ≡ c (mod b)的某一特解X，那么令r = b/gcd(a, b)，可知x在[0, r-1]上有唯一解，所以用x = (x% r + r) % r就可以求出最小非负整数解x了！（X % r可能是负值，此时保持在[-(r-1), 0]内，正值则保持在[0, r-1]内。加上r就保持在[1, 2r - 1]内，所以再模一下r就在[0, r-1]内了）。&lt;/p>&lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -837,15 +815,12 @@ $$\begin{cases} a=m-n \\ b=-L\\ x=t \\ y=k \end{cases}$$&lt;p>
 &lt;/div>
 &lt;/div>&lt;p>推荐文章:&lt;a class="link" href="http://blog.csdn.net/w446506278/article/details/52029604" target="_blank" rel="noopener"
 >POJ 1061 青蛙的约会 - w446506278的博客&lt;/a>&lt;/p></description></item><item><title>【POJ】[3279]Fliptile</title><link>https://boiltask.com/oj/poj/3279/</link><pubDate>Fri, 29 Jul 2016 20:44:55 +0800</pubDate><guid>https://boiltask.com/oj/poj/3279/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Fliptile
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-3279 target="_blank">[poj-3279]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151914198599590 target="_blank">[3151914198599590]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1101,15 +1076,12 @@ Fliptile
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[3620]Avoid The Lakes</title><link>https://boiltask.com/oj/poj/3620/</link><pubDate>Fri, 29 Jul 2016 11:34:29 +0800</pubDate><guid>https://boiltask.com/oj/poj/3620/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Avoid The Lakes
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-3620 target="_blank">[poj-3620]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3154647556732040 target="_blank">[3154647556732040]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1206,15 +1178,12 @@ Avoid The Lakes
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2251]Dungeon Master</title><link>https://boiltask.com/oj/poj/2251/</link><pubDate>Fri, 29 Jul 2016 10:34:16 +0800</pubDate><guid>https://boiltask.com/oj/poj/2251/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Dungeon Master
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2251 target="_blank">[poj-2251]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166266673304024 target="_blank">[3166266673304024]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1352,15 +1321,12 @@ DFS必然超时 (不是很喜欢POJ这样子-.-)&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1573]Robot Motion</title><link>https://boiltask.com/oj/poj/1573/</link><pubDate>Thu, 28 Jul 2016 15:29:22 +0800</pubDate><guid>https://boiltask.com/oj/poj/1573/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Robot Motion
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1573 target="_blank">[poj-1573]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3165549753565164 target="_blank">[3165549753565164]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1474,15 +1440,12 @@ Robot Motion
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[3176]Cow Bowling</title><link>https://boiltask.com/oj/poj/3176/</link><pubDate>Thu, 28 Jul 2016 09:56:15 +0800</pubDate><guid>https://boiltask.com/oj/poj/3176/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Cow Bowling
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-3176 target="_blank">[poj-3176]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3160173745385710 target="_blank">[3160173745385710]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1549,15 +1512,12 @@ $dp[i][j]+=max(dp[i+1][j],dp[i+1][j+1])$
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2503]Babelfish</title><link>https://boiltask.com/oj/poj/2503/</link><pubDate>Thu, 28 Jul 2016 09:15:14 +0800</pubDate><guid>https://boiltask.com/oj/poj/2503/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Babelfish
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2503 target="_blank">[poj-2503]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3166072465556507 target="_blank">[3166072465556507]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1629,15 +1589,12 @@ Babelfish
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1064]Cable master</title><link>https://boiltask.com/oj/poj/1064/</link><pubDate>Tue, 26 Jul 2016 17:36:00 +0800</pubDate><guid>https://boiltask.com/oj/poj/1064/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Cable master
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1064 target="_blank">[poj-1064]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151927532608387 target="_blank">[3151927532608387]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1750,15 +1707,12 @@ Cable master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1995]Raising Modulo Numbers</title><link>https://boiltask.com/oj/poj/1995/</link><pubDate>Mon, 25 Jul 2016 17:51:51 +0800</pubDate><guid>https://boiltask.com/oj/poj/1995/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Raising Modulo Numbers
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1995 target="_blank">[poj-1995]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158656970847213 target="_blank">[3158656970847213]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1770,8 +1724,7 @@ Raising Modulo Numbers
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;p>题目大意:&lt;/p>
 &lt;blockquote>
-&lt;p>有的人爱看片儿、有的人爱在地窖里造原子弹、有的人爱用Windows，我爱计算(A&lt;sub>1&lt;/sub>&lt;sup>B&lt;sub>1&lt;/sub>&lt;/sup>+A&lt;sub>2&lt;/sub>&lt;sup>B&lt;sub>2&lt;/sub>&lt;/sup>+ … +A&lt;sub>H&lt;/sub>&lt;sup>B&lt;sub>H&lt;/sub>&lt;/sup>)mod M&lt;/p>
-&lt;/blockquote>
+&lt;p>有的人爱看片儿、有的人爱在地窖里造原子弹、有的人爱用Windows，我爱计算(A&lt;sub>1&lt;/sub>&lt;sup>B&lt;sub>1&lt;/sub>&lt;/sup>+A&lt;sub>2&lt;/sub>&lt;sup>B&lt;sub>2&lt;/sub>&lt;/sup>+ … +A&lt;sub>H&lt;/sub>&lt;sup>B&lt;sub>H&lt;/sub>&lt;/sup>)mod M&lt;/p>&lt;/blockquote>
 &lt;p>由题目所说 直接用快速幂计算就好&lt;br>
 根据同余定理进行取模计算&lt;/p>
 &lt;p>PS：世界上怎么会有这种人-.-&lt;/p>
@@ -1840,15 +1793,12 @@ Raising Modulo Numbers
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1328]Radar Installation</title><link>https://boiltask.com/oj/poj/1328/</link><pubDate>Sat, 23 Jul 2016 15:41:26 +0800</pubDate><guid>https://boiltask.com/oj/poj/1328/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Radar Installation
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1328 target="_blank">[poj-1328]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3158147394585098 target="_blank">[3158147394585098]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1976,15 +1926,12 @@ Radar Installation
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1006]Biorhythms</title><link>https://boiltask.com/oj/poj/1006/</link><pubDate>Fri, 22 Jul 2016 09:23:52 +0800</pubDate><guid>https://boiltask.com/oj/poj/1006/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Biorhythms
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1006 target="_blank">[poj-1006]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151027316338878 target="_blank">[3151027316338878]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

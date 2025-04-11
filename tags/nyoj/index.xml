@@ -1,18 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>南阳理工OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/nyoj/</link><description>Recent content in 南阳理工OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Jul 2016 09:25:36 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/nyoj/index.xml" rel="self" type="application/rss+xml"/><item><title>【NYOJ】[144]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj/144/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/144/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>南阳理工OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/nyoj/</link><description>Recent content in 南阳理工OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Jul 2016 09:25:36 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/nyoj/index.xml" rel="self" type="application/rss+xml"/><item><title>【NYOJ】[1143]小珂的苦恼</title><link>https://boiltask.com/oj/nyoj/1143/</link><pubDate>Fri, 22 Jul 2016 09:25:36 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1143/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+小珂的苦恼
 &lt;/div>
-&lt;div style="text-align: right;">
-&lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://xcpc.nyist.edu.cn/problem/1143/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
-&lt;/div>
-&lt;/div>
-&lt;div>
-&lt;iframe src='https://xcpc.nyist.edu.cn/problem/1143/description' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：1000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：256 MB&lt;/span>
 &lt;/div>
 &lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>小珂是一名初中生，她现在很苦恼，因为老师布置了一个让她苦恼的作业，你能不能帮助她呢？题目信息如下。&lt;/p>
+&lt;blockquote>
+&lt;p>已知二元一次方程 a&lt;em>x+b&lt;/em>y=n， 判断这个二元一次方程有没有整数解，x,y为未知数，其中a，b，n都为整数且不等于零，同时满足0&amp;lt;a,b,n&amp;lt;2^16-1。&lt;/p>&lt;/blockquote>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一行有一个整数0&amp;lt;n&amp;lt;=1000000表示有 n组测试数据,接下来的每一行有三个整数分别是a,b,n&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>存在整数x和y使得方程有解，输出“Yes”，否则输出“No”&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 4 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3 9 7
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Yes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">No
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;h3 id="题目来源">&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor">&lt;/a>题目来源
+&lt;/h3>&lt;p>&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1143/description" target="_blank" rel="noopener"
+>小珂的苦恼 - NYOJ&lt;/a>&lt;/p>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;p>二元一次方程有整数解的条件为&lt;br>
 $n\%gcd(a,b)==0$&lt;/p>
@@ -50,15 +81,1239 @@ $n\%gcd(a,b)==0$&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>【NYOJ】[100]1的个数</title><link>https://boiltask.com/oj/nyoj/100/</link><pubDate>Fri, 29 Jan 2016 00:16:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/100/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
-&lt;/div>
-&lt;div style="text-align: right;">
+&lt;/div></description></item><item><title>【NYOJ】[1769]对决</title><link>https://boiltask.com/oj/nyoj/1769/</link><pubDate>Tue, 19 Jul 2016 16:26:22 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1769/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://xcpc.nyist.edu.cn/problem/1100/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1769/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/8f04acecbed24a6da8994b0bb0c47c84.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>需要注意问的是存不存在&lt;br>
+而不是能不能在k场内完成&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">judge&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">k&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">judge&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;YES&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;NO&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1799]无主之地1</title><link>https://boiltask.com/oj/nyoj/1799/</link><pubDate>Tue, 19 Jul 2016 15:59:51 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1799/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1799/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/d5116a7cd8b940be84c6d0a15e2843c0.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>题目说不要求排序&lt;br>
+其实就是按照区域首次出现的先后输出&lt;br>
+所以可以另开一个数组进行记录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">120&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">120&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">memset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="k">sizeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">memset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="k">sizeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">),&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[v1-2]括号配对问题</title><link>https://boiltask.com/oj/nyoj/v1-2/</link><pubDate>Mon, 18 Jul 2016 20:21:16 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/v1-2/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+括号配对问题
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：3000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>现在，有一行括号序列，请你检查这行括号是否配对。&lt;/p>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一行输入一个数N（0&amp;lt;N&amp;lt;=100），表示有N组测试数据。后面的N行输入多组输入数据，每组输入数据都是一个字符串S（S的长度小于10000，且S不是空串），测试数据组数少于5组。数据保证S中只含有&amp;quot;&lt;code>[&lt;/code>&amp;quot;，&amp;quot;&lt;code>]&lt;/code>&amp;quot;，&amp;quot;&lt;code>(&lt;/code>&amp;quot;，&amp;quot;&lt;code>)&lt;/code>&amp;quot; 四种字符&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>每组输入数据的输出占一行，如果该字符串中所含的括号是配对的，则输出Yes,如果不配对则输出&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[(])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">(])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">([[]()])
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">No
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">No
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Yes
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="题目来源">&lt;a href="#%e9%a2%98%e7%9b%ae%e6%9d%a5%e6%ba%90" class="header-anchor">&lt;/a>题目来源
+&lt;/h3>&lt;p>&lt;a class="link" href="https://xcpc.nyist.edu.cn/problem/1002/description" target="_blank" rel="noopener"
+>括号配对问题 - NYOJ&lt;/a>&lt;/p>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>用栈来检测是否对应&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stack&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">10200&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">stack&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">char&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;(&amp;#39;&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;)&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;[&amp;#39;&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;]&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">l&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">bool&lt;/span> &lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">true&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">empty&lt;/span>&lt;span class="p">())&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;[&amp;#39;&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="sc">&amp;#39;(&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">push&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">empty&lt;/span>&lt;span class="p">()&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">judge&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">top&lt;/span>&lt;span class="p">(),&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">q&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">pop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;Yes&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;No&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1254]C小加 之 随机数</title><link>https://boiltask.com/oj/nyoj/1254/</link><pubDate>Sun, 21 Feb 2016 04:05:15 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1254/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1254/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/3607449de2eb4135980931d1295577d4.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>去重后进行排序&lt;/p>
+&lt;p>写的时候用了sort&lt;br>
+然后排序后去重&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;algorithm&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">120&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">120&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">cnt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="n">cnt&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1008]一种排序</title><link>https://boiltask.com/oj/nyoj/1008/</link><pubDate>Tue, 02 Feb 2016 03:08:40 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1008/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1008/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/f0615bdcd89649ca801caa7da55e606e.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>使用了结构体&lt;br>
+并用sort进行了排序&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;algorithm&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">struct&lt;/span> &lt;span class="nc">sh&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">bool&lt;/span> &lt;span class="nf">vs&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sh&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">sh&lt;/span> &lt;span class="n">B&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">A&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">B&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sort&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">vs&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">tn&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">tl&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">tb&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tn&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">tl&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">||&lt;/span>&lt;span class="n">tb&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d %d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tn&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tl&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">tb&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">b&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[v1-243]字母统计</title><link>https://boiltask.com/oj/nyoj/v1-243/</link><pubDate>Sun, 31 Jan 2016 23:52:25 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/v1-243/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+字母统计
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：3000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：64 MB&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>现在给你一个由小写字母组成字符串，要你找出字符串中出现次数最多的字母，如果出现次数最多字母有多个那
+么输出最小的那个。&lt;/p>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一行输入一个正整数T（0&amp;lt;T&amp;lt;25）
+随后T行输入一个字符串s,S长度小于1010。&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>每组数据输出占一行，输出出现次数最多的字符；&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">abcd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bbaa
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jsdhfjkshdfjksahdfjkhsajkf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">j
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>今天大脑不在状态&lt;br>
+就随便水水好了……&lt;/p>
+&lt;p>用一个数组来记录字母数&lt;br>
+然后来寻找次数最多的那一个下标&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">26&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">memset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="k">sizeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">maxi&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">26&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">maxi&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">maxi&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">maxi&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="sc">&amp;#39;a&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标程的思路一样~&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="n">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1011&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">getchar&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">26&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">gets&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">97&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">max&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">26&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">max&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="n">max&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">],&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">q&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">97&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1198]无线网络覆盖</title><link>https://boiltask.com/oj/nyoj/1198/</link><pubDate>Sun, 31 Jan 2016 02:18:16 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1198/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">无线网络覆盖&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1198/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/5acf6606a1754a15b40cc5323e019778.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>乍一看有点难&lt;br>
+但仔细想一想&lt;br>
+题目还是挺简单的&lt;br>
+一些限制条件在那呢&lt;/p>
+&lt;p>规定路由器只能在中间&lt;br>
+所以要求直径需大于宽&lt;/p>
+&lt;p>同时 R&amp;gt;=1 D&amp;gt;=1 L&amp;gt;=1 保证了 只要直径大于宽 那么就一定有结果&lt;/p>
+&lt;p>所用路由器个数取决与于边缘的长度&lt;br>
+既等于图中左下角到下方两圆交点的那一段长度&lt;/p>
+$$ l = \sqrt{(2R)^2 - D^2}$$&lt;p>再使用 ceil() 来向上取整数&lt;br>
+所以代码如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;math.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">L&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lf %lf %lf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">L&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;impossible&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.lf&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">L&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标程可以说和我一样了~&lt;br>
+嗯……&lt;br>
+或许应该说我和标程一样~&lt;br>
+哈哈哈 无所谓啦&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;math.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">double&lt;/span> &lt;span class="n">L&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%lf%lf%lf&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">L&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">R&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">D&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%.0lf&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">ceil&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">L&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">)));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;impossible&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1197]数数</title><link>https://boiltask.com/oj/nyoj/1197/</link><pubDate>Sun, 31 Jan 2016 01:42:59 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1197/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">数数&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1197/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/00b940f265614dcabe7b3216dbde26d2.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>题目不难&lt;br>
+自认为巧妙的一点是用字符串储存了对应关系&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;string.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">word&lt;/span>&lt;span class="p">[]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;OOTTFFSSEN&amp;#34;&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">15&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">strlen&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%c&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">word&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="sc">&amp;#39;0&amp;#39;&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标程还是使用数字来储存的输入数据&lt;br>
+然后&lt;code>puts(&amp;quot;&amp;quot;);&lt;/code>用来输出换行&lt;br>
+(……虽然现在不知道为什么能这样)&lt;br>
+思路还是一样的&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;cstdio&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">char&lt;/span> &lt;span class="n">str&lt;/span>&lt;span class="p">[]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;OOTTFFSSENT&amp;#34;&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">show&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">putchar&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">str&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">show&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="o">/&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">show&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">puts&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[v1-169]素数</title><link>https://boiltask.com/oj/nyoj/v1-169/</link><pubDate>Sun, 31 Jan 2016 01:30:12 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/v1-169/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+素数
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：3000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：64 MB&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>走进世博园某信息通信馆，参观者将获得前所未有的尖端互动体验，一场充满创想和喜悦的信息通信互动体验秀将以全新形式呈现，从观众踏入展馆的第一步起，就将与手持终端密不可分，人类未来梦想的惊喜从参观者的掌上展开。&lt;/p>
+&lt;p>在等候区的梦想花园中，参观者便开始了他们奇妙的体验之旅，等待中的游客可利用手机等终端参与互动小游戏，与梦想剧场内的虚拟人物Kr.Kong进行猜数比赛。当屏幕出现一个整数X时，若你能比Kr.Kong更快的发出最接近它的素数答案，你将会获得一个意想不到的礼物。&lt;/p>
+&lt;p>例如：当屏幕出现22时，你的回答应是23；当屏幕出现8时，你的回答应是7；若X本身是素数，则回答X；若最接近X的素数有两个时，则回答大于它的素数。&lt;/p>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一行：N要竞猜的整数个数
+接下来有N行，每行有一个正整数X
+1&amp;lt;=N&amp;lt;=5 1&amp;lt;=X&amp;lt;=1000&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>输出有N行，每行是对应X的最接近它的素数&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">22
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">23
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">19
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>和素数距离问题基本类似&lt;br>
+那个好像还比这个稍微难一些&lt;/p>
+&lt;p>不过鉴于是省赛的一道题目&lt;br>
+所以还是再来写一遍吧&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">!&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">1020&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">+=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">t1&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">sum1&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sum1&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t1&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">t2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">sum2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">])&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">sum2&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">t2&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sum1&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">sum2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">t2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>标程竟然无耻的把1000以内的素数都直接打出来了……&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;iostream&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;algorithm&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="k">using&lt;/span> &lt;span class="k">namespace&lt;/span> &lt;span class="n">std&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">prime&lt;/span>&lt;span class="p">[]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">7&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">13&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">17&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">19&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">23&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">29&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">31&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">37&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">41&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">43&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">47&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">53&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">59&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">61&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">67&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">71&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">73&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">79&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">83&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">89&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">97&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">101&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">103&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">107&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">109&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">113&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">127&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">131&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">137&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">139&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">149&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">151&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">157&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">163&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">167&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">173&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">179&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">181&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">191&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">193&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">197&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">199&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">211&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">223&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">227&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">229&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">233&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">239&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">241&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">251&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">257&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">263&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">269&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">271&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">277&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">281&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">283&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">293&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">307&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">311&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">313&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">317&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">331&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">337&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">347&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">349&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">353&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">359&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">367&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">373&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">379&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">383&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">389&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">397&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">401&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">409&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">419&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">421&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">431&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">433&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">439&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">443&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">449&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">457&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">461&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">463&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">467&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">479&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">487&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">491&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">499&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">503&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">509&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">521&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">523&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">541&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">547&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">557&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">563&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">569&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">571&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">577&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">587&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">593&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">599&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">601&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">607&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">613&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">617&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">619&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">631&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">641&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">643&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">647&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">653&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">659&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">661&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">673&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">677&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">683&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">691&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">701&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">709&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">719&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">727&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">733&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">739&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">743&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">751&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">757&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">761&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">769&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">773&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">787&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">797&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">809&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">811&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">821&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">823&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">827&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">829&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">839&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">853&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">857&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">859&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">863&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">877&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">881&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">883&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">887&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">907&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">911&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">919&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">929&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">937&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">941&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">947&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">953&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">967&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">971&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">977&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">983&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">991&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">997&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">1009&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cin&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cin&lt;/span>&lt;span class="o">&amp;gt;&amp;gt;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">continue&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">l&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">lower_bound&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">prime&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">prime&lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="mi">169&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="o">-*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">))&lt;/span> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;*&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span> &lt;span class="n">cout&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;*&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">l&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">&amp;lt;&amp;lt;&lt;/span>&lt;span class="n">endl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[v1-463]九九乘法表</title><link>https://boiltask.com/oj/nyoj/v1-463/</link><pubDate>Sun, 31 Jan 2016 00:05:05 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/v1-463/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+九九乘法表
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>时间限制：1000 ms&lt;/span>&lt;span style="margin-left: 20px;">内存限制：64 MB&lt;/span>
+&lt;/div>
+&lt;/div>
+&lt;h3 id="描述">&lt;a href="#%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>描述
+&lt;/h3>&lt;p>小时候学过的九九乘法表也许将会扎根于我们一生的记忆，现在让我们重温那些温暖的记忆，请编程输出九九乘法表&lt;/p>
+&lt;p>现在要求你输出它的格式与平常的不同啊！是那种反过来的三角形啦，具体如下图：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*9=9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=16 2*9=18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=24 3*9=27
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4*4=16 4*5=20 4*6=24 4*7=28 4*8=32 4*9=36
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5*5=25 5*6=30 5*7=35 5*8=40 5*9=45
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">6*6=36 6*7=42 6*8=48 6*9=54
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">7*7=49 7*8=56 7*9=63
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">8*8=64 8*9=72
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">9*9=81
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>每两个式子之前用一个空格隔开。。。&lt;/p>
+&lt;h3 id="输入">&lt;a href="#%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>输入
+&lt;/h3>&lt;p>第一有一个整数N，表示有N组数据（N&amp;lt;10）
+接下来由N行，每行只有一个整数M（1&amp;lt;=M&amp;lt;=9);&lt;/p>
+&lt;h3 id="输出">&lt;a href="#%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>输出
+&lt;/h3>&lt;p>对应每个整数M，根据要求输出乘法表的前N行，具体格式参见输入输出样例和上图.&lt;br>
+每两组测试数据结果之间有一个空行隔开，具体如输出样例。&lt;/p>
+&lt;h3 id="样例输入">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>样例输入
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="样例输出">&lt;a href="#%e6%a0%b7%e4%be%8b%e8%be%93%e5%87%ba" class="header-anchor">&lt;/a>样例输出
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*9=9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=16 2*9=18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*9=9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*9=9
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=16 2*9=18
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=24 3*9=27
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4*4=16 4*5=20 4*6=24 4*7=28 4*8=32 4*9=36
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5*5=25 5*6=30 5*7=35 5*8=40 5*9=45
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>一眼扫过 感觉有趣 就先做了这一题&lt;br>
+先放AC代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d*%d=%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34; &amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其实主要是我突然想起来这种无赖的写法:&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">char&lt;/span> &lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">9&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="mi">80&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">=&lt;/span> &lt;span class="p">{&lt;/span>&lt;span class="s">&amp;#34;1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*9=9&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=16 2*9=18&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=24 3*9=27&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;4*4=16 4*5=20 4*6=24 4*7=28 4*8=32 4*9=36&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;5*5=25 5*6=30 5*7=35 5*8=40 5*9=45&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;6*6=36 6*7=42 6*8=48 6*9=54&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;7*7=49 7*8=56 7*9=63&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;8*8=64 8*9=72&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="s">&amp;#34;9*9=81&amp;#34;&lt;/span>&lt;span class="p">};&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">T&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">T&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">flag&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">flag&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">s&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>哈哈哈~打表法&lt;br>
+虽然并没有什么卵用&lt;/p>
+&lt;p>不过看标程来说&lt;br>
+我对空行的处理还是过于严格了&lt;br>
+不过……&lt;br>
+在下自认为是好习惯~哈哈哈&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">t&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">t&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">){&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">j&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="mi">10&lt;/span>&lt;span class="p">;&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d*%d=%d &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">j&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1409]死神来了</title><link>https://boiltask.com/oj/nyoj/1409/</link><pubDate>Sat, 30 Jan 2016 23:42:43 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1409/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1409/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;/div>
+&lt;/div>
+&lt;div>
+&lt;iframe src='https://xcpc.nyist.edu.cn/api/public/file/873ce2c55d1341b98957881199b1d941.pdf' width="100%" height='500px' frameborder="0">&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>百度NYOJ时发现的一题&lt;br>
+感觉不难就写了&lt;/p>
+&lt;p>然后据说是数论里的一题&lt;br>
+运用了抽屉原理&lt;/p>
+&lt;p>关于这个以后再详细谈&lt;/p>
+&lt;p>就这一题而言&lt;br>
+其实很容易想明白 只要m&amp;gt;n的一半就能YES&lt;br>
+因为是要求找 是都一定存在一组就好&lt;/p>
+&lt;p>至于n的奇偶性 则可以举例&lt;br>
+如:&lt;br>
+n=101 m=50&lt;br>
+NO&lt;br>
+n=100 m=50&lt;br>
+NO&lt;br>
+n=99 m=50&lt;br>
+NO&lt;br>
+n=98 m=50&lt;br>
+YES&lt;/p>
+&lt;p>所以可以推断出&lt;br>
+AC代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d %d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">EOF&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%s&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">*&lt;/span>&lt;span class="n">m&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="o">?&lt;/span>&lt;span class="s">&amp;#34;YES&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span>&lt;span class="s">&amp;#34;NO&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【NYOJ】[1100]1的个数</title><link>https://boiltask.com/oj/nyoj/1100/</link><pubDate>Fri, 29 Jan 2016 00:16:35 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1100/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;span>&lt;/span>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1100/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
 &lt;/div>
 &lt;/div>
 &lt;div>
@@ -181,15 +1436,13 @@ $n\%gcd(a,b)==0$&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.nyist.net/JudgeOnline/problem.php?pid=100" target="_blank" rel="noopener"
->【NYOJ】[100]1的个数&lt;/a>&lt;/p></description></item><item><title>【NYOJ】[47]过河问题</title><link>https://boiltask.com/oj/nyoj/47/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/47/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
-&lt;/div>
-&lt;div style="text-align: right;">
+>【NYOJ】[100]1的个数&lt;/a>&lt;/p></description></item><item><title>【NYOJ】[1047]过河问题</title><link>https://boiltask.com/oj/nyoj/1047/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1047/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://xcpc.nyist.edu.cn/problem/1047/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1047/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
 &lt;/div>
 &lt;/div>
 &lt;div>
@@ -279,15 +1532,13 @@ a[0]与a[1]过&lt;br>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>【NYOJ】[56]阶乘因式分解（一）</title><link>https://boiltask.com/oj/nyoj/56/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/56/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="display: flex; justify-content: space-between;">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
-&lt;p>&lt;/p>
-&lt;/div>
-&lt;div style="text-align: right;">
+&lt;/div></description></item><item><title>【NYOJ】[1056]阶乘因式分解（一）</title><link>https://boiltask.com/oj/nyoj/1056/</link><pubDate>Tue, 26 Jan 2016 22:01:30 +0800</pubDate><guid>https://boiltask.com/oj/nyoj/1056/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>&lt;/span>
-&lt;a style="margin-left: 10px;" href='https://xcpc.nyist.edu.cn/problem/1056/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
+&lt;a class="dida-open-link-icon" href='https://xcpc.nyist.edu.cn/problem/1056/description' target="_blank">&lt;svg t="1743933649558" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1626" xmlns:xlink="http://www.w3.org/1999/xlink" height="1em" weight="1em">&lt;path d="M548 196c15.456 0 28 12.544 28 28v20a8 8 0 0 1-8 8H256A4 4 0 0 0 252 256v512c0 2.208 1.792 4 4 4h512a4 4 0 0 0 4-4V424a8 8 0 0 1 8-8H800c15.456 0 28 12.544 28 28V768c0 33.152-26.88 60-60 60H256A60 60 0 0 1 196 768V256c0-33.152 26.88-60 60-60h292z m314.112-56.288c15.456 0 28 12.544 27.968 28v107.712a56 56 0 0 1-51.424 55.808l-4.608 0.192 0.032-99.296-371.968 364.544a28 28 0 0 1-39.616-0.416l-13.984-14.272a8 8 0 0 1 0.128-11.328L791.264 195.68l-92.896 0.064c0-30.912 25.088-56 56-56h107.744z" fill="#292929" p-id="1627">&lt;/path>&lt;/svg>&lt;/a>
 &lt;/div>
 &lt;/div>
 &lt;div>
@@ -368,8 +1619,7 @@ m!=1&lt;em>2&lt;/em>3*……(m-2)(m-1)&lt;em>m&lt;br>
 =n^k&lt;/em>(1&lt;/em>2*……*k)&lt;em>other&lt;br>
 =n^k&lt;/em>k!*other&lt;br>
 从这个表达式中可以提取出k个n，然后按照相同的方法循环下去可以求出k!中因子n的个数。&lt;br>
-每次求出n的个数的和就是m!中因子n的总个数。&lt;/p>
-&lt;/blockquote>
+每次求出n的个数的和就是m!中因子n的总个数。&lt;/p>&lt;/blockquote>
 &lt;p>这一种思路的实现是通过把n!的阶乘分解来实现的&lt;/p>
 &lt;p>例如 求 n=8 m=2 的结果&lt;/p>
 &lt;p>则&lt;br>

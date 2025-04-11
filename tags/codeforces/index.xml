@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>CodeForces on BoilTask's Blog</title><link>https://boiltask.com/tags/codeforces/</link><description>Recent content in CodeForces on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 26 Jul 2016 20:21:52 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/codeforces/index.xml" rel="self" type="application/rss+xml"/><item><title>【CodeForces】[274A]k-Multiple Free Set</title><link>https://boiltask.com/oj/codeforces/274A/</link><pubDate>Tue, 26 Jul 2016 20:21:52 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/274A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 k-Multiple Free Set
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-274A target="_blank">[codeforces-274A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3228826969142761 target="_blank">[3228826969142761]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -104,15 +101,12 @@ k-Multiple Free Set
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[371C]Hamburgers</title><link>https://boiltask.com/oj/codeforces/371C/</link><pubDate>Tue, 26 Jul 2016 20:17:11 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/371C/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Hamburgers
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-371C target="_blank">[codeforces-371C]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3198482657266742 target="_blank">[3198482657266742]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -232,15 +226,12 @@ Hamburgers
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[348A]Mafia</title><link>https://boiltask.com/oj/codeforces/348A/</link><pubDate>Tue, 26 Jul 2016 20:13:42 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/348A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Mafia
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-348A target="_blank">[codeforces-348A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3173291955655301 target="_blank">[3173291955655301]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -251,12 +242,10 @@ Mafia
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>N个人参与一个游戏，每一局都必须有一个人出来当监督，剩下N-1个人当玩家，第i个人要求至少自己要当ai次玩家，请问最少要进行多少次游戏。&lt;/p>
-&lt;/blockquote>
+&lt;p>N个人参与一个游戏，每一局都必须有一个人出来当监督，剩下N-1个人当玩家，第i个人要求至少自己要当ai次玩家，请问最少要进行多少次游戏。&lt;/p>&lt;/blockquote>
 &lt;p>根据x次游戏能否打成进行二分查找&lt;/p>
 &lt;blockquote>
-&lt;p>对于答案x的判定，先将每个人的要求加起来得到sum，然后判断x*n-sum，如果这个值大于等于x，说明可行，因为这个值就代表这些人可以提供最多的当监督的次数，只要监督的次数能够达到x次，就说明能够进行x次。&lt;/p>
-&lt;/blockquote>
+&lt;p>对于答案x的判定，先将每个人的要求加起来得到sum，然后判断x*n-sum，如果这个值大于等于x，说明可行，因为这个值就代表这些人可以提供最多的当监督的次数，只要监督的次数能够达到x次，就说明能够进行x次。&lt;/p>&lt;/blockquote>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
@@ -322,15 +311,12 @@ Mafia
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[372A]Counting Kangaroos is Fun</title><link>https://boiltask.com/oj/codeforces/372A/</link><pubDate>Tue, 26 Jul 2016 20:09:14 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/372A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Counting Kangaroos is Fun
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-372A target="_blank">[codeforces-372A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3197712200777545 target="_blank">[3197712200777545]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -341,8 +327,7 @@ Counting Kangaroos is Fun
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>给n个袋鼠以及对应大小，把较小的放到较大的口袋里，判断最后头在外面的松鼠最少多少只&lt;/p>
-&lt;/blockquote>
+&lt;p>给n个袋鼠以及对应大小，把较小的放到较大的口袋里，判断最后头在外面的松鼠最少多少只&lt;/p>&lt;/blockquote>
 &lt;p>能放在里面的条件是 a[i]*2&amp;lt;=a[j] &lt;br>
 先把数组按照从小到大排序&lt;br>
 若想让外面有x个&lt;br>
@@ -420,15 +405,12 @@ Counting Kangaroos is Fun
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[670D2]Magic Powder - 2</title><link>https://boiltask.com/oj/codeforces/670D2/</link><pubDate>Tue, 26 Jul 2016 20:02:07 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/670D2/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Magic Powder - 2
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-670D2 target="_blank">[codeforces-670D2]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3268192100013952 target="_blank">[3268192100013952]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -439,8 +421,7 @@ Magic Powder - 2
 &lt;/div>
 &lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
 &lt;/h2>&lt;blockquote>
-&lt;p>题目大意：制作一个蛋糕需要n种材料，然后你有k克魔法粉，每克魔法粉可以代替任意一克的材料,ai代表制作一个蛋糕需要第i种材料多少克，bi代表你拥有第i个材料多少克，问做可以做多少个蛋糕。&lt;/p>
-&lt;/blockquote>
+&lt;p>题目大意：制作一个蛋糕需要n种材料，然后你有k克魔法粉，每克魔法粉可以代替任意一克的材料,ai代表制作一个蛋糕需要第i种材料多少克，bi代表你拥有第i个材料多少克，问做可以做多少个蛋糕。&lt;/p>&lt;/blockquote>
 &lt;p>判断能不能做mid个蛋糕&lt;br>
 如果不能则减少mid的范围&lt;br>
 以此二分查找&lt;/p>
@@ -519,15 +500,12 @@ Magic Powder - 2
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[448D]Multiplication Table</title><link>https://boiltask.com/oj/codeforces/448D/</link><pubDate>Tue, 26 Jul 2016 19:57:53 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/448D/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Multiplication Table
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-448D target="_blank">[codeforces-448D]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3192446154889684 target="_blank">[3192446154889684]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -600,15 +578,12 @@ Multiplication Table
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[698A]Vacations</title><link>https://boiltask.com/oj/codeforces/698A/</link><pubDate>Sat, 23 Jul 2016 17:44:41 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/698A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Vacations
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-698A target="_blank">[codeforces-698A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3258458633318374 target="_blank">[3258458633318374]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -676,15 +651,12 @@ Vacations
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[629B]Far Relative’s Problem</title><link>https://boiltask.com/oj/codeforces/629B/</link><pubDate>Sat, 23 Jul 2016 16:45:46 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/629B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Far Relative’s Problem
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-629B target="_blank">[codeforces-629B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3242008783685289 target="_blank">[3242008783685289]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -776,15 +748,12 @@ Far Relative’s Problem
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[580B]Kefa and Company</title><link>https://boiltask.com/oj/codeforces/580B/</link><pubDate>Thu, 21 Jul 2016 16:11:57 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/580B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Kefa and Company
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-580B target="_blank">[codeforces-580B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3296914340964919 target="_blank">[3296914340964919]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -869,15 +838,12 @@ Kefa and Company
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[599B]Spongebob and Joke</title><link>https://boiltask.com/oj/codeforces/599B/</link><pubDate>Thu, 21 Jul 2016 16:07:40 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/599B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Spongebob and Joke
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-599B target="_blank">[codeforces-599B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3253507590175335 target="_blank">[3253507590175335]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -979,15 +945,12 @@ Spongebob and Joke
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[612B]HDD is Outdated Technology</title><link>https://boiltask.com/oj/codeforces/612B/</link><pubDate>Thu, 21 Jul 2016 16:04:25 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/612B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 HDD is Outdated Technology
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-612B target="_blank">[codeforces-612B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3237958140419432 target="_blank">[3237958140419432]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1048,15 +1011,12 @@ HDD is Outdated Technology
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[597B]Restaurant</title><link>https://boiltask.com/oj/codeforces/597B/</link><pubDate>Thu, 21 Jul 2016 15:59:18 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/597B/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Restaurant
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-597B target="_blank">[codeforces-597B]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3237958140419432 target="_blank">[3237958140419432]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1135,15 +1095,12 @@ Restaurant
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[615A]Bulbs</title><link>https://boiltask.com/oj/codeforces/615A/</link><pubDate>Thu, 21 Jul 2016 15:45:05 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/615A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Bulbs
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-615A target="_blank">[codeforces-615A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3240286827108617 target="_blank">[3240286827108617]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1215,15 +1172,12 @@ Bulbs
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[611A]New Year and Days</title><link>https://boiltask.com/oj/codeforces/611A/</link><pubDate>Thu, 21 Jul 2016 15:40:51 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/611A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 New Year and Days
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-611A target="_blank">[codeforces-611A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3237604900516252 target="_blank">[3237604900516252]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1272,15 +1226,12 @@ New Year and Days
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[610A]Pasha and Stick</title><link>https://boiltask.com/oj/codeforces/610A/</link><pubDate>Thu, 21 Jul 2016 15:35:41 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/610A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Pasha and Stick
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-610A target="_blank">[codeforces-610A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3238035275300974 target="_blank">[3238035275300974]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1331,15 +1282,12 @@ Pasha and Stick
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[612A]The Text Splitting</title><link>https://boiltask.com/oj/codeforces/612A/</link><pubDate>Thu, 21 Jul 2016 15:29:05 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/612A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 The Text Splitting
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-612A target="_blank">[codeforces-612A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3237954999198941 target="_blank">[3237954999198941]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1428,15 +1376,12 @@ The Text Splitting
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[604A]Uncowed Forces</title><link>https://boiltask.com/oj/codeforces/604A/</link><pubDate>Thu, 21 Jul 2016 15:24:55 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/604A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Uncowed Forces
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-604A target="_blank">[codeforces-604A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3253361538315946 target="_blank">[3253361538315946]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1501,15 +1446,12 @@ Uncowed Forces
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【CodeForces】[599A]Patrick and Shopping</title><link>https://boiltask.com/oj/codeforces/599A/</link><pubDate>Thu, 21 Jul 2016 15:22:09 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/599A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Patrick and Shopping
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/codeforces-599A target="_blank">[codeforces-599A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3272820263258311 target="_blank">[3272820263258311]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -1556,6 +1498,95 @@ Patrick and Shopping
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">min&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">];&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">min&lt;/span>&lt;span class="p">);&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>【CodeForces】[25A]IQ test</title><link>https://boiltask.com/oj/codeforces/25A/</link><pubDate>Mon, 18 Jul 2016 21:31:29 +0800</pubDate><guid>https://boiltask.com/oj/codeforces/25A/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
+IQ test
+&lt;/div>
+&lt;div class="dida-content-iframe-title-right">
+&lt;a href=https://vjudge.net/problem/codeforces-25A target="_blank">[codeforces-25A]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3110617126089256 target="_blank">[3110617126089256]&lt;/a> @vjudge
+&lt;/div>
+&lt;/div>
+&lt;div style="margin-left: -40px;">
+&lt;iframe src=https://vjudge.net/problem/description/3110617126089256 width="100%" height="500px" frameborder="0">
+&lt;/iframe>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="问题分析">&lt;a href="#%e9%97%ae%e9%a2%98%e5%88%86%e6%9e%90" class="header-anchor">&lt;/a>问题分析
+&lt;/h2>&lt;p>找出一串数中唯一的奇数或者偶数的坐标&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cpp" data-lang="cpp">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#include&amp;lt;stdio.h&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">120&lt;/span>&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">void&lt;/span> &lt;span class="nf">solve&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">cnt1&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">cnt2&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt1&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">cnt2&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cnt1&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">cnt1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">%&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="o">==&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">cnt2&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="o">&amp;amp;&amp;amp;&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="o">&amp;gt;&lt;/span>&lt;span class="n">cnt2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">printf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&lt;/span>&lt;span class="se">\n&lt;/span>&lt;span class="s">&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kt">int&lt;/span> &lt;span class="nf">main&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span>&lt;span class="o">!=&lt;/span>&lt;span class="n">EOF&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">for&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">&amp;lt;=&lt;/span>&lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">i&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">scanf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;%d&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="o">&amp;amp;&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">i&lt;/span>&lt;span class="p">]);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">solve&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>

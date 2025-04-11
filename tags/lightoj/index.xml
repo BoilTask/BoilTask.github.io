@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>LightOJ on BoilTask's Blog</title><link>https://boiltask.com/tags/lightoj/</link><description>Recent content in LightOJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Aug 2016 09:23:40 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/lightoj/index.xml" rel="self" type="application/rss+xml"/><item><title>【LightOJ】[1198]Karate Competition</title><link>https://boiltask.com/oj/lightoj/1198/</link><pubDate>Tue, 02 Aug 2016 09:23:40 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1198/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Karate Competition
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1198 target="_blank">[lightoj-1198]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3128193304390688 target="_blank">[3128193304390688]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -102,15 +99,12 @@ Karate Competition
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【LightOJ】[1137]Expanding Rods</title><link>https://boiltask.com/oj/lightoj/1137/</link><pubDate>Tue, 26 Jul 2016 18:19:52 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1137/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Expanding Rods
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1137 target="_blank">[lightoj-1137]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3128549381013603 target="_blank">[3128549381013603]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -190,15 +184,12 @@ $r=\dfrac{h^2+\dfrac{l^2}{4}}{2h}$&lt;br>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【LightOJ】[1062]Crossed Ladders</title><link>https://boiltask.com/oj/lightoj/1062/</link><pubDate>Tue, 26 Jul 2016 18:04:01 +0800</pubDate><guid>https://boiltask.com/oj/lightoj/1062/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Crossed Ladders
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/lightoj-1062 target="_blank">[lightoj-1062]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3125582930135739 target="_blank">[3125582930135739]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>郑轻OJ on BoilTask's Blog</title><link>https://boiltask.com/tags/zzuli/</link><description>Recent content in 郑轻OJ on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 02 Sep 2016 03:16:15 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/zzuli/index.xml" rel="self" type="application/rss+xml"/><item><title>【郑轻】[1837]LT说我不服</title><link>https://boiltask.com/oj/zzuli/1837/</link><pubDate>Fri, 02 Sep 2016 03:16:15 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1837/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 LT说我不服
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -105,15 +102,12 @@ LT说我不服
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1837" target="_blank" rel="noopener"
 >【郑轻】[1837]LT说我不服&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！</title><link>https://boiltask.com/oj/zzuli/1841/</link><pubDate>Fri, 02 Sep 2016 01:12:58 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1841/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 so easy！麻麻再也不用担心我的数学了！
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -205,15 +199,12 @@ so easy！麻麻再也不用担心我的数学了！
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1841" target="_blank" rel="noopener"
 >【郑轻】[1841]so easy！麻麻再也不用担心我的数学了！&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1893]985的数学难题</title><link>https://boiltask.com/oj/zzuli/1893/</link><pubDate>Thu, 04 Aug 2016 00:05:26 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1893/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的数学难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：2 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -392,15 +383,12 @@ cnt[0]~cnt[3]分别为&lt;br>
 &lt;/div>
 &lt;/div>&lt;p>题目地址: &lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1893" target="_blank" rel="noopener"
 >【郑轻】[1893]985的数学难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1900]985的“树”难题</title><link>https://boiltask.com/oj/zzuli/1900/</link><pubDate>Wed, 03 Aug 2016 20:55:51 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1900/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的“树”难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -650,15 +638,12 @@ DFS用来递归查找下一节点&lt;br>
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1900" target="_blank" rel="noopener"
 >【郑轻】[1900]985的“树”难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1902]985的因子对难题</title><link>https://boiltask.com/oj/zzuli/1902/</link><pubDate>Wed, 03 Aug 2016 20:55:51 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1902/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的因子对难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：2 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -793,15 +778,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1902" target="_blank" rel="noopener"
 >【郑轻】[1902]985的因子对难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1898]985的数字难题</title><link>https://boiltask.com/oj/zzuli/1898/</link><pubDate>Wed, 03 Aug 2016 20:32:30 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1898/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的数字难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -901,15 +883,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1898" target="_blank" rel="noopener"
 >【郑轻】[1898]985的数字难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1897]985的红绿灯难题</title><link>https://boiltask.com/oj/zzuli/1897/</link><pubDate>Wed, 03 Aug 2016 20:16:01 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1897/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的红绿灯难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1005,15 +984,12 @@ x%(r+y+g)后推算即可&lt;br>
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1897" target="_blank" rel="noopener"
 >【郑轻】[1897]985的红绿灯难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1895]985的0-1串难题</title><link>https://boiltask.com/oj/zzuli/1895/</link><pubDate>Wed, 03 Aug 2016 20:09:30 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1895/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的0-1串难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1141,15 +1117,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址：&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1895" target="_blank" rel="noopener"
 >[1895]985的0-1串难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1899]985的最大和难题</title><link>https://boiltask.com/oj/zzuli/1899/</link><pubDate>Wed, 03 Aug 2016 20:00:54 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1899/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的最大和难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1240,38 +1213,38 @@ justify-content: space-between;
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">负数&lt;/th>
-&lt;th style="text-align: left">正数&lt;/th>
+&lt;th>负数&lt;/th>
+&lt;th>正数&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">2n-1&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>2n-1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">n&lt;/td>
-&lt;td style="text-align: left">n-1&lt;/td>
+&lt;td>n&lt;/td>
+&lt;td>n-1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">2n-2&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>2n-2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">n-1&lt;/td>
-&lt;td style="text-align: left">n&lt;/td>
+&lt;td>n-1&lt;/td>
+&lt;td>n&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">3&lt;/td>
-&lt;td style="text-align: left">2n-4&lt;/td>
+&lt;td>3&lt;/td>
+&lt;td>2n-4&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">n-3&lt;/td>
-&lt;td style="text-align: left">n+2&lt;/td>
+&lt;td>n-3&lt;/td>
+&lt;td>n+2&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">……&lt;/td>
-&lt;td style="text-align: left">……&lt;/td>
+&lt;td>……&lt;/td>
+&lt;td>……&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1348,15 +1321,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1899" target="_blank" rel="noopener"
 >【郑轻】[1899]985的最大和难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1896]985的买饮料难题</title><link>https://boiltask.com/oj/zzuli/1896/</link><pubDate>Wed, 03 Aug 2016 19:47:40 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1896/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的买饮料难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1468,15 +1438,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址: &lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1896" target="_blank" rel="noopener"
 >【郑轻】[1896]985的买饮料难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1894]985的方格难题</title><link>https://boiltask.com/oj/zzuli/1894/</link><pubDate>Wed, 03 Aug 2016 19:42:27 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1894/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 985的方格难题
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1588,15 +1555,12 @@ dp[i][j] = -1 表明该位置未被访问，直接暴力转移就可以啦。&lt
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1894" target="_blank" rel="noopener"
 >【郑轻】[1894]985的方格难题&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1125]上三角矩阵的判断</title><link>https://boiltask.com/oj/zzuli/1125/</link><pubDate>Wed, 20 Jul 2016 23:29:42 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1125/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 上三角矩阵的判断
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1685,15 +1649,12 @@ IsUpperTriMatrix(int a, int n);&lt;/p>
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1125" target="_blank" rel="noopener"
 >【郑轻】[1125]上三角矩阵的判断&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1127]矩阵乘积</title><link>https://boiltask.com/oj/zzuli/1127/</link><pubDate>Wed, 20 Jul 2016 23:02:37 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1127/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 矩阵乘积
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>
@@ -1796,15 +1757,12 @@ justify-content: space-between;
 &lt;/div>
 &lt;/div>&lt;p>题目地址:&lt;a class="link" href="http://acm.zzuli.edu.cn/zzuliacm/problem.php?id=1125" target="_blank" rel="noopener"
 >【郑轻】[1125]上三角矩阵的判断&lt;/a>&lt;/p></description></item><item><title>【郑轻】[1799]wrz的压岁钱</title><link>https://boiltask.com/oj/zzuli/1799/</link><pubDate>Sat, 26 Dec 2015 20:41:50 +0800</pubDate><guid>https://boiltask.com/oj/zzuli/1799/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div class="dida-oj-problem" style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card dida-content-card-article">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 wrz的压岁钱
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;span>时间限制：1 Sec&lt;/span>&lt;span style="margin-left: 20px;">内存限制：128 MB&lt;/span>
 &lt;/div>
 &lt;/div>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数据结构 on BoilTask's Blog</title><link>https://boiltask.com/tags/data-structure/</link><description>Recent content in 数据结构 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 02 Aug 2016 16:51:35 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/data-structure/index.xml" rel="self" type="application/rss+xml"/><item><title>邻接表的创建与使用</title><link>https://boiltask.com/knowledge/adjacency-list/</link><pubDate>Tue, 02 Aug 2016 16:51:35 +0800</pubDate><guid>https://boiltask.com/knowledge/adjacency-list/</guid><description>&lt;blockquote>
-&lt;p>邻接表是图论中常用的一种数据结构。&lt;/p>
-&lt;/blockquote>
+&lt;p>邻接表是图论中常用的一种数据结构。&lt;/p>&lt;/blockquote>
 &lt;p>&lt;a class="link" href="http://www.cnblogs.com/tonghao/p/4708661.html" target="_blank" rel="noopener"
 >如何构建邻接表【模板】【邻接表与邻接矩阵的选择】&lt;/a>&lt;/p>
 &lt;p>邻接表与邻接矩阵有相似的作用：用于储存一个图中所有的节点，但是邻接矩阵比较浪费内存，当数据较小时，邻接矩阵还可以计算&lt;/p>
@@ -9,145 +8,144 @@
 &lt;blockquote>
 &lt;p>1 10
 3 5
-8 9&lt;/p>
-&lt;/blockquote>
+8 9&lt;/p>&lt;/blockquote>
 &lt;p>我们将所给的点标记为1，其余为0
 （1）邻接矩阵（适合小数据点稠密型图）&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">/&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
-&lt;th style="text-align: left">&lt;/th>
+&lt;th>/&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
+&lt;th>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">1&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
-&lt;td style="text-align: left">0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -162,7 +160,7 @@
 &lt;p>&lt;img src="https://boiltask.com/knowledge/adjacency-list/image-1.png"
 width="570"
 height="431"
-srcset="https://boiltask.com/knowledge/adjacency-list/image-1_hu16179051444541284563.png 480w, https://boiltask.com/knowledge/adjacency-list/image-1_hu828923988968045278.png 1024w"
+srcset="https://boiltask.com/knowledge/adjacency-list/image-1_hu_96cf309adb96b40a.png 480w, https://boiltask.com/knowledge/adjacency-list/image-1_hu_5cc952ff654747b5.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="132"

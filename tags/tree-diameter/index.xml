@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>树的直径 on BoilTask's Blog</title><link>https://boiltask.com/tags/tree-diameter/</link><description>Recent content in 树的直径 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Aug 2016 10:30:02 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/tree-diameter/index.xml" rel="self" type="application/rss+xml"/><item><title>【杭电】[2196]Computer</title><link>https://boiltask.com/oj/hdu/2196/</link><pubDate>Wed, 03 Aug 2016 10:30:02 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2196/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Computer
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2196 target="_blank">[hdu-2196]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153444422576675 target="_blank">[3153444422576675]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -130,15 +127,12 @@ Computer
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[1383]Labyrinth</title><link>https://boiltask.com/oj/hdu/1383/</link><pubDate>Wed, 03 Aug 2016 09:39:09 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1383/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Labyrinth
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1383 target="_blank">[hdu-1383]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3225955975161902 target="_blank">[3225955975161902]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -250,15 +244,12 @@ Labyrinth
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2631]Roads in the North</title><link>https://boiltask.com/oj/poj/2631/</link><pubDate>Wed, 03 Aug 2016 08:59:06 +0800</pubDate><guid>https://boiltask.com/oj/poj/2631/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Roads in the North
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2631 target="_blank">[poj-2631]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153072516177712 target="_blank">[3153072516177712]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

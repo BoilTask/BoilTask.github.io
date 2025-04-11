@@ -18,13 +18,11 @@
 &lt;h3 id="forint-i0--in--i的局限性">&lt;a href="#forint-i0--in--i%e7%9a%84%e5%b1%80%e9%99%90%e6%80%a7" class="header-anchor">&lt;/a>&lt;code>for(int i=0 ; i&amp;lt;n ; i++)&lt;/code>的局限性
 &lt;/h3>&lt;p>我之前提到过&lt;/p>
 &lt;blockquote>
-&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
-&lt;/blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>&lt;/blockquote>
 &lt;p>加上自己的习惯 所以这些日子都是
 尽量对于循环变量随用随定义&lt;/p>
 &lt;blockquote>
-&lt;p>PS:易语言 记次循环首(次数,n) 也是这种直接写出来的模式 (不过其实也需要先定义 不过个人养成了让它报错然后再直接定义的坏习惯)&lt;/p>
-&lt;/blockquote>
+&lt;p>PS:易语言 记次循环首(次数,n) 也是这种直接写出来的模式 (不过其实也需要先定义 不过个人养成了让它报错然后再直接定义的坏习惯)&lt;/p>&lt;/blockquote>
 &lt;p>但是有时出现了一些问题
 比如印象最深的关于涉及到 循环中 break;
 例如当时有种素数判定方法:&lt;/p>
@@ -148,7 +146,7 @@ while(){&lt;br>
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-1.png"
 width="627"
 height="516"
-srcset="https://boiltask.com/notes/competitive-programming/8/image-1_hu5583421460999654136.png 480w, https://boiltask.com/notes/competitive-programming/8/image-1_hu2459155094525549294.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-1_hu_a534196d9b8c5a7.png 480w, https://boiltask.com/notes/competitive-programming/8/image-1_hu_69d43885a6fa7262.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="121"
@@ -165,7 +163,7 @@ if(){
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/8/image-2.png"
 width="624"
 height="497"
-srcset="https://boiltask.com/notes/competitive-programming/8/image-2_hu14261713697285682017.png 480w, https://boiltask.com/notes/competitive-programming/8/image-2_hu13848669271119213262.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/8/image-2_hu_bd002c86fa0d601d.png 480w, https://boiltask.com/notes/competitive-programming/8/image-2_hu_f4950aedfb8225d9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="125"
@@ -174,8 +172,7 @@ data-flex-basis="301px"
 &lt;p>结果证明同样符合猜测&lt;/p>
 &lt;p>所以可以暂且得出结论&lt;/p>
 &lt;blockquote>
-&lt;p>{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>
-&lt;/blockquote>
+&lt;p>{ } 花括号中定义的变量只能适用于花括号里面&lt;/p>&lt;/blockquote>
 &lt;h2 id="算法是一种思维">&lt;a href="#%e7%ae%97%e6%b3%95%e6%98%af%e4%b8%80%e7%a7%8d%e6%80%9d%e7%bb%b4" class="header-anchor">&lt;/a>算法是一种思维
 &lt;/h2>&lt;p>还有关于算法的一些思考……不过关于这一点
 想想
@@ -211,8 +208,7 @@ data-flex-basis="301px"
 &lt;blockquote>
 &lt;p>abc (0)&lt;br>
 def (1)&lt;br>
-ghi (2)&lt;/p>
-&lt;/blockquote>
+ghi (2)&lt;/p>&lt;/blockquote>
 &lt;p>map[0]便代表”abc”&lt;br>
 map[1]便代表”def”&lt;br>
 map[2]便代表”ghi”&lt;/p>
@@ -243,7 +239,7 @@ map[2][0]==’g’&lt;/p>
 &lt;img src="https://boiltask.com/notes/competitive-programming/7/image.png"
 width="773"
 height="376"
-srcset="https://boiltask.com/notes/competitive-programming/7/image_hu2624538124768907791.png 480w, https://boiltask.com/notes/competitive-programming/7/image_hu9107071157545445793.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/7/image_hu_366c13b53be4a8b8.png 480w, https://boiltask.com/notes/competitive-programming/7/image_hu_1faf5d5f1bb5a97e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="205"
@@ -336,8 +332,7 @@ C语言的魅力还远不止于此啊-.-&lt;br>
 按照之前&lt;/p>
 &lt;blockquote>
 &lt;p>执行到for循环时&lt;br>
-先执行一次 起始语句&lt;/p>
-&lt;/blockquote>
+先执行一次 起始语句&lt;/p>&lt;/blockquote>
 &lt;p>理解 这个i应该和这种用法:&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -378,7 +373,7 @@ C语言的魅力还远不止于此啊-.-&lt;br>
 &lt;img src="https://boiltask.com/notes/competitive-programming/6/image-1.png"
 width="735"
 height="45"
-srcset="https://boiltask.com/notes/competitive-programming/6/image-1_hu13301496654541681653.png 480w, https://boiltask.com/notes/competitive-programming/6/image-1_hu11318844412561639153.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-1_hu_3a23bf5f5d2e4047.png 480w, https://boiltask.com/notes/competitive-programming/6/image-1_hu_78baaf5a0fef4601.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1633"
@@ -391,7 +386,7 @@ i变得无法调用了&lt;/p>
 &lt;img src="https://boiltask.com/notes/competitive-programming/6/image-2.png"
 width="419"
 height="34"
-srcset="https://boiltask.com/notes/competitive-programming/6/image-2_hu4902711534851247253.png 480w, https://boiltask.com/notes/competitive-programming/6/image-2_hu7313503508144667420.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/6/image-2_hu_6c8b6e0062447f15.png 480w, https://boiltask.com/notes/competitive-programming/6/image-2_hu_1db5e3aaaeaf7c8e.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1232"
@@ -416,8 +411,7 @@ data-flex-basis="2957px"
 可以轻松地在运用for时再定义这些变量 而不影响其它部分&lt;/p>
 &lt;p>在P19有这样一句话&lt;/p>
 &lt;blockquote>
-&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>
-&lt;/blockquote>
+&lt;p>提示2-4 建议尽量缩短变量的定义范围。例如，在for循环的初始化部分定义循环变量。&lt;/p>&lt;/blockquote>
 &lt;p>我也是深感很有道理啊~&lt;br>
 话说这就是共鸣哎~毕竟每个人的习惯还是不一样的 能和大神的观点一致 还是有点小激动的呢&lt;/p>
 &lt;p>《算法竞赛入门经典(第2版)》P19&lt;/p>
@@ -540,7 +534,7 @@ P36 题目2 下面的程序运行结果是什么？“!=”运算符表示“不
 &lt;img src="https://boiltask.com/notes/competitive-programming/4/image-1.png"
 width="669"
 height="466"
-srcset="https://boiltask.com/notes/competitive-programming/4/image-1_hu3901320363627406610.png 480w, https://boiltask.com/notes/competitive-programming/4/image-1_hu15574619765055601728.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-1_hu_754206b6114b8548.png 480w, https://boiltask.com/notes/competitive-programming/4/image-1_hu_cff1e097ac796bc8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="143"
@@ -572,7 +566,7 @@ data-flex-basis="344px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/4/image-2.png"
 width="93"
 height="344"
-srcset="https://boiltask.com/notes/competitive-programming/4/image-2_hu14019000827893656719.png 480w, https://boiltask.com/notes/competitive-programming/4/image-2_hu1341913070082705356.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/4/image-2_hu_69ab63cd63842035.png 480w, https://boiltask.com/notes/competitive-programming/4/image-2_hu_eb4596e756d23b03.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="27"
@@ -590,8 +584,7 @@ data-flex-basis="64px"
 &lt;p>1 6 4&lt;/p>
 &lt;p>0 0 0&lt;/p>
 &lt;p>样例输出：&lt;/p>
-&lt;p>Case 1 : 0.1667&lt;/p>
-&lt;/blockquote>
+&lt;p>Case 1 : 0.1667&lt;/p>&lt;/blockquote>
 &lt;p>又是一种没见过的题&lt;br>
 而且顺便使用一下 HTML版的博文编辑器~&lt;/p>
 &lt;p>当小数的位数定的时候可以写成&lt;/p>
@@ -679,7 +672,7 @@ cd 文件目录&lt;br>
 &lt;img src="https://boiltask.com/notes/competitive-programming/2/image-1.png"
 width="384"
 height="27"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-1_hu7739818440146114759.png 480w, https://boiltask.com/notes/competitive-programming/2/image-1_hu4967084743364995227.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-1_hu_a4cf9ebffb2231d4.png 480w, https://boiltask.com/notes/competitive-programming/2/image-1_hu_a4bf54ff6e8e0fc1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="1422"
@@ -690,7 +683,7 @@ data-flex-basis="3413px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/2/image-2.png"
 width="383"
 height="419"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-2_hu17712528383597893674.png 480w, https://boiltask.com/notes/competitive-programming/2/image-2_hu13641665505146461992.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-2_hu_574993fa2ed22ea4.png 480w, https://boiltask.com/notes/competitive-programming/2/image-2_hu_8cdb9400d243457a.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="91"
@@ -702,7 +695,7 @@ data-flex-basis="219px"
 &lt;p>&lt;img src="https://boiltask.com/notes/competitive-programming/2/image-3.png"
 width="4208"
 height="885"
-srcset="https://boiltask.com/notes/competitive-programming/2/image-3_hu6584193200986189437.png 480w, https://boiltask.com/notes/competitive-programming/2/image-3_hu11124835707580225885.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/2/image-3_hu_587c27bb9ed0a803.png 480w, https://boiltask.com/notes/competitive-programming/2/image-3_hu_5cba210d1087ece5.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="475"
@@ -720,7 +713,7 @@ data-flex-basis="1141px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-1.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-1_hu10459790078482635273.png 480w, https://boiltask.com/notes/competitive-programming/1/image-1_hu14258923634040140884.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-1_hu_53c108ea1df6f8b4.png 480w, https://boiltask.com/notes/competitive-programming/1/image-1_hu_db47aeb0a05d4bbc.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -729,7 +722,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-2.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-2_hu16185752309880172002.png 480w, https://boiltask.com/notes/competitive-programming/1/image-2_hu3381249312977169061.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-2_hu_191fb8eda34debb9.png 480w, https://boiltask.com/notes/competitive-programming/1/image-2_hu_cc6e453d76f2f96c.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -738,7 +731,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-3.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-3_hu7016452403049956724.png 480w, https://boiltask.com/notes/competitive-programming/1/image-3_hu14997523785418192058.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-3_hu_37a60f144d5abece.png 480w, https://boiltask.com/notes/competitive-programming/1/image-3_hu_8f904879115b9f2d.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"
@@ -747,7 +740,7 @@ data-flex-basis="329px"
 &lt;img src="https://boiltask.com/notes/competitive-programming/1/image-4.png"
 width="677"
 height="493"
-srcset="https://boiltask.com/notes/competitive-programming/1/image-4_hu3285848752103058701.png 480w, https://boiltask.com/notes/competitive-programming/1/image-4_hu2853459352141282228.png 1024w"
+srcset="https://boiltask.com/notes/competitive-programming/1/image-4_hu_23bd3b9c2a1ccb8d.png 480w, https://boiltask.com/notes/competitive-programming/1/image-4_hu_835aa833697d21c3.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="137"

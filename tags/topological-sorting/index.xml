@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>拓扑排序 on BoilTask's Blog</title><link>https://boiltask.com/tags/topological-sorting/</link><description>Recent content in 拓扑排序 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 08 Aug 2016 11:39:03 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/topological-sorting/index.xml" rel="self" type="application/rss+xml"/><item><title>【POJ】[2367]Genealogical tree</title><link>https://boiltask.com/oj/poj/2367/</link><pubDate>Mon, 08 Aug 2016 11:39:03 +0800</pubDate><guid>https://boiltask.com/oj/poj/2367/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Genealogical tree
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2367 target="_blank">[poj-2367]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3153661691732363 target="_blank">[3153661691732363]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -124,15 +121,12 @@ Genealogical tree
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2585]Window Pains</title><link>https://boiltask.com/oj/poj/2585/</link><pubDate>Mon, 08 Aug 2016 10:04:07 +0800</pubDate><guid>https://boiltask.com/oj/poj/2585/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Window Pains
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2585 target="_blank">[poj-2585]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3219815653601074 target="_blank">[3219815653601074]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -255,15 +249,12 @@ Window Pains
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1811]Rank of Tetris</title><link>https://boiltask.com/oj/hdu/1811/</link><pubDate>Sat, 06 Aug 2016 16:36:05 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1811/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Rank of Tetris
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1811 target="_blank">[hdu-1811]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3106675065054036 target="_blank">[3106675065054036]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -463,15 +454,12 @@ Rank of Tetris
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[4857]逃生</title><link>https://boiltask.com/oj/hdu/4857/</link><pubDate>Sat, 06 Aug 2016 11:27:26 +0800</pubDate><guid>https://boiltask.com/oj/hdu/4857/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 逃生
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-4857 target="_blank">[hdu-4857]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3192632012314298 target="_blank">[3192632012314298]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -625,15 +613,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[2647]Reward</title><link>https://boiltask.com/oj/hdu/2647/</link><pubDate>Sat, 06 Aug 2016 09:58:38 +0800</pubDate><guid>https://boiltask.com/oj/hdu/2647/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Reward
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-2647 target="_blank">[hdu-2647]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3099759746423843 target="_blank">[3099759746423843]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -767,15 +752,12 @@ Reward
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【杭电】[1285]确定比赛名次</title><link>https://boiltask.com/oj/hdu/1285/</link><pubDate>Fri, 05 Aug 2016 18:08:15 +0800</pubDate><guid>https://boiltask.com/oj/hdu/1285/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 确定比赛名次
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/hdu-1285 target="_blank">[hdu-1285]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3122403987687238 target="_blank">[3122403987687238]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>
@@ -890,15 +872,12 @@ justify-content: space-between;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div></description></item><item><title>【POJ】[2485]Highways</title><link>https://boiltask.com/oj/poj/2485/</link><pubDate>Wed, 03 Aug 2016 11:48:35 +0800</pubDate><guid>https://boiltask.com/oj/poj/2485/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Highways
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-2485 target="_blank">[poj-2485]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3154968811769274 target="_blank">[3154968811769274]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

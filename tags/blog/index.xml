@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on BoilTask's Blog</title><link>https://boiltask.com/tags/blog/</link><description>Recent content in 博客 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Apr 2025 03:21:08 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p>突然想开个新坑，要不&lt;code>fork&lt;/code>一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on BoilTask's Blog</title><link>https://boiltask.com/tags/blog/</link><description>Recent content in 博客 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 09 Apr 2025 12:43:51 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo文章加密的一种设想</title><link>https://boiltask.com/knowledge/hugo-encryption/</link><pubDate>Wed, 09 Apr 2025 12:43:51 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-encryption/</guid><description>&lt;p>前端在生成index时加密内容，提供一个JS根据输入的密码解密内容，根据得到的解密内容中是否包含指定信息来判断是否解密成功。&lt;/p>
+&lt;p>由于是前端加解密，需要考虑如何选择合适的加密解密算法，使得暴力破解的成本提高。&lt;/p>
+&lt;p>参考zip加密技术，当暴力破解的成本足够高的时候，可以认为内容是安全的。&lt;/p></description></item><item><title>突然想开个新坑做个主题</title><link>https://boiltask.com/record/fork-hugo-theme-stack/</link><pubDate>Sat, 05 Apr 2025 03:21:08 +0800</pubDate><guid>https://boiltask.com/record/fork-hugo-theme-stack/</guid><description>&lt;p>突然想开个新坑，要不&lt;code>fork&lt;/code>一下&lt;a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener"
 >hugo-theme-stack&lt;/a>自己魔改一下？&lt;/p>
 &lt;p>可能也就是说说……&lt;/p>
 &lt;p>不过Hugo的主题管理方案挺方便的，可能会逐步添加一些想要的功能，要是量级足够的话，开个新主题好像也不是不行……&lt;/p>
@@ -204,8 +206,7 @@
 &lt;p>但是一直没想到是什么原因，直到留意到了线上版本里&lt;code>&amp;lt;script&amp;gt;&lt;/code>标签变成了形如&lt;code>&amp;lt;script type=&amp;quot;d6a94c0af8a975daac5bee56-text/javascript&amp;quot;&amp;gt;&lt;/code>。&lt;/p>
 &lt;p>最终回想起来是&lt;code>Cloudflare&lt;/code>开启了&lt;code>Rocket Loader&lt;/code>。&lt;/p>
 &lt;blockquote>
-&lt;p>&lt;code>Rocket Loader&lt;/code>是&lt;code>Cloudflare&lt;/code>的一个功能，用于异步加载&lt;code>JavaScript&lt;/code>，以提高页面加载速度。&lt;/p>
-&lt;/blockquote>
+&lt;p>&lt;code>Rocket Loader&lt;/code>是&lt;code>Cloudflare&lt;/code>的一个功能，用于异步加载&lt;code>JavaScript&lt;/code>，以提高页面加载速度。&lt;/p>&lt;/blockquote>
 &lt;p>但是&lt;code>Rocket Loader&lt;/code>可能会导致加载顺序变化从而导致某些&lt;code>JavaScript&lt;/code>代码无法正常执行。&lt;/p>
 &lt;p>暂时关闭了&lt;code>Rocket Loader&lt;/code>，问题解决。&lt;/p>
 &lt;p>也可以通过在标签里添加&lt;code>data-cfasync=&amp;quot;false&amp;quot;&lt;/code>来禁用&lt;code>Rocket Loader&lt;/code>，不过考虑还需要修改主题，暂时不做修改了。&lt;/p></description></item><item><title>Hogo中Giscus配置</title><link>https://boiltask.com/knowledge/hugo-giscus/</link><pubDate>Fri, 08 Nov 2024 13:06:06 +0800</pubDate><guid>https://boiltask.com/knowledge/hugo-giscus/</guid><description>&lt;p>在给博客配置评论区的时候，遇见了一些问题，记录一些。&lt;/p>

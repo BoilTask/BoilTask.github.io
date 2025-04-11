@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>中国剩余定理 on BoilTask's Blog</title><link>https://boiltask.com/tags/crt/</link><description>Recent content in 中国剩余定理 on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 22 Jul 2016 09:23:52 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/crt/index.xml" rel="self" type="application/rss+xml"/><item><title>【POJ】[1006]Biorhythms</title><link>https://boiltask.com/oj/poj/1006/</link><pubDate>Fri, 22 Jul 2016 09:23:52 +0800</pubDate><guid>https://boiltask.com/oj/poj/1006/</guid><description>&lt;h2 id="问题描述">&lt;a href="#%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0" class="header-anchor">&lt;/a>问题描述
-&lt;/h2>&lt;div style="border: 1px solid #ccc; padding: 10px; border-radius: 5px; background-color: #f9f9f9; margin-bottom: 20px;">
-&lt;div style="
-display: flex;
-justify-content: space-between;
-">
-&lt;div style="text-align: left; font-size: large; font-weight: bold; margin-left: 20px;">
+&lt;/h2>&lt;div class="dida-content-card">
+&lt;div class="dida-content-iframe-title">
+&lt;div class="dida-content-iframe-title-left">
 Biorhythms
 &lt;/div>
-&lt;div style="text-align: right;">
+&lt;div class="dida-content-iframe-title-right">
 &lt;a href=https://vjudge.net/problem/poj-1006 target="_blank">[poj-1006]&lt;/a> &lt;a href=https://vjudge.net/problem/description/3151027316338878 target="_blank">[3151027316338878]&lt;/a> @vjudge
 &lt;/div>
 &lt;/div>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UnrealEngine on BoilTask's Blog</title><link>https://boiltask.com/tags/unrealengine/</link><description>Recent content in UnrealEngine on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Apr 2025 12:23:15 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/unrealengine/index.xml" rel="self" type="application/rss+xml"/><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p>之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p></description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/ue/ue-asan/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>UnrealEngine on BoilTask's Blog</title><link>https://boiltask.com/tags/unrealengine/</link><description>Recent content in UnrealEngine on BoilTask's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Apr 2025 12:23:15 +0800</lastBuildDate><atom:link href="https://boiltask.com/tags/unrealengine/index.xml" rel="self" type="application/rss+xml"/><item><title>UE插件上传Fab的一些心得</title><link>https://boiltask.com/knowledge/fab-ue-plugin-publish/</link><pubDate>Sun, 06 Apr 2025 12:23:15 +0800</pubDate><guid>https://boiltask.com/knowledge/fab-ue-plugin-publish/</guid><description>&lt;p>之前制作事件插件上传到Fab平台时遇见了一些麻烦，在这里记录一下。&lt;/p></description></item><item><title>虚幻引擎中ASan相关机制</title><link>https://boiltask.com/knowledge/ue/ue-asan/</link><pubDate>Thu, 03 Apr 2025 09:03:48 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/ue-asan/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;p>在排查一些内存问题（野指针、越界访问等）时，可以使用AddressSanitizer（ASan）工具。&lt;/p>
 &lt;p>比起修改为Stomp分配器的方式，ASan的实现以性能降低约一半的代价，也能扫描出来很多问题。&lt;/p>
 &lt;p>性能指标参考：&lt;a class="link" href="https://github.com/google/sanitizers/wiki/AddressSanitizerPerformanceNumbers" target="_blank" rel="noopener"
@@ -301,7 +301,9 @@
 >在虚幻引擎项目中使用Clang检测工具 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://github.com/google/sanitizers" target="_blank" rel="noopener"
 >google/sanitizers: AddressSanitizer, ThreadSanitizer, MemorySanitizer&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>虚幻引擎中网络角色Role相关概念</title><link>https://boiltask.com/ue/network-role/</link><pubDate>Wed, 02 Apr 2025 13:17:46 +0800</pubDate><guid>https://boiltask.com/ue/network-role/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;li>&lt;a class="link" href="https://forums.unrealengine.com/t/addresssanitizer-can-output-stacktrace-on-android-debug-buildconfiguration-but-not-development/690919" target="_blank" rel="noopener"
+>AddressSanitizer can output Stacktrace on android debug buildconfiguration but not development? - International - Epic Developer Community Forums&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>虚幻引擎中网络角色Role相关概念</title><link>https://boiltask.com/knowledge/ue/network-role/</link><pubDate>Wed, 02 Apr 2025 13:17:46 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-role/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;p>在Actor的复制过程中，需要关心两个属性，Role与RemoteRole。&lt;/p>
 &lt;p>通过这两个属性，可以明确地知道：&lt;/p>
 &lt;ul>
@@ -311,8 +313,7 @@
 &lt;/ul>
 &lt;blockquote>
 &lt;p>首先一件要确定的事，就是谁拥有特定 actor 的主控权。要确定当前运行的引擎实例是否有主控者，需要查看 Role 属性是否为 &lt;code>ROLE_Authority&lt;/code>。如果是，就表明这个运行中的 &lt;strong>虚幻引擎&lt;/strong> 实例负责掌管此 actor（决定其是否被复制）。&lt;/p>
-&lt;p>如果 Role 是 &lt;code>ROLE_Authority&lt;/code>，RemoteRole 是 &lt;code>ROLE_SimulatedProxy&lt;/code> 或 &lt;code>ROLE_AutonomousProxy&lt;/code>，就说明这个引擎实例负责将此 actor 复制到远程连接。&lt;/p>
-&lt;/blockquote>
+&lt;p>如果 Role 是 &lt;code>ROLE_Authority&lt;/code>，RemoteRole 是 &lt;code>ROLE_SimulatedProxy&lt;/code> 或 &lt;code>ROLE_AutonomousProxy&lt;/code>，就说明这个引擎实例负责将此 actor 复制到远程连接。&lt;/p>&lt;/blockquote>
 &lt;p>简单来说：&lt;/p>
 &lt;p>对于单机模式，Actor的Role与RemoteRole很显然都是ROLE_Authority。&lt;/p>
 &lt;p>对于网络模型下，Role代表本地对于Actor的角色，RemoteRole代表对端对于Actor的角色。&lt;/p>
@@ -333,8 +334,7 @@
 &lt;p>对于不同的数值观察者，它们的 Role 和 RemoteRole 值&lt;strong>可能&lt;/strong>发生对调。&lt;/p>
 &lt;blockquote>
 &lt;p>注意这个可能的描述&lt;/p>
-&lt;p>比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。&lt;/p>
-&lt;/blockquote>
+&lt;p>比如客户端Role为ROLE_AutonomousProxy，RemoteRole为ROLE_Authority的角色（自己操作的那个），他在服务器上的Role为ROLE_Authority，但是RemoteRole可能为ROLE_SimulatedProxy。&lt;/p>&lt;/blockquote>
 &lt;h2 id="角色组合">&lt;a href="#%e8%a7%92%e8%89%b2%e7%bb%84%e5%90%88" class="header-anchor">&lt;/a>角色组合
 &lt;/h2>&lt;h3 id="常见role与remoterole的组合">&lt;a href="#%e5%b8%b8%e8%a7%81role%e4%b8%8eremoterole%e7%9a%84%e7%bb%84%e5%90%88" class="header-anchor">&lt;/a>常见Role与RemoteRole的组合
 &lt;/h3>&lt;table>
@@ -371,7 +371,7 @@
 &lt;/h2>&lt;ul>
 &lt;li>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/actor-role-and-remote-role-in-unreal-engine" target="_blank" rel="noopener"
 >虚幻引擎Actor的 Role 和 RemoteRole属性 | 虚幻引擎 5.5 文档 | Epic Developer Community&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>虚幻引擎中角色移动相关机制</title><link>https://boiltask.com/ue/character-movement/</link><pubDate>Wed, 02 Apr 2025 12:54:31 +0800</pubDate><guid>https://boiltask.com/ue/character-movement/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/ul></description></item><item><title>虚幻引擎中角色移动相关机制</title><link>https://boiltask.com/knowledge/ue/character-movement/</link><pubDate>Wed, 02 Apr 2025 12:54:31 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/character-movement/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;p>本文主要用于整理虚幻引擎中移动相关的机制。&lt;/p>
 &lt;p>内容可能摘录自各个文章、论坛、文档等，仅用作记录。&lt;/p>
 &lt;h2 id="基础简介">&lt;a href="#%e5%9f%ba%e7%a1%80%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>基础简介
@@ -448,8 +448,7 @@ position error is significant enough, the server calls ClientAdjustPosition(), a
 and sets the bUpdatePosition flag to true.&lt;/p>
 &lt;p>When TickComponent() is called on the client again, if bUpdatePosition is true, the client will call
 ClientUpdatePosition() before calling PerformMovement(). ClientUpdatePosition() replays all the moves in the pending
-move list which occurred after the timestamp of the move the server was adjusting.&lt;/p>
-&lt;/blockquote>
+move list which occurred after the timestamp of the move the server was adjusting.&lt;/p>&lt;/blockquote>
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="玩家输入">&lt;a href="#%e7%8e%a9%e5%ae%b6%e8%be%93%e5%85%a5" class="header-anchor">&lt;/a>玩家输入
@@ -458,8 +457,7 @@ move list which occurred after the timestamp of the move the server was adjustin
 &lt;h3 id="主控角色移动">&lt;a href="#%e4%b8%bb%e6%8e%a7%e8%a7%92%e8%89%b2%e7%a7%bb%e5%8a%a8" class="header-anchor">&lt;/a>主控角色移动
 &lt;/h3>&lt;p>在UE的网络框架中，角色主要分为三种：ROLE_Authority、ROLE_AutonomousProxy、ROLE_SimulatedProxy。&lt;/p>
 &lt;blockquote>
-&lt;p>详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/p>
-&lt;/blockquote>
+&lt;p>详见：&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/p>&lt;/blockquote>
 &lt;p>在客户端主控角色也即Autonomous角色会接受控制，然后把移动数据发往服务器。&lt;/p>
 &lt;p>本地的每次移动都会生成FSavedMove_Character，并维护一个&lt;code>TArray&amp;lt;FSavedMovePtr&amp;gt; SavedMoves&lt;/code>的数组，保存了当前玩家本地已经做的移动，这些移动还没经过服务器检查。&lt;/p>
 &lt;p>如果服务器认可了一些移动，就可以把这些移动删掉，如果检查不通过，就可以据此执行异常处理。&lt;/p>
@@ -493,50 +491,50 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">属性&lt;/th>
-&lt;th style="text-align: left">描述&lt;/th>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">TimeStamp&lt;/td>
-&lt;td style="text-align: left">这次移动发生的时间&lt;/td>
+&lt;td>TimeStamp&lt;/td>
+&lt;td>这次移动发生的时间&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">DeltaTime&lt;/td>
-&lt;td style="text-align: left">这次移动使用的时间&lt;/td>
+&lt;td>DeltaTime&lt;/td>
+&lt;td>这次移动使用的时间&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">CustomTimeDilation&lt;/td>
-&lt;td style="text-align: left">时间膨胀系数，可以用于快进和慢放&lt;/td>
+&lt;td>CustomTimeDilation&lt;/td>
+&lt;td>时间膨胀系数，可以用于快进和慢放&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">StartPackedMovementMode&lt;/td>
-&lt;td style="text-align: left">移动发生前的MovementMode&lt;/td>
+&lt;td>StartPackedMovementMode&lt;/td>
+&lt;td>移动发生前的MovementMode&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">StartLocation&lt;/td>
-&lt;td style="text-align: left">移动发生前的位置&lt;/td>
+&lt;td>StartLocation&lt;/td>
+&lt;td>移动发生前的位置&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">StartVelocity&lt;/td>
-&lt;td style="text-align: left">移动发生前的速度&lt;/td>
+&lt;td>StartVelocity&lt;/td>
+&lt;td>移动发生前的速度&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">EndPackedMovementMode&lt;/td>
-&lt;td style="text-align: left">移动发生后的MovementMode&lt;/td>
+&lt;td>EndPackedMovementMode&lt;/td>
+&lt;td>移动发生后的MovementMode&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">SavedLocation&lt;/td>
-&lt;td style="text-align: left">移动发生后的位置&lt;/td>
+&lt;td>SavedLocation&lt;/td>
+&lt;td>移动发生后的位置&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">SavedVelocity&lt;/td>
-&lt;td style="text-align: left">移动发生后的速度&lt;/td>
+&lt;td>SavedVelocity&lt;/td>
+&lt;td>移动发生后的速度&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Acceleration&lt;/td>
-&lt;td style="text-align: left">移动所用加速度&lt;/td>
+&lt;td>Acceleration&lt;/td>
+&lt;td>移动所用加速度&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -558,8 +556,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;h3 id="servermoveold">&lt;a href="#servermoveold" class="header-anchor">&lt;/a>ServerMoveOld
 &lt;/h3>&lt;p>ServerMoveOld主要作为一种冗余措施，防止服务器新收到一个移动数据时，因为网络丢包而落后太多，导致移动判断不通过，进而纠正客户端位置。ServerMoveOld可以让服务器使用传递的加速度，粗略的从旧位置快速移动到新位置，不校验移动结果。&lt;/p>
 &lt;blockquote>
-&lt;p>TODO：安全性如何保证？&lt;/p>
-&lt;/blockquote>
+&lt;p>TODO：安全性如何保证？&lt;/p>&lt;/blockquote>
 &lt;h2 id="todo">&lt;a href="#todo" class="header-anchor">&lt;/a>TODO
 &lt;/h2>&lt;ul>
 &lt;li>
@@ -579,7 +576,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 >「Grow by UE」图解角色移动组件 - 知乎&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://zhuanlan.zhihu.com/p/20098342802" target="_blank" rel="noopener"
 >UE移动同步原理分析（一）：Pawn的移动属性复制 - 知乎&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>UnrealEngine虚幻引擎编译选项</title><link>https://boiltask.com/ue/build-configuration/</link><pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate><guid>https://boiltask.com/ue/build-configuration/</guid><description>&lt;h2 id="配置参数">&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor">&lt;/a>配置参数
+&lt;/ul></description></item><item><title>UnrealEngine虚幻引擎编译选项</title><link>https://boiltask.com/knowledge/ue/build-configuration/</link><pubDate>Wed, 05 Mar 2025 12:42:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/build-configuration/</guid><description>&lt;h2 id="配置参数">&lt;a href="#%e9%85%8d%e7%bd%ae%e5%8f%82%e6%95%b0" class="header-anchor">&lt;/a>配置参数
 &lt;/h2>&lt;h3 id="window指定编译sdk">&lt;a href="#window%e6%8c%87%e5%ae%9a%e7%bc%96%e8%af%91sdk" class="header-anchor">&lt;/a>Window指定编译SDK
 &lt;/h3>&lt;p>修改&lt;code>Engine/Saved/UnrealBuildTool/BuildConfiguration.xml&lt;/code>中的配置，添加&lt;code>MSVC&lt;/code>版本号、&lt;code>SDK&lt;/code>的版本号。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
@@ -618,7 +615,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;/div>
 &lt;/div>&lt;h2 id="参考文章">&lt;a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" class="header-anchor">&lt;/a>参考文章
 &lt;/h2>&lt;p>&lt;a class="link" href="https://dev.epicgames.com/documentation/en-us/unreal-engine/build-configuration-for-unreal-engine" target="_blank" rel="noopener"
->Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a>&lt;/p></description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/ue/common-console-command/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/ue/common-console-command/</guid><description>&lt;p>在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p>
+>Build Configuration for Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community&lt;/a>&lt;/p></description></item><item><title>UE4常用控制台指令</title><link>https://boiltask.com/knowledge/ue/common-console-command/</link><pubDate>Wed, 26 Feb 2025 11:44:41 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/common-console-command/</guid><description>&lt;p>在编辑器中按下~键打开控制台（就是数字1左边的那个按键）&lt;/p>
 &lt;p>下面列出一些常用的控制台指令：&lt;/p>
 &lt;p>stat fps 显示帧率&lt;/p>
 &lt;p>stat unit 显示包括drawcall，游戏逻辑线程，渲染线程，面数等信息（面数信息需要在设置中调整ES3.1才会显示）&lt;/p>
@@ -626,7 +623,7 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;p>r.showcollision 显示碰撞体&lt;/p>
 &lt;p>t.maxfps 60 设置最大帧率&lt;/p>
 &lt;p>更多控制台指令可以在下面这个网站查询： &lt;a class="link" href="https://digilander.libero.it/ZioYuri78/" target="_blank" rel="noopener"
->https://digilander.libero.it/ZioYuri78/&lt;/a>&lt;/p></description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/ue/blueprint-merge/</guid><description>&lt;p>UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p>
+>https://digilander.libero.it/ZioYuri78/&lt;/a>&lt;/p></description></item><item><title>虚幻引擎蓝图合并工具</title><link>https://boiltask.com/knowledge/ue/blueprint-merge/</link><pubDate>Mon, 24 Feb 2025 11:57:11 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-merge/</guid><description>&lt;p>UE对于Blueprint似乎有个函数级的Merge工具，初体验不太好用还在研究。&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
 &lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
@@ -635,18 +632,17 @@ UPawnMovementComponent &amp;lt;|-- UCharacterMovementComponent
 &lt;pre tabindex="0" class="chroma">&lt;code class="language-C++" data-lang="C++">&lt;span class="line">&lt;span class="cl">&lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">MetaEngine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Engine&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Binaries&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Win64&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">UE4Editor&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">exe&lt;/span> &lt;span class="nl">D&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="err">\&lt;/span>&lt;span class="n">Meta&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">uproject&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">diff&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">theirs&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">mine&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">base&lt;/span> &lt;span class="o">%&lt;/span>&lt;span class="n">merged&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>&lt;img src="https://boiltask.com/ue/blueprint-merge/image.png"
+&lt;/div>&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-merge/image.png"
 width="1920"
 height="1040"
-srcset="https://boiltask.com/ue/blueprint-merge/image_hu1737421868806885097.png 480w, https://boiltask.com/ue/blueprint-merge/image_hu268284317994099172.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-merge/image_hu_e3113eff777536f7.png 480w, https://boiltask.com/knowledge/ue/blueprint-merge/image_hu_798e2fc5c72c06e8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="184"
 data-flex-basis="443px"
->&lt;/p></description></item><item><title>虚幻引擎中Actor复制流程</title><link>https://boiltask.com/ue/actor-replication/</link><pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate><guid>https://boiltask.com/ue/actor-replication/</guid><description>&lt;blockquote>
+>&lt;/p></description></item><item><title>虚幻引擎中Actor复制流程</title><link>https://boiltask.com/knowledge/ue/actor-replication/</link><pubDate>Mon, 02 Dec 2024 22:17:16 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/actor-replication/</guid><description>&lt;blockquote>
 &lt;p>&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/detailed-actor-replication-flow-in-unreal-engine" target="_blank" rel="noopener"
->Detailed Actor Replication Flow&lt;/a>暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p>
-&lt;/blockquote>
+>Detailed Actor Replication Flow&lt;/a>暂时没有官方翻译，尝试理解顺便翻译一下。&lt;/p>&lt;/blockquote>
 &lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;p>&lt;strong>Actor复制&lt;/strong>是一个详细的多步骤过程，其中&lt;strong>网络驱动程序&lt;/strong>（Net Driver）确定需要向哪些连接复制哪些Actor，以及按照什么顺序复制。本页面提供了Actor复制流程的概述。&lt;/p>
 &lt;p>大多数Actor的复制是在&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/API/Runtime/Engine/Engine/UNetDriver/ServerReplicateActors" target="_blank" rel="noopener"
@@ -657,34 +653,34 @@ data-flex-basis="443px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">属性&lt;/th>
-&lt;th style="text-align: left">描述&lt;/th>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::NetUpdateFrequency&lt;/code>&lt;/td>
-&lt;td style="text-align: left">决定Actor复制的频率。&lt;/td>
+&lt;td>&lt;code>AActor::NetUpdateFrequency&lt;/code>&lt;/td>
+&lt;td>决定Actor复制的频率。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::PreReplication&lt;/code>&lt;/td>
-&lt;td style="text-align: left">在任何复制操作发生之前调用。&lt;/td>
+&lt;td>&lt;code>AActor::PreReplication&lt;/code>&lt;/td>
+&lt;td>在任何复制操作发生之前调用。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::bOnlyRelevantToOwner&lt;/code>&lt;/td>
-&lt;td style="text-align: left">如果该Actor只会复制给其拥有者，则为&lt;code>True&lt;/code>。&lt;/td>
+&lt;td>&lt;code>AActor::bOnlyRelevantToOwner&lt;/code>&lt;/td>
+&lt;td>如果该Actor只会复制给其拥有者，则为&lt;code>True&lt;/code>。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::IsRelevancyOwnerFor&lt;/code>&lt;/td>
-&lt;td style="text-align: left">当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>True&lt;/code>时，决定Actor的相关性。&lt;/td>
+&lt;td>&lt;code>AActor::IsRelevancyOwnerFor&lt;/code>&lt;/td>
+&lt;td>当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>True&lt;/code>时，决定Actor的相关性。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::IsNetRelevantFor&lt;/code>&lt;/td>
-&lt;td style="text-align: left">当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>False&lt;/code>时，决定Actor的相关性。&lt;/td>
+&lt;td>&lt;code>AActor::IsNetRelevantFor&lt;/code>&lt;/td>
+&lt;td>当&lt;code>bOnlyRelevantToOwner&lt;/code>为&lt;code>False&lt;/code>时，决定Actor的相关性。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">&lt;code>AActor::NetDormancy&lt;/code>&lt;/td>
-&lt;td style="text-align: left">决定Actor是处于休眠状态还是激活状态。&lt;/td>
+&lt;td>&lt;code>AActor::NetDormancy&lt;/code>&lt;/td>
+&lt;td>决定Actor是处于休眠状态还是激活状态。&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -831,52 +827,52 @@ data-flex-basis="443px"
 &lt;p>&lt;code>/Engine/Source/Runtime/Engine/Classes/Engine/EngineTypes.h&lt;/code>&lt;br>
 关于 &lt;code>ENetRole&lt;/code> 和 &lt;code>ENetDormancy&lt;/code> 等类型的信息。&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>虚幻引擎中网络相关机制</title><link>https://boiltask.com/ue/network-start/</link><pubDate>Mon, 02 Dec 2024 13:13:25 +0800</pubDate><guid>https://boiltask.com/ue/network-start/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
+&lt;/ul></description></item><item><title>虚幻引擎中网络相关机制</title><link>https://boiltask.com/knowledge/ue/network-start/</link><pubDate>Mon, 02 Dec 2024 13:13:25 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/network-start/</guid><description>&lt;h2 id="简介">&lt;a href="#%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>简介
 &lt;/h2>&lt;p>想到哪里写到哪里吧，后续有可能再补充。&lt;/p>
 &lt;ul>
 &lt;li>&lt;a class="link" href="https://boiltask.com/ue/actor-replication/" >虚幻引擎中Actor复制流程&lt;/a>&lt;/li>
 &lt;li>&lt;a class="link" href="https://boiltask.com/ue/network-role/" >虚幻引擎中网络角色Role相关概念&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/ue/editor-python/</guid><description>&lt;h2 id="功能简介">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>功能简介
+&lt;/ul></description></item><item><title>虚幻引擎中编辑器下Python的使用</title><link>https://boiltask.com/knowledge/ue/editor-python/</link><pubDate>Mon, 02 Dec 2024 12:57:53 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/editor-python/</guid><description>&lt;h2 id="功能简介">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>功能简介
 &lt;/h2>&lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/scripting-the-unreal-editor-using-python" target="_blank" rel="noopener"
->使用Python脚本化运行虚幻编辑器&lt;/a>&lt;/p></description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介">&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>DataAsset简介
+>使用Python脚本化运行虚幻编辑器&lt;/a>&lt;/p></description></item><item><title>虚幻引擎中DataAsset的使用</title><link>https://boiltask.com/knowledge/ue/data-asset/</link><pubDate>Thu, 28 Nov 2024 13:14:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/data-asset/</guid><description>&lt;h2 id="dataasset简介">&lt;a href="#dataasset%e7%ae%80%e4%bb%8b" class="header-anchor">&lt;/a>DataAsset简介
 &lt;/h2>&lt;p>一般用于表示一个数据块，功能与DataTable类似，某种程度上可以理解成一个仅有一行的DataTable。&lt;/p>
 &lt;p>参考文档：&lt;a class="link" href="https://dev.epicgames.com/documentation/zh-cn/unreal-engine/data-assets-in-unreal-engine" target="_blank" rel="noopener"
->数据资产&lt;/a>&lt;/p></description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/ue/lyra-start-map/</guid><description>&lt;p>打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p></description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/ue/lyra-download/</guid><description>&lt;p>最近想要细研究一下&lt;code>UE5&lt;/code>的官方示例项目&lt;code>Lyra&lt;/code>，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p>
+>数据资产&lt;/a>&lt;/p></description></item><item><title>Lyra的默认场景中关卡选择器的创建</title><link>https://boiltask.com/knowledge/ue/lyra-start-map/</link><pubDate>Thu, 28 Nov 2024 13:04:08 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-start-map/</guid><description>&lt;p>打开Lyra的默认场景，运行后发现其生成了几个关卡选择器，研究一下生成原理。&lt;/p></description></item><item><title>虚幻引擎中下载Lyra官方示例项目</title><link>https://boiltask.com/knowledge/ue/lyra-download/</link><pubDate>Wed, 27 Nov 2024 12:54:43 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/lyra-download/</guid><description>&lt;p>最近想要细研究一下&lt;code>UE5&lt;/code>的官方示例项目&lt;code>Lyra&lt;/code>，因此创建了一些相关的博文来记录一下研究过程中的所想，总结一下项目所涉及到的技术点。&lt;/p>
 &lt;p>时间点开始于2024年11月，没有提到的话相关项目以此时间点的最新版本为准。&lt;/p>
 &lt;p>Lyra的项目目前可以在Fab中找到：&lt;a class="link" href="https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0" target="_blank" rel="noopener"
 >https://www.fab.com/zh-cn/listings/93faede1-4434-47c0-85f1-bf27c0820ad0&lt;/a>&lt;/p>
 &lt;p>在虚幻引擎启动器&lt;code>Epic Games Launcher&lt;/code>中，可以在库找到&lt;code>Lyra&lt;/code>项目，创建项目即可。&lt;/p>
-&lt;p>经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p></description></item><item><title>查找Module被谁引入</title><link>https://boiltask.com/ue/find-module-reference/</link><pubDate>Wed, 02 Aug 2023 12:13:26 +0800</pubDate><guid>https://boiltask.com/ue/find-module-reference/</guid><description>&lt;p>想知道一个Module被谁引入的，可以通过让其报错来查看堆栈。&lt;/p>
+&lt;p>经过测试，虽然更新日志标注了支持UE5.5，不过目前创建的仍然是UE5.1版本，后续先使用UE5.1版本测试。&lt;/p></description></item><item><title>查找Module被谁引入</title><link>https://boiltask.com/knowledge/ue/find-module-reference/</link><pubDate>Wed, 02 Aug 2023 12:13:26 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/find-module-reference/</guid><description>&lt;p>想知道一个Module被谁引入的，可以通过让其报错来查看堆栈。&lt;/p>
 &lt;p>在模块的&lt;code>Build.cs&lt;/code>中第一行加入：&lt;code>throw new Exception()&lt;/code>。&lt;/p>
-&lt;p>编译，查看报错即可。&lt;/p></description></item><item><title>引擎内置版本控制工具</title><link>https://boiltask.com/ue/source-control-tool/</link><pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate><guid>https://boiltask.com/ue/source-control-tool/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;p>编译，查看报错即可。&lt;/p></description></item><item><title>引擎内置版本控制工具</title><link>https://boiltask.com/knowledge/ue/source-control-tool/</link><pubDate>Mon, 13 Mar 2023 19:33:24 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/source-control-tool/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
 &lt;/h2>&lt;p>为了便于多人协作&lt;code>UnrealEngine&lt;/code>提供了一个版本控制工具，可结合&lt;code>SVN&lt;/code>、&lt;code>Git&lt;/code>等工具对蓝图等资产进行版本控制。&lt;/p>
 &lt;h2 id="工具使用">&lt;a href="#%e5%b7%a5%e5%85%b7%e4%bd%bf%e7%94%a8" class="header-anchor">&lt;/a>工具使用
 &lt;/h2>&lt;h3 id="配置连接">&lt;a href="#%e9%85%8d%e7%bd%ae%e8%bf%9e%e6%8e%a5" class="header-anchor">&lt;/a>配置连接
 &lt;/h3>&lt;p>在引擎的工具栏处有一个&lt;code>Source Control&lt;/code>的选项，选择&lt;code>Connect to Source Control&lt;/code>弹出确认框。
-&lt;img src="https://boiltask.com/ue/source-control-tool/image-1.png"
+&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-1.png"
 width="433"
 height="290"
-srcset="https://boiltask.com/ue/source-control-tool/image-1_hu12765942364294099375.png 480w, https://boiltask.com/ue/source-control-tool/image-1_hu17593301496266398636.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_253a9c52273077de.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-1_hu_efe1e3fd85fc70fd.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="149"
 data-flex-basis="358px"
 >&lt;/p>
 &lt;p>选择&lt;code>Subversion&lt;/code>也即&lt;code>SVN&lt;/code>，展示信息输入框。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-2.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-2.png"
 width="720"
 height="267"
-srcset="https://boiltask.com/ue/source-control-tool/image-2_hu12635055628427891836.png 480w, https://boiltask.com/ue/source-control-tool/image-2_hu4676874817897847116.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_7d92eaeeade92e1.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-2_hu_309f8ecf4fff2e37.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="269"
 data-flex-basis="647px"
 >&lt;/p>
 &lt;p>按照所需信息输入然后点击&lt;code>Accept Settings&lt;/code>即可。
-&lt;img src="https://boiltask.com/ue/source-control-tool/image-3.png"
+&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-3.png"
 width="720"
 height="274"
-srcset="https://boiltask.com/ue/source-control-tool/image-3_hu6796912750367437106.png 480w, https://boiltask.com/ue/source-control-tool/image-3_hu16929476084393832319.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_c2fdbd4b8ea3c3b.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-3_hu_62fc1eca1dad230.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="262"
@@ -886,56 +882,56 @@ data-flex-basis="630px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">字段&lt;/th>
-&lt;th style="text-align: left">说明&lt;/th>
-&lt;th style="text-align: left">示例&lt;/th>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>示例&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">Provider&lt;/td>
-&lt;td style="text-align: left">使用的版本控制系统&lt;/td>
-&lt;td style="text-align: left">Subversion&lt;/td>
+&lt;td>Provider&lt;/td>
+&lt;td>使用的版本控制系统&lt;/td>
+&lt;td>Subversion&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Repository&lt;/td>
-&lt;td style="text-align: left">仓库的链接&lt;/td>
-&lt;td style="text-align: left">http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
+&lt;td>Repository&lt;/td>
+&lt;td>仓库的链接&lt;/td>
+&lt;td>http://&lt;em>&lt;strong>.&lt;/strong>&lt;/em>.com/svn/***/&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">User Name&lt;/td>
-&lt;td style="text-align: left">用户名&lt;/td>
-&lt;td style="text-align: left">***&lt;/td>
+&lt;td>User Name&lt;/td>
+&lt;td>用户名&lt;/td>
+&lt;td>***&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Labels Directory&lt;/td>
-&lt;td style="text-align: left">仓库子路径，比如主干、某一分支等&lt;/td>
-&lt;td style="text-align: left">trunk&lt;/td>
+&lt;td>Labels Directory&lt;/td>
+&lt;td>仓库子路径，比如主干、某一分支等&lt;/td>
+&lt;td>trunk&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Password&lt;/td>
-&lt;td style="text-align: left">用户密码&lt;/td>
-&lt;td style="text-align: left">abcdefg123465&lt;/td>
+&lt;td>Password&lt;/td>
+&lt;td>用户密码&lt;/td>
+&lt;td>abcdefg123465&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h3 id="资产保存">&lt;a href="#%e8%b5%84%e4%ba%a7%e4%bf%9d%e5%ad%98" class="header-anchor">&lt;/a>资产保存
 &lt;/h3>&lt;p>链接版本管理后，对资产做保存等操作时会弹出确认框，询问是否要&lt;code>CheckOut&lt;/code>。&lt;/p>
 &lt;p>此操作对应&lt;code>SVN&lt;/code>的&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>，修改前先锁定，这样避免了多人修改同一蓝图时的冲突。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-4.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-4.png"
 width="760"
 height="434"
-srcset="https://boiltask.com/ue/source-control-tool/image-4_hu4538419662043158090.png 480w, https://boiltask.com/ue/source-control-tool/image-4_hu340917589041919442.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_49e988e335179047.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-4_hu_b3863dacc44b5c9.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="175"
 data-flex-basis="420px"
 >&lt;/p>
 &lt;p>如果该资产已经被其他人锁定了，那么点&lt;code>CheckOut&lt;/code>时会有如下提示。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-5.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-5.png"
 width="760"
 height="434"
-srcset="https://boiltask.com/ue/source-control-tool/image-5_hu10868571854966016212.png 480w, https://boiltask.com/ue/source-control-tool/image-5_hu3354516035096916110.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_e70716767cb0153e.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-5_hu_5c24fc909773a367.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="175"
@@ -945,10 +941,10 @@ data-flex-basis="420px"
 &lt;p>如果不需要锁定蓝图，那么可以点击&lt;code>Make Writable&lt;/code>在不锁定的情况下保存。&lt;/p>
 &lt;h3 id="资产操作">&lt;a href="#%e8%b5%84%e4%ba%a7%e6%93%8d%e4%bd%9c" class="header-anchor">&lt;/a>资产操作
 &lt;/h3>&lt;p>链接版本管理后，在资产上右键可以展开版本管理的操作。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-6.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-6.png"
 width="477"
 height="748"
-srcset="https://boiltask.com/ue/source-control-tool/image-6_hu7986053261412522013.png 480w, https://boiltask.com/ue/source-control-tool/image-6_hu10285438846323337546.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_5b8d9d97a149e5e2.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-6_hu_a12daae2e9ccac54.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="63"
@@ -958,44 +954,44 @@ data-flex-basis="153px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">字段&lt;/th>
-&lt;th style="text-align: left">说明&lt;/th>
+&lt;th>字段&lt;/th>
+&lt;th>说明&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">CheckOut&lt;/td>
-&lt;td style="text-align: left">CheckOut资产，对应前文的锁定&lt;/td>
+&lt;td>CheckOut&lt;/td>
+&lt;td>CheckOut资产，对应前文的锁定&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Refresh&lt;/td>
-&lt;td style="text-align: left">刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
+&lt;td>Refresh&lt;/td>
+&lt;td>刷新资产版本状态，解决有时候更新不及时的问题&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">History&lt;/td>
-&lt;td style="text-align: left">打开资产的版本历史&lt;/td>
+&lt;td>History&lt;/td>
+&lt;td>打开资产的版本历史&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td style="text-align: left">Diff Against Depot&lt;/td>
-&lt;td style="text-align: left">对比资产与仓库中的最新版本&lt;/td>
+&lt;td>Diff Against Depot&lt;/td>
+&lt;td>对比资产与仓库中的最新版本&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>其中最常用的是&lt;code>History&lt;/code>打开资产版本历史。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-7.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-7.png"
 width="1010"
 height="434"
-srcset="https://boiltask.com/ue/source-control-tool/image-7_hu15146107333609453175.png 480w, https://boiltask.com/ue/source-control-tool/image-7_hu10850217488743317371.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_224429b8fa71ab5d.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-7_hu_f5af0be37f94f491.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="232"
 data-flex-basis="558px"
 >&lt;/p>
 &lt;p>可以在版本历史里右键选择对比前一版本或对比本地文件。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/ue/source-control-tool/image-8.png"
+&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/source-control-tool/image-8.png"
 width="1010"
 height="834"
-srcset="https://boiltask.com/ue/source-control-tool/image-8_hu13437858516513646347.png 480w, https://boiltask.com/ue/source-control-tool/image-8_hu6008273570751050933.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_ea36e1c0f0281fdc.png 480w, https://boiltask.com/knowledge/ue/source-control-tool/image-8_hu_17e33c74c2dcf12.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="121"
@@ -1004,7 +1000,7 @@ data-flex-basis="290px"
 &lt;h2 id="注意事项">&lt;a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" class="header-anchor">&lt;/a>注意事项
 &lt;/h2>&lt;p>在资产管理中&lt;code>CheckOut&lt;/code>操作对应&lt;code>SVN&lt;/code>的&lt;code>Lock&lt;/code>操作，会锁定资产防止别人提交，因此会干扰其他同事操作。&lt;/p>
 &lt;p>&lt;a class="link" href="https://boiltask.com/knowledge/svn-lock" >SVN锁定操作&lt;/a>前需要确认操作的必要性，如果遇见有人询问相关问题，应积极处理。&lt;/p>
-&lt;p>连接&lt;code>SVN&lt;/code>后，一些操作会自动对&lt;code>SVN&lt;/code>做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p></description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
+&lt;p>连接&lt;code>SVN&lt;/code>后，一些操作会自动对&lt;code>SVN&lt;/code>做标记，如移动路径、重命名、删除等，会增加操作时间，耐心等待即可。&lt;/p></description></item><item><title>虚幻引擎蓝图对比工具</title><link>https://boiltask.com/knowledge/ue/blueprint-diff/</link><pubDate>Mon, 13 Mar 2023 18:50:21 +0800</pubDate><guid>https://boiltask.com/knowledge/ue/blueprint-diff/</guid><description>&lt;h2 id="功能简述">&lt;a href="#%e5%8a%9f%e8%83%bd%e7%ae%80%e8%bf%b0" class="header-anchor">&lt;/a>功能简述
 &lt;/h2>&lt;p>蓝图因为是二进制文件，所以没办法使用&lt;code>svn&lt;/code>自带的版本对比工具来比较变更。&lt;/p>
 &lt;p>为了解决蓝图对比的问题，&lt;code>UE4&lt;/code>提供了一个工具用以展示两个蓝图的区别。&lt;/p>
 &lt;p>可以在UE编辑器中可以直接连接版本控制工具，从而提供直接查看版本历史、启动对比工具、冲突提示等功能，配置细节可以查看：&lt;a class="link" href="https://boiltask.com/ue/source-control-tool" >引擎内置版本控制工具&lt;/a>&lt;/p>
@@ -1035,19 +1031,19 @@ data-flex-basis="290px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1.png"
 width="529"
 height="671"
-srcset="https://boiltask.com/ue/blueprint-diff/image-1-1_hu931231083575383090.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-1_hu8413650250640421566.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1_hu_94e9a3aad52ad4b4.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-1-1_hu_205d0019b349f504.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="78"
 data-flex-basis="189px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-1-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2.png"
 width="531"
 height="670"
-srcset="https://boiltask.com/ue/blueprint-diff/image-1-2_hu8306830521440157681.png 480w, https://boiltask.com/ue/blueprint-diff/image-1-2_hu16558079487976017727.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2_hu_77eb9b52b359905.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-1-2_hu_4005d72fe17ccbea.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="79"
@@ -1057,8 +1053,8 @@ data-flex-basis="190px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1066,19 +1062,19 @@ data-flex-basis="190px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1.png"
 width="787"
 height="548"
-srcset="https://boiltask.com/ue/blueprint-diff/image-2-1_hu6339352627954773920.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-1_hu10151811338044199093.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1_hu_ac2685065378ed53.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-2-1_hu_18abed1718ceabb1.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="143"
 data-flex-basis="344px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-2-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2.png"
 width="773"
 height="541"
-srcset="https://boiltask.com/ue/blueprint-diff/image-2-2_hu2978232850679557358.png 480w, https://boiltask.com/ue/blueprint-diff/image-2-2_hu2189535122315424647.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2_hu_b955a59da3c1b85c.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-2-2_hu_12e500b9c2478db.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="142"
@@ -1088,8 +1084,8 @@ data-flex-basis="342px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1097,19 +1093,19 @@ data-flex-basis="342px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1.png"
 width="560"
 height="439"
-srcset="https://boiltask.com/ue/blueprint-diff/image-3-1_hu4389140594183622692.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-1_hu16494318166475559831.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1_hu_ed2b93d5a40326ac.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-3-1_hu_a04f208278062446.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="127"
 data-flex-basis="306px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-3-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2.png"
 width="560"
 height="439"
-srcset="https://boiltask.com/ue/blueprint-diff/image-3-2_hu6070286475696118969.png 480w, https://boiltask.com/ue/blueprint-diff/image-3-2_hu9829776246806890933.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2_hu_8946e6802265fc31.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-3-2_hu_a88010d5aca36e74.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="127"
@@ -1119,8 +1115,8 @@ data-flex-basis="306px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1128,19 +1124,19 @@ data-flex-basis="306px"
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-1.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1.png"
 width="777"
 height="180"
-srcset="https://boiltask.com/ue/blueprint-diff/image-4-1_hu16880563065039948167.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-1_hu12904495106932811181.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1_hu_aeb811c03a6ec7a5.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-4-1_hu_a7659ed33b79e9b8.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="431"
 data-flex-basis="1036px"
 >&lt;/th>
-&lt;th style="text-align: left">&lt;img src="https://boiltask.com/ue/blueprint-diff/image-4-2.png"
+&lt;th>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2.png"
 width="777"
 height="180"
-srcset="https://boiltask.com/ue/blueprint-diff/image-4-2_hu135614488466320865.png 480w, https://boiltask.com/ue/blueprint-diff/image-4-2_hu1553581432799812078.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2_hu_b316a11745c17a34.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-4-2_hu_171cf7fd8926ecca.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="431"
@@ -1150,8 +1146,8 @@ data-flex-basis="1036px"
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align: left">英文版&lt;/td>
-&lt;td style="text-align: left">中文版&lt;/td>
+&lt;td>英文版&lt;/td>
+&lt;td>中文版&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -1167,10 +1163,10 @@ data-flex-basis="1036px"
 &lt;/div>
 &lt;/div>&lt;p>其中&lt;code>D:\MetaEngine\Engine\Binaries\Win64\UE4Editor.exe&lt;/code>为引擎可执行文件，&lt;code>D:\Meta\Meta.uproject&lt;/code>为项目文件，&lt;code>%base&lt;/code>会被转义为&lt;code>svn&lt;/code>文件，&lt;code>%mine&lt;/code>会被转义为当前文件。&lt;/p>
 &lt;h2 id="对比效果">&lt;a href="#%e5%af%b9%e6%af%94%e6%95%88%e6%9e%9c" class="header-anchor">&lt;/a>对比效果
-&lt;/h2>&lt;p>&lt;img src="https://boiltask.com/ue/blueprint-diff/image-5.png"
+&lt;/h2>&lt;p>&lt;img src="https://boiltask.com/knowledge/ue/blueprint-diff/image-5.png"
 width="1010"
 height="834"
-srcset="https://boiltask.com/ue/blueprint-diff/image-5_hu13773989210434351733.png 480w, https://boiltask.com/ue/blueprint-diff/image-5_hu6386327262215898314.png 1024w"
+srcset="https://boiltask.com/knowledge/ue/blueprint-diff/image-5_hu_9d78abcb2ba5b04e.png 480w, https://boiltask.com/knowledge/ue/blueprint-diff/image-5_hu_db2ab738b20b88e2.png 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="121"
