@@ -698,13 +698,7 @@ $$12345 \% 10 = 5$$&lt;p>这一题便可使用这一种方法轻松得出答案�
 >每个OJ都要有A+B&lt;/a>&lt;/p>
 &lt;p>同样的，还是&lt;span class="dida-font-red">请先尝试之后再继续阅读&lt;/span>。&lt;/p>
 &lt;hr>
-&lt;p>&lt;span class="dida-font-hidden">
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">对于这一题……
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">没什么说的-.-科科
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">
-&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p></description></item><item><title>【愿成其身】[3]转义字符 – 格式化输出</title><link>https://boiltask.com/tutorial/iwbtg/3/</link><pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/3/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1132" target="_blank" rel="noopener"
+&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">对于这一题……&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">没什么说的-.-科科&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p>&lt;p>&lt;span class="dida-font-hidden">&lt;/span>&lt;/p></description></item><item><title>【愿成其身】[3]转义字符 – 格式化输出</title><link>https://boiltask.com/tutorial/iwbtg/3/</link><pubDate>Wed, 17 Aug 2016 16:00:52 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/3/</guid><description>&lt;p>本篇文章讲解题目：&lt;a class="link" href="http://oj.didapipa.com/problem/1132" target="_blank" rel="noopener"
 >打印键盘&lt;/a>&lt;/p>
 &lt;p>&lt;span class="dida-font-red">推荐先独立进行解题尝试，然后再阅读本篇讲解！&lt;/span>&lt;/p>
 &lt;hr>
@@ -745,7 +739,7 @@ $$12345 \% 10 = 5$$&lt;p>这一题便可使用这一种方法轻松得出答案�
 &lt;/div>&lt;p>这段代码编译会发现报错。&lt;/p>
 &lt;p>为什么呢？&lt;/p>
 &lt;p>在C语言中，输出时为了表示如换行，缩进等普通字符无法表示的字符时，引入了“转义字符”这一概念。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/content/post/iwbtg/3/img.png"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/02128d4335842beb139d42424b841980.png"
 loading="lazy"
 alt="img.png"
 >&lt;/p>
@@ -757,7 +751,7 @@ alt="img.png"
 &lt;p>而我们想让它们一行输出一行，也就是“换行”。不过，多个printf是无效的，因为它只会“忠实”地执行你的代码。所以对于每一个printf来说，输出结束，它的“光标”是在输出之后的字符后面的。&lt;/p>
 &lt;p>现在我们回忆起来，当我们自己输入完一行之后，我们会按回车键来使光标移到下一行。那么再看上面的表，发现换行键的转义字符为 \n 。&lt;/p>
 &lt;p>所以便可以完整的写出正确代码，就是在原代码的基础上，每输出一行便在后面加一个 \n 即可。&lt;/p></description></item><item><title>【愿成其身】[2]有趣的练习方式 – OnlineJudge</title><link>https://boiltask.com/tutorial/iwbtg/2/</link><pubDate>Tue, 16 Aug 2016 16:00:51 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/2/</guid><description>&lt;p>你听说过黑盒测试吗？&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/content/post/iwbtg/2/img.png"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/4bd35e99e15baf2c241211560faef1ce.png"
 loading="lazy"
 >&lt;/p>
 &lt;p>OnlineJudge就是一个黑盒测试系统，也就是不管程序内部是如何运行的，它只判断你的程序的输出是否与输入相对应。当然，为了检测程序的效率，OnlineJudge也会加入运行时间、占用内存等评判标准。&lt;/p>
@@ -765,14 +759,8 @@ loading="lazy"
 &lt;hr>
 &lt;p>在开始之前，先进入一段日常题外话。&lt;/p>
 &lt;p>有没有见到过这个提示呢：&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/2/img_1.png"
-width="412"
-height="53"
-srcset="https://boiltask.com/tutorial/iwbtg/2/img_1_hu_8ed0c967cbbfba6e.png 480w, https://boiltask.com/tutorial/iwbtg/2/img_1_hu_c4768f8ffa45f9d9.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/b6f8031a5d50decf73c61bc52b12538f.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="777"
-data-flex-basis="1865px"
 >&lt;/p>
 &lt;p>也就是提示少了一个&amp;quot;;&amp;quot;，我们发现C语言中，每一个语句之后都有一个&amp;quot;;&amp;quot;，这是因为在C语言中，多余的这些空格、空行等是无效的(我说的是“多余的”)，所以如果不加分号，计算机编译时也不知道你这一句已经结束了，从而会报错。&lt;/p>
 &lt;p>少分号错误也是新手常见错误，而且最无奈的是把中文分号当成英文分号，这个时候一般还不容易检查出来，所以在刚开始的时候就应该注意。&lt;/p>
@@ -817,7 +805,7 @@ data-flex-basis="1865px"
 &lt;p>&lt;a class="link" href="http://oj.didapipa.com/problem/1131" target="_blank" rel="noopener"
 >【愿成其身】I wanna be the guy&lt;/a>&lt;/p></description></item><item><title>【愿成其身】[1]工欲善其事，必先利其器</title><link>https://boiltask.com/tutorial/iwbtg/1/</link><pubDate>Mon, 15 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/1/</guid><description>&lt;blockquote>
 &lt;p>子曰：“&lt;code>工欲善其事，必先利其器&lt;/code>。居是邦也，事其大夫之贤者，友其士之仁者。”&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://boiltask.com/content/post/iwbtg/1/img.png"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/5b95325bd7118279ad0d5284963c3953.png"
 loading="lazy"
 >&lt;/p>
 &lt;p>看到这里，想必是对ACM感兴趣的。而想要“善其事”，则必然要先了解必要的工具。对于ACM，我指的自然就是编程语言。就目前看来常用的语言有C/C++、JAVA、PASCAL等，其中C/C++就个人而言更为常用，也广泛应用于其它领域，所以这里重点以C/C++作为入门讲解。&lt;/p>
@@ -856,14 +844,8 @@ loading="lazy"
 &lt;p>数学里的函数见过吧……$f(x)=x+1$
 这个函数是什么意思呢，我们给这个函数一个“参数”x，那么它便会给我们一个“返回值”x+1。比如我们给个参数3，那么它便会告诉我们4，这就是函数。&lt;/p>
 &lt;p>同样的，对于C语言来说，这些函数我们可以给它们传递参数，它们也会有返回值，而返回值具体是什么，自然也是可以有我们来控制。这就是编程的魅力，就是那种，“想显示什么结果，你说的不算，要看我怎么写”的霸气。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/1/img_1.png"
-width="388"
-height="300"
-srcset="https://boiltask.com/tutorial/iwbtg/1/img_1_hu_432485520eeee4c6.png 480w, https://boiltask.com/tutorial/iwbtg/1/img_1_hu_7288ccc9ff140eb4.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/89a3565a6522ec88e6599e1bbcc9b1ea.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="129"
-data-flex-basis="310px"
 >&lt;/p>
 &lt;p>言归正传，对于main()函数而言，我们看到它前面有个int，这就是代表的它的返回值的类型，而具体是什么类型，这将在后面数据类型中详细讲。(PS：int又被称为整型哦~)&lt;/p>
 &lt;p>那么main()←这个括号呢，就如$f(x)$，这个括号自然是让你传递参数用的，而main函数作为一个特殊的“主”函数，它的参数可以省略不写。&lt;/p>
@@ -878,15 +860,9 @@ data-flex-basis="310px"
 &lt;p>-所以返回值类型怎么写？&lt;/p>
 &lt;p>-int嘛。&lt;/p>
 &lt;p>&lt;span class="dida-font-red">C语言就是这么简单&lt;/span>。 -.-&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/1/img_2.png"
-width="300"
-height="218"
-srcset="https://boiltask.com/tutorial/iwbtg/1/img_2_hu_1a3cba928b28c5f7.png 480w, https://boiltask.com/tutorial/iwbtg/1/img_2_hu_c5ff1992910e0b61.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/f648e86e4ee065ac48462ac7f119fe5e.png"
 loading="lazy"
 alt="img_2.png"
-class="gallery-image"
-data-flex-grow="137"
-data-flex-basis="330px"
 >&lt;/p>
 &lt;p>接下来就只剩下最后一句话了“printf(&amp;ldquo;I wanna be the guy!&amp;quot;)”，很明显也是printf()与“I wanna be the guy!”组合。上面学习了函数的基本结构，那么这个printf后面也是有个括号，它与函数有没有关系。很显然我这么说了，它必然是有的。&lt;/p>
 &lt;p>按照刚才的理解，括号里面的&amp;quot;I wanna be the guy!&amp;ldquo;也就是它的参数了，那么这个函数有什么用呢。&lt;/p>
@@ -914,28 +890,16 @@ data-flex-basis="330px"
 &lt;p>&lt;a class="link" href="http://oj.didapipa.com/problem/1131" target="_blank" rel="noopener"
 >【愿成其身】I wanna be the guy&lt;/a>&lt;/p></description></item><item><title>【愿成其身】I wanna be the guy</title><link>https://boiltask.com/tutorial/iwbtg/0/</link><pubDate>Sun, 14 Aug 2016 16:00:19 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/0/</guid><description>&lt;blockquote>
 &lt;p>I wanna be the guy - 愿成其身&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/0/img.png"
-width="640"
-height="331"
-srcset="https://boiltask.com/tutorial/iwbtg/0/img_hu_364e1f8ae3ed0256.png 480w, https://boiltask.com/tutorial/iwbtg/0/img_hu_3d447bcdd69b06b.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/3a6160eef68f123a0fe9f6bb52185470.png"
 loading="lazy"
 alt="师说"
-class="gallery-image"
-data-flex-grow="193"
-data-flex-basis="464px"
 >&lt;/p>
 &lt;p>昨天想写文章时突然想起来了这个游戏，原因却不是清楚太多……想了想，大概是这个标榜难度巨高无比游戏的背景也是个励志故事吧，所以当人物一次次的死亡时，你就会心生敬佩(虽然应该是敬佩那些能把这游戏死上一万次来通关的人)。&lt;/p>
 &lt;p>其实ACM大概也是这个道理，虽然明知道一路上布满坎坷，明知道自己也许坚持不到关底，但自己也愿意去尝试一下。我很遗憾直到去年的今天都还不知道ACM是什么东东，虽然从小就标榜喜欢计算机，但却也是因为种种原因而胡乱摸索不得要领。所以，当大一时进入这个大门，人生中第一次有一群人愿意和你交流这些你喜欢的，表演真正的技术，内心才会产生出一丝激动。&lt;/p>
 &lt;p>爱上ACM，大抵也就是如此。&lt;/p>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/0/img_1.png"
-width="369"
-height="300"
-srcset="https://boiltask.com/tutorial/iwbtg/0/img_1_hu_f9c90fddac345b5.png 480w, https://boiltask.com/tutorial/iwbtg/0/img_1_hu_6558c435be7c076f.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/b3460b5ec578b5e382337c6ccc887286.png"
 loading="lazy"
 alt="ICPC"
-class="gallery-image"
-data-flex-grow="123"
-data-flex-basis="295px"
 >&lt;/p>
 &lt;p>我以为在有一个教师老爸的前提下，在有一个万般告诫我不要当老师的老爸的前提下，在自己自认为对当老师完全不感兴趣的前提下，自己应该是对教东西不感什么兴趣的。然而慢慢发现，自己虽然对当老师不怎么感兴趣，但是对于能把自己所知道的知识讲给别人这件事，我确实还是很痴迷的。&lt;/p>
 &lt;p>这也就是我想写这个系列的原因。&lt;/p>
@@ -948,14 +912,8 @@ data-flex-basis="295px"
 &lt;p>因为文章内可能大量使用Katex渲染数学公式，所以请使用新版浏览器阅读。&lt;/p>
 &lt;p>如果遇到加载失效，请刷新页面重试。&lt;/p></description></item><item><title>【愿成其身】导读目录</title><link>https://boiltask.com/tutorial/iwbtg/introduction/</link><pubDate>Sat, 13 Aug 2016 16:00:25 +0000</pubDate><guid>https://boiltask.com/tutorial/iwbtg/introduction/</guid><description>&lt;blockquote>
 &lt;p>本系列文章中涉及到的图片与链接因为年久可能出现失效，有需要可联系作者交流。&lt;/p>&lt;/blockquote>
-&lt;p>&lt;img src="https://boiltask.com/tutorial/iwbtg/introduction/image.png"
-width="140"
-height="140"
-srcset="https://boiltask.com/tutorial/iwbtg/introduction/image_hu_be8cea622c684d4b.png 480w, https://boiltask.com/tutorial/iwbtg/introduction/image_hu_f60c166e7ed303c1.png 1024w"
+&lt;p>&lt;img src="https://r2.boiltask.com/2025/04/f2cea72ae0b944f2c3fe15d7baf10b15.png"
 loading="lazy"
-class="gallery-image"
-data-flex-grow="100"
-data-flex-basis="240px"
 >&lt;/p>
 &lt;hr>
 &lt;h2 id="入门导读">&lt;a href="#%e5%85%a5%e9%97%a8%e5%af%bc%e8%af%bb" class="header-anchor">&lt;/a>====入门导读=====
@@ -969,23 +927,23 @@ data-flex-basis="240px"
 >http://acm.nyist.net/JudgeOnline/step.php&lt;/a>&lt;/p>
 &lt;h2 id="愿成其身">&lt;a href="#%e6%84%bf%e6%88%90%e5%85%b6%e8%ba%ab" class="header-anchor">&lt;/a>====愿成其身=====
 &lt;/h2>&lt;h3 id="前言">&lt;a href="#%e5%89%8d%e8%a8%80" class="header-anchor">&lt;/a>【前言】
-&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/0/" >I wanna be the guy&lt;/a>&lt;/p>
+&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/0/" >I wanna be the guy&lt;/a>&lt;/p>
 &lt;h3 id="入门">&lt;a href="#%e5%85%a5%e9%97%a8" class="header-anchor">&lt;/a>【入门】
-&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/1/" >工欲善其事，必先利其器&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/2/" >有趣的练习方式 – OnlineJudge&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/3/" >转义字符 – 格式化输出&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/4/" >从A+B谈起 – 一切的开端&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/5/" >数据类型 – 装数据的盒子&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/6/" >A×B的学问 – 较大数的处理&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/7/" >整数的魅力 – 数字的最后一位&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/8/" >实数的运用 – 整数化作的实数&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/9/" >分支结构 – 程序的魅力&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/10/" >问号表达式 – 酷炫的利器&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/11/" >字符的本质 – ASCII的作用&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/12/" >从交换输出谈起 – 黑盒的漏洞&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/13/" >循环结构 – 计算机的神奇&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/14/" >for循环 – 另一种表达方法&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/iwbtg/15/" >思维的优化 – 数学的魅力&lt;/a>&lt;/p>
+&lt;/h3>&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/1/" >工欲善其事，必先利其器&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/2/" >有趣的练习方式 – OnlineJudge&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/3/" >转义字符 – 格式化输出&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/4/" >从A+B谈起 – 一切的开端&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/5/" >数据类型 – 装数据的盒子&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/6/" >A×B的学问 – 较大数的处理&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/7/" >整数的魅力 – 数字的最后一位&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/8/" >实数的运用 – 整数化作的实数&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/9/" >分支结构 – 程序的魅力&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/10/" >问号表达式 – 酷炫的利器&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/11/" >字符的本质 – ASCII的作用&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/12/" >从交换输出谈起 – 黑盒的漏洞&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/13/" >循环结构 – 计算机的神奇&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/14/" >for循环 – 另一种表达方法&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://boiltask.com/tutorial/iwbtg/15/" >思维的优化 – 数学的魅力&lt;/a>&lt;/p>
 &lt;p>未完待续……&lt;/p>
 &lt;h2 id="ps">&lt;a href="#ps" class="header-anchor">&lt;/a>PS
 &lt;/h2>&lt;p>因为文章内可能大量使用&lt;code>Katex&lt;/code>渲染数学公式，所以请使用新版浏览器阅读。&lt;/p>
@@ -997,6 +955,5 @@ data-flex-basis="240px"
 &lt;/h2>&lt;blockquote>
 &lt;p>很显然，大概有很大的意外……&lt;/p>&lt;/blockquote>
 &lt;p>可使用&lt;code>rss&lt;/code>阅读器订阅&lt;/p>
-&lt;p>&lt;code>rss&lt;/code>订阅地址如下&lt;/p>
-&lt;p>&lt;a class="link" href="https://boiltask.com/categories/iwbtg/index.xml" >/categories/iwbtg/index.xml&lt;/a>&lt;/p>
-&lt;p>&lt;del>推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" >一览阅读&lt;/a>订阅&lt;/del>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;del>&lt;code>rss&lt;/code>订阅地址如下，推荐使用&lt;a class="link" href="%e4%b8%80%e8%a7%88%e9%98%85%e8%af%bb" >一览阅读&lt;/a>订阅&lt;/del>&lt;/p>
+&lt;p>RSS已废弃，可查看标签：&lt;a class="link" href="https://boiltask.com/tags/iwbtg/" >愿成其身&lt;/a>&lt;/p></description></item></channel></rss>
